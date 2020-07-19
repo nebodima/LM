@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="164">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="165"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="166">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="167"/>
+			</Button>
+			<Button name="ФормаПровести" id="168">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="169"/>
+			</Button>
+			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="170">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="171"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Ссылка" id="1">
+			<DataPath>Объект.Ref</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Организация" id="161">
+			<DataPath>Объект.Организация</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="162"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="163"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="128">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="129"/>
+			<ChildItems>
+				<UsualGroup name="Группа10" id="130">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="131"/>
+					<ChildItems>
+						<InputField name="Дата" id="7">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Номер" id="4">
+							<DataPath>1/-2</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Педагог" id="10">
+			<DataPath>Объект.Педагог</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ПедагогКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="Группа13" id="159">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="160"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="70">
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<UsualGroup name="Группа11" id="153">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="154"/>
+							<ChildItems>
+								<InputField name="ВремяНачалаОбщее" id="62">
+									<DataPath>Объект.ВремяНачалаОбщее</DataPath>
+									<ContextMenu name="ВремяНачалаОбщееКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ВремяНачалаОбщееРасширеннаяПодсказка" id="64"/>
+								</InputField>
+								<InputField name="ВремяОкончанияОбщее" id="65">
+									<DataPath>Объект.ВремяОкончанияОбщее</DataPath>
+									<ContextMenu name="ВремяОкончанияОбщееКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ВремяОкончанияОбщееРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<Button name="ПрименитьОбщееВремя" id="155">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПрименитьОбщееВремя</CommandName>
+									<ExtendedTooltip name="ПрименитьОбщееВремяРасширеннаяПодсказка" id="156"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа3" id="114">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<CheckBoxField name="ПН" id="72">
+									<DataPath>Объект.ПН</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПНКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="74"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ПНВремя" id="75">
+									<DataPath>Объект.ПНВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПНВремяКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ПНВремяРасширеннаяПодсказка" id="77"/>
+									<Events>
+										<Event name="OnChange">ПНВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПНВремя2" id="132">
+									<DataPath>Объект.ПНВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПНВремя2КонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ПНВремя2РасширеннаяПодсказка" id="134"/>
+									<Events>
+										<Event name="OnChange">ПНВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа4" id="116">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<CheckBoxField name="ВТ" id="78">
+									<DataPath>Объект.ВТ</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВТКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ВТРасширеннаяПодсказка" id="80"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ВТВремя" id="81">
+									<DataPath>Объект.ВТВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВТВремяКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ВТВремяРасширеннаяПодсказка" id="83"/>
+									<Events>
+										<Event name="OnChange">ВТВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВТВремя2" id="135">
+									<DataPath>Объект.ВТВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВТВремя2КонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="ВТВремя2РасширеннаяПодсказка" id="137"/>
+									<Events>
+										<Event name="OnChange">ВТВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="118">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="119"/>
+							<ChildItems>
+								<CheckBoxField name="СР" id="84">
+									<DataPath>Объект.СР</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СРКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="СРРасширеннаяПодсказка" id="86"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="СРВремя" id="87">
+									<DataPath>Объект.СРВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="СРВремяКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="СРВремяРасширеннаяПодсказка" id="89"/>
+									<Events>
+										<Event name="OnChange">СРВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СРВремя2" id="138">
+									<DataPath>Объект.СРВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="СРВремя2КонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="СРВремя2РасширеннаяПодсказка" id="140"/>
+									<Events>
+										<Event name="OnChange">СРВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа6" id="120">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<CheckBoxField name="ЧТ" id="90">
+									<DataPath>Объект.ЧТ</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЧТКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="ЧТРасширеннаяПодсказка" id="92"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ЧТВремя" id="93">
+									<DataPath>Объект.ЧТВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ЧТВремяКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ЧТВремяРасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="OnChange">ЧТВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ЧТВремя2" id="141">
+									<DataPath>Объект.ЧТВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ЧТВремя2КонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="ЧТВремя2РасширеннаяПодсказка" id="143"/>
+									<Events>
+										<Event name="OnChange">ЧТВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="122">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<CheckBoxField name="ПТ" id="96">
+									<DataPath>Объект.ПТ</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПТКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ПТРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ПТВремя" id="99">
+									<DataPath>Объект.ПТВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПТВремяКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ПТВремяРасширеннаяПодсказка" id="101"/>
+									<Events>
+										<Event name="OnChange">ПТВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПТВремя2" id="144">
+									<DataPath>Объект.ПТВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ПТВремя2КонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="ПТВремя2РасширеннаяПодсказка" id="146"/>
+									<Events>
+										<Event name="OnChange">ПТВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="124">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="125"/>
+							<ChildItems>
+								<CheckBoxField name="СБ" id="102">
+									<DataPath>Объект.СБ</DataPath>
+									<TitleTextColor>#FF0000</TitleTextColor>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СБКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СБРасширеннаяПодсказка" id="104"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="СБВремя" id="105">
+									<DataPath>Объект.СБВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="СБВремяКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="СБВремяРасширеннаяПодсказка" id="107"/>
+									<Events>
+										<Event name="OnChange">СБВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СБВремя2" id="147">
+									<DataPath>Объект.СБВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="СБВремя2КонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="СБВремя2РасширеннаяПодсказка" id="149"/>
+									<Events>
+										<Event name="OnChange">СБВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа9" id="126">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="127"/>
+							<ChildItems>
+								<CheckBoxField name="ВС" id="111">
+									<DataPath>Объект.ВС</DataPath>
+									<TitleTextColor>#FF0000</TitleTextColor>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВСКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ВСРасширеннаяПодсказка" id="113"/>
+									<Events>
+										<Event name="OnChange">ПНПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ВСВремя" id="108">
+									<DataPath>Объект.ВСВремя</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВСВремяКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ВСВремяРасширеннаяПодсказка" id="110"/>
+									<Events>
+										<Event name="OnChange">ВСВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВСВремя2" id="150">
+									<DataPath>Объект.ВСВремя2</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВСВремя2КонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ВСВремя2РасширеннаяПодсказка" id="152"/>
+									<Events>
+										<Event name="OnChange">ВСВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="Заполнить" id="60">
+							<Type>UsualButton</Type>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.Заполнить</CommandName>
+							<PictureLocation>Right</PictureLocation>
+							<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="61"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа12" id="157">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="158"/>
+					<ChildItems>
+						<Table name="ТЧ" id="19">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ТЧ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТЧКонтекстноеМеню" id="20"/>
+							<AutoCommandBar name="ТЧКоманднаяПанель" id="21">
+								<ChildItems>
+									<Button name="ТЧДобавить" id="54">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ТЧ.StandardCommand.Add</CommandName>
+										<ShapeRepresentation>None</ShapeRepresentation>
+										<ExtendedTooltip name="ТЧДобавитьРасширеннаяПодсказка" id="55"/>
+									</Button>
+									<Button name="ТЧСкопировать" id="52">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ТЧ.StandardCommand.Copy</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ТЧСкопироватьРасширеннаяПодсказка" id="53"/>
+									</Button>
+									<Button name="ТЧУдалить" id="50">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.ТЧ.StandardCommand.Delete</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ТЧУдалитьРасширеннаяПодсказка" id="51"/>
+									</Button>
+									<Button name="ТЧПереместитьВверх" id="56">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТЧ.StandardCommand.MoveUp</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<ExtendedTooltip name="ТЧПереместитьВверхРасширеннаяПодсказка" id="57"/>
+									</Button>
+									<Button name="ТЧПереместитьВниз" id="58">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.ТЧ.StandardCommand.MoveDown</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<ExtendedTooltip name="ТЧПереместитьВнизРасширеннаяПодсказка" id="59"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТЧРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="ТЧСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>ТЧ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ТЧСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТЧСостояниеПросмотра" id="26">
+								<AdditionSource>
+									<Item>ТЧ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧСостояниеПросмотраКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ТЧСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТЧУправлениеПоиском" id="29">
+								<AdditionSource>
+									<Item>ТЧ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТЧУправлениеПоискомКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="ТЧУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТЧНомерСтроки" id="32">
+									<DataPath>Объект.ТЧ.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЧНомерСтрокиКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ТЧНомерСтрокиРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<InputField name="ТЧДата" id="35">
+									<DataPath>Объект.ТЧ.Дата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТЧДатаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ТЧДатаРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ТЧПоле1" id="47">
+									<DataPath>Объект.ТЧ.Дата</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>День недели</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ддд</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ддд</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ТЧПоле1КонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТЧПоле1РасширеннаяПодсказка" id="49"/>
+								</InputField>
+								<InputField name="ТЧВремяНачала" id="38">
+									<DataPath>Объект.ТЧ.ВремяНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ТЧВремяНачалаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТЧВремяНачалаРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ТЧВремяОкончания" id="41">
+									<DataPath>Объект.ТЧ.ВремяОкончания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ТЧВремяОкончанияКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ТЧВремяОкончанияРасширеннаяПодсказка" id="43"/>
+								</InputField>
+								<InputField name="ТЧКомментарий" id="44">
+									<DataPath>Объект.ТЧ.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<ContextMenu name="ТЧКомментарийКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ТЧКомментарийРасширеннаяПодсказка" id="46"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="АвторДокумента" id="13">
+			<DataPath>Объект.АвторДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АвторДокументаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="15"/>
+		</LabelField>
+		<InputField name="Комментарий" id="16">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.LM_ГрафикРабочегоВремениПедагога</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить график</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceRightArrowYellow</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Заполнить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПрименитьОбщееВремя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить общее время</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрименитьОбщееВремя</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

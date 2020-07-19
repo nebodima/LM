@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.9">
+	<Item id="c5b96093-4a29-48eb-b405-67e1428b94ae">
+		<Name>Педагоги</Name>
+		<Code xsi:type="xs:decimal">1</Code>
+		<Description>Педагоги</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="b319e93f-842c-400f-a700-d9e814f676ec">
+		<Name>Прочие</Name>
+		<Code xsi:type="xs:decimal">3</Code>
+		<Description>Прочие</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="667fc1f2-d6a9-4a25-91d4-f1a3ac0a4e5f">
+		<Name>Родители</Name>
+		<Code xsi:type="xs:decimal">4</Code>
+		<Description>Родители</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="562d40f9-920e-41bc-a7da-125279902e20">
+		<Name>Ученики</Name>
+		<Code xsi:type="xs:decimal">2</Code>
+		<Description>Ученики</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+</PredefinedData>

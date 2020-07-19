@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="67">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="68"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="69">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="70"/>
+			</Button>
+			<Button name="ФормаПровести" id="71">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="72"/>
+			</Button>
+			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="73">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="74"/>
+			</Button>
+			<Button name="ФормаДвиженияДокумента" id="78">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ДвиженияДокумента</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаДвиженияДокументаРасширеннаяПодсказка" id="79"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Ссылка" id="1">
+			<DataPath>Объект.Ref</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="65">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<InputField name="Дата" id="7">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Номер" id="4">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ДокументОснования" id="10">
+			<DataPath>Объект.ДокументОснования</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Организация" id="75">
+			<DataPath>Объект.Организация</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
+		</InputField>
+		<Table name="Расходы" id="22">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Расходы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РасходыКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="РасходыКоманднаяПанель" id="24"/>
+			<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="25"/>
+			<SearchStringAddition name="РасходыСтрокаПоиска" id="26">
+				<AdditionSource>
+					<Item>Расходы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходыСтрокаПоискаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="РасходыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасходыСостояниеПросмотра" id="29">
+				<AdditionSource>
+					<Item>Расходы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="РасходыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасходыУправлениеПоиском" id="32">
+				<AdditionSource>
+					<Item>Расходы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасходыУправлениеПоискомКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="РасходыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РасходыНомерСтроки" id="35">
+					<DataPath>Объект.Расходы.LineNumber</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Расходы.RowsCount</FooterDataPath>
+					<Width>1</Width>
+					<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<InputField name="РасходыКлиент" id="38">
+					<DataPath>Объект.Расходы.Клиент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыКлиентКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РасходыКлиентРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="РасходыПредметОбучения" id="44">
+					<DataPath>Объект.Расходы.ПредметОбучения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыПредметОбученияКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="РасходыПредметОбученияРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="РасходыПедагог" id="47">
+					<DataPath>Объект.Расходы.Педагог</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыПедагогКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="РасходыПедагогРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="РасходыГруппаОбучения" id="50">
+					<DataPath>Объект.Расходы.ГруппаОбучения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыГруппаОбученияКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="РасходыГруппаОбученияРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="РасходыСкидка" id="53">
+					<DataPath>Объект.Расходы.Скидка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыСкидкаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="РасходыСкидкаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="РасходыТариф" id="56">
+					<DataPath>Объект.Расходы.Тариф</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыТарифКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="РасходыТарифРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">РасходыТарифПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасходыЧасы" id="59">
+					<DataPath>Объект.Расходы.Часы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Минуты</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Расходы.TotalЧасы</FooterDataPath>
+					<Width>1</Width>
+					<ContextMenu name="РасходыЧасыКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="РасходыЧасыРасширеннаяПодсказка" id="61"/>
+					<Events>
+						<Event name="OnChange">РасходыЧасыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РасходыСумма" id="62">
+					<DataPath>Объект.Расходы.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Расходы.TotalСумма</FooterDataPath>
+					<ContextMenu name="РасходыСуммаКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="РасходыСуммаРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="РасходыКомментарий" id="41">
+					<DataPath>1/0:716cefd0-b36a-464b-82de-1a37b90724e8/0:570269e7-b47a-477f-889b-bca784b4e90c</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РасходыКомментарийКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="РасходыКомментарийРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="СуммаДокумента" id="13">
+			<DataPath>Объект.СуммаДокумента</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<EditMode>EnterOnInput</EditMode>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<LabelField name="АвторДокумента" id="16">
+			<DataPath>Объект.АвторДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
+		</LabelField>
+		<InputField name="Комментарий" id="19">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.LM_ДополнительныеРасходы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДвиженияДокумента" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движения документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движения документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДвиженияДокумента</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

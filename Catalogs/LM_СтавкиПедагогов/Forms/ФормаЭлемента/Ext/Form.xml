@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Ссылка" id="1">
+			<DataPath>Объект.Ref</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Родитель" id="10">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="34">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="Наименование" id="7">
+					<DataPath>Объект.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Код" id="4">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="36">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<InputField name="НачалоДействия" id="13">
+					<DataPath>Объект.НачалоДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Действует с</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачалоДействияКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="НачалоДействияРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="ОкончаниеДействия" id="16">
+					<DataPath>Объект.ОкончаниеДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОкончаниеДействияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОкончаниеДействияРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ОплатаЗаЗанятие" id="22">
+			<DataPath>Объект.ОплатаЗаЗанятие</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ОплатаЗаЗанятиеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ОплатаЗаЗанятиеРасширеннаяПодсказка" id="24"/>
+			<Events>
+				<Event name="OnChange">ОплатаЗаЗанятиеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОплатаСЧеловека" id="25">
+			<DataPath>Объект.ОплатаСЧеловека</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ОплатаСЧеловекаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОплатаСЧеловекаРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="OnChange">ОплатаСЧеловекаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОплатаЗаЧас" id="28">
+			<DataPath>Объект.ОплатаЗаЧас</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ОплатаЗаЧасКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОплатаЗаЧасРасширеннаяПодсказка" id="30"/>
+			<Events>
+				<Event name="OnChange">ОплатаЗаЧасПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПроцентСОплатыУченика" id="31">
+			<DataPath>Объект.ПроцентСОплатыУченика</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ПроцентСОплатыУченикаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПроцентСОплатыУченикаРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="OnChange">ПроцентСОплатыУченикаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Комментарий" id="38">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="40"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.LM_СтавкиПедагогов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

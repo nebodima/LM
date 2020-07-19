@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="21">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<InputField name="Ссылка" id="1">
+					<DataPath>Объект.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<UsualGroup name="Группа2" id="23">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<InputField name="Наименование" id="7">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Код" id="4">
+							<DataPath>Объект.Code</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="LM_ИспользоватьОкругление" id="25">
+					<DataPath>1/0:ec2344db-938d-4ffd-a0a3-7ed793fdfb11</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="LM_ИспользоватьОкруглениеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="LM_ИспользоватьОкруглениеРасширеннаяПодсказка" id="27"/>
+				</CheckBoxField>
+				<InputField name="LM_ТребоватьОписаниеКНеоплаченнымУрокам" id="28">
+					<DataPath>1/0:0b204e98-cce9-4c4b-bba4-10f827823ceb</DataPath>
+					<ContextMenu name="LM_ТребоватьОписаниеКНеоплаченнымУрокамКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="LM_ТребоватьОписаниеКНеоплаченнымУрокамРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="LM_ДатаЗапретаРедактирования" id="31">
+					<DataPath>1/0:a5723251-cf72-45f0-a206-7d3a424ee680</DataPath>
+					<ContextMenu name="LM_ДатаЗапретаРедактированияКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="LM_ДатаЗапретаРедактированияРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<CheckBoxField name="LM_ДатаЗапретаРедактированияНеделя" id="34">
+					<DataPath>1/0:753e0951-b9dd-4e86-9d90-35dcdceb46d1</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="LM_ДатаЗапретаРедактированияНеделяКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="LM_ДатаЗапретаРедактированияНеделяРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+				<InputField name="РеквизитыОрганизации" id="16">
+					<DataPath>Объект.РеквизитыОрганизации</DataPath>
+					<ContextMenu name="РеквизитыОрганизацииКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="РеквизитыОрганизацииРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="Комментарий" id="13">
+					<DataPath>Объект.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Организации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

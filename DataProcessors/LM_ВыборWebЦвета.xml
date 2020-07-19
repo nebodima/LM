@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<DataProcessor uuid="f4dd5f40-7881-4e12-a576-78bfc7a5880a">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.LM_ВыборWebЦвета" category="Object">
+				<xr:TypeId>8143acbd-f2c7-4ca8-9214-f60b7738ee24</xr:TypeId>
+				<xr:ValueId>79a78f7b-9fd2-4890-b278-bd52d2e3e3e3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.LM_ВыборWebЦвета" category="Manager">
+				<xr:TypeId>224ae576-5347-47bc-8563-5b58a7ef06b5</xr:TypeId>
+				<xr:ValueId>5369c871-97b3-4e11-b4ec-c4055fd86299</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>LM_ВыборWebЦвета</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор web цвета (LM)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.LM_ВыборWebЦвета.Form.ПалитраWebЦветовУправляемая</DefaultForm>
+			<AuxiliaryForm>DataProcessor.LM_ВыборWebЦвета.Form.ФормаДемоУправляемая</AuxiliaryForm>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаДемоУправляемая</Form>
+			<Form>ПалитраWebЦветовУправляемая</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

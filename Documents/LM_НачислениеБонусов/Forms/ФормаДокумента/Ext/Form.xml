@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="31">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="33">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="34"/>
+			</Button>
+			<Button name="ФормаПровести" id="35">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="36"/>
+			</Button>
+			<Button name="ФормаДокументСписаниеОстатковПечать" id="208">
+				<Type>CommandBarButton</Type>
+				<CommandName>Document.LM_НачислениеБонусов.Command.Печать</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаДокументСписаниеОстатковПечатьРасширеннаяПодсказка" id="209"/>
+			</Button>
+			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="216">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="217"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="165">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="166"/>
+			<ChildItems>
+				<InputField name="Ссылка" id="1">
+					<DataPath>Объект.Ref</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<UsualGroup name="ГруппаДата" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дата</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дата</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДатаРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<InputField name="Номер" id="4">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="Дата" id="7">
+							<DataPath>Объект.Date</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Организация" id="213">
+					<DataPath>Объект.Организация</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="214"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="215"/>
+				</InputField>
+				<Table name="ДисконтныеКарты" id="137">
+					<Footer>true</Footer>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ДисконтныеКарты</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ДисконтныеКартыКонтекстноеМеню" id="138"/>
+					<AutoCommandBar name="ДисконтныеКартыКоманднаяПанель" id="139"/>
+					<ExtendedTooltip name="ДисконтныеКартыРасширеннаяПодсказка" id="140"/>
+					<SearchStringAddition name="ДисконтныеКартыСтрокаПоиска" id="141">
+						<AdditionSource>
+							<Item>ДисконтныеКарты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДисконтныеКартыСтрокаПоискаКонтекстноеМеню" id="142"/>
+						<ExtendedTooltip name="ДисконтныеКартыСтрокаПоискаРасширеннаяПодсказка" id="143"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ДисконтныеКартыСостояниеПросмотра" id="144">
+						<AdditionSource>
+							<Item>ДисконтныеКарты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ДисконтныеКартыСостояниеПросмотраКонтекстноеМеню" id="145"/>
+						<ExtendedTooltip name="ДисконтныеКартыСостояниеПросмотраРасширеннаяПодсказка" id="146"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ДисконтныеКартыУправлениеПоиском" id="147">
+						<AdditionSource>
+							<Item>ДисконтныеКарты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ДисконтныеКартыУправлениеПоискомКонтекстноеМеню" id="148"/>
+						<ExtendedTooltip name="ДисконтныеКартыУправлениеПоискомРасширеннаяПодсказка" id="149"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ДисконтныеКартыНомерСтроки" id="150">
+							<DataPath>Объект.ДисконтныеКарты.LineNumber</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДисконтныеКартыНомерСтрокиКонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="ДисконтныеКартыНомерСтрокиРасширеннаяПодсказка" id="152"/>
+						</LabelField>
+						<InputField name="ДисконтныеКартыДисконтнаяКарта" id="156">
+							<DataPath>Объект.ДисконтныеКарты.ДисконтнаяКарта</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<ContextMenu name="ДисконтныеКартыДисконтнаяКартаКонтекстноеМеню" id="157"/>
+							<ExtendedTooltip name="ДисконтныеКартыДисконтнаяКартаРасширеннаяПодсказка" id="158"/>
+						</InputField>
+						<LabelField name="ДисконтныеКартыДисконтнаяКартаВладелец" id="210">
+							<DataPath>Объект.ДисконтныеКарты.ДисконтнаяКарта.Owner</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ученик</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>1</Width>
+							<ContextMenu name="ДисконтныеКартыДисконтнаяКартаВладелецКонтекстноеМеню" id="211"/>
+							<ExtendedTooltip name="ДисконтныеКартыДисконтнаяКартаВладелецРасширеннаяПодсказка" id="212"/>
+						</LabelField>
+						<InputField name="ДисконтныеКартыСуммаБонусов" id="159">
+							<DataPath>Объект.ДисконтныеКарты.СуммаБонусов</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<FooterDataPath>Объект.ДисконтныеКарты.TotalСуммаБонусов</FooterDataPath>
+							<Width>1</Width>
+							<ContextMenu name="ДисконтныеКартыСуммаБонусовКонтекстноеМеню" id="160"/>
+							<ExtendedTooltip name="ДисконтныеКартыСуммаБонусовРасширеннаяПодсказка" id="161"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<LabelField name="АвторДокумента" id="25">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<InputField name="Комментарий" id="28">
+					<DataPath>Объект.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.LM_НачислениеБонусов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,2088 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<AutoFillCheck>false</AutoFillCheck>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="65">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПраваяПанель" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>15</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Double</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяПанельРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="249">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<Group>Vertical</Group>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="250"/>
+							<ChildItems>
+								<LabelField name="ДатаНачала" id="243">
+									<DataPath>ДатаНачала</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxWidth>10</MaxWidth>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy дддд'</v8:content>
+										</v8:item>
+									</Format>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="245"/>
+								</LabelField>
+								<UsualGroup name="ГруппаВермя" id="255">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вермя</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа вермя</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Group>Horizontal</Group>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВермяРасширеннаяПодсказка" id="256"/>
+									<ChildItems>
+										<LabelField name="ДатаНачала1" id="257">
+											<DataPath>ДатаНачала</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>5</MaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=HH:mm</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ДатаНачала1КонтекстноеМеню" id="258"/>
+											<ExtendedTooltip name="ДатаНачала1РасширеннаяПодсказка" id="259"/>
+										</LabelField>
+										<LabelField name="ДатаОкончания" id="246">
+											<DataPath>ДатаОкончания</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>- </v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>5</MaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=HH:mm</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="247"/>
+											<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="248"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ПредыдущаяСтрока" id="41">
+							<Type>UsualButton</Type>
+							<Width>5</Width>
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ПредыдущаяСтрока</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В начало</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПредыдущаяСтрокаРасширеннаяПодсказка" id="42"/>
+						</Button>
+						<Button name="СледующаяСтрока" id="39">
+							<Type>UsualButton</Type>
+							<Width>5</Width>
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.СледующаяСтрока</CommandName>
+							<Font ref="style:NormalTextFont" height="20" kind="StyleItem"/>
+							<ExtendedTooltip name="СледующаяСтрокаРасширеннаяПодсказка" id="40"/>
+						</Button>
+						<Button name="ЧасВперед" id="251">
+							<Type>UsualButton</Type>
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ЧасВперед</CommandName>
+							<ExtendedTooltip name="ЧасВпередРасширеннаяПодсказка" id="252"/>
+						</Button>
+						<Button name="ЧасНазад" id="253">
+							<Type>UsualButton</Type>
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ЧасНазад</CommandName>
+							<ExtendedTooltip name="ЧасНазадРасширеннаяПодсказка" id="254"/>
+						</Button>
+						<LabelField name="ТекущееВремя" id="71">
+							<DataPath>ТекущееВремя</DataPath>
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ТекДата</v8:content>
+								</v8:item>
+							</Title>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="ТекущееВремяКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ТекущееВремяРасширеннаяПодсказка" id="73"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВертик" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертик</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертик</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВертикРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<LabelField name="Заголовок1" id="222">
+							<DataPath>ЗаголовокШапки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+							<ContextMenu name="Заголовок1КонтекстноеМеню" id="223"/>
+							<ExtendedTooltip name="Заголовок1РасширеннаяПодсказка" id="224"/>
+						</LabelField>
+						<UsualGroup name="ГруппаФизЛица1" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа физ лица1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа физ лица1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФизЛица1РасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<UsualGroup name="ФизЛицо1" id="77">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>25</Width>
+									<Height>20</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ФизЛицо1РасширеннаяПодсказка" id="78"/>
+									<ChildItems>
+										<PictureField name="ФизЛицо1Фото" id="74">
+											<DataPath>ФизЛицо1ФотоОбъект</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ФизЛицо1ФотоКонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="ФизЛицо1ФотоРасширеннаяПодсказка" id="76"/>
+											<Events>
+												<Event name="Click">ФизЛицо1ФотоНажатие</Event>
+											</Events>
+										</PictureField>
+										<LabelField name="ФизЛицо1ФИО" id="79">
+											<DataPath>ФизЛицо1ФИО</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+											<ContextMenu name="ФизЛицо1ФИОКонтекстноеМеню" id="80"/>
+											<ExtendedTooltip name="ФизЛицо1ФИОРасширеннаяПодсказка" id="81"/>
+										</LabelField>
+										<UsualGroup name="ГруппаФизЛицо1" id="82">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1РасширеннаяПодсказка" id="83"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Явка" id="84">
+													<DataPath>ФизЛицо1Явка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явка</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1ЯвкаКонтекстноеМеню" id="85"/>
+													<ExtendedTooltip name="ФизЛицо1ЯвкаРасширеннаяПодсказка" id="86"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Причина" id="87">
+													<DataPath>ФизЛицо1Причина</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>причина</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1ПричинаКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="ФизЛицо1ПричинаРасширеннаяПодсказка" id="89"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФизЛицо1_2" id="90">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1_2РасширеннаяПодсказка" id="91"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Списание" id="92">
+													<DataPath>ФизЛицо1Списание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1СписаниеКонтекстноеМеню" id="93"/>
+													<ExtendedTooltip name="ФизЛицо1СписаниеРасширеннаяПодсказка" id="94"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Комментарий" id="95">
+													<DataPath>ФизЛицо1Комментарий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>коммент</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1КомментарийКонтекстноеМеню" id="96"/>
+													<ExtendedTooltip name="ФизЛицо1КомментарийРасширеннаяПодсказка" id="97"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelField name="ФизЛицо1НомерСтроки" id="225">
+											<DataPath>ФизЛицо1НомерСтроки</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ФизЛицо1НомерСтрокиКонтекстноеМеню" id="226"/>
+											<ExtendedTooltip name="ФизЛицо1НомерСтрокиРасширеннаяПодсказка" id="227"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ФизЛицо2" id="98">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>25</Width>
+									<Height>20</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ФизЛицо2РасширеннаяПодсказка" id="99"/>
+									<ChildItems>
+										<PictureField name="ФизЛицо1Фото1" id="100">
+											<DataPath>ФизЛицо2ФотоОбъект</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ФизЛицо1Фото1КонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ФизЛицо1Фото1РасширеннаяПодсказка" id="102"/>
+											<Events>
+												<Event name="Click">ФизЛицо1ФотоНажатие</Event>
+											</Events>
+										</PictureField>
+										<LabelField name="ФизЛицо1ФИО1" id="103">
+											<DataPath>ФизЛицо2ФИО</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+											<ContextMenu name="ФизЛицо1ФИО1КонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="ФизЛицо1ФИО1РасширеннаяПодсказка" id="105"/>
+										</LabelField>
+										<UsualGroup name="ГруппаФизЛицо2" id="106">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо2РасширеннаяПодсказка" id="107"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Явка1" id="108">
+													<DataPath>ФизЛицо2Явка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явка</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Явка1КонтекстноеМеню" id="109"/>
+													<ExtendedTooltip name="ФизЛицо1Явка1РасширеннаяПодсказка" id="110"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Причина1" id="111">
+													<DataPath>ФизЛицо2Причина</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>причина</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Причина1КонтекстноеМеню" id="112"/>
+													<ExtendedTooltip name="ФизЛицо1Причина1РасширеннаяПодсказка" id="113"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФизЛицо1_3" id="114">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1_3РасширеннаяПодсказка" id="115"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Списание1" id="116">
+													<DataPath>ФизЛицо2Списание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Списание1КонтекстноеМеню" id="117"/>
+													<ExtendedTooltip name="ФизЛицо1Списание1РасширеннаяПодсказка" id="118"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Комментарий1" id="119">
+													<DataPath>ФизЛицо2Комментарий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>коммент</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Комментарий1КонтекстноеМеню" id="120"/>
+													<ExtendedTooltip name="ФизЛицо1Комментарий1РасширеннаяПодсказка" id="121"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelField name="ФизЛицо2НомерСтроки" id="228">
+											<DataPath>ФизЛицо2НомерСтроки</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ФизЛицо2НомерСтрокиКонтекстноеМеню" id="229"/>
+											<ExtendedTooltip name="ФизЛицо2НомерСтрокиРасширеннаяПодсказка" id="230"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ФизЛицо3" id="126">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>25</Width>
+									<Height>20</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ФизЛицо3РасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<PictureField name="ФизЛицо1Фото2" id="128">
+											<DataPath>ФизЛицо3ФотоОбъект</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ФизЛицо1Фото2КонтекстноеМеню" id="129"/>
+											<ExtendedTooltip name="ФизЛицо1Фото2РасширеннаяПодсказка" id="130"/>
+											<Events>
+												<Event name="Click">ФизЛицо1ФотоНажатие</Event>
+											</Events>
+										</PictureField>
+										<LabelField name="ФизЛицо1ФИО2" id="131">
+											<DataPath>ФизЛицо3ФИО</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+											<ContextMenu name="ФизЛицо1ФИО2КонтекстноеМеню" id="132"/>
+											<ExtendedTooltip name="ФизЛицо1ФИО2РасширеннаяПодсказка" id="133"/>
+										</LabelField>
+										<UsualGroup name="ГруппаФизЛицо3" id="134">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо3РасширеннаяПодсказка" id="135"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Явка2" id="136">
+													<DataPath>ФизЛицо3Явка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явка</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Явка2КонтекстноеМеню" id="137"/>
+													<ExtendedTooltip name="ФизЛицо1Явка2РасширеннаяПодсказка" id="138"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Причина2" id="139">
+													<DataPath>ФизЛицо3Причина</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>причина</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Причина2КонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="ФизЛицо1Причина2РасширеннаяПодсказка" id="141"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФизЛицо1_4" id="142">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1_4РасширеннаяПодсказка" id="143"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Списание2" id="144">
+													<DataPath>ФизЛицо3Списание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Списание2КонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="ФизЛицо1Списание2РасширеннаяПодсказка" id="146"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Комментарий2" id="147">
+													<DataPath>ФизЛицо3Комментарий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>коммент</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Комментарий2КонтекстноеМеню" id="148"/>
+													<ExtendedTooltip name="ФизЛицо1Комментарий2РасширеннаяПодсказка" id="149"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelField name="ФизЛицо3НомерСтроки" id="231">
+											<DataPath>ФизЛицо3НомерСтроки</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ФизЛицо3НомерСтрокиКонтекстноеМеню" id="232"/>
+											<ExtendedTooltip name="ФизЛицо3НомерСтрокиРасширеннаяПодсказка" id="233"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФизЛица2" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа физ лица2</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа физ лица2</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФизЛица2РасширеннаяПодсказка" id="125"/>
+							<ChildItems>
+								<UsualGroup name="ФизЛицо4" id="150">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>25</Width>
+									<Height>20</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ФизЛицо4РасширеннаяПодсказка" id="151"/>
+									<ChildItems>
+										<PictureField name="ФизЛицо1Фото3" id="152">
+											<DataPath>ФизЛицо4ФотоОбъект</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ФизЛицо1Фото3КонтекстноеМеню" id="153"/>
+											<ExtendedTooltip name="ФизЛицо1Фото3РасширеннаяПодсказка" id="154"/>
+											<Events>
+												<Event name="Click">ФизЛицо1ФотоНажатие</Event>
+											</Events>
+										</PictureField>
+										<LabelField name="ФизЛицо1ФИО3" id="155">
+											<DataPath>ФизЛицо4ФИО</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+											<ContextMenu name="ФизЛицо1ФИО3КонтекстноеМеню" id="156"/>
+											<ExtendedTooltip name="ФизЛицо1ФИО3РасширеннаяПодсказка" id="157"/>
+										</LabelField>
+										<UsualGroup name="ГруппаФизЛицо4" id="158">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо4РасширеннаяПодсказка" id="159"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Явка3" id="160">
+													<DataPath>ФизЛицо4Явка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явка</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Явка3КонтекстноеМеню" id="161"/>
+													<ExtendedTooltip name="ФизЛицо1Явка3РасширеннаяПодсказка" id="162"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Причина3" id="163">
+													<DataPath>ФизЛицо4Причина</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>причина</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Причина3КонтекстноеМеню" id="164"/>
+													<ExtendedTooltip name="ФизЛицо1Причина3РасширеннаяПодсказка" id="165"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФизЛицо1_5" id="166">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1_5РасширеннаяПодсказка" id="167"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Списание3" id="168">
+													<DataPath>ФизЛицо4Списание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Списание3КонтекстноеМеню" id="169"/>
+													<ExtendedTooltip name="ФизЛицо1Списание3РасширеннаяПодсказка" id="170"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Комментарий3" id="171">
+													<DataPath>ФизЛицо4Комментарий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>коммент</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Комментарий3КонтекстноеМеню" id="172"/>
+													<ExtendedTooltip name="ФизЛицо1Комментарий3РасширеннаяПодсказка" id="173"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelField name="ФизЛицо4НомерСтроки" id="234">
+											<DataPath>ФизЛицо4НомерСтроки</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ФизЛицо4НомерСтрокиКонтекстноеМеню" id="235"/>
+											<ExtendedTooltip name="ФизЛицо4НомерСтрокиРасширеннаяПодсказка" id="236"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ФизЛицо5" id="174">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>25</Width>
+									<Height>20</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ФизЛицо5РасширеннаяПодсказка" id="175"/>
+									<ChildItems>
+										<PictureField name="ФизЛицо1Фото4" id="176">
+											<DataPath>ФизЛицо5ФотоОбъект</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ФизЛицо1Фото4КонтекстноеМеню" id="177"/>
+											<ExtendedTooltip name="ФизЛицо1Фото4РасширеннаяПодсказка" id="178"/>
+											<Events>
+												<Event name="Click">ФизЛицо1ФотоНажатие</Event>
+											</Events>
+										</PictureField>
+										<LabelField name="ФизЛицо1ФИО4" id="179">
+											<DataPath>ФизЛицо5ФИО</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+											<ContextMenu name="ФизЛицо1ФИО4КонтекстноеМеню" id="180"/>
+											<ExtendedTooltip name="ФизЛицо1ФИО4РасширеннаяПодсказка" id="181"/>
+										</LabelField>
+										<UsualGroup name="ГруппаФизЛицо5" id="182">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо5РасширеннаяПодсказка" id="183"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Явка4" id="184">
+													<DataPath>ФизЛицо5Явка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явка</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Явка4КонтекстноеМеню" id="185"/>
+													<ExtendedTooltip name="ФизЛицо1Явка4РасширеннаяПодсказка" id="186"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Причина4" id="187">
+													<DataPath>ФизЛицо5Причина</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>причина</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Причина4КонтекстноеМеню" id="188"/>
+													<ExtendedTooltip name="ФизЛицо1Причина4РасширеннаяПодсказка" id="189"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФизЛицо1_6" id="190">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1_6РасширеннаяПодсказка" id="191"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Списание4" id="192">
+													<DataPath>ФизЛицо5Списание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Списание4КонтекстноеМеню" id="193"/>
+													<ExtendedTooltip name="ФизЛицо1Списание4РасширеннаяПодсказка" id="194"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Комментарий4" id="195">
+													<DataPath>ФизЛицо5Комментарий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>коммент</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Комментарий4КонтекстноеМеню" id="196"/>
+													<ExtendedTooltip name="ФизЛицо1Комментарий4РасширеннаяПодсказка" id="197"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelField name="ФизЛицо5НомерСтроки" id="237">
+											<DataPath>ФизЛицо5НомерСтроки</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ФизЛицо5НомерСтрокиКонтекстноеМеню" id="238"/>
+											<ExtendedTooltip name="ФизЛицо5НомерСтрокиРасширеннаяПодсказка" id="239"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ФизЛицо6" id="198">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Физ лицо1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>25</Width>
+									<Height>20</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ФизЛицо6РасширеннаяПодсказка" id="199"/>
+									<ChildItems>
+										<PictureField name="ФизЛицо1Фото5" id="200">
+											<DataPath>ФизЛицо6ФотоОбъект</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<PictureSize>AutoSize</PictureSize>
+											<Hyperlink>true</Hyperlink>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ФизЛицо1Фото5КонтекстноеМеню" id="201"/>
+											<ExtendedTooltip name="ФизЛицо1Фото5РасширеннаяПодсказка" id="202"/>
+											<Events>
+												<Event name="Click">ФизЛицо1ФотоНажатие</Event>
+											</Events>
+										</PictureField>
+										<LabelField name="ФизЛицо1ФИО5" id="203">
+											<DataPath>ФизЛицо6ФИО</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+											<ContextMenu name="ФизЛицо1ФИО5КонтекстноеМеню" id="204"/>
+											<ExtendedTooltip name="ФизЛицо1ФИО5РасширеннаяПодсказка" id="205"/>
+										</LabelField>
+										<UsualGroup name="ГруппаФизЛицо6" id="206">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо6РасширеннаяПодсказка" id="207"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Явка5" id="208">
+													<DataPath>ФизЛицо6Явка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явка</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Явка5КонтекстноеМеню" id="209"/>
+													<ExtendedTooltip name="ФизЛицо1Явка5РасширеннаяПодсказка" id="210"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Причина5" id="211">
+													<DataPath>ФизЛицо6Причина</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>причина</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Причина5КонтекстноеМеню" id="212"/>
+													<ExtendedTooltip name="ФизЛицо1Причина5РасширеннаяПодсказка" id="213"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаФизЛицо1_7" id="214">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа физ лицо1</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаФизЛицо1_7РасширеннаяПодсказка" id="215"/>
+											<ChildItems>
+												<CheckBoxField name="ФизЛицо1Списание5" id="216">
+													<DataPath>ФизЛицо6Списание</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФизЛицо1Списание5КонтекстноеМеню" id="217"/>
+													<ExtendedTooltip name="ФизЛицо1Списание5РасширеннаяПодсказка" id="218"/>
+												</CheckBoxField>
+												<LabelField name="ФизЛицо1Комментарий5" id="219">
+													<DataPath>ФизЛицо6Комментарий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>коммент</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<ContextMenu name="ФизЛицо1Комментарий5КонтекстноеМеню" id="220"/>
+													<ExtendedTooltip name="ФизЛицо1Комментарий5РасширеннаяПодсказка" id="221"/>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelField name="ФизЛицо6НомерСтроки" id="240">
+											<DataPath>ФизЛицо6НомерСтроки</DataPath>
+											<Visible>false</Visible>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ФизЛицо6НомерСтрокиКонтекстноеМеню" id="241"/>
+											<ExtendedTooltip name="ФизЛицо6НомерСтрокиРасширеннаяПодсказка" id="242"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа1" id="33">
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<Button name="Обновить" id="49">
+									<Type>UsualButton</Type>
+									<Width>12</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="50"/>
+								</Button>
+								<Button name="Применить" id="1">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.Применить</CommandName>
+									<BackColor>#FFCC00</BackColor>
+									<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+									<ExtendedTooltip name="ПрименитьРасширеннаяПодсказка" id="2"/>
+								</Button>
+								<Button name="Закрыть" id="31">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>15</Width>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.ЗавершитьРаботу</CommandName>
+									<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+									<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="32"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.LM_ОтмечаниеПосещений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТЗУроки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗУроки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Урок" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Урок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ученик" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ученик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ГруппаОбучения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа обучения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.LM_ГруппыОбучения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредметОбучения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет обучения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.LM_ПредметыОбучения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Номер" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяНачала" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время начала</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяОкончания" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время окончания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>15</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Списание" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Списание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отмечен" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмечен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекущееВремя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Time</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1ФотоОбъект" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 фото объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1ФИО" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1Списание" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1Явка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 явка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1Причина" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1Комментарий" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2Причина" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2Комментарий" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2Списание" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2ФИО" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2ФотоОбъект" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2Явка" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 явка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3Комментарий" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3Причина" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3Списание" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3ФИО" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3ФотоОбъект" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3Явка" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 явка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4Комментарий" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4Явка" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 явка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4Причина" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4Списание" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4ФИО" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4ФотоОбъект" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5Комментарий" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5Явка" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 явка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5ФотоОбъект" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5ФИО" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5Списание" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5Причина" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6Комментарий" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6Причина" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 причина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>255</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6Списание" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплачен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6ФИО" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6ФотоОбъект" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6Явка" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 явка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаголовокШапки" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок шапки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СчЦикла" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сч цикла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо1НомерСтроки" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо2НомерСтроки" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо3НомерСтроки" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо4НомерСтроки" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо5НомерСтроки" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФизЛицо6НомерСтроки" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физ лицо1 комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Применить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Применить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗавершитьРаботу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить (F12)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить работу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F12</Shortcut>
+			<Picture>
+				<xr:Ref>CommonPicture.Ошибка32</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗавершитьРаботу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СледующаяСтрока" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая строка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая строка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СледующаяСтрока</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПредыдущаяСтрока" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В начало</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая строка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПредыдущаяСтрока</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить (F5)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЧасНазад" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Час назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Час вперед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПолнотекстовыйПоискНазад</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЧасНазад</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЧасВперед" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Час вперед</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Час вперед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПолнотекстовыйПоискДалее</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЧасВперед</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

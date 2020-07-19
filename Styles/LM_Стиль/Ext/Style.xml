@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Style xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Item name="FormBackColor">
+		<Color>#C0C0C0</Color>
+	</Item>
+	<Item name="FormTextColor">
+		<Color>#0000FF</Color>
+	</Item>
+	<Item name="ButtonBackColor">
+		<Color>#CCFFFF</Color>
+	</Item>
+	<Item name="ButtonTextColor">
+		<Color>#0000FF</Color>
+	</Item>
+	<Item name="FieldBackColor">
+		<Color>#99CC00</Color>
+	</Item>
+	<Item name="FieldSelectionBackColor">
+		<Color>#FFFF85</Color>
+	</Item>
+	<Item name="FieldSelectedTextColor">
+		<Color>#FFFF99</Color>
+	</Item>
+	<Item name="FieldAlternativeBackColor">
+		<Color>#99CCFF</Color>
+	</Item>
+	<Item name="BorderColor">
+		<Color>#000000</Color>
+	</Item>
+	<Item name="ReportHeaderBackColor">
+		<Color>#C0C0C0</Color>
+	</Item>
+	<Item name="ButtonBorderColor">
+		<Color>#00FF00</Color>
+	</Item>
+	<Item name="ActivityColor">
+		<Color>#AFEEEE</Color>
+	</Item>
+	<Item name="AccentColor">
+		<Color>style:AccentColor</Color>
+	</Item>
+	<Item name="NavigationColor">
+		<Color>web:PaleTurquoise</Color>
+	</Item>
+	<Item name="AuxiliaryNavigationColor">
+		<Color>style:AuxiliaryNavigationColor</Color>
+	</Item>
+</Style>
