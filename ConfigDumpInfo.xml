@@ -5057,8 +5057,8 @@
 		</Metadata>
 		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="f9436032b408d94fa98cbb53f99cffb900000000"/>
 		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="d17d89dfb1d2534c9c197cedb87d79c900000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="9dba3cb4731701448e2476ea4db6347300000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="bdbd5a4fc557d54a95bf85d47ee107ea00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="82e2e7be1816c2409f94ac5ac104119800000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="60c40258a9977040958605428d95022a00000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="fc280b36a98fd741965b62280d46362400000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="2921837efa047348908199a8b2b2457c00000000"/>
 		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="ccfbb002c2758d429208d7afbf4679fc00000000"/>

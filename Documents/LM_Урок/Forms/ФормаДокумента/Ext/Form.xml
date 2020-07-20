@@ -1013,7 +1013,6 @@
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
-											<FooterDataPath>Объект.Ученики.TotalЧасы</FooterDataPath>
 											<Width>1</Width>
 											<SpinButton>true</SpinButton>
 											<ContextMenu name="УченикиЧасыКонтекстноеМеню" id="303"/>
