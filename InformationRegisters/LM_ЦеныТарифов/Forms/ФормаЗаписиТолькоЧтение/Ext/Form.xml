@@ -14,7 +14,6 @@
 		</InputField>
 		<InputField name="Организация" id="13">
 			<DataPath>Запись.Организация</DataPath>
-			<ReadOnly>true</ReadOnly>
 			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>

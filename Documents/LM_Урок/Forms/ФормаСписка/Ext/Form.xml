@@ -69,7 +69,6 @@
 				</Picture>
 				<Shape>Oval</Shape>
 				<BackColor>style:ImportantColor</BackColor>
-				<BorderColor>auto</BorderColor>
 				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="162"/>
 				<ChildItems>
 					<Button name="ОткрытьПанельУченика" id="246">
@@ -171,7 +170,6 @@
 				</Picture>
 				<Representation>Picture</Representation>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<BackColor>auto</BackColor>
 				<ExtendedTooltip name="ФормаСоздатьНаОснованииРасширеннаяПодсказка" id="288"/>
 				<ChildItems>
 					<Button name="ФормаСоздатьПКОНаОсновании" id="283">
@@ -357,6 +355,16 @@
 							<BackColor>#CCFFCC</BackColor>
 							<ExtendedTooltip name="ГруппаНастройкаРасширеннаяПодсказка" id="397"/>
 							<ChildItems>
+								<CheckBoxField name="ОтображатьДетализациюУрока" id="424">
+									<DataPath>НеОтображатьДетализациюУрока</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="ОтображатьДетализациюУрокаКонтекстноеМеню" id="425"/>
+									<ExtendedTooltip name="ОтображатьДетализациюУрокаРасширеннаяПодсказка" id="426"/>
+									<Events>
+										<Event name="OnChange">ПриИзмененийНайстроек</Event>
+									</Events>
+								</CheckBoxField>
 								<CheckBoxField name="ОтображатьДиаграммуЗадолженности" id="401">
 									<DataPath>ОтображатьДиаграммуЗадолженности</DataPath>
 									<TitleLocation>Right</TitleLocation>
@@ -639,266 +647,245 @@
 						</LabelField>
 					</ChildItems>
 				</Table>
-				<UsualGroup name="Группа1" id="415">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Расшифровка урока (свернуть)</v8:content>
-						</v8:item>
-					</Title>
-					<Group>Vertical</Group>
-					<Behavior>Collapsible</Behavior>
-					<CollapsedRepresentationTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Расшифровка урока (показать)</v8:content>
-						</v8:item>
-					</CollapsedRepresentationTitle>
-					<Collapsed>true</Collapsed>
-					<Representation>None</Representation>
-					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="416"/>
+				<Table name="Расшифровка" id="322">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<MaxHeight>5</MaxHeight>
+					<MaxRowsCount>5</MaxRowsCount>
+					<HorizontalLines>false</HorizontalLines>
+					<VerticalLines>false</VerticalLines>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Расшифровка</DataPath>
+					<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="РасшифровкаКонтекстноеМеню" id="323">
+						<ChildItems>
+							<Button name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчеты" id="391">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьВзаиморасчетыКонтекст</CommandName>
+								<ExtendedTooltip name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчетыРасширеннаяПодсказка" id="392"/>
+							</Button>
+						</ChildItems>
+					</ContextMenu>
+					<AutoCommandBar name="РасшифровкаКоманднаяПанель" id="324"/>
+					<ExtendedTooltip name="РасшифровкаРасширеннаяПодсказка" id="325"/>
+					<SearchStringAddition name="РасшифровкаСтрокаПоиска" id="326">
+						<AdditionSource>
+							<Item>Расшифровка</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РасшифровкаСтрокаПоискаКонтекстноеМеню" id="327"/>
+						<ExtendedTooltip name="РасшифровкаСтрокаПоискаРасширеннаяПодсказка" id="328"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РасшифровкаСостояниеПросмотра" id="329">
+						<AdditionSource>
+							<Item>Расшифровка</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РасшифровкаСостояниеПросмотраКонтекстноеМеню" id="330"/>
+						<ExtendedTooltip name="РасшифровкаСостояниеПросмотраРасширеннаяПодсказка" id="331"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РасшифровкаУправлениеПоиском" id="332">
+						<AdditionSource>
+							<Item>Расшифровка</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РасшифровкаУправлениеПоискомКонтекстноеМеню" id="333"/>
+						<ExtendedTooltip name="РасшифровкаУправлениеПоискомРасширеннаяПодсказка" id="334"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">РасшифровкаВыбор</Event>
+					</Events>
 					<ChildItems>
-						<Table name="Расшифровка" id="322">
-							<Representation>List</Representation>
-							<CommandBarLocation>None</CommandBarLocation>
-							<ChangeRowSet>false</ChangeRowSet>
-							<ChangeRowOrder>false</ChangeRowOrder>
-							<AutoMaxHeight>false</AutoMaxHeight>
-							<MaxHeight>5</MaxHeight>
-							<MaxRowsCount>5</MaxRowsCount>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
+						<LabelField name="РасшифровкаНомерСтроки" id="344">
+							<DataPath>Расшифровка.НомерСтроки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<MaxWidth>2</MaxWidth>
+							<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
+							<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
+						</LabelField>
+						<LabelField name="РасшифровкаУченик" id="368">
+							<DataPath>Расшифровка.Ученик</DataPath>
+							<CellHyperlink>true</CellHyperlink>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>1</Width>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
+							<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
+						</LabelField>
+						<PictureField name="РасшифровкаСписатьОплату" id="353">
+							<DataPath>Расшифровка.СписатьОплату</DataPath>
+							<Width>1</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
 							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>Расшифровка</DataPath>
-							<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
-							<AutoRefresh>false</AutoRefresh>
-							<AutoRefreshPeriod>60</AutoRefreshPeriod>
-							<Period>
-								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-							</Period>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<RestoreCurrentRow>false</RestoreCurrentRow>
-							<TopLevelParent xsi:nil="true"/>
-							<ShowRoot>true</ShowRoot>
-							<AllowRootChoice>false</AllowRootChoice>
-							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<ContextMenu name="РасшифровкаКонтекстноеМеню" id="323">
-								<ChildItems>
-									<Button name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчеты" id="391">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ОткрытьВзаиморасчетыКонтекст</CommandName>
-										<ExtendedTooltip name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчетыРасширеннаяПодсказка" id="392"/>
-									</Button>
-								</ChildItems>
-							</ContextMenu>
-							<AutoCommandBar name="РасшифровкаКоманднаяПанель" id="324"/>
-							<ExtendedTooltip name="РасшифровкаРасширеннаяПодсказка" id="325"/>
-							<SearchStringAddition name="РасшифровкаСтрокаПоиска" id="326">
-								<AdditionSource>
-									<Item>Расшифровка</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="РасшифровкаСтрокаПоискаКонтекстноеМеню" id="327"/>
-								<ExtendedTooltip name="РасшифровкаСтрокаПоискаРасширеннаяПодсказка" id="328"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="РасшифровкаСостояниеПросмотра" id="329">
-								<AdditionSource>
-									<Item>Расшифровка</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="РасшифровкаСостояниеПросмотраКонтекстноеМеню" id="330"/>
-								<ExtendedTooltip name="РасшифровкаСостояниеПросмотраРасширеннаяПодсказка" id="331"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="РасшифровкаУправлениеПоиском" id="332">
-								<AdditionSource>
-									<Item>Расшифровка</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="РасшифровкаУправлениеПоискомКонтекстноеМеню" id="333"/>
-								<ExtendedTooltip name="РасшифровкаУправлениеПоискомРасширеннаяПодсказка" id="334"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="Selection">РасшифровкаВыбор</Event>
-							</Events>
-							<ChildItems>
-								<LabelField name="РасшифровкаНомерСтроки" id="344">
-									<DataPath>Расшифровка.НомерСтроки</DataPath>
-									<TitleLocation>None</TitleLocation>
-									<Width>1</Width>
-									<MaxWidth>2</MaxWidth>
-									<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
-									<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
-								</LabelField>
-								<LabelField name="РасшифровкаУченик" id="368">
-									<DataPath>Расшифровка.Ученик</DataPath>
-									<CellHyperlink>true</CellHyperlink>
-									<HeaderPicture>
-										<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>1</Width>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
-									<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
-								</LabelField>
-								<PictureField name="РасшифровкаСписатьОплату" id="353">
-									<DataPath>Расшифровка.СписатьОплату</DataPath>
-									<Width>1</Width>
-									<ValuesPicture>
-										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
-									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
-								</PictureField>
-								<LabelField name="РасшифровкаЗаметка" id="335">
-									<DataPath>Расшифровка.Заметка</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Заметка</v8:content>
-										</v8:item>
-									</Title>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
-									<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
-								</LabelField>
-								<PictureField name="РасшифровкаЯвка" id="374">
-									<DataPath>Расшифровка.Явка</DataPath>
-									<Width>1</Width>
-									<ValuesPicture>
-										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
-									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
-								</PictureField>
-								<LabelField name="РасшифровкаПричина" id="347">
-									<DataPath>Расшифровка.Причина</DataPath>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
-									<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
-								</LabelField>
-								<LabelField name="РасшифровкаТариф" id="365">
-									<DataPath>Расшифровка.Тариф</DataPath>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
-									<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
-								</LabelField>
-								<LabelField name="РасшифровкаКоэффициент" id="341">
-									<DataPath>Расшифровка.Коэффициент</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Скидка наименование</v8:content>
-										</v8:item>
-									</Title>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаКоэффициентКонтекстноеМеню" id="342"/>
-									<ExtendedTooltip name="РасшифровкаКоэффициентРасширеннаяПодсказка" id="343"/>
-								</LabelField>
-								<LabelField name="РасшифровкаСкидка" id="350">
-									<DataPath>Расшифровка.Скидка</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Сумма скидки</v8:content>
-										</v8:item>
-									</Title>
-									<Width>2</Width>
-									<ContextMenu name="РасшифровкаСкидкаКонтекстноеМеню" id="351"/>
-									<ExtendedTooltip name="РасшифровкаСкидкаРасширеннаяПодсказка" id="352"/>
-								</LabelField>
-								<LabelField name="РасшифровкаСуммаБезСкидки" id="362">
-									<DataPath>Расшифровка.СуммаБезСкидки</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Сумма без скидки</v8:content>
-										</v8:item>
-									</Title>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаСуммаБезСкидкиКонтекстноеМеню" id="363"/>
-									<ExtendedTooltip name="РасшифровкаСуммаБезСкидкиРасширеннаяПодсказка" id="364"/>
-								</LabelField>
-								<LabelField name="РасшифровкаСумма" id="359">
-									<DataPath>Расшифровка.Сумма</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Сумма итого</v8:content>
-										</v8:item>
-									</Title>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
-									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
-								</LabelField>
-								<LabelField name="РасшифровкаКомментарий" id="338">
-									<DataPath>Расшифровка.Комментарий</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Width>1</Width>
-									<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
-									<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
-								</LabelField>
-								<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
-									<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Долг по предмету</v8:content>
-										</v8:item>
-									</Title>
-									<CellHyperlink>true</CellHyperlink>
-									<Width>1</Width>
-									<MarkNegatives>true</MarkNegatives>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
-									<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
-								</LabelField>
-								<LabelField name="РасшифровкаСуммаОстаток" id="384">
-									<DataPath>Расшифровка.СуммаОстаток</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Общ. долг</v8:content>
-										</v8:item>
-									</Title>
-									<CellHyperlink>true</CellHyperlink>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>1</Width>
-									<MarkNegatives>true</MarkNegatives>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
-									<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
-								</LabelField>
-							</ChildItems>
-						</Table>
+							<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
+							<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
+						</PictureField>
+						<LabelField name="РасшифровкаЗаметка" id="335">
+							<DataPath>Расшифровка.Заметка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заметка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
+							<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
+						</LabelField>
+						<PictureField name="РасшифровкаЯвка" id="374">
+							<DataPath>Расшифровка.Явка</DataPath>
+							<Width>1</Width>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
+							<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
+						</PictureField>
+						<LabelField name="РасшифровкаПричина" id="347">
+							<DataPath>Расшифровка.Причина</DataPath>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
+							<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
+						</LabelField>
+						<LabelField name="РасшифровкаТариф" id="365">
+							<DataPath>Расшифровка.Тариф</DataPath>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
+							<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
+						</LabelField>
+						<LabelField name="РасшифровкаКоэффициент" id="341">
+							<DataPath>Расшифровка.Коэффициент</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скидка наименование</v8:content>
+								</v8:item>
+							</Title>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаКоэффициентКонтекстноеМеню" id="342"/>
+							<ExtendedTooltip name="РасшифровкаКоэффициентРасширеннаяПодсказка" id="343"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСкидка" id="350">
+							<DataPath>Расшифровка.Скидка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма скидки</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<ContextMenu name="РасшифровкаСкидкаКонтекстноеМеню" id="351"/>
+							<ExtendedTooltip name="РасшифровкаСкидкаРасширеннаяПодсказка" id="352"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСуммаБезСкидки" id="362">
+							<DataPath>Расшифровка.СуммаБезСкидки</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма без скидки</v8:content>
+								</v8:item>
+							</Title>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаСуммаБезСкидкиКонтекстноеМеню" id="363"/>
+							<ExtendedTooltip name="РасшифровкаСуммаБезСкидкиРасширеннаяПодсказка" id="364"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСумма" id="359">
+							<DataPath>Расшифровка.Сумма</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма итого</v8:content>
+								</v8:item>
+							</Title>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
+							<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
+						</LabelField>
+						<LabelField name="РасшифровкаКомментарий" id="338">
+							<DataPath>Расшифровка.Комментарий</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Width>1</Width>
+							<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
+							<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
+							<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Долг по предмету</v8:content>
+								</v8:item>
+							</Title>
+							<CellHyperlink>true</CellHyperlink>
+							<Width>1</Width>
+							<MarkNegatives>true</MarkNegatives>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
+							<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСуммаОстаток" id="384">
+							<DataPath>Расшифровка.СуммаОстаток</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общ. долг</v8:content>
+								</v8:item>
+							</Title>
+							<CellHyperlink>true</CellHyperlink>
+							<HeaderPicture>
+								<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>1</Width>
+							<MarkNegatives>true</MarkNegatives>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
+							<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
+						</LabelField>
 					</ChildItems>
-				</UsualGroup>
+				</Table>
 				<PictureField name="ФотоУченика" id="280">
 					<DataPath>ФотоУченика</DataPath>
 					<Visible>false</Visible>
@@ -1540,6 +1527,20 @@
 			<Type>
 				<v8:Type>cfg:CatalogRef.LM_ДисконтныеКарты</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="НеОтображатьДетализациюУрока" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не отображать детализацию урока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НеОтображатьДетализациюУрока</Field>
+			</Save>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
