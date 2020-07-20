@@ -31,10 +31,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ДисконтныеКарты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ШаблоныНастроекПоУмолчанию</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ГруппыОбучения</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Договоры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДоговорыКонтрагентов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Скидки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_СтавкиПедагогов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_Настройки</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -194,7 +194,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.LM_ТипыДоговоров</name>
+		<name>Catalog.LM_ВидыДоговоров</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
@@ -4117,7 +4117,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Договоры</name>
+		<name>Catalog.ДоговорыКонтрагентов</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>

@@ -231,7 +231,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.LM_ТипыДоговоров</name>
+		<name>Catalog.LM_ВидыДоговоров</name>
 		<right>
 			<name>InteractiveDelete</name>
 			<value>false</value>
@@ -4044,7 +4044,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Договоры</name>
+		<name>Catalog.ДоговорыКонтрагентов</name>
 		<right>
 			<name>InteractiveDelete</name>
 			<value>false</value>

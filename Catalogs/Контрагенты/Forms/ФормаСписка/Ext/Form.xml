@@ -5,8 +5,8 @@
 			<Button name="ФормаСоздать" id="156">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.Create</CommandName>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="157"/>
 			</Button>
 			<Button name="ФормаСоздатьГруппу" id="158">
@@ -22,24 +22,46 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="161"/>
 			</Button>
-			<Button name="ФормаДокументСписаниеОстатковСоздатьНаОсновании" id="165">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Document.LM_СписаниеОстатков.StandardCommand.CreateBasedOn</CommandName>
-				<DataPath>Items.Список.CurrentData.Parent</DataPath>
-				<Picture>
-					<xr:Ref>StdPicture.Document</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
+			<Popup name="ФормаГруппа1" id="174">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Списание остатков</v8:content>
+						<v8:content>Ввести на основании</v8:content>
 					</v8:item>
 				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Next</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаДокументСписаниеОстатковСоздатьНаОснованииРасширеннаяПодсказка" id="166"/>
-			</Button>
+				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="175"/>
+				<ChildItems>
+					<Button name="ФормаДокументСписаниеОстатковСоздатьНаОсновании" id="165">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Document.LM_СписаниеОстатков.StandardCommand.CreateBasedOn</CommandName>
+						<DataPath>Items.Список.CurrentData.Parent</DataPath>
+						<Picture>
+							<xr:Ref>StdPicture.Document</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ShapeRepresentation>WhenActive</ShapeRepresentation>
+						<ExtendedTooltip name="ФормаДокументСписаниеОстатковСоздатьНаОснованииРасширеннаяПодсказка" id="166"/>
+					</Button>
+					<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="172">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Document.ПриходныйКассовыйОрдер.StandardCommand.CreateBasedOn</CommandName>
+						<DataPath>Items.Список.CurrentData.Ref</DataPath>
+						<Picture>
+							<xr:Ref>StdPicture.Document</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="173"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="167">
 				<Type>CommandBarButton</Type>
 				<CommandName>CommonCommand.Напомнить</CommandName>

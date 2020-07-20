@@ -2,33 +2,33 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<Catalog uuid="0a32c0cb-b722-4f37-99ed-447264168237">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.LM_ТипыДоговоров" category="Object">
+			<xr:GeneratedType name="CatalogObject.LM_ВидыДоговоров" category="Object">
 				<xr:TypeId>e1a24639-c0ef-4088-89bd-73447af09bd9</xr:TypeId>
 				<xr:ValueId>fcc7e198-61be-4cb0-823a-eda8e5b55088</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.LM_ТипыДоговоров" category="Ref">
+			<xr:GeneratedType name="CatalogRef.LM_ВидыДоговоров" category="Ref">
 				<xr:TypeId>77d6bb79-acbc-4e0c-8b47-cc254c393024</xr:TypeId>
 				<xr:ValueId>c411eb0c-0be4-421b-9e41-37caecc613be</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.LM_ТипыДоговоров" category="Selection">
+			<xr:GeneratedType name="CatalogSelection.LM_ВидыДоговоров" category="Selection">
 				<xr:TypeId>8fd99bbc-3c6a-409e-8282-7c8ab81ae086</xr:TypeId>
 				<xr:ValueId>e12e9476-3ded-44f5-840a-1adb68a76be8</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.LM_ТипыДоговоров" category="List">
+			<xr:GeneratedType name="CatalogList.LM_ВидыДоговоров" category="List">
 				<xr:TypeId>77f45f9d-5608-4db2-945f-9a96ee1072ce</xr:TypeId>
 				<xr:ValueId>dc484e45-bef7-41d5-9456-061fc6524e55</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.LM_ТипыДоговоров" category="Manager">
+			<xr:GeneratedType name="CatalogManager.LM_ВидыДоговоров" category="Manager">
 				<xr:TypeId>748c22b8-9683-4db8-a4da-3a1bc32c17ab</xr:TypeId>
 				<xr:ValueId>ba4d021e-3387-4ba2-8c9c-13e57a5ac332</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>LM_ТипыДоговоров</Name>
+			<Name>LM_ВидыДоговоров</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Типы договоров (LM)</v8:content>
+					<v8:content>Виды договоров (LM)</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -54,8 +54,8 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.LM_ТипыДоговоров.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.LM_ТипыДоговоров.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.LM_ВидыДоговоров.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.LM_ВидыДоговоров.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>

@@ -24,7 +24,7 @@
 	</AutoCommandBar>
 	<ChildItems>
 		<CheckBoxField name="LM_ИспользоватьКомпактныйИнтерфейс" id="13">
-			<DataPath>НаборКонстант.LM_ИспользоватьКомпактныйИнтерфейс</DataPath>
+			<DataPath>2/0:c454207b-9060-4bbd-b9f4-7c640541da59</DataPath>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
