@@ -936,67 +936,47 @@
 									</ChildItems>
 								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппа6" id="450">
-									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа6РасширеннаяПодсказка" id="451"/>
 									<ChildItems>
-										<InputField name="УченикиСуммаБезСкидки" id="436">
-											<DataPath>Объект.Ученики.СуммаБезСкидки</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<ReadOnly>true</ReadOnly>
+										<InputField name="УченикиКоэффициент" id="430">
+											<DataPath>Объект.Ученики.Коэффициент</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скидка</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
-											<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
-											<FooterDataPath>Объект.Ученики.TotalСуммаБезСкидки</FooterDataPath>
 											<Width>1</Width>
-											<ContextMenu name="УченикиСуммаБезСкидкиКонтекстноеМеню" id="437"/>
-											<ExtendedTooltip name="УченикиСуммаБезСкидкиРасширеннаяПодсказка" id="438"/>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="УченикиКоэффициентКонтекстноеМеню" id="431"/>
+											<ExtendedTooltip name="УченикиКоэффициентРасширеннаяПодсказка" id="432"/>
+											<Events>
+												<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
+												<Event name="Clearing">УченикиКоэффициентОчистка</Event>
+											</Events>
 										</InputField>
-										<ColumnGroup name="УченикиГруппа7" id="458">
-											<ExtendedTooltip name="УченикиГруппа7РасширеннаяПодсказка" id="459"/>
-											<ChildItems>
-												<InputField name="УченикиКоэффициент" id="430">
-													<DataPath>Объект.Ученики.Коэффициент</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Скидка</v8:content>
-														</v8:item>
-													</Title>
-													<EditMode>EnterOnInput</EditMode>
-													<HeaderPicture>
-														<xr:Ref>StdPicture.CustomExpression</xr:Ref>
-														<xr:LoadTransparent>true</xr:LoadTransparent>
-													</HeaderPicture>
-													<ShowInFooter>false</ShowInFooter>
-													<Width>1</Width>
-													<ClearButton>true</ClearButton>
-													<ContextMenu name="УченикиКоэффициентКонтекстноеМеню" id="431"/>
-													<ExtendedTooltip name="УченикиКоэффициентРасширеннаяПодсказка" id="432"/>
-													<Events>
-														<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
-														<Event name="Clearing">УченикиКоэффициентОчистка</Event>
-													</Events>
-												</InputField>
-												<InputField name="УченикиСкидка" id="433">
-													<DataPath>Объект.Ученики.Скидка</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>сумма скидки</v8:content>
-														</v8:item>
-													</Title>
-													<EditMode>EnterOnInput</EditMode>
-													<ShowInFooter>false</ShowInFooter>
-													<FooterDataPath>Объект.Ученики.TotalСкидка</FooterDataPath>
-													<Width>1</Width>
-													<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="434"/>
-													<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="435"/>
-												</InputField>
-											</ChildItems>
-										</ColumnGroup>
+										<InputField name="УченикиСкидка" id="433">
+											<DataPath>Объект.Ученики.Скидка</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>сумма скидки</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<FooterDataPath>Объект.Ученики.TotalСкидка</FooterDataPath>
+											<Width>1</Width>
+											<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="434"/>
+											<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="435"/>
+										</InputField>
 									</ChildItems>
 								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппа5" id="448">
@@ -1282,7 +1262,7 @@
 											<ExtendedTooltip name="УченикиГруппа12РасширеннаяПодсказка" id="617"/>
 											<ChildItems>
 												<InputField name="УченикиСуммаБезСкидки1" id="618">
-													<DataPath>Объект.Ученики.СуммаБезСкидки</DataPath>
+													<DataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/0:ede82bdb-8d37-417c-99d6-e2456550f8a3</DataPath>
 													<UserVisible>
 														<xr:Common>false</xr:Common>
 													</UserVisible>
@@ -1297,7 +1277,7 @@
 													<EditMode>EnterOnInput</EditMode>
 													<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
 													<ShowInFooter>false</ShowInFooter>
-													<FooterDataPath>Объект.Ученики.TotalСуммаБезСкидки</FooterDataPath>
+													<FooterDataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/101000000:ede82bdb-8d37-417c-99d6-e2456550f8a3</FooterDataPath>
 													<ContextMenu name="УченикиСуммаБезСкидки1КонтекстноеМеню" id="619"/>
 													<ExtendedTooltip name="УченикиСуммаБезСкидки1РасширеннаяПодсказка" id="620"/>
 												</InputField>
