@@ -748,6 +748,9 @@
 						</PictureField>
 						<LabelField name="РасшифровкаЗаметка" id="335">
 							<DataPath>Расшифровка.Заметка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -771,6 +774,9 @@
 						</PictureField>
 						<LabelField name="РасшифровкаПричина" id="347">
 							<DataPath>Расшифровка.Причина</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Width>1</Width>
 							<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
 							<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
@@ -789,7 +795,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Скидка наименование</v8:content>
+									<v8:content>Скидка</v8:content>
 								</v8:item>
 							</Title>
 							<Width>1</Width>
@@ -834,9 +840,6 @@
 						</LabelField>
 						<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
 							<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>

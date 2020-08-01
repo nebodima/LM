@@ -45,7 +45,7 @@
 		<Command name="Catalog.LM_Помещения.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Catalog.LM_ШаблоныНастроекПоУмолчанию.StandardCommand.OpenList">
+		<Command name="0:d22f3bdf-88b0-4002-ac36-1ad9a7f86d85">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Заметки.StandardCommand.OpenList">

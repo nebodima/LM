@@ -311,16 +311,6 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
-								<CheckBoxField name="ВзятьВремяИзГруппыОбучения" id="214">
-									<DataPath>ВзятьВремяИзГруппыОбучения</DataPath>
-									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ВзятьВремяИзГруппыОбученияКонтекстноеМеню" id="215"/>
-									<ExtendedTooltip name="ВзятьВремяИзГруппыОбученияРасширеннаяПодсказка" id="216"/>
-									<Events>
-										<Event name="OnChange">ВзятьВремяИзГруппыОбученияПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 						<CalendarField name="Календарь" id="25">
@@ -417,8 +407,15 @@
 									</Button>
 									<Button name="УченикиДобавить1" id="176">
 										<Type>CommandBarButton</Type>
-										<Visible>false</Visible>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить ФизЛицо</v8:content>
+											</v8:item>
+										</Title>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
 										<ExtendedTooltip name="УченикиДобавить1РасширеннаяПодсказка" id="177"/>
 									</Button>
 									<Button name="УченикиУдалить" id="80">
@@ -1108,20 +1105,6 @@
 					</Type>
 				</Column>
 			</Columns>
-		</Attribute>
-		<Attribute name="ВзятьВремяИзГруппыОбучения" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Взять только время из ГруппыОбучения</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-			<Save>
-				<Field>ВзятьВремяИзГруппыОбучения</Field>
-			</Save>
 		</Attribute>
 		<Attribute name="ЗаполнятьИзГруппыОбучения" id="5">
 			<Title>

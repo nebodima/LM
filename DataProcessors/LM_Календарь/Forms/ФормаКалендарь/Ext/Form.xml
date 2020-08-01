@@ -316,8 +316,7 @@
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>С 8 значит 00:00 + 8 часов = 8:00
-по 4 значит 00:00 - 4 часа = 20:00
-</v8:content>
+по 19 значит 19:00</v8:content>
 								</v8:item>
 							</ToolTip>
 							<ToolTipRepresentation>Button</ToolTipRepresentation>

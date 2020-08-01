@@ -195,6 +195,67 @@
 								</LabelField>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="ГруппаОбучения" id="342">
+							<DataPath>Объект.ГруппаОбучения</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
+							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="344"/>
+							<Events>
+								<Event name="OnChange">ГруппаОбученияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Педагог" id="16">
+							<DataPath>Объект.Педагог</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">ПлатныйПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПредметОбучения" id="350">
+							<DataPath>Объект.ПредметОбучения</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
+							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
+							<Events>
+								<Event name="OnChange">ПлатныйПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Помещение" id="329">
+							<DataPath>Объект.Помещение</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПомещениеКонтекстноеМеню" id="330"/>
+							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="331"/>
+							<Events>
+								<Event name="OnChange">ПлатныйПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВторая" id="729">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вторая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вторая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВтораяРасширеннаяПодсказка" id="730"/>
+					<ChildItems>
 						<UsualGroup name="Группа1" id="731">
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
@@ -350,69 +411,9 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="ГруппаОбучения" id="342">
-							<DataPath>Объект.ГруппаОбучения</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
-							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="344"/>
-							<Events>
-								<Event name="OnChange">ГруппаОбученияПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Педагог" id="16">
-							<DataPath>Объект.Педагог</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
-							<Events>
-								<Event name="OnChange">ПлатныйПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ПредметОбучения" id="350">
-							<DataPath>Объект.ПредметОбучения</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
-							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
-							<Events>
-								<Event name="OnChange">ПлатныйПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Помещение" id="329">
-							<DataPath>Объект.Помещение</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПомещениеКонтекстноеМеню" id="330"/>
-							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="331"/>
-							<Events>
-								<Event name="OnChange">ПлатныйПриИзменении</Event>
-							</Events>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаВторая" id="729">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа вторая</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа вторая</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаВтораяРасширеннаяПодсказка" id="730"/>
-					<ChildItems>
 						<InputField name="Шаблон" id="706">
 							<DataPath>Шаблон</DataPath>
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -463,6 +464,13 @@
 							</InputHint>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="725"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="726"/>
+						</InputField>
+						<InputField name="СтавкаПедагога" id="742">
+							<DataPath>Объект.СтавкаПедагога</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
+							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
 						</InputField>
 						<InputField name="Статус" id="735">
 							<DataPath>Объект.Статус</DataPath>
@@ -580,7 +588,7 @@
 									</Button>
 									<Button name="УченикиДобавить" id="214">
 										<Type>CommandBarButton</Type>
-										<Representation>Picture</Representation>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
 										<ExtendedTooltip name="УченикиДобавитьРасширеннаяПодсказка" id="215"/>
@@ -592,14 +600,6 @@
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
 										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="УченикиСкопироватьРасширеннаяПодсказка" id="217"/>
-									</Button>
-									<Button name="УченикиИзменить" id="220">
-										<Type>CommandBarButton</Type>
-										<Representation>Picture</Representation>
-										<CommandName>Form.Item.Ученики.StandardCommand.Change</CommandName>
-										<ShapeRepresentation>WhenActive</ShapeRepresentation>
-										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-										<ExtendedTooltip name="УченикиИзменитьРасширеннаяПодсказка" id="221"/>
 									</Button>
 									<Button name="УченикиУдалить" id="218">
 										<Type>CommandBarButton</Type>
@@ -666,6 +666,7 @@
 									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
 								</LabelField>
 								<ColumnGroup name="УченикиГруппа4" id="446">
+									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа4РасширеннаяПодсказка" id="447"/>
 									<ChildItems>
 										<InputField name="УченикиУченик" id="211">
@@ -716,6 +717,7 @@
 											<v8:content>Ученики группа списать оплату</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппаСписатьОплатуРасширеннаяПодсказка" id="476"/>
 									<ChildItems>
 										<CheckBoxField name="УченикиСписатьОплату" id="353">
@@ -737,6 +739,9 @@
 										</CheckBoxField>
 										<InputField name="УченикиЗаметка" id="321">
 											<DataPath>Объект.Ученики.Заметка</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -753,57 +758,6 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппаСписатьОплатуКорр" id="508">
-									<Visible>false</Visible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>$</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Списать оплату</v8:content>
-										</v8:item>
-									</ToolTip>
-									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ExtendedTooltip name="УченикиГруппаСписатьОплатуКоррРасширеннаяПодсказка" id="509"/>
-									<ChildItems>
-										<CheckBoxField name="УченикиСписатьОплатуКорректировка" id="510">
-											<DataPath>Объект.Ученики.СписатьОплатуКорректировка</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>корректировка $</v8:content>
-												</v8:item>
-											</Title>
-											<TitleBackColor>#C0C0C0</TitleBackColor>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="УченикиСписатьОплатуКорректировкаКонтекстноеМеню" id="511"/>
-											<ExtendedTooltip name="УченикиСписатьОплатуКорректировкаРасширеннаяПодсказка" id="512"/>
-										</CheckBoxField>
-										<LabelField name="УченикиЗаметкаКорректировка" id="515">
-											<DataPath>Объект.Ученики.ЗаметкаКорректировка</DataPath>
-											<TitleBackColor>#C0C0C0</TitleBackColor>
-											<TitleLocation>None</TitleLocation>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<ShowInHeader>false</ShowInHeader>
-											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-											<Width>10</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="УченикиЗаметкаКорректировкаКонтекстноеМеню" id="516"/>
-											<ExtendedTooltip name="УченикиЗаметкаКорректировкаРасширеннаяПодсказка" id="517"/>
-										</LabelField>
-									</ChildItems>
-								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппаЯвка" id="498">
 									<Title>
 										<v8:item>
@@ -817,6 +771,7 @@
 											<v8:content>Ученики группа явка</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Group>Horizontal</Group>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ExtendedTooltip name="УченикиГруппаЯвкаРасширеннаяПодсказка" id="499"/>
 									<ChildItems>
@@ -841,6 +796,9 @@
 										</CheckBoxField>
 										<InputField name="УченикиПричина" id="358">
 											<DataPath>Объект.Ученики.Причина</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -856,86 +814,8 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппаЯвкаКорр" id="503">
-									<Visible>false</Visible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Причина</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ученики группа явка корр</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ShowTitle>false</ShowTitle>
-									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ExtendedTooltip name="УченикиГруппаЯвкаКоррРасширеннаяПодсказка" id="504"/>
-									<ChildItems>
-										<CheckBoxField name="УченикиЯвкаКорректировка" id="490">
-											<DataPath>Объект.Ученики.ЯвкаКорректировка</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>корректировка V</v8:content>
-												</v8:item>
-											</Title>
-											<TitleBackColor>#C0C0C0</TitleBackColor>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="УченикиЯвкаКорректировкаКонтекстноеМеню" id="491"/>
-											<ExtendedTooltip name="УченикиЯвкаКорректировкаРасширеннаяПодсказка" id="492"/>
-										</CheckBoxField>
-										<InputField name="УченикиПричинаКорректировка" id="505">
-											<DataPath>Объект.Ученики.ПричинаКорректировка</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Причина</v8:content>
-												</v8:item>
-											</Title>
-											<TitleBackColor>#C0C0C0</TitleBackColor>
-											<TitleLocation>None</TitleLocation>
-											<EditMode>EnterOnInput</EditMode>
-											<ShowInHeader>false</ShowInHeader>
-											<Width>10</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="УченикиПричинаКорректировкаКонтекстноеМеню" id="506"/>
-											<ExtendedTooltip name="УченикиПричинаКорректировкаРасширеннаяПодсказка" id="507"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
-								<ColumnGroup name="ГруппаКорректировка" id="488">
-									<Visible>false</Visible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа корректировка</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа корректировка</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ExtendedTooltip name="ГруппаКорректировкаРасширеннаяПодсказка" id="489"/>
-									<ChildItems>
-										<InputField name="УченикиСсылкаКорректировка" id="493">
-											<DataPath>Объект.Ученики.СсылкаКорректировка</DataPath>
-											<Visible>false</Visible>
-											<TitleBackColor>#C0C0C0</TitleBackColor>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="УченикиСсылкаКорректировкаКонтекстноеМеню" id="494"/>
-											<ExtendedTooltip name="УченикиСсылкаКорректировкаРасширеннаяПодсказка" id="495"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппа6" id="450">
+									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа6РасширеннаяПодсказка" id="451"/>
 									<ChildItems>
 										<InputField name="УченикиКоэффициент" id="430">
@@ -980,6 +860,7 @@
 									</ChildItems>
 								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппа5" id="448">
+									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа5РасширеннаяПодсказка" id="449"/>
 									<ChildItems>
 										<InputField name="УченикиЧасы" id="302">
@@ -1032,6 +913,7 @@
 										</v8:item>
 									</Title>
 									<TitleTextColor>#000000</TitleTextColor>
+									<Group>Horizontal</Group>
 									<TitleBackColor>#C0C0C0</TitleBackColor>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<HeaderPicture>
@@ -1399,8 +1281,9 @@
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<LabelField name="УченикиСкидкаИтого" id="463">
+				<InputField name="УченикиСкидкаИтого" id="463">
 					<DataPath>Объект.Ученики.TotalСкидка</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1411,7 +1294,7 @@
 					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 					<ContextMenu name="УченикиСкидкаИтогоКонтекстноеМеню" id="464"/>
 					<ExtendedTooltip name="УченикиСкидкаИтогоРасширеннаяПодсказка" id="465"/>
-				</LabelField>
+				</InputField>
 				<InputField name="СуммаЗаУрок" id="296">
 					<DataPath>Объект.Ученики.TotalСумма</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -1649,7 +1532,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.LM_ШаблоныНастроекПоУмолчанию</v8:Type>
+				<v8:TypeId>69fff5a5-63a5-4126-8b6f-38da0d912e42</v8:TypeId>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
