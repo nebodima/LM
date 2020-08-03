@@ -1128,7 +1128,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement</name>
+		<name>Configuration.LessonsManagement_</name>
 		<right>
 			<name>Administration</name>
 			<value>true</value>

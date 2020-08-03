@@ -4,7 +4,7 @@
 		<Command name="Report.LM_Взаиморасчеты.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
-		<Command name="Report.LM_Явки.StandardCommand.Open">
+		<Command name="Report.LM_Явки_2.StandardCommand.Open">
 			<CommandGroup>ActionsPanelReports</CommandGroup>
 		</Command>
 		<Command name="Report.LM_АналитикаПоУченикам.StandardCommand.Open">

@@ -24,10 +24,11 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.УниверсальныйОтчет</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_ОтчетПоДисконтнымКартам</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_ВедомостьПоКассеДляМенеджеров</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_Явки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_Явки_2</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_АвтоматическаяСменаСтатусов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_Календарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_ПанельУченика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">4d60fb02-a944-4888-b3cd-7a1feb409efb</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>LessonsManagement</Name>
+			<Name>LessonsManagement_</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1758,7 +1758,7 @@
 			<Report>LM_ВедомостьПоКассеДляМенеджеров</Report>
 			<Report>LM_АналитикаПоУченикам</Report>
 			<Report>LM_ОтчетПоДисконтнымКартам</Report>
-			<Report>LM_Явки</Report>
+			<Report>LM_Явки_2</Report>
 			<Report>АнализВерсийОбъектов</Report>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализОпроса</Report>
