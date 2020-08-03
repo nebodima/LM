@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>LessonsManagement_</Name>
+			<Name>LessonsManagement_33</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1976,6 +1976,7 @@
 			<AccumulationRegister>LM_СписанияСуммЗаУроки</AccumulationRegister>
 			<AccumulationRegister>LM_Касса</AccumulationRegister>
 			<AccumulationRegister>LM_ДвижениеДисконтныхКарт</AccumulationRegister>
+			<AccumulationRegister>LM_РасчетыПоЗарплате</AccumulationRegister>
 			<ChartOfCharacteristicTypes>ВопросыДляАнкетирования</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ОбъектыАдресацииЗадач</ChartOfCharacteristicTypes>
