@@ -3614,7 +3614,7 @@
 		<Metadata name="CommonTemplate.ПолучениеДереваОбработчиковОбновления.Template" id="88b879b7-1bb3-4478-b569-35bdb5c56939.0" configVersion="6c3e0ded9d6ede4ca89dcd5e929c168200000000"/>
 		<Metadata name="CommonTemplate.СтруктураПодчиненности" id="7a62d031-c340-4b1e-90af-fff697a2e979" configVersion="cf9c339b3e60ba4999693efc43d7b19000000000"/>
 		<Metadata name="CommonTemplate.СтруктураПодчиненности.Template" id="7a62d031-c340-4b1e-90af-fff697a2e979.0" configVersion="5589d5cd0afd7548a2289e73abc6974200000000"/>
-		<Metadata name="Configuration.LessonsManagement" id="51c3bb8a-b1c9-4350-b0f7-a29f03840c52" configVersion="4bf355fd1ce1c04ebf40dceb02f0553200000000"/>
+		<Metadata name="Configuration.LessonsManagement" id="51c3bb8a-b1c9-4350-b0f7-a29f03840c52" configVersion="3835570080089a43aeb25de3a13f97ff00000000"/>
 		<Metadata name="Configuration.LessonsManagement.ClientApplicationInterface" id="60d850ec-6356-4135-aa0e-39f812de3aa9.b" configVersion="6ccb23ce7e075249b02f59059cd2718900000000"/>
 		<Metadata name="Configuration.LessonsManagement.CommandInterface" id="60d850ec-6356-4135-aa0e-39f812de3aa9.a" configVersion="2eb111e8bf6b724aa1ca63f3fd06343600000000"/>
 		<Metadata name="Configuration.LessonsManagement.ExternalConnectionModule" id="60d850ec-6356-4135-aa0e-39f812de3aa9.5" configVersion="e4eb3df79ec4c046b271227dc3583f1700000000"/>
@@ -3799,8 +3799,8 @@
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаGoogle.Form" id="27a1d4e3-b53e-4bf2-ac83-ea6100079d44.0" configVersion="7b0c3c2ef3c5944db9117db4bc42080300000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации" id="71c0afe4-fb78-49ef-a774-3795c042a16e" configVersion="34656e0e9b07584bad3c36992c23ae0b00000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации.Form" id="71c0afe4-fb78-49ef-a774-3795c042a16e.0" configVersion="ebd6003d735b41479a6e080d8309798100000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="c84448a1fd1aa843bd33df9e4551222f00000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="237236f67319ec43af3386bf74054b1f00000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="d6e2f1eab251154a81d700aeaa0f46f500000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="dc661dc5cff580428739779a23075b6a00000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.ObjectModule" id="dcc267b3-76b9-47ea-b8b4-b82adc7a2310.0" configVersion="b5f0b2690e74864d805ea7ca312d744b00000000"/>
 		<Metadata name="DataProcessor.LM_Настройки" id="ba78841c-c916-4932-9583-5104e6ea20ec" configVersion="1b2462acc9a7c64285aa81a59cbbd82700000000"/>
 		<Metadata name="DataProcessor.LM_Настройки.Form.Форма" id="f1b7f4ed-8c0e-4408-947f-423fff3e6698" configVersion="5cd8d16b1f64a04d9b815876852e07ee00000000"/>
@@ -5052,8 +5052,8 @@
 		</Metadata>
 		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="320a4aa8e446da4ca94191c1a2c824ba00000000"/>
 		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="e02f72105dd600489365fc61aa182dde00000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="8b60b609b2aaef4284f0f2530b45834200000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="a22c3552b6750741b3732a8e8a5f0e1000000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="aff0831a7e8f694ca433d3a056ff3e3200000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="2d334e7928a46842a88630d783ac889300000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="a92d55ee655878478019d9c47c5aca7c00000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="00c667aa877b974e98e216f80cad6c2200000000"/>
 		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="e49b959b35bf844d857a6bb239f852b800000000"/>
@@ -7624,8 +7624,8 @@
 		<Metadata name="Report.LM_ОтчетПоДисконтнымКартам.Template.ОсновнаяСхемаКомпоновкиДанных" id="0c15814c-3c95-4cde-8a3e-c5f6ce1d43e8" configVersion="dfd50b38cb81f04cb42596e49a9ac1b400000000"/>
 		<Metadata name="Report.LM_ОтчетПоДисконтнымКартам.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="0c15814c-3c95-4cde-8a3e-c5f6ce1d43e8.0" configVersion="e398c3241d21ba4595acf0574583373100000000"/>
 		<Metadata name="Report.LM_Явки" id="ca483ca1-3002-4383-aa66-6c28276c1781" configVersion="efd7fcf64e2457438b2c6c8df8bb645100000000"/>
-		<Metadata name="Report.LM_Явки.Template.ОсновнаяСхемаКомпоновкиДанных" id="4b393141-700a-49fb-8657-95d7b8818109" configVersion="7330fe69005c174298c6ef9eba7d1ec500000000"/>
-		<Metadata name="Report.LM_Явки.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="4b393141-700a-49fb-8657-95d7b8818109.0" configVersion="c423266a586b93489259cc0dcd47e29800000000"/>
+		<Metadata name="Report.LM_Явки.Template.ОсновнаяСхемаКомпоновкиДанных" id="4b393141-700a-49fb-8657-95d7b8818109" configVersion="bf8862c47c672346bf92461c78f8a3db00000000"/>
+		<Metadata name="Report.LM_Явки.Template.ОсновнаяСхемаКомпоновкиДанных.Template" id="4b393141-700a-49fb-8657-95d7b8818109.0" configVersion="d665810b6e7793489f6b611bb307e7b900000000"/>
 		<Metadata name="Report.АнализВерсийОбъектов" id="b3f7f763-bea9-4f59-9450-df95e5c3d89d" configVersion="6078da685bfd2c4f9700ad3a234048cb00000000"/>
 		<Metadata name="Report.АнализВерсийОбъектов.Help" id="b3f7f763-bea9-4f59-9450-df95e5c3d89d.1" configVersion="942bd054c888c8428da82f6b4f51aba700000000"/>
 		<Metadata name="Report.АнализВерсийОбъектов.Template.ОсновнаяСхемаКомпоновкиДанных" id="9111e28e-c1c7-414b-9288-61bd06a04d04" configVersion="0fdb07392f72384794a0747f7d5e147200000000"/>

@@ -590,6 +590,12 @@
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить ФизЛицо</v8:content>
+											</v8:item>
+										</Title>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
 										<ExtendedTooltip name="УченикиДобавитьРасширеннаяПодсказка" id="215"/>
 									</Button>
@@ -844,12 +850,6 @@
 										<InputField name="УченикиСкидка" id="433">
 											<DataPath>Объект.Ученики.Скидка</DataPath>
 											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>сумма скидки</v8:content>
-												</v8:item>
-											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСкидка</FooterDataPath>
@@ -899,7 +899,6 @@
 											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
 											<Width>1</Width>
-											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
 											<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
 										</InputField>
@@ -1678,7 +1677,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Подбор</v8:content>
+					<v8:content>Подбор учеников</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1688,7 +1687,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.DataCompositionSelection</xr:Ref>
+				<xr:Ref>StdPicture.Enum</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Подбор</Action>

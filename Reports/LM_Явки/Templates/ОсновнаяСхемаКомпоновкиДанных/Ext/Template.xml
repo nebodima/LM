@@ -4,271 +4,112 @@
 		<name>ИсточникДанных1</name>
 		<dataSourceType>Local</dataSourceType>
 	</dataSource>
-	<dataSource>
-		<name>ГрафикПосещений</name>
-		<dataSourceType>Local</dataSourceType>
-	</dataSource>
-	<dataSource>
-		<name>ИсточникДанных3</name>
-		<dataSourceType>Local</dataSourceType>
-	</dataSource>
 	<dataSet xsi:type="DataSetQuery">
 		<name>Явки</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Ученик</dataPath>
-			<field>Ученик</field>
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоЧасов</dataPath>
-			<field>КоличествоЧасов</field>
+			<dataPath>Скидка</dataPath>
+			<field>Скидка</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ПредметОбучения</dataPath>
-			<field>ПредметОбучения</field>
+			<dataPath>Педагог</dataPath>
+			<field>Педагог</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ГруппаОбучения</dataPath>
 			<field>ГруппаОбучения</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Ссылка</dataPath>
-			<field>Ссылка</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Урок</v8:content>
-				</v8:item>
-			</title>
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КолФактЧасов</dataPath>
-			<field>КолФактЧасов</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Кол факт часов</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ОстатокФактЧасов</dataPath>
-			<field>ОстатокФактЧасов</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итого часов</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Платный</dataPath>
-			<field>СписатьОплату</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Явка</dataPath>
-			<field>Явка</field>
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Формат</dcscor:parameter>
 					<dcscor:value xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>БЛ=-; БИ=V</v8:content>
+							<v8:content>ДФ=д</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Организация</dataPath>
-			<field>Организация</field>
+			<dataPath>Тариф</dataPath>
+			<field>Тариф</field>
 		</field>
-		<dataSource>ИсточникДанных3</dataSource>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредметОбучения</dataPath>
+			<field>ПредметОбучения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Явка</dataPath>
+			<field>Явка</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРасход</dataPath>
+			<field>СуммаРасход</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	УрокУченики.Ссылка КАК Ссылка,
-	УрокУченики.Ученик КАК Ученик,
-	УрокУченики.Ссылка.ГруппаОбучения КАК ГруппаОбучения,
-	УрокУченики.Ссылка.ПредметОбучения КАК ПредметОбучения,
+	LM_СписанияСуммЗаУрокиОбороты.Клиент КАК Клиент,
+	LM_СписанияСуммЗаУрокиОбороты.Период КАК Период,
 	ВЫБОР
-		КОГДА УрокУченики.СписатьОплату
-			ТОГДА 1
-		ИНАЧЕ 0
-	КОНЕЦ КАК СписатьОплату,
-	ВЫБОР
-		КОГДА УрокУченики.Явка
+		КОГДА LM_СписанияСуммЗаУрокиОбороты.ЧасыОборот &lt;&gt; 0
 			ТОГДА 1
 		ИНАЧЕ 0
 	КОНЕЦ КАК Явка,
-	ВЫБОР
-		КОГДА УрокУченики.Явка
-			ТОГДА УрокУченики.Ссылка.КоличествоЧасов
-		ИНАЧЕ 0
-	КОНЕЦ КАК КолФактЧасов,
-	УрокУченики.Ссылка.КоличествоЧасов КАК КоличествоЧасов,
-	ВЫБОР
-		КОГДА УрокУченики.Явка
-			ТОГДА ЧАС(УрокУченики.Ссылка.КоличествоЧасов) + МИНУТА(УрокУченики.Ссылка.КоличествоЧасов) / 60
-		ИНАЧЕ 0
-	КОНЕЦ КАК ОстатокФактЧасов,
-	УрокУченики.Ссылка.Организация КАК Организация
+	LM_СписанияСуммЗаУрокиОбороты.ПредметОбучения КАК ПредметОбучения,
+	LM_СписанияСуммЗаУрокиОбороты.Регистратор КАК Регистратор,
+	LM_СписанияСуммЗаУрокиОбороты.СуммаРасход КАК СуммаРасход
 ИЗ
-	Документ.LM_Урок.Ученики КАК УрокУченики
-ГДЕ
-	УрокУченики.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
-	И УрокУченики.Ссылка.Проведен</query>
+	РегистрНакопления.LM_СписанияСуммЗаУроки.Обороты(, , Регистратор, ) КАК LM_СписанияСуммЗаУрокиОбороты</query>
 	</dataSet>
-	<dataSet xsi:type="DataSetQuery">
-		<name>ГрафикПосещений</name>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПФамилияРебенка</dataPath>
-			<field>ГПФамилияРебенка</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Ученик</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПГруппаОбучения</dataPath>
-			<field>ГПГруппаОбучения</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа обучения</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПДата</dataPath>
-			<field>ГПДата</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дата</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПЧасы</dataPath>
-			<field>ГПЧасы</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Часы</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГППричина</dataPath>
-			<field>ГППричина</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Причина</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПЗаметка</dataPath>
-			<field>ГПЗаметка</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Заметка</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПСписатьОплату</dataPath>
-			<field>ГПСписатьОплату</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Списать оплату</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПЯвка</dataPath>
-			<field>ГПЯвка</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Явка</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ГПУрок</dataPath>
-			<field>ГПУрок</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Урок</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<dataSource>ГрафикПосещений</dataSource>
-		<query>ВЫБРАТЬ
-	УрокУченики.Ученик КАК ГПФамилияРебенка,
-	УрокУченики.Ссылка.ГруппаОбучения КАК ГПГруппаОбучения,
-	НАЧАЛОПЕРИОДА(УрокУченики.Ссылка.Дата, ДЕНЬ) КАК ГПДата,
-	УрокУченики.Ссылка КАК ГПУрок,
-	ВЫБОР
-		КОГДА УрокУченики.СписатьОплату
-			ТОГДА 1
-		ИНАЧЕ 0
-	КОНЕЦ КАК ГПСписатьОплату,
-	ВЫБОР
-		КОГДА УрокУченики.Явка
-			ТОГДА 1
-		ИНАЧЕ 0
-	КОНЕЦ КАК ГПЯвка,
-	УрокУченики.Причина КАК ГППричина,
-	УрокУченики.Заметка КАК ГПЗаметка,
-	УрокУченики.Часы КАК ГПЧасы
-ИЗ
-	Документ.LM_Урок.Ученики КАК УрокУченики
-ГДЕ
-	УрокУченики.Ссылка.Проведен = ИСТИНА
-	И УрокУченики.Ссылка.Дата МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
-	</dataSet>
-	<totalField>
-		<dataPath>ОстатокФактЧасов</dataPath>
-		<expression>Сумма(ОстатокФактЧасов)</expression>
-	</totalField>
 	<totalField>
 		<dataPath>Явка</dataPath>
 		<expression>Сумма(Явка)</expression>
 	</totalField>
-	<totalField>
-		<dataPath>Платный</dataPath>
-		<expression>Сумма(Платный)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ГПСписатьОплату</dataPath>
-		<expression>Сумма(ГПСписатьОплату)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ГПЯвка</dataPath>
-		<expression>Сумма(ГПЯвка)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ГПЗаметка</dataPath>
-		<expression>ГПЗаметка</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ГППричина</dataPath>
-		<expression>ГППричина</expression>
-	</totalField>
 	<parameter>
-		<name>ДатаНачала</name>
+		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Дата начала</v8:content>
+				<v8:content>Начало периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -282,11 +123,11 @@
 		<expression>&amp;Период.ДатаНачала</expression>
 	</parameter>
 	<parameter>
-		<name>ДатаОкончания</name>
+		<name>КонецПериода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Дата окончания</v8:content>
+				<v8:content>Конец периода</v8:content>
 			</v8:item>
 		</title>
 		<valueType>
@@ -297,7 +138,7 @@
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 		<useRestriction>true</useRestriction>
-		<expression>&amp;Период.ДатаОКончания</expression>
+		<expression>&amp;Период.ДатаОкончания</expression>
 	</parameter>
 	<parameter>
 		<name>Период</name>
@@ -318,23 +159,13 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<template>
-		<name>Макет1</name>
+		<name>Макет2</name>
 		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
 			<dcsat:item xsi:type="dcsat:TableRow">
 				<dcsat:tableCell>
 					<dcsat:item xsi:type="dcsat:Field">
 						<dcsat:value xsi:type="dcscor:Parameter">Явка</dcsat:value>
 					</dcsat:item>
-					<dcsat:appearance>
-						<dcscor:item>
-							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
-							<dcscor:value xsi:type="xs:decimal">10.25</dcscor:value>
-						</dcscor:item>
-						<dcscor:item>
-							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
-							<dcscor:value xsi:type="xs:decimal">10.25</dcscor:value>
-						</dcscor:item>
-					</dcsat:appearance>
 				</dcsat:tableCell>
 			</dcsat:item>
 		</template>
@@ -344,185 +175,72 @@
 		</parameter>
 	</template>
 	<groupTemplate>
-		<groupField>ГПЯвка</groupField>
+		<groupField>Явка</groupField>
 		<templateType>Header</templateType>
-		<template>Макет1</template>
+		<template>Макет2</template>
 	</groupTemplate>
 	<settingsVariant>
-		<dcsset:name>Явки</dcsset:name>
+		<dcsset:name>Таблица явок</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Явки</v8:content>
+				<v8:content>Таблица явок</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Ученик</dcsset:field>
+					<dcsset:field>Клиент</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ГруппаОбучения</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПредметОбучения</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Ссылка</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КоличествоЧасов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КолФактЧасов</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Платный</dcsset:field>
+					<dcsset:field>Период</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Явка</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ОстатокФактЧасов</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 				</dcsset:item>
 			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Ученик</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>9e15af59-874c-480d-a633-47a1872c39ec</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ГруппаОбучения</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>14f08090-fd48-4a03-bf2f-65d9dbd4a1c1</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ПредметОбучения</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>bcc6496b-dbe1-4056-9ff4-fc69e83aead1</dcsset:userSettingID>
-				</dcsset:item>
-			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>Период</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardPeriod">
 						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
 					</dcscor:value>
-					<dcsset:userSettingID>aa27d9dd-1943-4e30-8688-f085fc88a766</dcsset:userSettingID>
+					<dcsset:userSettingID>817915ee-d98d-44e2-b000-3d1f8d59e3b4</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Ученик</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
-			<dcsset:outputParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МакетОформления</dcscor:parameter>
-					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
-					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
-					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
-				</dcscor:item>
-			</dcsset:outputParameters>
-			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Ученик</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
-				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-				</dcsset:order>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemGroup">
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>ПредметОбучения</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
 					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						<dcsset:item>
+							<dcsset:field>Явка</dcsset:field>
+						</dcsset:item>
 					</dcsset:selection>
-					<dcsset:outputParameters>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Явка</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
-							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
 						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
-							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
-						</dcscor:item>
-					</dcsset:outputParameters>
-					<dcsset:item xsi:type="dcsset:StructureItemGroup">
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-					</dcsset:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
 				</dcsset:item>
-			</dcsset:item>
-		</dcsset:settings>
-	</settingsVariant>
-	<settingsVariant>
-		<dcsset:name>Явки (таблица)</dcsset:name>
-		<dcsset:presentation xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Явки (таблица)</v8:content>
-			</v8:item>
-		</dcsset:presentation>
-		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
-			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ГПГруппаОбучения</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ГПДата</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ГПФамилияРебенка</dcsset:field>
-				</dcsset:item>
-			</dcsset:selection>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
-					</dcscor:value>
-					<dcsset:userSettingID>70067cc7-08d4-4d67-af22-ee42bb9420eb</dcsset:userSettingID>
-				</dcscor:item>
-			</dcsset:dataParameters>
+			</dcsset:conditionalAppearance>
 			<dcsset:outputParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>МакетОформления</dcscor:parameter>
@@ -540,15 +258,11 @@
 					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
 					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
 				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
-					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
-				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>ГПГруппаОбучения</dcsset:field>
+						<dcsset:field>ПредметОбучения</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -559,65 +273,35 @@
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
 				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>ГПГруппаОбучения</dcsset:field>
+						<dcsset:field>ПредметОбучения</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:item xsi:type="dcsset:StructureItemTable">
 					<dcsset:column>
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>ГПДата</dcsset:field>
+								<dcsset:field>Период</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								<dcsset:periodAdditionType>Day</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionEnd>
 							</dcsset:item>
 						</dcsset:groupItems>
-						<dcsset:filter>
-							<dcsset:item xsi:type="dcsset:FilterItemComparison">
-								<dcsset:use>false</dcsset:use>
-								<dcsset:left xsi:type="dcscor:Field">ГПФамилияРебенка</dcsset:left>
-								<dcsset:comparisonType>Equal</dcsset:comparisonType>
-								<dcsset:userSettingID>d736b028-9ca6-4e4e-b108-4bbc522dd10c</dcsset:userSettingID>
-							</dcsset:item>
-						</dcsset:filter>
 						<dcsset:order>
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 						</dcsset:order>
 						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ГПДата</dcsset:field>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ГПЯвка</dcsset:field>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
-								<dcsset:use>false</dcsset:use>
-								<dcsset:item xsi:type="dcsset:SelectedItemField">
-									<dcsset:use>false</dcsset:use>
-									<dcsset:field>ГППричина</dcsset:field>
-								</dcsset:item>
-								<dcsset:placement>Vertically</dcsset:placement>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemFolder">
-								<dcsset:use>false</dcsset:use>
-								<dcsset:item xsi:type="dcsset:SelectedItemField">
-									<dcsset:use>false</dcsset:use>
-									<dcsset:field>ГПСписатьОплату</dcsset:field>
-								</dcsset:item>
-								<dcsset:item xsi:type="dcsset:SelectedItemField">
-									<dcsset:use>false</dcsset:use>
-									<dcsset:field>ГПЗаметка</dcsset:field>
-								</dcsset:item>
-								<dcsset:placement>Vertically</dcsset:placement>
-							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
 					</dcsset:column>
 					<dcsset:row>
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>ГПФамилияРебенка</dcsset:field>
+								<dcsset:field>Клиент</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -628,14 +312,12 @@
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 						</dcsset:order>
 						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>ГПФамилияРебенка</dcsset:field>
-							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
 					</dcsset:row>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
 				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>

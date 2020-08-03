@@ -110,12 +110,6 @@
 						</CalendarField>
 						<InputField name="ФильтрПедагог" id="81">
 							<DataPath>ФильтрПедагог</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Фильтр по педагогу</v8:content>
-								</v8:item>
-							</Title>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ФильтрПедагогКонтекстноеМеню" id="82"/>
@@ -327,6 +321,7 @@
 							<ChildItems>
 								<InputField name="ВремяКалендаряС" id="96">
 									<DataPath>ВремяКалендаряС</DataPath>
+									<SpinButton>true</SpinButton>
 									<ContextMenu name="ВремяКалендаряСКонтекстноеМеню" id="97"/>
 									<ExtendedTooltip name="ВремяКалендаряСРасширеннаяПодсказка" id="98"/>
 									<Events>
@@ -335,6 +330,7 @@
 								</InputField>
 								<InputField name="ВремяКалендаряПо" id="93">
 									<DataPath>ВремяКалендаряПо</DataPath>
+									<SpinButton>true</SpinButton>
 									<ContextMenu name="ВремяКалендаряПоКонтекстноеМеню" id="94"/>
 									<ExtendedTooltip name="ВремяКалендаряПоРасширеннаяПодсказка" id="95"/>
 									<Events>
@@ -343,21 +339,6 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<CheckBoxField name="ОтображатьНапоминания" id="56">
-							<DataPath>ОтображатьНапоминания</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Отображать напоминания</v8:content>
-								</v8:item>
-							</Title>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ОтображатьНапоминанияКонтекстноеМеню" id="57"/>
-							<ExtendedTooltip name="ОтображатьНапоминанияРасширеннаяПодсказка" id="58"/>
-							<Events>
-								<Event name="OnChange">Цвет1ПриИзменении</Event>
-							</Events>
-						</CheckBoxField>
 						<UsualGroup name="ГруппаНастройкаОписания" id="59">
 							<Title>
 								<v8:item>
@@ -422,6 +403,28 @@
 								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
+						<CheckBoxField name="ОтображатьНапоминания" id="56">
+							<DataPath>ОтображатьНапоминания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отображать напоминания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если используются напоминания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтображатьНапоминанияКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ОтображатьНапоминанияРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаВертик" id="39">
@@ -802,7 +805,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фильтр педагог</v8:content>
+					<v8:content>Педагог</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -816,7 +819,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фильтр по помещению</v8:content>
+					<v8:content>Помещение</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -830,7 +833,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фильтр по группе обучения</v8:content>
+					<v8:content>Группа обучения</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
