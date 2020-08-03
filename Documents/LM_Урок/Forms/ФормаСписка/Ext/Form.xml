@@ -20,9 +20,15 @@
 			<Button name="ФормаСоздать" id="52">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.Create</CommandName>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ФормаПомощникСозданияУроков" id="135">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
 			</Button>
 			<Button name="ФормаСкопировать" id="54">
 				<Type>CommandBarButton</Type>
@@ -43,12 +49,6 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="146"/>
-			</Button>
-			<Button name="ФормаПомощникСозданияУроков" id="135">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
 			</Button>
 			<Popup name="ФормаГруппаДополнительно" id="161">
 				<Title>
@@ -73,53 +73,15 @@
 				<ChildItems>
 					<Button name="ОткрытьПанельУченика" id="246">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ОткрытьПанельУченика</CommandName>
 						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
+						<Picture>
+							<xr:Ref>StdPicture.User</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
 						<ShapeRepresentation>WhenActive</ShapeRepresentation>
 						<ExtendedTooltip name="ОткрытьПанельУченикаРасширеннаяПодсказка" id="247"/>
-					</Button>
-					<Button name="ОтчетГрафикПосещенийОткрыть" id="244">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>0:81919c93-72cb-4f2c-b689-751c3ad04772</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
-						<Picture>
-							<xr:Ref>StdPicture.Report</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>График посещений</v8:content>
-							</v8:item>
-						</Title>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ОтчетГрафикПосещенийОткрытьРасширеннаяПодсказка" id="245"/>
-					</Button>
-					<Button name="ОбработкаОтмечаниеПосещенийОткрыть" id="276">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ОтмечаниеПосещений</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
-						<Picture>
-							<xr:Ref>StdPicture.DataProcessor</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ОбработкаОтмечаниеПосещенийОткрытьРасширеннаяПодсказка" id="277"/>
-					</Button>
-					<Button name="ОтмечаниеПосещений2" id="278">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.ОтмечаниеПосещенийФото</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Отмечание посещений + фото</v8:content>
-							</v8:item>
-						</Title>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ОтмечаниеПосещений2РасширеннаяПодсказка" id="279"/>
 					</Button>
 					<Button name="ФормаОбработкаGoogleКалендарьОткрыть" id="209">
 						<Type>CommandBarButton</Type>
@@ -144,10 +106,20 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.ГрупповоеИзменениеРеквизитов.Command.ГрупповоеИзменениеРеквизитов</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.DataProcessor</xr:Ref>
+							<xr:Ref>StdPicture.SpreadsheetReadOnly</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитовРасширеннаяПодсказка" id="421"/>
+					</Button>
+					<Button name="ФормаОтчетLM_ЯвкиОткрыть" id="427">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Report.LM_Явки_2.StandardCommand.Open</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаОтчетLM_ЯвкиОткрытьРасширеннаяПодсказка" id="428"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -840,6 +812,9 @@
 						</LabelField>
 						<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
 							<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>

@@ -899,6 +899,7 @@
 											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
 											<Width>1</Width>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
 											<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
 										</InputField>
@@ -923,6 +924,9 @@
 									<ChildItems>
 										<LabelField name="УченикиЗадолженностьОбщая" id="483">
 											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -945,6 +949,9 @@
 										</LabelField>
 										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
 											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1534,143 +1541,6 @@
 				<v8:TypeId>69fff5a5-63a5-4126-8b6f-38da0d912e42</v8:TypeId>
 			</Type>
 		</Attribute>
-		<ConditionalAppearance>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>УченикиСумма</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.Тариф</dcsset:left>
-						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>Доступность</dcscor:parameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>УченикиЯвкаКорректировка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>УченикиПричинаКорректировка</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.СсылкаКорректировка</dcsset:left>
-							<dcsset:comparisonType>Filled</dcsset:comparisonType>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЯвкаКорректировка</dcsset:left>
-							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
-							<dcsset:right xsi:type="dcscor:Field">Объект.Ученики.Явка</dcsset:right>
-						</dcsset:item>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FFE5B7</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>УченикиСписатьОплатуКорректировка</dcsset:field>
-					</dcsset:item>
-					<dcsset:item>
-						<dcsset:field>УченикиЗаметкаКорректировка</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemGroup">
-						<dcsset:groupType>AndGroup</dcsset:groupType>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.СсылкаКорректировка</dcsset:left>
-							<dcsset:comparisonType>Filled</dcsset:comparisonType>
-						</dcsset:item>
-						<dcsset:item xsi:type="dcsset:FilterItemComparison">
-							<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.СписатьОплатуКорректировка</dcsset:left>
-							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
-							<dcsset:right xsi:type="dcscor:Field">Объект.Ученики.СписатьОплату</dcsset:right>
-						</dcsset:item>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FFBEF3</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:use>false</dcsset:use>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>Ученики1</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ДисконтнаяКарта</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="dcscor:Field">Объект.Дата</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>Видимость</dcscor:parameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>УченикиЧасы</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.КоличествоЧасов</dcsset:left>
-						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
-						<dcsset:right xsi:type="dcscor:Field">Объект.Ученики.Часы</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#CCFFFF</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="Подбор" id="1">
