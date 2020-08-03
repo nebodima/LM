@@ -576,6 +576,12 @@
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="39"/>
 						</LabelField>
+						<LabelField name="НачисленияПедагогу" id="429">
+							<DataPath>Список.НачисленияПедагогу</DataPath>
+							<Width>1</Width>
+							<ContextMenu name="НачисленияПедагогуКонтекстноеМеню" id="430"/>
+							<ExtendedTooltip name="НачисленияПедагогуРасширеннаяПодсказка" id="431"/>
+						</LabelField>
 						<LabelField name="Помещение" id="211">
 							<DataPath>Список.Помещение</DataPath>
 							<HeaderPicture>

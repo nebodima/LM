@@ -90,6 +90,12 @@
 								<Event name="OnChange">ПериодПриИзменении</Event>
 							</Events>
 						</InputField>
+						<InputField name="Организация" id="148">
+							<DataPath>Объект.Организация</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="150"/>
+						</InputField>
 						<InputField name="Педагог" id="10">
 							<DataPath>Объект.Педагог</DataPath>
 							<EditMode>EnterOnInput</EditMode>
@@ -100,117 +106,42 @@
 								<Event name="OnChange">ПедагогПриИзменении</Event>
 							</Events>
 						</InputField>
-						<InputField name="Касса" id="83">
-							<DataPath>Объект.Касса</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="КассаКонтекстноеМеню" id="84"/>
-							<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="85"/>
-							<Events>
-								<Event name="OnChange">КассаПриИзменении</Event>
-							</Events>
-						</InputField>
 						<UsualGroup name="Группа2" id="176">
-							<Group>Vertical</Group>
+							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="177"/>
 							<ChildItems>
-								<LabelField name="ОстатокВКассе" id="88">
+								<InputField name="Касса" id="83">
+									<DataPath>Объект.Касса</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="КассаКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="85"/>
+									<Events>
+										<Event name="OnChange">КассаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОстатокВКассе" id="88">
 									<DataPath>ОстатокВКассе</DataPath>
+									<ReadOnly>true</ReadOnly>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 									<Width>6</Width>
 									<TextColor>#339966</TextColor>
 									<ContextMenu name="ОстатокВКассеКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="ОстатокВКассеРасширеннаяПодсказка" id="90"/>
-								</LabelField>
+								</InputField>
 								<Button name="ПолучитьОстатокПоКассе" id="91">
 									<Type>Hyperlink</Type>
 									<CommandName>Form.Command.ПолучитьОстатокПоКассе</CommandName>
 									<ExtendedTooltip name="ПолучитьОстатокПоКассеРасширеннаяПодсказка" id="92"/>
 								</Button>
-								<CheckBoxField name="ВключаяБесплатныеЗанятия1" id="180">
-									<DataPath>Объект.ВключаяБесплатныеЗанятия</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ВключаяБесплатныеЗанятия1КонтекстноеМеню" id="181"/>
-									<ExtendedTooltip name="ВключаяБесплатныеЗанятия1РасширеннаяПодсказка" id="182"/>
-								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Группа8" id="172">
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="173"/>
-					<ChildItems>
-						<InputField name="Организация" id="148">
-							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="149"/>
-							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="150"/>
-						</InputField>
-						<CheckBoxField name="СтавкаПедагога" id="151">
-							<DataPath>Объект.РассчитыватьПоСтавкеПедагога</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="152"/>
-							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="153"/>
-							<Events>
-								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
-							</Events>
-						</CheckBoxField>
-						<InputField name="ОплатаЗаЗанятие" id="163">
-							<DataPath>Объект.ОплатаЗаЗанятие</DataPath>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ОплатаЗаЗанятиеКонтекстноеМеню" id="164"/>
-							<ExtendedTooltip name="ОплатаЗаЗанятиеРасширеннаяПодсказка" id="165"/>
-							<Events>
-								<Event name="OnChange">ОплатаЗаЗанятиеПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ПроцентСОплатыУченика" id="154">
-							<DataPath>Объект.ПроцентСОплатыУченика</DataPath>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПроцентСОплатыУченикаКонтекстноеМеню" id="155"/>
-							<ExtendedTooltip name="ПроцентСОплатыУченикаРасширеннаяПодсказка" id="156"/>
-							<Events>
-								<Event name="OnChange">ПроцентОтОплатыПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ОплатаЗаЧас" id="157">
-							<DataPath>Объект.ОплатаЗаЧас</DataPath>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ОплатаЗаЧасКонтекстноеМеню" id="158"/>
-							<ExtendedTooltip name="ОплатаЗаЧасРасширеннаяПодсказка" id="159"/>
-							<Events>
-								<Event name="OnChange">ОплатаЗаЧасПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ОплатаСЧеловека" id="160">
-							<DataPath>Объект.ОплатаСЧеловека</DataPath>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ОплатаСЧеловекаКонтекстноеМеню" id="161"/>
-							<ExtendedTooltip name="ОплатаСЧеловекаРасширеннаяПодсказка" id="162"/>
-							<Events>
-								<Event name="OnChange">ОплатаСЧеловекаПриИзменении</Event>
-							</Events>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<CheckBoxField name="ВключаяБесплатныеЗанятия" id="75">
-			<DataPath>Объект.ВключаяБесплатныеЗанятия</DataPath>
-			<Visible>false</Visible>
-			<TitleLocation>Right</TitleLocation>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ВключаяБесплатныеЗанятияКонтекстноеМеню" id="76"/>
-			<ExtendedTooltip name="ВключаяБесплатныеЗанятияРасширеннаяПодсказка" id="77"/>
-			<Events>
-				<Event name="OnChange">ПедагогПриИзменении</Event>
-			</Events>
-		</CheckBoxField>
 		<Table name="ДД" id="117">
 			<Footer>true</Footer>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -278,12 +209,14 @@
 				</LabelField>
 				<InputField name="ДД1Документ" id="133">
 					<DataPath>Объект.ДД.Документ</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ДД1ДокументКонтекстноеМеню" id="134"/>
 					<ExtendedTooltip name="ДД1ДокументРасширеннаяПодсказка" id="135"/>
 				</InputField>
 				<InputField name="ДДКонтрагент" id="191">
 					<DataPath>Объект.ДД.Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ДДКонтрагентКонтекстноеМеню" id="192"/>
 					<ExtendedTooltip name="ДДКонтрагентРасширеннаяПодсказка" id="193"/>
@@ -292,6 +225,7 @@
 					<DataPath>Объект.ДД.Часы</DataPath>
 					<Enabled>false</Enabled>
 					<EditMode>EnterOnInput</EditMode>
+					<TextColor>#999999</TextColor>
 					<ContextMenu name="ДД1ЧасыКонтекстноеМеню" id="137"/>
 					<ExtendedTooltip name="ДД1ЧасыРасширеннаяПодсказка" id="138"/>
 				</InputField>
@@ -301,26 +235,45 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма оплаты</v8:content>
+							<v8:content>Сумма за урок</v8:content>
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
 					<FooterDataPath>Объект.ДД.TotalСумма</FooterDataPath>
+					<TextColor>#999999</TextColor>
 					<ContextMenu name="ДД1СуммаКонтекстноеМеню" id="140"/>
 					<ExtendedTooltip name="ДД1СуммаРасширеннаяПодсказка" id="141"/>
 				</InputField>
 				<InputField name="ДД1Начисления" id="142">
-					<DataPath>Объект.ДД.Начисления</DataPath>
+					<DataPath>Объект.ДД.Начисление</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Начисления педагогу</v8:content>
+							<v8:content>Сумма начисления</v8:content>
 						</v8:item>
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.ДД.TotalНачисления</FooterDataPath>
+					<FooterDataPath>Объект.ДД.TotalНачисление</FooterDataPath>
 					<ContextMenu name="ДД1НачисленияКонтекстноеМеню" id="143"/>
 					<ExtendedTooltip name="ДД1НачисленияРасширеннаяПодсказка" id="144"/>
+				</InputField>
+				<CheckBoxField name="ДДНеИзменять" id="194">
+					<DataPath>Объект.ДД.НеИзменять</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДДНеИзменятьКонтекстноеМеню" id="195"/>
+					<ExtendedTooltip name="ДДНеИзменятьРасширеннаяПодсказка" id="196"/>
+				</CheckBoxField>
+				<InputField name="ДДКОплате" id="197">
+					<DataPath>Объект.ДД.КОплате</DataPath>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.ДД.TotalКОплате</FooterDataPath>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ДДКОплатеКонтекстноеМеню" id="198"/>
+					<ExtendedTooltip name="ДДКОплатеРасширеннаяПодсказка" id="199"/>
 				</InputField>
 			</ChildItems>
 		</Table>
@@ -330,26 +283,8 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="179"/>
 			<ChildItems>
-				<InputField name="ДопРасходы" id="103">
-					<DataPath>Объект.ДопРасходы</DataPath>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Все расходные ордера за период</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ToolTipRepresentation>Button</ToolTipRepresentation>
-					<ClearButton>true</ClearButton>
-					<BackColor>#FFD1DF</BackColor>
-					<ContextMenu name="ДопРасходыКонтекстноеМеню" id="104"/>
-					<ExtendedTooltip name="ДопРасходыРасширеннаяПодсказка" id="105"/>
-					<Events>
-						<Event name="OnChange">СуммаДокументаПриИзменении</Event>
-					</Events>
-				</InputField>
 				<InputField name="СуммаДокумента" id="13">
 					<DataPath>Объект.СуммаДокумента</DataPath>
-					<ReadOnly>true</ReadOnly>
 					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<HorizontalAlign>Left</HorizontalAlign>
 					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
@@ -396,6 +331,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа6" id="115">
+					<Visible>false</Visible>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>

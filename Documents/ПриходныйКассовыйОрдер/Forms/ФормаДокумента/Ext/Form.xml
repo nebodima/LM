@@ -172,22 +172,12 @@
 								<Event name="OnChange">КлиентПриИзменении</Event>
 							</Events>
 						</InputField>
-						<InputField name="СтатьяЗатрат" id="203">
-							<DataPath>Объект.СтатьяЗатрат</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Статья затрат</v8:content>
-								</v8:item>
-							</Title>
-							<EditMode>EnterOnInput</EditMode>
+						<InputField name="ПредметОбучения" id="192">
+							<DataPath>Объект.ПредметОбучения</DataPath>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
-							<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="204"/>
-							<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="205"/>
-							<Events>
-								<Event name="OnChange">КлиентПриИзменении</Event>
-							</Events>
+							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="193"/>
+							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="194"/>
 						</InputField>
 						<InputField name="Тариф" id="189">
 							<DataPath>Объект.Тариф</DataPath>
@@ -247,22 +237,6 @@
 							<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="61"/>
 							<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="62"/>
 						</InputField>
-						<InputField name="Подразделение" id="168">
-							<DataPath>Объект.Подразделение</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Подразделение</v8:content>
-								</v8:item>
-							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>
-							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="170"/>
-							<Events>
-								<Event name="OnChange">ПодразделениеПриИзменении</Event>
-							</Events>
-						</InputField>
 						<InputField name="Родитель" id="171">
 							<DataPath>Объект.Родитель</DataPath>
 							<Title>
@@ -283,12 +257,38 @@
 							<ContextMenu name="РодительКонтекстноеМеню" id="172"/>
 							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="173"/>
 						</InputField>
-						<InputField name="ПредметОбучения" id="192">
-							<DataPath>Объект.ПредметОбучения</DataPath>
+						<InputField name="СтатьяЗатрат" id="203">
+							<DataPath>Объект.СтатьяЗатрат</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статья затрат</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="193"/>
-							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="194"/>
+							<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="204"/>
+							<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="205"/>
+							<Events>
+								<Event name="OnChange">КлиентПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Подразделение" id="168">
+							<DataPath>Объект.Подразделение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделение</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="170"/>
+							<Events>
+								<Event name="OnChange">ПодразделениеПриИзменении</Event>
+							</Events>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
