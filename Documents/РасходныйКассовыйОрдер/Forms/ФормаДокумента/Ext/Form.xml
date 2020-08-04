@@ -131,7 +131,7 @@
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="182"/>
 			<ChildItems>
 				<InputField name="Клиент" id="10">
-					<DataPath>Объект.Клиент</DataPath>
+					<DataPath>Объект.Контрагент</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ClearButton>true</ClearButton>

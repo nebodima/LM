@@ -35,8 +35,10 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="Ссылка" id="1">
@@ -66,6 +68,12 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
 				</InputField>
+				<LabelDecoration name="ДекорацияВыплачено" id="200">
+					<Visible>false</Visible>
+					<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ДекорацияВыплаченоКонтекстноеМеню" id="201"/>
+					<ExtendedTooltip name="ДекорацияВыплаченоРасширеннаяПодсказка" id="202"/>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа7" id="170">
@@ -121,7 +129,7 @@
 										<Event name="OnChange">КассаПриИзменении</Event>
 									</Events>
 								</InputField>
-								<InputField name="ОстатокВКассе" id="88">
+								<LabelField name="ОстатокВКассе" id="88">
 									<DataPath>ОстатокВКассе</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<HorizontalAlign>Left</HorizontalAlign>
@@ -130,7 +138,7 @@
 									<TextColor>#339966</TextColor>
 									<ContextMenu name="ОстатокВКассеКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="ОстатокВКассеРасширеннаяПодсказка" id="90"/>
-								</InputField>
+								</LabelField>
 								<Button name="ПолучитьОстатокПоКассе" id="91">
 									<Type>Hyperlink</Type>
 									<CommandName>Form.Command.ПолучитьОстатокПоКассе</CommandName>
@@ -278,7 +286,9 @@
 			</ChildItems>
 		</Table>
 		<UsualGroup name="Группа9" id="178">
+			<HorizontalStretch>true</HorizontalStretch>
 			<Group>AlwaysHorizontal</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="179"/>
@@ -286,8 +296,6 @@
 				<InputField name="СуммаДокумента" id="13">
 					<DataPath>Объект.СуммаДокумента</DataPath>
 					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-					<HorizontalAlign>Left</HorizontalAlign>
-					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="15"/>
@@ -309,6 +317,7 @@
 			</ToolTip>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаОснованияРасширеннаяПодсказка" id="94"/>
 			<ChildItems>
 				<UsualGroup name="Группа5" id="111">
@@ -317,17 +326,29 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="112"/>
 					<ChildItems>
-						<InputField name="РКО" id="95">
-							<DataPath>Объект.РКО</DataPath>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="РКОКонтекстноеМеню" id="96"/>
-							<ExtendedTooltip name="РКОРасширеннаяПодсказка" id="97"/>
-						</InputField>
 						<Button name="СделтьРКО" id="109">
 							<Type>Hyperlink</Type>
 							<CommandName>Form.Command.СделтьРКО</CommandName>
 							<ExtendedTooltip name="СделтьРКОРасширеннаяПодсказка" id="110"/>
 						</Button>
+						<InputField name="РКО" id="95">
+							<DataPath>Объект.РКО</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="РКОКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="РКОРасширеннаяПодсказка" id="97"/>
+						</InputField>
+						<CheckBoxField name="РКОПроведен" id="203">
+							<DataPath>Объект.РКО.Posted</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РКОПроведенКонтекстноеМеню" id="204"/>
+							<ExtendedTooltip name="РКОПроведенРасширеннаяПодсказка" id="205"/>
+						</CheckBoxField>
+						<LabelField name="РКОСумма" id="206">
+							<DataPath>Объект.РКО.Сумма</DataPath>
+							<ContextMenu name="РКОСуммаКонтекстноеМеню" id="207"/>
+							<ExtendedTooltip name="РКОСуммаРасширеннаяПодсказка" id="208"/>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа6" id="115">

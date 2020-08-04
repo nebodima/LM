@@ -1279,26 +1279,26 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="817"/>
 							<ChildItems>
-								<InputField name="СтавкаПедагогаОплатаЗаЗанятие" id="818">
+								<LabelField name="СтавкаПедагогаОплатаЗаЗанятие" id="818">
 									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЗанятие</DataPath>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЗанятиеКонтекстноеМеню" id="819"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЗанятиеРасширеннаяПодсказка" id="820"/>
-								</InputField>
-								<InputField name="СтавкаПедагогаОплатаСЧеловека" id="821">
+								</LabelField>
+								<LabelField name="СтавкаПедагогаОплатаСЧеловека" id="821">
 									<DataPath>Объект.СтавкаПедагога.ОплатаСЧеловека</DataPath>
 									<ContextMenu name="СтавкаПедагогаОплатаСЧеловекаКонтекстноеМеню" id="822"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаСЧеловекаРасширеннаяПодсказка" id="823"/>
-								</InputField>
-								<InputField name="СтавкаПедагогаОплатаЗаЧас" id="824">
+								</LabelField>
+								<LabelField name="СтавкаПедагогаОплатаЗаЧас" id="824">
 									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЧас</DataPath>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЧасКонтекстноеМеню" id="825"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЧасРасширеннаяПодсказка" id="826"/>
-								</InputField>
-								<InputField name="СтавкаПедагогаПроцентСОплатыУченика" id="827">
+								</LabelField>
+								<LabelField name="СтавкаПедагогаПроцентСОплатыУченика" id="827">
 									<DataPath>Объект.СтавкаПедагога.ПроцентСОплатыУченика</DataPath>
 									<ContextMenu name="СтавкаПедагогаПроцентСОплатыУченикаКонтекстноеМеню" id="828"/>
 									<ExtendedTooltip name="СтавкаПедагогаПроцентСОплатыУченикаРасширеннаяПодсказка" id="829"/>
-								</InputField>
+								</LabelField>
 							</ChildItems>
 						</UsualGroup>
 						<Table name="Ученики2" id="747">
@@ -1395,6 +1395,89 @@
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="Ученики2НеИзменятьКонтекстноеМеню" id="810"/>
 									<ExtendedTooltip name="Ученики2НеИзменятьРасширеннаяПодсказка" id="811"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНачисленияПедагогуДоп" id="830">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисления педагогу доп</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа начисления педагогу доп</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Post</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаНачисленияПедагогуДопРасширеннаяПодсказка" id="831"/>
+					<ChildItems>
+						<Table name="НачисленияПедагогу" id="832">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НачисленияПедагогу</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НачисленияПедагогуКонтекстноеМеню" id="833"/>
+							<AutoCommandBar name="НачисленияПедагогуКоманднаяПанель" id="834"/>
+							<ExtendedTooltip name="НачисленияПедагогуРасширеннаяПодсказка" id="835"/>
+							<SearchStringAddition name="НачисленияПедагогуСтрокаПоиска" id="836">
+								<AdditionSource>
+									<Item>НачисленияПедагогу</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияПедагогуСтрокаПоискаКонтекстноеМеню" id="837"/>
+								<ExtendedTooltip name="НачисленияПедагогуСтрокаПоискаРасширеннаяПодсказка" id="838"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НачисленияПедагогуСостояниеПросмотра" id="839">
+								<AdditionSource>
+									<Item>НачисленияПедагогу</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияПедагогуСостояниеПросмотраКонтекстноеМеню" id="840"/>
+								<ExtendedTooltip name="НачисленияПедагогуСостояниеПросмотраРасширеннаяПодсказка" id="841"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НачисленияПедагогуУправлениеПоиском" id="842">
+								<AdditionSource>
+									<Item>НачисленияПедагогу</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияПедагогуУправлениеПоискомКонтекстноеМеню" id="843"/>
+								<ExtendedTooltip name="НачисленияПедагогуУправлениеПоискомРасширеннаяПодсказка" id="844"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НачисленияПедагогуНомерСтроки" id="845">
+									<DataPath>Объект.НачисленияПедагогу.LineNumber</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияПедагогуНомерСтрокиКонтекстноеМеню" id="846"/>
+									<ExtendedTooltip name="НачисленияПедагогуНомерСтрокиРасширеннаяПодсказка" id="847"/>
+								</LabelField>
+								<InputField name="НачисленияПедагогуКомментарий" id="848">
+									<DataPath>Объект.НачисленияПедагогу.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияПедагогуКомментарийКонтекстноеМеню" id="849"/>
+									<ExtendedTooltip name="НачисленияПедагогуКомментарийРасширеннаяПодсказка" id="850"/>
+								</InputField>
+								<InputField name="НачисленияПедагогуСуммаНачисления" id="851">
+									<DataPath>Объект.НачисленияПедагогу.СуммаНачисления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачисленияПедагогуСуммаНачисленияКонтекстноеМеню" id="852"/>
+									<ExtendedTooltip name="НачисленияПедагогуСуммаНачисленияРасширеннаяПодсказка" id="853"/>
+								</InputField>
+								<CheckBoxField name="НачисленияПедагогуНеИзменять" id="854">
+									<DataPath>Объект.НачисленияПедагогу.НеИзменять</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НачисленияПедагогуНеИзменятьКонтекстноеМеню" id="855"/>
+									<ExtendedTooltip name="НачисленияПедагогуНеИзменятьРасширеннаяПодсказка" id="856"/>
 								</CheckBoxField>
 							</ChildItems>
 						</Table>
@@ -1624,6 +1707,35 @@
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.НеИзменять</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НачисленияПедагогуСуммаНачисления</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.НачисленияПедагогу.НеИзменять</dcsset:left>
 						<dcsset:comparisonType>Equal</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>

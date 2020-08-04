@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>LessonsManagement_33</Name>
+			<Name>LessonsManagement_333</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1752,6 +1752,7 @@
 			<Enum>ФорматыХраненияОдностраничныхФайлов</Enum>
 			<Enum>ЦветаЗаметок</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Report>LM_РасчетыПоЗарплате</Report>
 			<Report>LM_ДвиженияДокумента</Report>
 			<Report>LM_Взаиморасчеты</Report>
 			<Report>LM_ВедомостьПоКассе</Report>
