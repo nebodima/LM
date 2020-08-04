@@ -160,7 +160,7 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:CatalogObject.LM_СтатусыФизЛиц</v8:Type>
+				<v8:Type>cfg:CatalogObject.LM_Статусы</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>

@@ -416,11 +416,11 @@
 			</Attribute>
 			<Attribute uuid="69af8b58-800c-43f0-89cb-359819288d27">
 				<Properties>
-					<Name>Сумма</Name>
+					<Name>СуммаДокумента</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма</v8:content>
+							<v8:content>Сумма документа</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

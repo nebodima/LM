@@ -1019,7 +1019,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.LM_СтатусыФизЛиц</name>
+		<name>Catalog.LM_Статусы</name>
 		<right>
 			<name>InteractiveDelete</name>
 			<value>false</value>

@@ -345,7 +345,7 @@
 							<ExtendedTooltip name="РКОПроведенРасширеннаяПодсказка" id="205"/>
 						</CheckBoxField>
 						<LabelField name="РКОСумма" id="206">
-							<DataPath>Объект.РКО.Сумма</DataPath>
+							<DataPath>Объект.РКО.СуммаДокумента</DataPath>
 							<ContextMenu name="РКОСуммаКонтекстноеМеню" id="207"/>
 							<ExtendedTooltip name="РКОСуммаРасширеннаяПодсказка" id="208"/>
 						</LabelField>

@@ -173,7 +173,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.LM_СтатусыФизЛиц</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Статусы</v8:Type>
 					</Type>
 				</Column>
 				<Column name="НовыйСтатус" id="3">
@@ -184,7 +184,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.LM_СтатусыФизЛиц</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Статусы</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Выб" id="4">

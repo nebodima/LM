@@ -1091,8 +1091,11 @@
 						<v8:Type>cfg:DocumentRef.LM_СписаниеОстатков</v8:Type>
 						<v8:Type>cfg:DocumentRef.РасходныйКассовыйОрдер</v8:Type>
 						<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_ГрафикРабочегоВремениПедагога</v8:Type>
 						<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
 						<v8:Type>cfg:DocumentRef.LM_НачислениеБонусов</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_ПеремещениеДенег</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_РасчетЗарплаты</v8:Type>
 						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
 					</Type>
 				</Column>

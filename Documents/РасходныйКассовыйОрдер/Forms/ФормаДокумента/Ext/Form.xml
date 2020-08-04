@@ -170,7 +170,7 @@
 			<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="161"/>
 		</InputField>
 		<InputField name="Сумма" id="13">
-			<DataPath>Объект.Сумма</DataPath>
+			<DataPath>Объект.СуммаДокумента</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<BackColor>#CCFFCC</BackColor>
 			<ContextMenu name="СуммаКонтекстноеМеню" id="14"/>

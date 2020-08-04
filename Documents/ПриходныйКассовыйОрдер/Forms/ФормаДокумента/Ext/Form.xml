@@ -161,7 +161,7 @@
 							<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="158"/>
 						</InputField>
 						<InputField name="Клиент" id="7">
-							<DataPath>Объект.Клиент</DataPath>
+							<DataPath>Объект.Контрагент</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
@@ -367,7 +367,7 @@
 					<ChoiceParameterLinks>
 						<xr:Link>
 							<xr:Name>Клиент</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Объект.Клиент</xr:DataPath>
+							<xr:DataPath xsi:type="xs:string">Объект.Контрагент</xr:DataPath>
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
@@ -417,7 +417,7 @@
 			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="179"/>
 			<ChildItems>
 				<InputField name="Сумма" id="10">
-					<DataPath>Объект.Сумма</DataPath>
+					<DataPath>Объект.СуммаДокумента</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>

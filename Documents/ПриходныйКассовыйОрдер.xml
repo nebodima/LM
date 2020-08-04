@@ -341,7 +341,7 @@
 			</Attribute>
 			<Attribute uuid="6d8db65a-7bf3-4c34-a36e-e6aeeaff2d11">
 				<Properties>
-					<Name>Клиент</Name>
+					<Name>Контрагент</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -419,11 +419,11 @@
 			</Attribute>
 			<Attribute uuid="8da3b0e8-220d-4d46-b164-797e8d48315b">
 				<Properties>
-					<Name>Сумма</Name>
+					<Name>СуммаДокумента</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма</v8:content>
+							<v8:content>Сумма документа</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

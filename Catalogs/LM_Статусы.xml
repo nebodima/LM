@@ -2,33 +2,33 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<Catalog uuid="2650c618-c9d3-4525-b8fe-9c33fd4b8d27">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.LM_СтатусыФизЛиц" category="Object">
+			<xr:GeneratedType name="CatalogObject.LM_Статусы" category="Object">
 				<xr:TypeId>b0e53e6d-a197-4e2e-a6a8-d593d8616cc0</xr:TypeId>
 				<xr:ValueId>d823710a-35ea-4e6e-a2cf-93312a642be8</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.LM_СтатусыФизЛиц" category="Ref">
+			<xr:GeneratedType name="CatalogRef.LM_Статусы" category="Ref">
 				<xr:TypeId>131a0d05-91c4-45a6-9883-8e41b4980411</xr:TypeId>
 				<xr:ValueId>4110bae4-3225-41e2-ab10-abd6da87a47b</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.LM_СтатусыФизЛиц" category="Selection">
+			<xr:GeneratedType name="CatalogSelection.LM_Статусы" category="Selection">
 				<xr:TypeId>5eb6c3b3-6206-41c8-bef1-9fbcde8b320f</xr:TypeId>
 				<xr:ValueId>0833da20-ad1d-446f-9ddf-d8a42a3a3493</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.LM_СтатусыФизЛиц" category="List">
+			<xr:GeneratedType name="CatalogList.LM_Статусы" category="List">
 				<xr:TypeId>f8245dbb-4152-4a8e-8131-395145d07b62</xr:TypeId>
 				<xr:ValueId>6de3cbb4-8e2f-42e9-8000-7e16e5537db0</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.LM_СтатусыФизЛиц" category="Manager">
+			<xr:GeneratedType name="CatalogManager.LM_Статусы" category="Manager">
 				<xr:TypeId>cbde6bb4-971a-4310-bb9a-73c6ec0a76d5</xr:TypeId>
 				<xr:ValueId>489d38a5-e304-4807-b4d7-d83b10c05a43</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>LM_СтатусыФизЛиц</Name>
+			<Name>LM_Статусы</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Статусы физ лиц (LM)</v8:content>
+					<v8:content>Статусы</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -54,14 +54,14 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.LM_СтатусыФизЛиц.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.LM_Статусы.StandardAttribute.Description</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.LM_СтатусыФизЛиц.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultObjectForm>Catalog.LM_Статусы.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.LM_СтатусыФизЛиц.Form.ФормаСписка</DefaultListForm>
+			<DefaultListForm>Catalog.LM_Статусы.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -77,16 +77,11 @@
 			<ObjectPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Статус ФизЛица</v8:content>
+					<v8:content>Статус</v8:content>
 				</v8:item>
 			</ObjectPresentation>
 			<ExtendedObjectPresentation/>
-			<ListPresentation>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Статусы физ лиц</v8:content>
-				</v8:item>
-			</ListPresentation>
+			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
 			<CreateOnInput>Use</CreateOnInput>
