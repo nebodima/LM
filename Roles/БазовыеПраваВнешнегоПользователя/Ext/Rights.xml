@@ -636,7 +636,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement_333</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>MainWindowModeNormal</name>
 			<value>true</value>

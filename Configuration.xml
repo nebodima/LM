@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>LessonsManagement_333</Name>
+			<Name>LessonsManagement</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1594,8 +1594,8 @@
 			<Catalog>LM_ВидыДоговоров</Catalog>
 			<Catalog>LM_ИсточникиИнформации</Catalog>
 			<Catalog>LM_Фото</Catalog>
+			<Catalog>LM_ФизЛица</Catalog>
 			<Catalog>Организации</Catalog>
-			<Catalog>Контрагенты</Catalog>
 			<Catalog>ДоговорыКонтрагентов</Catalog>
 			<Catalog>Кассы</Catalog>
 			<Catalog>СтатьиЗатрат</Catalog>

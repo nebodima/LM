@@ -162,7 +162,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 					</Type>
 				</Column>
 				<Column name="СтарыйСтатус" id="2">

@@ -22,7 +22,7 @@
 				<v8:Type>cfg:TaskRef.ЗадачаИсполнителя</v8:Type>
 				<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
 				<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 				<v8:Type>cfg:CatalogRef.ИдентификаторыОбъектовМетаданных</v8:Type>
 			</Type>
 		</Properties>

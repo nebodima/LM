@@ -161,7 +161,7 @@
 							<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="158"/>
 						</InputField>
 						<InputField name="Клиент" id="7">
-							<DataPath>Объект.Контрагент</DataPath>
+							<DataPath>Объект.LM_ФизЛицо</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
@@ -337,6 +337,9 @@
 							</Title>
 							<ContextMenu name="ДекорацияТекстНазначениеПлатежаКонтекстноеМеню" id="185"/>
 							<ExtendedTooltip name="ДекорацияТекстНазначениеПлатежаРасширеннаяПодсказка" id="186"/>
+							<Events>
+								<Event name="Click">ДекорацияТекстНазначениеПлатежаНажатие</Event>
+							</Events>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
@@ -367,7 +370,7 @@
 					<ChoiceParameterLinks>
 						<xr:Link>
 							<xr:Name>Клиент</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Объект.Контрагент</xr:DataPath>
+							<xr:DataPath xsi:type="xs:string">Объект.LM_ФизЛицо</xr:DataPath>
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>

@@ -1048,7 +1048,7 @@
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:CatalogObject.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogObject.LM_ФизЛица</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
@@ -1180,7 +1180,7 @@
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
 			<Settings xsi:type="v8:TypeDescription">
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Settings>
 		</Attribute>
 	</Attributes>

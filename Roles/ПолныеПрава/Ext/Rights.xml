@@ -831,7 +831,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Catalog.Контрагенты</name>
+		<name>Catalog.LM_ФизЛица</name>
 		<right>
 			<name>InteractiveDelete</name>
 			<value>false</value>
@@ -1946,7 +1946,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement_333</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>Administration</name>
 			<value>false</value>

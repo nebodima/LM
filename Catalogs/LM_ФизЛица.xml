@@ -2,33 +2,33 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<Catalog uuid="1e38d363-e78c-4152-b90a-2a6ce229208d">
 		<InternalInfo>
-			<xr:GeneratedType name="CatalogObject.Контрагенты" category="Object">
+			<xr:GeneratedType name="CatalogObject.LM_ФизЛица" category="Object">
 				<xr:TypeId>b57e0c77-0e0b-43ee-b6a6-b636f47b67e1</xr:TypeId>
 				<xr:ValueId>bb26ca79-d403-494a-bad5-2d3f81cc7b8e</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogRef.Контрагенты" category="Ref">
+			<xr:GeneratedType name="CatalogRef.LM_ФизЛица" category="Ref">
 				<xr:TypeId>b1de89dd-3752-43d3-984f-87380f7baacc</xr:TypeId>
 				<xr:ValueId>0b1a79cb-27b7-4a1f-9e75-7578ba69f05e</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogSelection.Контрагенты" category="Selection">
+			<xr:GeneratedType name="CatalogSelection.LM_ФизЛица" category="Selection">
 				<xr:TypeId>e0385d7d-170e-4fd5-a54d-54b2124ba357</xr:TypeId>
 				<xr:ValueId>4ca3a40d-c4f4-4ea0-bc82-570c994dc101</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogList.Контрагенты" category="List">
+			<xr:GeneratedType name="CatalogList.LM_ФизЛица" category="List">
 				<xr:TypeId>5df3ed0c-bfb0-4f3c-8979-dd53077fe1f4</xr:TypeId>
 				<xr:ValueId>92858ae2-f221-48db-b79e-3768af818823</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="CatalogManager.Контрагенты" category="Manager">
+			<xr:GeneratedType name="CatalogManager.LM_ФизЛица" category="Manager">
 				<xr:TypeId>3314b08b-9d30-495f-8098-539ed290320e</xr:TypeId>
 				<xr:ValueId>69c7112d-717f-400c-bf50-c1cb66221f42</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>Контрагенты</Name>
+			<Name>LM_ФизЛица</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Контрагенты (Физические лица)</v8:content>
+					<v8:content>Физ. лица</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -232,7 +232,7 @@
 					<xr:Comment/>
 					<xr:FullTextSearch>Use</xr:FullTextSearch>
 					<xr:ChoiceParameterLinks/>
-					<xr:FillValue xsi:type="xr:DesignTimeRef">Catalog.Контрагенты.EmptyRef</xr:FillValue>
+					<xr:FillValue xsi:type="xr:DesignTimeRef">Catalog.LM_ФизЛица.EmptyRef</xr:FillValue>
 					<xr:Mask/>
 					<xr:ChoiceParameters/>
 				</xr:StandardAttribute>
@@ -295,16 +295,16 @@
 			<QuickChoice>false</QuickChoice>
 			<ChoiceMode>BothWays</ChoiceMode>
 			<InputByString>
-				<xr:Field>Catalog.Контрагенты.StandardAttribute.Description</xr:Field>
-				<xr:Field>Catalog.Контрагенты.StandardAttribute.Code</xr:Field>
+				<xr:Field>Catalog.LM_ФизЛица.StandardAttribute.Description</xr:Field>
+				<xr:Field>Catalog.LM_ФизЛица.StandardAttribute.Code</xr:Field>
 			</InputByString>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Catalog.Контрагенты.Form.ФормаЭлемента</DefaultObjectForm>
+			<DefaultObjectForm>Catalog.LM_ФизЛица.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm>Catalog.Контрагенты.Form.ФормаСписка</DefaultListForm>
-			<DefaultChoiceForm>Catalog.Контрагенты.Form.ФормаВыбора</DefaultChoiceForm>
+			<DefaultListForm>Catalog.LM_ФизЛица.Form.ФормаСписка</DefaultListForm>
+			<DefaultChoiceForm>Catalog.LM_ФизЛица.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -319,7 +319,7 @@
 			<ObjectPresentation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Контрагент</v8:content>
+					<v8:content>Физ. лицо</v8:content>
 				</v8:item>
 			</ObjectPresentation>
 			<ExtendedObjectPresentation/>
@@ -346,7 +346,7 @@
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
-							<v8:Length>20</v8:Length>
+							<v8:Length>50</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -900,7 +900,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 						<v8:Type>cfg:CatalogRef.LM_ИсточникиИнформации</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -941,7 +941,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -1273,11 +1273,11 @@
 			</Attribute>
 			<TabularSection uuid="f5512c03-66e3-45eb-af0e-c5ac40bbf32c">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.Контрагенты.ГруппыОбучения" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.LM_ФизЛица.ГруппыОбучения" category="TabularSection">
 						<xr:TypeId>5eddb88a-581d-4f3f-90d1-4c6f383d79e8</xr:TypeId>
 						<xr:ValueId>f71181db-2b63-4d2a-916f-693a2c595bd6</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.Контрагенты.ГруппыОбучения" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.LM_ФизЛица.ГруппыОбучения" category="TabularSectionRow">
 						<xr:TypeId>dbdacaf4-f867-4eea-b3a3-29aadc0ae8ba</xr:TypeId>
 						<xr:ValueId>6f4eb59c-c505-4b01-89e1-2476a8cd0b2f</xr:ValueId>
 					</xr:GeneratedType>

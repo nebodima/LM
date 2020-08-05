@@ -21,7 +21,7 @@
 		<Command name="Catalog.Организации.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Catalog.Контрагенты.StandardCommand.OpenList">
+		<Command name="Catalog.LM_ФизЛица.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Кассы.StandardCommand.OpenList">

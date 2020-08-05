@@ -19,7 +19,7 @@
 			</Picture>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ПредметыОбучения</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ФизЛица</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Тарифы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.LM_ЦеныТарифов</xr:Item>

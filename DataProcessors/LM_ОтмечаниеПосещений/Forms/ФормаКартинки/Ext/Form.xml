@@ -1147,7 +1147,7 @@
 						</v8:item>
 					</Title>
 					<Type>
-						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 					</Type>
 				</Column>
 				<Column name="Отметка" id="3">
@@ -1333,7 +1333,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ФизЛицо1Списание" id="6">
@@ -1437,7 +1437,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ФизЛицо2ФотоОбъект" id="14">
@@ -1515,7 +1515,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ФизЛицо3ФотоОбъект" id="20">
@@ -1604,7 +1604,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ФизЛицо4ФотоОбъект" id="27">
@@ -1671,7 +1671,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ФизЛицо5Списание" id="32">
@@ -1749,7 +1749,7 @@
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="ФизЛицо6ФотоОбъект" id="38">
