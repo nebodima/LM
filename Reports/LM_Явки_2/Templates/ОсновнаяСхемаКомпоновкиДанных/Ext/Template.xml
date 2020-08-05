@@ -9,9 +9,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Клиент</dataPath>
 			<field>Клиент</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Скидка</dataPath>
@@ -20,10 +17,16 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Педагог</dataPath>
 			<field>Педагог</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ГруппаОбучения</dataPath>
 			<field>ГруппаОбучения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
@@ -55,6 +58,9 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Тариф</dataPath>
 			<field>Тариф</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПредметОбучения</dataPath>
@@ -66,12 +72,6 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Явка</dataPath>
 			<field>Явка</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
@@ -88,18 +88,6 @@
 					</dcscor:value>
 				</dcscor:item>
 			</appearance>
-			<availableValue>
-				<value xsi:type="xs:boolean">false</value>
-			</availableValue>
-			<availableValue>
-				<value xsi:type="xs:boolean">true</value>
-				<presentation xsi:type="v8:LocalStringType">
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>1</v8:content>
-					</v8:item>
-				</presentation>
-			</availableValue>
 			<inputParameters>
 				<dcscor:item>
 					<dcscor:use>false</dcscor:use>
@@ -120,48 +108,36 @@
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
-			<appearance>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Формат</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType">
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>БИ=V</v8:content>
-						</v8:item>
-					</dcscor:value>
-				</dcscor:item>
-			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Сумма</dataPath>
-			<field>Сумма</field>
+			<dataPath>Ученик</dataPath>
+			<field>Ученик</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма</v8:content>
+					<v8:content>Ученик</v8:content>
 				</v8:item>
 			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Часы</dataPath>
-			<field>Часы</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Часы</v8:content>
-				</v8:item>
-			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<dataSource>ИсточникДанных2</dataSource>
 		<query>ВЫБРАТЬ
-	LM_СписанияСуммЗаУрокиОбороты.Клиент КАК Клиент,
-	LM_СписанияСуммЗаУрокиОбороты.Период КАК Период,
+	LM_СписанияСуммЗаУрокиОбороты.Клиент КАК Ученик,
+	НАЧАЛОПЕРИОДА(LM_СписанияСуммЗаУрокиОбороты.Период, ДЕНЬ) КАК Период,
 	LM_СписанияСуммЗаУрокиОбороты.ПредметОбучения КАК ПредметОбучения,
+	ВЫБОР
+		КОГДА LM_СписанияСуммЗаУрокиОбороты.Явка
+			ТОГДА 1
+		КОГДА НЕ LM_СписанияСуммЗаУрокиОбороты.Явка
+			ТОГДА 0
+		ИНАЧЕ NULL
+	КОНЕЦ КАК Явка,
 	LM_СписанияСуммЗаУрокиОбороты.Регистратор КАК Регистратор,
-	LM_СписанияСуммЗаУрокиОбороты.СуммаРасход КАК Сумма,
-	LM_СписанияСуммЗаУрокиОбороты.Явка КАК Явка,
-	LM_СписанияСуммЗаУрокиОбороты.ЧасыРасход / 60 / 60 КАК Часы
+	LM_СписанияСуммЗаУрокиОбороты.Педагог КАК Педагог,
+	LM_СписанияСуммЗаУрокиОбороты.Тариф КАК Тариф,
+	LM_СписанияСуммЗаУрокиОбороты.ГруппаОбучения КАК ГруппаОбучения
 ИЗ
 	РегистрНакопления.LM_СписанияСуммЗаУроки.Обороты(, , Регистратор, ) КАК LM_СписанияСуммЗаУрокиОбороты
 ГДЕ
@@ -169,15 +145,7 @@
 	</dataSet>
 	<totalField>
 		<dataPath>Явка</dataPath>
-		<expression>Количество(Явка)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>Сумма</dataPath>
-		<expression>Сумма(Сумма)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>Часы</dataPath>
-		<expression>Сумма(Часы)</expression>
+		<expression>Сумма(Явка)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -233,27 +201,6 @@
 		</value>
 		<useRestriction>false</useRestriction>
 	</parameter>
-	<template>
-		<name>Макет2</name>
-		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
-			<dcsat:item xsi:type="dcsat:TableRow">
-				<dcsat:tableCell>
-					<dcsat:item xsi:type="dcsat:Field">
-						<dcsat:value xsi:type="dcscor:Parameter">Явка</dcsat:value>
-					</dcsat:item>
-				</dcsat:tableCell>
-			</dcsat:item>
-		</template>
-		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
-			<dcsat:name>Явка</dcsat:name>
-			<dcsat:expression>Представление(Явка)</dcsat:expression>
-		</parameter>
-	</template>
-	<groupTemplate>
-		<groupField>Явка</groupField>
-		<templateType>Header</templateType>
-		<template>Макет2</template>
-	</groupTemplate>
 	<settingsVariant>
 		<dcsset:name>Таблица явок</dcsset:name>
 		<dcsset:presentation xsi:type="v8:LocalStringType">
@@ -265,10 +212,16 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Клиент</dcsset:field>
+					<dcsset:field>Ученик</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Педагог</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Тариф</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Явка</dcsset:field>
@@ -283,7 +236,7 @@
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Клиент</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">Ученик</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:userSettingID>854fb349-540c-41f7-ba8b-b90819c76f63</dcsset:userSettingID>
 				</dcsset:item>
@@ -295,9 +248,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ПредметОбучения</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">Педагог</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>da45562a-f423-4cee-96c2-e085ecd4e4d4</dcsset:userSettingID>
+					<dcsset:userSettingID>22521acf-e880-45be-a84d-3798c39de9a9</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
 			<dcsset:dataParameters>
@@ -309,6 +262,16 @@
 					<dcsset:userSettingID>817915ee-d98d-44e2-b000-3d1f8d59e3b4</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ученик</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
 			<dcsset:conditionalAppearance>
 				<dcsset:item>
 					<dcsset:selection>
@@ -321,8 +284,8 @@
 							<dcsset:groupType>AndGroup</dcsset:groupType>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
 								<dcsset:left xsi:type="dcscor:Field">Явка</dcsset:left>
-								<dcsset:comparisonType>Equal</dcsset:comparisonType>
-								<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
 								<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
@@ -343,6 +306,67 @@
 							<dcscor:use>false</dcscor:use>
 							<dcscor:parameter>Текст</dcscor:parameter>
 							<dcscor:value xsi:type="v8:LocalStringType"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ВыводитьКартинку</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionPictureOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ГоризонтальноеПоложениеКартинки</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Картинка</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Picture" t="false" ref="v8ui:УстановитьПризнакРассмотреноДляВзаимодействия"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Явка</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Явка</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>-</v8:content>
+								</v8:item>
+							</dcscor:value>
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:use>false</dcscor:use>
@@ -441,7 +465,7 @@
 					<dcsset:row>
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Клиент</dcsset:field>
+								<dcsset:field>Ученик</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -454,292 +478,59 @@
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Регистратор</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:userSettingID>fcf5b146-43ef-4ee0-9eb7-82605fad5d51</dcsset:userSettingID>
+							<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расшифровать по урокам</v8:content>
+								</v8:item>
+							</dcsset:userSettingPresentation>
+						</dcsset:item>
 					</dcsset:row>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:StructureItemChart">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:point>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Период</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>Day</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-					</dcsset:point>
-					<dcsset:series>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Клиент</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-					</dcsset:series>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>Day</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
-					<dcsset:outputParameters>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:ChartType">Step</dcscor:value>
-							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-								<dcscor:use>false</dcscor:use>
-								<dcscor:parameter>ТипДиаграммы.РасположениеРесурсов</dcscor:parameter>
-								<dcscor:value xsi:type="dcsset:DataCompositionResourcesPlacementInChart">Series</dcscor:value>
-							</dcscor:item>
-							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-								<dcscor:use>false</dcscor:use>
-								<dcscor:parameter>ТипДиаграммы.РежимСглаживания</dcscor:parameter>
-								<dcscor:value xmlns:d9p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d9p1:ChartSplineMode">SmoothCurve</dcscor:value>
-							</dcscor:item>
-							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-								<dcscor:use>false</dcscor:use>
-								<dcscor:parameter>ТипДиаграммы.ОсьЗначений</dcscor:parameter>
-								<dcscor:value xmlns:d9p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d9p1:ChartAxis">
-									<d9p1:maxValue xsi:type="xs:decimal">1</d9p1:maxValue>
-									<d9p1:minValueDetectionMethod>UseValue</d9p1:minValueDetectionMethod>
-									<d9p1:maxValueDetectionMethod>UseValue</d9p1:maxValueDetectionMethod>
-								</dcscor:value>
-							</dcscor:item>
-							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-								<dcscor:use>false</dcscor:use>
-								<dcscor:parameter>ТипДиаграммы.ШкалаТочек</dcscor:parameter>
-								<dcscor:value xmlns:d9p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d9p1:ChartScale">
-									<d9p1:titleArea>
-										<d9p1:font kind="AutoFont"/>
-										<d9p1:textColor>auto</d9p1:textColor>
-										<d9p1:backColor>auto</d9p1:backColor>
-										<d9p1:border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</d9p1:border>
-										<d9p1:borderColor>auto</d9p1:borderColor>
-									</d9p1:titleArea>
-									<d9p1:showInChart>DontShow</d9p1:showInChart>
-								</dcscor:value>
-							</dcscor:item>
-							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-								<dcscor:use>false</dcscor:use>
-								<dcscor:parameter>ТипДиаграммы.ШкалаЗначений</dcscor:parameter>
-								<dcscor:value xmlns:d9p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d9p1:ChartScale">
-									<d9p1:titleArea>
-										<d9p1:font kind="AutoFont"/>
-										<d9p1:textColor>auto</d9p1:textColor>
-										<d9p1:backColor>auto</d9p1:backColor>
-										<d9p1:border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</d9p1:border>
-										<d9p1:borderColor>auto</d9p1:borderColor>
-									</d9p1:titleArea>
-									<d9p1:showInChart>DontShow</d9p1:showInChart>
-								</dcscor:value>
-							</dcscor:item>
-							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-								<dcscor:use>false</dcscor:use>
-								<dcscor:parameter>ТипДиаграммы.ШкалаСерий</dcscor:parameter>
-								<dcscor:value xmlns:d9p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d9p1:ChartScale">
-									<d9p1:titleArea>
-										<d9p1:font kind="AutoFont"/>
-										<d9p1:textColor>auto</d9p1:textColor>
-										<d9p1:backColor>auto</d9p1:backColor>
-										<d9p1:border width="1">
-											<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-										</d9p1:border>
-										<d9p1:borderColor>auto</d9p1:borderColor>
-									</d9p1:titleArea>
-									<d9p1:showInChart>DontShow</d9p1:showInChart>
-								</dcscor:value>
-							</dcscor:item>
-						</dcscor:item>
-					</dcsset:outputParameters>
-				</dcsset:item>
-			</dcsset:item>
-		</dcsset:settings>
-	</settingsVariant>
-	<settingsVariant>
-		<dcsset:name>Уроки и явки</dcsset:name>
-		<dcsset:presentation xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Уроки и явки</v8:content>
-			</v8:item>
-		</dcsset:presentation>
-		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
-			<dcsset:selection>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Клиент</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ПредметОбучения</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Регистратор</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Сумма</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Часы</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>Явка</dcsset:field>
-				</dcsset:item>
-			</dcsset:selection>
-			<dcsset:filter>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">Клиент</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>1795aa36-d61b-4517-b231-8f8aab5680e4</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ПредметОбучения</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>24662bf2-10a4-4a33-85c8-c12978d668d3</dcsset:userSettingID>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ГруппаОбучения</dcsset:left>
-					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:userSettingID>e77ab70d-1f47-4f54-90e8-8209be8fb5ea</dcsset:userSettingID>
-				</dcsset:item>
-			</dcsset:filter>
-			<dcsset:dataParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
-					</dcscor:value>
-					<dcsset:userSettingID>a8c71449-16b5-4373-aab6-41456e7396a0</dcsset:userSettingID>
-				</dcscor:item>
-			</dcsset:dataParameters>
-			<dcsset:order>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>ПредметОбучения</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Клиент</dcsset:field>
-					<dcsset:orderType>Asc</dcsset:orderType>
-				</dcsset:item>
-			</dcsset:order>
-			<dcsset:conditionalAppearance>
-				<dcsset:item>
-					<dcsset:selection>
-						<dcsset:item>
-							<dcsset:field>Явка</dcsset:field>
-						</dcsset:item>
-					</dcsset:selection>
-					<dcsset:filter>
-						<dcsset:item xsi:type="dcsset:FilterItemGroup">
-							<dcsset:groupType>AndGroup</dcsset:groupType>
-							<dcsset:item xsi:type="dcsset:FilterItemComparison">
-								<dcsset:left xsi:type="dcscor:Field">Явка</dcsset:left>
-								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
-								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-							</dcsset:item>
-							<dcsset:item xsi:type="dcsset:FilterItemComparison">
-								<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
-								<dcsset:comparisonType>Filled</dcsset:comparisonType>
-							</dcsset:item>
-						</dcsset:item>
-					</dcsset:filter>
-					<dcsset:appearance>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:parameter>ЦветФона</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>Формат</dcscor:parameter>
-							<dcscor:value xsi:type="v8:LocalStringType">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>БЛ=; БИ=1</v8:content>
-								</v8:item>
-							</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>Текст</dcscor:parameter>
-							<dcscor:value xsi:type="v8:LocalStringType">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>1</v8:content>
-								</v8:item>
-							</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ВыводитьКартинку</dcscor:parameter>
-							<dcscor:value xsi:type="dcsset:DataCompositionPictureOutputType">DontOutput</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>Картинка</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Picture" t="false" ref="v8ui:УстановитьПризнакРассмотреноДляВзаимодействия"/>
-						</dcscor:item>
-					</dcsset:appearance>
-					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
-					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
-					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
-					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
-					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
-					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
-				</dcsset:item>
-			</dcsset:conditionalAppearance>
-			<dcsset:outputParameters>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:parameter>МакетОформления</dcscor:parameter>
-					<dcscor:value xsi:type="xs:string">Античный</dcscor:value>
-				</dcscor:item>
-			</dcsset:outputParameters>
-			<dcsset:item xsi:type="dcsset:StructureItemGroup">
-				<dcsset:groupItems>
-					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>ПредметОбучения</dcsset:field>
-						<dcsset:groupType>Items</dcsset:groupType>
-						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-					</dcsset:item>
-				</dcsset:groupItems>
-				<dcsset:order>
-					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-				</dcsset:order>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				</dcsset:point>
+				<dcsset:series>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Клиент</dcsset:field>
+							<dcsset:field>Ученик</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -752,18 +543,84 @@
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
-					<dcsset:item xsi:type="dcsset:StructureItemGroup">
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-							<dcsset:item xsi:type="dcsset:SelectedItemField">
-								<dcsset:field>Явка</dcsset:field>
-							</dcsset:item>
-						</dcsset:selection>
-					</dcsset:item>
-				</dcsset:item>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">Step</dcscor:value>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.РасположениеРесурсов</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionResourcesPlacementInChart">Series</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.РежимСглаживания</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartSplineMode">SmoothCurve</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.ОсьЗначений</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartAxis">
+								<d8p1:maxValue xsi:type="xs:decimal">1</d8p1:maxValue>
+								<d8p1:minValueDetectionMethod>UseValue</d8p1:minValueDetectionMethod>
+								<d8p1:maxValueDetectionMethod>UseValue</d8p1:maxValueDetectionMethod>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.ШкалаТочек</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
+								<d8p1:titleArea>
+									<d8p1:font kind="AutoFont"/>
+									<d8p1:textColor>auto</d8p1:textColor>
+									<d8p1:backColor>auto</d8p1:backColor>
+									<d8p1:border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</d8p1:border>
+									<d8p1:borderColor>auto</d8p1:borderColor>
+								</d8p1:titleArea>
+								<d8p1:showInChart>DontShow</d8p1:showInChart>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.ШкалаЗначений</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
+								<d8p1:titleArea>
+									<d8p1:font kind="AutoFont"/>
+									<d8p1:textColor>auto</d8p1:textColor>
+									<d8p1:backColor>auto</d8p1:backColor>
+									<d8p1:border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</d8p1:border>
+									<d8p1:borderColor>auto</d8p1:borderColor>
+								</d8p1:titleArea>
+								<d8p1:showInChart>DontShow</d8p1:showInChart>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ТипДиаграммы.ШкалаСерий</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
+								<d8p1:titleArea>
+									<d8p1:font kind="AutoFont"/>
+									<d8p1:textColor>auto</d8p1:textColor>
+									<d8p1:backColor>auto</d8p1:backColor>
+									<d8p1:border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</d8p1:border>
+									<d8p1:borderColor>auto</d8p1:borderColor>
+								</d8p1:titleArea>
+								<d8p1:showInChart>DontShow</d8p1:showInChart>
+							</dcscor:value>
+						</dcscor:item>
+					</dcscor:item>
+				</dcsset:outputParameters>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
