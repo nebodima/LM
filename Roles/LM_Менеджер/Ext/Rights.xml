@@ -2093,7 +2093,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement</name>
+		<name>Configuration.LessonsManagement_7</name>
 		<right>
 			<name>DataAdministration</name>
 			<value>true</value>

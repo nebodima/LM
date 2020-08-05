@@ -4,7 +4,7 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Configuration.LessonsManagement</name>
+		<name>Configuration.LessonsManagement_7</name>
 		<right>
 			<name>AllFunctionsMode</name>
 			<value>true</value>
