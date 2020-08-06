@@ -832,7 +832,7 @@
 									<ExtendedTooltip name="УченикиГруппа5РасширеннаяПодсказка" id="449"/>
 									<ChildItems>
 										<InputField name="УченикиЧасы" id="302">
-											<DataPath>Объект.Ученики.Часы</DataPath>
+											<DataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/0:1385ad62-16a3-462f-af40-aea22b299880</DataPath>
 											<UserVisible>
 												<xr:Common>false</xr:Common>
 											</UserVisible>

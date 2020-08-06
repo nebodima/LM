@@ -108,86 +108,6 @@
 								<Event name="OnActivateDate">КалендарьПриАктивизацииДаты</Event>
 							</Events>
 						</CalendarField>
-						<InputField name="ФильтрПедагог" id="81">
-							<DataPath>ФильтрПедагог</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ФильтрПедагогКонтекстноеМеню" id="82"/>
-							<ExtendedTooltip name="ФильтрПедагогРасширеннаяПодсказка" id="83"/>
-							<Events>
-								<Event name="OnChange">Цвет1ПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ФильтрПомещение" id="84">
-							<DataPath>ФильтрПомещение</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ФильтрПомещениеКонтекстноеМеню" id="85"/>
-							<ExtendedTooltip name="ФильтрПомещениеРасширеннаяПодсказка" id="86"/>
-							<Events>
-								<Event name="OnChange">Цвет1ПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ФильтрГруппаОбучения" id="87">
-							<DataPath>ФильтрГруппаОбучения</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ФильтрГруппаОбученияКонтекстноеМеню" id="88"/>
-							<ExtendedTooltip name="ФильтрГруппаОбученияРасширеннаяПодсказка" id="89"/>
-							<Events>
-								<Event name="OnChange">Цвет1ПриИзменении</Event>
-							</Events>
-						</InputField>
-						<RadioButtonField name="Цвет1" id="45">
-							<DataPath>Цвет</DataPath>
-							<RadioButtonType>Tumbler</RadioButtonType>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Помещения</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">Помещение</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Предмета</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ПредмОбуч</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Педагога</v8:content>
-											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">Педагог</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ContextMenu name="Цвет1КонтекстноеМеню" id="46"/>
-							<ExtendedTooltip name="Цвет1РасширеннаяПодсказка" id="47"/>
-							<Events>
-								<Event name="OnChange">Цвет1ПриИзменении</Event>
-							</Events>
-						</RadioButtonField>
 						<RadioButtonField name="Переключатель" id="26">
 							<DataPath>Переключатель</DataPath>
 							<RadioButtonType>Tumbler</RadioButtonType>
@@ -238,6 +158,217 @@
 								<Event name="OnChange">ПереключательПриИзменении</Event>
 							</Events>
 						</RadioButtonField>
+						<RadioButtonField name="Цвет1" id="45">
+							<DataPath>Цвет</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Помещения</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Помещение</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Предмета</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ПредмОбуч</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Педагога</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Педагог</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="Цвет1КонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="Цвет1РасширеннаяПодсказка" id="47"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<InputField name="ФильтрПедагог" id="81">
+							<DataPath>ФильтрПедагог</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ФильтрПедагогКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="ФильтрПедагогРасширеннаяПодсказка" id="83"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФильтрГруппаОбучения" id="87">
+							<DataPath>ФильтрГруппаОбучения</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ФильтрГруппаОбученияКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ФильтрГруппаОбученияРасширеннаяПодсказка" id="89"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ФильтрПомещение" id="84">
+							<DataPath>ФильтрПомещение</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ФильтрПомещениеКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="ФильтрПомещениеРасширеннаяПодсказка" id="86"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="НеГруппироватьПомещения" id="101">
+							<DataPath>НеГруппироватьПомещения</DataPath>
+							<CheckBoxType>Switcher</CheckBoxType>
+							<ContextMenu name="НеГруппироватьПомещенияКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="НеГруппироватьПомещенияРасширеннаяПодсказка" id="103"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаНастройкаОписания" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выводить в описании уроков</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка описания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаНастройкаОписанияРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<CheckBoxField name="ГруппаОбучения" id="61">
+									<DataPath>ГруппаОбучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>группу обучения</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="63"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="Педагог" id="64">
+									<DataPath>Педагог</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>педагога</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="ПедагогКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="66"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ПредметОбучения" id="67">
+									<DataPath>ПредметОбучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>предмет обучения</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Switcher</CheckBoxType>
+									<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="69"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="ОтображатьНапоминания" id="56">
+							<DataPath>ОтображатьНапоминания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отображать напоминания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если используются напоминания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Switcher</CheckBoxType>
+							<ContextMenu name="ОтображатьНапоминанияКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ОтображатьНапоминанияРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">Цвет1ПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="Группа1" id="99">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>С 8 значит 00:00 + 8 часов = 8:00
+по 19 значит 19:00</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<InputField name="ВремяКалендаряС" id="96">
+									<DataPath>ВремяКалендаряС</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВремяКалендаряСКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ВремяКалендаряСРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">ПереключательПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВремяКалендаряПо" id="93">
+									<DataPath>ВремяКалендаряПо</DataPath>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ВремяКалендаряПоКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="ВремяКалендаряПоРасширеннаяПодсказка" id="95"/>
+									<Events>
+										<Event name="OnChange">ПереключательПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="ПоложениеШкалыВремени" id="72">
 							<DataPath>ПоложениеШкалыВремениТекст</DataPath>
 							<Width>7</Width>
@@ -305,126 +436,6 @@
 								<Event name="OnChange">Цвет1ПриИзменении</Event>
 							</Events>
 						</InputField>
-						<UsualGroup name="Группа1" id="99">
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>С 8 значит 00:00 + 8 часов = 8:00
-по 19 значит 19:00</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>Button</ToolTipRepresentation>
-							<Group>AlwaysHorizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="100"/>
-							<ChildItems>
-								<InputField name="ВремяКалендаряС" id="96">
-									<DataPath>ВремяКалендаряС</DataPath>
-									<SpinButton>true</SpinButton>
-									<ContextMenu name="ВремяКалендаряСКонтекстноеМеню" id="97"/>
-									<ExtendedTooltip name="ВремяКалендаряСРасширеннаяПодсказка" id="98"/>
-									<Events>
-										<Event name="OnChange">ПереключательПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ВремяКалендаряПо" id="93">
-									<DataPath>ВремяКалендаряПо</DataPath>
-									<SpinButton>true</SpinButton>
-									<ContextMenu name="ВремяКалендаряПоКонтекстноеМеню" id="94"/>
-									<ExtendedTooltip name="ВремяКалендаряПоРасширеннаяПодсказка" id="95"/>
-									<Events>
-										<Event name="OnChange">ПереключательПриИзменении</Event>
-									</Events>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="ГруппаНастройкаОписания" id="59">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Выводить в описании уроков</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа настройка описания</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Representation>None</Representation>
-							<ExtendedTooltip name="ГруппаНастройкаОписанияРасширеннаяПодсказка" id="60"/>
-							<ChildItems>
-								<CheckBoxField name="ГруппаОбучения" id="61">
-									<DataPath>ГруппаОбучения</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>группу обучения</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="62"/>
-									<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="63"/>
-									<Events>
-										<Event name="OnChange">Цвет1ПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<CheckBoxField name="Педагог" id="64">
-									<DataPath>Педагог</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>педагога</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПедагогКонтекстноеМеню" id="65"/>
-									<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="66"/>
-									<Events>
-										<Event name="OnChange">Цвет1ПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-								<CheckBoxField name="ПредметОбучения" id="67">
-									<DataPath>ПредметОбучения</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>предмет обучения</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="69"/>
-									<Events>
-										<Event name="OnChange">Цвет1ПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
-							</ChildItems>
-						</UsualGroup>
-						<CheckBoxField name="ОтображатьНапоминания" id="56">
-							<DataPath>ОтображатьНапоминания</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Отображать напоминания</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Если используются напоминания</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>Button</ToolTipRepresentation>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ОтображатьНапоминанияКонтекстноеМеню" id="57"/>
-							<ExtendedTooltip name="ОтображатьНапоминанияРасширеннаяПодсказка" id="58"/>
-							<Events>
-								<Event name="OnChange">Цвет1ПриИзменении</Event>
-							</Events>
-						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаВертик" id="39">
@@ -893,6 +904,20 @@
 			</Type>
 			<Save>
 				<Field>ВремяКалендаряПо</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НеГруппироватьПомещения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не группировать помещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НеГруппироватьПомещения</Field>
 			</Save>
 		</Attribute>
 	</Attributes>

@@ -479,7 +479,6 @@
 									<Width>1</Width>
 									<ClearButton>true</ClearButton>
 									<QuickChoice>false</QuickChoice>
-									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="УченикиУченикКонтекстноеМеню" id="55"/>
 									<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="56"/>
 									<Events>
@@ -493,7 +492,6 @@
 									<Width>1</Width>
 									<ClearButton>true</ClearButton>
 									<QuickChoice>false</QuickChoice>
-									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="УченикиТарифКонтекстноеМеню" id="58"/>
 									<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="59"/>
 								</InputField>
@@ -503,7 +501,6 @@
 									<Width>1</Width>
 									<ClearButton>true</ClearButton>
 									<QuickChoice>false</QuickChoice>
-									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
 									<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="114"/>
 									<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="115"/>
 								</InputField>

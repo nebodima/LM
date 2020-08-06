@@ -510,6 +510,7 @@
 				</dcsset:item>
 			</dcsset:item>
 			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:use>false</dcsset:use>
 				<dcsset:point>
 					<dcsset:groupItems>
 						<dcsset:item xsi:type="dcsset:GroupItemField">
