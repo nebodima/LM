@@ -342,6 +342,12 @@
 												</RadioButtonField>
 											</ChildItems>
 										</UsualGroup>
+										<InputField name="СтавкаПедагога" id="367">
+											<DataPath>Объект.СтавкаПедагога</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="368"/>
+											<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="369"/>
+										</InputField>
 										<InputField name="Статус" id="210">
 											<DataPath>Объект.Статус</DataPath>
 											<ToolTip>
@@ -651,9 +657,6 @@
 												</Button>
 												<InputField name="Цвет" id="294">
 													<DataPath>Объект.Цвет</DataPath>
-													<UserVisible>
-														<xr:Common>false</xr:Common>
-													</UserVisible>
 													<ContextMenu name="ЦветКонтекстноеМеню" id="295"/>
 													<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="296"/>
 												</InputField>
@@ -1037,13 +1040,6 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<InputField name="Комментарий" id="34">
-			<DataPath>Объект.Комментарий</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="35"/>
-			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="36"/>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

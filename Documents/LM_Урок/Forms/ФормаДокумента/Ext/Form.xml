@@ -213,7 +213,7 @@
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
 							<Events>
-								<Event name="OnChange">ПлатныйПриИзменении</Event>
+								<Event name="OnChange">ПедагогПриИзменении</Event>
 							</Events>
 						</InputField>
 						<InputField name="ПредметОбучения" id="350">
@@ -453,53 +453,18 @@
 							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
 						</InputField>
+						<InputField name="СтавкаПедагога" id="742">
+							<DataPath>Объект.СтавкаПедагога</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
+							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
+							<Events>
+								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<PictureField name="ФотоУченика" id="518">
-					<DataPath>ФотоУченика</DataPath>
-					<Visible>false</Visible>
-					<Width>25</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<PictureSize>AutoSize</PictureSize>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</Border>
-					<FileDragMode>AsFile</FileDragMode>
-					<ContextMenu name="ФотоУченикаКонтекстноеМеню" id="519"/>
-					<ExtendedTooltip name="ФотоУченикаРасширеннаяПодсказка" id="520"/>
-				</PictureField>
-				<PictureField name="ФотоПедагога" id="138">
-					<DataPath>ФотоПедагога</DataPath>
-					<Visible>false</Visible>
-					<Width>25</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<PictureSize>AutoSize</PictureSize>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</Border>
-					<FileDragMode>AsFile</FileDragMode>
-					<ContextMenu name="ФотоПедагогаКонтекстноеМеню" id="139"/>
-					<ExtendedTooltip name="ФотоПедагогаРасширеннаяПодсказка" id="140"/>
-				</PictureField>
-				<PictureField name="Фото" id="158">
-					<DataPath>Фото</DataPath>
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Фото предмета обучения</v8:content>
-						</v8:item>
-					</Title>
-					<Width>20</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<PictureSize>AutoSize</PictureSize>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</Border>
-					<FileDragMode>AsFile</FileDragMode>
-					<ContextMenu name="ФотоКонтекстноеМеню" id="159"/>
-					<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="160"/>
-				</PictureField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ГруппаУченики" id="536">
@@ -639,6 +604,67 @@
 									<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="206"/>
 									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
 								</LabelField>
+								<ColumnGroup name="УченикиГруппа9" id="486">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Долг</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#000000</TitleTextColor>
+									<Group>Horizontal</Group>
+									<TitleBackColor>#C0C0C0</TitleBackColor>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
+									<ChildItems>
+										<LabelField name="УченикиЗадолженностьОбщая" id="483">
+											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Общ. долг</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+											<Width>1</Width>
+											<MarkNegatives>true</MarkNegatives>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="УченикиЗадолженностьОбщаяКонтекстноеМеню" id="484"/>
+											<ExtendedTooltip name="УченикиЗадолженностьОбщаяРасширеннаяПодсказка" id="485"/>
+										</LabelField>
+										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
+											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Долг по предмету</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<Width>1</Width>
+											<MarkNegatives>true</MarkNegatives>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
+											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппа4" id="446">
 									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа4РасширеннаяПодсказка" id="447"/>
@@ -873,70 +899,6 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппа9" id="486">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Долг</v8:content>
-										</v8:item>
-									</Title>
-									<TitleTextColor>#000000</TitleTextColor>
-									<Group>Horizontal</Group>
-									<TitleBackColor>#C0C0C0</TitleBackColor>
-									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
-									<ChildItems>
-										<LabelField name="УченикиЗадолженностьОбщая" id="483">
-											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Общ. долг</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
-											<Width>1</Width>
-											<MarkNegatives>true</MarkNegatives>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="УченикиЗадолженностьОбщаяКонтекстноеМеню" id="484"/>
-											<ExtendedTooltip name="УченикиЗадолженностьОбщаяРасширеннаяПодсказка" id="485"/>
-										</LabelField>
-										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
-											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Долг по предмету</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<Width>1</Width>
-											<MarkNegatives>true</MarkNegatives>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
-											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
-										</LabelField>
-									</ChildItems>
-								</ColumnGroup>
 								<InputField name="УченикиКомментарий" id="477">
 									<DataPath>Объект.Ученики.Комментарий</DataPath>
 									<Visible>false</Visible>
@@ -1060,6 +1022,19 @@
 									<ContextMenu name="УченикиНомерСтроки1КонтекстноеМеню" id="556"/>
 									<ExtendedTooltip name="УченикиНомерСтроки1РасширеннаяПодсказка" id="557"/>
 								</LabelField>
+								<LabelField name="Ученики1ОстатокБонусов" id="696">
+									<DataPath>Объект.Ученики.ОстатокБонусов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<MarkNegatives>true</MarkNegatives>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="Ученики1ОстатокБонусовКонтекстноеМеню" id="697"/>
+									<ExtendedTooltip name="Ученики1ОстатокБонусовРасширеннаяПодсказка" id="698"/>
+								</LabelField>
 								<ColumnGroup name="УченикиГруппа8" id="603">
 									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа8РасширеннаяПодсказка" id="604"/>
@@ -1109,59 +1084,6 @@
 									<ContextMenu name="Ученики1ДисконтнаяКартаДатаОкончанияДействияКонтекстноеМеню" id="700"/>
 									<ExtendedTooltip name="Ученики1ДисконтнаяКартаДатаОкончанияДействияРасширеннаяПодсказка" id="701"/>
 								</LabelField>
-								<ColumnGroup name="УченикиГруппа11" id="611">
-									<Group>Horizontal</Group>
-									<ExtendedTooltip name="УченикиГруппа11РасширеннаяПодсказка" id="612"/>
-									<ChildItems>
-										<ColumnGroup name="УченикиГруппа12" id="616">
-											<Group>Horizontal</Group>
-											<ExtendedTooltip name="УченикиГруппа12РасширеннаяПодсказка" id="617"/>
-											<ChildItems>
-												<InputField name="УченикиСуммаБезСкидки1" id="618">
-													<DataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/0:ede82bdb-8d37-417c-99d6-e2456550f8a3</DataPath>
-													<UserVisible>
-														<xr:Common>false</xr:Common>
-													</UserVisible>
-													<ReadOnly>true</ReadOnly>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Сумма без скидки</v8:content>
-														</v8:item>
-													</Title>
-													<HorizontalAlign>Right</HorizontalAlign>
-													<EditMode>EnterOnInput</EditMode>
-													<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
-													<ShowInFooter>false</ShowInFooter>
-													<FooterDataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/101000000:ede82bdb-8d37-417c-99d6-e2456550f8a3</FooterDataPath>
-													<ContextMenu name="УченикиСуммаБезСкидки1КонтекстноеМеню" id="619"/>
-													<ExtendedTooltip name="УченикиСуммаБезСкидки1РасширеннаяПодсказка" id="620"/>
-												</InputField>
-												<InputField name="УченикиСкидка1" id="621">
-													<DataPath>Объект.Ученики.Скидка</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Скидки</v8:content>
-														</v8:item>
-													</Title>
-													<HorizontalAlign>Right</HorizontalAlign>
-													<EditMode>EnterOnInput</EditMode>
-													<HeaderPicture>
-														<xr:Ref>CommonPicture.Сумма</xr:Ref>
-														<xr:LoadTransparent>true</xr:LoadTransparent>
-													</HeaderPicture>
-													<ShowInFooter>false</ShowInFooter>
-													<FooterDataPath>Объект.Ученики.TotalСкидка</FooterDataPath>
-													<TextColor>#999999</TextColor>
-													<ContextMenu name="УченикиСкидка1КонтекстноеМеню" id="622"/>
-													<ExtendedTooltip name="УченикиСкидка1РасширеннаяПодсказка" id="623"/>
-												</InputField>
-											</ChildItems>
-										</ColumnGroup>
-									</ChildItems>
-								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппа13" id="624">
 									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа13РасширеннаяПодсказка" id="625"/>
@@ -1207,24 +1129,11 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<LabelField name="Ученики1ОстатокБонусов" id="696">
-									<DataPath>Объект.Ученики.ОстатокБонусов</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CellHyperlink>true</CellHyperlink>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<MarkNegatives>true</MarkNegatives>
-									<Hiperlink>true</Hiperlink>
-									<ContextMenu name="Ученики1ОстатокБонусовКонтекстноеМеню" id="697"/>
-									<ExtendedTooltip name="Ученики1ОстатокБонусовРасширеннаяПодсказка" id="698"/>
-								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаНачисленияПедагогу" id="745">
+				<Page name="ГруппаНачисленияПедагогу" id="830">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1241,191 +1150,87 @@
 						<xr:Ref>StdPicture.Post</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="ГруппаНачисленияПедагогуРасширеннаяПодсказка" id="746"/>
+					<ExtendedTooltip name="ГруппаНачисленияПедагогуРасширеннаяПодсказка" id="831"/>
 					<ChildItems>
-						<UsualGroup name="Группа4" id="807">
-							<Group>AlwaysHorizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="808"/>
-							<ChildItems>
-								<InputField name="СтавкаПедагога" id="742">
-									<DataPath>Объект.СтавкаПедагога</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
-									<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
-								</InputField>
-								<Button name="ПересчитатьНачисления" id="805">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПересчитатьНачисления</CommandName>
-									<ExtendedTooltip name="ПересчитатьНачисленияРасширеннаяПодсказка" id="806"/>
-								</Button>
-								<Button name="НеИзменятьВсе" id="814">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.НеИзменятьВсе</CommandName>
-									<ExtendedTooltip name="НеИзменятьВсеРасширеннаяПодсказка" id="815"/>
-								</Button>
-								<Button name="ИзменятьВсе" id="812">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ИзменятьВсе</CommandName>
-									<ExtendedTooltip name="ИзменятьВсеРасширеннаяПодсказка" id="813"/>
-								</Button>
-							</ChildItems>
-						</UsualGroup>
 						<UsualGroup name="Группа5" id="816">
 							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>None</HorizontalSpacing>
+							<VerticalSpacing>None</VerticalSpacing>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="817"/>
 							<ChildItems>
 								<LabelField name="СтавкаПедагогаОплатаЗаЗанятие" id="818">
 									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЗанятие</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<TextColor>#0000FF</TextColor>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЗанятиеКонтекстноеМеню" id="819"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЗанятиеРасширеннаяПодсказка" id="820"/>
 								</LabelField>
 								<LabelField name="СтавкаПедагогаОплатаСЧеловека" id="821">
 									<DataPath>Объект.СтавкаПедагога.ОплатаСЧеловека</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<TextColor>#0000FF</TextColor>
 									<ContextMenu name="СтавкаПедагогаОплатаСЧеловекаКонтекстноеМеню" id="822"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаСЧеловекаРасширеннаяПодсказка" id="823"/>
 								</LabelField>
 								<LabelField name="СтавкаПедагогаОплатаЗаЧас" id="824">
 									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЧас</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<TextColor>#0000FF</TextColor>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЧасКонтекстноеМеню" id="825"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЧасРасширеннаяПодсказка" id="826"/>
 								</LabelField>
 								<LabelField name="СтавкаПедагогаПроцентСОплатыУченика" id="827">
 									<DataPath>Объект.СтавкаПедагога.ПроцентСОплатыУченика</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<TextColor>#0000FF</TextColor>
 									<ContextMenu name="СтавкаПедагогаПроцентСОплатыУченикаКонтекстноеМеню" id="828"/>
 									<ExtendedTooltip name="СтавкаПедагогаПроцентСОплатыУченикаРасширеннаяПодсказка" id="829"/>
 								</LabelField>
 							</ChildItems>
 						</UsualGroup>
-						<Table name="Ученики2" id="747">
-							<CommandBarLocation>None</CommandBarLocation>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.Ученики</DataPath>
-							<CommandSet>
-								<ExcludedCommand>Add</ExcludedCommand>
-								<ExcludedCommand>Copy</ExcludedCommand>
-								<ExcludedCommand>Delete</ExcludedCommand>
-								<ExcludedCommand>MoveDown</ExcludedCommand>
-								<ExcludedCommand>MoveUp</ExcludedCommand>
-								<ExcludedCommand>SortListAsc</ExcludedCommand>
-								<ExcludedCommand>SortListDesc</ExcludedCommand>
-							</CommandSet>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="Ученики2КонтекстноеМеню" id="748"/>
-							<AutoCommandBar name="Ученики2КоманднаяПанель" id="749"/>
-							<ExtendedTooltip name="Ученики2РасширеннаяПодсказка" id="750"/>
-							<SearchStringAddition name="Ученики2СтрокаПоиска" id="751">
-								<AdditionSource>
-									<Item>Ученики2</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="Ученики2СтрокаПоискаКонтекстноеМеню" id="752"/>
-								<ExtendedTooltip name="Ученики2СтрокаПоискаРасширеннаяПодсказка" id="753"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="Ученики2СостояниеПросмотра" id="754">
-								<AdditionSource>
-									<Item>Ученики2</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="Ученики2СостояниеПросмотраКонтекстноеМеню" id="755"/>
-								<ExtendedTooltip name="Ученики2СостояниеПросмотраРасширеннаяПодсказка" id="756"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="Ученики2УправлениеПоиском" id="757">
-								<AdditionSource>
-									<Item>Ученики2</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="Ученики2УправлениеПоискомКонтекстноеМеню" id="758"/>
-								<ExtendedTooltip name="Ученики2УправлениеПоискомРасширеннаяПодсказка" id="759"/>
-							</SearchControlAddition>
-							<ChildItems>
-								<LabelField name="Ученики2НомерСтроки" id="760">
-									<DataPath>Объект.Ученики.LineNumber</DataPath>
-									<Enabled>false</Enabled>
-									<TitleLocation>None</TitleLocation>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="Ученики2НомерСтрокиКонтекстноеМеню" id="761"/>
-									<ExtendedTooltip name="Ученики2НомерСтрокиРасширеннаяПодсказка" id="762"/>
-								</LabelField>
-								<InputField name="Ученики2Ученик" id="769">
-									<DataPath>Объект.Ученики.Ученик</DataPath>
-									<Enabled>false</Enabled>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="Ученики2УченикКонтекстноеМеню" id="770"/>
-									<ExtendedTooltip name="Ученики2УченикРасширеннаяПодсказка" id="771"/>
-								</InputField>
-								<InputField name="Ученики2Тариф" id="802">
-									<DataPath>Объект.Ученики.Тариф</DataPath>
-									<Enabled>false</Enabled>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="Ученики2ТарифКонтекстноеМеню" id="803"/>
-									<ExtendedTooltip name="Ученики2ТарифРасширеннаяПодсказка" id="804"/>
-								</InputField>
-								<InputField name="Ученики2Сумма" id="787">
-									<DataPath>Объект.Ученики.Сумма</DataPath>
-									<Enabled>false</Enabled>
-									<TitleTextColor>#808080</TitleTextColor>
-									<EditMode>EnterOnInput</EditMode>
-									<TextColor>#999999</TextColor>
-									<ContextMenu name="Ученики2СуммаКонтекстноеМеню" id="788"/>
-									<ExtendedTooltip name="Ученики2СуммаРасширеннаяПодсказка" id="789"/>
-								</InputField>
-								<InputField name="Ученики2НачислениеПедагогу" id="799">
-									<DataPath>Объект.Ученики.НачислениеПедагогу</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Сумма начисления</v8:content>
-										</v8:item>
-									</Title>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="Ученики2НачислениеПедагогуКонтекстноеМеню" id="800"/>
-									<ExtendedTooltip name="Ученики2НачислениеПедагогуРасширеннаяПодсказка" id="801"/>
-								</InputField>
-								<CheckBoxField name="Ученики2НеИзменять" id="809">
-									<DataPath>Объект.Ученики.НеИзменять</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="Ученики2НеИзменятьКонтекстноеМеню" id="810"/>
-									<ExtendedTooltip name="Ученики2НеИзменятьРасширеннаяПодсказка" id="811"/>
-								</CheckBoxField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
-				<Page name="ГруппаНачисленияПедагогуДоп" id="830">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Начисления педагогу доп</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа начисления педагогу доп</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.Post</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="ГруппаНачисленияПедагогуДопРасширеннаяПодсказка" id="831"/>
-					<ChildItems>
 						<Table name="НачисленияПедагогу" id="832">
+							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.НачисленияПедагогу</DataPath>
+							<CommandSet>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="НачисленияПедагогуКонтекстноеМеню" id="833"/>
-							<AutoCommandBar name="НачисленияПедагогуКоманднаяПанель" id="834"/>
+							<AutoCommandBar name="НачисленияПедагогуКоманднаяПанель" id="834">
+								<ChildItems>
+									<Button name="НачисленияПедагогуДобавить" id="860">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.НачисленияПедагогу.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="НачисленияПедагогуДобавитьРасширеннаяПодсказка" id="861"/>
+									</Button>
+									<Button name="ПересчитатьНачисления" id="805">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьНачисления</CommandName>
+										<ExtendedTooltip name="ПересчитатьНачисленияРасширеннаяПодсказка" id="806"/>
+									</Button>
+									<Button name="ИзменятьВсе" id="812">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИзменятьВсе</CommandName>
+										<ExtendedTooltip name="ИзменятьВсеРасширеннаяПодсказка" id="813"/>
+									</Button>
+									<Button name="НеИзменятьВсе" id="814">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НеИзменятьВсе</CommandName>
+										<ExtendedTooltip name="НеИзменятьВсеРасширеннаяПодсказка" id="815"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="НачисленияПедагогуРасширеннаяПодсказка" id="835"/>
 							<SearchStringAddition name="НачисленияПедагогуСтрокаПоиска" id="836">
 								<AdditionSource>
@@ -1451,23 +1256,45 @@
 								<ContextMenu name="НачисленияПедагогуУправлениеПоискомКонтекстноеМеню" id="843"/>
 								<ExtendedTooltip name="НачисленияПедагогуУправлениеПоискомРасширеннаяПодсказка" id="844"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">НачисленияПедагогуПриИзменении</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="НачисленияПедагогуНомерСтроки" id="845">
 									<DataPath>Объект.НачисленияПедагогу.LineNumber</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
 									<ContextMenu name="НачисленияПедагогуНомерСтрокиКонтекстноеМеню" id="846"/>
 									<ExtendedTooltip name="НачисленияПедагогуНомерСтрокиРасширеннаяПодсказка" id="847"/>
 								</LabelField>
+								<InputField name="НачисленияПедагогуУченик" id="857">
+									<DataPath>Объект.НачисленияПедагогу.Ученик</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<ContextMenu name="НачисленияПедагогуУченикКонтекстноеМеню" id="858"/>
+									<ExtendedTooltip name="НачисленияПедагогуУченикРасширеннаяПодсказка" id="859"/>
+								</InputField>
 								<InputField name="НачисленияПедагогуКомментарий" id="848">
 									<DataPath>Объект.НачисленияПедагогу.Комментарий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Название дополнительного начисления</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
 									<ContextMenu name="НачисленияПедагогуКомментарийКонтекстноеМеню" id="849"/>
 									<ExtendedTooltip name="НачисленияПедагогуКомментарийРасширеннаяПодсказка" id="850"/>
 								</InputField>
 								<InputField name="НачисленияПедагогуСуммаНачисления" id="851">
 									<DataPath>Объект.НачисленияПедагогу.СуммаНачисления</DataPath>
+									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.НачисленияПедагогу.TotalСуммаНачисления</FooterDataPath>
+									<Width>1</Width>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="НачисленияПедагогуСуммаНачисленияКонтекстноеМеню" id="852"/>
 									<ExtendedTooltip name="НачисленияПедагогуСуммаНачисленияРасширеннаяПодсказка" id="853"/>
 								</InputField>
@@ -1617,73 +1444,8 @@
 						</Type>
 					</Column>
 				</AdditionalColumns>
+				<AdditionalColumns table="Объект.НачисленияПедагогу"/>
 			</Columns>
-		</Attribute>
-		<Attribute name="ФотоПедагога" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото педагога</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="Фото" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ЦенаЗаЧас" id="10">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Цена за час</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>2</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ФотоУченика" id="12">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото ученика</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
 		</Attribute>
 		<Attribute name="Штрихкод" id="13">
 			<Title>
@@ -1697,35 +1459,6 @@
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>Ученики2НачислениеПедагогу</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.НеИзменять</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>Доступность</dcscor:parameter>
-						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
-						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>

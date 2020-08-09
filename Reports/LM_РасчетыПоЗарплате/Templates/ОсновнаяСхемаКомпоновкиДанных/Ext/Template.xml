@@ -62,13 +62,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Контрагент</dataPath>
-			<field>Контрагент</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>НеИзменять</dataPath>
 			<field>НеИзменять</field>
 			<role>
@@ -150,11 +143,18 @@
 				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Педагог</dataPath>
+			<field>Педагог</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Регистратор КАК Регистратор,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Организация КАК Организация,
-	LM_РасчетыПоЗарплатеОстаткиИОбороты.Контрагент КАК Контрагент,
+	LM_РасчетыПоЗарплатеОстаткиИОбороты.Педагог КАК Педагог,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Ученик КАК Ученик,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.ПредметОбучения КАК ПредметОбучения,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.НеИзменять КАК НеИзменять,
@@ -268,7 +268,7 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Контрагент</dcsset:field>
+					<dcsset:field>Педагог</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Регистратор</dcsset:field>
@@ -307,7 +307,7 @@
 			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
-					<dcsset:field>Контрагент</dcsset:field>
+					<dcsset:field>Педагог</dcsset:field>
 					<dcsset:orderType>Asc</dcsset:orderType>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
@@ -324,7 +324,7 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
-						<dcsset:field>Контрагент</dcsset:field>
+						<dcsset:field>Педагог</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

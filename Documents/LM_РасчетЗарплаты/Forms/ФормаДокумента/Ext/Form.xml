@@ -222,12 +222,12 @@
 					<ContextMenu name="ДД1ДокументКонтекстноеМеню" id="134"/>
 					<ExtendedTooltip name="ДД1ДокументРасширеннаяПодсказка" id="135"/>
 				</InputField>
-				<InputField name="ДДКонтрагент" id="191">
-					<DataPath>Объект.ДД.Контрагент</DataPath>
+				<InputField name="ДДУченик" id="191">
+					<DataPath>Объект.ДД.Ученик</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДДКонтрагентКонтекстноеМеню" id="192"/>
-					<ExtendedTooltip name="ДДКонтрагентРасширеннаяПодсказка" id="193"/>
+					<ContextMenu name="ДДУченикКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="ДДУченикРасширеннаяПодсказка" id="193"/>
 				</InputField>
 				<InputField name="ДД1Часы" id="136">
 					<DataPath>Объект.ДД.Часы</DataPath>
@@ -337,6 +337,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="РКОКонтекстноеМеню" id="96"/>
 							<ExtendedTooltip name="РКОРасширеннаяПодсказка" id="97"/>
+							<Events>
+								<Event name="OnChange">РКОПриИзменении</Event>
+							</Events>
 						</InputField>
 						<CheckBoxField name="РКОПроведен" id="203">
 							<DataPath>Объект.РКО.Posted</DataPath>
