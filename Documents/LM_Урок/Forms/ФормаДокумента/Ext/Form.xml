@@ -523,6 +523,10 @@
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.User</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -627,7 +631,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Общ. долг</v8:content>
+													<v8:content>Долг общий</v8:content>
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
@@ -882,7 +886,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Сумма итого</v8:content>
+													<v8:content>Итого</v8:content>
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
@@ -892,7 +896,6 @@
 											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
-											<Width>1</Width>
 											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
 											<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
@@ -1019,6 +1022,7 @@
 									<ShowInHeader>false</ShowInHeader>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
 									<ContextMenu name="УченикиНомерСтроки1КонтекстноеМеню" id="556"/>
 									<ExtendedTooltip name="УченикиНомерСтроки1РасширеннаяПодсказка" id="557"/>
 								</LabelField>
@@ -1030,6 +1034,7 @@
 										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
+									<Width>1</Width>
 									<MarkNegatives>true</MarkNegatives>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="Ученики1ОстатокБонусовКонтекстноеМеню" id="697"/>
@@ -1049,6 +1054,7 @@
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
 											<ContextMenu name="УченикиУченик1КонтекстноеМеню" id="606"/>
 											<ExtendedTooltip name="УченикиУченик1РасширеннаяПодсказка" id="607"/>
 											<Events>
@@ -1066,6 +1072,7 @@
 										<xr:Ref>CommonPicture.ИспользоватьПользовательскийМакет</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
+									<Width>1</Width>
 									<ContextMenu name="Ученики1ДисконтнаяКартаКонтекстноеМеню" id="650"/>
 									<ExtendedTooltip name="Ученики1ДисконтнаяКартаРасширеннаяПодсказка" id="651"/>
 									<Events>
@@ -1081,6 +1088,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
 									<ContextMenu name="Ученики1ДисконтнаяКартаДатаОкончанияДействияКонтекстноеМеню" id="700"/>
 									<ExtendedTooltip name="Ученики1ДисконтнаяКартаДатаОкончанияДействияРасширеннаяПодсказка" id="701"/>
 								</LabelField>
@@ -1090,11 +1098,14 @@
 									<ChildItems>
 										<InputField name="УченикиСумма1" id="629">
 											<DataPath>Объект.Ученики.Сумма</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Сумма итого</v8:content>
+													<v8:content>Итого</v8:content>
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
@@ -1104,6 +1115,7 @@
 											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
+											<Width>1</Width>
 											<TextColor>#999999</TextColor>
 											<ContextMenu name="УченикиСумма1КонтекстноеМеню" id="630"/>
 											<ExtendedTooltip name="УченикиСумма1РасширеннаяПодсказка" id="631"/>
@@ -1124,6 +1136,7 @@
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</HeaderPicture>
 											<FooterDataPath>Объект.Ученики.TotalСуммаБонусов</FooterDataPath>
+											<Width>1</Width>
 											<ContextMenu name="Ученики1СуммаБонусовКонтекстноеМеню" id="694"/>
 											<ExtendedTooltip name="Ученики1СуммаБонусовРасширеннаяПодсказка" id="695"/>
 										</InputField>
@@ -1505,7 +1518,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Enum</xr:Ref>
+				<xr:Ref>CommonPicture.Встреча</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Подбор</Action>
