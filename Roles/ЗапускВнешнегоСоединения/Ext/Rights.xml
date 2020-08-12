@@ -4,7 +4,7 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Configuration.LessonsManagement_7</name>
+		<name>Configuration.LessonsManagement44</name>
 		<right>
 			<name>ExternalConnection</name>
 			<value>true</value>

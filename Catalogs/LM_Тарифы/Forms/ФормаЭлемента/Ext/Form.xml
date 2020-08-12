@@ -170,21 +170,25 @@
 					<ChildItems>
 						<LabelField name="ЦеныТарифовПериод" id="73">
 							<DataPath>ЦеныТарифов.Период</DataPath>
+							<Width>1</Width>
 							<ContextMenu name="ЦеныТарифовПериодКонтекстноеМеню" id="74"/>
 							<ExtendedTooltip name="ЦеныТарифовПериодРасширеннаяПодсказка" id="75"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовОрганизация" id="76">
 							<DataPath>ЦеныТарифов.Организация</DataPath>
+							<Width>1</Width>
 							<ContextMenu name="ЦеныТарифовОрганизацияКонтекстноеМеню" id="77"/>
 							<ExtendedTooltip name="ЦеныТарифовОрганизацияРасширеннаяПодсказка" id="78"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовТариф" id="61">
 							<DataPath>ЦеныТарифов.Тариф</DataPath>
+							<Width>1</Width>
 							<ContextMenu name="ЦеныТарифовТарифКонтекстноеМеню" id="62"/>
 							<ExtendedTooltip name="ЦеныТарифовТарифРасширеннаяПодсказка" id="63"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовКоличествоЧасов" id="70">
 							<DataPath>ЦеныТарифов.КоличествоЧасов</DataPath>
+							<Width>1</Width>
 							<ContextMenu name="ЦеныТарифовКоличествоЧасовКонтекстноеМеню" id="71"/>
 							<ExtendedTooltip name="ЦеныТарифовКоличествоЧасовРасширеннаяПодсказка" id="72"/>
 						</LabelField>

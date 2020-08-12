@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>LessonsManagement_7</Name>
+			<Name>LessonsManagement44</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1679,7 +1679,6 @@
 			<DocumentJournal>Взаимодействия</DocumentJournal>
 			<DocumentJournal>СогласияНаОбработкуПерсональныхДанных</DocumentJournal>
 			<Enum>LM_ВидыОпераций</Enum>
-			<Enum>LM_Пол</Enum>
 			<Enum>ВариантыSMTPАутентификации</Enum>
 			<Enum>ВариантыВажностиВзаимодействия</Enum>
 			<Enum>ВариантыВажностиЗадачи</Enum>
@@ -1752,6 +1751,7 @@
 			<Enum>ФорматыХраненияОдностраничныхФайлов</Enum>
 			<Enum>ЦветаЗаметок</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Report>Отчет1</Report>
 			<Report>LM_РасчетыПоЗарплате</Report>
 			<Report>LM_ДвиженияДокумента</Report>
 			<Report>LM_Взаиморасчеты</Report>

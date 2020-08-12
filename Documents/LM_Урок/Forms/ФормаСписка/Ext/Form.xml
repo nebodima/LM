@@ -4,19 +4,6 @@
 	<SettingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Popup name="ФормаГруппа1" id="289">
-				<Visible>false</Visible>
-				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="290"/>
-				<ChildItems>
-					<Button name="ФормаДокументПКОСоздатьНаОсновании" id="285">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.ПриходныйКассовыйОрдер.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Ref</DataPath>
-						<ExtendedTooltip name="ФормаДокументПКОСоздатьНаОснованииРасширеннаяПодсказка" id="286"/>
-					</Button>
-				</ChildItems>
-			</Popup>
 			<Button name="ФормаСоздать" id="52">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -144,19 +131,6 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьНаОснованииРасширеннаяПодсказка" id="288"/>
 				<ChildItems>
-					<Button name="ФормаСоздатьПКОНаОсновании" id="283">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.СоздатьПКОНаОсновании</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Приходный кассовый ордер (оплата)</v8:content>
-							</v8:item>
-						</Title>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ФормаСоздатьПКОНаОснованииРасширеннаяПодсказка" id="284"/>
-					</Button>
 					<Button name="ФормаДокументДополнительныеРасходыСоздатьНаОсновании" id="407">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -855,20 +829,6 @@
 						</LabelField>
 					</ChildItems>
 				</Table>
-				<PictureField name="ФотоУченика" id="280">
-					<DataPath>ФотоУченика</DataPath>
-					<Visible>false</Visible>
-					<TitleLocation>None</TitleLocation>
-					<Width>20</Width>
-					<HorizontalStretch>false</HorizontalStretch>
-					<PictureSize>AutoSize</PictureSize>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</Border>
-					<FileDragMode>AsFile</FileDragMode>
-					<ContextMenu name="ФотоУченикаКонтекстноеМеню" id="281"/>
-					<ExtendedTooltip name="ФотоУченикаРасширеннаяПодсказка" id="282"/>
-				</PictureField>
 				<UsualGroup name="ГруппаДниРождения" id="130">
 					<ToolTip>
 						<v8:item>
@@ -1360,21 +1320,6 @@
 					</Type>
 				</Column>
 			</Columns>
-		</Attribute>
-		<Attribute name="ФотоУченика" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото ученика</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
 		</Attribute>
 		<Attribute name="Расшифровка" id="9">
 			<Title>

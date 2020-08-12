@@ -20,7 +20,6 @@
 		</InputField>
 		<InputField name="Тариф" id="4">
 			<DataPath>Запись.Тариф</DataPath>
-			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="ТарифКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="6"/>
 		</InputField>

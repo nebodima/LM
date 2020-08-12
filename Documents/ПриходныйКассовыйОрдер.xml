@@ -174,7 +174,6 @@
 			</StandardAttributes>
 			<Characteristics/>
 			<BasedOn>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_Урок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ФизЛица</xr:Item>
 			</BasedOn>
 			<InputByString>
@@ -515,7 +514,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
