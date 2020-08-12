@@ -362,7 +362,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+						<v8:Type>cfg:DocumentRef.LM_ДополнительныеРасходы</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
