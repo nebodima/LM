@@ -1175,7 +1175,7 @@
 					</Attribute>
 					<Attribute uuid="511b108f-630f-4f7a-a0b1-5f37c1344655">
 						<Properties>
-							<Name>Коэффициент</Name>
+							<Name>Скидка</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -1254,7 +1254,7 @@
 					</Attribute>
 					<Attribute uuid="dc751943-5a1d-4bcf-9e2c-4e91cd78ff4f">
 						<Properties>
-							<Name>Скидка</Name>
+							<Name>СуммаСкидки</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>

@@ -824,7 +824,7 @@
 									<ExtendedTooltip name="УченикиГруппа6РасширеннаяПодсказка" id="451"/>
 									<ChildItems>
 										<InputField name="УченикиКоэффициент" id="430">
-											<DataPath>Объект.Ученики.Коэффициент</DataPath>
+											<DataPath>Объект.Ученики.Скидка</DataPath>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -847,11 +847,11 @@
 											</Events>
 										</InputField>
 										<InputField name="УченикиСкидка" id="433">
-											<DataPath>Объект.Ученики.Скидка</DataPath>
+											<DataPath>Объект.Ученики.СуммаСкидки</DataPath>
 											<ReadOnly>true</ReadOnly>
 											<EditMode>EnterOnInput</EditMode>
 											<ShowInFooter>false</ShowInFooter>
-											<FooterDataPath>Объект.Ученики.TotalСкидка</FooterDataPath>
+											<FooterDataPath>Объект.Ученики.TotalСуммаСкидки</FooterDataPath>
 											<Width>1</Width>
 											<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="434"/>
 											<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="435"/>
@@ -1358,7 +1358,7 @@
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<InputField name="УченикиСкидкаИтого" id="463">
-					<DataPath>Объект.Ученики.TotalСкидка</DataPath>
+					<DataPath>Объект.Ученики.TotalСуммаСкидки</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
