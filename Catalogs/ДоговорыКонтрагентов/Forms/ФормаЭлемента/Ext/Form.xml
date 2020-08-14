@@ -46,21 +46,9 @@
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>
 		</InputField>
-		<InputField name="Владелец" id="10">
-			<DataPath>Объект.Owner</DataPath>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Контрагент</v8:content>
-				</v8:item>
-			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<HorizontalStretch>false</HorizontalStretch>
-			<ContextMenu name="ВладелецКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="12"/>
-		</InputField>
 		<InputField name="ВидДоговора" id="22">
 			<DataPath>Объект.ВидДоговора</DataPath>
+			<DefaultItem>true</DefaultItem>
 			<EditMode>EnterOnInput</EditMode>
 			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="ВидДоговораКонтекстноеМеню" id="23"/>

@@ -1946,7 +1946,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement44</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>Administration</name>
 			<value>false</value>
@@ -3370,6 +3370,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.LM_Скидки</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.УдалитьОчередьИзвлеченияТекста</name>
 		<right>
 			<name>Read</name>
@@ -3545,6 +3556,17 @@
 	</object>
 	<object>
 		<name>Catalog.LM_ПредметыОбучения</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.LM_Подразделения</name>
 		<right>
 			<name>InteractiveDelete</name>
 			<value>false</value>
@@ -5917,6 +5939,13 @@
 		</right>
 		<right>
 			<name>TotalsControl</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.LM_НачислениеБонусов</name>
+		<right>
+			<name>InteractiveDelete</name>
 			<value>false</value>
 		</right>
 	</object>

@@ -4,7 +4,7 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Configuration.LessonsManagement44</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>UpdateDataBaseConfiguration</name>
 			<value>true</value>

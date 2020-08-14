@@ -104,7 +104,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement44</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>MainWindowModeNormal</name>
 			<value>true</value>
