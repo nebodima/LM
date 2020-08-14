@@ -223,7 +223,7 @@
 					<ExtendedTooltip name="EMailРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 				<LabelField name="VK" id="150">
-					<DataPath>Список.VK</DataPath>
+					<DataPath>~Список.VK</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -231,7 +231,7 @@
 					<ExtendedTooltip name="VKРасширеннаяПодсказка" id="152"/>
 				</LabelField>
 				<LabelField name="Реферал" id="162">
-					<DataPath>Список.Реферал</DataPath>
+					<DataPath>~Список.Реферал</DataPath>
 					<ContextMenu name="РефералКонтекстноеМеню" id="163"/>
 					<ExtendedTooltip name="РефералРасширеннаяПодсказка" id="164"/>
 				</LabelField>
