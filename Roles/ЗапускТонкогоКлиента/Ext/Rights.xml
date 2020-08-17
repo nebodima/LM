@@ -26,7 +26,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement</name>
+		<name>Configuration.LessonsManagement2</name>
 		<right>
 			<name>ThinClient</name>
 			<value>true</value>

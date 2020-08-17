@@ -113,7 +113,6 @@
 					<v8:content>Группа страницы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<VerticalStretch>false</VerticalStretch>
 			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="322"/>
 			<Events>
 				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
@@ -132,7 +131,6 @@
 							<v8:content>Группа страница1</v8:content>
 						</v8:item>
 					</ToolTip>
-					<VerticalStretch>false</VerticalStretch>
 					<ExtendedTooltip name="ГруппаСтраница1РасширеннаяПодсказка" id="324"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаДанные" id="49">
@@ -320,6 +318,8 @@
 												</LabelDecoration>
 												<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
 													<Type>UsualButton</Type>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>21</MaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
 													<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
 													<Shape>Oval</Shape>
@@ -379,6 +379,7 @@
 													<v8:content>Человек, который привел этого ученика</v8:content>
 												</v8:item>
 											</ToolTip>
+											<HorizontalStretch>false</HorizontalStretch>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="ИсточникИнформацииКонтекстноеМеню" id="174"/>
 											<ExtendedTooltip name="ИсточникИнформацииРасширеннаяПодсказка" id="175"/>
@@ -403,6 +404,7 @@
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
 													<InputHint>
 														<v8:item>
@@ -446,7 +448,7 @@
 													<DataPath>Объект.EMail</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
-													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
 													<InputHint>
 														<v8:item>
@@ -505,7 +507,7 @@
 														</v8:item>
 													</Title>
 													<TitleLocation>None</TitleLocation>
-													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
 													<InputHint>
 														<v8:item>
@@ -588,7 +590,6 @@
 										<InputField name="Заметки" id="318">
 											<DataPath>Объект.Заметки</DataPath>
 											<TitleLocation>None</TitleLocation>
-											<AutoMaxWidth>false</AutoMaxWidth>
 											<Height>2</Height>
 											<VerticalStretch>false</VerticalStretch>
 											<InputHint>
@@ -688,7 +689,6 @@
 							<DataPath>Диаграмма</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<Height>4</Height>
-							<VerticalStretch>false</VerticalStretch>
 							<ContextMenu name="ДиаграммаКонтекстноеМеню" id="373"/>
 							<ExtendedTooltip name="ДиаграммаРасширеннаяПодсказка" id="374"/>
 						</ChartField>

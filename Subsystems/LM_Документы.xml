@@ -21,6 +21,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьНапоминанияПользователя</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.LM_ОбщийЖурнал</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.LM_Настройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПанельОтчетовLM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_Взаиморасчеты</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>LessonsManagement</Name>
+			<Name>LessonsManagement2</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1308,6 +1308,7 @@
 			<DefinedType>Респондент</DefinedType>
 			<DefinedType>СубъектПерсональныхДанных</DefinedType>
 			<DefinedType>ФизическоеЛицо</DefinedType>
+			<CommonCommand>ПанельОтчетовLM</CommonCommand>
 			<CommonCommand>ДобавитьПользователейСервиса</CommonCommand>
 			<CommonCommand>ДополнительныеОбработкиАдминистрирование</CommonCommand>
 			<CommonCommand>ДополнительныеОтчетыАдминистрирование</CommonCommand>
