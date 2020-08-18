@@ -18,6 +18,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
@@ -74,7 +80,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Начислено</v8:content>
+					<v8:content>Начислено педагогу</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -84,7 +90,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Оплачено</v8:content>
+					<v8:content>Оплачено педагогу</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -94,7 +100,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Остаток</v8:content>
+					<v8:content>Остаток к оплате</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -150,6 +156,26 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаУрока</dataPath>
+			<field>СуммаУрока</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма урока</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выручка</dataPath>
+			<field>Выручка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выручка</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Регистратор КАК Регистратор,
@@ -167,7 +193,9 @@
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.ЗПНачальныйОстаток КАК ЗПНачальныйОстаток,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.ЗППриход КАК ЗППриход,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.ЗПРасход КАК ЗПРасход,
-	LM_РасчетыПоЗарплатеОстаткиИОбороты.ЗПКонечныйОстаток КАК ЗПКонечныйОстаток
+	LM_РасчетыПоЗарплатеОстаткиИОбороты.ЗПКонечныйОстаток КАК ЗПКонечныйОстаток,
+	LM_РасчетыПоЗарплатеОстаткиИОбороты.Регистратор.Сумма КАК СуммаУрока,
+	LM_РасчетыПоЗарплатеОстаткиИОбороты.Регистратор.Сумма - LM_РасчетыПоЗарплатеОстаткиИОбороты.СуммаПриход КАК Выручка
 ИЗ
 	РегистрНакопления.LM_РасчетыПоЗарплате.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, Движения, ) КАК LM_РасчетыПоЗарплатеОстаткиИОбороты</query>
 	</dataSet>
@@ -202,6 +230,14 @@
 	<totalField>
 		<dataPath>ЗПКонечныйОстаток</dataPath>
 		<expression>Сумма(ЗПКонечныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаУрока</dataPath>
+		<expression>Сумма(СуммаУрока)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Выручка</dataPath>
+		<expression>Сумма(Выручка)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -274,14 +310,7 @@
 					<dcsset:field>Регистратор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Комментарий</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>НеИзменять</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>СуммаНачальныйОстаток</dcsset:field>
+					<dcsset:field>СуммаУрока</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаПриход</dcsset:field>
@@ -294,6 +323,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЗПКонечныйОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Выручка</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>

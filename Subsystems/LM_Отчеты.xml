@@ -29,6 +29,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_Календарь</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_ПанельУченика</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_РасчетыПоЗарплате</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">825d5c79-1e19-4ee2-8617-5c89842cbb4b</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
