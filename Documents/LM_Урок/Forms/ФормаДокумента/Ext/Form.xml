@@ -198,6 +198,12 @@
 						</UsualGroup>
 						<InputField name="ГруппаОбучения" id="342">
 							<DataPath>Объект.ГруппаОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа</v8:content>
+								</v8:item>
+							</Title>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
@@ -211,6 +217,7 @@
 							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
+							<BackColor>style:FieldAlternativeBackColor</BackColor>
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
 							<Events>
@@ -219,6 +226,12 @@
 						</InputField>
 						<InputField name="ПредметОбучения" id="350">
 							<DataPath>Объект.ПредметОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет</v8:content>
+								</v8:item>
+							</Title>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
@@ -400,6 +413,7 @@
 											<v8:content>до</v8:content>
 										</v8:item>
 									</Title>
+									<Width>3</Width>
 									<EditFormat>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -441,6 +455,18 @@
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="725"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="726"/>
 						</InputField>
+						<InputField name="СтавкаПедагога" id="742">
+							<DataPath>Объект.СтавкаПедагога</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<BackColor>style:FieldAlternativeBackColor</BackColor>
+							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
+							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
+							<Events>
+								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
+							</Events>
+						</InputField>
 						<InputField name="Статус" id="735">
 							<DataPath>Объект.Статус</DataPath>
 							<Title>
@@ -451,18 +477,9 @@
 							</Title>
 							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
-						</InputField>
-						<InputField name="СтавкаПедагога" id="742">
-							<DataPath>Объект.СтавкаПедагога</DataPath>
-							<TitleLocation>Right</TitleLocation>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
-							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
-							<Events>
-								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
-							</Events>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
@@ -1169,32 +1186,55 @@
 						<UsualGroup name="Группа5" id="816">
 							<Group>AlwaysHorizontal</Group>
 							<HorizontalSpacing>None</HorizontalSpacing>
-							<VerticalSpacing>None</VerticalSpacing>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="817"/>
 							<ChildItems>
 								<LabelField name="СтавкаПедагогаОплатаЗаЗанятие" id="818">
 									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЗанятие</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За занятие</v8:content>
+										</v8:item>
+									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
 									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЗанятиеКонтекстноеМеню" id="819"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЗанятиеРасширеннаяПодсказка" id="820"/>
 								</LabelField>
 								<LabelField name="СтавкаПедагогаОплатаСЧеловека" id="821">
 									<DataPath>Объект.СтавкаПедагога.ОплатаСЧеловека</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С ученика</v8:content>
+										</v8:item>
+									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
 									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="СтавкаПедагогаОплатаСЧеловекаКонтекстноеМеню" id="822"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаСЧеловекаРасширеннаяПодсказка" id="823"/>
 								</LabelField>
 								<LabelField name="СтавкаПедагогаОплатаЗаЧас" id="824">
 									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЧас</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За 1 час</v8:content>
+										</v8:item>
+									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
 									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЧасКонтекстноеМеню" id="825"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЧасРасширеннаяПодсказка" id="826"/>
 								</LabelField>
@@ -1202,7 +1242,9 @@
 									<DataPath>Объект.СтавкаПедагога.ПроцентСОплатыУченика</DataPath>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
 									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="СтавкаПедагогаПроцентСОплатыУченикаКонтекстноеМеню" id="828"/>
 									<ExtendedTooltip name="СтавкаПедагогаПроцентСОплатыУченикаРасширеннаяПодсказка" id="829"/>
 								</LabelField>
@@ -1226,10 +1268,17 @@
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.НачисленияПедагогу.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить начисление</v8:content>
+											</v8:item>
+										</Title>
 										<ExtendedTooltip name="НачисленияПедагогуДобавитьРасширеннаяПодсказка" id="861"/>
 									</Button>
 									<Button name="ПересчитатьНачисления" id="805">
 										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
 										<CommandName>Form.Command.ПересчитатьНачисления</CommandName>
 										<ExtendedTooltip name="ПересчитатьНачисленияРасширеннаяПодсказка" id="806"/>
 									</Button>
@@ -1391,8 +1440,15 @@
 		</UsualGroup>
 		<InputField name="Комментарий" id="28">
 			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
 		</InputField>
@@ -1604,7 +1660,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИзменятьВсе</Action>
-			<Representation>TextPicture</Representation>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="НеИзменятьВсе" id="6">
 			<Title>
@@ -1624,7 +1680,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НеИзменятьВсе</Action>
-			<Representation>TextPicture</Representation>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>
