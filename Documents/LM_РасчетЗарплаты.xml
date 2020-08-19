@@ -554,16 +554,20 @@
 					</Attribute>
 					<Attribute uuid="5ce6de3f-5d64-43aa-9f7f-d6778c2ad38c">
 						<Properties>
-							<Name>Ученик</Name>
+							<Name>Комментарий</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Ученик</v8:content>
+									<v8:content>Комментарий</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
 							<Type>
-								<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
+								<v8:Type>xs:string</v8:Type>
+								<v8:StringQualifiers>
+									<v8:Length>255</v8:Length>
+									<v8:AllowedLength>Variable</v8:AllowedLength>
+								</v8:StringQualifiers>
 							</Type>
 							<PasswordMode>false</PasswordMode>
 							<Format/>

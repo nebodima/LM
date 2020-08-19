@@ -1331,13 +1331,6 @@
 									<ContextMenu name="НачисленияПедагогуНомерСтрокиКонтекстноеМеню" id="846"/>
 									<ExtendedTooltip name="НачисленияПедагогуНомерСтрокиРасширеннаяПодсказка" id="847"/>
 								</LabelField>
-								<InputField name="НачисленияПедагогуУченик" id="857">
-									<DataPath>Объект.НачисленияПедагогу.Ученик</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>1</Width>
-									<ContextMenu name="НачисленияПедагогуУченикКонтекстноеМеню" id="858"/>
-									<ExtendedTooltip name="НачисленияПедагогуУченикРасширеннаяПодсказка" id="859"/>
-								</InputField>
 								<InputField name="НачисленияПедагогуКомментарий" id="848">
 									<DataPath>Объект.НачисленияПедагогу.Комментарий</DataPath>
 									<Title>
@@ -1368,6 +1361,83 @@
 									<ContextMenu name="НачисленияПедагогуНеИзменятьКонтекстноеМеню" id="855"/>
 									<ExtendedTooltip name="НачисленияПедагогуНеИзменятьРасширеннаяПодсказка" id="856"/>
 								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеРасходы" id="862">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. расходы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные расходы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаДополнительныеРасходыРасширеннаяПодсказка" id="863"/>
+					<ChildItems>
+						<Table name="Расходы" id="864">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Расходы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасходыКонтекстноеМеню" id="865"/>
+							<AutoCommandBar name="РасходыКоманднаяПанель" id="866"/>
+							<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="867"/>
+							<SearchStringAddition name="РасходыСтрокаПоиска" id="868">
+								<AdditionSource>
+									<Item>Расходы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходыСтрокаПоискаКонтекстноеМеню" id="869"/>
+								<ExtendedTooltip name="РасходыСтрокаПоискаРасширеннаяПодсказка" id="870"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасходыСостояниеПросмотра" id="871">
+								<AdditionSource>
+									<Item>Расходы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходыСостояниеПросмотраКонтекстноеМеню" id="872"/>
+								<ExtendedTooltip name="РасходыСостояниеПросмотраРасширеннаяПодсказка" id="873"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасходыУправлениеПоиском" id="874">
+								<AdditionSource>
+									<Item>Расходы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходыУправлениеПоискомКонтекстноеМеню" id="875"/>
+								<ExtendedTooltip name="РасходыУправлениеПоискомРасширеннаяПодсказка" id="876"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РасходыНомерСтроки" id="877">
+									<DataPath>Объект.Расходы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="878"/>
+									<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="879"/>
+								</LabelField>
+								<InputField name="РасходыНазваниеРасхода" id="880">
+									<DataPath>Объект.Расходы.НазваниеРасхода</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходыНазваниеРасходаКонтекстноеМеню" id="881"/>
+									<ExtendedTooltip name="РасходыНазваниеРасходаРасширеннаяПодсказка" id="882"/>
+								</InputField>
+								<InputField name="РасходыСумма" id="883">
+									<DataPath>Объект.Расходы.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расходы.TotalСумма</FooterDataPath>
+									<ContextMenu name="РасходыСуммаКонтекстноеМеню" id="884"/>
+									<ExtendedTooltip name="РасходыСуммаРасширеннаяПодсказка" id="885"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
