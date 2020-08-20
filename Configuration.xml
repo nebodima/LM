@@ -1978,6 +1978,7 @@
 			<AccumulationRegister>LM_Касса</AccumulationRegister>
 			<AccumulationRegister>LM_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>LM_РасчетыПоЗарплате</AccumulationRegister>
+			<AccumulationRegister>LM_Расходы</AccumulationRegister>
 			<ChartOfCharacteristicTypes>ВопросыДляАнкетирования</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ОбъектыАдресацииЗадач</ChartOfCharacteristicTypes>
