@@ -1418,6 +1418,9 @@
 								<ContextMenu name="РасходыУправлениеПоискомКонтекстноеМеню" id="875"/>
 								<ExtendedTooltip name="РасходыУправлениеПоискомРасширеннаяПодсказка" id="876"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">РасходыПриИзменении</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="РасходыНомерСтроки" id="877">
 									<DataPath>Объект.Расходы.LineNumber</DataPath>
@@ -1476,6 +1479,18 @@
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
+				<InputField name="СуммаДопРасходов" id="889">
+					<DataPath>Объект.СуммаДопРасходов</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="СуммаДопРасходовКонтекстноеМеню" id="890"/>
+					<ExtendedTooltip name="СуммаДопРасходовРасширеннаяПодсказка" id="891"/>
+				</InputField>
+				<InputField name="НачисленоПедагогу" id="886">
+					<DataPath>Объект.НачисленоПедагогу</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="НачисленоПедагогуКонтекстноеМеню" id="887"/>
+					<ExtendedTooltip name="НачисленоПедагогуРасширеннаяПодсказка" id="888"/>
+				</InputField>
 				<InputField name="УченикиСкидкаИтого" id="463">
 					<DataPath>Объект.Ученики.TotalСуммаСкидки</DataPath>
 					<ReadOnly>true</ReadOnly>
