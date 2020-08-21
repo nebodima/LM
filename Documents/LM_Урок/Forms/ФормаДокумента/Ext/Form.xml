@@ -1684,12 +1684,13 @@
 							<ChildItems>
 								<LabelField name="РасходыНомерСтроки" id="877">
 									<DataPath>Объект.Расходы.LineNumber</DataPath>
+									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="878"/>
 									<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="879"/>
 								</LabelField>
 								<InputField name="РасходыНазваниеРасхода" id="880">
-									<DataPath>Объект.Расходы.НазваниеРасхода</DataPath>
+									<DataPath>Объект.Расходы.СтатьяЗатрат</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="РасходыНазваниеРасходаКонтекстноеМеню" id="881"/>
 									<ExtendedTooltip name="РасходыНазваниеРасходаРасширеннаяПодсказка" id="882"/>

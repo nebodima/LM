@@ -1752,6 +1752,7 @@
 			<Enum>ФорматыХраненияОдностраничныхФайлов</Enum>
 			<Enum>ЦветаЗаметок</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Report>LM_Расходы</Report>
 			<Report>LM_РасчетыПоЗарплате</Report>
 			<Report>LM_ДвиженияДокумента</Report>
 			<Report>LM_Взаиморасчеты</Report>
@@ -1783,6 +1784,7 @@
 			<Report>СогласияНаОбработкуПерсональныхДанныхДействующие</Report>
 			<Report>СогласияНаОбработкуПерсональныхДанныхИстекающие</Report>
 			<Report>УниверсальныйОтчет</Report>
+			<DataProcessor>ИнструментыРазработчикаОбновлениеВспомогательныхДанных</DataProcessor>
 			<DataProcessor>LM_Календарь</DataProcessor>
 			<DataProcessor>LM_ПанельУченика</DataProcessor>
 			<DataProcessor>LM_ОтмечаниеПосещений</DataProcessor>

@@ -7,7 +7,6 @@
 			<Button name="ФормаСоздать" id="52">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
-				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.Create</CommandName>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
 			</Button>
@@ -58,18 +57,6 @@
 				<BackColor>style:ImportantColor</BackColor>
 				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="162"/>
 				<ChildItems>
-					<Button name="ОткрытьПанельУченика" id="246">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ОткрытьПанельУченика</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
-						<Picture>
-							<xr:Ref>StdPicture.User</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ОткрытьПанельУченикаРасширеннаяПодсказка" id="247"/>
-					</Button>
 					<Button name="ФормаОбработкаGoogleКалендарьОткрыть" id="209">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -88,6 +75,16 @@
 						<ShapeRepresentation>WhenActive</ShapeRepresentation>
 						<ExtendedTooltip name="ФормаОбработкаGoogleКалендарьОткрытьРасширеннаяПодсказка" id="210"/>
 					</Button>
+					<Button name="ФормаОтчетLM_ЯвкиОткрыть" id="427">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Report.LM_Явки_2.StandardCommand.Open</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаОтчетLM_ЯвкиОткрытьРасширеннаяПодсказка" id="428"/>
+					</Button>
 					<Button name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитов" id="420">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -98,15 +95,17 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитовРасширеннаяПодсказка" id="421"/>
 					</Button>
-					<Button name="ФормаОтчетLM_ЯвкиОткрыть" id="427">
+					<Button name="ОткрытьПанельУченика" id="246">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
-						<CommandName>Report.LM_Явки_2.StandardCommand.Open</CommandName>
+						<CommandName>Form.Command.ОткрытьПанельУченика</CommandName>
+						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
 						<Picture>
-							<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+							<xr:Ref>StdPicture.User</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<ExtendedTooltip name="ФормаОтчетLM_ЯвкиОткрытьРасширеннаяПодсказка" id="428"/>
+						<ShapeRepresentation>WhenActive</ShapeRepresentation>
+						<ExtendedTooltip name="ОткрытьПанельУченикаРасширеннаяПодсказка" id="247"/>
 					</Button>
 				</ChildItems>
 			</Popup>
