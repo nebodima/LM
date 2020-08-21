@@ -58,122 +58,6 @@
 					<ContextMenu name="ПомещениеКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="50"/>
 				</InputField>
-				<InputField name="Продолжительность" id="39">
-					<DataPath>Объект.Продолжительность</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ListChoiceMode>true</ListChoiceMode>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>30 мин.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T00:30:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>1 ч.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T01:00:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>1 ч. 30 мин.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T01:30:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>2 ч.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T02:00:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>2 ч. 30 мин.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T02:30:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>3 ч.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T03:00:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>3 ч. 30 мин.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T03:30:00</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>4 ч.</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:dateTime">0001-01-01T04:00:00</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="40"/>
-					<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="41"/>
-					<Events>
-						<Event name="OnChange">ПродолжительностьПриИзменении</Event>
-					</Events>
-				</InputField>
 				<UsualGroup name="Группа1" id="13">
 					<Group>Vertical</Group>
 					<Representation>StrongSeparation</Representation>
@@ -181,33 +65,61 @@
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="14"/>
 					<ChildItems>
 						<UsualGroup name="Группа10" id="90">
-							<Group>AlwaysHorizontal</Group>
+							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ToolTipBackColor</BackColor>
 							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="91"/>
 							<ChildItems>
-								<InputField name="ВремяНачала" id="36">
-									<DataPath>Объект.Время</DataPath>
-									<ClearButton>true</ClearButton>
-									<SpinButton>true</SpinButton>
-									<ContextMenu name="ВремяНачалаКонтекстноеМеню" id="37"/>
-									<ExtendedTooltip name="ВремяНачалаРасширеннаяПодсказка" id="38"/>
-									<Events>
-										<Event name="OnChange">ВремяНачалаПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="ВремяОкончания" id="92">
-									<DataPath>Объект.ВремяОкончания</DataPath>
-									<ClearButton>true</ClearButton>
-									<SpinButton>true</SpinButton>
-									<ContextMenu name="ВремяОкончанияКонтекстноеМеню" id="93"/>
-									<ExtendedTooltip name="ВремяОкончанияРасширеннаяПодсказка" id="94"/>
-									<Events>
-										<Event name="OnChange">ВремяНачалаПриИзменении</Event>
-									</Events>
-								</InputField>
+								<UsualGroup name="Группа12" id="120">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="121"/>
+									<ChildItems>
+										<InputField name="ВремяНачала" id="36">
+											<DataPath>Объект.Время</DataPath>
+											<ClearButton>true</ClearButton>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВремяНачалаКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="ВремяНачалаРасширеннаяПодсказка" id="38"/>
+											<Events>
+												<Event name="OnChange">ВремяНачалаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВремяОкончания" id="92">
+											<DataPath>Объект.ВремяОкончания</DataPath>
+											<ClearButton>true</ClearButton>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВремяОкончанияКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ВремяОкончанияРасширеннаяПодсказка" id="94"/>
+											<Events>
+												<Event name="OnChange">ВремяНачалаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Продолжительность" id="39">
+											<DataPath>Объект.Продолжительность</DataPath>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ClearButton>true</ClearButton>
+											<SpinButton>true</SpinButton>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=ЧЧ:мм</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="41"/>
+											<Events>
+												<Event name="OnChange">ПродолжительностьПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<Button name="УстановитьОбщееВремя" id="116">
 									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 									<CommandName>Form.Command.УстановитьОбщееВремя</CommandName>
 									<ExtendedTooltip name="УстановитьОбщееВремяРасширеннаяПодсказка" id="117"/>
 								</Button>
@@ -437,7 +349,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить общее время</v8:content>
+					<v8:content>Установить общее время всем</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

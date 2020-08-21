@@ -397,6 +397,266 @@
 												<Value xsi:type="xs:dateTime">0001-01-01T04:00:00</Value>
 											</xr:Value>
 										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>4 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T04:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T05:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T05:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T06:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T06:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T07:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T07:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>8 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T08:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>8 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T08:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>9 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T09:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>9 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T09:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>10 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T10:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>10 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T10:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>11 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T11:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>11 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T11:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>12 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T12:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>12 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T12:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>13 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T13:00:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>13 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T13:30:00</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>14 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:dateTime">0001-01-01T14:00:00</Value>
+											</xr:Value>
+										</xr:Item>
 									</ChoiceList>
 									<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="154"/>
 									<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="155"/>

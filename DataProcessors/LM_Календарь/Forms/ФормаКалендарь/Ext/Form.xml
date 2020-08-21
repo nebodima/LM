@@ -10,7 +10,7 @@
 				<Type>CommandBarButton</Type>
 				<Visible>false</Visible>
 				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Item.Планировщик.StandardCommand.Print</CommandName>
+				<CommandName>0</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="12"/>
@@ -19,7 +19,7 @@
 				<Type>CommandBarButton</Type>
 				<Visible>false</Visible>
 				<Representation>PictureAndText</Representation>
-				<CommandName>Form.Item.Планировщик.StandardCommand.Preview</CommandName>
+				<CommandName>0</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ПредварительныйПросмотрРасширеннаяПодсказка" id="14"/>
@@ -249,7 +249,7 @@
 						</CheckBoxField>
 						<CheckBoxField name="ОтображатьВсеПомещения" id="104">
 							<DataPath>ОтображатьВсеПомещения</DataPath>
-							<CheckBoxType>Switcher</CheckBoxType>
+							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ОтображатьВсеПомещенияКонтекстноеМеню" id="105"/>
 							<ExtendedTooltip name="ОтображатьВсеПомещенияРасширеннаяПодсказка" id="106"/>
 							<Events>
@@ -282,7 +282,7 @@
 											<v8:content>учеников</v8:content>
 										</v8:item>
 									</Title>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="УченикиКонтекстноеМеню" id="108"/>
 									<ExtendedTooltip name="УченикиРасширеннаяПодсказка" id="109"/>
 									<Events>
@@ -297,7 +297,7 @@
 											<v8:content>группу обучения</v8:content>
 										</v8:item>
 									</Title>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="62"/>
 									<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="63"/>
 									<Events>
@@ -312,7 +312,7 @@
 											<v8:content>педагога</v8:content>
 										</v8:item>
 									</Title>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПедагогКонтекстноеМеню" id="65"/>
 									<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="66"/>
 									<Events>
@@ -327,7 +327,7 @@
 											<v8:content>предмет обучения</v8:content>
 										</v8:item>
 									</Title>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="68"/>
 									<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="69"/>
 									<Events>
@@ -351,7 +351,7 @@
 								</v8:item>
 							</ToolTip>
 							<ToolTipRepresentation>Button</ToolTipRepresentation>
-							<CheckBoxType>Switcher</CheckBoxType>
+							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ОтображатьНапоминанияКонтекстноеМеню" id="57"/>
 							<ExtendedTooltip name="ОтображатьНапоминанияРасширеннаяПодсказка" id="58"/>
 							<Events>
@@ -498,12 +498,11 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="42"/>
 							<ChildItems>
-								<CheckBoxField name="СкрытьНастройки" id="90">
+								<CheckBoxField name="СкрытьНастройки" id="115">
 									<DataPath>СкрытьНастройки</DataPath>
-									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Switcher</CheckBoxType>
-									<ContextMenu name="СкрытьНастройкиКонтекстноеМеню" id="91"/>
-									<ExtendedTooltip name="СкрытьНастройкиРасширеннаяПодсказка" id="92"/>
+									<ContextMenu name="СкрытьНастройкиКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="СкрытьНастройкиРасширеннаяПодсказка" id="117"/>
 									<Events>
 										<Event name="OnChange">СкрытьНастройкиПриИзменении</Event>
 									</Events>
@@ -511,7 +510,7 @@
 								<Button name="ФормаДокументУрокСоздать" id="52">
 									<Type>UsualButton</Type>
 									<Representation>PictureAndText</Representation>
-									<CommandName>Document.LM_Урок.StandardCommand.Create</CommandName>
+									<CommandName>0</CommandName>
 									<Picture>
 										<xr:Ref>StdPicture.CreateListItem</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
