@@ -130,68 +130,12 @@
 					<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="37"/>
 				</LabelField>
-				<InputField name="РасходыКлиент" id="38">
-					<DataPath>Объект.Расходы.Клиент</DataPath>
+				<InputField name="РасходыСтатьяЗатрат" id="38">
+					<DataPath>Объект.Расходы.СтатьяЗатрат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<Width>1</Width>
-					<ContextMenu name="РасходыКлиентКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="РасходыКлиентРасширеннаяПодсказка" id="40"/>
-				</InputField>
-				<InputField name="РасходыПредметОбучения" id="44">
-					<DataPath>Объект.Расходы.ПредметОбучения</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
-					<ContextMenu name="РасходыПредметОбученияКонтекстноеМеню" id="45"/>
-					<ExtendedTooltip name="РасходыПредметОбученияРасширеннаяПодсказка" id="46"/>
-				</InputField>
-				<InputField name="РасходыПедагог" id="47">
-					<DataPath>Объект.Расходы.Педагог</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
-					<ContextMenu name="РасходыПедагогКонтекстноеМеню" id="48"/>
-					<ExtendedTooltip name="РасходыПедагогРасширеннаяПодсказка" id="49"/>
-				</InputField>
-				<InputField name="РасходыГруппаОбучения" id="50">
-					<DataPath>Объект.Расходы.ГруппаОбучения</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
-					<ContextMenu name="РасходыГруппаОбученияКонтекстноеМеню" id="51"/>
-					<ExtendedTooltip name="РасходыГруппаОбученияРасширеннаяПодсказка" id="52"/>
-				</InputField>
-				<InputField name="РасходыСкидка" id="53">
-					<DataPath>Объект.Расходы.Скидка</DataPath>
-					<Visible>false</Visible>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
-					<ContextMenu name="РасходыСкидкаКонтекстноеМеню" id="54"/>
-					<ExtendedTooltip name="РасходыСкидкаРасширеннаяПодсказка" id="55"/>
-				</InputField>
-				<InputField name="РасходыТариф" id="56">
-					<DataPath>Объект.Расходы.Тариф</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
-					<ContextMenu name="РасходыТарифКонтекстноеМеню" id="57"/>
-					<ExtendedTooltip name="РасходыТарифРасширеннаяПодсказка" id="58"/>
-					<Events>
-						<Event name="OnChange">РасходыТарифПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="РасходыЧасы" id="59">
-					<DataPath>Объект.Расходы.Часы</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Минуты</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.Расходы.TotalЧасы</FooterDataPath>
-					<Width>1</Width>
-					<ContextMenu name="РасходыЧасыКонтекстноеМеню" id="60"/>
-					<ExtendedTooltip name="РасходыЧасыРасширеннаяПодсказка" id="61"/>
-					<Events>
-						<Event name="OnChange">РасходыЧасыПриИзменении</Event>
-					</Events>
+					<ContextMenu name="РасходыСтатьяЗатратКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РасходыСтатьяЗатратРасширеннаяПодсказка" id="40"/>
 				</InputField>
 				<InputField name="РасходыСумма" id="62">
 					<DataPath>Объект.Расходы.Сумма</DataPath>
@@ -200,31 +144,32 @@
 					<ContextMenu name="РасходыСуммаКонтекстноеМеню" id="63"/>
 					<ExtendedTooltip name="РасходыСуммаРасширеннаяПодсказка" id="64"/>
 				</InputField>
-				<InputField name="РасходыКомментарий" id="41">
-					<DataPath>1/0:716cefd0-b36a-464b-82de-1a37b90724e8/0:570269e7-b47a-477f-889b-bca784b4e90c</DataPath>
-					<Visible>false</Visible>
-					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
-					<ContextMenu name="РасходыКомментарийКонтекстноеМеню" id="42"/>
-					<ExtendedTooltip name="РасходыКомментарийРасширеннаяПодсказка" id="43"/>
-				</InputField>
 			</ChildItems>
 		</Table>
-		<InputField name="СуммаДокумента" id="13">
-			<DataPath>Объект.СуммаДокумента</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-			<EditMode>EnterOnInput</EditMode>
-			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-			<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>
-			<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="15"/>
-		</InputField>
-		<LabelField name="АвторДокумента" id="16">
-			<DataPath>Объект.АвторДокумента</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
-		</LabelField>
+		<UsualGroup name="Группа2" id="80">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<LabelField name="АвторДокумента" id="16">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<InputField name="СуммаДокумента" id="13">
+					<DataPath>Объект.СуммаДокумента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="Комментарий" id="19">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>

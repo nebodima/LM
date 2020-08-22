@@ -1658,6 +1658,7 @@
 			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
 			<Document>ПриходныйКассовыйОрдер</Document>
 			<Document>РасходныйКассовыйОрдер</Document>
+			<Document>LM_НачисленияПедагогам</Document>
 			<Document>LM_Урок</Document>
 			<Document>LM_ДополнительныеРасходы</Document>
 			<Document>LM_РасчетЗарплаты</Document>

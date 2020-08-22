@@ -58,16 +58,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="20"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияЦвет" id="21">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Цвет отображения</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ДекорацияЦветКонтекстноеМеню" id="22"/>
-							<ExtendedTooltip name="ДекорацияЦветРасширеннаяПодсказка" id="23"/>
-						</LabelDecoration>
 						<Button name="ПриНажатииКнопкиВыборЦвета" id="17">
 							<Type>UsualButton</Type>
 							<Width>30</Width>
@@ -75,22 +65,12 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Цвет</v8:content>
+									<v8:content>Цвет отображения</v8:content>
 								</v8:item>
 							</Title>
 							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="18"/>
 						</Button>
-						<InputField name="Цвет" id="10">
-							<DataPath>Объект.Цвет</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ContextMenu name="ЦветКонтекстноеМеню" id="11"/>
-							<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="12"/>
-						</InputField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>

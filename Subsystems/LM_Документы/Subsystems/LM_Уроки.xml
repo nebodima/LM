@@ -23,6 +23,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ГрафикРабочегоВремениПедагога</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ДополнительныеРасходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_СписаниеОстатков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачисленияПедагогам</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

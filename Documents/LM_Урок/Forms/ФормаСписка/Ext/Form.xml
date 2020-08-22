@@ -4,17 +4,23 @@
 	<SettingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаПомощникСозданияУроков" id="135">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
+				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
+			</Button>
 			<Button name="ФормаСоздать" id="52">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.Create</CommandName>
-				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
-			</Button>
-			<Button name="ФормаПомощникСозданияУроков" id="135">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать урок</v8:content>
+					</v8:item>
+				</Title>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
+				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
 			</Button>
 			<Button name="ФормаСкопировать" id="54">
 				<Type>CommandBarButton</Type>
@@ -1355,7 +1361,9 @@
 		ПО УрокУченики.Ученик = СписанияСуммЗаУрокиОстатки.Клиент
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК СписанияСуммЗаУрокиОстаткиПоПредмету
 		ПО УрокУченики.Ученик = СписанияСуммЗаУрокиОстаткиПоПредмету.Клиент
-			И УрокУченики.Ссылка.ПредметОбучения = СписанияСуммЗаУрокиОстаткиПоПредмету.ПредметОбучения</QueryText>
+			И УрокУченики.Ссылка.ПредметОбучения = СписанияСуммЗаУрокиОстаткиПоПредмету.ПредметОбучения
+ГДЕ
+	УрокУченики.Ссылка = &amp;Ссылка</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

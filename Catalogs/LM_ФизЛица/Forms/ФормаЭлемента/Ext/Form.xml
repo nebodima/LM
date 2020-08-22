@@ -170,89 +170,61 @@
 									<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="52"/>
 									<ChildItems>
 										<UsualGroup name="Группа3" id="421">
-											<Group>AlwaysHorizontal</Group>
+											<Group>Vertical</Group>
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="422"/>
 											<ChildItems>
-												<UsualGroup name="Группа6" id="471">
-													<Width>27</Width>
-													<HorizontalStretch>false</HorizontalStretch>
-													<Group>Vertical</Group>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="472"/>
-													<ChildItems>
-														<InputField name="Фамилия" id="10">
-															<DataPath>Объект.Фамилия</DataPath>
-															<DefaultItem>true</DefaultItem>
-															<EditMode>EnterOnInput</EditMode>
-															<ContextMenu name="ФамилияКонтекстноеМеню" id="11"/>
-															<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="12"/>
-														</InputField>
-														<InputField name="Имя" id="13">
-															<DataPath>Объект.Имя</DataPath>
-															<EditMode>EnterOnInput</EditMode>
-															<ContextMenu name="ИмяКонтекстноеМеню" id="14"/>
-															<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="15"/>
-														</InputField>
-														<InputField name="Отчество" id="16">
-															<DataPath>Объект.Отчество</DataPath>
-															<EditMode>EnterOnInput</EditMode>
-															<ContextMenu name="ОтчествоКонтекстноеМеню" id="17"/>
-															<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="18"/>
-														</InputField>
-													</ChildItems>
-												</UsualGroup>
-												<UsualGroup name="Группа7" id="473">
-													<Group>Vertical</Group>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="474"/>
-													<ChildItems>
-														<InputField name="Код" id="1">
-															<DataPath>Объект.Code</DataPath>
-															<UserVisible>
-																<xr:Common>false</xr:Common>
-															</UserVisible>
-															<EditMode>EnterOnInput</EditMode>
-															<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-															<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-														</InputField>
-														<CheckBoxField name="ЭтоПедагог" id="418">
-															<DataPath>Объект.ЭтоПедагог</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<CheckBoxType>Switcher</CheckBoxType>
-															<ContextMenu name="ЭтоПедагогКонтекстноеМеню" id="419"/>
-															<ExtendedTooltip name="ЭтоПедагогРасширеннаяПодсказка" id="420"/>
-															<Events>
-																<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
-														<CheckBoxField name="Пол" id="189">
-															<DataPath>Объект.Пол</DataPath>
-															<TitleLocation>None</TitleLocation>
-															<CheckBoxType>Tumbler</CheckBoxType>
-															<EditFormat>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>БЛ=Жен.; БИ=Муж.</v8:content>
-																</v8:item>
-															</EditFormat>
-															<ContextMenu name="ПолКонтекстноеМеню" id="190"/>
-															<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="191"/>
-														</CheckBoxField>
-													</ChildItems>
-												</UsualGroup>
+												<InputField name="Наименование" id="485">
+													<DataPath>Объект.Description</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ФИО</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="НаименованиеКонтекстноеМеню" id="486"/>
+													<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="487"/>
+												</InputField>
 											</ChildItems>
 										</UsualGroup>
-										<PictureDecoration name="Декорация5" id="477">
-											<Height>1</Height>
-											<PictureSize>AutoSize</PictureSize>
-											<ContextMenu name="Декорация5КонтекстноеМеню" id="478"/>
-											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="479"/>
-										</PictureDecoration>
+										<UsualGroup name="Группа5" id="490">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="491"/>
+											<ChildItems>
+												<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
+													<Shape>Oval</Shape>
+													<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
+												</Button>
+												<CheckBoxField name="Пол" id="189">
+													<DataPath>Объект.Пол</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<CheckBoxType>Tumbler</CheckBoxType>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>БЛ=Жен.; БИ=Муж.</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="ПолКонтекстноеМеню" id="190"/>
+													<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="191"/>
+												</CheckBoxField>
+												<InputField name="Код" id="1">
+													<DataPath>Объект.Code</DataPath>
+													<UserVisible>
+														<xr:Common>false</xr:Common>
+													</UserVisible>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+													<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
 										<UsualGroup name="Группа2" id="480">
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
@@ -613,36 +585,16 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаФотоРасширеннаяПодсказка" id="54"/>
 									<ChildItems>
-										<UsualGroup name="Группа5" id="297">
-											<Group>Horizontal</Group>
-											<Representation>None</Representation>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="298"/>
-											<ChildItems>
-												<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
-													<Shape>Oval</Shape>
-													<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
-												</Button>
-												<LabelDecoration name="Декорация4" id="412">
-													<Title formatted="false">
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Цвет для отображения:</v8:content>
-														</v8:item>
-													</Title>
-													<ContextMenu name="Декорация4КонтекстноеМеню" id="413"/>
-													<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="414"/>
-												</LabelDecoration>
-												<InputField name="Цвет" id="294">
-													<DataPath>Объект.Цвет</DataPath>
-													<Visible>false</Visible>
-													<ContextMenu name="ЦветКонтекстноеМеню" id="295"/>
-													<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="296"/>
-												</InputField>
-											</ChildItems>
-										</UsualGroup>
+										<CheckBoxField name="ЭтоПедагог" id="418">
+											<DataPath>Объект.ЭтоПедагог</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Switcher</CheckBoxType>
+											<ContextMenu name="ЭтоПедагогКонтекстноеМеню" id="419"/>
+											<ExtendedTooltip name="ЭтоПедагогРасширеннаяПодсказка" id="420"/>
+											<Events>
+												<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
 										<PictureField name="Фото" id="41">
 											<DataPath>Фото</DataPath>
 											<Title>
@@ -1689,7 +1641,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Цвет</v8:content>
+					<v8:content>Цвет для отображения</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

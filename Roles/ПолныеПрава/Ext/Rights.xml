@@ -864,6 +864,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.LM_НачисленияПедагогам</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ИспользоватьСинхронизациюДанныхВЛокальномРежиме</name>
 		<right>
 			<name>Update</name>

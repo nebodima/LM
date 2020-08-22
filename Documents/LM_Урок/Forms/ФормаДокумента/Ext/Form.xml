@@ -247,7 +247,7 @@
 							<ContextMenu name="ПомещениеКонтекстноеМеню" id="330"/>
 							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="331"/>
 							<Events>
-								<Event name="OnChange">ПлатныйПриИзменении</Event>
+								<Event name="OnChange">ПомещениеПриИзменении</Event>
 							</Events>
 						</InputField>
 					</ChildItems>
@@ -1194,24 +1194,24 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаДисконтныеКарты" id="540">
+				<Page name="ГруппаБонусы" id="540">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дисконтные карты</v8:content>
+							<v8:content>Бонусы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа дисконтные карты</v8:content>
+							<v8:content>Группа бонусы</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.СертификатКлюча</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="ГруппаДисконтныеКартыРасширеннаяПодсказка" id="541"/>
+					<ExtendedTooltip name="ГруппаБонусыРасширеннаяПодсказка" id="541"/>
 					<ChildItems>
 						<UsualGroup name="Группа3" id="655">
 							<Group>Horizontal</Group>
@@ -1289,6 +1289,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">УченикиВыбор</Event>
+								<Event name="OnChange">Ученики1ПриИзменении</Event>
 							</Events>
 							<ChildItems>
 								<LabelField name="УченикиНомерСтроки1" id="555">
@@ -1525,7 +1526,7 @@
 							<AutoCommandBar name="НачисленияПедагогуКоманднаяПанель" id="834">
 								<ChildItems>
 									<Button name="НачисленияПедагогуДобавить" id="860">
-										<Type>CommandBarButton</Type>
+										<Type>CommandBarHyperlink</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.НачисленияПедагогу.StandardCommand.Add</CommandName>
 										<Title>
@@ -1543,12 +1544,12 @@
 										<ExtendedTooltip name="ПересчитатьНачисленияРасширеннаяПодсказка" id="806"/>
 									</Button>
 									<Button name="ИзменятьВсе" id="812">
-										<Type>CommandBarButton</Type>
+										<Type>CommandBarHyperlink</Type>
 										<CommandName>Form.Command.ИзменятьВсе</CommandName>
 										<ExtendedTooltip name="ИзменятьВсеРасширеннаяПодсказка" id="813"/>
 									</Button>
 									<Button name="НеИзменятьВсе" id="814">
-										<Type>CommandBarButton</Type>
+										<Type>CommandBarHyperlink</Type>
 										<CommandName>Form.Command.НеИзменятьВсе</CommandName>
 										<ExtendedTooltip name="НеИзменятьВсеРасширеннаяПодсказка" id="815"/>
 									</Button>
@@ -1740,32 +1741,6 @@
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
-				<InputField name="СуммаДопРасходов" id="889">
-					<DataPath>Объект.СуммаДопРасходов</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="СуммаДопРасходовКонтекстноеМеню" id="890"/>
-					<ExtendedTooltip name="СуммаДопРасходовРасширеннаяПодсказка" id="891"/>
-				</InputField>
-				<InputField name="НачисленоПедагогу" id="886">
-					<DataPath>Объект.НачисленоПедагогу</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="НачисленоПедагогуКонтекстноеМеню" id="887"/>
-					<ExtendedTooltip name="НачисленоПедагогуРасширеннаяПодсказка" id="888"/>
-				</InputField>
-				<InputField name="УченикиСкидкаИтого" id="463">
-					<DataPath>Объект.Ученики.TotalСуммаСкидки</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Скидка итого</v8:content>
-						</v8:item>
-					</Title>
-					<HorizontalAlign>Left</HorizontalAlign>
-					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-					<ContextMenu name="УченикиСкидкаИтогоКонтекстноеМеню" id="464"/>
-					<ExtendedTooltip name="УченикиСкидкаИтогоРасширеннаяПодсказка" id="465"/>
-				</InputField>
 				<InputField name="СуммаЗаУрок" id="296">
 					<DataPath>Объект.Ученики.TotalСумма</DataPath>
 					<ReadOnly>true</ReadOnly>

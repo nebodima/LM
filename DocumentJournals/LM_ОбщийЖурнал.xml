@@ -37,6 +37,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_РасчетЗарплаты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачислениеБонусов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ГрафикРабочегоВремениПедагога</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачисленияПедагогам</xr:Item>
 			</RegisteredDocuments>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<StandardAttributes>
@@ -228,6 +229,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_РасчетЗарплаты.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачислениеБонусов.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ГрафикРабочегоВремениПедагога.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачисленияПедагогам.Attribute.Организация</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -273,6 +275,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ДополнительныеРасходы.Attribute.СуммаДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_РасчетЗарплаты.Attribute.СуммаДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачислениеБонусов.Attribute.СуммаБонусов</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачисленияПедагогам.Attribute.СуммаДокумента</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -297,6 +300,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_РасчетЗарплаты.Attribute.АвторДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ГрафикРабочегоВремениПедагога.Attribute.АвторДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачислениеБонусов.Attribute.АвторДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачисленияПедагогам.Attribute.АвторДокумента</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -321,6 +325,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_РасчетЗарплаты.Attribute.Комментарий</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачислениеБонусов.Attribute.Комментарий</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ГрафикРабочегоВремениПедагога.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_НачисленияПедагогам.Attribute.Комментарий</xr:Item>
 					</References>
 				</Properties>
 			</Column>
