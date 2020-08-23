@@ -3822,8 +3822,8 @@
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаGoogle.Form" id="27a1d4e3-b53e-4bf2-ac83-ea6100079d44.0" configVersion="f9f849035d451148806ff37a08a26a3600000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации" id="71c0afe4-fb78-49ef-a774-3795c042a16e" configVersion="fd9ca1c0e6d79446806fa45eaacfa24100000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации.Form" id="71c0afe4-fb78-49ef-a774-3795c042a16e.0" configVersion="c4ddadf9b7e8cc419f1896031e5c1f5f00000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="c63a1ecf7016dc47ab3c0a513ce893f700000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="f59fd21aa4040349b1b7f7f0457ff0f600000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="899e2d5b83682a468ee0ca03f8b93db800000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="bfcd339137f93f43a80bcdd2d228700700000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.ObjectModule" id="dcc267b3-76b9-47ea-b8b4-b82adc7a2310.0" configVersion="27525ad5d83fa74f84efbd8165eeacad00000000"/>
 		<Metadata name="DataProcessor.LM_Настройки" id="ba78841c-c916-4932-9583-5104e6ea20ec" configVersion="7e936866356b704890b4f1e0469e049f00000000"/>
 		<Metadata name="DataProcessor.LM_Настройки.Form.Форма" id="f1b7f4ed-8c0e-4408-947f-423fff3e6698" configVersion="38e295427a4b2c49bbbef8ede9afcdd400000000"/>
@@ -5098,8 +5098,8 @@
 		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="d80137dfa12e854d81ffcaa7e29662cf00000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="3e5c03124919e741b51967a2e74c90b900000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="68602fddd65ebb49aa5de887ba4e968f00000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="ff908de868b8964187c99a1aced3cd4900000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="b6bbf2c530860144b76198c6fac1a35e00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="c18d7461e86cb44d892478c304e4db8300000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="5398c60140bd2f4f87c54d00bdde658000000000"/>
 		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="186cd4e4d0bea34bb2a11b414b50ccbc00000000"/>
 		<Metadata name="Document.LM_Урок.ObjectModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.0" configVersion="8f0ea1bfed0f394fb38bc88140f7eb9000000000"/>
 		<Metadata name="Document.Анкета" id="73eff626-a363-4a5a-879e-61ef6ce0726f" configVersion="4ba42bb13c98ef44b38af9da517a985c00000000">
