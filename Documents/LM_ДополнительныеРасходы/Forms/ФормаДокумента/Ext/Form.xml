@@ -51,6 +51,7 @@
 				<xr:Common>false</xr:Common>
 			</UserVisible>
 			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
 		</InputField>
@@ -76,6 +77,7 @@
 		<InputField name="ДокументОснования" id="10">
 			<DataPath>Объект.ДокументОснования</DataPath>
 			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="12"/>
 		</InputField>
@@ -89,6 +91,7 @@
 			<Representation>List</Representation>
 			<Footer>true</Footer>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<HorizontalStretch>false</HorizontalStretch>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
 			<DataPath>Объект.Расходы</DataPath>
@@ -155,25 +158,15 @@
 				<LabelField name="АвторДокумента" id="16">
 					<DataPath>Объект.АвторДокумента</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<InputField name="СуммаДокумента" id="13">
-					<DataPath>Объект.СуммаДокумента</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-					<EditMode>EnterOnInput</EditMode>
-					<HorizontalStretch>false</HorizontalStretch>
-					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="15"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Комментарий" id="19">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
 		</InputField>

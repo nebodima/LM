@@ -51,6 +51,7 @@
 				<xr:Common>false</xr:Common>
 			</UserVisible>
 			<EditMode>EnterOnInput</EditMode>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
 		</InputField>
@@ -157,22 +158,12 @@
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<InputField name="СуммаДокумента" id="13">
-					<DataPath>Объект.СуммаДокумента</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-					<EditMode>EnterOnInput</EditMode>
-					<HorizontalStretch>false</HorizontalStretch>
-					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>
-					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="15"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Комментарий" id="19">
 			<DataPath>Объект.Комментарий</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
 		</InputField>

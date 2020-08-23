@@ -614,6 +614,7 @@
 					<MaxRowsCount>5</MaxRowsCount>
 					<HorizontalLines>false</HorizontalLines>
 					<VerticalLines>false</VerticalLines>
+					<HorizontalStretch>false</HorizontalStretch>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>Расшифровка</DataPath>
 					<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
@@ -679,6 +680,43 @@
 							<MaxWidth>2</MaxWidth>
 							<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
 							<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСуммаОстаток" id="384">
+							<DataPath>Расшифровка.СуммаОстаток</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общ. долг</v8:content>
+								</v8:item>
+							</Title>
+							<CellHyperlink>true</CellHyperlink>
+							<HeaderPicture>
+								<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
+							<Width>1</Width>
+							<MarkNegatives>true</MarkNegatives>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
+							<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
+						</LabelField>
+						<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
+							<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Долг по предмету</v8:content>
+								</v8:item>
+							</Title>
+							<CellHyperlink>true</CellHyperlink>
+							<Width>1</Width>
+							<MarkNegatives>true</MarkNegatives>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
+							<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
 						</LabelField>
 						<LabelField name="РасшифровкаУченик" id="368">
 							<DataPath>Расшифровка.Ученик</DataPath>
@@ -795,43 +833,6 @@
 							<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
 							<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
 						</LabelField>
-						<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
-							<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Долг по предмету</v8:content>
-								</v8:item>
-							</Title>
-							<CellHyperlink>true</CellHyperlink>
-							<Width>1</Width>
-							<MarkNegatives>true</MarkNegatives>
-							<Hiperlink>true</Hiperlink>
-							<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
-							<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
-						</LabelField>
-						<LabelField name="РасшифровкаСуммаОстаток" id="384">
-							<DataPath>Расшифровка.СуммаОстаток</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Общ. долг</v8:content>
-								</v8:item>
-							</Title>
-							<CellHyperlink>true</CellHyperlink>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>1</Width>
-							<MarkNegatives>true</MarkNegatives>
-							<Hiperlink>true</Hiperlink>
-							<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
-							<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
-						</LabelField>
 					</ChildItems>
 				</Table>
 				<UsualGroup name="ГруппаДниРождения" id="130">
@@ -862,6 +863,7 @@
 							<HorizontalLines>false</HorizontalLines>
 							<VerticalLines>false</VerticalLines>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<HorizontalStretch>false</HorizontalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
