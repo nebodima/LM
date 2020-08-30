@@ -496,13 +496,14 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="42"/>
 							<ChildItems>
-								<Button name="Сегодня1" id="75">
-									<Type>Hyperlink</Type>
-									<CommandName>Form.Command.Сегодня</CommandName>
-									<ExtendedTooltip name="Сегодня1РасширеннаяПодсказка" id="76"/>
+								<Button name="Обновить" id="133">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="134"/>
 								</Button>
 								<UsualGroup name="Группа4" id="124">
 									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>None</HorizontalSpacing>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="125"/>
@@ -511,6 +512,11 @@
 											<Type>UsualButton</Type>
 											<CommandName>Form.Command.ПредыдущийПериод</CommandName>
 											<ExtendedTooltip name="ПредыдущийПериод1РасширеннаяПодсказка" id="127"/>
+										</Button>
+										<Button name="Сегодня1" id="75">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Сегодня</CommandName>
+											<ExtendedTooltip name="Сегодня1РасширеннаяПодсказка" id="76"/>
 										</Button>
 										<Button name="БудущийПериод1" id="128">
 											<Type>UsualButton</Type>
@@ -1082,6 +1088,27 @@
 			<Action>Сегодня</Action>
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить (F5)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
