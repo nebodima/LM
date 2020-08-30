@@ -5,12 +5,12 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаПомощникСозданияУроков" id="135">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
 				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
 			</Button>
 			<Button name="ФормаСоздать" id="52">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.Create</CommandName>
 				<Title>
@@ -21,26 +21,6 @@
 				</Title>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
-			</Button>
-			<Button name="ФормаСкопировать" id="54">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Copy</CommandName>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="55"/>
-			</Button>
-			<Button name="ФормаУстановитьИнтервал" id="145">
-				<Type>CommandBarHyperlink</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Период</v8:content>
-					</v8:item>
-				</Title>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="146"/>
 			</Button>
 			<Popup name="ФормаГруппаДополнительно" id="161">
 				<Title>
@@ -64,7 +44,7 @@
 				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="162"/>
 				<ChildItems>
 					<Button name="ФормаОбработкаGoogleКалендарьОткрыть" id="209">
-						<Type>CommandBarButton</Type>
+						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
 						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
@@ -82,7 +62,7 @@
 						<ExtendedTooltip name="ФормаОбработкаGoogleКалендарьОткрытьРасширеннаяПодсказка" id="210"/>
 					</Button>
 					<Button name="ФормаОтчетLM_ЯвкиОткрыть" id="427">
-						<Type>CommandBarButton</Type>
+						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Report.LM_Явки_2.StandardCommand.Open</CommandName>
 						<Picture>
@@ -92,7 +72,7 @@
 						<ExtendedTooltip name="ФормаОтчетLM_ЯвкиОткрытьРасширеннаяПодсказка" id="428"/>
 					</Button>
 					<Button name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитов" id="420">
-						<Type>CommandBarButton</Type>
+						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.ГрупповоеИзменениеРеквизитов.Command.ГрупповоеИзменениеРеквизитов</CommandName>
 						<Picture>
@@ -102,7 +82,7 @@
 						<ExtendedTooltip name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитовРасширеннаяПодсказка" id="421"/>
 					</Button>
 					<Button name="ОткрытьПанельУченика" id="246">
-						<Type>CommandBarButton</Type>
+						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ОткрытьПанельУченика</CommandName>
 						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
@@ -115,6 +95,26 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаСкопировать" id="54">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.StandardCommand.Copy</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ФормаУстановитьИнтервал" id="145">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период</v8:content>
+					</v8:item>
+				</Title>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="146"/>
+			</Button>
 			<Popup name="ФормаСоздатьНаОсновании" id="287">
 				<Title>
 					<v8:item>
@@ -137,7 +137,7 @@
 				<ExtendedTooltip name="ФормаСоздатьНаОснованииРасширеннаяПодсказка" id="288"/>
 				<ChildItems>
 					<Button name="ФормаДокументДополнительныеРасходыСоздатьНаОсновании" id="407">
-						<Type>CommandBarButton</Type>
+						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Document.LM_ДополнительныеРасходы.StandardCommand.CreateBasedOn</CommandName>
 						<DataPath>Items.Список.CurrentData.Ref</DataPath>
@@ -151,7 +151,7 @@
 				</ChildItems>
 			</Popup>
 			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="223">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
 				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
 				<DataPath>Items.Список.CurrentData.Ref</DataPath>
@@ -160,7 +160,7 @@
 				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="224"/>
 			</Button>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="199">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
 				<CommandName>CommonCommand.Напомнить</CommandName>
 				<DataPath>Items.Список.CurrentData.Ref</DataPath>
@@ -288,7 +288,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Остатки бонусов</v8:content>
+									<v8:content>Бонусы</v8:content>
 								</v8:item>
 							</Title>
 							<ExtendedTooltip name="ОтчетLM_ОтчетПоДисконтнымКартамОткрытьРасширеннаяПодсказка" id="423"/>
@@ -309,7 +309,7 @@
 								<CheckBoxField name="ОтображатьДетализациюУрока" id="424">
 									<DataPath>НеОтображатьДетализациюУрока</DataPath>
 									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОтображатьДетализациюУрокаКонтекстноеМеню" id="425"/>
 									<ExtendedTooltip name="ОтображатьДетализациюУрокаРасширеннаяПодсказка" id="426"/>
 									<Events>
@@ -326,7 +326,7 @@
 										</v8:item>
 									</ToolTip>
 									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОтображатьДиаграммуЗадолженностиКонтекстноеМеню" id="402"/>
 									<ExtendedTooltip name="ОтображатьДиаграммуЗадолженностиРасширеннаяПодсказка" id="403"/>
 									<Events>
@@ -343,7 +343,7 @@
 										</v8:item>
 									</ToolTip>
 									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОтображатьБлижайшиеДниРожденияКонтекстноеМеню" id="399"/>
 									<ExtendedTooltip name="ОтображатьБлижайшиеДниРожденияРасширеннаяПодсказка" id="400"/>
 									<Events>
@@ -686,7 +686,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Общ. долг</v8:content>
+									<v8:content>Долг</v8:content>
 								</v8:item>
 							</Title>
 							<CellHyperlink>true</CellHyperlink>
@@ -727,6 +727,7 @@
 							</HeaderPicture>
 							<Width>1</Width>
 							<Hiperlink>true</Hiperlink>
+							<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
 							<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
 							<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
 						</LabelField>
@@ -1544,7 +1545,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчет по взаиморасчетам</v8:content>
+					<v8:content>Взаиморасчеты</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

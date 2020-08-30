@@ -5051,7 +5051,7 @@
 		<Metadata name="Document.LM_СписаниеОстатков.ObjectModule" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d.0" configVersion="eae26e1c340df44bab86fbc83623db2800000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.Template.Печать" id="8a022827-4acb-47e3-82fe-9662751a8f4d" configVersion="eca99e575b9fd4448cf934c3ddb864b500000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.Template.Печать.Template" id="8a022827-4acb-47e3-82fe-9662751a8f4d.0" configVersion="9cf0ffe4f565794d88534249aea00d6000000000"/>
-		<Metadata name="Document.LM_Урок" id="11fbafff-f10d-406d-8964-34b15970e5b5" configVersion="bdcaa675fbc89d4caefd746e35199a3d00000000">
+		<Metadata name="Document.LM_Урок" id="11fbafff-f10d-406d-8964-34b15970e5b5" configVersion="10af8226dee37b469b4a4f092c46075f00000000">
 			<Metadata name="Document.LM_Урок.Attribute.КоличествоЧасов" id="07c6ee34-8349-4506-bf9e-3fec019be583"/>
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.Комментарий" id="151fa61b-57c0-43ed-ad86-9fd6881f242a"/>
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.СуммаНачисления" id="1a8cfb86-13c1-4d1c-b38b-5cf7bc4a4362"/>
@@ -5090,12 +5090,12 @@
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.НеИзменять" id="f9ecaf9a-0806-4fba-b753-4e8ed9ce8cbd"/>
 			<Metadata name="Document.LM_Урок.TabularSection.Ученики.Attribute.Комментарий" id="fa666dc8-e07a-42a2-8341-095225cb24c9"/>
 		</Metadata>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="04f860b126a436459dfc28cbac8001b900000000"/>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="f176ec25d6fa554fba1d106f504e50b800000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="15c62d31469d5744b092d9ecf352b70300000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="444dca1fbda8e14dbd21fd05beed3da600000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="92f9cd78954ab64cbaf13f2cae4902e400000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="72daed9737668a499932d4154ca1f3fc00000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="6da59e27c28c7a4daca52bda198b0c0400000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="daa5ca369065a14ab3b291818471d24800000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="fd1ccd3b11dfef48b5a71ac7e4c1e89d00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="7418aae3d03ca24fb8cd3f6d9223b54900000000"/>
 		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="670526fbad2bb04da7cf10611f45fefa00000000"/>
 		<Metadata name="Document.LM_Урок.ObjectModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.0" configVersion="5c4ce222c2aaf542a4218141b6f9350700000000"/>
 		<Metadata name="Document.Анкета" id="73eff626-a363-4a5a-879e-61ef6ce0726f" configVersion="621d6e68b2b6ba4eb35cb5a70e28adbf00000000">
