@@ -3822,8 +3822,8 @@
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаGoogle.Form" id="27a1d4e3-b53e-4bf2-ac83-ea6100079d44.0" configVersion="e94a560b957d2e448b49f2e2ffa965ba00000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации" id="71c0afe4-fb78-49ef-a774-3795c042a16e" configVersion="27120a89038bcf4fb4c4b38b339e9d9500000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации.Form" id="71c0afe4-fb78-49ef-a774-3795c042a16e.0" configVersion="47081d451a9fc54d88a88e7007fcc8d100000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="aa0844c921f33c4aa381ef4cb18d0c5d00000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="638ef7345a85694189c51cd86de6693d00000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="3dec0ac98d37b8448a2946f44862647c00000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="8ddc2b24542b854285cd279545c7843900000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.ObjectModule" id="dcc267b3-76b9-47ea-b8b4-b82adc7a2310.0" configVersion="7cf2b39b9df7cc438ccf062f11f03ba200000000"/>
 		<Metadata name="DataProcessor.LM_Настройки" id="ba78841c-c916-4932-9583-5104e6ea20ec" configVersion="89894d3ada26dd4e8e293437b8bedb4800000000"/>
 		<Metadata name="DataProcessor.LM_Настройки.Form.Форма" id="f1b7f4ed-8c0e-4408-947f-423fff3e6698" configVersion="1c8c2ab2bf25654cbbe71d49d25f36e600000000"/>

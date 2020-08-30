@@ -168,7 +168,7 @@
 								<CheckBoxField name="НеГруппироватьПомещения" id="101">
 									<DataPath>НеГруппироватьПомещения</DataPath>
 									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="НеГруппироватьПомещенияКонтекстноеМеню" id="102"/>
 									<ExtendedTooltip name="НеГруппироватьПомещенияРасширеннаяПодсказка" id="103"/>
 									<Events>
@@ -178,7 +178,7 @@
 								<CheckBoxField name="ОтображатьВсеПомещения" id="104">
 									<DataPath>ОтображатьВсеПомещения</DataPath>
 									<TitleLocation>Right</TitleLocation>
-									<CheckBoxType>Switcher</CheckBoxType>
+									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ОтображатьВсеПомещенияКонтекстноеМеню" id="105"/>
 									<ExtendedTooltip name="ОтображатьВсеПомещенияРасширеннаяПодсказка" id="106"/>
 									<Events>
@@ -497,7 +497,7 @@
 							<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="42"/>
 							<ChildItems>
 								<Button name="Обновить" id="133">
-									<Type>UsualButton</Type>
+									<Type>Hyperlink</Type>
 									<CommandName>Form.Command.Обновить</CommandName>
 									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="134"/>
 								</Button>
