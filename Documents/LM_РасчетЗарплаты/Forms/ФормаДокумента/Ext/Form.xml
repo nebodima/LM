@@ -229,29 +229,6 @@
 					<ContextMenu name="ДДКомментарийКонтекстноеМеню" id="192"/>
 					<ExtendedTooltip name="ДДКомментарийРасширеннаяПодсказка" id="193"/>
 				</InputField>
-				<InputField name="ДД1Часы" id="136">
-					<DataPath>Объект.ДД.Часы</DataPath>
-					<Enabled>false</Enabled>
-					<EditMode>EnterOnInput</EditMode>
-					<TextColor>#999999</TextColor>
-					<ContextMenu name="ДД1ЧасыКонтекстноеМеню" id="137"/>
-					<ExtendedTooltip name="ДД1ЧасыРасширеннаяПодсказка" id="138"/>
-				</InputField>
-				<InputField name="ДД1Сумма" id="139">
-					<DataPath>Объект.ДД.Сумма</DataPath>
-					<Enabled>false</Enabled>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма за урок</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<FooterDataPath>Объект.ДД.TotalСумма</FooterDataPath>
-					<TextColor>#999999</TextColor>
-					<ContextMenu name="ДД1СуммаКонтекстноеМеню" id="140"/>
-					<ExtendedTooltip name="ДД1СуммаРасширеннаяПодсказка" id="141"/>
-				</InputField>
 				<InputField name="ДД1Начисления" id="142">
 					<DataPath>Объект.ДД.Начисление</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -268,6 +245,7 @@
 				</InputField>
 				<CheckBoxField name="ДДНеИзменять" id="194">
 					<DataPath>Объект.ДД.НеИзменять</DataPath>
+					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<EditMode>EnterOnInput</EditMode>
 					<CheckBoxType>Auto</CheckBoxType>

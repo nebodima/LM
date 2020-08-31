@@ -80,6 +80,12 @@
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
 		</InputField>
+		<InputField name="Педагог" id="85">
+			<DataPath>Объект.Педагог</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ПедагогКонтекстноеМеню" id="86"/>
+			<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="87"/>
+		</InputField>
 		<Table name="Расходы" id="22">
 			<Representation>List</Representation>
 			<Footer>true</Footer>
@@ -126,7 +132,7 @@
 					<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="37"/>
 				</LabelField>
 				<InputField name="НачисленияПедагог" id="38">
-					<DataPath>Объект.НачисленияПедагогам.Педагог</DataPath>
+					<DataPath>1/0:096ad9ca-d6a3-420f-afe3-98c112bffa6a/0:35870841-3ef9-4018-a9d5-0be24be915b5</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="НачисленияПедагогКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="НачисленияПедагогРасширеннаяПодсказка" id="40"/>

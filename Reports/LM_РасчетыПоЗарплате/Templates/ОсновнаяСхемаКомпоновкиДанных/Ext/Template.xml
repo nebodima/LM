@@ -47,13 +47,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ПредметОбучения</dataPath>
-			<field>ПредметОбучения</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
 			<field>Организация</field>
 			<role>
@@ -168,13 +161,23 @@
 					<v8:content>Выручка</v8:content>
 				</v8:item>
 			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Регистратор КАК Регистратор,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Организация КАК Организация,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Педагог КАК Педагог,
-	LM_РасчетыПоЗарплатеОстаткиИОбороты.ПредметОбучения КАК ПредметОбучения,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.НеИзменять КАК НеИзменять,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.Комментарий КАК Комментарий,
 	LM_РасчетыПоЗарплатеОстаткиИОбороты.СуммаНачальныйОстаток КАК СуммаНачальныйОстаток,

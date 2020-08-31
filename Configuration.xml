@@ -1658,9 +1658,9 @@
 			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
 			<Document>ПриходныйКассовыйОрдер</Document>
 			<Document>РасходныйКассовыйОрдер</Document>
-			<Document>LM_НачисленияПедагогам</Document>
 			<Document>LM_Урок</Document>
 			<Document>LM_ДополнительныеРасходы</Document>
+			<Document>LM_НачисленияПедагогам</Document>
 			<Document>LM_РасчетЗарплаты</Document>
 			<Document>LM_ГрафикРабочегоВремениПедагога</Document>
 			<Document>LM_ПеремещениеДенег</Document>
@@ -1755,13 +1755,13 @@
 			<Enum>ЦветностиИзображения</Enum>
 			<Report>LM_Расходы</Report>
 			<Report>LM_РасчетыПоЗарплате</Report>
-			<Report>LM_ДвиженияДокумента</Report>
 			<Report>LM_Взаиморасчеты</Report>
+			<Report>LM_ОтчетПоДисконтнымКартам</Report>
+			<Report>LM_Явки_2</Report>
 			<Report>LM_ВедомостьПоКассе</Report>
 			<Report>LM_ВедомостьПоКассеДляМенеджеров</Report>
 			<Report>LM_АналитикаПоУченикам</Report>
-			<Report>LM_ОтчетПоДисконтнымКартам</Report>
-			<Report>LM_Явки_2</Report>
+			<Report>LM_ДвиженияДокумента</Report>
 			<Report>АнализВерсийОбъектов</Report>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализОпроса</Report>
@@ -1785,15 +1785,15 @@
 			<Report>СогласияНаОбработкуПерсональныхДанныхДействующие</Report>
 			<Report>СогласияНаОбработкуПерсональныхДанныхИстекающие</Report>
 			<Report>УниверсальныйОтчет</Report>
-			<DataProcessor>ИнструментыРазработчикаОбновлениеВспомогательныхДанных</DataProcessor>
 			<DataProcessor>LM_Календарь</DataProcessor>
 			<DataProcessor>LM_ПанельУченика</DataProcessor>
-			<DataProcessor>LM_ОтмечаниеПосещений</DataProcessor>
-			<DataProcessor>LM_АвтоматическаяСменаСтатусов</DataProcessor>
+			<DataProcessor>LM_ВыборWebЦвета</DataProcessor>
 			<DataProcessor>LM_ОбработкаОбновления</DataProcessor>
 			<DataProcessor>LM_ОбработкаФото</DataProcessor>
-			<DataProcessor>LM_ВыборWebЦвета</DataProcessor>
+			<DataProcessor>LM_ОтмечаниеПосещений</DataProcessor>
 			<DataProcessor>LM_Настройки</DataProcessor>
+			<DataProcessor>LM_АвтоматическаяСменаСтатусов</DataProcessor>
+			<DataProcessor>ИнструментыРазработчикаОбновлениеВспомогательныхДанных</DataProcessor>
 			<DataProcessor>АвтоматическоеИзвлечениеТекстов</DataProcessor>
 			<DataProcessor>АктивныеПользователи</DataProcessor>
 			<DataProcessor>БлокировкаРаботыПользователей</DataProcessor>
