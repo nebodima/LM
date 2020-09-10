@@ -249,7 +249,6 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.РасходныйКассовыйОрдер.Attribute.LM_ФизЛицо</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_Урок.Attribute.Педагог</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ПеремещениеДенег.Attribute.Клиент</xr:Item>
-						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_СписаниеОстатков.Attribute.Ученик</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_РасчетЗарплаты.Attribute.Педагог</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.LM_ГрафикРабочегоВремениПедагога.Attribute.Педагог</xr:Item>
 					</References>

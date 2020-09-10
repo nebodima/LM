@@ -2629,13 +2629,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.LM_СписаниеОстатков.Attribute.Ученик</name>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>CommonForm.ФормаПоиска</name>
 		<right>
 			<name>View</name>
