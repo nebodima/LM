@@ -426,6 +426,45 @@
 						</Page>
 					</ChildItems>
 				</Pages>
+				<UsualGroup name="Группа2" id="220">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="221"/>
+					<ChildItems>
+						<InputField name="КоличествоЧасов" id="222">
+							<DataPath>Объект.КоличествоЧасов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Width>2</Width>
+							<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="223"/>
+							<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="224"/>
+						</InputField>
+						<InputField name="Сумма" id="225">
+							<DataPath>Объект.Сумма</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма взаиморасчетов</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="226"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="227"/>
+						</InputField>
+						<InputField name="СуммаБонусов" id="228">
+							<DataPath>Объект.СуммаБонусов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СуммаБонусовКонтекстноеМеню" id="229"/>
+							<ExtendedTooltip name="СуммаБонусовРасширеннаяПодсказка" id="230"/>
+						</InputField>
+						<InputField name="СуммаПоКассе" id="231">
+							<DataPath>Объект.СуммаПоКассе</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="СуммаПоКассеКонтекстноеМеню" id="232"/>
+							<ExtendedTooltip name="СуммаПоКассеРасширеннаяПодсказка" id="233"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<LabelField name="АвторДокумента" id="25">
 					<DataPath>Объект.АвторДокумента</DataPath>
 					<Enabled>false</Enabled>
