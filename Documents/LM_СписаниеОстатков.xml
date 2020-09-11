@@ -1312,28 +1312,6 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Template>Печать</Template>
-			<Command uuid="d9da915d-1eda-4e43-89e3-07ef2b6e0116">
-				<Properties>
-					<Name>Печать</Name>
-					<Synonym/>
-					<Comment/>
-					<Group>FormCommandBarImportant</Group>
-					<CommandParameterType>
-						<v8:Type>cfg:DocumentRef.LM_СписаниеОстатков</v8:Type>
-					</CommandParameterType>
-					<ParameterUseMode>Multiple</ParameterUseMode>
-					<ModifiesData>false</ModifiesData>
-					<Representation>PictureAndText</Representation>
-					<ToolTip/>
-					<Picture>
-						<xr:Ref>StdPicture.Print</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<Shortcut/>
-					<OnMainServerUnavalableBehavior>Auto</OnMainServerUnavalableBehavior>
-				</Properties>
-			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>

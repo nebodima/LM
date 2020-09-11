@@ -5011,7 +5011,7 @@
 		<Metadata name="Document.LM_РасчетЗарплаты.Form.ФормаДокумента" id="db8b899d-44ee-4ff0-a7bc-99c36565fb86" configVersion="6ed7ac61cb36fd4197960e2dac3419a900000000"/>
 		<Metadata name="Document.LM_РасчетЗарплаты.Form.ФормаДокумента.Form" id="db8b899d-44ee-4ff0-a7bc-99c36565fb86.0" configVersion="37e01f101b093f498e91880daa1c534e00000000"/>
 		<Metadata name="Document.LM_РасчетЗарплаты.ObjectModule" id="5569ab75-30a3-44c3-98f7-93a48b50c7a4.0" configVersion="dcd1d29a0678cb41a9beb8134c270a8500000000"/>
-		<Metadata name="Document.LM_СписаниеОстатков" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d" configVersion="173261bd361e9f48818effed165d0be000000000">
+		<Metadata name="Document.LM_СписаниеОстатков" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d" configVersion="1293791efc78a04c83e0ab0a3563d39500000000">
 			<Metadata name="Document.LM_СписаниеОстатков.TabularSection.ТЗСписания.Attribute.ГруппаОбучения" id="100ddb5e-aed8-45a7-9f39-2616639cf17f"/>
 			<Metadata name="Document.LM_СписаниеОстатков.Attribute.СуммаПоКассе" id="1b06e576-828e-43fb-91e9-bbe3fdc2eb14"/>
 			<Metadata name="Document.LM_СписаниеОстатков.TabularSection.ДисконтныеКарты.Attribute.ДисконтнаяКарта" id="1b86a557-04bb-41e2-84ac-23d26b0a3c8f"/>
@@ -5036,18 +5036,14 @@
 			<Metadata name="Document.LM_СписаниеОстатков.TabularSection.ТЗСписания.Attribute.Педагог" id="d1c63b9f-2fa4-40b3-9b41-959ae95eb7a0"/>
 			<Metadata name="Document.LM_СписаниеОстатков.TabularSection.ТЗСписаниеКасса.Attribute.Касса" id="d41030ab-7a18-4e03-b43b-fff26bb5bc2c"/>
 			<Metadata name="Document.LM_СписаниеОстатков.Attribute.СуммаБонусов" id="d9704e1c-e001-4f5a-a535-bb8ffb777b01"/>
-			<Metadata name="Document.LM_СписаниеОстатков.Command.Печать" id="d9da915d-1eda-4e43-89e3-07ef2b6e0116"/>
 			<Metadata name="Document.LM_СписаниеОстатков.Attribute.Комментарий" id="e1cb31a1-c7d9-4d81-b3bd-4ed191a445f6"/>
 			<Metadata name="Document.LM_СписаниеОстатков.TabularSection.ТЗСписания" id="f1d427c3-071f-4f0a-86cf-1ff8a67cc510"/>
 			<Metadata name="Document.LM_СписаниеОстатков.TabularSection.ТЗСписания.Attribute.Тариф" id="fa1e8010-0738-45f9-938f-19309c711f1f"/>
 		</Metadata>
-		<Metadata name="Document.LM_СписаниеОстатков.Command.Печать.CommandModule" id="d9da915d-1eda-4e43-89e3-07ef2b6e0116.2" configVersion="f8e38e304e6327498a091504234480d700000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.Form.ФормаДокумента" id="dcf9e1e5-1f97-43d2-b568-e583ac7bfbe4" configVersion="53886580ad45764bbd0a499f0e6ffec400000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.Form.ФормаДокумента.Form" id="dcf9e1e5-1f97-43d2-b568-e583ac7bfbe4.0" configVersion="3d700e24048a4c4aa5dd072004f1b9ca00000000"/>
-		<Metadata name="Document.LM_СписаниеОстатков.ManagerModule" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d.2" configVersion="523e8bae86935d4fa0bc031d588ea2c300000000"/>
+		<Metadata name="Document.LM_СписаниеОстатков.ManagerModule" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d.2" configVersion="f88a33b0ef4ae5468811d6a02b09a13a00000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.ObjectModule" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d.0" configVersion="6a5de125f12b5144ab9dd5a2ca8e7dfa00000000"/>
-		<Metadata name="Document.LM_СписаниеОстатков.Template.Печать" id="8a022827-4acb-47e3-82fe-9662751a8f4d" configVersion="4b5be3e89e12e7438e13ea574815235100000000"/>
-		<Metadata name="Document.LM_СписаниеОстатков.Template.Печать.Template" id="8a022827-4acb-47e3-82fe-9662751a8f4d.0" configVersion="1c453047e102de46a9a5fa8a3946b8ff00000000"/>
 		<Metadata name="Document.LM_Урок" id="11fbafff-f10d-406d-8964-34b15970e5b5" configVersion="2bc152cc5817464b9d8b3cc2778f0cb800000000">
 			<Metadata name="Document.LM_Урок.Attribute.КоличествоЧасов" id="07c6ee34-8349-4506-bf9e-3fec019be583"/>
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.Комментарий" id="151fa61b-57c0-43ed-ad86-9fd6881f242a"/>

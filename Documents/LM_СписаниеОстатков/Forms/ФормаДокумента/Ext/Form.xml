@@ -28,7 +28,7 @@
 			</Button>
 			<Button name="ФормаДокументСписаниеОстатковПечать" id="208">
 				<Type>CommandBarButton</Type>
-				<CommandName>Document.LM_СписаниеОстатков.Command.Печать</CommandName>
+				<CommandName>0:d9da915d-1eda-4e43-89e3-07ef2b6e0116</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаДокументСписаниеОстатковПечатьРасширеннаяПодсказка" id="209"/>
