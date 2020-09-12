@@ -29,7 +29,6 @@
 									<v8:content>Выберите дни зажав Ctrl + левая кнопка мыши</v8:content>
 								</v8:item>
 							</Title>
-							<TitleTextColor>#0000FF</TitleTextColor>
 							<TitleLocation>Bottom</TitleLocation>
 							<Width>1</Width>
 							<Height>1</Height>
@@ -44,6 +43,32 @@
 							<ContextMenu name="КалендарьКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="КалендарьРасширеннаяПодсказка" id="27"/>
 						</CalendarField>
+						<Button name="ЗаполнитьЭтотМесяц" id="371">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ЗаполнитьЭтотМесяц</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить тек. месяц</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗаполнитьЭтотМесяцРасширеннаяПодсказка" id="372"/>
+						</Button>
+						<Button name="ЗаполнитьСледующийМесяц" id="369">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ЗаполнитьСледующийМесяц</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.MoveRight</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заполнить след. месяц</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗаполнитьСледующийМесяцРасширеннаяПодсказка" id="370"/>
+						</Button>
 						<UsualGroup name="Группа11" id="252">
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
@@ -51,7 +76,7 @@
 							<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="253"/>
 							<ChildItems>
 								<Button name="Очистить" id="111">
-									<Type>UsualButton</Type>
+									<Type>Hyperlink</Type>
 									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 									<CommandName>Form.Command.Очистить</CommandName>
 									<ShapeRepresentation>WhenActive</ShapeRepresentation>
@@ -80,6 +105,7 @@
 							<v8:content>Страницы</v8:content>
 						</v8:item>
 					</Title>
+					<TitleTextColor>#008000</TitleTextColor>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -87,6 +113,9 @@
 						</v8:item>
 					</ToolTip>
 					<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="230"/>
+					<Events>
+						<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
+					</Events>
 					<ChildItems>
 						<Page name="Страница1" id="231">
 							<Title>
@@ -654,11 +683,18 @@
 							</Picture>
 							<ExtendedTooltip name="Страница4РасширеннаяПодсказка" id="243"/>
 							<ChildItems>
-								<Button name="НайтиДокументы" id="200">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.НайтиДокументы</CommandName>
-									<ExtendedTooltip name="НайтиДокументыРасширеннаяПодсказка" id="201"/>
-								</Button>
+								<LabelDecoration name="Декорация2" id="366">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>web:Green</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поиск пересечений. Предпроверка для выявления возможных наслоений.уроков</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="367"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="368"/>
+								</LabelDecoration>
 								<Table name="НайденныеДокументы2" id="290">
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<EnableStartDrag>true</EnableStartDrag>
@@ -687,7 +723,15 @@
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
 									<ContextMenu name="НайденныеДокументы2КонтекстноеМеню" id="291"/>
-									<AutoCommandBar name="НайденныеДокументы2КоманднаяПанель" id="292"/>
+									<AutoCommandBar name="НайденныеДокументы2КоманднаяПанель" id="292">
+										<ChildItems>
+											<Button name="НайтиДокументы" id="200">
+												<Type>CommandBarHyperlink</Type>
+												<CommandName>Form.Command.НайтиДокументы</CommandName>
+												<ExtendedTooltip name="НайтиДокументыРасширеннаяПодсказка" id="201"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
 									<ExtendedTooltip name="НайденныеДокументы2РасширеннаяПодсказка" id="293"/>
 									<SearchStringAddition name="НайденныеДокументы2СтрокаПоиска" id="294">
 										<AdditionSource>
@@ -1349,7 +1393,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Найти документы по отбору (предпроверка)</v8:content>
+					<v8:content>Найти документы по отбору</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1364,6 +1408,40 @@
 			</Picture>
 			<Action>НайтиДокументы</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗаполнитьСледующийМесяц" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить следующий месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить следующий месяц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСледующийМесяц</Action>
+		</Command>
+		<Command name="ЗаполнитьЭтотМесяц" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить этот месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить следующий месяц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьЭтотМесяц</Action>
 		</Command>
 	</Commands>
 </Form>

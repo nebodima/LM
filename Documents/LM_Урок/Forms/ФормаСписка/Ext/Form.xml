@@ -604,342 +604,355 @@
 						</LabelField>
 					</ChildItems>
 				</Table>
-				<Table name="Расшифровка" id="322">
-					<Representation>List</Representation>
-					<CommandBarLocation>None</CommandBarLocation>
-					<ChangeRowSet>false</ChangeRowSet>
-					<ChangeRowOrder>false</ChangeRowOrder>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<MaxHeight>5</MaxHeight>
-					<MaxRowsCount>5</MaxRowsCount>
-					<HorizontalLines>false</HorizontalLines>
-					<VerticalLines>false</VerticalLines>
-					<HorizontalStretch>false</HorizontalStretch>
-					<FileDragMode>AsFile</FileDragMode>
-					<DataPath>Расшифровка</DataPath>
-					<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
-					<SearchStringLocation>None</SearchStringLocation>
-					<ViewStatusLocation>None</ViewStatusLocation>
-					<SearchControlLocation>None</SearchControlLocation>
-					<AutoRefresh>false</AutoRefresh>
-					<AutoRefreshPeriod>60</AutoRefreshPeriod>
-					<Period>
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-					</Period>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<RestoreCurrentRow>false</RestoreCurrentRow>
-					<TopLevelParent xsi:nil="true"/>
-					<ShowRoot>true</ShowRoot>
-					<AllowRootChoice>false</AllowRootChoice>
-					<UpdateOnDataChange>Auto</UpdateOnDataChange>
-					<ContextMenu name="РасшифровкаКонтекстноеМеню" id="323">
-						<ChildItems>
-							<Button name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчеты" id="391">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.ОткрытьВзаиморасчетыКонтекст</CommandName>
-								<ExtendedTooltip name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчетыРасширеннаяПодсказка" id="392"/>
-							</Button>
-						</ChildItems>
-					</ContextMenu>
-					<AutoCommandBar name="РасшифровкаКоманднаяПанель" id="324"/>
-					<ExtendedTooltip name="РасшифровкаРасширеннаяПодсказка" id="325"/>
-					<SearchStringAddition name="РасшифровкаСтрокаПоиска" id="326">
-						<AdditionSource>
-							<Item>Расшифровка</Item>
-							<Type>SearchStringRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="РасшифровкаСтрокаПоискаКонтекстноеМеню" id="327"/>
-						<ExtendedTooltip name="РасшифровкаСтрокаПоискаРасширеннаяПодсказка" id="328"/>
-					</SearchStringAddition>
-					<ViewStatusAddition name="РасшифровкаСостояниеПросмотра" id="329">
-						<AdditionSource>
-							<Item>Расшифровка</Item>
-							<Type>ViewStatusRepresentation</Type>
-						</AdditionSource>
-						<ContextMenu name="РасшифровкаСостояниеПросмотраКонтекстноеМеню" id="330"/>
-						<ExtendedTooltip name="РасшифровкаСостояниеПросмотраРасширеннаяПодсказка" id="331"/>
-					</ViewStatusAddition>
-					<SearchControlAddition name="РасшифровкаУправлениеПоиском" id="332">
-						<AdditionSource>
-							<Item>Расшифровка</Item>
-							<Type>SearchControl</Type>
-						</AdditionSource>
-						<ContextMenu name="РасшифровкаУправлениеПоискомКонтекстноеМеню" id="333"/>
-						<ExtendedTooltip name="РасшифровкаУправлениеПоискомРасширеннаяПодсказка" id="334"/>
-					</SearchControlAddition>
-					<Events>
-						<Event name="Selection">РасшифровкаВыбор</Event>
-					</Events>
-					<ChildItems>
-						<LabelField name="РасшифровкаНомерСтроки" id="344">
-							<DataPath>Расшифровка.НомерСтроки</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<Width>1</Width>
-							<MaxWidth>2</MaxWidth>
-							<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
-							<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
-						</LabelField>
-						<LabelField name="РасшифровкаСуммаОстаток" id="384">
-							<DataPath>Расшифровка.СуммаОстаток</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Долг</v8:content>
-								</v8:item>
-							</Title>
-							<CellHyperlink>true</CellHyperlink>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>1</Width>
-							<MarkNegatives>true</MarkNegatives>
-							<Hiperlink>true</Hiperlink>
-							<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
-							<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
-						</LabelField>
-						<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
-							<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Долг по предмету</v8:content>
-								</v8:item>
-							</Title>
-							<CellHyperlink>true</CellHyperlink>
-							<Width>1</Width>
-							<MarkNegatives>true</MarkNegatives>
-							<Hiperlink>true</Hiperlink>
-							<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
-							<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
-						</LabelField>
-						<LabelField name="РасшифровкаУченик" id="368">
-							<DataPath>Расшифровка.Ученик</DataPath>
-							<CellHyperlink>true</CellHyperlink>
-							<HeaderPicture>
-								<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>1</Width>
-							<Hiperlink>true</Hiperlink>
-							<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
-							<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
-							<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
-						</LabelField>
-						<PictureField name="РасшифровкаСписатьОплату" id="353">
-							<DataPath>Расшифровка.СписатьОплату</DataPath>
-							<Width>1</Width>
-							<ValuesPicture>
-								<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</ValuesPicture>
-							<FileDragMode>AsFile</FileDragMode>
-							<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
-							<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
-						</PictureField>
-						<LabelField name="РасшифровкаЗаметка" id="335">
-							<DataPath>Расшифровка.Заметка</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Заметка</v8:content>
-								</v8:item>
-							</Title>
-							<Width>1</Width>
-							<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
-							<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
-						</LabelField>
-						<PictureField name="РасшифровкаЯвка" id="374">
-							<DataPath>Расшифровка.Явка</DataPath>
-							<Width>1</Width>
-							<ValuesPicture>
-								<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</ValuesPicture>
-							<FileDragMode>AsFile</FileDragMode>
-							<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
-							<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
-						</PictureField>
-						<LabelField name="РасшифровкаПричина" id="347">
-							<DataPath>Расшифровка.Причина</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Width>1</Width>
-							<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
-							<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
-						</LabelField>
-						<LabelField name="РасшифровкаТариф" id="365">
-							<DataPath>Расшифровка.Тариф</DataPath>
-							<Width>1</Width>
-							<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
-							<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
-						</LabelField>
-						<LabelField name="РасшифровкаСкидка" id="341">
-							<DataPath>Расшифровка.Скидка</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Скидка</v8:content>
-								</v8:item>
-							</Title>
-							<Width>1</Width>
-							<ContextMenu name="РасшифровкаСкидкаКонтекстноеМеню" id="342"/>
-							<ExtendedTooltip name="РасшифровкаСкидкаРасширеннаяПодсказка" id="343"/>
-						</LabelField>
-						<LabelField name="РасшифровкаСуммаСкидки" id="350">
-							<DataPath>Расшифровка.СуммаСкидки</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Сумма скидки</v8:content>
-								</v8:item>
-							</Title>
-							<Width>2</Width>
-							<ContextMenu name="РасшифровкаСуммаСкидкиКонтекстноеМеню" id="351"/>
-							<ExtendedTooltip name="РасшифровкаСуммаСкидкиРасширеннаяПодсказка" id="352"/>
-						</LabelField>
-						<LabelField name="РасшифровкаСумма" id="359">
-							<DataPath>Расшифровка.Сумма</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Сумма итого</v8:content>
-								</v8:item>
-							</Title>
-							<Width>1</Width>
-							<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
-							<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
-						</LabelField>
-						<LabelField name="РасшифровкаКомментарий" id="338">
-							<DataPath>Расшифровка.Комментарий</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Width>1</Width>
-							<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
-							<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
-						</LabelField>
-					</ChildItems>
-				</Table>
-				<UsualGroup name="ГруппаДниРождения" id="130">
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа дни рождения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<CollapsedRepresentationTitle>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Дни рождения ближайшие (развернуть)</v8:content>
-						</v8:item>
-					</CollapsedRepresentationTitle>
-					<Collapsed>true</Collapsed>
+				<UsualGroup name="Группа1" id="432">
+					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
-					<ShowLeftMargin>false</ShowLeftMargin>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаДниРожденияРасширеннаяПодсказка" id="131"/>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="433"/>
 					<ChildItems>
-						<Table name="ДниРождения" id="248">
+						<Table name="Расшифровка" id="322">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
-							<HeightInTableRows>4</HeightInTableRows>
-							<RowSelectionMode>Row</RowSelectionMode>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>5</MaxHeight>
+							<MaxRowsCount>5</MaxRowsCount>
 							<HorizontalLines>false</HorizontalLines>
 							<VerticalLines>false</VerticalLines>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<HorizontalStretch>false</HorizontalStretch>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>ДниРождения</DataPath>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ДниРожденияКонтекстноеМеню" id="249"/>
-							<AutoCommandBar name="ДниРожденияКоманднаяПанель" id="250"/>
-							<ExtendedTooltip name="ДниРожденияРасширеннаяПодсказка" id="251"/>
-							<SearchStringAddition name="ДниРожденияСтрокаПоиска" id="252">
+							<DataPath>Расшифровка</DataPath>
+							<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="РасшифровкаКонтекстноеМеню" id="323">
+								<ChildItems>
+									<Button name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчеты" id="391">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьВзаиморасчетыКонтекст</CommandName>
+										<ExtendedTooltip name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчетыРасширеннаяПодсказка" id="392"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="РасшифровкаКоманднаяПанель" id="324"/>
+							<ExtendedTooltip name="РасшифровкаРасширеннаяПодсказка" id="325"/>
+							<SearchStringAddition name="РасшифровкаСтрокаПоиска" id="326">
 								<AdditionSource>
-									<Item>ДниРождения</Item>
+									<Item>Расшифровка</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ДниРожденияСтрокаПоискаКонтекстноеМеню" id="253"/>
-								<ExtendedTooltip name="ДниРожденияСтрокаПоискаРасширеннаяПодсказка" id="254"/>
+								<ContextMenu name="РасшифровкаСтрокаПоискаКонтекстноеМеню" id="327"/>
+								<ExtendedTooltip name="РасшифровкаСтрокаПоискаРасширеннаяПодсказка" id="328"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ДниРожденияСостояниеПросмотра" id="255">
+							<ViewStatusAddition name="РасшифровкаСостояниеПросмотра" id="329">
 								<AdditionSource>
-									<Item>ДниРождения</Item>
+									<Item>Расшифровка</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ДниРожденияСостояниеПросмотраКонтекстноеМеню" id="256"/>
-								<ExtendedTooltip name="ДниРожденияСостояниеПросмотраРасширеннаяПодсказка" id="257"/>
+								<ContextMenu name="РасшифровкаСостояниеПросмотраКонтекстноеМеню" id="330"/>
+								<ExtendedTooltip name="РасшифровкаСостояниеПросмотраРасширеннаяПодсказка" id="331"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ДниРожденияУправлениеПоиском" id="258">
+							<SearchControlAddition name="РасшифровкаУправлениеПоиском" id="332">
 								<AdditionSource>
-									<Item>ДниРождения</Item>
+									<Item>Расшифровка</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ДниРожденияУправлениеПоискомКонтекстноеМеню" id="259"/>
-								<ExtendedTooltip name="ДниРожденияУправлениеПоискомРасширеннаяПодсказка" id="260"/>
+								<ContextMenu name="РасшифровкаУправлениеПоискомКонтекстноеМеню" id="333"/>
+								<ExtendedTooltip name="РасшифровкаУправлениеПоискомРасширеннаяПодсказка" id="334"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">РасшифровкаВыбор</Event>
+							</Events>
 							<ChildItems>
-								<InputField name="ДниРожденияФизЛицо" id="264">
-									<DataPath>ДниРождения.ФизЛицо</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДниРожденияФизЛицоКонтекстноеМеню" id="265"/>
-									<ExtendedTooltip name="ДниРожденияФизЛицоРасширеннаяПодсказка" id="266"/>
-								</InputField>
-								<LabelField name="ДниРожденияДата" id="261">
-									<DataPath>ДниРождения.Дата</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДниРожденияДатаКонтекстноеМеню" id="262"/>
-									<ExtendedTooltip name="ДниРожденияДатаРасширеннаяПодсказка" id="263"/>
+								<LabelField name="РасшифровкаНомерСтроки" id="344">
+									<DataPath>Расшифровка.НомерСтроки</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>1</Width>
+									<MaxWidth>2</MaxWidth>
+									<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
+									<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
 								</LabelField>
-								<LabelField name="ДниРожденияВозраст" id="267">
-									<DataPath>ДниРождения.Возраст</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДниРожденияВозрастКонтекстноеМеню" id="268"/>
-									<ExtendedTooltip name="ДниРожденияВозрастРасширеннаяПодсказка" id="269"/>
-								</LabelField>
-								<InputField name="ДниРожденияДеньГода" id="273">
-									<DataPath>ДниРождения.ДеньГода</DataPath>
-									<Visible>false</Visible>
-									<TitleTextColor>#000000</TitleTextColor>
-									<TitleBackColor>#C0C0C0</TitleBackColor>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ДниРожденияДеньГодаКонтекстноеМеню" id="274"/>
-									<ExtendedTooltip name="ДниРожденияДеньГодаРасширеннаяПодсказка" id="275"/>
-								</InputField>
-								<LabelField name="ДниРожденияОсталосьДней" id="270">
-									<DataPath>ДниРождения.ОсталосьДней</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<Format>
+								<LabelField name="РасшифровкаСуммаОстаток" id="384">
+									<DataPath>Расшифровка.СуммаОстаток</DataPath>
+									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>ЧН=0</v8:content>
+											<v8:content>Долг</v8:content>
 										</v8:item>
-									</Format>
-									<ContextMenu name="ДниРожденияОсталосьДнейКонтекстноеМеню" id="271"/>
-									<ExtendedTooltip name="ДниРожденияОсталосьДнейРасширеннаяПодсказка" id="272"/>
+									</Title>
+									<CellHyperlink>true</CellHyperlink>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>1</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
+								</LabelField>
+								<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
+									<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Долг по предмету</v8:content>
+										</v8:item>
+									</Title>
+									<CellHyperlink>true</CellHyperlink>
+									<Width>1</Width>
+									<MarkNegatives>true</MarkNegatives>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
+								</LabelField>
+								<LabelField name="РасшифровкаУченик" id="368">
+									<DataPath>Расшифровка.Ученик</DataPath>
+									<CellHyperlink>true</CellHyperlink>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>1</Width>
+									<Hiperlink>true</Hiperlink>
+									<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
+									<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
+									<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
+								</LabelField>
+								<PictureField name="РасшифровкаСписатьОплату" id="353">
+									<DataPath>Расшифровка.СписатьОплату</DataPath>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
+									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
+								</PictureField>
+								<LabelField name="РасшифровкаЗаметка" id="335">
+									<DataPath>Расшифровка.Заметка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заметка</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
+									<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
+								</LabelField>
+								<PictureField name="РасшифровкаЯвка" id="374">
+									<DataPath>Расшифровка.Явка</DataPath>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
+									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
+								</PictureField>
+								<LabelField name="РасшифровкаПричина" id="347">
+									<DataPath>Расшифровка.Причина</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
+									<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
+								</LabelField>
+								<LabelField name="РасшифровкаТариф" id="365">
+									<DataPath>Расшифровка.Тариф</DataPath>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
+									<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
+								</LabelField>
+								<LabelField name="РасшифровкаСкидка" id="341">
+									<DataPath>Расшифровка.Скидка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скидка</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаСкидкаКонтекстноеМеню" id="342"/>
+									<ExtendedTooltip name="РасшифровкаСкидкаРасширеннаяПодсказка" id="343"/>
+								</LabelField>
+								<LabelField name="РасшифровкаСуммаСкидки" id="350">
+									<DataPath>Расшифровка.СуммаСкидки</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма скидки</v8:content>
+										</v8:item>
+									</Title>
+									<Width>2</Width>
+									<ContextMenu name="РасшифровкаСуммаСкидкиКонтекстноеМеню" id="351"/>
+									<ExtendedTooltip name="РасшифровкаСуммаСкидкиРасширеннаяПодсказка" id="352"/>
+								</LabelField>
+								<LabelField name="РасшифровкаСумма" id="359">
+									<DataPath>Расшифровка.Сумма</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма итого</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
+									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
+								</LabelField>
+								<LabelField name="РасшифровкаКомментарий" id="338">
+									<DataPath>Расшифровка.Комментарий</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
+									<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
+						<UsualGroup name="ГруппаДниРождения" id="130">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа дни рождения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дни рождения ближайшие (развернуть)</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<Collapsed>true</Collapsed>
+							<Representation>None</Representation>
+							<ShowLeftMargin>false</ShowLeftMargin>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДниРожденияРасширеннаяПодсказка" id="131"/>
+							<ChildItems>
+								<Table name="ДниРождения" id="248">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<HeightInTableRows>4</HeightInTableRows>
+									<RowSelectionMode>Row</RowSelectionMode>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<HorizontalStretch>false</HorizontalStretch>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДниРождения</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ДниРожденияКонтекстноеМеню" id="249"/>
+									<AutoCommandBar name="ДниРожденияКоманднаяПанель" id="250"/>
+									<ExtendedTooltip name="ДниРожденияРасширеннаяПодсказка" id="251"/>
+									<SearchStringAddition name="ДниРожденияСтрокаПоиска" id="252">
+										<AdditionSource>
+											<Item>ДниРождения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДниРожденияСтрокаПоискаКонтекстноеМеню" id="253"/>
+										<ExtendedTooltip name="ДниРожденияСтрокаПоискаРасширеннаяПодсказка" id="254"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДниРожденияСостояниеПросмотра" id="255">
+										<AdditionSource>
+											<Item>ДниРождения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДниРожденияСостояниеПросмотраКонтекстноеМеню" id="256"/>
+										<ExtendedTooltip name="ДниРожденияСостояниеПросмотраРасширеннаяПодсказка" id="257"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДниРожденияУправлениеПоиском" id="258">
+										<AdditionSource>
+											<Item>ДниРождения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДниРожденияУправлениеПоискомКонтекстноеМеню" id="259"/>
+										<ExtendedTooltip name="ДниРожденияУправлениеПоискомРасширеннаяПодсказка" id="260"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ДниРожденияФизЛицо" id="264">
+											<DataPath>ДниРождения.ФизЛицо</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<ContextMenu name="ДниРожденияФизЛицоКонтекстноеМеню" id="265"/>
+											<ExtendedTooltip name="ДниРожденияФизЛицоРасширеннаяПодсказка" id="266"/>
+										</InputField>
+										<LabelField name="ДниРожденияДата" id="261">
+											<DataPath>ДниРождения.Дата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<ContextMenu name="ДниРожденияДатаКонтекстноеМеню" id="262"/>
+											<ExtendedTooltip name="ДниРожденияДатаРасширеннаяПодсказка" id="263"/>
+										</LabelField>
+										<LabelField name="ДниРожденияВозраст" id="267">
+											<DataPath>ДниРождения.Возраст</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<ContextMenu name="ДниРожденияВозрастКонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="ДниРожденияВозрастРасширеннаяПодсказка" id="269"/>
+										</LabelField>
+										<InputField name="ДниРожденияДеньГода" id="273">
+											<DataPath>ДниРождения.ДеньГода</DataPath>
+											<Visible>false</Visible>
+											<TitleTextColor>#000000</TitleTextColor>
+											<TitleBackColor>#C0C0C0</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДниРожденияДеньГодаКонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="ДниРожденияДеньГодаРасширеннаяПодсказка" id="275"/>
+										</InputField>
+										<LabelField name="ДниРожденияОсталосьДней" id="270">
+											<DataPath>ДниРождения.ОсталосьДней</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ДниРожденияОсталосьДнейКонтекстноеМеню" id="271"/>
+											<ExtendedTooltip name="ДниРожденияОсталосьДнейРасширеннаяПодсказка" id="272"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаДолжники" id="140">

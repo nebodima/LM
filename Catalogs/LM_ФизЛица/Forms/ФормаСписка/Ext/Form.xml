@@ -3,21 +3,21 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаСоздать" id="156">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.Create</CommandName>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="157"/>
 			</Button>
 			<Button name="ФормаСоздатьГруппу" id="158">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.CreateFolder</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьГруппуРасширеннаяПодсказка" id="159"/>
 			</Button>
 			<Button name="ФормаСкопировать" id="160">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.StandardCommand.Copy</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="161"/>
@@ -41,7 +41,7 @@
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Document.LM_СписаниеОстатков.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Parent</DataPath>
+						<DataPath>Items.Список.CurrentData.Родитель</DataPath>
 						<Picture>
 							<xr:Ref>StdPicture.Document</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -53,7 +53,7 @@
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Document.ПриходныйКассовыйОрдер.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Ref</DataPath>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 						<Picture>
 							<xr:Ref>StdPicture.Document</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -63,48 +63,15 @@
 				</ChildItems>
 			</Popup>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="167">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<CommandName>CommonCommand.Напомнить</CommandName>
-				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="168"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
-		<UsualGroup name="Группа1" id="148">
-			<Group>AlwaysHorizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="149"/>
-			<ChildItems>
-				<LabelField name="Задолженность" id="142">
-					<DataPath>Задолженность</DataPath>
-					<HorizontalAlign>Left</HorizontalAlign>
-					<HorizontalStretch>false</HorizontalStretch>
-					<MarkNegatives>true</MarkNegatives>
-					<Hiperlink>true</Hiperlink>
-					<ContextMenu name="ЗадолженностьКонтекстноеМеню" id="143"/>
-					<ExtendedTooltip name="ЗадолженностьРасширеннаяПодсказка" id="144"/>
-					<Events>
-						<Event name="Click">ЗадолженностьНажатие</Event>
-					</Events>
-				</LabelField>
-				<PictureField name="Фото" id="153">
-					<DataPath>Фото</DataPath>
-					<Visible>false</Visible>
-					<TitleLocation>None</TitleLocation>
-					<GroupVerticalAlign>Top</GroupVerticalAlign>
-					<PictureSize>AutoSize</PictureSize>
-					<Border width="1">
-						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-					</Border>
-					<FileDragMode>AsFile</FileDragMode>
-					<ContextMenu name="ФотоКонтекстноеМеню" id="154"/>
-					<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="155"/>
-				</PictureField>
-			</ChildItems>
-		</UsualGroup>
 		<CommandBar name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
 				<v8:item>
@@ -175,7 +142,7 @@
 			</Events>
 			<ChildItems>
 				<LabelField name="Ссылка" id="16">
-					<DataPath>Список.Ref</DataPath>
+					<DataPath>Список.Ссылка</DataPath>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
@@ -183,7 +150,7 @@
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
 				<LabelField name="Код" id="22">
-					<DataPath>Список.Code</DataPath>
+					<DataPath>Список.Код</DataPath>
 					<Visible>false</Visible>
 					<UserVisible>
 						<xr:Common>false</xr:Common>
@@ -192,11 +159,17 @@
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="Наименование" id="19">
-					<DataPath>Список.Description</DataPath>
+					<DataPath>Список.Наименование</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<CheckBoxField name="ЭтоПедагог" id="179">
+					<DataPath>Список.ЭтоПедагог</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЭтоПедагогКонтекстноеМеню" id="180"/>
+					<ExtendedTooltip name="ЭтоПедагогРасширеннаяПодсказка" id="181"/>
+				</CheckBoxField>
 				<LabelField name="ДатаРождения" id="28">
 					<DataPath>Список.ДатаРождения</DataPath>
 					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="29"/>
@@ -217,23 +190,10 @@
 					<ContextMenu name="ТелефонКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="33"/>
 				</LabelField>
-				<LabelField name="EMail" id="34">
-					<DataPath>Список.EMail</DataPath>
-					<ContextMenu name="EMailКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="EMailРасширеннаяПодсказка" id="36"/>
-				</LabelField>
-				<LabelField name="VK" id="150">
-					<DataPath>~Список.VK</DataPath>
-					<UserVisible>
-						<xr:Common>false</xr:Common>
-					</UserVisible>
-					<ContextMenu name="VKКонтекстноеМеню" id="151"/>
-					<ExtendedTooltip name="VKРасширеннаяПодсказка" id="152"/>
-				</LabelField>
-				<LabelField name="Реферал" id="162">
-					<DataPath>~Список.Реферал</DataPath>
-					<ContextMenu name="РефералКонтекстноеМеню" id="163"/>
-					<ExtendedTooltip name="РефералРасширеннаяПодсказка" id="164"/>
+				<LabelField name="Долг" id="176">
+					<DataPath>Список.Долг</DataPath>
+					<ContextMenu name="ДолгКонтекстноеМеню" id="177"/>
+					<ExtendedTooltip name="ДолгРасширеннаяПодсказка" id="178"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -245,8 +205,48 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникLM_ФизЛица.Ссылка КАК Ссылка,
+	СправочникLM_ФизЛица.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникLM_ФизЛица.Родитель КАК Родитель,
+	СправочникLM_ФизЛица.ЭтоГруппа КАК ЭтоГруппа,
+	СправочникLM_ФизЛица.Код КАК Код,
+	СправочникLM_ФизЛица.Наименование КАК Наименование,
+	СправочникLM_ФизЛица.ДатаРождения КАК ДатаРождения,
+	СправочникLM_ФизЛица.Возраст КАК Возраст,
+	СправочникLM_ФизЛица.Телефон КАК Телефон,
+	СправочникLM_ФизЛица.EMail КАК EMail,
+	СправочникLM_ФизЛица.Фото КАК Фото,
+	СправочникLM_ФизЛица.Http КАК Http,
+	СправочникLM_ФизЛица.Комментарий КАК Комментарий,
+	СправочникLM_ФизЛица.ОповеститьПоEmail КАК ОповеститьПоEmail,
+	СправочникLM_ФизЛица.ОповеститьПоSMS КАК ОповеститьПоSMS,
+	СправочникLM_ФизЛица.ОповеститьПоТелефону КАК ОповеститьПоТелефону,
+	СправочникLM_ФизЛица.СтавкаПедагога КАК СтавкаПедагога,
+	СправочникLM_ФизЛица.ИсточникИнформации КАК ИсточникИнформации,
+	СправочникLM_ФизЛица.Родитель1 КАК Родитель1,
+	СправочникLM_ФизЛица.Пол КАК Пол,
+	СправочникLM_ФизЛица.Статус КАК Статус,
+	СправочникLM_ФизЛица.Цвет КАК Цвет,
+	СправочникLM_ФизЛица.Заметки КАК Заметки,
+	СправочникLM_ФизЛица.ТолькоВыбранныеГруппыОбучения КАК ТолькоВыбранныеГруппыОбучения,
+	СправочникLM_ФизЛица.ЭтоПедагог КАК ЭтоПедагог,
+	СправочникLM_ФизЛица.ГруппыОбучения.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		ГруппаОбучения КАК ГруппаОбучения,
+		ДатаНачала КАК ДатаНачала,
+		ДатаОкончания КАК ДатаОкончания
+	) КАК ГруппыОбучения,
+	СправочникLM_ФизЛица.Предопределенный КАК Предопределенный,
+	СправочникLM_ФизЛица.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	LM_СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК Долг
+ИЗ
+	Справочник.LM_ФизЛица КАК СправочникLM_ФизЛица
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК LM_СписанияСуммЗаУрокиОстатки
+		ПО (LM_СписанияСуммЗаУрокиОстатки.Клиент = СправочникLM_ФизЛица.Ссылка)</QueryText>
 				<MainTable>Catalog.LM_ФизЛица</MainTable>
 				<ListSettings>
 					<dcsset:filter>
@@ -265,37 +265,6 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
-		</Attribute>
-		<Attribute name="Задолженность" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Задолженность</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>2</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="Фото" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Фото</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

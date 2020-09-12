@@ -6,21 +6,20 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаПровестиИЗакрыть" id="66">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>PictureAndText</Representation>
-				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="67"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="68">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="69"/>
 			</Button>
 			<Button name="ФормаПровести" id="70">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Post</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
@@ -43,12 +42,13 @@
 					<xr:Ref>StdPicture.Print</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
+				<CommandSource>Form</CommandSource>
 				<Representation>Picture</Representation>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="217"/>
 				<ChildItems>
 					<Button name="ФормаДокументПКОПечатьПКО" id="161">
-						<Type>CommandBarButton</Type>
+						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Document.ПриходныйКассовыйОрдер.Command.ПечатьПКО</CommandName>
 						<DataPath>Объект.Ref</DataPath>
@@ -68,7 +68,7 @@
 				</ChildItems>
 			</Popup>
 			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="159">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<Title>
@@ -81,14 +81,14 @@
 				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="160"/>
 			</Button>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="147">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<CommandName>CommonCommand.Напомнить</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="148"/>
 			</Button>
 			<Button name="ФормаДвиженияДокумента" id="265">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.ДвиженияДокумента</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаДвиженияДокументаРасширеннаяПодсказка" id="266"/>
@@ -102,6 +102,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -363,8 +364,22 @@
 			<BackColor>#EBFFEB</BackColor>
 			<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="210"/>
 			<ChildItems>
+				<InputField name="СуммаБонусов" id="206">
+					<DataPath>Объект.СуммаБонусов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата бонусами</v8:content>
+						</v8:item>
+					</Title>
+					<Width>4</Width>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СуммаБонусовКонтекстноеМеню" id="207"/>
+					<ExtendedTooltip name="СуммаБонусовРасширеннаяПодсказка" id="208"/>
+				</InputField>
 				<InputField name="ДисконтнаяКарта" id="213">
 					<DataPath>Объект.ДисконтнаяКарта</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ClearButton>true</ClearButton>
 					<ChoiceParameterLinks>
@@ -374,6 +389,12 @@
 							<xr:ValueChange>Clear</xr:ValueChange>
 						</xr:Link>
 					</ChoiceParameterLinks>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДисконтнаяКарта</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="214"/>
 					<ExtendedTooltip name="ДисконтнаяКартаРасширеннаяПодсказка" id="215"/>
 					<Events>
@@ -381,22 +402,16 @@
 						<Event name="StartChoice">ДисконтнаяКартаНачалоВыбора</Event>
 					</Events>
 				</InputField>
-				<InputField name="СуммаБонусов" id="206">
-					<DataPath>Объект.СуммаБонусов</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Оплата бонусами</v8:content>
-						</v8:item>
-					</Title>
-					<Width>5</Width>
-					<ClearButton>true</ClearButton>
-					<ContextMenu name="СуммаБонусовКонтекстноеМеню" id="207"/>
-					<ExtendedTooltip name="СуммаБонусовРасширеннаяПодсказка" id="208"/>
-				</InputField>
 				<Button name="РассчитатьОстатокБонусов" id="211">
-					<Type>Hyperlink</Type>
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
 					<CommandName>Form.Command.РассчитатьОстатокБонусов</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Picture>
+						<xr:Ref>StdPicture.MoveRight</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<PictureLocation>Right</PictureLocation>
 					<ExtendedTooltip name="РассчитатьОстатокБонусовРасширеннаяПодсказка" id="212"/>
 				</Button>
 				<LabelField name="ДоступноБонусов" id="233">
@@ -448,8 +463,15 @@
 		</LabelField>
 		<InputField name="Комментарий" id="19">
 			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
 		</InputField>
@@ -569,10 +591,6 @@
 					<v8:content>Рассчитать остаток бонусов</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.MoveRight</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>РассчитатьОстатокБонусов</Action>
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
