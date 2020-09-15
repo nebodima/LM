@@ -1,8 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<CommandsVisibility>
+		<Command name="Document.LM_Урок.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<CommandsPlacement>
+		<Command name="Document.LM_Урок.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
 	<CommandsOrder>
 		<Command name="Document.LM_Урок.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
 		</Command>
 		<Command name="Document.LM_ДополнительныеРасходы.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
@@ -13,8 +26,15 @@
 		<Command name="Document.LM_НачислениеБонусов.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="Document.LM_НачисленияПедагогам.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.LM_СписаниеОстатков.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 	</CommandsOrder>
 	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
 		<Group>NavigationPanelOrdinary</Group>
 	</GroupsOrder>
 </CommandInterface>

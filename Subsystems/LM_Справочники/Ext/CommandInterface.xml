@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<CommandsVisibility>
+		<Command name="Catalog.LM_ФизЛица.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="Catalog.Заметки.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -17,11 +22,17 @@
 			</Visibility>
 		</Command>
 	</CommandsVisibility>
-	<CommandsOrder>
-		<Command name="Catalog.Организации.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
+	<CommandsPlacement>
 		<Command name="Catalog.LM_ФизЛица.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Catalog.LM_ФизЛица.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.Организации.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Catalog.Кассы.StandardCommand.OpenList">
@@ -45,9 +56,6 @@
 		<Command name="Catalog.LM_Помещения.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="0:d22f3bdf-88b0-4002-ac36-1ad9a7f86d85">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
 		<Command name="Catalog.Заметки.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
@@ -60,8 +68,18 @@
 		<Command name="InformationRegister.НапоминанияПользователя.Command.НапоминанияПользователей">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="Catalog.ДоговорыКонтрагентов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.LM_Скидки.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.LM_СтавкиПедагогов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 	</CommandsOrder>
 	<GroupsOrder>
+		<Group>NavigationPanelImportant</Group>
 		<Group>NavigationPanelOrdinary</Group>
 	</GroupsOrder>
 </CommandInterface>

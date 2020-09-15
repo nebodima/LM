@@ -1953,7 +1953,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement</name>
+		<name>Configuration.LessonsManagement__</name>
 		<right>
 			<name>Administration</name>
 			<value>false</value>

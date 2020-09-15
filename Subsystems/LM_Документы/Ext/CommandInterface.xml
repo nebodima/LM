@@ -4,17 +4,13 @@
 		<Command name="DocumentJournal.LM_ОбщийЖурнал.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
-		<Command name="Document.LM_СписаниеОстатков.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
-		</Command>
-		<Command name="Document.ЭлектронноеПисьмоИсходящее.StandardCommand.OpenList">
+		<Command name="InformationRegister.LM_Настройки.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 	</CommandsOrder>
 	<SubsystemsOrder>
 		<Subsystem>Subsystem.LM_Документы.Subsystem.LM_Уроки</Subsystem>
 		<Subsystem>Subsystem.LM_Документы.Subsystem.LM_Касса</Subsystem>
-		<Subsystem>fa2131e0-236a-49b8-97c2-dfe6ec1f58c9</Subsystem>
 	</SubsystemsOrder>
 	<GroupsOrder>
 		<Group>NavigationPanelOrdinary</Group>

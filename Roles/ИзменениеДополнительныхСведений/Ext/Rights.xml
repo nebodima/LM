@@ -55,7 +55,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement</name>
+		<name>Configuration.LessonsManagement__</name>
 		<right>
 			<name>MainWindowModeNormal</name>
 			<value>true</value>

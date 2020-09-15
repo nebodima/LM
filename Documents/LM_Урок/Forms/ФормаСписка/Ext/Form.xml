@@ -261,49 +261,17 @@
 							<ShapeRepresentation>WhenActive</ShapeRepresentation>
 							<ExtendedTooltip name="ОтчетВзаиморасчетыОткрытьРасширеннаяПодсказка" id="150"/>
 						</Button>
-						<InputField name="КартаКлиента" id="381">
-							<DataPath>КартаКлиента</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<ClearButton>true</ClearButton>
-							<InputHint>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Карта клиента</v8:content>
-								</v8:item>
-							</InputHint>
-							<ContextMenu name="КартаКлиентаКонтекстноеМеню" id="382"/>
-							<ExtendedTooltip name="КартаКлиентаРасширеннаяПодсказка" id="383"/>
-							<Events>
-								<Event name="OnChange">КартаКлиентаПриИзменении</Event>
-							</Events>
-						</InputField>
-						<Button name="ОтчетLM_ОтчетПоДисконтнымКартамОткрыть" id="422">
-							<Type>Hyperlink</Type>
-							<Representation>PictureAndText</Representation>
-							<CommandName>Report.LM_ОтчетПоДисконтнымКартам.StandardCommand.Open</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.Report</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Бонусы</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ОтчетLM_ОтчетПоДисконтнымКартамОткрытьРасширеннаяПодсказка" id="423"/>
-						</Button>
 						<UsualGroup name="ГруппаНастройка" id="396">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Настройка отображения</v8:content>
+									<v8:content>Настройка</v8:content>
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
 							<Behavior>PopUp</Behavior>
+							<ControlRepresentation>Picture</ControlRepresentation>
 							<Representation>None</Representation>
-							<BackColor>#CCFFCC</BackColor>
 							<ExtendedTooltip name="ГруппаНастройкаРасширеннаяПодсказка" id="397"/>
 							<ChildItems>
 								<CheckBoxField name="ОтображатьДетализациюУрока" id="424">
@@ -406,6 +374,7 @@
 						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 					</SearchControlAddition>
 					<Events>
+						<Event name="Selection">СписокВыбор</Event>
 						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
 					</Events>
 					<ChildItems>
@@ -426,11 +395,10 @@
 								<xr:Ref>StdPicture.Calendar</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ДФ=dd.MM.yyyy</v8:content>
+									<v8:content>ДФ='dd.MM.yyyy (HH:mm)'</v8:content>
 								</v8:item>
 							</Format>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
@@ -438,6 +406,9 @@
 						</LabelField>
 						<LabelField name="Начало" id="412">
 							<DataPath>Список.Date</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -459,9 +430,13 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>конец</v8:content>
+									<v8:content>До</v8:content>
 								</v8:item>
 							</Title>
+							<HeaderPicture>
+								<xr:Ref>CommonPicture.ВыполнитьРегламентноеЗаданиеВручную</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</HeaderPicture>
 							<Width>1</Width>
 							<Format>
 								<v8:item>
@@ -474,9 +449,6 @@
 						</LabelField>
 						<LabelField name="КоличествоЧасов" id="40">
 							<DataPath>Список.КоличествоЧасов</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -527,6 +499,12 @@
 						</LabelField>
 						<LabelField name="ГруппаОбучения" id="225">
 							<DataPath>Список.ГруппаОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа</v8:content>
+								</v8:item>
+							</Title>
 							<HeaderPicture>
 								<xr:Ref>CommonPicture.ВариантыОтчетовДоступныеВсемПользователям</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -537,6 +515,12 @@
 						</LabelField>
 						<LabelField name="ПредметОбучения" id="34">
 							<DataPath>Список.ПредметОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет</v8:content>
+								</v8:item>
+							</Title>
 							<HeaderPicture>
 								<xr:Ref>StdPicture.ChartOfAccounts</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -547,11 +531,14 @@
 						</LabelField>
 						<LabelField name="Педагог" id="37">
 							<DataPath>Список.Педагог</DataPath>
+							<CellHyperlink>true</CellHyperlink>
 							<HeaderPicture>
 								<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
 							<Width>1</Width>
+							<Hiperlink>true</Hiperlink>
+							<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="39"/>
 						</LabelField>
@@ -726,6 +713,7 @@
 								</LabelField>
 								<LabelField name="РасшифровкаУченик" id="368">
 									<DataPath>Расшифровка.Ученик</DataPath>
+									<TitleLocation>None</TitleLocation>
 									<CellHyperlink>true</CellHyperlink>
 									<HeaderPicture>
 										<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
@@ -1052,7 +1040,7 @@
 				<d4p1:realPointCount>0</d4p1:realPointCount>
 				<d4p1:curSeries>-1</d4p1:curSeries>
 				<d4p1:curPoint>0</d4p1:curPoint>
-				<d4p1:chartType>Column3D</d4p1:chartType>
+				<d4p1:chartType>Column</d4p1:chartType>
 				<d4p1:circleLabelType>None</d4p1:circleLabelType>
 				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
 				<d4p1:labelsLocation>Auto</d4p1:labelsLocation>
@@ -1130,7 +1118,7 @@
 				<d4p1:dtKeys>true</d4p1:dtKeys>
 				<d4p1:paletteKind>Auto</d4p1:paletteKind>
 				<d4p1:animation>DontUse</d4p1:animation>
-				<d4p1:rebuildTime>6832408</d4p1:rebuildTime>
+				<d4p1:rebuildTime>3201731</d4p1:rebuildTime>
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>true</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>true</d4p1:legendScrollEnable>
@@ -1614,48 +1602,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОткрытьПанельУченика</Action>
-			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ОтмечаниеПосещенийФото" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отмечание посещений фото</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отмечание посещений фото</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.DataProcessor</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ОтмечаниеПосещенийФото</Action>
-			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ОтмечаниеПосещений" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отмечание посещений</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Отмечание посещений2</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>CommonPicture.ЦветФона</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ОтмечаниеПосещений</Action>
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
