@@ -5,14 +5,14 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаЗаписатьИЗакрыть" id="143">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="144"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="145">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
@@ -77,7 +77,7 @@
 				</ChildItems>
 			</Popup>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="182">
-				<Type>CommandBarButton</Type>
+				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
 				<CommandName>CommonCommand.Напомнить</CommandName>
 				<DataPath>Объект.Ref</DataPath>
@@ -179,6 +179,8 @@
 												<InputField name="Наименование" id="485">
 													<DataPath>Объект.Description</DataPath>
 													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>35</MaxWidth>
 													<InputHint>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -214,15 +216,6 @@
 													<ContextMenu name="ПолКонтекстноеМеню" id="190"/>
 													<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="191"/>
 												</CheckBoxField>
-												<InputField name="Код" id="1">
-													<DataPath>Объект.Code</DataPath>
-													<UserVisible>
-														<xr:Common>false</xr:Common>
-													</UserVisible>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-													<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-												</InputField>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа2" id="480">
@@ -355,7 +348,7 @@
 											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="484"/>
 										</PictureDecoration>
 										<UsualGroup name="Группа4" id="475">
-											<Width>40</Width>
+											<Width>30</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
@@ -448,7 +441,6 @@
 															<DataPath>Объект.Телефон</DataPath>
 															<TitleLocation>None</TitleLocation>
 															<EditMode>EnterOnInput</EditMode>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -585,35 +577,76 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаФотоРасширеннаяПодсказка" id="54"/>
 									<ChildItems>
+										<InputField name="Код" id="1">
+											<DataPath>Объект.Code</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+											<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+										</InputField>
 										<CheckBoxField name="ЭтоПедагог" id="418">
 											<DataPath>Объект.ЭтоПедагог</DataPath>
 											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Switcher</CheckBoxType>
+											<CheckBoxType>Auto</CheckBoxType>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ=Ученик; БИ=Педагог</v8:content>
+												</v8:item>
+											</EditFormat>
 											<ContextMenu name="ЭтоПедагогКонтекстноеМеню" id="419"/>
 											<ExtendedTooltip name="ЭтоПедагогРасширеннаяПодсказка" id="420"/>
 											<Events>
 												<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
 											</Events>
 										</CheckBoxField>
-										<PictureField name="Фото" id="41">
-											<DataPath>Фото</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Картинка</v8:content>
-												</v8:item>
-											</Title>
-											<TitleLocation>None</TitleLocation>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>21</MaxWidth>
-											<AutoMaxHeight>false</AutoMaxHeight>
-											<MaxHeight>9</MaxHeight>
-											<PictureSize>AutoSize</PictureSize>
-											<Zoomable>true</Zoomable>
-											<FileDragMode>AsFile</FileDragMode>
-											<ContextMenu name="ФотоКонтекстноеМеню" id="42"/>
-											<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="43"/>
-										</PictureField>
+										<UsualGroup name="Группа6" id="494">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="495"/>
+											<ChildItems>
+												<PictureField name="Фото" id="41">
+													<DataPath>Фото</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>None</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>21</MaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<MaxHeight>9</MaxHeight>
+													<PictureSize>AutoSize</PictureSize>
+													<Zoomable>true</Zoomable>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ФотоКонтекстноеМеню" id="42"/>
+													<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="43"/>
+												</PictureField>
+												<UsualGroup name="ГруппаЗадолженность" id="492">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Задолженность</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа задолженность</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<VerticalSpacing>Half</VerticalSpacing>
+													<Representation>None</Representation>
+													<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="493"/>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
 										<UsualGroup name="ГруппаФотоДанные" id="55">
 											<Title>
 												<v8:item>
@@ -675,21 +708,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<ChartField name="Диаграмма" id="372">
-							<DataPath>Диаграмма</DataPath>
-							<Visible>false</Visible>
-							<TitleLocation>None</TitleLocation>
-							<Height>4</Height>
-							<ContextMenu name="ДиаграммаКонтекстноеМеню" id="373"/>
-							<ExtendedTooltip name="ДиаграммаРасширеннаяПодсказка" id="374"/>
-						</ChartField>
-						<ChartField name="ДиаграммаПедагог" id="466">
-							<DataPath>ДиаграммаПедагог</DataPath>
-							<TitleLocation>None</TitleLocation>
-							<Height>4</Height>
-							<ContextMenu name="ДиаграммаПедагогКонтекстноеМеню" id="467"/>
-							<ExtendedTooltip name="ДиаграммаПедагогРасширеннаяПодсказка" id="468"/>
-						</ChartField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСтраница2" id="325">
@@ -705,10 +723,15 @@
 							<v8:content>Группа страница1</v8:content>
 						</v8:item>
 					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
 					<ExtendedTooltip name="ГруппаСтраница2РасширеннаяПодсказка" id="326"/>
 					<ChildItems>
 						<Table name="Документы" id="375">
+							<MaxWidth>47</MaxWidth>
+							<MaxHeight>8</MaxHeight>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<HorizontalStretch>false</HorizontalStretch>
 							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Документы</DataPath>
@@ -795,104 +818,6 @@
 									<Width>5</Width>
 									<ContextMenu name="Реквизит1СуммаОборотКонтекстноеМеню" id="398"/>
 									<ExtendedTooltip name="Реквизит1СуммаОборотРасширеннаяПодсказка" id="399"/>
-								</LabelField>
-							</ChildItems>
-						</Table>
-						<Table name="ДокументыПедагога" id="423">
-							<Visible>false</Visible>
-							<UseAlternationRowColor>true</UseAlternationRowColor>
-							<VerticalStretch>false</VerticalStretch>
-							<EnableStartDrag>true</EnableStartDrag>
-							<DataPath>ДокументыПедагога</DataPath>
-							<RowPictureDataPath>ДокументыПедагога.DefaultPicture</RowPictureDataPath>
-							<AutoRefresh>false</AutoRefresh>
-							<AutoRefreshPeriod>60</AutoRefreshPeriod>
-							<Period>
-								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-							</Period>
-							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-							<RestoreCurrentRow>false</RestoreCurrentRow>
-							<TopLevelParent xsi:nil="true"/>
-							<ShowRoot>true</ShowRoot>
-							<AllowRootChoice>false</AllowRootChoice>
-							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<ContextMenu name="ДокументыПедагогаКонтекстноеМеню" id="424"/>
-							<AutoCommandBar name="ДокументыПедагогаКоманднаяПанель" id="425"/>
-							<ExtendedTooltip name="ДокументыПедагогаРасширеннаяПодсказка" id="426"/>
-							<SearchStringAddition name="ДокументыПедагогаСтрокаПоиска" id="427">
-								<AdditionSource>
-									<Item>ДокументыПедагога</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДокументыПедагогаСтрокаПоискаКонтекстноеМеню" id="428"/>
-								<ExtendedTooltip name="ДокументыПедагогаСтрокаПоискаРасширеннаяПодсказка" id="429"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ДокументыПедагогаСостояниеПросмотра" id="430">
-								<AdditionSource>
-									<Item>ДокументыПедагога</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ДокументыПедагогаСостояниеПросмотраКонтекстноеМеню" id="431"/>
-								<ExtendedTooltip name="ДокументыПедагогаСостояниеПросмотраРасширеннаяПодсказка" id="432"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ДокументыПедагогаУправлениеПоиском" id="433">
-								<AdditionSource>
-									<Item>ДокументыПедагога</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ДокументыПедагогаУправлениеПоискомКонтекстноеМеню" id="434"/>
-								<ExtendedTooltip name="ДокументыПедагогаУправлениеПоискомРасширеннаяПодсказка" id="435"/>
-							</SearchControlAddition>
-							<ChildItems>
-								<LabelField name="ДокументыПедагогаДокумент" id="439">
-									<DataPath>ДокументыПедагога.Документ</DataPath>
-									<ContextMenu name="ДокументыПедагогаДокументКонтекстноеМеню" id="440"/>
-									<ExtendedTooltip name="ДокументыПедагогаДокументРасширеннаяПодсказка" id="441"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаГруппаОбучения" id="436">
-									<DataPath>ДокументыПедагога.ГруппаОбучения</DataPath>
-									<Width>1</Width>
-									<ContextMenu name="ДокументыПедагогаГруппаОбученияКонтекстноеМеню" id="437"/>
-									<ExtendedTooltip name="ДокументыПедагогаГруппаОбученияРасширеннаяПодсказка" id="438"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаОрганизация" id="442">
-									<DataPath>ДокументыПедагога.Организация</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Width>1</Width>
-									<ContextMenu name="ДокументыПедагогаОрганизацияКонтекстноеМеню" id="443"/>
-									<ExtendedTooltip name="ДокументыПедагогаОрганизацияРасширеннаяПодсказка" id="444"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаУченик" id="463">
-									<DataPath>ДокументыПедагога.Ученик</DataPath>
-									<ContextMenu name="ДокументыПедагогаУченикКонтекстноеМеню" id="464"/>
-									<ExtendedTooltip name="ДокументыПедагогаУченикРасширеннаяПодсказка" id="465"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаПредметОбучения" id="448">
-									<DataPath>ДокументыПедагога.ПредметОбучения</DataPath>
-									<Width>1</Width>
-									<ContextMenu name="ДокументыПедагогаПредметОбученияКонтекстноеМеню" id="449"/>
-									<ExtendedTooltip name="ДокументыПедагогаПредметОбученияРасширеннаяПодсказка" id="450"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаТариф" id="454">
-									<DataPath>ДокументыПедагога.Тариф</DataPath>
-									<ContextMenu name="ДокументыПедагогаТарифКонтекстноеМеню" id="455"/>
-									<ExtendedTooltip name="ДокументыПедагогаТарифРасширеннаяПодсказка" id="456"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаЧасы" id="457">
-									<DataPath>ДокументыПедагога.Часы</DataPath>
-									<Width>1</Width>
-									<ContextMenu name="ДокументыПедагогаЧасыКонтекстноеМеню" id="458"/>
-									<ExtendedTooltip name="ДокументыПедагогаЧасыРасширеннаяПодсказка" id="459"/>
-								</LabelField>
-								<LabelField name="ДокументыПедагогаСумма" id="451">
-									<DataPath>ДокументыПедагога.Сумма</DataPath>
-									<Width>5</Width>
-									<ContextMenu name="ДокументыПедагогаСуммаКонтекстноеМеню" id="452"/>
-									<ExtendedTooltip name="ДокументыПедагогаСуммаРасширеннаяПодсказка" id="453"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -1016,234 +941,6 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="Диаграмма" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Диаграмма</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
-			</Type>
-			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
-				<d4p1:seriesCurId>1</d4p1:seriesCurId>
-				<d4p1:pointsCurId>0</d4p1:pointsCurId>
-				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
-				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
-				<d4p1:realExSeriesData>
-					<d4p1:id>1</d4p1:id>
-					<d4p1:color>auto</d4p1:color>
-					<d4p1:line width="2" gap="false">
-						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
-					</d4p1:line>
-					<d4p1:marker>Auto</d4p1:marker>
-					<d4p1:text>
-						<v8:item>
-							<v8:lang>#</v8:lang>
-							<v8:content>Сводная</v8:content>
-						</v8:item>
-					</d4p1:text>
-					<d4p1:strIsChanged>false</d4p1:strIsChanged>
-					<d4p1:isExpand>false</d4p1:isExpand>
-					<d4p1:isIndicator>false</d4p1:isIndicator>
-					<d4p1:colorPriority>false</d4p1:colorPriority>
-				</d4p1:realExSeriesData>
-				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
-				<d4p1:realPointCount>0</d4p1:realPointCount>
-				<d4p1:curSeries>-1</d4p1:curSeries>
-				<d4p1:curPoint>0</d4p1:curPoint>
-				<d4p1:chartType>Line</d4p1:chartType>
-				<d4p1:circleLabelType>Value</d4p1:circleLabelType>
-				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
-				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
-				<d4p1:lbFormat/>
-				<d4p1:lbpFormat/>
-				<d4p1:labelsColor>style:FormTextColor</d4p1:labelsColor>
-				<d4p1:labelsFont kind="AutoFont"/>
-				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
-				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
-				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:labelsBorder>
-				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
-				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
-				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
-				<d4p1:title/>
-				<d4p1:isShowTitle>true</d4p1:isShowTitle>
-				<d4p1:isShowLegend>false</d4p1:isShowLegend>
-				<d4p1:ttlBorder width="0">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:ttlBorder>
-				<d4p1:ttlBorderColor>style:BorderColor</d4p1:ttlBorderColor>
-				<d4p1:lgBorder width="0">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:lgBorder>
-				<d4p1:lgBorderColor>style:BorderColor</d4p1:lgBorderColor>
-				<d4p1:chBorder width="0">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:chBorder>
-				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
-				<d4p1:transparent>false</d4p1:transparent>
-				<d4p1:bkgColor>style:FieldBackColor</d4p1:bkgColor>
-				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
-				<d4p1:ttlColor>style:FieldBackColor</d4p1:ttlColor>
-				<d4p1:isTrnspLeg>true</d4p1:isTrnspLeg>
-				<d4p1:legColor>style:FieldBackColor</d4p1:legColor>
-				<d4p1:isTrnspCh>true</d4p1:isTrnspCh>
-				<d4p1:chColor>style:FieldBackColor</d4p1:chColor>
-				<d4p1:ttlTxtColor>style:FormTextColor</d4p1:ttlTxtColor>
-				<d4p1:legTxtColor>style:FormTextColor</d4p1:legTxtColor>
-				<d4p1:chTxtColor>style:FormTextColor</d4p1:chTxtColor>
-				<d4p1:ttlFont kind="AutoFont"/>
-				<d4p1:legFont kind="AutoFont"/>
-				<d4p1:chFont kind="AutoFont"/>
-				<d4p1:isShowScale>true</d4p1:isShowScale>
-				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
-				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
-				<d4p1:isShowPointsScale>false</d4p1:isShowPointsScale>
-				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
-				<d4p1:vsFormat/>
-				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
-				<d4p1:scaleLine width="1" gap="false">
-					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
-				</d4p1:scaleLine>
-				<d4p1:scaleColor>auto</d4p1:scaleColor>
-				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
-				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
-				<d4p1:maxMode>NotDefined</d4p1:maxMode>
-				<d4p1:maxSeries>4</d4p1:maxSeries>
-				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
-				<d4p1:spaceMode>Half</d4p1:spaceMode>
-				<d4p1:baseVal>0</d4p1:baseVal>
-				<d4p1:isOutline>false</d4p1:isOutline>
-				<d4p1:realPiePoint>0</d4p1:realPiePoint>
-				<d4p1:realStockSeries>0</d4p1:realStockSeries>
-				<d4p1:isLight>true</d4p1:isLight>
-				<d4p1:isGradient>false</d4p1:isGradient>
-				<d4p1:isTransposition>false</d4p1:isTransposition>
-				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
-				<d4p1:dataTable>false</d4p1:dataTable>
-				<d4p1:dtVerLines>true</d4p1:dtVerLines>
-				<d4p1:dtHorLines>true</d4p1:dtHorLines>
-				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
-				<d4p1:dtFormat/>
-				<d4p1:dtKeys>true</d4p1:dtKeys>
-				<d4p1:paletteKind>Auto</d4p1:paletteKind>
-				<d4p1:animation>Auto</d4p1:animation>
-				<d4p1:rebuildTime>2294119</d4p1:rebuildTime>
-				<d4p1:isTransposed>false</d4p1:isTransposed>
-				<d4p1:autoTransposition>true</d4p1:autoTransposition>
-				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
-				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
-				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
-				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
-				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
-				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
-				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
-				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
-				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
-				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
-				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
-				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
-				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
-				<d4p1:userMaxValue>0</d4p1:userMaxValue>
-				<d4p1:autoMinValue>true</d4p1:autoMinValue>
-				<d4p1:userMinValue>0</d4p1:userMinValue>
-				<d4p1:elementsIsInit>false</d4p1:elementsIsInit>
-				<d4p1:titleIsInit>true</d4p1:titleIsInit>
-				<d4p1:legendIsInit>true</d4p1:legendIsInit>
-				<d4p1:chartIsInit>true</d4p1:chartIsInit>
-				<d4p1:elementsChart>
-					<d4p1:left>0</d4p1:left>
-					<d4p1:right>0.17</d4p1:right>
-					<d4p1:top>0</d4p1:top>
-					<d4p1:bottom>0</d4p1:bottom>
-				</d4p1:elementsChart>
-				<d4p1:elementsLegend>
-					<d4p1:left>0.769108280254777070063694268</d4p1:left>
-					<d4p1:right>0.068471337579617834394904459</d4p1:right>
-					<d4p1:top>0.591880341880341880341880342</d4p1:top>
-					<d4p1:bottom>0.22008547008547008547008547</d4p1:bottom>
-				</d4p1:elementsLegend>
-				<d4p1:elementsTitle>
-					<d4p1:left>0.83</d4p1:left>
-					<d4p1:right>0</d4p1:right>
-					<d4p1:top>0</d4p1:top>
-					<d4p1:bottom>0.92</d4p1:bottom>
-				</d4p1:elementsTitle>
-				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
-				<d4p1:border width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:border>
-				<d4p1:dataSourceDescription/>
-				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
-				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
-				<d4p1:splineMode>SmoothCurve</d4p1:splineMode>
-				<d4p1:splineStrain>95</d4p1:splineStrain>
-				<d4p1:translucencePercent>0</d4p1:translucencePercent>
-				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
-				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
-				<d4p1:funnelGapSumPercent>3</d4p1:funnelGapSumPercent>
-				<d4p1:multiStageLinkLine width="1" gap="false">
-					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
-				</d4p1:multiStageLinkLine>
-				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
-				<d4p1:valuesAxis/>
-				<d4p1:pointsAxis/>
-				<d4p1:pointsScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-					<d4p1:scaleLabelLocation>None</d4p1:scaleLabelLocation>
-				</d4p1:pointsScale>
-				<d4p1:valuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:valuesScale>
-				<d4p1:seriesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:seriesScale>
-				<d4p1:legendPlacement>None</d4p1:legendPlacement>
-				<d4p1:plotAreaPlacement>Auto</d4p1:plotAreaPlacement>
-				<d4p1:titleAreaPlacement>Auto</d4p1:titleAreaPlacement>
-				<d4p1:colorPaletteDescription/>
-				<d4p1:referenceBandsColorPaletteDescription/>
-				<d4p1:additionalValuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:additionalValuesScale>
-				<d4p1:additionalValuesAxis/>
-			</Settings>
-		</Attribute>
 		<Attribute name="Документы" id="4">
 			<Title>
 				<v8:item>
@@ -1293,289 +990,6 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
-		<Attribute name="ДокументыПедагога" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Документы</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:DynamicList</v8:Type>
-			</Type>
-			<Settings xsi:type="DynamicList">
-				<ManualQuery>true</ManualQuery>
-				<DynamicDataRead>false</DynamicDataRead>
-				<QueryText>ВЫБРАТЬ
-	LM_СписанияСуммЗаУрокиОбороты.Организация КАК Организация,
-	LM_СписанияСуммЗаУрокиОбороты.Тариф КАК Тариф,
-	LM_СписанияСуммЗаУрокиОбороты.Педагог КАК Педагог,
-	LM_СписанияСуммЗаУрокиОбороты.Регистратор КАК Документ,
-	LM_СписанияСуммЗаУрокиОбороты.ГруппаОбучения КАК ГруппаОбучения,
-	LM_СписанияСуммЗаУрокиОбороты.ПредметОбучения КАК ПредметОбучения,
-	LM_СписанияСуммЗаУрокиОбороты.Регистратор.КоличествоЧасов КАК Часы,
-	LM_СписанияСуммЗаУрокиОбороты.СуммаОборот КАК Сумма,
-	LM_СписанияСуммЗаУрокиОбороты.Клиент КАК Ученик
-ИЗ
-	РегистрНакопления.LM_СписанияСуммЗаУроки.Обороты(, , Регистратор, ) КАК LM_СписанияСуммЗаУрокиОбороты
-ГДЕ
-	LM_СписанияСуммЗаУрокиОбороты.Педагог = &amp;Педагог</QueryText>
-				<MainTable>AccumulationRegister.LM_СписанияСуммЗаУроки.Turnovers</MainTable>
-				<ListSettings>
-					<dcsset:filter>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
-					</dcsset:filter>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>Документ</dcsset:field>
-							<dcsset:orderType>Asc</dcsset:orderType>
-						</dcsset:item>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
-					</dcsset:order>
-					<dcsset:conditionalAppearance>
-						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
-					</dcsset:conditionalAppearance>
-					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
-					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
-				</ListSettings>
-			</Settings>
-		</Attribute>
-		<Attribute name="ДиаграммаПедагог" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Диаграмма педагог</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
-			</Type>
-			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
-				<d4p1:seriesCurId>1</d4p1:seriesCurId>
-				<d4p1:pointsCurId>0</d4p1:pointsCurId>
-				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
-				<d4p1:realSeriesCount>0</d4p1:realSeriesCount>
-				<d4p1:realExSeriesData>
-					<d4p1:id>1</d4p1:id>
-					<d4p1:color>auto</d4p1:color>
-					<d4p1:line width="2" gap="false">
-						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
-					</d4p1:line>
-					<d4p1:marker>Auto</d4p1:marker>
-					<d4p1:text>
-						<v8:item>
-							<v8:lang>#</v8:lang>
-							<v8:content>Сводная</v8:content>
-						</v8:item>
-					</d4p1:text>
-					<d4p1:strIsChanged>false</d4p1:strIsChanged>
-					<d4p1:isExpand>false</d4p1:isExpand>
-					<d4p1:isIndicator>false</d4p1:isIndicator>
-					<d4p1:colorPriority>false</d4p1:colorPriority>
-				</d4p1:realExSeriesData>
-				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
-				<d4p1:realPointCount>0</d4p1:realPointCount>
-				<d4p1:curSeries>-1</d4p1:curSeries>
-				<d4p1:curPoint>0</d4p1:curPoint>
-				<d4p1:chartType>StackedColumn</d4p1:chartType>
-				<d4p1:circleLabelType>None</d4p1:circleLabelType>
-				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
-				<d4p1:labelsLocation>Edge</d4p1:labelsLocation>
-				<d4p1:lbFormat/>
-				<d4p1:lbpFormat/>
-				<d4p1:labelsColor>style:FormTextColor</d4p1:labelsColor>
-				<d4p1:labelsFont kind="AutoFont"/>
-				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
-				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
-				<d4p1:labelsBorder width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-				</d4p1:labelsBorder>
-				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
-				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
-				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
-				<d4p1:title/>
-				<d4p1:isShowTitle>true</d4p1:isShowTitle>
-				<d4p1:isShowLegend>true</d4p1:isShowLegend>
-				<d4p1:ttlBorder width="0">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:ttlBorder>
-				<d4p1:ttlBorderColor>style:BorderColor</d4p1:ttlBorderColor>
-				<d4p1:lgBorder width="0">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:lgBorder>
-				<d4p1:lgBorderColor>style:BorderColor</d4p1:lgBorderColor>
-				<d4p1:chBorder width="0">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:chBorder>
-				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
-				<d4p1:transparent>false</d4p1:transparent>
-				<d4p1:bkgColor>style:FieldBackColor</d4p1:bkgColor>
-				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
-				<d4p1:ttlColor>style:FieldBackColor</d4p1:ttlColor>
-				<d4p1:isTrnspLeg>false</d4p1:isTrnspLeg>
-				<d4p1:legColor>style:FieldBackColor</d4p1:legColor>
-				<d4p1:isTrnspCh>true</d4p1:isTrnspCh>
-				<d4p1:chColor>style:FieldBackColor</d4p1:chColor>
-				<d4p1:ttlTxtColor>style:FormTextColor</d4p1:ttlTxtColor>
-				<d4p1:legTxtColor>style:FormTextColor</d4p1:legTxtColor>
-				<d4p1:chTxtColor>style:FormTextColor</d4p1:chTxtColor>
-				<d4p1:ttlFont kind="AutoFont"/>
-				<d4p1:legFont kind="AutoFont"/>
-				<d4p1:chFont kind="AutoFont"/>
-				<d4p1:isShowScale>true</d4p1:isShowScale>
-				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
-				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
-				<d4p1:isShowPointsScale>false</d4p1:isShowPointsScale>
-				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
-				<d4p1:vsFormat/>
-				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
-				<d4p1:scaleLine width="1" gap="false">
-					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
-				</d4p1:scaleLine>
-				<d4p1:scaleColor>auto</d4p1:scaleColor>
-				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
-				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
-				<d4p1:maxMode>NotDefined</d4p1:maxMode>
-				<d4p1:maxSeries>4</d4p1:maxSeries>
-				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
-				<d4p1:spaceMode>Half</d4p1:spaceMode>
-				<d4p1:baseVal>0</d4p1:baseVal>
-				<d4p1:isOutline>false</d4p1:isOutline>
-				<d4p1:realPiePoint>0</d4p1:realPiePoint>
-				<d4p1:realStockSeries>0</d4p1:realStockSeries>
-				<d4p1:isLight>true</d4p1:isLight>
-				<d4p1:isGradient>false</d4p1:isGradient>
-				<d4p1:isTransposition>false</d4p1:isTransposition>
-				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
-				<d4p1:dataTable>false</d4p1:dataTable>
-				<d4p1:dtVerLines>true</d4p1:dtVerLines>
-				<d4p1:dtHorLines>true</d4p1:dtHorLines>
-				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
-				<d4p1:dtFormat/>
-				<d4p1:dtKeys>true</d4p1:dtKeys>
-				<d4p1:paletteKind>Custom</d4p1:paletteKind>
-				<d4p1:animation>Auto</d4p1:animation>
-				<d4p1:rebuildTime>9891281</d4p1:rebuildTime>
-				<d4p1:isTransposed>false</d4p1:isTransposed>
-				<d4p1:autoTransposition>false</d4p1:autoTransposition>
-				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
-				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
-				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
-				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
-				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
-				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
-				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
-				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
-				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
-				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
-				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
-				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
-				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
-				<d4p1:userMaxValue>0</d4p1:userMaxValue>
-				<d4p1:autoMinValue>true</d4p1:autoMinValue>
-				<d4p1:userMinValue>0</d4p1:userMinValue>
-				<d4p1:elementsIsInit>false</d4p1:elementsIsInit>
-				<d4p1:titleIsInit>true</d4p1:titleIsInit>
-				<d4p1:legendIsInit>true</d4p1:legendIsInit>
-				<d4p1:chartIsInit>true</d4p1:chartIsInit>
-				<d4p1:elementsChart>
-					<d4p1:left>0</d4p1:left>
-					<d4p1:right>0.17</d4p1:right>
-					<d4p1:top>0</d4p1:top>
-					<d4p1:bottom>0</d4p1:bottom>
-				</d4p1:elementsChart>
-				<d4p1:elementsLegend>
-					<d4p1:left>0.83</d4p1:left>
-					<d4p1:right>0</d4p1:right>
-					<d4p1:top>0.08</d4p1:top>
-					<d4p1:bottom>0</d4p1:bottom>
-				</d4p1:elementsLegend>
-				<d4p1:elementsTitle>
-					<d4p1:left>0.83</d4p1:left>
-					<d4p1:right>0</d4p1:right>
-					<d4p1:top>0</d4p1:top>
-					<d4p1:bottom>0.92</d4p1:bottom>
-				</d4p1:elementsTitle>
-				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
-				<d4p1:border width="1">
-					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-				</d4p1:border>
-				<d4p1:dataSourceDescription/>
-				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
-				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
-				<d4p1:splineStrain>95</d4p1:splineStrain>
-				<d4p1:translucencePercent>0</d4p1:translucencePercent>
-				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
-				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
-				<d4p1:funnelGapSumPercent>3</d4p1:funnelGapSumPercent>
-				<d4p1:multiStageLinkLine width="1" gap="false">
-					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
-				</d4p1:multiStageLinkLine>
-				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
-				<d4p1:valuesAxis/>
-				<d4p1:pointsAxis/>
-				<d4p1:pointsScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-					<d4p1:scaleLabelLocation>None</d4p1:scaleLabelLocation>
-				</d4p1:pointsScale>
-				<d4p1:valuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:valuesScale>
-				<d4p1:seriesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:seriesScale>
-				<d4p1:legendPlacement>Auto</d4p1:legendPlacement>
-				<d4p1:plotAreaPlacement>Auto</d4p1:plotAreaPlacement>
-				<d4p1:titleAreaPlacement>Auto</d4p1:titleAreaPlacement>
-				<d4p1:colorPaletteDescription>
-					<d4p1:colorPalette>Custom</d4p1:colorPalette>
-					<d4p1:customPalette>
-						<v8:Value xsi:type="v8ui:Color">#33CCCC</v8:Value>
-						<v8:Value xsi:type="v8ui:Color">#FFCC00</v8:Value>
-					</d4p1:customPalette>
-				</d4p1:colorPaletteDescription>
-				<d4p1:referenceBandsColorPaletteDescription/>
-				<d4p1:additionalValuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:additionalValuesScale>
-				<d4p1:additionalValuesAxis/>
-			</Settings>
-		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1620,7 +1034,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отчет по взаиморасчетам</v8:content>
+					<v8:content>Взаиморасчеты</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

@@ -875,106 +875,6 @@
 									<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="206"/>
 									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
 								</LabelField>
-								<ColumnGroup name="УченикиГруппа9" id="486">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Долг</v8:content>
-										</v8:item>
-									</Title>
-									<TitleTextColor>#000000</TitleTextColor>
-									<Group>Horizontal</Group>
-									<TitleBackColor>#C0C0C0</TitleBackColor>
-									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
-									<ChildItems>
-										<LabelField name="УченикиЗадолженностьОбщая" id="483">
-											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Долг общий</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
-											<Width>1</Width>
-											<MarkNegatives>true</MarkNegatives>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="УченикиЗадолженностьОбщаяКонтекстноеМеню" id="484"/>
-											<ExtendedTooltip name="УченикиЗадолженностьОбщаяРасширеннаяПодсказка" id="485"/>
-										</LabelField>
-										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
-											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Долг по предмету</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<Width>1</Width>
-											<MarkNegatives>true</MarkNegatives>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
-											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
-										</LabelField>
-									</ChildItems>
-								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппа4" id="446">
-									<Group>Horizontal</Group>
-									<ExtendedTooltip name="УченикиГруппа4РасширеннаяПодсказка" id="447"/>
-									<ChildItems>
-										<InputField name="УченикиУченик" id="211">
-											<DataPath>Объект.Ученики.Ученик</DataPath>
-											<DefaultItem>true</DefaultItem>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<Width>1</Width>
-											<ContextMenu name="УченикиУченикКонтекстноеМеню" id="212"/>
-											<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="213"/>
-											<Events>
-												<Event name="OnChange">УченикиУченикПриИзменении</Event>
-												<Event name="Creating">УченикиУченикСоздание</Event>
-											</Events>
-										</InputField>
-										<InputField name="УченикиТариф" id="347">
-											<DataPath>Объект.Ученики.Тариф</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<Width>1</Width>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="УченикиТарифКонтекстноеМеню" id="348"/>
-											<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="349"/>
-											<Events>
-												<Event name="OnChange">ПлатныйПриИзменении</Event>
-											</Events>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
 								<ColumnGroup name="УченикиГруппаСписатьОплату" id="475">
 									<Title>
 										<v8:item>
@@ -1085,6 +985,101 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
+								<InputField name="УченикиУченик" id="211">
+									<DataPath>Объект.Ученики.Ученик</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
+									<ContextMenu name="УченикиУченикКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="213"/>
+									<Events>
+										<Event name="OnChange">УченикиУченикПриИзменении</Event>
+										<Event name="Creating">УченикиУченикСоздание</Event>
+									</Events>
+								</InputField>
+								<ColumnGroup name="УченикиГруппа9" id="486">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Долг</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#000000</TitleTextColor>
+									<Group>Horizontal</Group>
+									<TitleBackColor>#C0C0C0</TitleBackColor>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
+									<ChildItems>
+										<LabelField name="УченикиЗадолженностьОбщая" id="483">
+											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Долг общий</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
+											<Width>1</Width>
+											<MarkNegatives>true</MarkNegatives>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="УченикиЗадолженностьОбщаяКонтекстноеМеню" id="484"/>
+											<ExtendedTooltip name="УченикиЗадолженностьОбщаяРасширеннаяПодсказка" id="485"/>
+										</LabelField>
+										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
+											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Долг по предмету</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<Width>1</Width>
+											<MarkNegatives>true</MarkNegatives>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
+											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="УченикиТариф" id="347">
+									<DataPath>Объект.Ученики.Тариф</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="УченикиТарифКонтекстноеМеню" id="348"/>
+									<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="349"/>
+									<Events>
+										<Event name="OnChange">ПлатныйПриИзменении</Event>
+									</Events>
+								</InputField>
 								<ColumnGroup name="УченикиГруппа6" id="450">
 									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа6РасширеннаяПодсказка" id="451"/>
