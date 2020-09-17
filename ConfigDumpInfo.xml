@@ -5083,8 +5083,8 @@
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.НеИзменять" id="f9ecaf9a-0806-4fba-b753-4e8ed9ce8cbd"/>
 			<Metadata name="Document.LM_Урок.TabularSection.Ученики.Attribute.Комментарий" id="fa666dc8-e07a-42a2-8341-095225cb24c9"/>
 		</Metadata>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="9d0f32e6af424b419e793126703b5be500000000"/>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="80774825652c8144890c172c757dbdf300000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="5495f39581effc4ba0edbbe0be84d2f100000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="d7f54e91a423b14e85a9de267c7ed87100000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="f84fccb17460ec4c9bf9f857d2fe5ad900000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="11f4ef483b4c3349aa1e82b795e14f2c00000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="6b9fe8fcc241de4e93ca52eabb83a0f800000000"/>
