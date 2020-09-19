@@ -5,7 +5,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаЗаписатьИЗакрыть" id="143">
-				<Type>CommandBarHyperlink</Type>
+				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
@@ -193,16 +193,26 @@
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа5" id="490">
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="491"/>
 											<ChildItems>
-												<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
-													<Shape>Oval</Shape>
-													<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
-												</Button>
+												<CheckBoxField name="ЭтоПедагог" id="418">
+													<DataPath>Объект.ЭтоПедагог</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>БЛ=Ученик; БИ=Педагог</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="ЭтоПедагогКонтекстноеМеню" id="419"/>
+													<ExtendedTooltip name="ЭтоПедагогРасширеннаяПодсказка" id="420"/>
+													<Events>
+														<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
 												<CheckBoxField name="Пол" id="189">
 													<DataPath>Объект.Пол</DataPath>
 													<TitleLocation>None</TitleLocation>
@@ -348,7 +358,7 @@
 											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="484"/>
 										</PictureDecoration>
 										<UsualGroup name="Группа4" id="475">
-											<Width>30</Width>
+											<Width>36</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
@@ -374,28 +384,28 @@
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ОповещатьРасширеннаяПодсказка" id="142"/>
 													<ChildItems>
-														<LabelDecoration name="Декорация1" id="415">
-															<Title formatted="false">
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Оповещать по</v8:content>
-																</v8:item>
-															</Title>
-															<ContextMenu name="Декорация1КонтекстноеМеню" id="416"/>
-															<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="417"/>
-														</LabelDecoration>
 														<CheckBoxField name="ОповеститьПоТелефону" id="135">
 															<DataPath>Объект.ОповеститьПоТелефону</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>тел.</v8:content>
+																	<v8:content>Оповещать по тел.</v8:content>
 																</v8:item>
 															</Title>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ОповеститьПоТелефонуКонтекстноеМеню" id="136"/>
 															<ExtendedTooltip name="ОповеститьПоТелефонуРасширеннаяПодсказка" id="137"/>
 														</CheckBoxField>
+														<LabelDecoration name="Декорация4" id="496">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>l</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация4КонтекстноеМеню" id="497"/>
+															<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="498"/>
+														</LabelDecoration>
 														<CheckBoxField name="ОповеститьПоSMS" id="132">
 															<DataPath>Объект.ОповеститьПоSMS</DataPath>
 															<Title>
@@ -408,6 +418,16 @@
 															<ContextMenu name="ОповеститьПоSMSКонтекстноеМеню" id="133"/>
 															<ExtendedTooltip name="ОповеститьПоSMSРасширеннаяПодсказка" id="134"/>
 														</CheckBoxField>
+														<LabelDecoration name="Декорация5" id="499">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>l</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация5КонтекстноеМеню" id="500"/>
+															<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="501"/>
+														</LabelDecoration>
 														<CheckBoxField name="ОповеститьПоEmail" id="129">
 															<DataPath>Объект.ОповеститьПоEmail</DataPath>
 															<Title>
@@ -586,22 +606,12 @@
 											<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 										</InputField>
-										<CheckBoxField name="ЭтоПедагог" id="418">
-											<DataPath>Объект.ЭтоПедагог</DataPath>
-											<TitleLocation>Right</TitleLocation>
-											<CheckBoxType>Auto</CheckBoxType>
-											<EditFormat>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>БЛ=Ученик; БИ=Педагог</v8:content>
-												</v8:item>
-											</EditFormat>
-											<ContextMenu name="ЭтоПедагогКонтекстноеМеню" id="419"/>
-											<ExtendedTooltip name="ЭтоПедагогРасширеннаяПодсказка" id="420"/>
-											<Events>
-												<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
+										<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
+											<Shape>Oval</Shape>
+											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
+										</Button>
 										<UsualGroup name="Группа6" id="494">
 											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
@@ -723,15 +733,12 @@
 							<v8:content>Группа страница1</v8:content>
 						</v8:item>
 					</ToolTip>
-					<HorizontalStretch>false</HorizontalStretch>
-					<VerticalStretch>false</VerticalStretch>
 					<ExtendedTooltip name="ГруппаСтраница2РасширеннаяПодсказка" id="326"/>
 					<ChildItems>
 						<Table name="Документы" id="375">
 							<MaxWidth>47</MaxWidth>
 							<MaxHeight>8</MaxHeight>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
-							<HorizontalStretch>false</HorizontalStretch>
 							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Документы</DataPath>

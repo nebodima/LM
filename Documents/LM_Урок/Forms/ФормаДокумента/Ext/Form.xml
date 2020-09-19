@@ -6,10 +6,11 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаПровестиИЗакрыть" id="174">
-				<Type>CommandBarHyperlink</Type>
+				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<BackColor>web:Turquoise</BackColor>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="175"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="176">
@@ -24,6 +25,7 @@
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Post</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="173"/>
 			</Button>
 			<Popup name="ФормаГруппаСоздатьНаОсновании" id="312">
@@ -43,7 +45,7 @@
 					<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<Representation>Picture</Representation>
+				<Representation>PictureAndText</Representation>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаГруппаСоздатьНаОснованииРасширеннаяПодсказка" id="313"/>
 				<ChildItems>
@@ -62,10 +64,19 @@
 			</Popup>
 			<Button name="ФормаКнопкаСтурктураПодчиненности" id="356">
 				<Type>CommandBarHyperlink</Type>
+				<Representation>Picture</Representation>
 				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаКнопкаСтурктураПодчиненностиРасширеннаяПодсказка" id="357"/>
+			</Button>
+			<Button name="ФормаОбщаяКомандаИсторияИзменений" id="738">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>CommonCommand.ИсторияИзменений</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка" id="739"/>
 			</Button>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="316">
 				<Type>CommandBarHyperlink</Type>
@@ -74,14 +85,6 @@
 				<DataPath>Объект.Ref</DataPath>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="317"/>
-			</Button>
-			<Button name="ФормаОбщаяКомандаИсторияИзменений" id="738">
-				<Type>CommandBarHyperlink</Type>
-				<Representation>Picture</Representation>
-				<CommandName>CommonCommand.ИсторияИзменений</CommandName>
-				<DataPath>Объект.Ref</DataPath>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка" id="739"/>
 			</Button>
 			<Button name="ФормаДвиженияДокумента" id="740">
 				<Type>CommandBarHyperlink</Type>
@@ -730,6 +733,19 @@
 							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
 						</InputField>
+						<LabelField name="АвторДокумента" id="25">
+							<DataPath>Объект.АвторДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автор</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
+						</LabelField>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -770,6 +786,7 @@
 					<ChildItems>
 						<Table name="Ученики" id="192">
 							<Representation>List</Representation>
+							<Footer>true</Footer>
 							<HorizontalLines>false</HorizontalLines>
 							<VerticalLines>false</VerticalLines>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -787,7 +804,7 @@
 										<ExtendedTooltip name="УченикиПодборРасширеннаяПодсказка" id="341"/>
 									</Button>
 									<Button name="УченикиДобавить" id="214">
-										<Type>CommandBarHyperlink</Type>
+										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
 										<Picture>
@@ -800,7 +817,7 @@
 												<v8:content>Добавить ФизЛицо</v8:content>
 											</v8:item>
 										</Title>
-										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<Shape>Oval</Shape>
 										<ExtendedTooltip name="УченикиДобавитьРасширеннаяПодсказка" id="215"/>
 									</Button>
 									<Button name="УченикиСкопировать" id="216">
@@ -808,7 +825,7 @@
 										<Representation>Picture</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Copy</CommandName>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
-										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="УченикиСкопироватьРасширеннаяПодсказка" id="217"/>
 									</Button>
 									<Button name="УченикиУдалить" id="218">
@@ -870,7 +887,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ShowInHeader>false</ShowInHeader>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ShowInFooter>false</ShowInFooter>
+									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
 									<Width>1</Width>
 									<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="206"/>
 									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
@@ -893,7 +910,7 @@
 									<ChildItems>
 										<CheckBoxField name="УченикиСписатьОплату" id="353">
 											<DataPath>Объект.Ученики.СписатьОплату</DataPath>
-											<TitleBackColor>#CCFFCC</TitleBackColor>
+											<TitleBackColor>web:Turquoise</TitleBackColor>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoCellHeight>true</AutoCellHeight>
 											<HeaderPicture>
@@ -919,7 +936,6 @@
 													<v8:content>заметка</v8:content>
 												</v8:item>
 											</Title>
-											<TitleBackColor>#CCFFCC</TitleBackColor>
 											<EditMode>EnterOnInput</EditMode>
 											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 											<ShowInFooter>false</ShowInFooter>
@@ -1215,9 +1231,8 @@
 									</Events>
 								</InputField>
 								<Button name="НайтиПоШК" id="657">
-									<Type>UsualButton</Type>
+									<Type>Hyperlink</Type>
 									<CommandName>Form.Command.НайтиПоШККоманда</CommandName>
-									<TextColor>#000000</TextColor>
 									<ExtendedTooltip name="НайтиПоШКРасширеннаяПодсказка" id="658"/>
 								</Button>
 							</ChildItems>
@@ -1284,7 +1299,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ShowInHeader>false</ShowInHeader>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ShowInFooter>false</ShowInFooter>
+									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
 									<Width>1</Width>
 									<ContextMenu name="УченикиНомерСтроки1КонтекстноеМеню" id="556"/>
 									<ExtendedTooltip name="УченикиНомерСтроки1РасширеннаяПодсказка" id="557"/>
@@ -1297,7 +1312,6 @@
 										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
-									<Width>1</Width>
 									<MarkNegatives>true</MarkNegatives>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="Ученики1ОстатокБонусовКонтекстноеМеню" id="697"/>
@@ -1310,6 +1324,7 @@
 										<InputField name="УченикиУченик1" id="605">
 											<DataPath>Объект.Ученики.Ученик</DataPath>
 											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
 											<HorizontalAlign>Left</HorizontalAlign>
 											<EditMode>EnterOnInput</EditMode>
 											<HeaderPicture>
@@ -1329,7 +1344,6 @@
 								</ColumnGroup>
 								<InputField name="Ученики1ДисконтнаяКарта" id="649">
 									<DataPath>Объект.Ученики.ДисконтнаяКарта</DataPath>
-									<TitleBackColor>#FFFF99</TitleBackColor>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderPicture>
 										<xr:Ref>CommonPicture.ИспользоватьПользовательскийМакет</xr:Ref>
@@ -1342,19 +1356,6 @@
 										<Event name="StartChoice">Ученики1ДисконтнаяКартаНачалоВыбора</Event>
 									</Events>
 								</InputField>
-								<LabelField name="Ученики1ДисконтнаяКартаДатаОкончанияДействия" id="699">
-									<DataPath>Объект.Ученики.ДисконтнаяКарта.ДатаОкончанияДействия</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Окончание действия</v8:content>
-										</v8:item>
-									</Title>
-									<EditMode>EnterOnInput</EditMode>
-									<Width>1</Width>
-									<ContextMenu name="Ученики1ДисконтнаяКартаДатаОкончанияДействияКонтекстноеМеню" id="700"/>
-									<ExtendedTooltip name="Ученики1ДисконтнаяКартаДатаОкончанияДействияРасширеннаяПодсказка" id="701"/>
-								</LabelField>
 								<ColumnGroup name="УченикиГруппа13" id="624">
 									<Group>Horizontal</Group>
 									<ExtendedTooltip name="УченикиГруппа13РасширеннаяПодсказка" id="625"/>
@@ -1376,9 +1377,7 @@
 												<xr:Ref>CommonPicture.Сумма</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
-											<Width>1</Width>
 											<TextColor>#999999</TextColor>
 											<ContextMenu name="УченикиСумма1КонтекстноеМеню" id="630"/>
 											<ExtendedTooltip name="УченикиСумма1РасширеннаяПодсказка" id="631"/>
@@ -1391,7 +1390,6 @@
 													<v8:content>Бонусов начислено</v8:content>
 												</v8:item>
 											</Title>
-											<TitleBackColor>#FFFF99</TitleBackColor>
 											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<EditMode>EnterOnInput</EditMode>
 											<HeaderPicture>
@@ -1399,7 +1397,6 @@
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</HeaderPicture>
 											<FooterDataPath>Объект.Ученики.TotalСуммаБонусов</FooterDataPath>
-											<Width>1</Width>
 											<ContextMenu name="Ученики1СуммаБонусовКонтекстноеМеню" id="694"/>
 											<ExtendedTooltip name="Ученики1СуммаБонусовРасширеннаяПодсказка" id="695"/>
 										</InputField>
@@ -1572,6 +1569,7 @@
 									<DataPath>Объект.НачисленияПедагогу.LineNumber</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.НачисленияПедагогу.RowsCount</FooterDataPath>
 									<Width>1</Width>
 									<ContextMenu name="НачисленияПедагогуНомерСтрокиКонтекстноеМеню" id="846"/>
 									<ExtendedTooltip name="НачисленияПедагогуНомерСтрокиРасширеннаяПодсказка" id="847"/>
@@ -1591,11 +1589,9 @@
 								</InputField>
 								<InputField name="НачисленияПедагогуСуммаНачисления" id="851">
 									<DataPath>Объект.НачисленияПедагогу.СуммаНачисления</DataPath>
-									<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>Объект.НачисленияПедагогу.TotalСуммаНачисления</FooterDataPath>
 									<Width>1</Width>
-									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="НачисленияПедагогуСуммаНачисленияКонтекстноеМеню" id="852"/>
 									<ExtendedTooltip name="НачисленияПедагогуСуммаНачисленияРасширеннаяПодсказка" id="853"/>
 								</InputField>
@@ -1635,9 +1631,22 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.Расходы</DataPath>
+							<CommandSet>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="РасходыКонтекстноеМеню" id="865"/>
-							<AutoCommandBar name="РасходыКоманднаяПанель" id="866"/>
+							<AutoCommandBar name="РасходыКоманднаяПанель" id="866">
+								<ChildItems>
+									<Button name="РасходыДобавить" id="886">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.Расходы.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="РасходыДобавитьРасширеннаяПодсказка" id="887"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="867"/>
 							<SearchStringAddition name="РасходыСтрокаПоиска" id="868">
 								<AdditionSource>
@@ -1671,6 +1680,7 @@
 									<DataPath>Объект.Расходы.LineNumber</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расходы.RowsCount</FooterDataPath>
 									<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="878"/>
 									<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="879"/>
 								</LabelField>
@@ -1682,6 +1692,12 @@
 								</InputField>
 								<InputField name="РасходыСумма" id="883">
 									<DataPath>Объект.Расходы.Сумма</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма расхода</v8:content>
+										</v8:item>
+									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>Объект.Расходы.TotalСумма</FooterDataPath>
 									<ContextMenu name="РасходыСуммаКонтекстноеМеню" id="884"/>
@@ -1712,19 +1728,20 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="309"/>
 			<ChildItems>
-				<LabelField name="АвторДокумента" id="25">
-					<DataPath>Объект.АвторДокумента</DataPath>
-					<Title>
+				<InputField name="Комментарий" id="28">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Автор</v8:content>
+							<v8:content>Комментарий</v8:content>
 						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<TextColor>#808080</TextColor>
-					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
-				</LabelField>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</InputField>
 				<InputField name="СуммаЗаУрок" id="296">
 					<DataPath>Объект.Ученики.TotalСумма</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -1736,27 +1753,12 @@
 					</Title>
 					<TitleLocation>Left</TitleLocation>
 					<HorizontalAlign>Left</HorizontalAlign>
-					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ContextMenu name="СуммаЗаУрокКонтекстноеМеню" id="297"/>
 					<ExtendedTooltip name="СуммаЗаУрокРасширеннаяПодсказка" id="298"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="Комментарий" id="28">
-			<DataPath>Объект.Комментарий</DataPath>
-			<TitleLocation>None</TitleLocation>
-			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<InputHint>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Комментарий</v8:content>
-				</v8:item>
-			</InputHint>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
-			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
