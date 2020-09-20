@@ -605,12 +605,14 @@
 							<AutoMaxHeight>false</AutoMaxHeight>
 							<MaxHeight>5</MaxHeight>
 							<MaxRowsCount>5</MaxRowsCount>
+							<VerticalScrollBar>DontUse</VerticalScrollBar>
 							<HorizontalLines>false</HorizontalLines>
 							<VerticalLines>false</VerticalLines>
 							<HorizontalStretch>false</HorizontalStretch>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Расшифровка</DataPath>
 							<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
+							<BorderColor>#FFFFFF</BorderColor>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -668,9 +670,11 @@
 							<ChildItems>
 								<LabelField name="РасшифровкаНомерСтроки" id="344">
 									<DataPath>Расшифровка.НомерСтроки</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<TitleLocation>None</TitleLocation>
 									<Width>1</Width>
 									<MaxWidth>2</MaxWidth>
+									<BorderColor>#FFFFFF</BorderColor>
 									<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
 									<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
 								</LabelField>
@@ -682,14 +686,16 @@
 											<v8:content>Долг</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<CellHyperlink>true</CellHyperlink>
 									<HeaderPicture>
 										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
-									<Width>1</Width>
+									<Width>7</Width>
 									<MarkNegatives>true</MarkNegatives>
 									<Hiperlink>true</Hiperlink>
+									<BorderColor>#FFFFFF</BorderColor>
 									<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
 									<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
 								</LabelField>
@@ -704,6 +710,7 @@
 											<v8:content>Долг по предмету</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<CellHyperlink>true</CellHyperlink>
 									<Width>1</Width>
 									<MarkNegatives>true</MarkNegatives>
@@ -713,6 +720,7 @@
 								</LabelField>
 								<LabelField name="РасшифровкаУченик" id="368">
 									<DataPath>Расшифровка.Ученик</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<TitleLocation>None</TitleLocation>
 									<CellHyperlink>true</CellHyperlink>
 									<HeaderPicture>
@@ -727,6 +735,7 @@
 								</LabelField>
 								<PictureField name="РасшифровкаСписатьОплату" id="353">
 									<DataPath>Расшифровка.СписатьОплату</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ValuesPicture>
 										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
@@ -747,12 +756,14 @@
 											<v8:content>Заметка</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
 									<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
 								</LabelField>
 								<PictureField name="РасшифровкаЯвка" id="374">
 									<DataPath>Расшифровка.Явка</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ValuesPicture>
 										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
@@ -767,12 +778,14 @@
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
 									<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
 								</LabelField>
 								<LabelField name="РасшифровкаТариф" id="365">
 									<DataPath>Расшифровка.Тариф</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
 									<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
@@ -788,6 +801,7 @@
 											<v8:content>Скидка</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСкидкаКонтекстноеМеню" id="342"/>
 									<ExtendedTooltip name="РасшифровкаСкидкаРасширеннаяПодсказка" id="343"/>
@@ -803,6 +817,7 @@
 											<v8:content>Сумма скидки</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>2</Width>
 									<ContextMenu name="РасшифровкаСуммаСкидкиКонтекстноеМеню" id="351"/>
 									<ExtendedTooltip name="РасшифровкаСуммаСкидкиРасширеннаяПодсказка" id="352"/>
@@ -815,6 +830,7 @@
 											<v8:content>Сумма итого</v8:content>
 										</v8:item>
 									</Title>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
 									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
@@ -824,7 +840,9 @@
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
+									<BorderColor>#FFFFFF</BorderColor>
 									<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
 									<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
 								</LabelField>

@@ -146,6 +146,7 @@
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
+					<Width>1</Width>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
@@ -161,6 +162,7 @@
 				<LabelField name="Наименование" id="19">
 					<DataPath>Список.Наименование</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<Width>1</Width>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
 				</LabelField>
@@ -172,28 +174,33 @@
 				</CheckBoxField>
 				<LabelField name="ДатаРождения" id="28">
 					<DataPath>Список.ДатаРождения</DataPath>
+					<Width>1</Width>
 					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 				<LabelField name="Возраст" id="37">
 					<DataPath>Список.Возраст</DataPath>
+					<Width>1</Width>
 					<ContextMenu name="ВозрастКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="ВозрастРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 				<LabelField name="Статус" id="169">
 					<DataPath>Список.Статус</DataPath>
+					<Width>1</Width>
 					<ContextMenu name="СтатусКонтекстноеМеню" id="170"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="171"/>
 				</LabelField>
-				<LabelField name="Телефон" id="31">
-					<DataPath>Список.Телефон</DataPath>
-					<ContextMenu name="ТелефонКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="33"/>
-				</LabelField>
 				<LabelField name="Долг" id="176">
 					<DataPath>Список.Долг</DataPath>
+					<Width>6</Width>
 					<ContextMenu name="ДолгКонтекстноеМеню" id="177"/>
 					<ExtendedTooltip name="ДолгРасширеннаяПодсказка" id="178"/>
+				</LabelField>
+				<LabelField name="Телефон" id="31">
+					<DataPath>Список.Телефон</DataPath>
+					<Width>1</Width>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
