@@ -9,6 +9,7 @@
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<BackColor>web:Turquoise</BackColor>
 				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="144"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="145">
@@ -574,6 +575,20 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<InputField name="Заметки" id="318">
+													<DataPath>Объект.Заметки</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Height>2</Height>
+													<VerticalStretch>false</VerticalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заметка</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ЗаметкиКонтекстноеМеню" id="319"/>
+													<ExtendedTooltip name="ЗаметкиРасширеннаяПодсказка" id="320"/>
+												</InputField>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -608,6 +623,7 @@
 										</InputField>
 										<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
 											<Type>UsualButton</Type>
+											<Visible>false</Visible>
 											<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
 											<Shape>Oval</Shape>
 											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
@@ -637,24 +653,6 @@
 													<ContextMenu name="ФотоКонтекстноеМеню" id="42"/>
 													<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="43"/>
 												</PictureField>
-												<UsualGroup name="ГруппаЗадолженность" id="492">
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Задолженность</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа задолженность</v8:content>
-														</v8:item>
-													</ToolTip>
-													<Group>Vertical</Group>
-													<VerticalSpacing>Half</VerticalSpacing>
-													<Representation>None</Representation>
-													<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="493"/>
-												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="ГруппаФотоДанные" id="55">
@@ -700,20 +698,117 @@
 												</Button>
 											</ChildItems>
 										</UsualGroup>
-										<InputField name="Заметки" id="318">
-											<DataPath>Объект.Заметки</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<Height>2</Height>
-											<VerticalStretch>false</VerticalStretch>
-											<InputHint>
+										<LabelDecoration name="Декорация1" id="523">
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="524"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="525"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаЗадолженность" id="492">
+											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Заметка</v8:content>
+													<v8:content>Задолженность</v8:content>
 												</v8:item>
-											</InputHint>
-											<ContextMenu name="ЗаметкиКонтекстноеМеню" id="319"/>
-											<ExtendedTooltip name="ЗаметкиРасширеннаяПодсказка" id="320"/>
-										</InputField>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа задолженность</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Half</VerticalSpacing>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="493"/>
+											<ChildItems>
+												<Table name="Долги" id="504">
+													<Representation>List</Representation>
+													<ReadOnly>true</ReadOnly>
+													<Width>30</Width>
+													<MaxWidth>18</MaxWidth>
+													<Header>false</Header>
+													<HorizontalLines>false</HorizontalLines>
+													<VerticalLines>false</VerticalLines>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<DataPath>Долги</DataPath>
+													<BorderColor>#FFFFFF</BorderColor>
+													<CommandSet>
+														<ExcludedCommand>Add</ExcludedCommand>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+														<ExcludedCommand>Delete</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+														<ExcludedCommand>MoveDown</ExcludedCommand>
+														<ExcludedCommand>MoveUp</ExcludedCommand>
+														<ExcludedCommand>OutputList</ExcludedCommand>
+														<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+														<ExcludedCommand>SearchHistory</ExcludedCommand>
+														<ExcludedCommand>SelectAll</ExcludedCommand>
+														<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+														<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+														<ExcludedCommand>SortListAsc</ExcludedCommand>
+														<ExcludedCommand>SortListDesc</ExcludedCommand>
+													</CommandSet>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ДолгиКонтекстноеМеню" id="505"/>
+													<AutoCommandBar name="ДолгиКоманднаяПанель" id="506"/>
+													<ExtendedTooltip name="ДолгиРасширеннаяПодсказка" id="507"/>
+													<SearchStringAddition name="ДолгиСтрокаПоиска" id="508">
+														<AdditionSource>
+															<Item>Долги</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДолгиСтрокаПоискаКонтекстноеМеню" id="509"/>
+														<ExtendedTooltip name="ДолгиСтрокаПоискаРасширеннаяПодсказка" id="510"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ДолгиСостояниеПросмотра" id="511">
+														<AdditionSource>
+															<Item>Долги</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДолгиСостояниеПросмотраКонтекстноеМеню" id="512"/>
+														<ExtendedTooltip name="ДолгиСостояниеПросмотраРасширеннаяПодсказка" id="513"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ДолгиУправлениеПоиском" id="514">
+														<AdditionSource>
+															<Item>Долги</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ДолгиУправлениеПоискомКонтекстноеМеню" id="515"/>
+														<ExtendedTooltip name="ДолгиУправлениеПоискомРасширеннаяПодсказка" id="516"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="Selection">ДолгиВыбор</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ДолгиПредмет" id="517">
+															<DataPath>Долги.Предмет</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<ContextMenu name="ДолгиПредметКонтекстноеМеню" id="518"/>
+															<ExtendedTooltip name="ДолгиПредметРасширеннаяПодсказка" id="519"/>
+														</InputField>
+														<LabelField name="ДолгиДолг" id="520">
+															<DataPath>Долги.Долг</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<CellHyperlink>true</CellHyperlink>
+															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<Hiperlink>true</Hiperlink>
+															<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
+															<ContextMenu name="ДолгиДолгКонтекстноеМеню" id="521"/>
+															<ExtendedTooltip name="ДолгиДолгРасширеннаяПодсказка" id="522"/>
+														</LabelField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -737,7 +832,8 @@
 					<ChildItems>
 						<Table name="Документы" id="375">
 							<MaxWidth>47</MaxWidth>
-							<MaxHeight>8</MaxHeight>
+							<Height>14</Height>
+							<MaxHeight>6</MaxHeight>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -850,7 +946,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Разрешить использовать в уроках только выбранные группы обучения ученика</v8:content>
+									<v8:content>Использовать в уроках только выбранные группы обучения</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Right</TitleLocation>
@@ -865,9 +961,22 @@
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Объект.ГруппыОбучения</DataPath>
+							<CommandSet>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
 							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ГруппыОбученияКонтекстноеМеню" id="330"/>
-							<AutoCommandBar name="ГруппыОбученияКоманднаяПанель" id="331"/>
+							<AutoCommandBar name="ГруппыОбученияКоманднаяПанель" id="331">
+								<ChildItems>
+									<Button name="ГруппыОбученияДобавить" id="502">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.ГруппыОбучения.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ГруппыОбученияДобавитьРасширеннаяПодсказка" id="503"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
 							<ExtendedTooltip name="ГруппыОбученияРасширеннаяПодсказка" id="332"/>
 							<SearchStringAddition name="ГруппыОбученияСтрокаПоиска" id="333">
 								<AdditionSource>
@@ -996,6 +1105,46 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="Долги" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Предмет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предмет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.LM_ПредметыОбучения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Долг" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

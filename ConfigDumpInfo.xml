@@ -231,8 +231,8 @@
 		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаПодбора.Form" id="b46b9a82-0387-4bd3-acf4-0633fdb54c7b.0" configVersion="bc2924157545a24f9027e17e8ba6c9bc00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка" id="b5047c57-1a2e-4458-b91a-be994de00e2a" configVersion="92a3824ed3fcc1469f4eda9825a12ce400000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка.Form" id="b5047c57-1a2e-4458-b91a-be994de00e2a.0" configVersion="d5548303a7d3a74bb3c1dbb5ee7ab2ee00000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента" id="9b7f52e7-b986-499e-af10-c64c4b3374a5" configVersion="7a86c8d50674da4fa61ae3b8812ab89800000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента.Form" id="9b7f52e7-b986-499e-af10-c64c4b3374a5.0" configVersion="d749860a5776e243a8e9009841681b4500000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента" id="9b7f52e7-b986-499e-af10-c64c4b3374a5" configVersion="acd71be6c7f9764f821c063fec61ede300000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента.Form" id="9b7f52e7-b986-499e-af10-c64c4b3374a5.0" configVersion="bae45582c89e944b863594e67dd76dda00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.ManagerModule" id="1e38d363-e78c-4152-b90a-2a6ce229208d.3" configVersion="7d768c14c2f7ee4f8b7c206fcaa8fd0300000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.ObjectModule" id="1e38d363-e78c-4152-b90a-2a6ce229208d.0" configVersion="e856d9165544c54896294fea219d255300000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Predefined" id="1e38d363-e78c-4152-b90a-2a6ce229208d.1c" configVersion="762e91e284400a48a14b6367f68be53c00000000"/>
@@ -3822,8 +3822,8 @@
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаGoogle.Form" id="27a1d4e3-b53e-4bf2-ac83-ea6100079d44.0" configVersion="2579afc9f238c449878c3058222ec07200000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации" id="71c0afe4-fb78-49ef-a774-3795c042a16e" configVersion="3d8734b9a4069847881c7275ec70207a00000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаАвторизации.Form" id="71c0afe4-fb78-49ef-a774-3795c042a16e.0" configVersion="2a8beda54562134b9f9bfc7949fc91f400000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="d674f92d739db54b865a1a538ef0f7e100000000"/>
-		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="5f23171a107660428b1b88a05930c2f100000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь" id="e6909741-53b8-4dae-bf2f-719679980629" configVersion="b32c096c83e583468d0d30e171e09c8d00000000"/>
+		<Metadata name="DataProcessor.LM_Календарь.Form.ФормаКалендарь.Form" id="e6909741-53b8-4dae-bf2f-719679980629.0" configVersion="61174240fbba8a49acadf3c10090085c00000000"/>
 		<Metadata name="DataProcessor.LM_Календарь.ObjectModule" id="dcc267b3-76b9-47ea-b8b4-b82adc7a2310.0" configVersion="113d942d217dba4e8629236a3900bfed00000000"/>
 		<Metadata name="DataProcessor.LM_Настройки" id="ba78841c-c916-4932-9583-5104e6ea20ec" configVersion="3758b2e7f9f87046b8bb7def0737362900000000"/>
 		<Metadata name="DataProcessor.LM_Настройки.Form.Форма" id="f1b7f4ed-8c0e-4408-947f-423fff3e6698" configVersion="5187edb0eb87e34f8abe19db4d8bad1700000000"/>
@@ -8097,8 +8097,8 @@
 		<Metadata name="SettingsStorage.ХранилищеВариантовОтчетов.Form.ЭлементУсловногоОформленияОтчета.Form" id="f259b6b4-d582-429f-a16f-027a6bcb7438.0" configVersion="3c5e534de64d284fa54f6787fe46f96200000000"/>
 		<Metadata name="SettingsStorage.ХранилищеВариантовОтчетов.Form.ЭлементУсловногоОформленияОтчета.Help" id="f259b6b4-d582-429f-a16f-027a6bcb7438.1" configVersion="2840fb2ae726d74cbc775e15c0c93ab400000000"/>
 		<Metadata name="SettingsStorage.ХранилищеВариантовОтчетов.ManagerModule" id="14512818-58b0-44cc-b00d-d37913c57aad.8" configVersion="1260f59b86ca9c4abc5c31e73b648f3800000000"/>
-		<Metadata name="Style.LM_Стиль" id="658dba79-ce09-4de0-8dac-a968a07449d5" configVersion="06b577ccd9403047a8c80b8a35e978a600000000"/>
-		<Metadata name="Style.LM_Стиль.Style" id="658dba79-ce09-4de0-8dac-a968a07449d5.0" configVersion="82ea59ff6080524da77105b61f995f6200000000"/>
+		<Metadata name="Style.LM_Стиль" id="658dba79-ce09-4de0-8dac-a968a07449d5" configVersion="7fbb9c52c65827418b753d9d5584a02b00000000"/>
+		<Metadata name="Style.LM_Стиль.Style" id="658dba79-ce09-4de0-8dac-a968a07449d5.0" configVersion="84c81ba9eb86804fabcfa26a6231aceb00000000"/>
 		<Metadata name="StyleItem.ВидДняПроизводственногоКалендаряВоскресеньеЦвет" id="b7e435a9-6107-4d02-a949-cff793462e31" configVersion="fd1ae41b855e534d914b2b866f70d36300000000"/>
 		<Metadata name="StyleItem.ВидДняПроизводственногоКалендаряНеУказанЦвет" id="f0cda8f5-56f5-423b-8c1c-7113433ebf25" configVersion="640df9b891fcb44c96b3ef87dbd8e9d200000000"/>
 		<Metadata name="StyleItem.ВидДняПроизводственногоКалендаряПраздникЦвет" id="1a220e88-428b-4d85-926d-e572bf19997c" configVersion="f8c9c009ff7a094fa857c3108b240b7a00000000"/>

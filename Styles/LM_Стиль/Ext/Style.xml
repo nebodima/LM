@@ -45,4 +45,7 @@
 	<Item name="AuxiliaryNavigationColor">
 		<Color>style:AuxiliaryNavigationColor</Color>
 	</Item>
+	<Item name="ImportantColor">
+		<Color>web:Turquoise</Color>
+	</Item>
 </Style>
