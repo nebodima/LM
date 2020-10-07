@@ -4,7 +4,7 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Configuration.LessonsManagement__</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>EventLog</name>
 			<value>true</value>

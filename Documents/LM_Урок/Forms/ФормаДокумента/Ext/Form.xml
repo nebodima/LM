@@ -278,8 +278,8 @@
 										</v8:item>
 									</Title>
 									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>true</DropListButton>
 									<ChoiceButton>true</ChoiceButton>
-									<ListChoiceMode>true</ListChoiceMode>
 									<ChoiceButtonPicture>
 										<xr:Ref>StdPicture.AppearanceCircleOneFourthFilled</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>

@@ -2223,7 +2223,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement__</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>DataAdministration</name>
 			<value>true</value>

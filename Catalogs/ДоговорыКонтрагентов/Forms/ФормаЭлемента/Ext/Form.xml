@@ -46,6 +46,12 @@
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>
 		</InputField>
+		<InputField name="Владелец" id="30">
+			<DataPath>Объект.Owner</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="31"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="32"/>
+		</InputField>
 		<InputField name="ВидДоговора" id="22">
 			<DataPath>Объект.ВидДоговора</DataPath>
 			<DefaultItem>true</DefaultItem>

@@ -150,7 +150,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Configuration.LessonsManagement__</name>
+		<name>Configuration.LessonsManagement</name>
 		<right>
 			<name>MainWindowModeNormal</name>
 			<value>true</value>
