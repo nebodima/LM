@@ -5,7 +5,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаЗаписатьИЗакрыть" id="36">
-				<Type>CommandBarHyperlink</Type>
+				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
@@ -197,6 +197,12 @@
 							<ContextMenu name="ЦеныТарифовСуммаКонтекстноеМеню" id="59"/>
 							<ExtendedTooltip name="ЦеныТарифовСуммаРасширеннаяПодсказка" id="60"/>
 						</LabelField>
+						<CheckBoxField name="ЦеныТарифовЗаЗанятие" id="79">
+							<DataPath>ЦеныТарифов.ЗаЗанятие</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЦеныТарифовЗаЗанятиеКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ЦеныТарифовЗаЗанятиеРасширеннаяПодсказка" id="81"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Table>
 				<InputField name="Комментарий" id="13">
@@ -242,7 +248,8 @@
 	ЦеныТарифов.Тариф КАК Тариф,
 	ЦеныТарифов.Сумма КАК Сумма,
 	ЦеныТарифов.КоличествоЧасов КАК КоличествоЧасов,
-	ЦеныТарифов.Организация КАК Организация
+	ЦеныТарифов.Организация КАК Организация,
+	ЦеныТарифов.ЗаЗанятие КАК ЗаЗанятие
 ИЗ
 	РегистрСведений.LM_ЦеныТарифов КАК ЦеныТарифов
 ГДЕ
