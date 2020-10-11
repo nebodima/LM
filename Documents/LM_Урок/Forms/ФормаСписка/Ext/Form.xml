@@ -378,6 +378,12 @@
 						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
 					</Events>
 					<ChildItems>
+						<LabelField name="Номер" id="434">
+							<DataPath>Список.Number</DataPath>
+							<Width>1</Width>
+							<ContextMenu name="НомерКонтекстноеМеню" id="435"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="436"/>
+						</LabelField>
 						<LabelField name="Ссылка" id="16">
 							<DataPath>Список.Ref</DataPath>
 							<UserVisible>

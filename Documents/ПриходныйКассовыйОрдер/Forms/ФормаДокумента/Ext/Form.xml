@@ -6,8 +6,9 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаПровестиИЗакрыть" id="66">
-				<Type>CommandBarHyperlink</Type>
+				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="67"/>
 			</Button>

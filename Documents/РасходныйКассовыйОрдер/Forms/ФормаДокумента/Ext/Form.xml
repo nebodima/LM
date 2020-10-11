@@ -94,12 +94,6 @@
 					<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
 				</InputField>
-				<InputField name="ВидОперации" id="66">
-					<DataPath>Объект.ВидОперации</DataPath>
-					<BackColor>#FFFF99</BackColor>
-					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="67"/>
-					<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="68"/>
-				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа1" id="179">
@@ -115,12 +109,12 @@
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="117"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="118"/>
 				</InputField>
-				<InputField name="Подразделение" id="167">
-					<DataPath>Объект.Подразделение</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ClearButton>true</ClearButton>
-					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="168"/>
-					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="169"/>
+				<InputField name="ВидОперации" id="66">
+					<DataPath>Объект.ВидОперации</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<BackColor>#FFFF99</BackColor>
+					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="68"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -139,6 +133,29 @@
 					<ContextMenu name="КлиентКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="12"/>
 				</InputField>
+				<InputField name="Подразделение" id="167">
+					<DataPath>Объект.Подразделение</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="168"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="169"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="183">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="184"/>
+			<ChildItems>
+				<InputField name="Касса" id="73">
+					<DataPath>Объект.Касса</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="КассаКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="75"/>
+				</InputField>
 				<InputField name="СтатьяЗатрат" id="164">
 					<DataPath>Объект.СтатьяЗатрат</DataPath>
 					<Title>
@@ -147,6 +164,7 @@
 							<v8:content>Статья затрат</v8:content>
 						</v8:item>
 					</Title>
+					<TitleLocation>Right</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ClearButton>true</ClearButton>
@@ -155,13 +173,6 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="Касса" id="73">
-			<DataPath>Объект.Касса</DataPath>
-			<HorizontalStretch>false</HorizontalStretch>
-			<ClearButton>true</ClearButton>
-			<ContextMenu name="КассаКонтекстноеМеню" id="74"/>
-			<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="75"/>
-		</InputField>
 		<InputField name="ПредметОбучения" id="159">
 			<DataPath>Объект.ПредметОбучения</DataPath>
 			<HorizontalStretch>false</HorizontalStretch>
@@ -186,13 +197,21 @@
 		</InputField>
 		<LabelField name="АвторДокумента" id="170">
 			<DataPath>Объект.АвторДокумента</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
 			<ContextMenu name="АвторДокументаКонтекстноеМеню" id="171"/>
 			<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="172"/>
 		</LabelField>
 		<InputField name="Комментарий" id="22">
 			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
 		</InputField>

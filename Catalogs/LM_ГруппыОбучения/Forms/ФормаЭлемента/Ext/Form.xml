@@ -58,6 +58,12 @@
 					<ContextMenu name="ПомещениеКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="50"/>
 				</InputField>
+				<InputField name="Тариф" id="122">
+					<DataPath>Объект.Тариф</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТарифКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="124"/>
+				</InputField>
 				<UsualGroup name="Группа1" id="13">
 					<Group>Vertical</Group>
 					<Representation>StrongSeparation</Representation>
@@ -97,6 +103,14 @@
 												<Event name="OnChange">ВремяНачалаПриИзменении</Event>
 											</Events>
 										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа11" id="125">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="126"/>
+									<ChildItems>
 										<InputField name="Продолжительность" id="39">
 											<DataPath>Объект.Продолжительность</DataPath>
 											<HorizontalStretch>false</HorizontalStretch>
@@ -115,14 +129,14 @@
 												<Event name="OnChange">ПродолжительностьПриИзменении</Event>
 											</Events>
 										</InputField>
+										<Button name="УстановитьОбщееВремя" id="116">
+											<Type>UsualButton</Type>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<CommandName>Form.Command.УстановитьОбщееВремя</CommandName>
+											<ExtendedTooltip name="УстановитьОбщееВремяРасширеннаяПодсказка" id="117"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<Button name="УстановитьОбщееВремя" id="116">
-									<Type>UsualButton</Type>
-									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-									<CommandName>Form.Command.УстановитьОбщееВремя</CommandName>
-									<ExtendedTooltip name="УстановитьОбщееВремяРасширеннаяПодсказка" id="117"/>
-								</Button>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="56">
@@ -349,7 +363,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить общее время всем</v8:content>
+					<v8:content>Установить общее время всем выбранным дням</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

@@ -150,13 +150,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапка2РасширеннаяПодсказка" id="325"/>
 					<ChildItems>
-						<InputField name="Номер" id="4">
-							<DataPath>Объект.Number</DataPath>
-							<Visible>false</Visible>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
-						</InputField>
 						<UsualGroup name="Группа2" id="733">
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
@@ -674,6 +667,12 @@
 									</EditFormat>
 									<ContextMenu name="ОкончаниеКонтекстноеМеню" id="715"/>
 									<ExtendedTooltip name="ОкончаниеРасширеннаяПодсказка" id="716"/>
+								</InputField>
+								<InputField name="Номер" id="4">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
