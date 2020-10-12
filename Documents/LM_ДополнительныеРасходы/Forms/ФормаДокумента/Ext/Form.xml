@@ -78,12 +78,14 @@
 			<DataPath>Объект.ДокументОснования</DataPath>
 			<EditMode>EnterOnInput</EditMode>
 			<HorizontalStretch>false</HorizontalStretch>
+			<ClearButton>true</ClearButton>
 			<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="12"/>
 		</InputField>
 		<InputField name="Организация" id="75">
 			<DataPath>Объект.Организация</DataPath>
 			<HorizontalStretch>false</HorizontalStretch>
+			<ClearButton>true</ClearButton>
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
 		</InputField>

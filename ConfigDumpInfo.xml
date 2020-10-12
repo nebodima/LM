@@ -230,8 +230,8 @@
 		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаПодбора.Form" id="b46b9a82-0387-4bd3-acf4-0633fdb54c7b.0" configVersion="6ce090a070730d41813aaa883792c91b00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка" id="b5047c57-1a2e-4458-b91a-be994de00e2a" configVersion="9015383fda858a4580a3a878aa19a38a00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка.Form" id="b5047c57-1a2e-4458-b91a-be994de00e2a.0" configVersion="58404d231d236d4bb9e2d245042b662f00000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента" id="9b7f52e7-b986-499e-af10-c64c4b3374a5" configVersion="425b4c93fc4b674c85aea2c475b32ba100000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента.Form" id="9b7f52e7-b986-499e-af10-c64c4b3374a5.0" configVersion="55a44f1a27a4d741894f9eb210cd887900000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента" id="9b7f52e7-b986-499e-af10-c64c4b3374a5" configVersion="42cc9c4862f72b4c88adf086ce85e1f300000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента.Form" id="9b7f52e7-b986-499e-af10-c64c4b3374a5.0" configVersion="0ee6b712b737a94ca83a351b927fe8ae00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.ManagerModule" id="1e38d363-e78c-4152-b90a-2a6ce229208d.3" configVersion="5c14858103cfe6488a03ffb2b16802f400000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.ObjectModule" id="1e38d363-e78c-4152-b90a-2a6ce229208d.0" configVersion="3c768cf2ad6f6d48835584ad598447fa00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Predefined" id="1e38d363-e78c-4152-b90a-2a6ce229208d.1c" configVersion="e5964ec2a409144583be99ad5a8c863b00000000"/>
@@ -4933,8 +4933,8 @@
 			<Metadata name="Document.LM_ДополнительныеРасходы.TabularSection.Расходы.Attribute.Сумма" id="ed8c277e-3b62-4429-aaba-613213e7b95f"/>
 			<Metadata name="Document.LM_ДополнительныеРасходы.Attribute.ДокументОснования" id="eeed27a3-9fcf-4496-9257-a3739b2650fa"/>
 		</Metadata>
-		<Metadata name="Document.LM_ДополнительныеРасходы.Form.ФормаДокумента" id="3dc191d7-6ce6-4ae7-b8a4-d6ef5f02b47c" configVersion="78f1b9fd0410f746ac3ca6263a34a4d700000000"/>
-		<Metadata name="Document.LM_ДополнительныеРасходы.Form.ФормаДокумента.Form" id="3dc191d7-6ce6-4ae7-b8a4-d6ef5f02b47c.0" configVersion="90877b9b64c1424fb43138aace4dc1b500000000"/>
+		<Metadata name="Document.LM_ДополнительныеРасходы.Form.ФормаДокумента" id="3dc191d7-6ce6-4ae7-b8a4-d6ef5f02b47c" configVersion="f9804be0fd9d64468e69c8afee99069300000000"/>
+		<Metadata name="Document.LM_ДополнительныеРасходы.Form.ФормаДокумента.Form" id="3dc191d7-6ce6-4ae7-b8a4-d6ef5f02b47c.0" configVersion="fbef005b236bc642b554503ed4eae20e00000000"/>
 		<Metadata name="Document.LM_ДополнительныеРасходы.Form.ФормаСписка" id="0a168f33-05a5-4270-b331-aa7814253248" configVersion="cecf1bb068f6fe4fa3fb2b4e8d52659500000000"/>
 		<Metadata name="Document.LM_ДополнительныеРасходы.Form.ФормаСписка.Form" id="0a168f33-05a5-4270-b331-aa7814253248.0" configVersion="751616a7ea3df541ba82a1e4551285c200000000"/>
 		<Metadata name="Document.LM_ДополнительныеРасходы.ObjectModule" id="179ada96-9d40-4d47-9355-a686128e155d.0" configVersion="24f38d65350fd34f85238c3a0d470bb200000000"/>
@@ -5083,10 +5083,10 @@
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.НеИзменять" id="f9ecaf9a-0806-4fba-b753-4e8ed9ce8cbd"/>
 			<Metadata name="Document.LM_Урок.TabularSection.Ученики.Attribute.Комментарий" id="fa666dc8-e07a-42a2-8341-095225cb24c9"/>
 		</Metadata>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="420b42b7942c8644a3bbd4eec695e50d00000000"/>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="836fc7d660ac004e8be32accc219963a00000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="c7d24ee70c3d90499b4f78946f55c8d900000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="5c04df675e10eb46bba468b3da4d827c00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="e6287fbf9afcef439c02fe1a114bb07500000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="c838b00af56a37409b2de39613aaed8f00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="064de1058373684fb34b0a1f2d14146a00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="b21204206e071f43b14275f09c55495400000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="b0b7b808aa703045983caf78dff3790100000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="5b28efdeb020f54e8b14fc8bc08a993900000000"/>
 		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="6015f48987ce6744a96e6475b23b204900000000"/>

@@ -740,7 +740,9 @@
 									<v8:content>Автор</v8:content>
 								</v8:item>
 							</Title>
+							<TitleTextColor>#808080</TitleTextColor>
 							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
 							<TextColor>#808080</TextColor>
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
