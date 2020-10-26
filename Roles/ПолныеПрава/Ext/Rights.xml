@@ -1580,6 +1580,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.LM_Абонемент</name>
+		<right>
+			<name>InteractiveDelete</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Constant.ДатаПоследнегоСтартаКлиентскогоСеанса</name>
 		<right>
 			<name>Update</name>

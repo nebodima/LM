@@ -29,11 +29,11 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Помещения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ДисконтныеКарты</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">d22f3bdf-88b0-4002-ac36-1ad9a7f86d85</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ГруппыОбучения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДоговорыКонтрагентов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Скидки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_СтавкиПедагогов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Абонемент</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

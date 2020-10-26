@@ -188,6 +188,12 @@
 							<ContextMenu name="ТарифКонтекстноеМеню" id="190"/>
 							<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="191"/>
 						</InputField>
+						<InputField name="Абонемент" id="267">
+							<DataPath>Объект.Абонемент</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="АбонементКонтекстноеМеню" id="268"/>
+							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="269"/>
+						</InputField>
 						<Button name="ПолучитьСуммуПоТарифу" id="263">
 							<Type>Hyperlink</Type>
 							<CommandName>Form.Command.ПолучитьСуммуПоТарифу</CommandName>
@@ -215,6 +221,7 @@
 					<ChildItems>
 						<InputField name="ВидОперации" id="72">
 							<DataPath>Объект.ВидОперации</DataPath>
+							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<BackColor>#FFFF99</BackColor>
 							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="73"/>
@@ -228,6 +235,7 @@
 									<v8:content>Документ основание (урок)</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<InputHint>
@@ -247,6 +255,7 @@
 									<v8:content>Ответственное лицо контрагента</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ChoiceButton>true</ChoiceButton>
 							<ClearButton>true</ClearButton>
@@ -267,6 +276,7 @@
 									<v8:content>Статья затрат</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Right</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
@@ -284,6 +294,7 @@
 									<v8:content>Подразделение</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>

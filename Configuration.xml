@@ -1583,6 +1583,7 @@
 			<CommonForm>ФормаОтчета</CommonForm>
 			<CommonForm>ФормаПоиска</CommonForm>
 			<CommonForm>ЭлектроннаяПодпись</CommonForm>
+			<Catalog>LM_Абонемент</Catalog>
 			<Catalog>LM_ГруппыОбучения</Catalog>
 			<Catalog>LM_Тарифы</Catalog>
 			<Catalog>LM_ПредметыОбучения</Catalog>
@@ -1753,9 +1754,9 @@
 			<Enum>ФорматыХраненияОдностраничныхФайлов</Enum>
 			<Enum>ЦветаЗаметок</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Report>LM_Взаиморасчеты</Report>
 			<Report>LM_Расходы</Report>
 			<Report>LM_РасчетыПоЗарплате</Report>
-			<Report>LM_Взаиморасчеты</Report>
 			<Report>LM_ОтчетПоДисконтнымКартам</Report>
 			<Report>LM_Явки_2</Report>
 			<Report>LM_ВедомостьПоКассе</Report>
