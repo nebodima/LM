@@ -1174,6 +1174,7 @@
 			<EventSubscription>УстановитьСтатусИзмененияПометкиУдаленияПользователя</EventSubscription>
 			<EventSubscription>ПроверитьДатуЗапретаИзмененияПередЗаписьюДокумента</EventSubscription>
 			<EventSubscription>ПроверитьДатуЗапретаИзмененияПередУдалением</EventSubscription>
+			<ScheduledJob>LM_ПроверкаАбонементов</ScheduledJob>
 			<ScheduledJob>ЗагрузкаКлассификатораБанковРФССайтаРБК</ScheduledJob>
 			<ScheduledJob>ЗагрузкаКурсовВалют</ScheduledJob>
 			<ScheduledJob>ЗаполнениеДанныхДляОграниченияДоступа</ScheduledJob>
@@ -1846,6 +1847,7 @@
 			<DataProcessor>УниверсальныйОбменДаннымиXML</DataProcessor>
 			<DataProcessor>УправлениеИтогамиИАгрегатами</DataProcessor>
 			<DataProcessor>УстановкаОбновлений</DataProcessor>
+			<InformationRegister>LM_Оповещения</InformationRegister>
 			<InformationRegister>LM_Настройки</InformationRegister>
 			<InformationRegister>LM_ЦеныТарифов</InformationRegister>
 			<InformationRegister>АдресныеОбъекты</InformationRegister>

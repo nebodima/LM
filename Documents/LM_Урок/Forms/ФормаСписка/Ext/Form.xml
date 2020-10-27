@@ -614,7 +614,6 @@
 							<VerticalScrollBar>DontUse</VerticalScrollBar>
 							<HorizontalLines>false</HorizontalLines>
 							<VerticalLines>false</VerticalLines>
-							<HorizontalStretch>false</HorizontalStretch>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Расшифровка</DataPath>
 							<RowPictureDataPath>Расшифровка.DefaultPicture</RowPictureDataPath>
@@ -738,6 +737,16 @@
 									<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
 									<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
 									<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
+								</LabelField>
+								<LabelField name="РасшифровкаАбонемент" id="437">
+									<DataPath>Расшифровка.Абонемент</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
+									<CellHyperlink>true</CellHyperlink>
+									<Width>1</Width>
+									<Hiperlink>true</Hiperlink>
+									<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
+									<ContextMenu name="РасшифровкаАбонементКонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="РасшифровкаАбонементРасширеннаяПодсказка" id="439"/>
 								</LabelField>
 								<PictureField name="РасшифровкаСписатьОплату" id="353">
 									<DataPath>Расшифровка.СписатьОплату</DataPath>
@@ -882,7 +891,6 @@
 									<HorizontalLines>false</HorizontalLines>
 									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
-									<HorizontalStretch>false</HorizontalStretch>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
@@ -1382,7 +1390,8 @@
 	УрокУченики.СуммаСкидки КАК СуммаСкидки,
 	УрокУченики.Комментарий КАК Комментарий,
 	СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК СуммаОстаток,
-	СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету
+	СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
+	УрокУченики.Абонемент КАК Абонемент
 ИЗ
 	Документ.LM_Урок.Ученики КАК УрокУченики
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК СписанияСуммЗаУрокиОстатки

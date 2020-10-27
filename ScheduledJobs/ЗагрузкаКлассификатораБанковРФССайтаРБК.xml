@@ -13,7 +13,7 @@
 			<MethodName>CommonModule.РаботаСБанками.ЗагрузитьКлассификаторБанков</MethodName>
 			<Description>Загрузка классификатора банков</Description>
 			<Key/>
-			<Use>true</Use>
+			<Use>false</Use>
 			<Predefined>true</Predefined>
 			<RestartCountOnFailure>3</RestartCountOnFailure>
 			<RestartIntervalOnFailure>3600</RestartIntervalOnFailure>

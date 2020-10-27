@@ -61,8 +61,8 @@
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.LM_Абонемент.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm/>
-			<DefaultChoiceForm/>
+			<DefaultListForm>Catalog.LM_Абонемент.Form.ФормаСписка</DefaultListForm>
+			<DefaultChoiceForm>Catalog.LM_Абонемент.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryFolderForm/>
@@ -264,11 +264,11 @@
 			</Attribute>
 			<Attribute uuid="65d9667f-639c-4f1c-bd24-9f27d801274a">
 				<Properties>
-					<Name>Заморозка</Name>
+					<Name>Приостановка</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Заморозка</v8:content>
+							<v8:content>Приостановка</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -482,7 +482,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата активации</v8:content>
+							<v8:content>Активирован</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -519,13 +519,13 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="0ca71633-83e0-4fd7-934d-0528848a2cb3">
+			<Attribute uuid="ad1fd6bc-06e1-42bb-9d6e-1f57813aaf55">
 				<Properties>
-					<Name>ДатаЗаморозки</Name>
+					<Name>ДатаПриостановки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата заморозки</v8:content>
+							<v8:content>Приостановлен</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -562,20 +562,106 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="f292058d-31af-4a73-9757-1b85ef7bd9c1">
+			<Attribute uuid="0f910894-9116-490d-bd37-ef7de2dd6ce6">
 				<Properties>
-					<Name>СрокЗамрозки</Name>
+					<Name>ДатаВозобновления</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Срок замрозки</v8:content>
+							<v8:content>Возобновлен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="6f0c0d48-543c-4725-a35f-ff59e2c2fc41">
+				<Properties>
+					<Name>ДатаИзменения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата изменения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Use>ForItem</Use>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0ec73eed-86ef-4c32-b899-0e36e2f55183">
+				<Properties>
+					<Name>СрокПриостановки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок приостановки</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
-							<v8:Digits>6</v8:Digits>
+							<v8:Digits>5</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 						</v8:NumberQualifiers>
@@ -609,21 +695,21 @@
 			</Attribute>
 			<TabularSection uuid="0e110202-055c-4a90-9bd2-6879cb1d8ab3">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.LM_Абонемент.Заморозки" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.LM_Абонемент.Приостановки" category="TabularSection">
 						<xr:TypeId>90edd6f4-7cad-45b1-991b-b4a093d887ac</xr:TypeId>
 						<xr:ValueId>7ae83210-5fd1-414d-895f-b59737f3f69b</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.LM_Абонемент.Заморозки" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.LM_Абонемент.Приостановки" category="TabularSectionRow">
 						<xr:TypeId>221cbeca-ecdc-4f88-ad8b-059d8326a846</xr:TypeId>
 						<xr:ValueId>b2445ed1-8109-40b4-b416-dd5c83b01f0a</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>Заморозки</Name>
+					<Name>Приостановки</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Заморозки</v8:content>
+							<v8:content>Приостановки</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -634,11 +720,11 @@
 				<ChildObjects>
 					<Attribute uuid="3e91705c-62e4-428c-8b26-207d6f7af49a">
 						<Properties>
-							<Name>ДатаЗаморозки</Name>
+							<Name>ДатаПриостановки</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Дата заморозки</v8:content>
+									<v8:content>Приостановлен</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -674,11 +760,11 @@
 					</Attribute>
 					<Attribute uuid="017f2b7c-3129-425f-a024-a5604242f47e">
 						<Properties>
-							<Name>ДатаРазморозки</Name>
+							<Name>ДатаВозобновления</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Дата разморозки</v8:content>
+									<v8:content>Возобновлен</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -725,7 +811,7 @@
 							<Type>
 								<v8:Type>xs:dateTime</v8:Type>
 								<v8:DateQualifiers>
-									<v8:DateFractions>Date</v8:DateFractions>
+									<v8:DateFractions>DateTime</v8:DateFractions>
 								</v8:DateQualifiers>
 							</Type>
 							<PasswordMode>false</PasswordMode>
@@ -754,11 +840,11 @@
 					</Attribute>
 					<Attribute uuid="652cf926-d381-4990-928c-c784286dc0f0">
 						<Properties>
-							<Name>КоличествоДней</Name>
+							<Name>СрокПриостановки</Name>
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Количество дней</v8:content>
+									<v8:content>Кол. дней</v8:content>
 								</v8:item>
 							</Synonym>
 							<Comment/>
@@ -838,6 +924,9 @@
 				</ChildObjects>
 			</TabularSection>
 			<Form>ФормаЭлемента</Form>
+			<Form>ФормаПриостановки</Form>
+			<Form>ФормаСписка</Form>
+			<Form>ФормаВыбора</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

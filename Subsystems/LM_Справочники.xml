@@ -34,6 +34,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Скидки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_СтавкиПедагогов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Абонемент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.LM_Оповещения</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

@@ -95,12 +95,6 @@
 					<ContextMenu name="ТребоватьОписаниеКНеоплаченнымУрокамКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ТребоватьОписаниеКНеоплаченнымУрокамРасширеннаяПодсказка" id="30"/>
 				</CheckBoxField>
-				<CheckBoxField name="ИспользоватьАбонементы" id="40">
-					<DataPath>Список.ИспользоватьАбонементы</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ИспользоватьАбонементыКонтекстноеМеню" id="41"/>
-					<ExtendedTooltip name="ИспользоватьАбонементыРасширеннаяПодсказка" id="42"/>
-				</CheckBoxField>
 				<LabelField name="ТребоватьОписаниеКНеоплаченнымУрокамС" id="31">
 					<DataPath>Список.ТребоватьОписаниеКНеоплаченнымУрокамС</DataPath>
 					<ContextMenu name="ТребоватьОписаниеКНеоплаченнымУрокамСКонтекстноеМеню" id="32"/>
