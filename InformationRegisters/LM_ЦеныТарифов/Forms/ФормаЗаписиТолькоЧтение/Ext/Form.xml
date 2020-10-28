@@ -31,6 +31,15 @@
 				<Event name="OnChange">КоличествоЧасовПриИзменении</Event>
 			</Events>
 		</InputField>
+		<InputField name="КоличествоЗанятий" id="21">
+			<DataPath>Запись.КоличествоЗанятий</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КоличествоЗанятийКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="КоличествоЗанятийРасширеннаяПодсказка" id="23"/>
+			<Events>
+				<Event name="OnChange">КоличествоЗанятийПриИзменении</Event>
+			</Events>
+		</InputField>
 		<UsualGroup name="Группа1" id="19">
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
@@ -42,16 +51,6 @@
 					<ContextMenu name="СуммаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="9"/>
 				</InputField>
-				<CheckBoxField name="ЗаЗанятие" id="16">
-					<DataPath>Запись.ЗаЗанятие</DataPath>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ЗаЗанятиеКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ЗаЗанятиеРасширеннаяПодсказка" id="18"/>
-					<Events>
-						<Event name="OnChange">ЗаЗанятиеПриИзменении</Event>
-					</Events>
-				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

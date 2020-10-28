@@ -300,6 +300,13 @@
 													<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="368"/>
 													<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="369"/>
 												</InputField>
+												<InputField name="Скидка" id="526">
+													<DataPath>Объект.Скидка</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="СкидкаКонтекстноеМеню" id="527"/>
+													<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="528"/>
+												</InputField>
 												<InputField name="Родитель" id="186">
 													<DataPath>Объект.Родитель1</DataPath>
 													<ToolTip>
@@ -722,6 +729,7 @@
 											<ChildItems>
 												<Table name="Долги" id="504">
 													<Representation>List</Representation>
+													<CommandBarLocation>None</CommandBarLocation>
 													<ReadOnly>true</ReadOnly>
 													<Width>30</Width>
 													<MaxWidth>18</MaxWidth>

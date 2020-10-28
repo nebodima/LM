@@ -42,7 +42,7 @@
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
-			<DefaultRecordForm/>
+			<DefaultRecordForm>InformationRegister.LM_Оповещения.Form.ФормаЗаписи</DefaultRecordForm>
 			<DefaultListForm/>
 			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
@@ -175,8 +175,25 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
-						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+						<v8:Type>cfg:DocumentRef.LM_ДополнительныеРасходы</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_СписаниеОстатков</v8:Type>
+						<v8:Type>cfg:DocumentRef.РасходныйКассовыйОрдер</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Тарифы</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ГруппыОбучения</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_НачисленияПедагогам</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ДисконтныеКарты</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ПредметыОбучения</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_ГрафикРабочегоВремениПедагога</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_НачислениеБонусов</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Абонемент</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_ПеремещениеДенег</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Скидки</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Помещения</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_СтавкиПедагогов</v8:Type>
+						<v8:Type>cfg:DocumentRef.LM_РасчетЗарплаты</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -351,6 +368,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Dimension>
+			<Form>ФормаЗаписи</Form>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Источник" id="1">
+			<DataPath>Запись.Источник</DataPath>
+			<ContextMenu name="ИсточникКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<LabelField name="ВремяСобытия" id="4">
+			<DataPath>Запись.ВремяСобытия</DataPath>
+			<ContextMenu name="ВремяСобытияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВремяСобытияРасширеннаяПодсказка" id="6"/>
+		</LabelField>
+		<CheckBoxField name="Завершено" id="10">
+			<DataPath>Запись.Завершено</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЗавершеноКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ЗавершеноРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<InputField name="СрокНапоминания" id="16">
+			<DataPath>Запись.СрокНапоминания</DataPath>
+			<ContextMenu name="СрокНапоминанияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СрокНапоминанияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Описание" id="19">
+			<DataPath>Запись.Описание</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<MultiLine>true</MultiLine>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Пользователь" id="7">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.LM_Оповещения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
