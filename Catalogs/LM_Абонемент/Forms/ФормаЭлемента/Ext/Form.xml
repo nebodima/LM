@@ -29,6 +29,40 @@
 				<BackColor>style:ToolTipBackColor</BackColor>
 				<ExtendedTooltip name="ПриостановитьРасширеннаяПодсказка" id="54"/>
 			</Button>
+			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="297">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="298"/>
+			</Button>
+			<Popup name="ФормаГруппа1" id="293">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать на основании</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="294"/>
+				<ChildItems>
+					<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="295">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Document.ПриходныйКассовыйОрдер.StandardCommand.CreateBasedOn</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<Picture>
+							<xr:Ref>StdPicture.Document</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ПКО (оплата)</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="296"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -179,6 +213,30 @@
 											<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
 											<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
 										</InputField>
+										<UsualGroup name="Группа9" id="286">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="287"/>
+											<ChildItems>
+												<InputField name="ЦенаАбонемента" id="283">
+													<DataPath>Объект.ЦенаАбонемента</DataPath>
+													<Width>7</Width>
+													<ContextMenu name="ЦенаАбонементаКонтекстноеМеню" id="284"/>
+													<ExtendedTooltip name="ЦенаАбонементаРасширеннаяПодсказка" id="285"/>
+												</InputField>
+												<Button name="ИзменитьЦенуАбонемента" id="291">
+													<Type>Hyperlink</Type>
+													<CommandName>Form.Command.ИзменитьЦенуАбонемента</CommandName>
+													<ExtendedTooltip name="ИзменитьЦенуАбонементаРасширеннаяПодсказка" id="292"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="Декорация3" id="288">
+											<TextColor>#0000FF</TextColor>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="289"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="290"/>
+										</LabelDecoration>
 										<UsualGroup name="Группа3" id="131">
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
@@ -207,6 +265,7 @@
 													<DataPath>Объект.Комментарий</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
+													<VerticalStretch>false</VerticalStretch>
 													<MultiLine>true</MultiLine>
 													<InputHint>
 														<v8:item>
@@ -955,6 +1014,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИзменитьПериод</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьЦенуАбонемента" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить цену абонемента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьЦенуАбонемента</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>

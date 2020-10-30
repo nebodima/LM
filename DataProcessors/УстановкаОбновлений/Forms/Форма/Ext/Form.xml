@@ -868,7 +868,7 @@
 										<PictureDecoration name="Декорация13" id="540">
 											<SkipOnInput>false</SkipOnInput>
 											<Picture>
-												<xr:Ref>CommonPicture.Информация</xr:Ref>
+												<xr:Ref>0:ea868745-71fc-483c-aa6e-f242c06c673f</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
 											<FileDragMode>AsFile</FileDragMode>

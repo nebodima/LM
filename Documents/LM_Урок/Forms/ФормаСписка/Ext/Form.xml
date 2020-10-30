@@ -105,18 +105,6 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитовРасширеннаяПодсказка" id="421"/>
 					</Button>
-					<Button name="ОткрытьПанельУченика" id="246">
-						<Type>CommandBarHyperlink</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ОткрытьПанельУченика</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
-						<Picture>
-							<xr:Ref>StdPicture.User</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ОткрытьПанельУченикаРасширеннаяПодсказка" id="247"/>
-					</Button>
 				</ChildItems>
 			</Popup>
 			<Popup name="ФормаСоздатьНаОсновании" id="287">

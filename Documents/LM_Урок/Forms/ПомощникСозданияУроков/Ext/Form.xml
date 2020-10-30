@@ -481,6 +481,7 @@
 								</UsualGroup>
 								<Table name="Ученики" id="3">
 									<Representation>List</Representation>
+									<Footer>true</Footer>
 									<HorizontalLines>false</HorizontalLines>
 									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -522,7 +523,7 @@
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Добавить физ. лицо</v8:content>
+														<v8:content>Добавить ученика</v8:content>
 													</v8:item>
 												</Title>
 												<ExtendedTooltip name="УченикиДобавить1РасширеннаяПодсказка" id="177"/>
@@ -990,7 +991,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Списать оплату</v8:content>
+							<v8:content>К оплате</v8:content>
 						</v8:item>
 					</Title>
 					<Type>

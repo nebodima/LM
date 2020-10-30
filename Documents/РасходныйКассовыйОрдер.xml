@@ -28,7 +28,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>РКО</v8:content>
+					<v8:content>РКО (расход -)</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -628,12 +628,14 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Документ основания</v8:content>
+							<v8:content>Основание</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
 						<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_Абонемент</v8:Type>
+						<v8:Type>cfg:CatalogRef.LM_ФизЛица</v8:Type>
 						<v8:Type>cfg:DocumentRef.LM_РасчетЗарплаты</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
@@ -668,7 +670,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Напраление (Предм. обуч.)</v8:content>
+							<v8:content>Предмет обучения</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

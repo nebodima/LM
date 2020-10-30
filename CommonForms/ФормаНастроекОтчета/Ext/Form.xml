@@ -713,7 +713,7 @@
 												</v8:item>
 											</Title>
 											<Picture>
-												<xr:Ref>CommonPicture.Информация</xr:Ref>
+												<xr:Ref>0:ea868745-71fc-483c-aa6e-f242c06c673f</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
 											<FileDragMode>AsFile</FileDragMode>
@@ -1518,7 +1518,7 @@
 										</v8:item>
 									</Title>
 									<Picture>
-										<xr:Ref>CommonPicture.Информация</xr:Ref>
+										<xr:Ref>0:ea868745-71fc-483c-aa6e-f242c06c673f</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</Picture>
 									<FileDragMode>AsFile</FileDragMode>
@@ -1775,7 +1775,7 @@
 										</v8:item>
 									</Title>
 									<Picture>
-										<xr:Ref>CommonPicture.Информация</xr:Ref>
+										<xr:Ref>0:ea868745-71fc-483c-aa6e-f242c06c673f</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</Picture>
 									<FileDragMode>AsFile</FileDragMode>
@@ -2311,7 +2311,7 @@
 								</v8:item>
 							</Title>
 							<Picture>
-								<xr:Ref>CommonPicture.Информация</xr:Ref>
+								<xr:Ref>0:ea868745-71fc-483c-aa6e-f242c06c673f</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<FileDragMode>AsFile</FileDragMode>
@@ -2373,7 +2373,7 @@
 						</v8:item>
 					</Title>
 					<Picture>
-						<xr:Ref>CommonPicture.Информация</xr:Ref>
+						<xr:Ref>0:ea868745-71fc-483c-aa6e-f242c06c673f</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<FileDragMode>AsFile</FileDragMode>

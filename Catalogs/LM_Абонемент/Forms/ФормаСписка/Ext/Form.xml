@@ -19,6 +19,34 @@
 				<CommandName>Form.StandardCommand.Copy</CommandName>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="63"/>
 			</Button>
+			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="77">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>CommonCommand.СтруктураПодчиненности</CommandName>
+				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="78"/>
+			</Button>
+			<Popup name="ФормаГруппа1" id="73">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Создать на основании</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="74"/>
+				<ChildItems>
+					<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="75">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Document.ПриходныйКассовыйОрдер.StandardCommand.CreateBasedOn</CommandName>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+						<Picture>
+							<xr:Ref>StdPicture.Document</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="76"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>

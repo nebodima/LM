@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>7c341ea7-0967-4c34-b7fb-9eb941662f7d</xr:ObjectId>
+				<xr:ObjectId>bf8ecfb9-925d-412c-8fca-b21bee50a90c</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
@@ -357,7 +357,6 @@
 			<CommonPicture>ЗначокЗаставкиВнешнейОперации</CommonPicture>
 			<CommonPicture>ИерархическийСписок</CommonPicture>
 			<CommonPicture>ИзменитьШрифт</CommonPicture>
-			<CommonPicture>Информация</CommonPicture>
 			<CommonPicture>Информация32</CommonPicture>
 			<CommonPicture>ИнформацияПоНедоступнымПолям</CommonPicture>
 			<CommonPicture>ИспользованиеМакета</CommonPicture>
@@ -1607,6 +1606,7 @@
 			<CommonForm>ФормаОтчета</CommonForm>
 			<CommonForm>ФормаПоиска</CommonForm>
 			<CommonForm>ЭлектроннаяПодпись</CommonForm>
+			<Catalog>LM_ФизЛица</Catalog>
 			<Catalog>LM_Абонемент</Catalog>
 			<Catalog>LM_ГруппыОбучения</Catalog>
 			<Catalog>LM_Тарифы</Catalog>
@@ -1620,7 +1620,6 @@
 			<Catalog>LM_ВидыДоговоров</Catalog>
 			<Catalog>LM_ИсточникиИнформации</Catalog>
 			<Catalog>LM_Фото</Catalog>
-			<Catalog>LM_ФизЛица</Catalog>
 			<Catalog>Организации</Catalog>
 			<Catalog>ДоговорыКонтрагентов</Catalog>
 			<Catalog>Кассы</Catalog>
@@ -1681,8 +1680,6 @@
 			<Catalog>ШаблоныЗаданийОчереди</Catalog>
 			<Catalog>ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</Catalog>
 			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
-			<Document>ПриходныйКассовыйОрдер</Document>
-			<Document>РасходныйКассовыйОрдер</Document>
 			<Document>LM_Урок</Document>
 			<Document>LM_ДополнительныеРасходы</Document>
 			<Document>LM_НачисленияПедагогам</Document>
@@ -1691,6 +1688,8 @@
 			<Document>LM_ПеремещениеДенег</Document>
 			<Document>LM_НачислениеБонусов</Document>
 			<Document>LM_СписаниеОстатков</Document>
+			<Document>ПриходныйКассовыйОрдер</Document>
+			<Document>РасходныйКассовыйОрдер</Document>
 			<Document>Анкета</Document>
 			<Document>Встреча</Document>
 			<Document>ЗапланированноеВзаимодействие</Document>
@@ -1815,9 +1814,6 @@
 			<DataProcessor>LM_ВыборWebЦвета</DataProcessor>
 			<DataProcessor>LM_ОбработкаОбновления</DataProcessor>
 			<DataProcessor>LM_ОбработкаФото</DataProcessor>
-			<DataProcessor>LM_ОтмечаниеПосещений</DataProcessor>
-			<DataProcessor>LM_Настройки</DataProcessor>
-			<DataProcessor>LM_АвтоматическаяСменаСтатусов</DataProcessor>
 			<DataProcessor>ИнструментыРазработчикаОбновлениеВспомогательныхДанных</DataProcessor>
 			<DataProcessor>АвтоматическоеИзвлечениеТекстов</DataProcessor>
 			<DataProcessor>АктивныеПользователи</DataProcessor>

@@ -25,9 +25,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_ОтчетПоДисконтнымКартам</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_ВедомостьПоКассеДляМенеджеров</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_Явки_2</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_АвтоматическаяСменаСтатусов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">500d3f7b-8c1c-4503-b316-313bdd78d947</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_Календарь</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_ПанельУченика</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_РасчетыПоЗарплате</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Report.LM_Расходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.LM_ОбработкаОбновления</xr:Item>

@@ -359,12 +359,13 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
-										<PictureDecoration name="Декорация6" id="482">
+										<LabelDecoration name="Декорация6" id="482">
 											<Height>1</Height>
-											<PictureSize>AutoSize</PictureSize>
+											<HorizontalStretch>true</HorizontalStretch>
+											<BackColor>web:Gainsboro</BackColor>
 											<ContextMenu name="Декорация6КонтекстноеМеню" id="483"/>
 											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="484"/>
-										</PictureDecoration>
+										</LabelDecoration>
 										<UsualGroup name="Группа4" id="475">
 											<Width>36</Width>
 											<HorizontalStretch>false</HorizontalStretch>
@@ -706,6 +707,8 @@
 											</ChildItems>
 										</UsualGroup>
 										<LabelDecoration name="Декорация1" id="523">
+											<HorizontalStretch>true</HorizontalStretch>
+											<BackColor>web:Gainsboro</BackColor>
 											<ContextMenu name="Декорация1КонтекстноеМеню" id="524"/>
 											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="525"/>
 										</LabelDecoration>

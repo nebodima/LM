@@ -28,7 +28,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>ПКО</v8:content>
+					<v8:content>ПКО (оплата +)</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -175,6 +175,7 @@
 			<Characteristics/>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_ФизЛица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.LM_Абонемент</xr:Item>
 			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.ПриходныйКассовыйОрдер.StandardAttribute.Number</xr:Field>
@@ -554,11 +555,12 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Документ основания</v8:content>
+							<v8:content>Основание</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
+						<v8:Type>cfg:CatalogRef.LM_Абонемент</v8:Type>
 						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
 					</Type>
 					<PasswordMode>false</PasswordMode>

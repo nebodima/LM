@@ -32,6 +32,7 @@
 				<v8:Type>cfg:DocumentRef.LM_ГрафикРабочегоВремениПедагога</v8:Type>
 				<v8:Type>cfg:DocumentRef.LM_Урок</v8:Type>
 				<v8:Type>cfg:DocumentRef.LM_НачислениеБонусов</v8:Type>
+				<v8:Type>cfg:CatalogRef.LM_Абонемент</v8:Type>
 				<v8:Type>cfg:DocumentRef.LM_ПеремещениеДенег</v8:Type>
 				<v8:Type>cfg:DocumentRef.LM_РасчетЗарплаты</v8:Type>
 			</CommandParameterType>

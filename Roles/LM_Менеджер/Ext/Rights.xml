@@ -1332,13 +1332,6 @@
 		</right>
 	</object>
 	<object>
-		<name>CommonCommand.Напомнить</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Catalog.LM_Статусы</name>
 		<right>
 			<name>Read</name>
@@ -1591,17 +1584,6 @@
 		<name>InformationRegister.НастройкиСинхронизацииФайлов</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.LM_ОтмечаниеПосещений</name>
-		<right>
-			<name>Use</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -2280,17 +2262,6 @@
 		<name>Constant.СписокРасширенийТекстовыхФайлов</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>DataProcessor.LM_АвтоматическаяСменаСтатусов</name>
-		<right>
-			<name>Use</name>
 			<value>true</value>
 		</right>
 		<right>

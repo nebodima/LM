@@ -66,17 +66,14 @@
 				</UsualGroup>
 				<UsualGroup name="Группа3" id="32">
 					<Group>Vertical</Group>
-					<Representation>StrongSeparation</Representation>
+					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<BackColor>#FFFF99</BackColor>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="33"/>
 					<ChildItems>
 						<InputField name="КоэффициентСумма" id="13">
 							<DataPath>Объект.КоэффициентСумма</DataPath>
-							<TitleTextColor>#000000</TitleTextColor>
 							<EditMode>EnterOnInput</EditMode>
-							<TextColor>#000000</TextColor>
-							<BackColor>#E4E4E4</BackColor>
+							<Width>7</Width>
 							<ContextMenu name="КоэффициентСуммаКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="КоэффициентСуммаРасширеннаяПодсказка" id="15"/>
 							<Events>
@@ -97,9 +94,7 @@
 						</LabelDecoration>
 						<InputField name="КоэффициентПроцент" id="19">
 							<DataPath>Объект.КоэффициентПроцент</DataPath>
-							<TitleTextColor>#000000</TitleTextColor>
-							<TextColor>#000000</TextColor>
-							<BackColor>#E4E4E4</BackColor>
+							<SpinButton>true</SpinButton>
 							<ContextMenu name="КоэффициентПроцентКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="КоэффициентПроцентРасширеннаяПодсказка" id="21"/>
 							<Events>
@@ -110,7 +105,15 @@
 				</UsualGroup>
 				<InputField name="Комментарий" id="16">
 					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="18"/>
 				</InputField>
