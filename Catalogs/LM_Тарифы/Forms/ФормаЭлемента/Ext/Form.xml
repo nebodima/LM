@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -22,6 +22,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -90,6 +91,24 @@
 									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа2" id="88">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="89"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация2" id="85">
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="87"/>
+								</LabelDecoration>
+								<LabelDecoration name="Декорация1" id="82">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#0000FF</TextColor>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="84"/>
+								</LabelDecoration>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -170,15 +189,15 @@
 					<ChildItems>
 						<LabelField name="ЦеныТарифовПериод" id="73">
 							<DataPath>ЦеныТарифов.Период</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата</v8:content>
+								</v8:item>
+							</Title>
 							<Width>1</Width>
 							<ContextMenu name="ЦеныТарифовПериодКонтекстноеМеню" id="74"/>
 							<ExtendedTooltip name="ЦеныТарифовПериодРасширеннаяПодсказка" id="75"/>
-						</LabelField>
-						<LabelField name="ЦеныТарифовОрганизация" id="76">
-							<DataPath>ЦеныТарифов.Организация</DataPath>
-							<Width>1</Width>
-							<ContextMenu name="ЦеныТарифовОрганизацияКонтекстноеМеню" id="77"/>
-							<ExtendedTooltip name="ЦеныТарифовОрганизацияРасширеннаяПодсказка" id="78"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовТариф" id="61">
 							<DataPath>ЦеныТарифов.Тариф</DataPath>
@@ -192,11 +211,11 @@
 							<ContextMenu name="ЦеныТарифовКоличествоЧасовКонтекстноеМеню" id="71"/>
 							<ExtendedTooltip name="ЦеныТарифовКоличествоЧасовРасширеннаяПодсказка" id="72"/>
 						</LabelField>
-						<LabelField name="ЦеныТарифовКоличествоЗанятий" id="79">
-							<DataPath>ЦеныТарифов.КоличествоЗанятий</DataPath>
+						<LabelField name="ЦеныТарифовКоличествоУроков" id="79">
+							<DataPath>ЦеныТарифов.КоличествоУроков</DataPath>
 							<Width>1</Width>
-							<ContextMenu name="ЦеныТарифовКоличествоЗанятийКонтекстноеМеню" id="80"/>
-							<ExtendedTooltip name="ЦеныТарифовКоличествоЗанятийРасширеннаяПодсказка" id="81"/>
+							<ContextMenu name="ЦеныТарифовКоличествоУроковКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ЦеныТарифовКоличествоУроковРасширеннаяПодсказка" id="81"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовСумма" id="58">
 							<DataPath>ЦеныТарифов.Сумма</DataPath>
@@ -248,8 +267,7 @@
 	ЦеныТарифов.Тариф КАК Тариф,
 	ЦеныТарифов.Сумма КАК Сумма,
 	ЦеныТарифов.КоличествоЧасов КАК КоличествоЧасов,
-	ЦеныТарифов.Организация КАК Организация,
-	ЦеныТарифов.КоличествоЗанятий КАК КоличествоЗанятий
+	ЦеныТарифов.КоличествоУроков КАК КоличествоУроков
 ИЗ
 	РегистрСведений.LM_ЦеныТарифов КАК ЦеныТарифов
 ГДЕ

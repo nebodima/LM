@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -670,6 +670,9 @@
 								</InputField>
 								<InputField name="Номер" id="4">
 									<DataPath>Объект.Number</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
 									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
@@ -678,7 +681,7 @@
 						</UsualGroup>
 						<InputField name="Организация" id="724">
 							<DataPath>Объект.Организация</DataPath>
-							<TitleLocation>Right</TitleLocation>
+							<TitleLocation>None</TitleLocation>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -726,25 +729,42 @@
 									<v8:content>Статус урока</v8:content>
 								</v8:item>
 							</Title>
-							<TitleLocation>Right</TitleLocation>
+							<TitleLocation>None</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус урока</v8:content>
+								</v8:item>
+							</InputHint>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
 						</InputField>
-						<LabelField name="АвторДокумента" id="25">
-							<DataPath>Объект.АвторДокумента</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Автор</v8:content>
-								</v8:item>
-							</Title>
-							<EditMode>EnterOnInput</EditMode>
-							<TextColor>#808080</TextColor>
-							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
-						</LabelField>
+						<UsualGroup name="Группа4" id="899">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="900"/>
+							<ChildItems>
+								<InputField name="Тариф" id="896">
+									<DataPath>Объект.Тариф</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="ТарифКонтекстноеМеню" id="897"/>
+									<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="898"/>
+									<Events>
+										<Event name="OnChange">ТарифПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация1" id="901">
+									<TextColor>#0000FF</TextColor>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="902"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="903"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -813,10 +833,9 @@
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Добавить ФизЛицо</v8:content>
+												<v8:content>Добавить ученика</v8:content>
 											</v8:item>
 										</Title>
-										<Shape>Oval</Shape>
 										<ExtendedTooltip name="УченикиДобавитьРасширеннаяПодсказка" id="215"/>
 									</Button>
 									<Button name="УченикиСкопировать" id="216">
@@ -846,6 +865,11 @@
 										<CommandName>Form.Item.Ученики.StandardCommand.MoveUp</CommandName>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
 										<ExtendedTooltip name="УченикиПереместитьВверхРасширеннаяПодсказка" id="278"/>
+									</Button>
+									<Button name="УченикиПересчитатьЦеныПоТарифу" id="894">
+										<Type>CommandBarHyperlink</Type>
+										<CommandName>Form.Command.ПересчитатьЦеныПоТарифу</CommandName>
+										<ExtendedTooltip name="УченикиПересчитатьЦеныПоТарифуРасширеннаяПодсказка" id="895"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -1082,25 +1106,37 @@
 								<InputField name="УченикиАбонемент" id="888">
 									<DataPath>Объект.Ученики.Абонемент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.БыстрыеНастройкиОтчета</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
 									<Width>1</Width>
 									<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="889"/>
 									<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="890"/>
 								</InputField>
 								<InputField name="УченикиТариф" id="347">
 									<DataPath>Объект.Ученики.Тариф</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.CustomExpression</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
 									<ShowInFooter>false</ShowInFooter>
 									<Width>1</Width>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="УченикиТарифКонтекстноеМеню" id="348"/>
 									<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="349"/>
 									<Events>
-										<Event name="OnChange">ПлатныйПриИзменении</Event>
+										<Event name="OnChange">УченикиТарифПриИзменении</Event>
 									</Events>
+								</InputField>
+								<InputField name="УченикиЦенаТарифа" id="891">
+									<DataPath>Объект.Ученики.ЦенаТарифа</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Ученики.TotalЦенаТарифа</FooterDataPath>
+									<Width>1</Width>
+									<ContextMenu name="УченикиЦенаТарифаКонтекстноеМеню" id="892"/>
+									<ExtendedTooltip name="УченикиЦенаТарифаРасширеннаяПодсказка" id="893"/>
 								</InputField>
 								<ColumnGroup name="УченикиГруппа6" id="450">
 									<Group>Horizontal</Group>
@@ -1180,7 +1216,6 @@
 											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
-											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
 											<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
 										</InputField>
@@ -1532,12 +1567,24 @@
 									</Button>
 									<Button name="ИзменятьВсе" id="812">
 										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.ИзменятьВсе</CommandName>
 										<ExtendedTooltip name="ИзменятьВсеРасширеннаяПодсказка" id="813"/>
 									</Button>
 									<Button name="НеИзменятьВсе" id="814">
 										<Type>CommandBarHyperlink</Type>
-										<CommandName>Form.Command.НеИзменятьВсе</CommandName>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ИзменятьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Запретить</v8:content>
+											</v8:item>
+										</Title>
 										<ExtendedTooltip name="НеИзменятьВсеРасширеннаяПодсказка" id="815"/>
 									</Button>
 								</ChildItems>
@@ -1748,6 +1795,20 @@
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
 				</InputField>
+				<LabelField name="АвторДокумента" id="25">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#808080</TextColor>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
 				<InputField name="СуммаЗаУрок" id="296">
 					<DataPath>Объект.Ученики.TotalСумма</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -1759,7 +1820,6 @@
 					</Title>
 					<TitleLocation>Left</TitleLocation>
 					<HorizontalAlign>Left</HorizontalAlign>
-					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ContextMenu name="СуммаЗаУрокКонтекстноеМеню" id="297"/>
 					<ExtendedTooltip name="СуммаЗаУрокРасширеннаяПодсказка" id="298"/>
 				</InputField>
@@ -1978,25 +2038,25 @@
 			<Action>ИзменятьВсе</Action>
 			<Representation>Picture</Representation>
 		</Command>
-		<Command name="НеИзменятьВсе" id="6">
+		<Command name="ПересчитатьЦеныПоТарифу" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Запретить изменения</v8:content>
+					<v8:content>Пересчитать цены по тарифу</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Изменять все</v8:content>
+					<v8:content>Пересчитать цены по тарифу</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>НеИзменятьВсе</Action>
-			<Representation>Picture</Representation>
+			<Action>ПересчитатьЦеныПоТарифу</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 	<CommandInterface>

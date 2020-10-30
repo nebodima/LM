@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -148,13 +148,6 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="245"/>
 					<ChildItems>
-						<InputField name="Организация" id="165">
-							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="166"/>
-							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="167"/>
-						</InputField>
 						<InputField name="Касса" id="156">
 							<DataPath>Объект.Касса</DataPath>
 							<HorizontalStretch>false</HorizontalStretch>
@@ -174,6 +167,26 @@
 								<Event name="OnChange">КлиентПриИзменении</Event>
 							</Events>
 						</InputField>
+						<InputField name="Родитель" id="171">
+							<DataPath>Объект.Родитель</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отв. лицо ученика</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>если указан у ученика</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="РодительКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="173"/>
+						</InputField>
 						<InputField name="ПредметОбучения" id="192">
 							<DataPath>Объект.ПредметОбучения</DataPath>
 							<HorizontalStretch>false</HorizontalStretch>
@@ -188,18 +201,6 @@
 							<ContextMenu name="ТарифКонтекстноеМеню" id="190"/>
 							<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="191"/>
 						</InputField>
-						<InputField name="Абонемент" id="267">
-							<DataPath>Объект.Абонемент</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="АбонементКонтекстноеМеню" id="268"/>
-							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="269"/>
-						</InputField>
-						<Button name="ПолучитьСуммуПоТарифу" id="263">
-							<Type>Hyperlink</Type>
-							<CommandName>Form.Command.ПолучитьСуммуПоТарифу</CommandName>
-							<ExtendedTooltip name="ПолучитьСуммуПоТарифуРасширеннаяПодсказка" id="264"/>
-						</Button>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа12" id="238">
@@ -230,6 +231,7 @@
 						</InputField>
 						<InputField name="ДокументОснования" id="60">
 							<DataPath>Объект.ДокументОснования</DataPath>
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -248,26 +250,42 @@
 							<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="61"/>
 							<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="62"/>
 						</InputField>
-						<InputField name="Родитель" id="171">
-							<DataPath>Объект.Родитель</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Ответственное лицо контрагента</v8:content>
-								</v8:item>
-							</Title>
-							<TitleLocation>Right</TitleLocation>
+						<InputField name="Организация" id="165">
+							<DataPath>Объект.Организация</DataPath>
+							<TitleLocation>None</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
-							<ChoiceButton>true</ChoiceButton>
 							<ClearButton>true</ClearButton>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>если указан у ученика</v8:content>
+									<v8:content>Организация</v8:content>
 								</v8:item>
 							</InputHint>
-							<ContextMenu name="РодительКонтекстноеМеню" id="172"/>
-							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="173"/>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="167"/>
+						</InputField>
+						<InputField name="Подразделение" id="168">
+							<DataPath>Объект.Подразделение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделение</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подразделение</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="170"/>
+							<Events>
+								<Event name="OnChange">ПодразделениеПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="СтатьяЗатрат" id="203">
 							<DataPath>Объект.СтатьяЗатрат</DataPath>
@@ -293,28 +311,19 @@
 								<Event name="OnChange">КлиентПриИзменении</Event>
 							</Events>
 						</InputField>
-						<InputField name="Подразделение" id="168">
-							<DataPath>Объект.Подразделение</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Подразделение</v8:content>
-								</v8:item>
-							</Title>
-							<TitleLocation>None</TitleLocation>
+						<InputField name="Абонемент" id="267">
+							<DataPath>Объект.Абонемент</DataPath>
+							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Подразделение</v8:content>
+									<v8:content>Абонемент</v8:content>
 								</v8:item>
 							</InputHint>
-							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>
-							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="170"/>
-							<Events>
-								<Event name="OnChange">ПодразделениеПриИзменении</Event>
-							</Events>
+							<ContextMenu name="АбонементКонтекстноеМеню" id="268"/>
+							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="269"/>
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
@@ -385,19 +394,6 @@
 			<BackColor>#EBFFEB</BackColor>
 			<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="210"/>
 			<ChildItems>
-				<InputField name="СуммаБонусов" id="206">
-					<DataPath>Объект.СуммаБонусов</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Оплата бонусами</v8:content>
-						</v8:item>
-					</Title>
-					<Width>4</Width>
-					<ClearButton>true</ClearButton>
-					<ContextMenu name="СуммаБонусовКонтекстноеМеню" id="207"/>
-					<ExtendedTooltip name="СуммаБонусовРасширеннаяПодсказка" id="208"/>
-				</InputField>
 				<InputField name="ДисконтнаяКарта" id="213">
 					<DataPath>Объект.ДисконтнаяКарта</DataPath>
 					<TitleLocation>None</TitleLocation>
@@ -423,8 +419,41 @@
 						<Event name="StartChoice">ДисконтнаяКартаНачалоВыбора</Event>
 					</Events>
 				</InputField>
+				<InputField name="СуммаБонусов" id="206">
+					<DataPath>Объект.СуммаБонусов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оплата бонусами</v8:content>
+						</v8:item>
+					</Title>
+					<Width>4</Width>
+					<ClearButton>true</ClearButton>
+					<ContextMenu name="СуммаБонусовКонтекстноеМеню" id="207"/>
+					<ExtendedTooltip name="СуммаБонусовРасширеннаяПодсказка" id="208"/>
+				</InputField>
+				<LabelField name="ДоступноБонусов" id="233">
+					<DataPath>ДоступноБонусов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступно</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Hiperlink>true</Hiperlink>
+					<TextColor>#0000FF</TextColor>
+					<ContextMenu name="ДоступноБонусовКонтекстноеМеню" id="234"/>
+					<ExtendedTooltip name="ДоступноБонусовРасширеннаяПодсказка" id="235"/>
+					<Events>
+						<Event name="Click">ДоступноДенегНажатие</Event>
+					</Events>
+				</LabelField>
 				<Button name="РассчитатьОстатокБонусов" id="211">
 					<Type>UsualButton</Type>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<Representation>PictureAndText</Representation>
 					<CommandName>Form.Command.РассчитатьОстатокБонусов</CommandName>
 					<Picture>
@@ -434,18 +463,6 @@
 					<PictureLocation>Right</PictureLocation>
 					<ExtendedTooltip name="РассчитатьОстатокБонусовРасширеннаяПодсказка" id="212"/>
 				</Button>
-				<LabelField name="ДоступноБонусов" id="233">
-					<DataPath>ДоступноБонусов</DataPath>
-					<TitleLocation>None</TitleLocation>
-					<HorizontalAlign>Left</HorizontalAlign>
-					<Hiperlink>true</Hiperlink>
-					<TextColor>#339966</TextColor>
-					<ContextMenu name="ДоступноБонусовКонтекстноеМеню" id="234"/>
-					<ExtendedTooltip name="ДоступноБонусовРасширеннаяПодсказка" id="235"/>
-					<Events>
-						<Event name="Click">ДоступноДенегНажатие</Event>
-					</Events>
-				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа5" id="178">
@@ -467,11 +484,25 @@
 					<ContextMenu name="СуммаКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="12"/>
 				</InputField>
-				<Button name="РассчитатьЗадолженность" id="180">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.РассчитатьЗадолженность</CommandName>
-					<ExtendedTooltip name="РассчитатьЗадолженностьРасширеннаяПодсказка" id="181"/>
-				</Button>
+				<UsualGroup name="Группа3" id="272">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="273"/>
+					<ChildItems>
+						<Button name="ПолучитьСуммуПоТарифу" id="263">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ПолучитьСуммуПоТарифу</CommandName>
+							<PictureLocation>Right</PictureLocation>
+							<ExtendedTooltip name="ПолучитьСуммуПоТарифуРасширеннаяПодсказка" id="264"/>
+						</Button>
+						<Button name="РассчитатьЗадолженность" id="180">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.РассчитатьЗадолженность</CommandName>
+							<ExtendedTooltip name="РассчитатьЗадолженностьРасширеннаяПодсказка" id="181"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="270">
@@ -642,7 +673,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПолучитьСуммуПоТарифу</Action>

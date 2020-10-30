@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -22,6 +22,26 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
 			</Button>
+			<Button name="ФормаСкопировать" id="54">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.StandardCommand.Copy</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ФормаУстановитьИнтервал" id="145">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Период</v8:content>
+					</v8:item>
+				</Title>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="146"/>
+			</Button>
 			<Popup name="ФормаГруппаДополнительно" id="161">
 				<Title>
 					<v8:item>
@@ -39,17 +59,21 @@
 					<xr:Ref>StdPicture.ChooseValue</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<Shape>Oval</Shape>
 				<BackColor>style:ImportantColor</BackColor>
 				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="162"/>
 				<ChildItems>
+					<Button name="ОтчетВзаиморасчетыОткрыть1" id="446">
+						<Type>CommandBarHyperlink</Type>
+						<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
+						<ShapeRepresentation>WhenActive</ShapeRepresentation>
+						<ExtendedTooltip name="ОтчетВзаиморасчетыОткрыть1РасширеннаяПодсказка" id="447"/>
+					</Button>
 					<Button name="ФормаОбработкаGoogleКалендарьОткрыть" id="209">
 						<Type>CommandBarHyperlink</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
-						<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
 						<Picture>
-							<xr:Ref>StdPicture.Calendar</xr:Ref>
+							<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -95,26 +119,6 @@
 					</Button>
 				</ChildItems>
 			</Popup>
-			<Button name="ФормаСкопировать" id="54">
-				<Type>CommandBarHyperlink</Type>
-				<CommandName>Form.StandardCommand.Copy</CommandName>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="55"/>
-			</Button>
-			<Button name="ФормаУстановитьИнтервал" id="145">
-				<Type>CommandBarHyperlink</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.StandardCommand.SetDateInterval</CommandName>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Период</v8:content>
-					</v8:item>
-				</Title>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаУстановитьИнтервалРасширеннаяПодсказка" id="146"/>
-			</Button>
 			<Popup name="ФормаСоздатьНаОсновании" id="287">
 				<Title>
 					<v8:item>
@@ -161,10 +165,12 @@
 			</Button>
 			<Button name="ФормаОбщаяКомандаНапомнить" id="199">
 				<Type>CommandBarHyperlink</Type>
+				<UserVisible>
+					<xr:Common>false</xr:Common>
+				</UserVisible>
 				<Representation>Picture</Representation>
 				<CommandName>CommonCommand.Напомнить</CommandName>
 				<DataPath>Items.Список.CurrentData.Ref</DataPath>
-				<Font ref="sys:ANSIVariableFont" kind="WindowsFont"/>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="200"/>
 			</Button>
@@ -235,11 +241,12 @@
 							</Title>
 							<TitleLocation>None</TitleLocation>
 							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<ChoiceParameterLinks>
 								<xr:Link>
 									<xr:Name>КартаКлиента</xr:Name>
-									<xr:DataPath xsi:type="xs:string">КартаКлиента</xr:DataPath>
+									<xr:DataPath xsi:type="xs:string">15</xr:DataPath>
 									<xr:ValueChange>Clear</xr:ValueChange>
 								</xr:Link>
 							</ChoiceParameterLinks>
@@ -255,11 +262,58 @@
 								<Event name="OnChange">УченикПриИзменении</Event>
 							</Events>
 						</InputField>
+						<InputField name="Абонемент" id="443">
+							<DataPath>Абонемент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Абонемент</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>КартаКлиента</xr:Name>
+									<xr:DataPath xsi:type="xs:string">15</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Абонемент</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="АбонементКонтекстноеМеню" id="444"/>
+							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="445"/>
+							<Events>
+								<Event name="OnChange">АбонементПриИзменении</Event>
+							</Events>
+						</InputField>
 						<Button name="ОтчетВзаиморасчетыОткрыть" id="149">
 							<Type>Hyperlink</Type>
 							<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
 							<ShapeRepresentation>WhenActive</ShapeRepresentation>
 							<ExtendedTooltip name="ОтчетВзаиморасчетыОткрытьРасширеннаяПодсказка" id="150"/>
+						</Button>
+						<Button name="ФормаОбработкаGoogleКалендарьОткрыть1" id="448">
+							<Type>Hyperlink</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Calendar</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Календарь</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаОбработкаGoogleКалендарьОткрыть1РасширеннаяПодсказка" id="449"/>
 						</Button>
 						<UsualGroup name="ГруппаНастройка" id="396">
 							<Title>
@@ -268,6 +322,7 @@
 									<v8:content>Настройка</v8:content>
 								</v8:item>
 							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
 							<Group>Vertical</Group>
 							<Behavior>PopUp</Behavior>
 							<ControlRepresentation>Picture</ControlRepresentation>
@@ -380,6 +435,12 @@
 					<ChildItems>
 						<LabelField name="Номер" id="434">
 							<DataPath>Список.Number</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№</v8:content>
+								</v8:item>
+							</Title>
 							<Width>1</Width>
 							<ContextMenu name="НомерКонтекстноеМеню" id="435"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="436"/>
@@ -396,9 +457,8 @@
 						<LabelField name="Дата" id="19">
 							<DataPath>Список.Date</DataPath>
 							<DefaultItem>true</DefaultItem>
-							<FixingInTable>Left</FixingInTable>
 							<HeaderPicture>
-								<xr:Ref>StdPicture.Calendar</xr:Ref>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
 							<Format>
@@ -535,6 +595,12 @@
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="36"/>
 						</LabelField>
+						<LabelField name="Тариф" id="440">
+							<DataPath>Список.Тариф</DataPath>
+							<Width>1</Width>
+							<ContextMenu name="ТарифКонтекстноеМеню" id="441"/>
+							<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="442"/>
+						</LabelField>
 						<LabelField name="Педагог" id="37">
 							<DataPath>Список.Педагог</DataPath>
 							<CellHyperlink>true</CellHyperlink>
@@ -591,6 +657,9 @@
 						</LabelField>
 						<LabelField name="Комментарий" id="46">
 							<DataPath>Список.Комментарий</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Width>1</Width>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
@@ -799,7 +868,7 @@
 									<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
 								</LabelField>
 								<LabelField name="РасшифровкаТариф" id="365">
-									<DataPath>Расшифровка.Тариф</DataPath>
+									<DataPath>Расшифровка.ЦенаТарифа</DataPath>
 									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
@@ -849,17 +918,6 @@
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
 									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
-								</LabelField>
-								<LabelField name="РасшифровкаКомментарий" id="338">
-									<DataPath>Расшифровка.Комментарий</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<TitleBackColor>#FFFFFF</TitleBackColor>
-									<Width>1</Width>
-									<BorderColor>#FFFFFF</BorderColor>
-									<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="339"/>
-									<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="340"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -1221,45 +1279,9 @@
 					</d4p1:titleArea>
 					<d4p1:scaleLabelLocation>None</d4p1:scaleLabelLocation>
 				</d4p1:pointsScale>
-				<d4p1:valuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:valuesScale>
-				<d4p1:seriesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:seriesScale>
 				<d4p1:legendPlacement>UseCoordinates</d4p1:legendPlacement>
 				<d4p1:plotAreaPlacement>UseCoordinates</d4p1:plotAreaPlacement>
 				<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
-				<d4p1:colorPaletteDescription/>
-				<d4p1:referenceBandsColorPaletteDescription/>
-				<d4p1:additionalValuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:additionalValuesScale>
-				<d4p1:additionalValuesAxis/>
 			</Settings>
 		</Attribute>
 		<Attribute name="Ученик" id="5">
@@ -1381,7 +1403,6 @@
 	УрокУченики.СписатьОплату КАК СписатьОплату,
 	УрокУченики.Явка КАК Явка,
 	УрокУченики.Ученик КАК Ученик,
-	УрокУченики.Тариф КАК Тариф,
 	УрокУченики.Ссылка.КоличествоЧасов КАК Часы,
 	УрокУченики.Заметка КАК Заметка,
 	УрокУченики.Причина КАК Причина,
@@ -1391,7 +1412,8 @@
 	УрокУченики.Комментарий КАК Комментарий,
 	СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК СуммаОстаток,
 	СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
-	УрокУченики.Абонемент КАК Абонемент
+	УрокУченики.Абонемент КАК Абонемент,
+	УрокУченики.ЦенаТарифа КАК ЦенаТарифа
 ИЗ
 	Документ.LM_Урок.Ученики КАК УрокУченики
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК СписанияСуммЗаУрокиОстатки
@@ -1445,44 +1467,6 @@
 				<Field>ОтображатьДиаграммуЗадолженности</Field>
 			</Save>
 		</Attribute>
-		<Attribute name="Задолженность" id="13">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Задолженность</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>15</v8:Digits>
-					<v8:FractionDigits>2</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ПоследняяОплата" id="14">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Последняя оплата</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="КартаКлиента" id="15">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Карта клиента</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>cfg:CatalogRef.LM_ДисконтныеКарты</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="НеОтображатьДетализациюУрока" id="2">
 			<Title>
 				<v8:item>
@@ -1495,6 +1479,20 @@
 			</Type>
 			<Save>
 				<Field>НеОтображатьДетализациюУрока</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Абонемент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонемент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.LM_Абонемент</v8:Type>
+			</Type>
+			<Save>
+				<Field>Абонемент</Field>
 			</Save>
 		</Attribute>
 		<ConditionalAppearance>
