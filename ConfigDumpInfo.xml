@@ -87,7 +87,7 @@
 		<Metadata name="BusinessProcess.Задание.Help" id="dad11c2e-08fc-4a6b-8829-8be6c64c15fc.5" configVersion="95d5d2ee023cfb448d3372405c01b1ea00000000"/>
 		<Metadata name="BusinessProcess.Задание.ManagerModule" id="dad11c2e-08fc-4a6b-8829-8be6c64c15fc.8" configVersion="0ff8a5911c0038438f30cdccd8ad6a4200000000"/>
 		<Metadata name="BusinessProcess.Задание.ObjectModule" id="dad11c2e-08fc-4a6b-8829-8be6c64c15fc.6" configVersion="8934b24667989a47a1053e910181584900000000"/>
-		<Metadata name="Catalog.LM_Абонемент" id="40297a87-a191-476d-9f5b-bea024b00852" configVersion="b6958083ab54ae4a90a5bd011b5e396100000000">
+		<Metadata name="Catalog.LM_Абонемент" id="40297a87-a191-476d-9f5b-bea024b00852" configVersion="55fad4dd52bb1f4ba37f6924b4d31abe00000000">
 			<Metadata name="Catalog.LM_Абонемент.TabularSection.Приостановки.Attribute.ДатаВозобновления" id="017f2b7c-3129-425f-a024-a5604242f47e"/>
 			<Metadata name="Catalog.LM_Абонемент.TabularSection.Приостановки" id="0e110202-055c-4a90-9bd2-6879cb1d8ab3"/>
 			<Metadata name="Catalog.LM_Абонемент.Attribute.СрокПриостановки" id="0ec73eed-86ef-4c32-b899-0e36e2f55183"/>
@@ -110,15 +110,15 @@
 			<Metadata name="Catalog.LM_Абонемент.TabularSection.Приостановки.Attribute.Комментарий" id="d69ee6b0-8040-46c5-bd6f-ca83b1e1a3ee"/>
 			<Metadata name="Catalog.LM_Абонемент.Attribute.Комментарий" id="feddaec3-3f32-436b-bc59-e8820164f469"/>
 		</Metadata>
-		<Metadata name="Catalog.LM_Абонемент.Form.ФормаВыбора" id="8786b26b-2820-4dc9-b159-8fc0e01d1eb0" configVersion="b820c17c87d4ed4e915b610b3449bb5100000000"/>
-		<Metadata name="Catalog.LM_Абонемент.Form.ФормаВыбора.Form" id="8786b26b-2820-4dc9-b159-8fc0e01d1eb0.0" configVersion="7b8cf771dfd09048a71d0a2d4e7a010900000000"/>
+		<Metadata name="Catalog.LM_Абонемент.Form.ФормаВыбора" id="8786b26b-2820-4dc9-b159-8fc0e01d1eb0" configVersion="336b4f5bbb48c143b2ea02fb5a8d167900000000"/>
+		<Metadata name="Catalog.LM_Абонемент.Form.ФормаВыбора.Form" id="8786b26b-2820-4dc9-b159-8fc0e01d1eb0.0" configVersion="7568d99b0beb2144a940afe176476e8000000000"/>
 		<Metadata name="Catalog.LM_Абонемент.Form.ФормаПриостановки" id="b185afa1-ffe2-41fe-996f-c57fc4d1d70c" configVersion="0c5728a77ff19f4a8bfd1fc7b8e39f2700000000"/>
 		<Metadata name="Catalog.LM_Абонемент.Form.ФормаПриостановки.Form" id="b185afa1-ffe2-41fe-996f-c57fc4d1d70c.0" configVersion="150709d67dad2e48ab6de52edb500fa900000000"/>
-		<Metadata name="Catalog.LM_Абонемент.Form.ФормаСписка" id="e1d04d36-468a-4ae2-98de-cd1fc5d6ebed" configVersion="8c4ed68d05fe7f469ada964c6b45e61100000000"/>
-		<Metadata name="Catalog.LM_Абонемент.Form.ФормаСписка.Form" id="e1d04d36-468a-4ae2-98de-cd1fc5d6ebed.0" configVersion="f888934aabad39448679fd1005b3a29300000000"/>
-		<Metadata name="Catalog.LM_Абонемент.Form.ФормаЭлемента" id="5b323806-dfce-40cd-b09c-941f07350a12" configVersion="5b02a7f908bf734ea8e517faae92382600000000"/>
-		<Metadata name="Catalog.LM_Абонемент.Form.ФормаЭлемента.Form" id="5b323806-dfce-40cd-b09c-941f07350a12.0" configVersion="269bad8ec607294f9b52658e9f26df7900000000"/>
-		<Metadata name="Catalog.LM_Абонемент.ManagerModule" id="40297a87-a191-476d-9f5b-bea024b00852.3" configVersion="a0b0cd5b1bc1c84aab86d776e002757700000000"/>
+		<Metadata name="Catalog.LM_Абонемент.Form.ФормаСписка" id="e1d04d36-468a-4ae2-98de-cd1fc5d6ebed" configVersion="5531b4602c44d743b99faf32546bc4b500000000"/>
+		<Metadata name="Catalog.LM_Абонемент.Form.ФормаСписка.Form" id="e1d04d36-468a-4ae2-98de-cd1fc5d6ebed.0" configVersion="0ed42bde695c604c9309c4b3f14688f800000000"/>
+		<Metadata name="Catalog.LM_Абонемент.Form.ФормаЭлемента" id="5b323806-dfce-40cd-b09c-941f07350a12" configVersion="0ec69c83c4eeb646b952e7cffee4973d00000000"/>
+		<Metadata name="Catalog.LM_Абонемент.Form.ФормаЭлемента.Form" id="5b323806-dfce-40cd-b09c-941f07350a12.0" configVersion="a7a0ebafa1908742bf98746579b94a0600000000"/>
+		<Metadata name="Catalog.LM_Абонемент.ManagerModule" id="40297a87-a191-476d-9f5b-bea024b00852.3" configVersion="dbf9c8d53b60b040802012de4ea321a900000000"/>
 		<Metadata name="Catalog.LM_Абонемент.ObjectModule" id="40297a87-a191-476d-9f5b-bea024b00852.0" configVersion="1a090195e409fa45b4fa290f51baedbc00000000"/>
 		<Metadata name="Catalog.LM_ВидыДоговоров" id="0a32c0cb-b722-4f37-99ed-447264168237" configVersion="98549572c46f7040824e2a15c287cbc100000000">
 			<Metadata name="Catalog.LM_ВидыДоговоров.Attribute.Комментарий" id="8066d6b2-aad9-4b07-b0cc-c5f39d2be7c9"/>

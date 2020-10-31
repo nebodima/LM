@@ -83,6 +83,12 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
+				<LabelField name="Наименование" id="64">
+					<DataPath>Список.Description</DataPath>
+					<Width>1</Width>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="66"/>
+				</LabelField>
 				<LabelField name="ФизЛицо" id="28">
 					<DataPath>Список.ФизЛицо</DataPath>
 					<ContextMenu name="ФизЛицоКонтекстноеМеню" id="29"/>
