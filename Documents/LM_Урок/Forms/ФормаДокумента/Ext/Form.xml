@@ -1063,6 +1063,7 @@
 											<Width>1</Width>
 											<MarkNegatives>true</MarkNegatives>
 											<Hiperlink>true</Hiperlink>
+											<TextColor>style:NegativeTextColor</TextColor>
 											<ContextMenu name="УченикиЗадолженностьОбщаяКонтекстноеМеню" id="484"/>
 											<ExtendedTooltip name="УченикиЗадолженностьОбщаяРасширеннаяПодсказка" id="485"/>
 										</LabelField>
@@ -1080,6 +1081,7 @@
 											<Width>1</Width>
 											<MarkNegatives>true</MarkNegatives>
 											<Hiperlink>true</Hiperlink>
+											<TextColor>style:NegativeTextColor</TextColor>
 											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
 											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
 										</LabelField>

@@ -506,8 +506,8 @@
 											<Width>6</Width>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<HorizontalStretch>false</HorizontalStretch>
-											<MarkNegatives>true</MarkNegatives>
 											<Hiperlink>true</Hiperlink>
+											<TextColor>style:NegativeTextColor</TextColor>
 											<ContextMenu name="ИзрасходованоКонтекстноеМеню" id="231"/>
 											<ExtendedTooltip name="ИзрасходованоРасширеннаяПодсказка" id="232"/>
 											<Events>

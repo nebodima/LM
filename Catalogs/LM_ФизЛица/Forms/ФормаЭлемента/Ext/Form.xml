@@ -627,14 +627,7 @@
 											<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 											<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 										</InputField>
-										<Button name="ПриНажатииКнопкиВыборЦвета" id="302">
-											<Type>UsualButton</Type>
-											<Visible>false</Visible>
-											<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
-											<Shape>Oval</Shape>
-											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
-										</Button>
-										<Button name="ПриНажатииКнопкиВыборЦвета1" id="529">
+										<Button name="ПриНажатииКнопкиВыборЦвета" id="529">
 											<Type>UsualButton</Type>
 											<HorizontalStretch>true</HorizontalStretch>
 											<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
@@ -644,7 +637,7 @@
 													<v8:content>Цвет</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦвета1РасширеннаяПодсказка" id="530"/>
+											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="530"/>
 										</Button>
 										<UsualGroup name="Группа6" id="494">
 											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
@@ -687,7 +680,9 @@
 													<v8:content>Группа фото данные</v8:content>
 												</v8:item>
 											</ToolTip>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Group>Horizontal</Group>
+											<HorizontalAlign>Center</HorizontalAlign>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаФотоДанныеРасширеннаяПодсказка" id="56"/>

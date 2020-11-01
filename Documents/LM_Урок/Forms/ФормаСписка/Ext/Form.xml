@@ -754,10 +754,11 @@
 										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</HeaderPicture>
-									<Width>7</Width>
+									<Width>1</Width>
 									<MarkNegatives>true</MarkNegatives>
 									<Hiperlink>true</Hiperlink>
 									<BorderColor>#FFFFFF</BorderColor>
+									<TextColor>style:NegativeTextColor</TextColor>
 									<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
 									<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
 								</LabelField>
@@ -777,6 +778,7 @@
 									<Width>1</Width>
 									<MarkNegatives>true</MarkNegatives>
 									<Hiperlink>true</Hiperlink>
+									<TextColor>style:NegativeTextColor</TextColor>
 									<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
 									<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
 								</LabelField>
@@ -880,17 +882,14 @@
 								</LabelField>
 								<LabelField name="РасшифровкаСуммаСкидки" id="350">
 									<DataPath>Расшифровка.СуммаСкидки</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Сумма скидки</v8:content>
+											<v8:content>Скидка</v8:content>
 										</v8:item>
 									</Title>
 									<TitleBackColor>#FFFFFF</TitleBackColor>
-									<Width>2</Width>
+									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСуммаСкидкиКонтекстноеМеню" id="351"/>
 									<ExtendedTooltip name="РасшифровкаСуммаСкидкиРасширеннаяПодсказка" id="352"/>
 								</LabelField>
@@ -1398,8 +1397,8 @@
 	УрокУченики.Сумма КАК Сумма,
 	УрокУченики.СуммаСкидки КАК СуммаСкидки,
 	УрокУченики.Комментарий КАК Комментарий,
-	СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК СуммаОстаток,
-	СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
+	-СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК СуммаОстаток,
+	-СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
 	УрокУченики.Абонемент КАК Абонемент,
 	УрокУченики.ЦенаТарифа КАК ЦенаТарифа
 ИЗ
