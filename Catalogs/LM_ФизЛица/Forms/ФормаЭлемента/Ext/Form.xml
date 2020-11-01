@@ -180,8 +180,6 @@
 												<InputField name="Наименование" id="485">
 													<DataPath>Объект.Description</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<MaxWidth>35</MaxWidth>
 													<InputHint>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -636,7 +634,20 @@
 											<Shape>Oval</Shape>
 											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="303"/>
 										</Button>
+										<Button name="ПриНажатииКнопкиВыборЦвета1" id="529">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цвет</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПриНажатииКнопкиВыборЦвета1РасширеннаяПодсказка" id="530"/>
+										</Button>
 										<UsualGroup name="Группа6" id="494">
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>

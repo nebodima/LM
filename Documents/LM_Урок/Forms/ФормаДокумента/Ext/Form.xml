@@ -843,7 +843,7 @@
 										<Representation>Picture</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Copy</CommandName>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
-										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="УченикиСкопироватьРасширеннаяПодсказка" id="217"/>
 									</Button>
 									<Button name="УченикиУдалить" id="218">
@@ -1024,25 +1024,7 @@
 										</InputField>
 									</ChildItems>
 								</ColumnGroup>
-								<InputField name="УченикиУченик" id="211">
-									<DataPath>Объект.Ученики.Ученик</DataPath>
-									<DefaultItem>true</DefaultItem>
-									<EditMode>EnterOnInput</EditMode>
-									<HeaderPicture>
-										<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<ShowInFooter>false</ShowInFooter>
-									<Width>1</Width>
-									<ContextMenu name="УченикиУченикКонтекстноеМеню" id="212"/>
-									<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="213"/>
-									<Events>
-										<Event name="OnChange">УченикиУченикПриИзменении</Event>
-										<Event name="Creating">УченикиУченикСоздание</Event>
-									</Events>
-								</InputField>
 								<ColumnGroup name="УченикиГруппа9" id="486">
-									<Visible>false</Visible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1061,6 +1043,9 @@
 									<ChildItems>
 										<LabelField name="УченикиЗадолженностьОбщая" id="483">
 											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1083,9 +1068,6 @@
 										</LabelField>
 										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
 											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
 											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
@@ -1103,6 +1085,23 @@
 										</LabelField>
 									</ChildItems>
 								</ColumnGroup>
+								<InputField name="УченикиУченик" id="211">
+									<DataPath>Объект.Ученики.Ученик</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.УстановитьОтветственногоЗаВзаимодействие</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
+									<ContextMenu name="УченикиУченикКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="213"/>
+									<Events>
+										<Event name="OnChange">УченикиУченикПриИзменении</Event>
+										<Event name="Creating">УченикиУченикСоздание</Event>
+									</Events>
+								</InputField>
 								<InputField name="УченикиАбонемент" id="888">
 									<DataPath>Объект.Ученики.Абонемент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
