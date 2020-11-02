@@ -1117,9 +1117,6 @@
 								</InputField>
 								<InputField name="УченикиТариф" id="347">
 									<DataPath>Объект.Ученики.Тариф</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
 									<ShowInFooter>false</ShowInFooter>
 									<Width>1</Width>
