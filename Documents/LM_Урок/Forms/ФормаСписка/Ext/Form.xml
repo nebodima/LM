@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -73,7 +73,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+							<xr:Ref>StdPicture.Calendar</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -292,7 +292,7 @@
 							<Representation>PictureAndText</Representation>
 							<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
 							<Picture>
-								<xr:Ref>StdPicture.Calendar</xr:Ref>
+								<xr:Ref>CommonPicture.LM_Календарь</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -446,7 +446,7 @@
 							<DataPath>Список.Date</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<HeaderPicture>
-								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:Ref>StdPicture.Calendar</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
 							<Format>
@@ -740,8 +740,35 @@
 									<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
 									<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
 								</LabelField>
+								<PictureField name="РасшифровкаСписатьОплату" id="353">
+									<DataPath>Расшифровка.СписатьОплату</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
+									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
+								</PictureField>
+								<PictureField name="РасшифровкаЯвка" id="374">
+									<DataPath>Расшифровка.Явка</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
+									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
+								</PictureField>
 								<LabelField name="РасшифровкаСуммаОстаток" id="384">
 									<DataPath>Расшифровка.СуммаОстаток</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -764,9 +791,6 @@
 								</LabelField>
 								<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
 									<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -776,7 +800,7 @@
 									<TitleBackColor>#FFFFFF</TitleBackColor>
 									<CellHyperlink>true</CellHyperlink>
 									<Width>1</Width>
-									<MarkNegatives>true</MarkNegatives>
+									<HorizontalStretch>false</HorizontalStretch>
 									<Hiperlink>true</Hiperlink>
 									<TextColor>style:NegativeTextColor</TextColor>
 									<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
@@ -807,18 +831,6 @@
 									<ContextMenu name="РасшифровкаАбонементКонтекстноеМеню" id="438"/>
 									<ExtendedTooltip name="РасшифровкаАбонементРасширеннаяПодсказка" id="439"/>
 								</LabelField>
-								<PictureField name="РасшифровкаСписатьОплату" id="353">
-									<DataPath>Расшифровка.СписатьОплату</DataPath>
-									<TitleBackColor>#FFFFFF</TitleBackColor>
-									<Width>1</Width>
-									<ValuesPicture>
-										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
-									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
-								</PictureField>
 								<LabelField name="РасшифровкаЗаметка" id="335">
 									<DataPath>Расшифровка.Заметка</DataPath>
 									<UserVisible>
@@ -835,18 +847,6 @@
 									<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
 									<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
 								</LabelField>
-								<PictureField name="РасшифровкаЯвка" id="374">
-									<DataPath>Расшифровка.Явка</DataPath>
-									<TitleBackColor>#FFFFFF</TitleBackColor>
-									<Width>1</Width>
-									<ValuesPicture>
-										<xr:Ref>CommonPicture.Успешно32</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
-									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
-								</PictureField>
 								<LabelField name="РасшифровкаПричина" id="347">
 									<DataPath>Расшифровка.Причина</DataPath>
 									<UserVisible>
@@ -856,6 +856,13 @@
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
 									<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
+								</LabelField>
+								<LabelField name="РасшифровкаТариф1" id="450">
+									<DataPath>Расшифровка.Тариф</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаТариф1КонтекстноеМеню" id="451"/>
+									<ExtendedTooltip name="РасшифровкаТариф1РасширеннаяПодсказка" id="452"/>
 								</LabelField>
 								<LabelField name="РасшифровкаТариф" id="365">
 									<DataPath>Расшифровка.ЦенаТарифа</DataPath>
@@ -1266,9 +1273,45 @@
 					</d4p1:titleArea>
 					<d4p1:scaleLabelLocation>None</d4p1:scaleLabelLocation>
 				</d4p1:pointsScale>
+				<d4p1:valuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:valuesScale>
+				<d4p1:seriesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:seriesScale>
 				<d4p1:legendPlacement>UseCoordinates</d4p1:legendPlacement>
 				<d4p1:plotAreaPlacement>UseCoordinates</d4p1:plotAreaPlacement>
 				<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
+				<d4p1:colorPaletteDescription/>
+				<d4p1:referenceBandsColorPaletteDescription/>
+				<d4p1:additionalValuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:additionalValuesScale>
+				<d4p1:additionalValuesAxis/>
 			</Settings>
 		</Attribute>
 		<Attribute name="Ученик" id="5">
@@ -1400,7 +1443,8 @@
 	-СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК СуммаОстаток,
 	-СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
 	УрокУченики.Абонемент КАК Абонемент,
-	УрокУченики.ЦенаТарифа КАК ЦенаТарифа
+	УрокУченики.ЦенаТарифа КАК ЦенаТарифа,
+	УрокУченики.Тариф КАК Тариф
 ИЗ
 	Документ.LM_Урок.Ученики КАК УрокУченики
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК СписанияСуммЗаУрокиОстатки
@@ -1533,6 +1577,64 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаСуммаОстатокПоПредмету</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Расшифровка.СуммаОстатокПоПредмету</dcsset:left>
+						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЧДЦ=2; ЧО=0</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РасшифровкаСуммаОстатокПоПредмету</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Расшифровка.СуммаОстатокПоПредмету</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#DC8400</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЧДЦ=2</v8:content>
+							</v8:item>
+						</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
