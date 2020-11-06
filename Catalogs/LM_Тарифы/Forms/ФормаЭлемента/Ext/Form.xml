@@ -93,12 +93,39 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="КоличествоЧасов" id="90">
+							<DataPath>Объект.КоличествоЧасов</DataPath>
+							<ClearButton>true</ClearButton>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="92"/>
+							<Events>
+								<Event name="OnChange">КоличествоЧасовПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КоличествоУроков" id="93">
+							<DataPath>Объект.КоличествоУроков</DataPath>
+							<ClearButton>true</ClearButton>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="КоличествоУроковКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="КоличествоУроковРасширеннаяПодсказка" id="95"/>
+							<Events>
+								<Event name="OnChange">КоличествоУроковПриИзменении</Event>
+							</Events>
+						</InputField>
 						<UsualGroup name="Группа2" id="88">
-							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="89"/>
 							<ChildItems>
+								<InputField name="Сумма" id="96">
+									<DataPath>Объект.Сумма</DataPath>
+									<ContextMenu name="СуммаКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="98"/>
+									<Events>
+										<Event name="OnChange">СуммаПриИзменении</Event>
+									</Events>
+								</InputField>
 								<LabelDecoration name="Декорация2" id="85">
 									<ContextMenu name="Декорация2КонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="87"/>

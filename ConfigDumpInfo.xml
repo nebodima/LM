@@ -222,15 +222,18 @@
 		<Metadata name="Catalog.LM_Статусы.Form.ФормаСписка.Form" id="d44568a6-dedb-4103-b9b1-bd9abbc45ba7.0" configVersion="d39fd9e38c53774f8dd0b16a7577b68a00000000"/>
 		<Metadata name="Catalog.LM_Статусы.Form.ФормаЭлемента" id="60be3b6f-472d-438a-a1e3-df91a812325a" configVersion="338059abef76d84aabce3e46d81de97f00000000"/>
 		<Metadata name="Catalog.LM_Статусы.Form.ФормаЭлемента.Form" id="60be3b6f-472d-438a-a1e3-df91a812325a.0" configVersion="5d6e78b242c944438786819c36f2d3b800000000"/>
-		<Metadata name="Catalog.LM_Тарифы" id="29efe00f-ee91-4d29-aeec-08ced94775e5" configVersion="d91a6e9f49b57647a9f3b1fd17cdc09f00000000">
+		<Metadata name="Catalog.LM_Тарифы" id="29efe00f-ee91-4d29-aeec-08ced94775e5" configVersion="b5de7c3de620134cbdedf23a1dd9274f00000000">
+			<Metadata name="Catalog.LM_Тарифы.Attribute.КоличествоУроков" id="0a605cba-a4d7-4528-bfbd-de29ec139c98"/>
+			<Metadata name="Catalog.LM_Тарифы.Attribute.Сумма" id="190dd951-c7b5-46a6-9ac3-63d7bb69ec9b"/>
 			<Metadata name="Catalog.LM_Тарифы.Attribute.Комментарий" id="5cec42d2-912f-409c-9fb1-a74619281e4d"/>
+			<Metadata name="Catalog.LM_Тарифы.Attribute.КоличествоЧасов" id="fd689180-2515-47ea-af75-bede1334c3e6"/>
 		</Metadata>
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаВыбора" id="ea698207-fd37-466e-9049-c948fd8e3108" configVersion="edb3cba72824e4409aa9716ed8ea942f00000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаВыбора.Form" id="ea698207-fd37-466e-9049-c948fd8e3108.0" configVersion="75267cb803f47449820d772b0116658500000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаСписка" id="99792fad-e205-4615-9291-ead5f196860f" configVersion="3536b58fbe356a4c917219f1167d9f3f00000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаСписка.Form" id="99792fad-e205-4615-9291-ead5f196860f.0" configVersion="6c55d3347966dc4caf25df30ec63b71700000000"/>
-		<Metadata name="Catalog.LM_Тарифы.Form.ФормаЭлемента" id="ce96c53c-0386-441f-8526-f6ca51a5df47" configVersion="679bb10516ef7641840dd13b7fab895700000000"/>
-		<Metadata name="Catalog.LM_Тарифы.Form.ФормаЭлемента.Form" id="ce96c53c-0386-441f-8526-f6ca51a5df47.0" configVersion="675e853fb77c3448bca0fdc86a93f67100000000"/>
+		<Metadata name="Catalog.LM_Тарифы.Form.ФормаЭлемента" id="ce96c53c-0386-441f-8526-f6ca51a5df47" configVersion="da50d7da95de9a48833aed7c9f02564600000000"/>
+		<Metadata name="Catalog.LM_Тарифы.Form.ФормаЭлемента.Form" id="ce96c53c-0386-441f-8526-f6ca51a5df47.0" configVersion="3f3388908147984db6fe719b89669a2400000000"/>
 		<Metadata name="Catalog.LM_Тарифы.ManagerModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.3" configVersion="b8ac99553b20c94b866ada87dad528c400000000"/>
 		<Metadata name="Catalog.LM_Тарифы.ObjectModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.0" configVersion="d0d47e75eb1599459d82263b9270b14100000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Predefined" id="29efe00f-ee91-4d29-aeec-08ced94775e5.1c" configVersion="930b4eb3df2a5544891af40a80aca66e00000000"/>
@@ -5069,7 +5072,7 @@
 		<Metadata name="Document.LM_СписаниеОстатков.Form.ФормаДокумента.Form" id="dcf9e1e5-1f97-43d2-b568-e583ac7bfbe4.0" configVersion="4f7f307223fe7d4ca7c1e666e52165ae00000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.ManagerModule" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d.2" configVersion="32ab63878e3df44a83df38d3dce36a6900000000"/>
 		<Metadata name="Document.LM_СписаниеОстатков.ObjectModule" id="fa95a8ff-2d17-4ee7-b4ea-7c464eb03a5d.0" configVersion="a17eccfecdb8694b8262b3afb7c9053400000000"/>
-		<Metadata name="Document.LM_Урок" id="11fbafff-f10d-406d-8964-34b15970e5b5" configVersion="01a919c9301e664984135fbafbc69d9600000000">
+		<Metadata name="Document.LM_Урок" id="11fbafff-f10d-406d-8964-34b15970e5b5" configVersion="d28c04b4ce197241a112c3f359f050e400000000">
 			<Metadata name="Document.LM_Урок.Attribute.КоличествоЧасов" id="07c6ee34-8349-4506-bf9e-3fec019be583"/>
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.Комментарий" id="151fa61b-57c0-43ed-ad86-9fd6881f242a"/>
 			<Metadata name="Document.LM_Урок.TabularSection.НачисленияПедагогу.Attribute.СуммаНачисления" id="1a8cfb86-13c1-4d1c-b38b-5cf7bc4a4362"/>
@@ -5111,13 +5114,13 @@
 			<Metadata name="Document.LM_Урок.TabularSection.Ученики.Attribute.Комментарий" id="fa666dc8-e07a-42a2-8341-095225cb24c9"/>
 			<Metadata name="Document.LM_Урок.Attribute.Тариф" id="ff8a1414-d194-43c1-a5f3-996d04f9c433"/>
 		</Metadata>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="6cf4b34ddaf3c9499d696fb3ed42f6a800000000"/>
-		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="ae4d560d9acb514a97ccf4f1c909438200000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="4fd14f8925298b4e85e5534701db0ad700000000"/>
-		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="958763338e2c76449049f7c616c2f46e00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f" configVersion="2d02f3ad55cf0c46a6b413af8c835a9500000000"/>
+		<Metadata name="Document.LM_Урок.Form.ПомощникСозданияУроков.Form" id="95f15243-0ad9-4af8-8f20-2de656cd7e6f.0" configVersion="65ca83388c7be749b27ba762088fbd6b00000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2" configVersion="60dc4810447d6747bf600fdbe206dac100000000"/>
+		<Metadata name="Document.LM_Урок.Form.ФормаДокумента.Form" id="5ffefa33-4f66-4c94-a1e8-d57d0b9be7f2.0" configVersion="668aead1680db044bec48266f7a2d4d600000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка" id="22001289-db00-4cf0-88ab-272753a206bf" configVersion="b87fd34c991a954398b759640adf001600000000"/>
 		<Metadata name="Document.LM_Урок.Form.ФормаСписка.Form" id="22001289-db00-4cf0-88ab-272753a206bf.0" configVersion="0c01bfe706d89c4faac543515e2500cd00000000"/>
-		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="ab16131e0ab08d44bdfdf7852072825d00000000"/>
+		<Metadata name="Document.LM_Урок.ManagerModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.2" configVersion="821b5680f1c1474c8f8b7c7feac87ad300000000"/>
 		<Metadata name="Document.LM_Урок.ObjectModule" id="11fbafff-f10d-406d-8964-34b15970e5b5.0" configVersion="732e01a0bea6a34b8e2e29551bef851a00000000"/>
 		<Metadata name="Document.Анкета" id="73eff626-a363-4a5a-879e-61ef6ce0726f" configVersion="9e7c83ab2d8d4a4a8ef7e42247b3dc6d00000000">
 			<Metadata name="Document.Анкета.Attribute.ДатаРедактирования" id="2d8d5d74-2bc0-4282-af66-e4a37694c147"/>

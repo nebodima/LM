@@ -334,7 +334,8 @@
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<HorizontalStretch>false</HorizontalStretch>
-															<ListChoiceMode>true</ListChoiceMode>
+															<DropListButton>true</DropListButton>
+															<ChoiceButton>true</ChoiceButton>
 															<ChoiceList>
 																<xr:Item>
 																	<xr:Presentation/>

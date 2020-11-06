@@ -759,6 +759,7 @@
 									</Events>
 								</InputField>
 								<LabelDecoration name="Декорация1" id="901">
+									<Visible>false</Visible>
 									<TextColor>#0000FF</TextColor>
 									<ContextMenu name="Декорация1КонтекстноеМеню" id="902"/>
 									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="903"/>
