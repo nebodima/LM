@@ -95,15 +95,14 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаОтчетLM_ЯвкиОткрытьРасширеннаяПодсказка" id="428"/>
 					</Button>
-					<Button name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитов" id="420">
-						<Type>CommandBarHyperlink</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>DataProcessor.ГрупповоеИзменениеРеквизитов.Command.ГрупповоеИзменениеРеквизитов</CommandName>
+					<Button name="ФормаОбработкаLM_ИзменениеУроковОткрыть" id="453">
+						<Type>CommandBarButton</Type>
+						<CommandName>DataProcessor.LM_ИзменениеУроков.StandardCommand.Open</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.SpreadsheetReadOnly</xr:Ref>
+							<xr:Ref>StdPicture.Change</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<ExtendedTooltip name="ФормаОбработкаГрупповоеИзменениеРеквизитовГрупповоеИзменениеРеквизитовРасширеннаяПодсказка" id="421"/>
+						<ExtendedTooltip name="ФормаОбработкаLM_ИзменениеУроковОткрытьРасширеннаяПодсказка" id="454"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -240,22 +239,6 @@
 							<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
 							<ShapeRepresentation>WhenActive</ShapeRepresentation>
 							<ExtendedTooltip name="ОтчетВзаиморасчетыОткрытьРасширеннаяПодсказка" id="150"/>
-						</Button>
-						<Button name="ФормаОбработкаGoogleКалендарьОткрыть1" id="448">
-							<Type>Hyperlink</Type>
-							<Representation>PictureAndText</Representation>
-							<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.LM_Календарь</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Календарь</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ФормаОбработкаGoogleКалендарьОткрыть1РасширеннаяПодсказка" id="449"/>
 						</Button>
 						<UsualGroup name="ГруппаНастройка" id="396">
 							<Title>

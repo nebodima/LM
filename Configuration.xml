@@ -1792,6 +1792,7 @@
 			<Report>СогласияНаОбработкуПерсональныхДанныхДействующие</Report>
 			<Report>СогласияНаОбработкуПерсональныхДанныхИстекающие</Report>
 			<Report>УниверсальныйОтчет</Report>
+			<DataProcessor>LM_ИзменениеУроков</DataProcessor>
 			<DataProcessor>LM_Календарь</DataProcessor>
 			<DataProcessor>LM_ПанельУченика</DataProcessor>
 			<DataProcessor>LM_ВыборWebЦвета</DataProcessor>
