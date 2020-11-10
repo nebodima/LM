@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -75,16 +75,18 @@
 						</Title>
 						<ExtendedTooltip name="ФормаДокументПКОСоздатьНаОснованииРасширеннаяПодсказка" id="259"/>
 					</Button>
+					<Button name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОсновании" id="534">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.РасходныйКассовыйОрдер.StandardCommand.CreateBasedOn</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<Picture>
+							<xr:Ref>StdPicture.Document</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="535"/>
+					</Button>
 				</ChildItems>
 			</Popup>
-			<Button name="ФормаОбщаяКомандаНапомнить" id="182">
-				<Type>CommandBarHyperlink</Type>
-				<Representation>Picture</Representation>
-				<CommandName>CommonCommand.Напомнить</CommandName>
-				<DataPath>Объект.Ref</DataPath>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="183"/>
-			</Button>
 			<Button name="ФормаОткрытьВзаиморасчеты" id="281">
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
@@ -358,7 +360,6 @@
 											</ChildItems>
 										</UsualGroup>
 										<LabelDecoration name="Декорация6" id="482">
-											<Height>1</Height>
 											<HorizontalStretch>true</HorizontalStretch>
 											<BackColor>web:Gainsboro</BackColor>
 											<ContextMenu name="Декорация6КонтекстноеМеню" id="483"/>
@@ -581,22 +582,29 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<InputField name="Заметки" id="318">
-													<DataPath>Объект.Заметки</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<Height>2</Height>
-													<VerticalStretch>false</VerticalStretch>
-													<InputHint>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Заметка</v8:content>
-														</v8:item>
-													</InputHint>
-													<ContextMenu name="ЗаметкиКонтекстноеМеню" id="319"/>
-													<ExtendedTooltip name="ЗаметкиРасширеннаяПодсказка" id="320"/>
-												</InputField>
 											</ChildItems>
 										</UsualGroup>
+										<LabelDecoration name="Декорация8" id="547">
+											<HorizontalStretch>true</HorizontalStretch>
+											<BackColor>web:Gainsboro</BackColor>
+											<ContextMenu name="Декорация8КонтекстноеМеню" id="548"/>
+											<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="549"/>
+										</LabelDecoration>
+										<InputField name="Заметки" id="318">
+											<DataPath>Объект.Заметки</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Height>2</Height>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заметка</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ЗаметкиКонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="ЗаметкиРасширеннаяПодсказка" id="320"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаФото" id="53">
@@ -718,11 +726,54 @@
 											<ContextMenu name="Декорация1КонтекстноеМеню" id="524"/>
 											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="525"/>
 										</LabelDecoration>
+										<UsualGroup name="Группа7" id="536">
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="537"/>
+											<ChildItems>
+												<InputField name="Тариф" id="531">
+													<DataPath>Объект.Тариф</DataPath>
+													<TitleLocation>Top</TitleLocation>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ТарифКонтекстноеМеню" id="532"/>
+													<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="533"/>
+													<Events>
+														<Event name="OnChange">ТарифПриИзменении</Event>
+													</Events>
+												</InputField>
+												<LabelField name="ОстатокДенегПоТарифу" id="538">
+													<DataPath>ОстатокДенегПоТарифу</DataPath>
+													<Hiperlink>true</Hiperlink>
+													<BorderColor>style:FieldSelectionBackColor</BorderColor>
+													<ContextMenu name="ОстатокДенегПоТарифуКонтекстноеМеню" id="539"/>
+													<ExtendedTooltip name="ОстатокДенегПоТарифуРасширеннаяПодсказка" id="540"/>
+													<Events>
+														<Event name="Click">ОстатокДенегПоТарифуНажатие</Event>
+													</Events>
+												</LabelField>
+												<LabelField name="ОстатокЕдиницПоТарифу" id="541">
+													<DataPath>ОстатокЕдиницПоТарифу</DataPath>
+													<Hiperlink>true</Hiperlink>
+													<BorderColor>style:FieldSelectionBackColor</BorderColor>
+													<ContextMenu name="ОстатокЕдиницПоТарифуКонтекстноеМеню" id="542"/>
+													<ExtendedTooltip name="ОстатокЕдиницПоТарифуРасширеннаяПодсказка" id="543"/>
+													<Events>
+														<Event name="Click">ОстатокДенегПоТарифуНажатие</Event>
+													</Events>
+												</LabelField>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="Декорация7" id="544">
+											<HorizontalStretch>true</HorizontalStretch>
+											<BackColor>web:Gainsboro</BackColor>
+											<ContextMenu name="Декорация7КонтекстноеМеню" id="545"/>
+											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="546"/>
+										</LabelDecoration>
 										<UsualGroup name="ГруппаЗадолженность" id="492">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Задолженность</v8:content>
+													<v8:content>Задолженность по предметам</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -742,6 +793,7 @@
 													<ReadOnly>true</ReadOnly>
 													<Width>30</Width>
 													<MaxWidth>18</MaxWidth>
+													<Height>2</Height>
 													<Header>false</Header>
 													<HorizontalLines>false</HorizontalLines>
 													<VerticalLines>false</VerticalLines>
@@ -1163,6 +1215,38 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ОстатокДенегПоТарифу" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток денег</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстатокЕдиницПоТарифу" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток уроков/часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1175,6 +1259,26 @@
 						<dcsset:left xsi:type="dcscor:Field">Объект.ЭтоПедагог</dcsset:left>
 						<dcsset:comparisonType>Equal</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Группа7</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ЭтоПедагог</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>

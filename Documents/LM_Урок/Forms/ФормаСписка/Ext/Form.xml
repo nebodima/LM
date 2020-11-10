@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -73,7 +73,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+							<xr:Ref>StdPicture.Calendar</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -107,41 +107,6 @@
 					</Button>
 				</ChildItems>
 			</Popup>
-			<Popup name="ФормаСоздатьНаОсновании" id="287">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Создать на основании</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Форма создать на основании</v8:content>
-					</v8:item>
-				</ToolTip>
-				<Picture>
-					<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<Representation>Picture</Representation>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаСоздатьНаОснованииРасширеннаяПодсказка" id="288"/>
-				<ChildItems>
-					<Button name="ФормаДокументДополнительныеРасходыСоздатьНаОсновании" id="407">
-						<Type>CommandBarHyperlink</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.LM_ДополнительныеРасходы.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Ref</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
-						<ExtendedTooltip name="ФормаДокументДополнительныеРасходыСоздатьНаОснованииРасширеннаяПодсказка" id="408"/>
-					</Button>
-				</ChildItems>
-			</Popup>
 			<Button name="ФормаОбщаяКомандаСтруктураПодчиненности" id="223">
 				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
@@ -150,17 +115,6 @@
 				<RepresentationInContextMenu>None</RepresentationInContextMenu>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОбщаяКомандаСтруктураПодчиненностиРасширеннаяПодсказка" id="224"/>
-			</Button>
-			<Button name="ФормаОбщаяКомандаНапомнить" id="199">
-				<Type>CommandBarHyperlink</Type>
-				<UserVisible>
-					<xr:Common>false</xr:Common>
-				</UserVisible>
-				<Representation>Picture</Representation>
-				<CommandName>CommonCommand.Напомнить</CommandName>
-				<DataPath>Items.Список.CurrentData.Ref</DataPath>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="200"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -446,7 +400,7 @@
 							<DataPath>Список.Date</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<HeaderPicture>
-								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:Ref>StdPicture.Calendar</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
 							<Format>
@@ -1273,9 +1227,45 @@
 					</d4p1:titleArea>
 					<d4p1:scaleLabelLocation>None</d4p1:scaleLabelLocation>
 				</d4p1:pointsScale>
+				<d4p1:valuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:valuesScale>
+				<d4p1:seriesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:seriesScale>
 				<d4p1:legendPlacement>UseCoordinates</d4p1:legendPlacement>
 				<d4p1:plotAreaPlacement>UseCoordinates</d4p1:plotAreaPlacement>
 				<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
+				<d4p1:colorPaletteDescription/>
+				<d4p1:referenceBandsColorPaletteDescription/>
+				<d4p1:additionalValuesScale>
+					<d4p1:titleArea>
+						<d4p1:font kind="AutoFont"/>
+						<d4p1:textColor>auto</d4p1:textColor>
+						<d4p1:backColor>auto</d4p1:backColor>
+						<d4p1:border width="1">
+							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+						</d4p1:border>
+						<d4p1:borderColor>auto</d4p1:borderColor>
+					</d4p1:titleArea>
+				</d4p1:additionalValuesScale>
+				<d4p1:additionalValuesAxis/>
 			</Settings>
 		</Attribute>
 		<Attribute name="Ученик" id="5">

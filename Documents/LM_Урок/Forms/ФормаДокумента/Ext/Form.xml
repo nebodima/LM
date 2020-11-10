@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -28,40 +28,6 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="173"/>
 			</Button>
-			<Popup name="ФормаГруппаСоздатьНаОсновании" id="312">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Создать на основании</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Форма группа создать на основании</v8:content>
-					</v8:item>
-				</ToolTip>
-				<Picture>
-					<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<Representation>PictureAndText</Representation>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаГруппаСоздатьНаОснованииРасширеннаяПодсказка" id="313"/>
-				<ChildItems>
-					<Button name="ФормаДокументДополнительныеРасходыСоздатьНаОсновании" id="717">
-						<Type>CommandBarHyperlink</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.LM_ДополнительныеРасходы.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Объект.Ref</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаДокументДополнительныеРасходыСоздатьНаОснованииРасширеннаяПодсказка" id="718"/>
-					</Button>
-				</ChildItems>
-			</Popup>
 			<Button name="ФормаКнопкаСтурктураПодчиненности" id="356">
 				<Type>CommandBarHyperlink</Type>
 				<Representation>Picture</Representation>
@@ -77,14 +43,6 @@
 				<DataPath>Объект.Ref</DataPath>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОбщаяКомандаИсторияИзмененийРасширеннаяПодсказка" id="739"/>
-			</Button>
-			<Button name="ФормаОбщаяКомандаНапомнить" id="316">
-				<Type>CommandBarHyperlink</Type>
-				<Representation>Picture</Representation>
-				<CommandName>CommonCommand.Напомнить</CommandName>
-				<DataPath>Объект.Ref</DataPath>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаОбщаяКомандаНапомнитьРасширеннаяПодсказка" id="317"/>
 			</Button>
 			<Button name="ФормаДвиженияДокумента" id="740">
 				<Type>CommandBarHyperlink</Type>
@@ -715,6 +673,12 @@
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
 							<BackColor>style:FieldAlternativeBackColor</BackColor>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>СтавкаПедагога</v8:content>
+								</v8:item>
+							</InputHint>
 							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
 							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
 							<Events>
@@ -752,6 +716,12 @@
 									<HorizontalStretch>false</HorizontalStretch>
 									<ClearButton>true</ClearButton>
 									<BackColor>style:ToolTipBackColor</BackColor>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тариф</v8:content>
+										</v8:item>
+									</InputHint>
 									<ContextMenu name="ТарифКонтекстноеМеню" id="897"/>
 									<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="898"/>
 									<Events>
@@ -859,19 +829,48 @@
 										<Type>CommandBarHyperlink</Type>
 										<CommandName>Form.Item.Ученики.StandardCommand.MoveDown</CommandName>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="УченикиПереместитьВнизРасширеннаяПодсказка" id="280"/>
 									</Button>
 									<Button name="УченикиПереместитьВверх" id="277">
 										<Type>CommandBarHyperlink</Type>
 										<CommandName>Form.Item.Ученики.StandardCommand.MoveUp</CommandName>
 										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 										<ExtendedTooltip name="УченикиПереместитьВверхРасширеннаяПодсказка" id="278"/>
 									</Button>
-									<Button name="УченикиПересчитатьЦеныПоТарифу" id="894">
-										<Type>CommandBarHyperlink</Type>
-										<CommandName>Form.Command.ПересчитатьЦеныПоТарифу</CommandName>
-										<ExtendedTooltip name="УченикиПересчитатьЦеныПоТарифуРасширеннаяПодсказка" id="895"/>
-									</Button>
+									<Popup name="УченикиГруппаЗаполнить" id="904">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ученики группа заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="УченикиГруппаЗаполнитьРасширеннаяПодсказка" id="905"/>
+										<ChildItems>
+											<Button name="УченикиСделатьПосещенными" id="908">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СделатьПосещенными</CommandName>
+												<ExtendedTooltip name="УченикиСделатьПосещеннымиРасширеннаяПодсказка" id="909"/>
+											</Button>
+											<Button name="УченикиСделатьОплаченными" id="906">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СделатьОплаченными</CommandName>
+												<ExtendedTooltip name="УченикиСделатьОплаченнымиРасширеннаяПодсказка" id="907"/>
+											</Button>
+											<Button name="УченикиПересчитатьЦеныПоТарифу" id="894">
+												<Type>CommandBarHyperlink</Type>
+												<CommandName>Form.Command.ПересчитатьЦеныПоТарифу</CommandName>
+												<ExtendedTooltip name="УченикиПересчитатьЦеныПоТарифуРасширеннаяПодсказка" id="895"/>
+											</Button>
+										</ChildItems>
+									</Popup>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="УченикиРасширеннаяПодсказка" id="195"/>
@@ -2095,7 +2094,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Пересчитать цены по тарифу</v8:content>
+					<v8:content>Пересчитать цены по тарифам</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2110,6 +2109,42 @@
 			</Picture>
 			<Action>ПересчитатьЦеныПоТарифу</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СделатьОплаченными" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить всех оплаченными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать оплаченными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+		</Command>
+		<Command name="СделатьПосещенными" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все посещения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать оплаченными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 		</Command>
 	</Commands>
 	<CommandInterface>
