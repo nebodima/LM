@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.11">
 	<ConfigVersions>
 		<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт" id="b41e8eaa-10ae-425a-ba5d-caf619cc1dd5" configVersion="143908f40e9cb84297df9463b180276400000000">
 			<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт.Dimension.Организация" id="154d65f2-580d-4a74-971e-4c91a25a23ff"/>
@@ -222,7 +222,7 @@
 		<Metadata name="Catalog.LM_Статусы.Form.ФормаСписка.Form" id="d44568a6-dedb-4103-b9b1-bd9abbc45ba7.0" configVersion="d39fd9e38c53774f8dd0b16a7577b68a00000000"/>
 		<Metadata name="Catalog.LM_Статусы.Form.ФормаЭлемента" id="60be3b6f-472d-438a-a1e3-df91a812325a" configVersion="338059abef76d84aabce3e46d81de97f00000000"/>
 		<Metadata name="Catalog.LM_Статусы.Form.ФормаЭлемента.Form" id="60be3b6f-472d-438a-a1e3-df91a812325a.0" configVersion="5d6e78b242c944438786819c36f2d3b800000000"/>
-		<Metadata name="Catalog.LM_Тарифы" id="29efe00f-ee91-4d29-aeec-08ced94775e5" configVersion="838a5f8c8c588941b186c856b1f29e1e00000000">
+		<Metadata name="Catalog.LM_Тарифы" id="29efe00f-ee91-4d29-aeec-08ced94775e5" configVersion="5542534cd3471a42a6397431ee44f87900000000">
 			<Metadata name="Catalog.LM_Тарифы.Attribute.КоличествоУроков" id="0a605cba-a4d7-4528-bfbd-de29ec139c98"/>
 			<Metadata name="Catalog.LM_Тарифы.Attribute.Сумма" id="190dd951-c7b5-46a6-9ac3-63d7bb69ec9b"/>
 			<Metadata name="Catalog.LM_Тарифы.Attribute.Комментарий" id="5cec42d2-912f-409c-9fb1-a74619281e4d"/>
@@ -234,7 +234,7 @@
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаСписка.Form" id="99792fad-e205-4615-9291-ead5f196860f.0" configVersion="6c55d3347966dc4caf25df30ec63b71700000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаЭлемента" id="ce96c53c-0386-441f-8526-f6ca51a5df47" configVersion="6e47d81f441e5843abb45046d4bda4f100000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Form.ФормаЭлемента.Form" id="ce96c53c-0386-441f-8526-f6ca51a5df47.0" configVersion="199a29903b2f0641809d3d772e59418400000000"/>
-		<Metadata name="Catalog.LM_Тарифы.ManagerModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.3" configVersion="f64fc9eeba2a714c8b63bfe1a71de77000000000"/>
+		<Metadata name="Catalog.LM_Тарифы.ManagerModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.3" configVersion="bd831358fa9ac54ea21ba1da45bb435f00000000"/>
 		<Metadata name="Catalog.LM_Тарифы.ObjectModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.0" configVersion="d0d47e75eb1599459d82263b9270b14100000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Predefined" id="29efe00f-ee91-4d29-aeec-08ced94775e5.1c" configVersion="930b4eb3df2a5544891af40a80aca66e00000000"/>
 		<Metadata name="Catalog.LM_ФизЛица" id="1e38d363-e78c-4152-b90a-2a6ce229208d" configVersion="0bc48293f874d24683ea2111bf30ea2500000000">
