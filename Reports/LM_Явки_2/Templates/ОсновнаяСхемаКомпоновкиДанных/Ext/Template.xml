@@ -122,6 +122,10 @@
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Абонемент</dataPath>
+			<field>Абонемент</field>
+		</field>
 		<dataSource>ИсточникДанных2</dataSource>
 		<query>ВЫБРАТЬ
 	LM_СписанияСуммЗаУрокиОбороты.Клиент КАК Ученик,
@@ -317,11 +321,6 @@
 							<dcscor:parameter>ГоризонтальноеПоложениеКартинки</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
 						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>Картинка</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Picture" t="false" ref="v8ui:УстановитьПризнакРассмотреноДляВзаимодействия"/>
-						</dcscor:item>
 					</dcsset:appearance>
 					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
 					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
@@ -377,11 +376,6 @@
 							<dcscor:use>false</dcscor:use>
 							<dcscor:parameter>ГоризонтальноеПоложениеКартинки</dcscor:parameter>
 							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>Картинка</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Picture" t="false" ref="v8ui:УстановитьПризнакРассмотреноДляВзаимодействия"/>
 						</dcscor:item>
 					</dcsset:appearance>
 					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
@@ -508,120 +502,6 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 				</dcsset:item>
-			</dcsset:item>
-			<dcsset:item xsi:type="dcsset:StructureItemChart">
-				<dcsset:use>false</dcsset:use>
-				<dcsset:point>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Период</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>Day</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="dcscor:DataCompositionPeriodAdditionType">Month</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:point>
-				<dcsset:series>
-					<dcsset:groupItems>
-						<dcsset:item xsi:type="dcsset:GroupItemField">
-							<dcsset:field>Ученик</dcsset:field>
-							<dcsset:groupType>Items</dcsset:groupType>
-							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-						</dcsset:item>
-					</dcsset:groupItems>
-					<dcsset:order>
-						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-					</dcsset:order>
-					<dcsset:selection>
-						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-					</dcsset:selection>
-				</dcsset:series>
-				<dcsset:selection>
-					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-				</dcsset:selection>
-				<dcsset:outputParameters>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:ChartType">Step</dcscor:value>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы.РасположениеРесурсов</dcscor:parameter>
-							<dcscor:value xsi:type="dcsset:DataCompositionResourcesPlacementInChart">Series</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы.РежимСглаживания</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartSplineMode">SmoothCurve</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы.ОсьЗначений</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartAxis">
-								<d8p1:maxValue xsi:type="xs:decimal">1</d8p1:maxValue>
-								<d8p1:minValueDetectionMethod>UseValue</d8p1:minValueDetectionMethod>
-								<d8p1:maxValueDetectionMethod>UseValue</d8p1:maxValueDetectionMethod>
-							</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы.ШкалаТочек</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
-								<d8p1:titleArea>
-									<d8p1:font kind="AutoFont"/>
-									<d8p1:textColor>auto</d8p1:textColor>
-									<d8p1:backColor>auto</d8p1:backColor>
-									<d8p1:border width="1">
-										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-									</d8p1:border>
-									<d8p1:borderColor>auto</d8p1:borderColor>
-								</d8p1:titleArea>
-								<d8p1:showInChart>DontShow</d8p1:showInChart>
-							</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы.ШкалаЗначений</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
-								<d8p1:titleArea>
-									<d8p1:font kind="AutoFont"/>
-									<d8p1:textColor>auto</d8p1:textColor>
-									<d8p1:backColor>auto</d8p1:backColor>
-									<d8p1:border width="1">
-										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-									</d8p1:border>
-									<d8p1:borderColor>auto</d8p1:borderColor>
-								</d8p1:titleArea>
-								<d8p1:showInChart>DontShow</d8p1:showInChart>
-							</dcscor:value>
-						</dcscor:item>
-						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-							<dcscor:use>false</dcscor:use>
-							<dcscor:parameter>ТипДиаграммы.ШкалаСерий</dcscor:parameter>
-							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d8p1:ChartScale">
-								<d8p1:titleArea>
-									<d8p1:font kind="AutoFont"/>
-									<d8p1:textColor>auto</d8p1:textColor>
-									<d8p1:backColor>auto</d8p1:backColor>
-									<d8p1:border width="1">
-										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-									</d8p1:border>
-									<d8p1:borderColor>auto</d8p1:borderColor>
-								</d8p1:titleArea>
-								<d8p1:showInChart>DontShow</d8p1:showInChart>
-							</dcscor:value>
-						</dcscor:item>
-					</dcscor:item>
-				</dcsset:outputParameters>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>
