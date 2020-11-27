@@ -900,7 +900,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">УченикиВыбор</Event>
-								<Event name="OnActivateRow">УченикиПриАктивизацииСтроки</Event>
+								<Event name="BeforeAddRow">УченикиПередНачаломДобавления</Event>
 								<Event name="ChoiceProcessing">УченикиОбработкаВыбора</Event>
 							</Events>
 							<ChildItems>
