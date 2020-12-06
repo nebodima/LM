@@ -1085,6 +1085,14 @@
 											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
 											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
 										</LabelField>
+										<InputField name="УченикиОстатокУроковЧасов" id="910">
+											<DataPath>Объект.Ученики.ОстатокУроковЧасов</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="УченикиОстатокУроковЧасовКонтекстноеМеню" id="911"/>
+											<ExtendedTooltip name="УченикиОстатокУроковЧасовРасширеннаяПодсказка" id="912"/>
+										</InputField>
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="УченикиУченик" id="211">
@@ -1882,6 +1890,21 @@
 								<v8:FractionDigits>2</v8:FractionDigits>
 								<v8:AllowedSign>Any</v8:AllowedSign>
 							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ОстатокУроковЧасов" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Остаток ур./ч.</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
 						</Type>
 					</Column>
 				</AdditionalColumns>

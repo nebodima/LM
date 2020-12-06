@@ -11,20 +11,25 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа2" id="18">
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="19"/>
 			<ChildItems>
-				<InputField name="СрокПриостановки" id="1">
-					<DataPath>СрокПриостановки</DataPath>
-					<DefaultItem>true</DefaultItem>
-					<ClearButton>true</ClearButton>
-					<SpinButton>true</SpinButton>
-					<ContextMenu name="СрокПриостановкиКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="СрокПриостановкиРасширеннаяПодсказка" id="3"/>
-					<Events>
-						<Event name="OnChange">СрокПриостановкиПриИзменении</Event>
-					</Events>
+				<InputField name="ПериодПриостановкиДатаНачала" id="26">
+					<DataPath>ПериодПриостановки.StartDate</DataPath>
+					<ContextMenu name="ПериодПриостановкиДатаНачалаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПериодПриостановкиДатаНачалаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ПериодПриостановкиДатаОкончания" id="29">
+					<DataPath>ПериодПриостановки.EndDate</DataPath>
+					<ContextMenu name="ПериодПриостановкиДатаОкончанияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПериодПриостановкиДатаОкончанияРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ПериодПриостановкиВариант" id="23">
+					<DataPath>ПериодПриостановки.Variant</DataPath>
+					<ContextMenu name="ПериодПриостановкиВариантКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПериодПриостановкиВариантРасширеннаяПодсказка" id="25"/>
 				</InputField>
 				<InputField name="Причина" id="12">
 					<DataPath>Причина</DataPath>
@@ -38,17 +43,15 @@
 					<ContextMenu name="ПричинаКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ПричинаРасширеннаяПодсказка" id="14"/>
 				</InputField>
+				<PeriodField name="ПериодПриостановки" id="1">
+					<DataPath>ПериодПриостановки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПериодПриостановкиКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодПриостановкиРасширеннаяПодсказка" id="3"/>
+				</PeriodField>
 			</ChildItems>
 		</UsualGroup>
-		<CalendarField name="ДатаВозобновления" id="15">
-			<DataPath>ДатаВозобновления</DataPath>
-			<WidthInMonths>2</WidthInMonths>
-			<ContextMenu name="ДатаВозобновленияКонтекстноеМеню" id="16"/>
-			<ExtendedTooltip name="ДатаВозобновленияРасширеннаяПодсказка" id="17"/>
-			<Events>
-				<Event name="OnChange">ДатаВозобновленияПриИзменении</Event>
-			</Events>
-		</CalendarField>
 		<UsualGroup name="Группа1" id="8">
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<Representation>None</Representation>
@@ -70,20 +73,15 @@
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="СрокПриостановки" id="1">
+		<Attribute name="ПериодПриостановки" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Срок приостановки (дней)</v8:content>
+					<v8:content>Период приостановки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>4</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-				</v8:NumberQualifiers>
+				<v8:Type>v8:StandardPeriod</v8:Type>
 			</Type>
 		</Attribute>
 		<Attribute name="Причина" id="2">
@@ -99,20 +97,6 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ДатаВозобновления" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дата возобновления</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:dateTime</v8:Type>
-				<v8:DateQualifiers>
-					<v8:DateFractions>Date</v8:DateFractions>
-				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
