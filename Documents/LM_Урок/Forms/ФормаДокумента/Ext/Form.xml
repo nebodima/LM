@@ -25,7 +25,7 @@
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Post</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="173"/>
 			</Button>
 			<Button name="ФормаКнопкаСтурктураПодчиненности" id="356">
@@ -53,6 +53,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -797,10 +798,6 @@
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
-										<Picture>
-											<xr:Ref>StdPicture.User</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
 										<Title>
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -933,7 +930,7 @@
 									<ChildItems>
 										<CheckBoxField name="УченикиСписатьОплату" id="353">
 											<DataPath>Объект.Ученики.СписатьОплату</DataPath>
-											<TitleBackColor>web:Turquoise</TitleBackColor>
+											<TitleBackColor>#AFEEEE</TitleBackColor>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoCellHeight>true</AutoCellHeight>
 											<HeaderPicture>
@@ -942,6 +939,7 @@
 											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
 											<CheckBoxType>Auto</CheckBoxType>
+											<BackColor>style:ActivityColor</BackColor>
 											<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="354"/>
 											<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="355"/>
 											<Events>
@@ -1041,32 +1039,6 @@
 									</HeaderPicture>
 									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
 									<ChildItems>
-										<LabelField name="УченикиЗадолженностьОбщая" id="483">
-											<DataPath>Объект.Ученики.ЗадолженностьОбщая</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Долг общий</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<HeaderHorizontalAlign>Right</HeaderHorizontalAlign>
-											<Width>1</Width>
-											<MarkNegatives>true</MarkNegatives>
-											<Hiperlink>true</Hiperlink>
-											<TextColor>style:NegativeTextColor</TextColor>
-											<ContextMenu name="УченикиЗадолженностьОбщаяКонтекстноеМеню" id="484"/>
-											<ExtendedTooltip name="УченикиЗадолженностьОбщаяРасширеннаяПодсказка" id="485"/>
-										</LabelField>
 										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
 											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -1085,14 +1057,6 @@
 											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
 											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
 										</LabelField>
-										<InputField name="УченикиОстатокУроковЧасов" id="910">
-											<DataPath>Объект.Ученики.ОстатокУроковЧасов</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ContextMenu name="УченикиОстатокУроковЧасовКонтекстноеМеню" id="911"/>
-											<ExtendedTooltip name="УченикиОстатокУроковЧасовРасширеннаяПодсказка" id="912"/>
-										</InputField>
 									</ChildItems>
 								</ColumnGroup>
 								<InputField name="УченикиУченик" id="211">
@@ -1860,22 +1824,6 @@
 							</v8:NumberQualifiers>
 						</Type>
 					</Column>
-					<Column name="ЗадолженностьОбщая" id="2">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Долг общий</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:decimal</v8:Type>
-							<v8:NumberQualifiers>
-								<v8:Digits>15</v8:Digits>
-								<v8:FractionDigits>2</v8:FractionDigits>
-								<v8:AllowedSign>Any</v8:AllowedSign>
-							</v8:NumberQualifiers>
-						</Type>
-					</Column>
 					<Column name="ОстатокБонусов" id="8">
 						<Title>
 							<v8:item>
@@ -1890,21 +1838,6 @@
 								<v8:FractionDigits>2</v8:FractionDigits>
 								<v8:AllowedSign>Any</v8:AllowedSign>
 							</v8:NumberQualifiers>
-						</Type>
-					</Column>
-					<Column name="ОстатокУроковЧасов" id="3">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Остаток ур./ч.</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:string</v8:Type>
-							<v8:StringQualifiers>
-								<v8:Length>0</v8:Length>
-								<v8:AllowedLength>Variable</v8:AllowedLength>
-							</v8:StringQualifiers>
 						</Type>
 					</Column>
 				</AdditionalColumns>
@@ -1964,7 +1897,7 @@
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЗадолженностьПоПредмету</dcsset:left>
-						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
@@ -1978,7 +1911,7 @@
 						<dcscor:value xsi:type="v8:LocalStringType">
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>ЧДЦ=2; ЧО=0</v8:content>
+								<v8:content>ЧДЦ=2; ЧФ=+Ч</v8:content>
 							</v8:item>
 						</dcscor:value>
 					</dcscor:item>
@@ -1993,7 +1926,7 @@
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЗадолженностьПоПредмету</dcsset:left>
-						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>

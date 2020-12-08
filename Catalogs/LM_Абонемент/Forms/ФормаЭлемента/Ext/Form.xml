@@ -198,6 +198,18 @@
 																</Button>
 															</ChildItems>
 														</UsualGroup>
+														<InputField name="КоличествоЗанятий" id="330">
+															<DataPath>Объект.КоличествоЗанятий</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Кол-во уроков</v8:content>
+																</v8:item>
+															</Title>
+															<ClearButton>true</ClearButton>
+															<ContextMenu name="КоличествоЗанятийКонтекстноеМеню" id="331"/>
+															<ExtendedTooltip name="КоличествоЗанятийРасширеннаяПодсказка" id="332"/>
+														</InputField>
 														<PictureField name="Фото" id="246">
 															<DataPath>Фото</DataPath>
 															<TitleLocation>None</TitleLocation>
@@ -272,6 +284,7 @@
 									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="226"/>
 									<ChildItems>
 										<UsualGroup name="Группа3" id="323">
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="324"/>
@@ -470,6 +483,7 @@
 											<ChildItems>
 												<InputField name="ЦенаАбонемента" id="283">
 													<DataPath>Объект.ЦенаАбонемента</DataPath>
+													<Width>10</Width>
 													<ContextMenu name="ЦенаАбонементаКонтекстноеМеню" id="284"/>
 													<ExtendedTooltip name="ЦенаАбонементаРасширеннаяПодсказка" id="285"/>
 												</InputField>
@@ -481,7 +495,9 @@
 											</ChildItems>
 										</UsualGroup>
 										<LabelDecoration name="Декорация3" id="288">
+											<HorizontalStretch>true</HorizontalStretch>
 											<TextColor>#0000FF</TextColor>
+											<HorizontalAlign>Center</HorizontalAlign>
 											<ContextMenu name="Декорация3КонтекстноеМеню" id="289"/>
 											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="290"/>
 										</LabelDecoration>
@@ -553,6 +569,12 @@
 											<ContextMenu name="ИтогоЧасовКонтекстноеМеню" id="311"/>
 											<ExtendedTooltip name="ИтогоЧасовРасширеннаяПодсказка" id="312"/>
 										</LabelField>
+										<LabelField name="ОстатокУроковЧасов" id="327">
+											<DataPath>ОстатокУроковЧасов</DataPath>
+											<Width>6</Width>
+											<ContextMenu name="ОстатокУроковЧасовКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="ОстатокУроковЧасовРасширеннаяПодсказка" id="329"/>
+										</LabelField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -577,6 +599,7 @@
 						<Table name="ТЗОплат" id="200">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
 							<Footer>true</Footer>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -788,8 +811,8 @@
 					<Type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
-							<v8:Digits>15</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
 					</Type>
@@ -907,6 +930,44 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ОстатокУроковЧасов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток уроков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТЗОплатДокумент</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТЗОплат.Сумма</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#008000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="Активировать" id="1">

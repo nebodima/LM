@@ -361,6 +361,14 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация6" id="482">
 											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:AccentColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Контактная информация</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
 											<BackColor>web:Gainsboro</BackColor>
 											<ContextMenu name="Декорация6КонтекстноеМеню" id="483"/>
 											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="484"/>
@@ -722,7 +730,15 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация1" id="523">
 											<HorizontalStretch>true</HorizontalStretch>
-											<BackColor>web:Gainsboro</BackColor>
+											<TextColor>style:AccentColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тариф</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<BackColor>#DCDCDC</BackColor>
 											<ContextMenu name="Декорация1КонтекстноеМеню" id="524"/>
 											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="525"/>
 										</LabelDecoration>
@@ -733,7 +749,7 @@
 											<ChildItems>
 												<InputField name="Тариф" id="531">
 													<DataPath>Объект.Тариф</DataPath>
-													<TitleLocation>Top</TitleLocation>
+													<TitleLocation>None</TitleLocation>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="ТарифКонтекстноеМеню" id="532"/>
 													<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="533"/>
@@ -741,12 +757,16 @@
 														<Event name="OnChange">ТарифПриИзменении</Event>
 													</Events>
 												</InputField>
-												<LabelField name="ОстатокДенегПоТарифу" id="538">
+												<LabelField name="ОстатокДенегПоТарифу1" id="538">
 													<DataPath>ОстатокДенегПоТарифу</DataPath>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<Width>10</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<MarkNegatives>true</MarkNegatives>
 													<Hiperlink>true</Hiperlink>
 													<BorderColor>style:FieldSelectionBackColor</BorderColor>
-													<ContextMenu name="ОстатокДенегПоТарифуКонтекстноеМеню" id="539"/>
-													<ExtendedTooltip name="ОстатокДенегПоТарифуРасширеннаяПодсказка" id="540"/>
+													<ContextMenu name="ОстатокДенегПоТарифу1КонтекстноеМеню" id="539"/>
+													<ExtendedTooltip name="ОстатокДенегПоТарифу1РасширеннаяПодсказка" id="540"/>
 													<Events>
 														<Event name="Click">ОстатокДенегПоТарифуНажатие</Event>
 													</Events>
@@ -765,6 +785,14 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация7" id="544">
 											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:AccentColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остатки денег</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
 											<BackColor>web:Gainsboro</BackColor>
 											<ContextMenu name="Декорация7КонтекстноеМеню" id="545"/>
 											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="546"/>
@@ -869,6 +897,13 @@
 															<EditMode>EnterOnInput</EditMode>
 															<CellHyperlink>true</CellHyperlink>
 															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<MarkNegatives>true</MarkNegatives>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧДЦ=2</v8:content>
+																</v8:item>
+															</Format>
 															<Hiperlink>true</Hiperlink>
 															<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
 															<ContextMenu name="ДолгиДолгКонтекстноеМеню" id="521"/>
@@ -963,6 +998,12 @@
 									<ContextMenu name="Реквизит1ОрганизацияКонтекстноеМеню" id="404"/>
 									<ExtendedTooltip name="Реквизит1ОрганизацияРасширеннаяПодсказка" id="405"/>
 								</LabelField>
+								<CheckBoxField name="ДокументыЯвка" id="553">
+									<DataPath>Документы.Явка</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДокументыЯвкаКонтекстноеМеню" id="554"/>
+									<ExtendedTooltip name="ДокументыЯвкаРасширеннаяПодсказка" id="555"/>
+								</CheckBoxField>
 								<LabelField name="Реквизит1ГруппаОбучения" id="400">
 									<DataPath>Документы.ГруппаОбучения</DataPath>
 									<ContextMenu name="Реквизит1ГруппаОбученияКонтекстноеМеню" id="401"/>
@@ -972,6 +1013,12 @@
 									<DataPath>Документы.Педагог</DataPath>
 									<ContextMenu name="Реквизит1ПедагогКонтекстноеМеню" id="407"/>
 									<ExtendedTooltip name="Реквизит1ПедагогРасширеннаяПодсказка" id="408"/>
+								</LabelField>
+								<LabelField name="ДокументыАбонемент" id="550">
+									<DataPath>Документы.Абонемент</DataPath>
+									<Width>1</Width>
+									<ContextMenu name="ДокументыАбонементКонтекстноеМеню" id="551"/>
+									<ExtendedTooltip name="ДокументыАбонементРасширеннаяПодсказка" id="552"/>
 								</LabelField>
 								<LabelField name="Реквизит1Тариф" id="409">
 									<DataPath>Документы.Тариф</DataPath>
@@ -1148,7 +1195,10 @@
 	LM_СписанияСуммЗаУрокиОбороты.ГруппаОбучения КАК ГруппаОбучения,
 	LM_СписанияСуммЗаУрокиОбороты.ПредметОбучения КАК ПредметОбучения,
 	LM_СписанияСуммЗаУрокиОбороты.Регистратор.КоличествоЧасов КАК Часы,
-	LM_СписанияСуммЗаУрокиОбороты.СуммаОборот КАК Сумма
+	LM_СписанияСуммЗаУрокиОбороты.СуммаОборот КАК Сумма,
+	LM_СписанияСуммЗаУрокиОбороты.Абонемент КАК Абонемент,
+	LM_СписанияСуммЗаУрокиОбороты.Скидка КАК Скидка,
+	LM_СписанияСуммЗаУрокиОбороты.Явка КАК Явка
 ИЗ
 	РегистрНакопления.LM_СписанияСуммЗаУроки.Обороты(, , Регистратор, ) КАК LM_СписанияСуммЗаУрокиОбороты
 ГДЕ
@@ -1220,16 +1270,15 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Остаток денег</v8:content>
+					<v8:content>Остаток денег по тарифу</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>2</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="ОстатокЕдиницПоТарифу" id="6">
@@ -1286,6 +1335,31 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Видимость</dcscor:parameter>
 						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДолгиДолг</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Долги.Долг</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЧДЦ=2; ЧФ=+Ч</v8:content>
+							</v8:item>
+						</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

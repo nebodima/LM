@@ -701,50 +701,6 @@
 									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
 									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
 								</PictureField>
-								<LabelField name="РасшифровкаСуммаОстаток" id="384">
-									<DataPath>Расшифровка.СуммаОстаток</DataPath>
-									<UserVisible>
-										<xr:Common>false</xr:Common>
-									</UserVisible>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Долг</v8:content>
-										</v8:item>
-									</Title>
-									<TitleBackColor>#FFFFFF</TitleBackColor>
-									<CellHyperlink>true</CellHyperlink>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>1</Width>
-									<MarkNegatives>true</MarkNegatives>
-									<Hiperlink>true</Hiperlink>
-									<BorderColor>#FFFFFF</BorderColor>
-									<TextColor>style:NegativeTextColor</TextColor>
-									<ContextMenu name="РасшифровкаСуммаОстатокКонтекстноеМеню" id="385"/>
-									<ExtendedTooltip name="РасшифровкаСуммаОстатокРасширеннаяПодсказка" id="386"/>
-								</LabelField>
-								<LabelField name="РасшифровкаОстатокУроковЧасов" id="455">
-									<DataPath>Расшифровка.ОстатокУроковЧасов</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Остаток ур./ч.</v8:content>
-										</v8:item>
-									</Title>
-									<TitleBackColor>#FFFFFF</TitleBackColor>
-									<Width>1</Width>
-									<Format>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>ЧДЦ=2</v8:content>
-										</v8:item>
-									</Format>
-									<ContextMenu name="РасшифровкаОстатокУроковЧасовКонтекстноеМеню" id="456"/>
-									<ExtendedTooltip name="РасшифровкаОстатокУроковЧасовРасширеннаяПодсказка" id="457"/>
-								</LabelField>
 								<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
 									<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
 									<Title>
@@ -1396,27 +1352,12 @@
 	УрокУченики.Сумма КАК Сумма,
 	УрокУченики.СуммаСкидки КАК СуммаСкидки,
 	УрокУченики.Комментарий КАК Комментарий,
-	-СписанияСуммЗаУрокиОстатки.СуммаОстаток КАК СуммаОстаток,
-	-СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
+	СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток КАК СуммаОстатокПоПредмету,
 	УрокУченики.Абонемент КАК Абонемент,
 	УрокУченики.ЦенаТарифа КАК ЦенаТарифа,
-	УрокУченики.Тариф КАК Тариф,
-	ВЫБОР
-		КОГДА УрокУченики.Тариф &lt;&gt; ЗНАЧЕНИЕ(Справочник.LM_Тарифы.ПустаяСсылка)
-				И СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток &gt; 0
-				И УрокУченики.Тариф.Сумма &gt; 0
-				И УрокУченики.Тариф.КоличествоУроков &lt;&gt; УрокУченики.Тариф.КоличествоЧасов
-			ТОГДА ВЫБОР
-					КОГДА УрокУченики.Тариф.КоличествоУроков &gt; 0
-						ТОГДА СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток / (УрокУченики.Тариф.Сумма / УрокУченики.Тариф.КоличествоУроков)
-					ИНАЧЕ СписанияСуммЗаУрокиОстаткиПоПредмету.СуммаОстаток / (УрокУченики.Тариф.Сумма / УрокУченики.Тариф.КоличествоЧасов)
-				КОНЕЦ
-		ИНАЧЕ 0
-	КОНЕЦ КАК ОстатокУроковЧасов
+	УрокУченики.Тариф КАК Тариф
 ИЗ
 	Документ.LM_Урок.Ученики КАК УрокУченики
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК СписанияСуммЗаУрокиОстатки
-		ПО УрокУченики.Ученик = СписанияСуммЗаУрокиОстатки.Клиент
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.LM_СписанияСуммЗаУроки.Остатки КАК СписанияСуммЗаУрокиОстаткиПоПредмету
 		ПО УрокУченики.Ученик = СписанияСуммЗаУрокиОстаткиПоПредмету.Клиент
 			И УрокУченики.Ссылка.ПредметОбучения = СписанияСуммЗаУрокиОстаткиПоПредмету.ПредметОбучения</QueryText>
@@ -1557,7 +1498,7 @@
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">Расшифровка.СуммаОстатокПоПредмету</dcsset:left>
-						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
@@ -1571,7 +1512,7 @@
 						<dcscor:value xsi:type="v8:LocalStringType">
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>ЧДЦ=2; ЧО=0</v8:content>
+								<v8:content>ЧДЦ=2; ЧФ=+Ч</v8:content>
 							</v8:item>
 						</dcscor:value>
 					</dcscor:item>
@@ -1586,7 +1527,7 @@
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
 						<dcsset:left xsi:type="dcscor:Field">Расшифровка.СуммаОстатокПоПредмету</dcsset:left>
-						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
 						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 					</dcsset:item>
 				</dcsset:filter>
