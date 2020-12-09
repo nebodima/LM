@@ -86,7 +86,7 @@
 				</v8:item>
 			</ToolTip>
 			<VerticalStretch>false</VerticalStretch>
-			<Group>Horizontal</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="235"/>
@@ -739,6 +739,16 @@
 						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
+				<PictureField name="КартинкаПредметаОбучения" id="910">
+					<DataPath>КартинкаПредметаОбучения</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<PictureSize>AutoSize</PictureSize>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="КартинкаПредметаОбученияКонтекстноеМеню" id="911"/>
+					<ExtendedTooltip name="КартинкаПредметаОбученияРасширеннаяПодсказка" id="912"/>
+				</PictureField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ГруппаУченики" id="536">
@@ -1730,6 +1740,35 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаДополнительно" id="913">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="914"/>
+					<ChildItems>
+						<InputField name="ТемаУрока" id="918">
+							<DataPath>Объект.ТемаУрока</DataPath>
+							<Height>2</Height>
+							<ContextMenu name="ТемаУрокаКонтекстноеМеню" id="919"/>
+							<ExtendedTooltip name="ТемаУрокаРасширеннаяПодсказка" id="920"/>
+						</InputField>
+						<InputField name="ДомашнееЗадание" id="915">
+							<DataPath>Объект.ДомашнееЗадание</DataPath>
+							<Height>2</Height>
+							<ContextMenu name="ДомашнееЗаданиеКонтекстноеМеню" id="916"/>
+							<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="917"/>
+						</InputField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<UsualGroup name="ГруппаИтоги" id="308">
@@ -1853,6 +1892,21 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.LM_ДисконтныеКарты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КартинкаПредметаОбучения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка предмета обучения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -2083,6 +2137,7 @@
 				<xr:Ref>StdPicture.CheckAll</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
+			<Action>СделатьОплаченными</Action>
 		</Command>
 		<Command name="СделатьПосещенными" id="8">
 			<Title>
@@ -2101,6 +2156,7 @@
 				<xr:Ref>StdPicture.CheckAll</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
+			<Action>СделатьПосещенными</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

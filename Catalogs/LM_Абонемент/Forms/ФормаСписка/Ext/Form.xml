@@ -186,18 +186,18 @@
 					<ExtendedTooltip name="ДатаАктивацииРасширеннаяПодсказка" id="51"/>
 				</LabelField>
 				<CheckBoxField name="Приостановка" id="34">
-					<DataPath>Список.Приостановка</DataPath>
+					<DataPath>~Список.Приостановка</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПриостановкаКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ПриостановкаРасширеннаяПодсказка" id="36"/>
 				</CheckBoxField>
 				<LabelField name="ДатаПриостановки" id="52">
-					<DataPath>Список.ДатаПриостановки</DataPath>
+					<DataPath>~Список.ДатаПриостановки</DataPath>
 					<ContextMenu name="ДатаПриостановкиКонтекстноеМеню" id="53"/>
 					<ExtendedTooltip name="ДатаПриостановкиРасширеннаяПодсказка" id="54"/>
 				</LabelField>
 				<LabelField name="ДатаВозобновления" id="55">
-					<DataPath>Список.ДатаВозобновления</DataPath>
+					<DataPath>~Список.ДатаВозобновления</DataPath>
 					<ContextMenu name="ДатаВозобновленияКонтекстноеМеню" id="56"/>
 					<ExtendedTooltip name="ДатаВозобновленияРасширеннаяПодсказка" id="57"/>
 				</LabelField>
@@ -223,15 +223,11 @@
 	СправочникLM_Абонемент.ПредметОбучения КАК ПредметОбучения,
 	СправочникLM_Абонемент.ДатаНачала КАК ДатаНачала,
 	СправочникLM_Абонемент.ДатаОкончания КАК ДатаОкончания,
-	СправочникLM_Абонемент.Приостановка КАК Приостановка,
 	СправочникLM_Абонемент.Активный КАК Активный,
 	СправочникLM_Абонемент.КоличествоЗанятий КАК КоличествоЗанятий,
 	СправочникLM_Абонемент.КоличествоЧасов КАК КоличествоЧасов,
 	СправочникLM_Абонемент.Комментарий КАК Комментарий,
 	СправочникLM_Абонемент.ДатаАктивации КАК ДатаАктивации,
-	СправочникLM_Абонемент.ДатаПриостановки КАК ДатаПриостановки,
-	СправочникLM_Абонемент.ДатаВозобновления КАК ДатаВозобновления,
-	СправочникLM_Абонемент.ДатаИзменения КАК ДатаИзменения,
 	СправочникLM_Абонемент.Приостановки.(
 		Ссылка КАК Ссылка,
 		НомерСтроки КАК НомерСтроки,
@@ -289,47 +285,10 @@
 						<dcsset:item>
 							<dcsset:selection/>
 							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemGroup">
-									<dcsset:groupType>AndGroup</dcsset:groupType>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">Активный</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-									</dcsset:item>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">Приостановка</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-									</dcsset:item>
-								</dcsset:item>
-							</dcsset:filter>
-							<dcsset:appearance>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:use>false</dcscor:use>
-									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
-								</dcscor:item>
-								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#800000</dcscor:value>
-								</dcscor:item>
-							</dcsset:appearance>
-						</dcsset:item>
-						<dcsset:item>
-							<dcsset:selection/>
-							<dcsset:filter>
-								<dcsset:item xsi:type="dcsset:FilterItemGroup">
-									<dcsset:groupType>AndGroup</dcsset:groupType>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">Активный</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-									</dcsset:item>
-									<dcsset:item xsi:type="dcsset:FilterItemComparison">
-										<dcsset:left xsi:type="dcscor:Field">Приостановка</dcsset:left>
-										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
-									</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Активный</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 								</dcsset:item>
 							</dcsset:filter>
 							<dcsset:appearance>

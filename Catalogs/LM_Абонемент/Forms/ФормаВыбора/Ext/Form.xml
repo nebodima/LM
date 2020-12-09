@@ -116,18 +116,18 @@
 					<ExtendedTooltip name="ДатаАктивацииРасширеннаяПодсказка" id="57"/>
 				</LabelField>
 				<CheckBoxField name="Приостановка" id="40">
-					<DataPath>Список.Приостановка</DataPath>
+					<DataPath>~Список.Приостановка</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПриостановкаКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="ПриостановкаРасширеннаяПодсказка" id="42"/>
 				</CheckBoxField>
 				<LabelField name="ДатаПриостановки" id="58">
-					<DataPath>Список.ДатаПриостановки</DataPath>
+					<DataPath>~Список.ДатаПриостановки</DataPath>
 					<ContextMenu name="ДатаПриостановкиКонтекстноеМеню" id="59"/>
 					<ExtendedTooltip name="ДатаПриостановкиРасширеннаяПодсказка" id="60"/>
 				</LabelField>
 				<LabelField name="ДатаВозобновления" id="61">
-					<DataPath>Список.ДатаВозобновления</DataPath>
+					<DataPath>~Список.ДатаВозобновления</DataPath>
 					<ContextMenu name="ДатаВозобновленияКонтекстноеМеню" id="62"/>
 					<ExtendedTooltip name="ДатаВозобновленияРасширеннаяПодсказка" id="63"/>
 				</LabelField>

@@ -290,7 +290,7 @@
 											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="324"/>
 											<ChildItems>
 												<Button name="Активировать" id="51">
-													<Type>UsualButton</Type>
+													<Type>Hyperlink</Type>
 													<CommandName>Form.Command.Активировать</CommandName>
 													<ExtendedTooltip name="АктивироватьРасширеннаяПодсказка" id="52"/>
 												</Button>
@@ -322,7 +322,7 @@
 											<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="326"/>
 											<ChildItems>
 												<Button name="Приостановить" id="53">
-													<Type>UsualButton</Type>
+													<Type>Hyperlink</Type>
 													<CommandName>Form.Command.Приостановить</CommandName>
 													<ExtendedTooltip name="ПриостановитьРасширеннаяПодсказка" id="54"/>
 												</Button>
@@ -334,28 +334,84 @@
 														</v8:item>
 													</Title>
 													<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+													<Group>Vertical</Group>
 													<Behavior>PopUp</Behavior>
 													<Representation>None</Representation>
 													<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="236"/>
 													<ChildItems>
+														<LabelDecoration name="Декорация5" id="348">
+															<TextColor>#339966</TextColor>
+															<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Добавление приостановок</v8:content>
+																</v8:item>
+															</Title>
+															<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+															<ContextMenu name="Декорация5КонтекстноеМеню" id="349"/>
+															<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="350"/>
+														</LabelDecoration>
+														<InputField name="Период1" id="333">
+															<DataPath>Период</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Период действия абонемента</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Период1КонтекстноеМеню" id="334"/>
+															<ExtendedTooltip name="Период1РасширеннаяПодсказка" id="335"/>
+														</InputField>
 														<Table name="Приостановки" id="167">
-															<CommandBarLocation>None</CommandBarLocation>
+															<TitleLocation>Auto</TitleLocation>
 															<AutoInsertNewRow>true</AutoInsertNewRow>
 															<VerticalStretch>false</VerticalStretch>
 															<EnableStartDrag>true</EnableStartDrag>
 															<EnableDrag>true</EnableDrag>
 															<DataPath>Объект.Приостановки</DataPath>
-															<CommandSet>
-																<ExcludedCommand>Copy</ExcludedCommand>
-																<ExcludedCommand>MoveDown</ExcludedCommand>
-																<ExcludedCommand>MoveUp</ExcludedCommand>
-																<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
-																<ExcludedCommand>SortListAsc</ExcludedCommand>
-																<ExcludedCommand>SortListDesc</ExcludedCommand>
-															</CommandSet>
 															<RowFilter xsi:nil="true"/>
 															<ContextMenu name="ПриостановкиКонтекстноеМеню" id="168"/>
-															<AutoCommandBar name="ПриостановкиКоманднаяПанель" id="169"/>
+															<AutoCommandBar name="ПриостановкиКоманднаяПанель" id="169">
+																<ChildItems>
+																	<Button name="ПриостановкиДобавить" id="338">
+																		<Type>CommandBarButton</Type>
+																		<Representation>PictureAndText</Representation>
+																		<CommandName>Form.Item.Приостановки.StandardCommand.Add</CommandName>
+																		<ExtendedTooltip name="ПриостановкиДобавитьРасширеннаяПодсказка" id="339"/>
+																	</Button>
+																	<Button name="ПриостановкиПереместитьВниз" id="342">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.Приостановки.StandardCommand.MoveDown</CommandName>
+																		<ExtendedTooltip name="ПриостановкиПереместитьВнизРасширеннаяПодсказка" id="343"/>
+																	</Button>
+																	<Button name="ПриостановкиПереместитьВверх" id="340">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.Приостановки.StandardCommand.MoveUp</CommandName>
+																		<ExtendedTooltip name="ПриостановкиПереместитьВверхРасширеннаяПодсказка" id="341"/>
+																	</Button>
+																	<Button name="ПриостановкиСортироватьСписокПоВозрастанию" id="344">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.Приостановки.StandardCommand.SortListAsc</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ПриостановкиСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="345"/>
+																	</Button>
+																	<Button name="ПриостановкиСортироватьСписокПоУбыванию" id="346">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Item.Приостановки.StandardCommand.SortListDesc</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ПриостановкиСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="347"/>
+																	</Button>
+																	<Button name="ПриостановкиУдалить" id="336">
+																		<Type>CommandBarButton</Type>
+																		<Representation>PictureAndText</Representation>
+																		<CommandName>Form.Item.Приостановки.StandardCommand.Delete</CommandName>
+																		<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																		<ExtendedTooltip name="ПриостановкиУдалитьРасширеннаяПодсказка" id="337"/>
+																	</Button>
+																</ChildItems>
+															</AutoCommandBar>
 															<ExtendedTooltip name="ПриостановкиРасширеннаяПодсказка" id="170"/>
 															<SearchStringAddition name="ПриостановкиСтрокаПоиска" id="171">
 																<AdditionSource>
@@ -381,6 +437,9 @@
 																<ContextMenu name="ПриостановкиУправлениеПоискомКонтекстноеМеню" id="178"/>
 																<ExtendedTooltip name="ПриостановкиУправлениеПоискомРасширеннаяПодсказка" id="179"/>
 															</SearchControlAddition>
+															<Events>
+																<Event name="OnEditEnd">ПриостановкиПриОкончанииРедактирования</Event>
+															</Events>
 															<ChildItems>
 																<LabelField name="ПриостановкиНомерСтроки" id="180">
 																	<DataPath>Объект.Приостановки.LineNumber</DataPath>
@@ -397,18 +456,6 @@
 																	<ContextMenu name="ПриостановкиДатаПриостановкиКонтекстноеМеню" id="184"/>
 																	<ExtendedTooltip name="ПриостановкиДатаПриостановкиРасширеннаяПодсказка" id="185"/>
 																</InputField>
-																<InputField name="ПриостановкиСрокПриостановки" id="186">
-																	<DataPath>1/0:0e110202-055c-4a90-9bd2-6879cb1d8ab3/0:652cf926-d381-4990-928c-c784286dc0f0</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Срок приостановки</v8:content>
-																		</v8:item>
-																	</Title>
-																	<EditMode>EnterOnInput</EditMode>
-																	<ContextMenu name="ПриостановкиСрокПриостановкиКонтекстноеМеню" id="187"/>
-																	<ExtendedTooltip name="ПриостановкиСрокПриостановкиРасширеннаяПодсказка" id="188"/>
-																</InputField>
 																<InputField name="ПриостановкиДатаВозобновления" id="192">
 																	<DataPath>Объект.Приостановки.ДатаВозобновления</DataPath>
 																	<EditMode>EnterOnInput</EditMode>
@@ -417,7 +464,9 @@
 																</InputField>
 																<InputField name="ПриостановкиДатаИзменения" id="195">
 																	<DataPath>Объект.Приостановки.ДатаИзменения</DataPath>
+																	<ReadOnly>true</ReadOnly>
 																	<EditMode>EnterOnInput</EditMode>
+																	<TextColor>#999999</TextColor>
 																	<ContextMenu name="ПриостановкиДатаИзмененияКонтекстноеМеню" id="196"/>
 																	<ExtendedTooltip name="ПриостановкиДатаИзмененияРасширеннаяПодсказка" id="197"/>
 																</InputField>
@@ -439,21 +488,8 @@
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="282"/>
 											<ChildItems>
-												<InputField name="ДатаПриостановки" id="147">
-													<DataPath>Объект.ДатаПриостановки</DataPath>
-													<ContextMenu name="ДатаПриостановкиКонтекстноеМеню" id="148"/>
-													<ExtendedTooltip name="ДатаПриостановкиРасширеннаяПодсказка" id="149"/>
-												</InputField>
-												<InputField name="ДатаВозобновления" id="237">
-													<DataPath>Объект.ДатаВозобновления</DataPath>
-													<ContextMenu name="ДатаВозобновленияКонтекстноеМеню" id="238"/>
-													<ExtendedTooltip name="ДатаВозобновленияРасширеннаяПодсказка" id="239"/>
-													<Events>
-														<Event name="OnChange">ДатаВозобновленияПриИзменении</Event>
-													</Events>
-												</InputField>
 												<LabelField name="ДатаИзменения" id="272">
-													<DataPath>Объект.ДатаИзменения</DataPath>
+													<DataPath>1/0:6f0c0d48-543c-4725-a35f-ff59e2c2fc41</DataPath>
 													<TitleTextColor>#999999</TitleTextColor>
 													<TextColor>#999999</TextColor>
 													<ContextMenu name="ДатаИзмененияКонтекстноеМеню" id="273"/>

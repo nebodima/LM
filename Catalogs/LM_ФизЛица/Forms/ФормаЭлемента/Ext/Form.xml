@@ -813,8 +813,30 @@
 											<Group>Vertical</Group>
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="493"/>
 											<ChildItems>
+												<UsualGroup name="Группа8" id="559">
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="560"/>
+													<ChildItems>
+														<LabelDecoration name="Декорация9" id="556">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Задолженность итого по всем предметам:</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Декорация9КонтекстноеМеню" id="557"/>
+															<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="558"/>
+														</LabelDecoration>
+														<LabelDecoration name="ДекорацияЗадолженность" id="561">
+															<ContextMenu name="ДекорацияЗадолженностьКонтекстноеМеню" id="562"/>
+															<ExtendedTooltip name="ДекорацияЗадолженностьРасширеннаяПодсказка" id="563"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
 												<Table name="Долги" id="504">
 													<Representation>List</Representation>
 													<CommandBarLocation>None</CommandBarLocation>
@@ -1211,7 +1233,7 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>Документ</dcsset:field>
+							<dcsset:field>Документ.Дата</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
