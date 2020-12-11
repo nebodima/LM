@@ -196,6 +196,7 @@
 			<field>Абонемент</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:parentDimension>Клиент</dcscom:parentDimension>
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
@@ -254,7 +255,67 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Уроки оборот</v8:content>
+					<v8:content>Кол-во уроков</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолЯвокОборот</dataPath>
+			<field>КолЯвокОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во явок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолЯвокРасход</dataPath>
+			<field>КолЯвокРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол явок расход</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолЯвокКонОст</dataPath>
+			<field>КолЯвокКонОст</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего явок</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КолЯвок</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолЯвокНачОст</dataPath>
+			<field>КолЯвокНачОст</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол явок нач ост</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>КолЯвок</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КолЯвокПриход</dataPath>
+			<field>КолЯвокПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол явок приход</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -288,7 +349,12 @@
 	СписанияСуммЗаУроки.КоличествоУроковРасход КАК КолУроковРасход,
 	СписанияСуммЗаУроки.КоличествоУроковКонечныйОстаток КАК КолУроковОстаток,
 	СписанияСуммЗаУроки.ПериодСекунда КАК Период,
-	СписанияСуммЗаУроки.КоличествоУроковОборот КАК КолУроковОборот
+	СписанияСуммЗаУроки.КоличествоУроковОборот КАК КолУроковОборот,
+	СписанияСуммЗаУроки.КоличествоЯвокНачальныйОстаток КАК КолЯвокНачОст,
+	СписанияСуммЗаУроки.КоличествоЯвокПриход КАК КолЯвокПриход,
+	СписанияСуммЗаУроки.КоличествоЯвокРасход КАК КолЯвокРасход,
+	СписанияСуммЗаУроки.КоличествоЯвокОборот КАК КолЯвокОборот,
+	СписанияСуммЗаУроки.КоличествоЯвокКонечныйОстаток КАК КолЯвокКонОст
 ИЗ
 	РегистрНакопления.LM_СписанияСуммЗаУроки.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , ) КАК СписанияСуммЗаУроки</query>
 	</dataSet>
@@ -347,6 +413,26 @@
 	<totalField>
 		<dataPath>КолУроковОборот</dataPath>
 		<expression>Сумма(КолУроковОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолЯвокНачОст</dataPath>
+		<expression>Сумма(КолЯвокНачОст)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолЯвокПриход</dataPath>
+		<expression>Сумма(КолЯвокПриход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолЯвокРасход</dataPath>
+		<expression>Сумма(КолЯвокРасход)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолЯвокОборот</dataPath>
+		<expression>Сумма(КолЯвокОборот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КолЯвокКонОст</dataPath>
+		<expression>Сумма(КолЯвокКонОст)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -460,6 +546,9 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КолУроковОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолЯвокОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаРасход</dcsset:field>
@@ -705,6 +794,12 @@
 					<dcsset:field>ЧасыОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолУроковОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолЯвокОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаРасход</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -947,6 +1042,12 @@
 					<dcsset:field>ЧасыОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолУроковОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолЯвокОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаРасход</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1179,6 +1280,12 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ЧасыОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолУроковОборот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КолЯвокОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СуммаРасход</dcsset:field>
