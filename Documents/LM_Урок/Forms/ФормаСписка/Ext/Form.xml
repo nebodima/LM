@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеВариантовОтчетов</SettingsStorage>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -73,7 +73,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>DataProcessor.LM_Календарь.StandardCommand.Open</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.Calendar</xr:Ref>
+							<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -383,7 +383,7 @@
 							<DataPath>Список.Date</DataPath>
 							<DefaultItem>true</DefaultItem>
 							<HeaderPicture>
-								<xr:Ref>StdPicture.Calendar</xr:Ref>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
 							<Format>
@@ -603,7 +603,6 @@
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<AutoMaxHeight>false</AutoMaxHeight>
-							<MaxHeight>5</MaxHeight>
 							<MaxRowsCount>5</MaxRowsCount>
 							<VerticalScrollBar>DontUse</VerticalScrollBar>
 							<HorizontalLines>false</HorizontalLines>
@@ -824,6 +823,13 @@
 									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
 									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
+								</LabelField>
+								<LabelField name="РасшифровкаКомментарий" id="455">
+									<DataPath>Расшифровка.Комментарий</DataPath>
+									<TitleBackColor>#FFFFFF</TitleBackColor>
+									<Width>1</Width>
+									<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="456"/>
+									<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="457"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -1185,45 +1191,9 @@
 					</d4p1:titleArea>
 					<d4p1:scaleLabelLocation>None</d4p1:scaleLabelLocation>
 				</d4p1:pointsScale>
-				<d4p1:valuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:valuesScale>
-				<d4p1:seriesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:seriesScale>
 				<d4p1:legendPlacement>UseCoordinates</d4p1:legendPlacement>
 				<d4p1:plotAreaPlacement>UseCoordinates</d4p1:plotAreaPlacement>
 				<d4p1:titleAreaPlacement>UseCoordinates</d4p1:titleAreaPlacement>
-				<d4p1:colorPaletteDescription/>
-				<d4p1:referenceBandsColorPaletteDescription/>
-				<d4p1:additionalValuesScale>
-					<d4p1:titleArea>
-						<d4p1:font kind="AutoFont"/>
-						<d4p1:textColor>auto</d4p1:textColor>
-						<d4p1:backColor>auto</d4p1:backColor>
-						<d4p1:border width="1">
-							<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-						</d4p1:border>
-						<d4p1:borderColor>auto</d4p1:borderColor>
-					</d4p1:titleArea>
-				</d4p1:additionalValuesScale>
-				<d4p1:additionalValuesAxis/>
 			</Settings>
 		</Attribute>
 		<Attribute name="Ученик" id="5">
