@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.11">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9">
 	<ConfigVersions>
 		<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт" id="b41e8eaa-10ae-425a-ba5d-caf619cc1dd5" configVersion="143908f40e9cb84297df9463b180276400000000">
 			<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт.Dimension.Организация" id="154d65f2-580d-4a74-971e-4c91a25a23ff"/>
@@ -236,7 +236,7 @@
 		<Metadata name="Catalog.LM_Тарифы.ManagerModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.3" configVersion="bd831358fa9ac54ea21ba1da45bb435f00000000"/>
 		<Metadata name="Catalog.LM_Тарифы.ObjectModule" id="29efe00f-ee91-4d29-aeec-08ced94775e5.0" configVersion="e31e9ced84fcb243b8850b47fa711d9100000000"/>
 		<Metadata name="Catalog.LM_Тарифы.Predefined" id="29efe00f-ee91-4d29-aeec-08ced94775e5.1c" configVersion="930b4eb3df2a5544891af40a80aca66e00000000"/>
-		<Metadata name="Catalog.LM_ФизЛица" id="1e38d363-e78c-4152-b90a-2a6ce229208d" configVersion="6e1e8c37e50e2f4ca63f11dec559435900000000">
+		<Metadata name="Catalog.LM_ФизЛица" id="1e38d363-e78c-4152-b90a-2a6ce229208d" configVersion="c3c7aeb39da8504e8655010252122d4100000000">
 			<Metadata name="Catalog.LM_ФизЛица.Attribute.EMail" id="01008a28-903c-47c2-898f-8bee355a9b75"/>
 			<Metadata name="Catalog.LM_ФизЛица.Attribute.Http" id="0f8522d8-42bb-4b45-a534-8e061161b533"/>
 			<Metadata name="Catalog.LM_ФизЛица.Attribute.Тариф" id="1b1c59bf-abaf-444a-8666-a7650ce8d421"/>
@@ -5295,7 +5295,7 @@
 		<Metadata name="Document.ПриходныйКассовыйОрдер.ObjectModule" id="9ae02379-6850-4412-8815-d3d740311378.0" configVersion="e95e9afce88270488e3671b701b454d100000000"/>
 		<Metadata name="Document.ПриходныйКассовыйОрдер.Template.ПечатьПКО" id="5402fedd-93ce-4257-bb0e-f97398430257" configVersion="a6d262026585954785a23b028af0ae1900000000"/>
 		<Metadata name="Document.ПриходныйКассовыйОрдер.Template.ПечатьПКО.Template" id="5402fedd-93ce-4257-bb0e-f97398430257.0" configVersion="e8a57af767b77844b8d111981a8eaeee00000000"/>
-		<Metadata name="Document.РасходныйКассовыйОрдер" id="d7a72695-28a3-4b10-abb9-555e2dff829f" configVersion="8c94eadacd79064980dec2aafe1e3bc000000000">
+		<Metadata name="Document.РасходныйКассовыйОрдер" id="d7a72695-28a3-4b10-abb9-555e2dff829f" configVersion="d8c7b3d46bfd424cb4a04a26b033984c00000000">
 			<Metadata name="Document.РасходныйКассовыйОрдер.Attribute.Касса" id="1fc46645-bb20-451a-92dd-2fb30d451758"/>
 			<Metadata name="Document.РасходныйКассовыйОрдер.Attribute.LM_ФизЛицо" id="32be1bbd-9364-4b79-bc57-9704cb61d500"/>
 			<Metadata name="Document.РасходныйКассовыйОрдер.Attribute.АвторДокумента" id="5329429d-08d8-4ed4-b995-322dc159bebb"/>
