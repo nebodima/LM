@@ -919,6 +919,7 @@
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
 									<Width>1</Width>
+									<TextColor>#999999</TextColor>
 									<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="206"/>
 									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
 								</LabelField>

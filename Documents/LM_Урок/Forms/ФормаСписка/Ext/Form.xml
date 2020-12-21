@@ -367,6 +367,7 @@
 								</v8:item>
 							</Title>
 							<Width>1</Width>
+							<TextColor>#999999</TextColor>
 							<ContextMenu name="НомерКонтекстноеМеню" id="435"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="436"/>
 						</LabelField>
@@ -673,6 +674,7 @@
 									<Width>1</Width>
 									<MaxWidth>2</MaxWidth>
 									<BorderColor>#FFFFFF</BorderColor>
+									<TextColor>#999999</TextColor>
 									<ContextMenu name="РасшифровкаНомерСтрокиКонтекстноеМеню" id="345"/>
 									<ExtendedTooltip name="РасшифровкаНомерСтрокиРасширеннаяПодсказка" id="346"/>
 								</LabelField>

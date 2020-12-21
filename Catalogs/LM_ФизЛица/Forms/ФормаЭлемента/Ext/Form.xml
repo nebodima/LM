@@ -67,12 +67,6 @@
 							<xr:Ref>StdPicture.Document</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>ПКО (оплата)</v8:content>
-							</v8:item>
-						</Title>
 						<ExtendedTooltip name="ФормаДокументПКОСоздатьНаОснованииРасширеннаяПодсказка" id="259"/>
 					</Button>
 					<Button name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОсновании" id="534">
@@ -290,6 +284,7 @@
 													</ToolTip>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
+													<OpenButton>true</OpenButton>
 													<ContextMenu name="СтатусКонтекстноеМеню" id="211"/>
 													<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="212"/>
 												</InputField>
@@ -335,6 +330,7 @@
 													</ToolTip>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
+													<OpenButton>true</OpenButton>
 													<ContextMenu name="ИсточникИнформацииКонтекстноеМеню" id="174"/>
 													<ExtendedTooltip name="ИсточникИнформацииРасширеннаяПодсказка" id="175"/>
 												</InputField>
@@ -628,6 +624,8 @@
 											<v8:content>Группа фото</v8:content>
 										</v8:item>
 									</ToolTip>
+									<Width>30</Width>
+									<HorizontalStretch>false</HorizontalStretch>
 									<Group>Vertical</Group>
 									<VerticalSpacing>Half</VerticalSpacing>
 									<Representation>None</Representation>
@@ -761,7 +759,7 @@
 													<DataPath>ОстатокДенегПоТарифу</DataPath>
 													<HorizontalAlign>Right</HorizontalAlign>
 													<Width>10</Width>
-													<HorizontalStretch>false</HorizontalStretch>
+													<HorizontalStretch>true</HorizontalStretch>
 													<MarkNegatives>true</MarkNegatives>
 													<Hiperlink>true</Hiperlink>
 													<BorderColor>style:FieldSelectionBackColor</BorderColor>
@@ -773,6 +771,7 @@
 												</LabelField>
 												<LabelField name="ОстатокЕдиницПоТарифу" id="541">
 													<DataPath>ОстатокЕдиницПоТарифу</DataPath>
+													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<BorderColor>style:FieldSelectionBackColor</BorderColor>
 													<ContextMenu name="ОстатокЕдиницПоТарифуКонтекстноеМеню" id="542"/>
@@ -784,7 +783,7 @@
 												<LabelField name="ВсегоУроковПоТарифу" id="564">
 													<DataPath>ВсегоУроковПоТарифу</DataPath>
 													<Width>10</Width>
-													<HorizontalStretch>false</HorizontalStretch>
+													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<TextColor>style:FieldSelectionBackColor</TextColor>
 													<ContextMenu name="ВсегоУроковПоТарифуКонтекстноеМеню" id="565"/>
@@ -796,7 +795,7 @@
 												<LabelField name="ВсегоЯвокПоТарифу" id="567">
 													<DataPath>ВсегоЯвокПоТарифу</DataPath>
 													<Width>10</Width>
-													<HorizontalStretch>false</HorizontalStretch>
+													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<TextColor>style:FieldSelectionBackColor</TextColor>
 													<ContextMenu name="ВсегоЯвокПоТарифуКонтекстноеМеню" id="568"/>
@@ -849,13 +848,15 @@
 															<Title formatted="false">
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Задолженность итого по всем предметам:</v8:content>
+																	<v8:content>Остаток денег всего:</v8:content>
 																</v8:item>
 															</Title>
 															<ContextMenu name="Декорация9КонтекстноеМеню" id="557"/>
 															<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="558"/>
 														</LabelDecoration>
 														<LabelDecoration name="ДекорацияЗадолженность" id="561">
+															<HorizontalStretch>true</HorizontalStretch>
+															<HorizontalAlign>Right</HorizontalAlign>
 															<ContextMenu name="ДекорацияЗадолженностьКонтекстноеМеню" id="562"/>
 															<ExtendedTooltip name="ДекорацияЗадолженностьРасширеннаяПодсказка" id="563"/>
 														</LabelDecoration>
@@ -872,7 +873,6 @@
 													<HorizontalLines>false</HorizontalLines>
 													<VerticalLines>false</VerticalLines>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
-													<HorizontalStretch>false</HorizontalStretch>
 													<VerticalStretch>false</VerticalStretch>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
@@ -943,7 +943,6 @@
 															<EditMode>EnterOnInput</EditMode>
 															<CellHyperlink>true</CellHyperlink>
 															<FooterBackColor>#FFFFFF</FooterBackColor>
-															<MarkNegatives>true</MarkNegatives>
 															<Format>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -1029,9 +1028,15 @@
 								<ContextMenu name="ДокументыУправлениеПоискомКонтекстноеМеню" id="386"/>
 								<ExtendedTooltip name="ДокументыУправлениеПоискомРасширеннаяПодсказка" id="387"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДокументыВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="Реквизит1Регистратор" id="391">
 									<DataPath>Документы.Документ</DataPath>
+									<CellHyperlink>true</CellHyperlink>
+									<Hiperlink>true</Hiperlink>
+									<TextColor>style:ДосьеГиперссылкаЦвет</TextColor>
 									<ContextMenu name="Реквизит1РегистраторКонтекстноеМеню" id="392"/>
 									<ExtendedTooltip name="Реквизит1РегистраторРасширеннаяПодсказка" id="393"/>
 								</LabelField>
@@ -1430,6 +1435,36 @@
 				</dcsset:filter>
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЧДЦ=2; ЧФ=+Ч</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДолгиДолг</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Долги.Долг</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:DarkOrange</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>Формат</dcscor:parameter>
 						<dcscor:value xsi:type="v8:LocalStringType">
 							<v8:item>
