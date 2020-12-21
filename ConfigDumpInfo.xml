@@ -5007,7 +5007,7 @@
 		<Metadata name="Document.LM_НачисленияПедагогам.Form.ФормаСписка" id="9d9c3398-594a-4192-bbe6-0772ce9cb850" configVersion="008f528b2683d144bdd439e9c311a24800000000"/>
 		<Metadata name="Document.LM_НачисленияПедагогам.Form.ФормаСписка.Form" id="9d9c3398-594a-4192-bbe6-0772ce9cb850.0" configVersion="fa61989e5998a040bd65b987f0dbb45a00000000"/>
 		<Metadata name="Document.LM_НачисленияПедагогам.ObjectModule" id="1feef16f-2f0c-4660-ae09-789af0a1b0b7.0" configVersion="cae2efb389004c46acac3581fcc7422800000000"/>
-		<Metadata name="Document.LM_ПеремещениеДенег" id="d4f64d5f-0ea8-4d2f-aaf4-80d054a8748b" configVersion="9fb5b6596ac2af4cb3e9a6dda0b79aa800000000">
+		<Metadata name="Document.LM_ПеремещениеДенег" id="d4f64d5f-0ea8-4d2f-aaf4-80d054a8748b" configVersion="4b8899fae656ba4b8e528d34a44f019e00000000">
 			<Metadata name="Document.LM_ПеремещениеДенег.Attribute.Сумма" id="0c9fb7c6-0677-4bad-b284-b74d7bdbf717"/>
 			<Metadata name="Document.LM_ПеремещениеДенег.Attribute.Клиент" id="218e71ca-555b-447d-bf3f-d9a20a0c3d92"/>
 			<Metadata name="Document.LM_ПеремещениеДенег.Attribute.СделатьДвиженияПоВзаиморасчетам" id="2217d4a2-fa5b-432a-aa2f-131d292fde34"/>
@@ -5025,7 +5025,7 @@
 		<Metadata name="Document.LM_ПеремещениеДенег.Form.ФормаДокумента" id="36f03f79-258c-472d-b5b9-6fd0f06af40a" configVersion="ec4d74befcd65740b4e27ff29c0d291700000000"/>
 		<Metadata name="Document.LM_ПеремещениеДенег.Form.ФормаДокумента.Form" id="36f03f79-258c-472d-b5b9-6fd0f06af40a.0" configVersion="cd59cb112d92a84eaff32edcc9951afd00000000"/>
 		<Metadata name="Document.LM_ПеремещениеДенег.ManagerModule" id="d4f64d5f-0ea8-4d2f-aaf4-80d054a8748b.2" configVersion="686af9512f7d3a4cbaf4397770f91d3200000000"/>
-		<Metadata name="Document.LM_ПеремещениеДенег.ObjectModule" id="d4f64d5f-0ea8-4d2f-aaf4-80d054a8748b.0" configVersion="fdc4bad06720c44988537a656eea9fac00000000"/>
+		<Metadata name="Document.LM_ПеремещениеДенег.ObjectModule" id="d4f64d5f-0ea8-4d2f-aaf4-80d054a8748b.0" configVersion="4ef3c73c773cff41b9ecdf0464333f9300000000"/>
 		<Metadata name="Document.LM_РасчетЗарплаты" id="5569ab75-30a3-44c3-98f7-93a48b50c7a4" configVersion="8c26772ef4a23d478ffa23e0a3cf731f00000000">
 			<Metadata name="Document.LM_РасчетЗарплаты.Attribute.РКО" id="020a5537-516b-42cd-95fe-81b2e9efe50e"/>
 			<Metadata name="Document.LM_РасчетЗарплаты.Attribute.Организация" id="03fca650-4956-4ad5-a3c1-8ff5065625ba"/>
