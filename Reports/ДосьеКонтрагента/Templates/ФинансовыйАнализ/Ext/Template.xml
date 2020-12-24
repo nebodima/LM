@@ -3172,6 +3172,17 @@
 				<d3p1:maxValueDetectionMethod>UseValueWithLimitations</d3p1:maxValueDetectionMethod>
 			</d3p1:valuesAxis>
 			<d3p1:pointsAxis/>
+			<d3p1:pointsScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:pointsScale>
 			<d3p1:valuesScale>
 				<d3p1:titleArea>
 					<d3p1:font kind="AutoFont"/>
@@ -3189,9 +3200,34 @@
 					</v8:item>
 				</d3p1:labelFormat>
 			</d3p1:valuesScale>
+			<d3p1:seriesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:seriesScale>
 			<d3p1:legendPlacement>None</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
+			<d3p1:colorPaletteDescription/>
+			<d3p1:referenceBandsColorPaletteDescription/>
+			<d3p1:additionalValuesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:additionalValuesScale>
+			<d3p1:additionalValuesAxis/>
 		</object>
 	</drawing>
 	<drawing>
@@ -3442,6 +3478,17 @@
 				<d3p1:maxValueDetectionMethod>UseValueWithLimitations</d3p1:maxValueDetectionMethod>
 			</d3p1:valuesAxis>
 			<d3p1:pointsAxis/>
+			<d3p1:pointsScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:pointsScale>
 			<d3p1:valuesScale>
 				<d3p1:titleArea>
 					<d3p1:font kind="AutoFont"/>
@@ -3459,9 +3506,34 @@
 					</v8:item>
 				</d3p1:labelFormat>
 			</d3p1:valuesScale>
+			<d3p1:seriesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:seriesScale>
 			<d3p1:legendPlacement>None</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
+			<d3p1:colorPaletteDescription/>
+			<d3p1:referenceBandsColorPaletteDescription/>
+			<d3p1:additionalValuesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:additionalValuesScale>
+			<d3p1:additionalValuesAxis/>
 		</object>
 	</drawing>
 	<drawing>
@@ -3712,6 +3784,17 @@
 				<d3p1:maxValueDetectionMethod>UseValueWithLimitations</d3p1:maxValueDetectionMethod>
 			</d3p1:valuesAxis>
 			<d3p1:pointsAxis/>
+			<d3p1:pointsScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:pointsScale>
 			<d3p1:valuesScale>
 				<d3p1:titleArea>
 					<d3p1:font kind="AutoFont"/>
@@ -3729,9 +3812,34 @@
 					</v8:item>
 				</d3p1:labelFormat>
 			</d3p1:valuesScale>
+			<d3p1:seriesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:seriesScale>
 			<d3p1:legendPlacement>None</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
+			<d3p1:colorPaletteDescription/>
+			<d3p1:referenceBandsColorPaletteDescription/>
+			<d3p1:additionalValuesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:additionalValuesScale>
+			<d3p1:additionalValuesAxis/>
 		</object>
 	</drawing>
 	<drawing>
@@ -3984,6 +4092,17 @@
 				<d3p1:maxValueDetectionMethod>UseValueWithLimitations</d3p1:maxValueDetectionMethod>
 			</d3p1:valuesAxis>
 			<d3p1:pointsAxis/>
+			<d3p1:pointsScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:pointsScale>
 			<d3p1:valuesScale>
 				<d3p1:titleArea>
 					<d3p1:font kind="AutoFont"/>
@@ -4001,9 +4120,34 @@
 					</v8:item>
 				</d3p1:labelFormat>
 			</d3p1:valuesScale>
+			<d3p1:seriesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:seriesScale>
 			<d3p1:legendPlacement>None</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
+			<d3p1:colorPaletteDescription/>
+			<d3p1:referenceBandsColorPaletteDescription/>
+			<d3p1:additionalValuesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:additionalValuesScale>
+			<d3p1:additionalValuesAxis/>
 		</object>
 	</drawing>
 	<drawing>
@@ -4248,6 +4392,17 @@
 				<d3p1:maxValueDetectionMethod>UseValueWithLimitations</d3p1:maxValueDetectionMethod>
 			</d3p1:valuesAxis>
 			<d3p1:pointsAxis/>
+			<d3p1:pointsScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:pointsScale>
 			<d3p1:valuesScale>
 				<d3p1:titleArea>
 					<d3p1:font kind="AutoFont"/>
@@ -4265,9 +4420,34 @@
 					</v8:item>
 				</d3p1:labelFormat>
 			</d3p1:valuesScale>
+			<d3p1:seriesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:seriesScale>
 			<d3p1:legendPlacement>None</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
+			<d3p1:colorPaletteDescription/>
+			<d3p1:referenceBandsColorPaletteDescription/>
+			<d3p1:additionalValuesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:additionalValuesScale>
+			<d3p1:additionalValuesAxis/>
 		</object>
 	</drawing>
 	<drawing>
@@ -4512,6 +4692,17 @@
 				<d3p1:maxValueDetectionMethod>UseValueWithLimitations</d3p1:maxValueDetectionMethod>
 			</d3p1:valuesAxis>
 			<d3p1:pointsAxis/>
+			<d3p1:pointsScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:pointsScale>
 			<d3p1:valuesScale>
 				<d3p1:titleArea>
 					<d3p1:font kind="AutoFont"/>
@@ -4529,9 +4720,34 @@
 					</v8:item>
 				</d3p1:labelFormat>
 			</d3p1:valuesScale>
+			<d3p1:seriesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:seriesScale>
 			<d3p1:legendPlacement>None</d3p1:legendPlacement>
 			<d3p1:plotAreaPlacement>UseCoordinates</d3p1:plotAreaPlacement>
 			<d3p1:titleAreaPlacement>None</d3p1:titleAreaPlacement>
+			<d3p1:colorPaletteDescription/>
+			<d3p1:referenceBandsColorPaletteDescription/>
+			<d3p1:additionalValuesScale>
+				<d3p1:titleArea>
+					<d3p1:font kind="AutoFont"/>
+					<d3p1:textColor>auto</d3p1:textColor>
+					<d3p1:backColor>auto</d3p1:backColor>
+					<d3p1:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</d3p1:border>
+					<d3p1:borderColor>auto</d3p1:borderColor>
+				</d3p1:titleArea>
+			</d3p1:additionalValuesScale>
+			<d3p1:additionalValuesAxis/>
 		</object>
 	</drawing>
 	<templateMode>true</templateMode>

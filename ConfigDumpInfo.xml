@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.11">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9">
 	<ConfigVersions>
 		<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт" id="b41e8eaa-10ae-425a-ba5d-caf619cc1dd5" configVersion="143908f40e9cb84297df9463b180276400000000">
 			<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт.Dimension.Организация" id="154d65f2-580d-4a74-971e-4c91a25a23ff"/>
@@ -264,14 +264,14 @@
 			<Metadata name="Catalog.LM_ФизЛица.Attribute.ОповеститьПоEmail" id="fa0be620-d4ae-47e1-8ce0-610805438b66"/>
 			<Metadata name="Catalog.LM_ФизЛица.Attribute.Заметки" id="fd2e930a-d921-4b84-a32f-030f449cd5ff"/>
 		</Metadata>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаВыбора" id="ebffa00a-89d0-475f-92ad-202143cd2e2d" configVersion="668cdd9a5094774aa44a8d9cfbd8854a00000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаВыбора.Form" id="ebffa00a-89d0-475f-92ad-202143cd2e2d.0" configVersion="f50bb3e5edd7cd4785549d24816f50d300000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаПодбора" id="b46b9a82-0387-4bd3-acf4-0633fdb54c7b" configVersion="5af3199c44890749b9496c638d247afd00000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаПодбора.Form" id="b46b9a82-0387-4bd3-acf4-0633fdb54c7b.0" configVersion="9731eeddd63da54dabaa37ab83b7c69600000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка" id="b5047c57-1a2e-4458-b91a-be994de00e2a" configVersion="7e9717b6d89d7a409d86bd72bb88eb8600000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка.Form" id="b5047c57-1a2e-4458-b91a-be994de00e2a.0" configVersion="8c70d3505d445d458e7dd140ddc940ec00000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента" id="9b7f52e7-b986-499e-af10-c64c4b3374a5" configVersion="aaccc1eb41be334d844245e4585e0a8100000000"/>
-		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента.Form" id="9b7f52e7-b986-499e-af10-c64c4b3374a5.0" configVersion="ceebe2a129754b4690202c678efd8b2500000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаВыбора" id="ebffa00a-89d0-475f-92ad-202143cd2e2d" configVersion="f5414cf90e715d4f877b29f07cb645dd00000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаВыбора.Form" id="ebffa00a-89d0-475f-92ad-202143cd2e2d.0" configVersion="8ba48cda26c38f4786a5ad607495a25b00000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаПодбора" id="b46b9a82-0387-4bd3-acf4-0633fdb54c7b" configVersion="ce44eb56820e8c43bb17195b2251fbb800000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаПодбора.Form" id="b46b9a82-0387-4bd3-acf4-0633fdb54c7b.0" configVersion="4e4e2ea388c5764582de6de2fc12172400000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка" id="b5047c57-1a2e-4458-b91a-be994de00e2a" configVersion="afd13693a5d38d4d9c1ae04761aa805400000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаСписка.Form" id="b5047c57-1a2e-4458-b91a-be994de00e2a.0" configVersion="48a467382234ee4292a04477ad29e64900000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента" id="9b7f52e7-b986-499e-af10-c64c4b3374a5" configVersion="574d2f6c11d67c448326b01a6b9ba4f500000000"/>
+		<Metadata name="Catalog.LM_ФизЛица.Form.ФормаЭлемента.Form" id="9b7f52e7-b986-499e-af10-c64c4b3374a5.0" configVersion="cc26fef44eec5942bfcffc455b3afa6300000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.ManagerModule" id="1e38d363-e78c-4152-b90a-2a6ce229208d.3" configVersion="5c14858103cfe6488a03ffb2b16802f400000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.ObjectModule" id="1e38d363-e78c-4152-b90a-2a6ce229208d.0" configVersion="57da27e60ab1c34ead194c4cd66a72c100000000"/>
 		<Metadata name="Catalog.LM_ФизЛица.Predefined" id="1e38d363-e78c-4152-b90a-2a6ce229208d.1c" configVersion="e5964ec2a409144583be99ad5a8c863b00000000"/>
