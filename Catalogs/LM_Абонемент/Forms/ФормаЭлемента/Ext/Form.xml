@@ -51,6 +51,11 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаОбновить" id="370">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="371"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -95,6 +100,7 @@
 							<v8:content>Группа страница1</v8:content>
 						</v8:item>
 					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ExtendedTooltip name="ГруппаСтраница1РасширеннаяПодсказка" id="162"/>
 					<ChildItems>
 						<UsualGroup name="Группа2" id="157">
@@ -104,6 +110,7 @@
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="158"/>
 							<ChildItems>
 								<UsualGroup name="Группа6" id="233">
+									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="234"/>
@@ -153,23 +160,23 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
-										<UsualGroup name="Группа11" id="319">
-											<HorizontalStretch>false</HorizontalStretch>
-											<Group>AlwaysHorizontal</Group>
+										<UsualGroup name="Группа12" id="321">
+											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="320"/>
+											<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="322"/>
 											<ChildItems>
-												<UsualGroup name="Группа12" id="321">
-													<Group>Vertical</Group>
+												<UsualGroup name="Группа1" id="47">
+													<Group>AlwaysHorizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="322"/>
+													<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
 													<ChildItems>
-														<UsualGroup name="Группа1" id="47">
+														<UsualGroup name="Группа8" id="366">
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
+															<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="367"/>
 															<ChildItems>
 																<InputField name="Период" id="141">
 																	<DataPath>Период</DataPath>
@@ -179,100 +186,118 @@
 																			<v8:content>Период действия</v8:content>
 																		</v8:item>
 																	</Title>
+																	<HorizontalStretch>false</HorizontalStretch>
 																	<ContextMenu name="ПериодКонтекстноеМеню" id="142"/>
 																	<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="143"/>
 																	<Events>
 																		<Event name="OnChange">ПериодПриИзменении</Event>
 																	</Events>
 																</InputField>
-																<Button name="ИзменитьПериод" id="165">
-																	<Type>Hyperlink</Type>
-																	<CommandName>Form.Command.ИзменитьПериод</CommandName>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Изменить</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="ИзменитьПериодРасширеннаяПодсказка" id="166"/>
-																</Button>
+																<UsualGroup name="Группа11" id="368">
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="369"/>
+																	<ChildItems>
+																		<InputField name="КоличествоЗанятий" id="330">
+																			<DataPath>Объект.КоличествоЗанятий</DataPath>
+																			<ClearButton>true</ClearButton>
+																			<SpinButton>true</SpinButton>
+																			<ContextMenu name="КоличествоЗанятийКонтекстноеМеню" id="331"/>
+																			<ExtendedTooltip name="КоличествоЗанятийРасширеннаяПодсказка" id="332"/>
+																			<Events>
+																				<Event name="OnChange">КоличествоЗанятийПриИзменении</Event>
+																			</Events>
+																		</InputField>
+																		<InputField name="КоличествоЧасов" id="363">
+																			<DataPath>Объект.КоличествоЧасов</DataPath>
+																			<ClearButton>true</ClearButton>
+																			<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="364"/>
+																			<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="365"/>
+																			<Events>
+																				<Event name="OnChange">КоличествоЧасовПриИзменении</Event>
+																			</Events>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
-														<InputField name="КоличествоЗанятий" id="330">
-															<DataPath>Объект.КоличествоЗанятий</DataPath>
+														<Button name="ИзменитьПериод" id="165">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ИзменитьПериод</CommandName>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Кол-во уроков</v8:content>
+																	<v8:content>Изменить</v8:content>
 																</v8:item>
 															</Title>
-															<ClearButton>true</ClearButton>
-															<ContextMenu name="КоличествоЗанятийКонтекстноеМеню" id="331"/>
-															<ExtendedTooltip name="КоличествоЗанятийРасширеннаяПодсказка" id="332"/>
-														</InputField>
-														<PictureField name="Фото" id="246">
-															<DataPath>Фото</DataPath>
-															<TitleLocation>None</TitleLocation>
-															<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-															<AutoMaxWidth>false</AutoMaxWidth>
-															<MaxWidth>21</MaxWidth>
-															<MaxHeight>9</MaxHeight>
-															<VerticalStretch>false</VerticalStretch>
-															<Border width="1">
-																<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
-															</Border>
-															<ContextMenu name="ФотоКонтекстноеМеню" id="247"/>
-															<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="248"/>
-														</PictureField>
-														<UsualGroup name="Группа4" id="137">
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="138"/>
-															<ChildItems>
-																<InputField name="ФизЛицо" id="55">
-																	<DataPath>Объект.ФизЛицо</DataPath>
-																	<ReadOnly>true</ReadOnly>
-																	<ContextMenu name="ФизЛицоКонтекстноеМеню" id="56"/>
-																	<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="57"/>
-																	<Events>
-																		<Event name="OnChange">ФизЛицоПриИзменении</Event>
-																	</Events>
-																</InputField>
-																<Button name="ИзменитьФизЛицо" id="139">
-																	<Type>Hyperlink</Type>
-																	<CommandName>Form.Command.ИзменитьФизЛицо</CommandName>
-																	<ExtendedTooltip name="ИзменитьФизЛицоРасширеннаяПодсказка" id="140"/>
-																</Button>
-															</ChildItems>
-														</UsualGroup>
-														<InputField name="ПредметОбучения" id="10">
-															<DataPath>Объект.ПредметОбучения</DataPath>
-															<EditMode>EnterOnInput</EditMode>
-															<InputHint>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Предмет обучения</v8:content>
-																</v8:item>
-															</InputHint>
-															<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
-															<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
-														</InputField>
-														<InputField name="Комментарий" id="25">
-															<DataPath>Объект.Комментарий</DataPath>
-															<TitleLocation>None</TitleLocation>
-															<EditMode>EnterOnInput</EditMode>
-															<MultiLine>true</MultiLine>
-															<InputHint>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Комментарий</v8:content>
-																</v8:item>
-															</InputHint>
-															<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
-															<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
-														</InputField>
+															<ExtendedTooltip name="ИзменитьПериодРасширеннаяПодсказка" id="166"/>
+														</Button>
 													</ChildItems>
 												</UsualGroup>
+												<PictureField name="Фото" id="246">
+													<DataPath>Фото</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>21</MaxWidth>
+													<MaxHeight>9</MaxHeight>
+													<VerticalStretch>false</VerticalStretch>
+													<Border width="1">
+														<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+													</Border>
+													<ContextMenu name="ФотоКонтекстноеМеню" id="247"/>
+													<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="248"/>
+												</PictureField>
+												<UsualGroup name="Группа4" id="137">
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="138"/>
+													<ChildItems>
+														<InputField name="ФизЛицо" id="55">
+															<DataPath>Объект.ФизЛицо</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<ContextMenu name="ФизЛицоКонтекстноеМеню" id="56"/>
+															<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="57"/>
+															<Events>
+																<Event name="OnChange">ФизЛицоПриИзменении</Event>
+															</Events>
+														</InputField>
+														<Button name="ИзменитьФизЛицо" id="139">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ИзменитьФизЛицо</CommandName>
+															<ExtendedTooltip name="ИзменитьФизЛицоРасширеннаяПодсказка" id="140"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ПредметОбучения" id="10">
+													<DataPath>Объект.ПредметОбучения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<HorizontalStretch>false</HorizontalStretch>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предмет обучения</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
+													<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
+												</InputField>
+												<InputField name="Комментарий" id="25">
+													<DataPath>Объект.Комментарий</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<MultiLine>true</MultiLine>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Комментарий</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
+													<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
+												</InputField>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -632,7 +657,9 @@
 										</LabelField>
 										<LabelField name="ОстатокУроковЧасов" id="327">
 											<DataPath>ОстатокУроковЧасов</DataPath>
+											<HorizontalAlign>Right</HorizontalAlign>
 											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="ОстатокУроковЧасовКонтекстноеМеню" id="328"/>
 											<ExtendedTooltip name="ОстатокУроковЧасовРасширеннаяПодсказка" id="329"/>
 										</LabelField>
@@ -1055,16 +1082,15 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Остаток уроков</v8:content>
+					<v8:content>Остаток ур./ч.</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>2</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="ИтогоЯвок" id="11">
@@ -1215,6 +1241,27 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИзменитьЦенуАбонемента</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="Обновить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить (F5)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
