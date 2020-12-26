@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.9">
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.11">
 	<ConfigVersions>
 		<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт" id="b41e8eaa-10ae-425a-ba5d-caf619cc1dd5" configVersion="143908f40e9cb84297df9463b180276400000000">
 			<Metadata name="AccumulationRegister.LM_ДвижениеДисконтныхКарт.Dimension.Организация" id="154d65f2-580d-4a74-971e-4c91a25a23ff"/>
@@ -168,8 +168,8 @@
 		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаВыбора.Form" id="aa06782a-b57b-451d-a377-4bee276ca313.0" configVersion="c166f4531fa14e43886506e89538a2ce00000000"/>
 		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаСписка" id="cdb9b927-aadc-4f8e-8226-f9a945bae4dc" configVersion="655cd6655359b24fb31570ac015d358e00000000"/>
 		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаСписка.Form" id="cdb9b927-aadc-4f8e-8226-f9a945bae4dc.0" configVersion="8aa95fe19388934da88e33853e6b839d00000000"/>
-		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаЭлемента" id="192fe004-0bff-4cf3-b3f1-92caa522e8cd" configVersion="0d38da0a1d61634ab3ae834b203be46200000000"/>
-		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаЭлемента.Form" id="192fe004-0bff-4cf3-b3f1-92caa522e8cd.0" configVersion="eda77ba0c699f44ebfa5fb9b643e73fd00000000"/>
+		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаЭлемента" id="192fe004-0bff-4cf3-b3f1-92caa522e8cd" configVersion="5d2bb4fd423ef046aca7f6f7d7fbc88000000000"/>
+		<Metadata name="Catalog.LM_ДисконтныеКарты.Form.ФормаЭлемента.Form" id="192fe004-0bff-4cf3-b3f1-92caa522e8cd.0" configVersion="4d13c8cb1e8142409b863fd033057cdc00000000"/>
 		<Metadata name="Catalog.LM_ДисконтныеКарты.ObjectModule" id="5950e1a1-adba-4b92-8f18-f47466db5247.0" configVersion="429a9d4859fe834c88c8b3bed10f43ae00000000"/>
 		<Metadata name="Catalog.LM_ИсточникиИнформации" id="6a90a0d1-c595-4b4e-9b3f-6171c174cdf7" configVersion="58aae25fe7824345bd93e49ff88dbf7400000000"/>
 		<Metadata name="Catalog.LM_Подразделения" id="91d973f4-f84a-4e94-b095-f0c689b849fe" configVersion="847f596cae2cae43936a4a1c9ade26f800000000"/>
