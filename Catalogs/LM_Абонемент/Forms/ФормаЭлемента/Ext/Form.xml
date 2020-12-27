@@ -103,6 +103,31 @@
 					<HorizontalStretch>false</HorizontalStretch>
 					<ExtendedTooltip name="ГруппаСтраница1РасширеннаяПодсказка" id="162"/>
 					<ChildItems>
+						<UsualGroup name="Группа14" id="372">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="373"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияСтатус" id="67">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>1</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<BackColor>#CCFFCC</BackColor>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+									</Border>
+									<ContextMenu name="ДекорацияСтатусКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ДекорацияСтатусРасширеннаяПодсказка" id="69"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="Группа2" id="157">
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
@@ -115,24 +140,6 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="234"/>
 									<ChildItems>
-										<LabelDecoration name="ДекорацияСтатус" id="67">
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<Height>1</Height>
-											<HorizontalStretch>true</HorizontalStretch>
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Статус</v8:content>
-												</v8:item>
-											</Title>
-											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>#CCFFCC</BackColor>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ДекорацияСтатусКонтекстноеМеню" id="68"/>
-											<ExtendedTooltip name="ДекорацияСтатусРасширеннаяПодсказка" id="69"/>
-										</LabelDecoration>
 										<UsualGroup name="Группа10" id="302">
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
@@ -174,6 +181,7 @@
 													<ChildItems>
 														<UsualGroup name="Группа8" id="366">
 															<Group>Vertical</Group>
+															<VerticalSpacing>Half</VerticalSpacing>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="367"/>
@@ -304,6 +312,7 @@
 								</UsualGroup>
 								<UsualGroup name="Группа5" id="225">
 									<Group>Vertical</Group>
+									<VerticalSpacing>Half</VerticalSpacing>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="226"/>
@@ -315,7 +324,7 @@
 											<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="324"/>
 											<ChildItems>
 												<Button name="Активировать" id="51">
-													<Type>Hyperlink</Type>
+													<Type>UsualButton</Type>
 													<CommandName>Form.Command.Активировать</CommandName>
 													<ExtendedTooltip name="АктивироватьРасширеннаяПодсказка" id="52"/>
 												</Button>
@@ -347,7 +356,7 @@
 											<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="326"/>
 											<ChildItems>
 												<Button name="Приостановить" id="53">
-													<Type>Hyperlink</Type>
+													<Type>UsualButton</Type>
 													<CommandName>Form.Command.Приостановить</CommandName>
 													<ExtendedTooltip name="ПриостановитьРасширеннаяПодсказка" id="54"/>
 												</Button>
@@ -1162,7 +1171,12 @@
 					<v8:content>Активировать</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>Активировать</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 		<Command name="Приостановить" id="2">
 			<Title>
