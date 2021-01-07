@@ -216,23 +216,37 @@
 		</InputField>
 		<InputField name="НазначениеПлатежа" id="16">
 			<DataPath>Объект.НазначениеПлатежа</DataPath>
+			<TitleLocation>None</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
 			<Height>3</Height>
 			<VerticalStretch>false</VerticalStretch>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение платежа</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="18"/>
 		</InputField>
 		<UsualGroup name="Группа4" id="185">
-			<Group>AlwaysHorizontal</Group>
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="186"/>
 			<ChildItems>
+				<LabelField name="АвторДокумента" id="170">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="171"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="172"/>
+				</LabelField>
 				<InputField name="Комментарий" id="22">
 					<DataPath>Объект.Комментарий</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -242,12 +256,6 @@
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="24"/>
 				</InputField>
-				<LabelField name="АвторДокумента" id="170">
-					<DataPath>Объект.АвторДокумента</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="171"/>
-					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="172"/>
-				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

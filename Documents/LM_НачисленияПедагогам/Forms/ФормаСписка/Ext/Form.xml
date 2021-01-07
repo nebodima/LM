@@ -115,6 +115,9 @@
 				</LabelField>
 				<LabelField name="Организация" id="25">
 					<DataPath>Список.Организация</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="27"/>
 				</LabelField>

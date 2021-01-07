@@ -1199,7 +1199,6 @@
 			<EventSubscription>ПроверитьДатуЗапретаИзмененияПередЗаписьюДокумента</EventSubscription>
 			<EventSubscription>ПроверитьДатуЗапретаИзмененияПередУдалением</EventSubscription>
 			<ScheduledJob>LM_ПроверкаЗадолженности</ScheduledJob>
-			<ScheduledJob>LM_ПроверкаАбонементов</ScheduledJob>
 			<ScheduledJob>ЗагрузкаКлассификатораБанковРФССайтаРБК</ScheduledJob>
 			<ScheduledJob>ЗагрузкаКурсовВалют</ScheduledJob>
 			<ScheduledJob>ЗаполнениеДанныхДляОграниченияДоступа</ScheduledJob>

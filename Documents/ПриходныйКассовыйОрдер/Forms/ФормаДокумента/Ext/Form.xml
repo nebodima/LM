@@ -330,11 +330,18 @@
 			<ChildItems>
 				<InputField name="НазначениеПлатежа" id="13">
 					<DataPath>Объект.НазначениеПлатежа</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<Height>3</Height>
 					<VerticalStretch>false</VerticalStretch>
 					<ClearButton>true</ClearButton>
 					<SpinButton>true</SpinButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение платежа</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="15"/>
 				</InputField>
@@ -499,15 +506,24 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="270">
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="271"/>
 			<ChildItems>
+				<LabelField name="АвторДокумента" id="16">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
 				<InputField name="Комментарий" id="19">
 					<DataPath>Объект.Комментарий</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -517,19 +533,6 @@
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
 				</InputField>
-				<LabelField name="АвторДокумента" id="16">
-					<DataPath>Объект.АвторДокумента</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Автор</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
-				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

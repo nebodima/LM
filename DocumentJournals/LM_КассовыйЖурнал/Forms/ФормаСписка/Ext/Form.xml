@@ -140,6 +140,9 @@
 						</LabelField>
 						<LabelField name="Организация" id="68">
 							<DataPath>Список.Организация</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="69"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="70"/>
 						</LabelField>

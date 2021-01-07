@@ -158,7 +158,7 @@
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>DontUse</FullTextSearch>
-			<EnableTotalsSliceFirst>false</EnableTotalsSliceFirst>
+			<EnableTotalsSliceFirst>true</EnableTotalsSliceFirst>
 			<EnableTotalsSliceLast>true</EnableTotalsSliceLast>
 			<RecordPresentation>
 				<v8:item>
