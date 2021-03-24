@@ -208,10 +208,46 @@
 										</InputField>
 										<InputField name="ТЗСписанияКоличествоЧасов" id="70">
 											<DataPath>Объект.ТЗСписания.КоличествоЧасов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кол-во ч.</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<FooterDataPath>Объект.ТЗСписания.TotalКоличествоЧасов</FooterDataPath>
+											<Width>1</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
 											<ContextMenu name="ТЗСписанияКоличествоЧасовКонтекстноеМеню" id="71"/>
 											<ExtendedTooltip name="ТЗСписанияКоличествоЧасовРасширеннаяПодсказка" id="72"/>
+										</InputField>
+										<InputField name="ТЗСписанияКоличествоУроков" id="234">
+											<DataPath>Объект.ТЗСписания.КоличествоУроков</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кол-во ур.</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ТЗСписанияКоличествоУроковКонтекстноеМеню" id="235"/>
+											<ExtendedTooltip name="ТЗСписанияКоличествоУроковРасширеннаяПодсказка" id="236"/>
+										</InputField>
+										<InputField name="ТЗСписанияКоличествоЯвок" id="237">
+											<DataPath>Объект.ТЗСписания.КоличествоЯвок</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Кол-во явок</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ТЗСписанияКоличествоЯвокКонтекстноеМеню" id="238"/>
+											<ExtendedTooltip name="ТЗСписанияКоличествоЯвокРасширеннаяПодсказка" id="239"/>
 										</InputField>
 										<InputField name="ТЗСписанияСумма" id="73">
 											<DataPath>Объект.ТЗСписания.Сумма</DataPath>
