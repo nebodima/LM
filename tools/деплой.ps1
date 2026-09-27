@@ -5,17 +5,22 @@
 # Бюджеты — docs/план_перевода_в_расширение.md, «Бюджеты времени проверок». Превышение — ПРЕДУПРЕЖДЕНИЕ.
 param(
 	[string[]]$Базы = @('УНФ'),
+	[string]$СвояБаза = '',      # путь к своей файловой копии УНФ (вход Администратор) — для параллельной работы
 	[switch]$БезСборки
 )
 $ErrorActionPreference = 'Stop'
 $Корень = Split-Path $PSScriptRoot -Parent
 $Exe = 'C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe'
-$Логи = 'C:\1c_bases\логи'
+$Логи = if ($СвояБаза) { Join-Path $СвояБаза 'логи' } else { 'C:\1c_bases\логи' }
 New-Item -ItemType Directory -Force $Логи | Out-Null
 $Стенд = @{
 	'УНФ' = @{ Путь = 'C:\1c_bases\UZ_UNF'; Пользователь = 'Администратор' }
 	'БП'  = @{ Путь = 'C:\1c_bases\UZ_BP';  Пользователь = '1' }
 	'УТ'  = @{ Путь = 'C:\1c_bases\UZ_UT';  Пользователь = 'Admin' }
+}
+if ($СвояБаза) {
+	$Стенд['СВОЯ'] = @{ Путь = $СвояБаза; Пользователь = 'Администратор' }
+	$Базы = @('СВОЯ')
 }
 $Итог = @()
 $Ошибок = 0
@@ -49,9 +54,11 @@ function Конфигуратор([hashtable]$База, [string]$Лог, [string
 	return $Процесс.ExitCode
 }
 
-if (-not $БезСборки) {
+# src_ext зафиксирован (исходник): сборка конвертером только до фиксации
+if (-not $БезСборки -and -not (Test-Path "$Корень\src_ext\.ЗАФИКСИРОВАНО")) {
 	[void](Шаг 'Сборка src_ext' 15 { python "$Корень\tools\собрать_src_ext.py" | Out-Null; $LASTEXITCODE })
 }
+[void](Шаг 'Проверка src_ext' 5 { python "$Корень\tools\собрать_src_ext.py" --проверка | Out-Null; $LASTEXITCODE })
 [void](Шаг 'Офлайн-аудиты' 5 { python "$Корень\tools\аудиты\все_аудиты.py" --каталог "$Корень\src_ext" | Out-Null; $LASTEXITCODE })
 
 foreach ($Имя in $Базы) {

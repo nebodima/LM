@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "аудиты"))
 import общее  # noqa: E402
 
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ИСХОДНИКИ = os.path.join(КОРЕНЬ, "src_ext")
+ИСХОДНИКИ = os.path.join(КОРЕНЬ, "src_ext")  # корень берётся от расположения скрипта — в рабочей копии git своя src_ext
 БАЗЫ = {
     "УНФ": r'File="C:\1c_bases\UZ_UNF";Usr="Администратор";',
     "БП": r'File="C:\1c_bases\UZ_BP";Usr="1";',
@@ -91,7 +91,10 @@ def проверить_базу(имя, тексты):
 
 def main():
     общее.настроить_вывод()
-    базы = [б for б in sys.argv[1:] if б in БАЗЫ] or list(БАЗЫ)
+    for арг in sys.argv[1:]:
+        if арг.startswith("--база="):          # своя копия: --база=C:\1c_bases\UZ_UNF_A (вход Администратор)
+            БАЗЫ["СВОЯ"] = 'File="%s";Usr="Администратор";' % арг.split("=", 1)[1]
+    базы = ["СВОЯ"] if "СВОЯ" in БАЗЫ else ([б for б in sys.argv[1:] if б in БАЗЫ] or list(БАЗЫ))
     тексты = тексты_запросов()
     print("Текстов запросов в src_ext: %d" % len(тексты))
     плохо = 0
