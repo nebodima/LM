@@ -68,11 +68,19 @@
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<CommonModule>УЗ_Общий</CommonModule>
 			<CommonModule>УЗ_ОбщийКлиентСервер</CommonModule>
+			<CommonModule>УЗ_ОповещенияГлобальный</CommonModule>
+			<CommonModule>УЗ_ОповещенияКлиент</CommonModule>
+			<CommonModule>УЗ_ОповещенияКлиентПовтИсп</CommonModule>
+			<CommonModule>УЗ_Печать</CommonModule>
+			<CommonModule>УЗ_ПечатьКлиент</CommonModule>
 			<CommonModule>УЗ_Почта</CommonModule>
 			<CommonModule>УЗ_Сервер</CommonModule>
 			<CommonModule>УЗ_Среда</CommonModule>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
+			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
+			<CommonForm>УЗ_НастройкиПочты</CommonForm>
+			<CommonForm>УЗ_ПечатнаяФорма</CommonForm>
 			<Catalog>Организации</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>УЗ_Абонемент</Catalog>

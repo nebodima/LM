@@ -527,7 +527,12 @@
 			<Command uuid="56b034f2-0cdd-59a6-a12c-f40917f596eb">
 				<Properties>
 					<Name>Печать</Name>
-					<Synonym/>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисление бонусов</v8:content>
+						</v8:item>
+					</Synonym>
 					<Comment/>
 					<Group>FormCommandBarImportant</Group>
 					<CommandParameterType>
