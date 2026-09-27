@@ -53,9 +53,6 @@
 					<Edit>true</Edit>
 					<ContextMenu name="ТабДокКонтекстноеМеню" id="16"/>
 					<ExtendedTooltip name="ТабДокРасширеннаяПодсказка" id="17"/>
-					<Events>
-						<Event name="DetailProcessing">ТабДокОбработкаРасшифровки</Event>
-					</Events>
 				</SpreadSheetDocumentField>
 			</ChildItems>
 		</UsualGroup>

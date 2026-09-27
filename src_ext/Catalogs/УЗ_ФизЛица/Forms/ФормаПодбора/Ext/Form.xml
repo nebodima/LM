@@ -174,9 +174,6 @@
 						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="40"/>
 						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="41"/>
 					</SearchControlAddition>
-					<Events>
-						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
-					</Events>
 					<ChildItems>
 						<LabelField name="Ссылка" id="42">
 							<DataPath>Список.Ссылка</DataPath>

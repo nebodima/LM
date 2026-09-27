@@ -91,9 +91,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
@@ -326,38 +324,6 @@
 													<ContextMenu name="СтатусКонтекстноеМеню" id="211"/>
 													<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="212"/>
 												</InputField>
-												<InputField name="СтавкаПедагога" id="367">
-													<DataPath>Объект.СтавкаПедагога</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="368"/>
-													<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="369"/>
-												</InputField>
-												<InputField name="Скидка" id="526">
-													<DataPath>Объект.Скидка</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<ContextMenu name="СкидкаКонтекстноеМеню" id="527"/>
-													<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="528"/>
-												</InputField>
-												<InputField name="Родитель" id="186">
-													<DataPath>Объект.Родитель1</DataPath>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Родитель или ответственное лицо ученика</v8:content>
-														</v8:item>
-													</ToolTip>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-													<ContextMenu name="РодительКонтекстноеМеню" id="187"/>
-													<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="188"/>
-													<Events>
-														<Event name="Creating">РодительСоздание</Event>
-													</Events>
-												</InputField>
 												<InputField name="ИсточникИнформации" id="173">
 													<DataPath>Объект.ИсточникИнформации</DataPath>
 													<ToolTip>
@@ -390,6 +356,9 @@
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КорневаяПапкаКонтекстноеМеню" id="214"/>
 													<ExtendedTooltip name="КорневаяПапкаРасширеннаяПодсказка" id="215"/>
+													<Events>
+														<Event name="OnChange">КорневаяПапкаПриИзменении</Event>
+													</Events>
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
@@ -625,6 +594,46 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРоль" id="570">
+											<VerticalSpacing>Half</VerticalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРольРасширеннаяПодсказка" id="571"/>
+											<ChildItems>
+												<InputField name="СтавкаПедагога" id="367">
+													<DataPath>Объект.СтавкаПедагога</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="368"/>
+													<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="369"/>
+												</InputField>
+												<InputField name="Скидка" id="526">
+													<DataPath>Объект.Скидка</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="СкидкаКонтекстноеМеню" id="527"/>
+													<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="528"/>
+												</InputField>
+												<InputField name="Родитель" id="186">
+													<DataPath>Объект.Родитель1</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Родитель или ответственное лицо ученика</v8:content>
+														</v8:item>
+													</ToolTip>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+													<ContextMenu name="РодительКонтекстноеМеню" id="187"/>
+													<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="188"/>
+													<Events>
+														<Event name="Creating">РодительСоздание</Event>
+													</Events>
+												</InputField>
 											</ChildItems>
 										</UsualGroup>
 										<LabelDecoration name="Декорация8" id="547">
@@ -1574,4 +1583,9 @@
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="Ключ2">
+			<Type/>
+		</Parameter>
+	</Parameters>
 </Form>

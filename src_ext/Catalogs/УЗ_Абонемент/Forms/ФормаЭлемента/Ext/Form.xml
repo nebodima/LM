@@ -55,6 +55,7 @@
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="Ссылка" id="1">
@@ -146,7 +147,7 @@
 													<InputHint>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Наименование</v8:content>
+															<v8:content>Наименование (составится само)</v8:content>
 														</v8:item>
 													</InputHint>
 													<ContextMenu name="НаименованиеКонтекстноеМеню" id="300"/>
@@ -198,6 +199,16 @@
 											<HorizontalStretch>false</HorizontalStretch>
 											<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
 											<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
+										</InputField>
+										<InputField name="Тариф" id="374">
+											<DataPath>Объект.Тариф</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТарифКонтекстноеМеню" id="375"/>
+											<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="376"/>
+											<Events>
+												<Event name="OnChange">ТарифПриИзменении</Event>
+											</Events>
 										</InputField>
 										<UsualGroup name="Группа12" id="321">
 											<Group>Vertical</Group>
@@ -866,6 +877,15 @@
 		</Pages>
 	</ChildItems>
 	<Attributes>
+		<Attribute name="ПоследнееАвтоНаименование" id="30">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<Attribute name="Объект" id="1">
 			<Type>
 				<v8:Type>cfg:CatalogObject.УЗ_Абонемент</v8:Type>

@@ -43,7 +43,7 @@
 			<UseStandardCommands>true</UseStandardCommands>
 			<EditType>InDialog</EditType>
 			<DefaultRecordForm>InformationRegister.УЗ_Настройки.Form.ФормаЗаписи</DefaultRecordForm>
-			<DefaultListForm>InformationRegister.УЗ_Настройки.Form.ФормаСписка</DefaultListForm>
+			<DefaultListForm>InformationRegister.УЗ_Настройки.Form.ФормаЗаписи</DefaultListForm>
 			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
 			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
@@ -395,7 +395,6 @@
 				</Properties>
 			</Resource>
 			<Form>ФормаЗаписи</Form>
-			<Form>ФормаСписка</Form>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>
