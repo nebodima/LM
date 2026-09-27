@@ -26,12 +26,28 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="36"/>
 			</Button>
-			<Button name="ФормаДокументСписаниеОстатковПечать" id="208">
-				<Type>CommandBarButton</Type>
-				<CommandName>Document.УЗ_НачислениеБонусов.Command.Печать</CommandName>
-				<DataPath>Объект.Ref</DataPath>
-				<ExtendedTooltip name="ФормаДокументСписаниеОстатковПечатьРасширеннаяПодсказка" id="209"/>
-			</Button>
+			<Popup name="ПодменюПечать" id="216">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="217"/>
+				<ChildItems>
+					<Button name="ФормаДокументСписаниеОстатковПечать" id="208">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.УЗ_НачислениеБонусов.Command.Печать</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаДокументСписаниеОстатковПечатьРасширеннаяПодсказка" id="209"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

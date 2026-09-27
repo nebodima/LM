@@ -28,6 +28,28 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="65"/>
 			</Button>
+			<Popup name="ПодменюПечать" id="189">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="190"/>
+				<ChildItems>
+					<Button name="ФормаПечатьРКО" id="191">
+						<Type>CommandBarButton</Type>
+						<CommandName>Document.УЗ_РасходДенег.Command.ПечатьРКО</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ФормаПечатьРКОРасширеннаяПодсказка" id="192"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

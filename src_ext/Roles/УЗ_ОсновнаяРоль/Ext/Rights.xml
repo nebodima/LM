@@ -76,6 +76,20 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonCommand.УЗ_Напомнить</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.УЗ_ПечатнаяФорма</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>CommonCommand.УЗ_ПанельОтчетов</name>
 		<right>
 			<name>View</name>
@@ -1867,29 +1881,6 @@
 	</object>
 	<object>
 		<name>InformationRegister.УЗ_Настройки</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>TotalsControl</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УЗ_НастройкиПочты</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>

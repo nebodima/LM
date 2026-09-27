@@ -25,6 +25,15 @@ import win32com.client
 провалов = 0
 
 
+def _пользователь():
+    """--пользователь=1 (БП), Admin (УТ); по умолчанию Администратор (УНФ)."""
+    import sys as _sys
+    for арг in _sys.argv[1:]:
+        if арг.startswith("--пользователь="):
+            return арг.split("=", 1)[1]
+    return "Администратор"
+
+
 def проверка(имя, условие, подробности=""):
     global провалов
     print("[%s] %s%s" % ("PASS" if условие else "FAIL", имя, ("  — " + подробности) if подробности else ""))
@@ -61,7 +70,7 @@ def main():
         if арг.startswith("--база="):
             база = арг.split("=", 1)[1]
     начало = time.time()
-    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="Администратор";' % база)
+    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="%s";' % (база, _пользователь()))
     подключение = time.time() - начало
     начало = time.time()
 

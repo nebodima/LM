@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Configuration uuid="6bc921ca-adbd-5bd1-baed-26b173fb270b">
 		<InternalInfo>
@@ -71,15 +71,23 @@
 			<CommonModule>УЗ_Общий</CommonModule>
 			<CommonModule>УЗ_ОбновлениеДанных</CommonModule>
 			<CommonModule>УЗ_ОбщийКлиентСервер</CommonModule>
+			<CommonModule>УЗ_ОповещенияГлобальный</CommonModule>
+			<CommonModule>УЗ_ОповещенияКлиент</CommonModule>
+			<CommonModule>УЗ_ОповещенияКлиентПовтИсп</CommonModule>
+			<CommonModule>УЗ_Печать</CommonModule>
+			<CommonModule>УЗ_ПечатьКлиент</CommonModule>
 			<CommonModule>УЗ_Почта</CommonModule>
 			<CommonModule>УЗ_Сервер</CommonModule>
 			<CommonModule>УЗ_Среда</CommonModule>
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
+			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
 			<CommonForm>УЗ_СписокОтчетов</CommonForm>
 			<CommonForm>УЗ_ФормаОтчета</CommonForm>
+			<CommonForm>УЗ_НастройкиПочты</CommonForm>
+			<CommonForm>УЗ_ПечатнаяФорма</CommonForm>
 			<Catalog>Организации</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>УЗ_Абонемент</Catalog>

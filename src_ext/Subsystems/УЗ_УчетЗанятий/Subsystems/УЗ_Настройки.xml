@@ -19,6 +19,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ОбработкаФото</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ДатыЗапрета</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Настройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УЗ_НастройкиПочты</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

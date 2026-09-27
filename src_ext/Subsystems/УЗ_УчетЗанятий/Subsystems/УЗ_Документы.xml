@@ -19,6 +19,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УЗ_ПанельОтчетов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ИзменениеУроков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_Календарь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Оповещения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ПанельУченика</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов</xr:Item>
