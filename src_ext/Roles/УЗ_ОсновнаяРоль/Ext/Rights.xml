@@ -83,6 +83,20 @@
 		</right>
 	</object>
 	<object>
+		<name>CommonForm.УЗ_СписокОтчетов</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>CommonForm.УЗ_ФормаОтчета</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.УЗ_Абонемент</name>
 		<right>
 			<name>Read</name>

@@ -2460,7 +2460,7 @@ def самотест(снимок=None):
         ("команда по чужому uuid на форме", первый("</Form>", "/Forms/"), "</Form>",
          "<CommandInterface><CommandBar><Item><Command>0:5ea994d5-8535-4b30-b5fb-5aa4c82b8862</Command>"
          "</Item></CommandBar></CommandInterface></Form>", "команда по uuid"),
-        ("общая форма БСП у отчёта", os.path.join("Reports", "УЗ_Расходы.xml"), "<DefaultForm/>",
+        ("общая форма БСП у отчёта", os.path.join("Reports", "УЗ_Расходы.xml"), "<DefaultForm>CommonForm.УЗ_ФормаОтчета</DefaultForm>",
          "<DefaultForm>CommonForm.ФормаОтчета</DefaultForm>", "CommonForm.ФормаОтчета"),
         ("вызов общего модуля БСП", модуль, None,
          "\nПроцедура Проба()\n\tОбщегоНазначения.СообщитьПользователю(\"Проба\");\nКонецПроцедуры\n", "общего модуля"),

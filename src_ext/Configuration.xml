@@ -73,6 +73,8 @@
 			<CommonModule>УЗ_Среда</CommonModule>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
+			<CommonForm>УЗ_СписокОтчетов</CommonForm>
+			<CommonForm>УЗ_ФормаОтчета</CommonForm>
 			<Catalog>Организации</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>УЗ_Абонемент</Catalog>
