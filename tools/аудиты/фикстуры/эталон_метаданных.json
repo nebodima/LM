@@ -1,0 +1,29 @@
+{
+ "миграции": {},
+ "описание": "Состав метаданных выпущенной версии УЗ_ext. Меняется только ключом --принять при выпуске. «миграции»: ключ «Раздел.Объект» или «Раздел.Объект|Вид:Поле» → где перенос данных.",
+ "состав": {
+  "AccumulationRegisters.УЗ_Касса": {
+   "Dimension:Касса": "cfg:CatalogRef.УЗ_Кассы",
+   "Resource:Сумма": "xs:decimal"
+  },
+  "Catalogs.УЗ_Кассы": {
+   "Attribute:Комментарий": "xs:string(0)",
+   "Attribute:Организация": "cfg:CatalogRef.Организации",
+   "Attribute:Ответственный": "cfg:CatalogRef.Пользователи"
+  },
+  "CommonModules.УЗ_Среда": {},
+  "Documents.УЗ_ПриходДенег": {
+   "Attribute:Автор": "cfg:CatalogRef.Пользователи",
+   "Attribute:ВидОперации": "cfg:EnumRef.УЗ_ВидыОпераций",
+   "Attribute:Касса": "cfg:CatalogRef.УЗ_Кассы",
+   "Attribute:Сумма": "xs:decimal",
+   "TabularSection:Расшифровка": "",
+   "TabularSection:Расшифровка.Назначение": "xs:string",
+   "TabularSection:Расшифровка.СуммаСтроки": "xs:decimal"
+  },
+  "Enums.УЗ_ВидыОпераций": {
+   "EnumValue:Приход": "",
+   "EnumValue:Расход": ""
+  }
+ }
+}

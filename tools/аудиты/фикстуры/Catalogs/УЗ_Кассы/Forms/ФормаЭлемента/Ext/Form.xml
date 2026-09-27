@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПересчитать" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Пересчитать</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.УЗ_Значок</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ФормаПересчитатьРасширеннаяПодсказка" id="31"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="3">
+					<Picture>
+						<xr:Ref>CommonPicture.УЗ_Значок</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаШапка" id="5">
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="6"/>
+							<ChildItems>
+								<InputField name="Организация" id="7">
+									<DataPath>Объект.Организация</DataPath>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">ОрганизацияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Ответственный" id="10">
+									<DataPath>Объект.Ответственный</DataPath>
+									<ContextMenu name="ОтветственныйКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="12"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Журнал" id="13">
+							<DataPath>Журнал</DataPath>
+							<HeightInTableRows>7</HeightInTableRows>
+							<ContextMenu name="ЖурналКонтекстноеМеню" id="14"/>
+							<AutoCommandBar name="ЖурналКоманднаяПанель" id="15"/>
+							<ExtendedTooltip name="ЖурналРасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<InputField name="ЖурналСумма" id="17">
+									<DataPath>Журнал.Сумма</DataPath>
+									<ContextMenu name="ЖурналСуммаКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ЖурналСуммаРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<CheckBoxField name="ЖурналОтмечено" id="20">
+									<DataPath>Журнал.Отмечено</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отмечено</v8:content>
+										</v8:item>
+									</Title>
+									<Width>12</Width>
+									<ContextMenu name="ЖурналОтмеченоКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ЖурналОтмеченоРасширеннаяПодсказка" id="22"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+						<InputField name="Комментарий" id="23">
+							<DataPath>Объект.Комментарий</DataPath>
+							<MultiLine>true</MultiLine>
+							<Height>2</Height>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="25"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаСправка" id="26">
+					<Picture>
+						<xr:Ref>CommonPicture.УЗ_Значок</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СтраницаСправкаРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<LabelDecoration name="ТекстСправки" id="28">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Касса принимает оплату занятий</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТекстСправкиКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТекстСправкиРасширеннаяПодсказка" id="32"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УЗ_Кассы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Журнал" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Сумма" id="1">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отмечено" id="2">
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Пересчитать" id="1">
+			<Action>Пересчитать</Action>
+		</Command>
+	</Commands>
+</Form>

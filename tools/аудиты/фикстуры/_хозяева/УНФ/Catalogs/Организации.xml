@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" version="2.20">
+	<Catalog uuid="0c9e0b00-0000-4000-8000-000000000001">
+		<Properties>
+			<Name>Организации</Name>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="0c9e0b00-0000-4000-8000-000000000100">
+				<Properties>
+					<Name>ИНН</Name>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0c9e0b00-0000-4000-8000-000000000101">
+				<Properties>
+					<Name>КПП</Name>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

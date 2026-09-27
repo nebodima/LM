@@ -454,8 +454,33 @@ class Исходники:
                             yield os.path.join(к, ф)
 
     def модули(self):
-        for путь in self.файлы(".bsl"):
-            yield Модуль(путь, читать(путь))
+        """Модули BSL — разобраны один раз на прогон: их читают почти все аудиты."""
+        if getattr(self, "_модули", None) is None:
+            self._модули = [Модуль(путь, читать(путь)) for путь in self.файлы(".bsl")]
+        return list(self._модули)
+
+    def модуль(self, путь):
+        """Разобранный модуль по пути (из общего кэша) или None."""
+        if getattr(self, "_модули_по_пути", None) is None:
+            self._модули_по_пути = {os.path.normcase(м.путь): м for м in self.модули()}
+        return self._модули_по_пути.get(os.path.normcase(путь))
+
+    def формы(self):
+        """Управляемые формы (Form.xml) — разобраны один раз на прогон."""
+        if getattr(self, "_формы", None) is None:
+            self._формы = [Форма(self, путь) for путь in self.файлы(".xml")
+                           if os.path.basename(путь) == "Form.xml"]
+        return list(self._формы)
+
+    def xml(self, путь):
+        """Разобранный XML-файл исходников (кэш) или None, если XML битый."""
+        кэш = self.__dict__.setdefault("_xml", {})
+        if путь not in кэш:
+            try:
+                кэш[путь] = ET.fromstring(читать(путь).encode("utf-8"))
+            except ET.ParseError:   # честно: битый XML — None вызывающему; сам дефект называют повторы_тегов, форм_id
+                кэш[путь] = None
+        return кэш[путь]
 
     def объект_файла(self, путь):
         """Объект метаданных, которому принадлежит файл (или None)."""
@@ -483,6 +508,101 @@ def реквизиты_формы(путь_модуля):
     return {ключ(и) for и in re.findall(r'<Attribute name="([^"]+)"', т[н:])}
 
 
+# ─────────────────────────── управляемая форма ───────────────────────────
+
+ЛФ = "{http://v8.1c.ru/8.3/xcf/logform}"      # пространство имён разметки формы
+ЯДРО = "{http://v8.1c.ru/8.1/data/core}"
+
+
+def местное(тег):
+    return тег.rsplit("}", 1)[-1] if isinstance(тег, str) else ""
+
+
+def свойство(узел, имя, умолчание=None):
+    """Текст дочернего тега разметки формы (<Width>, <DataPath>…) или умолчание."""
+    у = узел.find(ЛФ + имя)
+    return у.text if у is not None and у.text is not None else умолчание
+
+
+def заголовок(узел, тег="Title"):
+    """Русский текст многоязычного свойства элемента (Title, ToolTip…)."""
+    т = узел.find(ЛФ + тег)
+    if т is None:
+        return ""
+    for пункт in т.findall(ЯДРО + "item"):
+        язык = пункт.find(ЯДРО + "lang")
+        if язык is None or (язык.text or "").strip() == "ru":
+            с = пункт.find(ЯДРО + "content")
+            return (с.text or "").strip() if с is not None else ""
+    return ""
+
+
+class Форма:
+    """Form.xml + модуль формы. имя — «Documents/X/Forms/Y» или «CommonForms/Y»."""
+
+    def __init__(self, исх, путь):
+        self.исх = исх
+        self.путь = путь
+        self.отн = исх.отн(путь)
+        self.имя = self.отн[:-len("/Ext/Form.xml")] if self.отн.endswith("/Ext/Form.xml") else self.отн
+        self.текст = читать(путь)
+        self._переводы = [м.start() for м in re.finditer("\n", self.текст)]
+        модуль = os.path.join(os.path.dirname(путь), "Form", "Module.bsl")
+        self.путь_модуля = модуль if os.path.isfile(модуль) else None
+        self.ошибка_xml = None
+        try:
+            self.корень = ET.fromstring(self.текст.encode("utf-8"))
+        except ET.ParseError as е:
+            self.корень, self.ошибка_xml = None, str(е)
+        self.владелец = исх.объект_файла(путь)
+
+    @property
+    def модуль(self):
+        return self.исх.модуль(self.путь_модуля) if self.путь_модуля else None
+
+    @property
+    def своя(self):
+        """Форма нашего объекта (не заимствованного у хозяина)."""
+        return self.корень is not None and not (self.владелец and self.владелец.заимствован)
+
+    @property
+    def вид(self):
+        """«ФормаДокумента», «ФормаСписка»… — последняя часть имени."""
+        return self.имя.rsplit("/", 1)[-1]
+
+    def строка(self, смещение):
+        return bisect.bisect_right(self._переводы, смещение - 1) + 1
+
+    def строка_элемента(self, имя):
+        """Номер строки, где объявлен элемент/реквизит/команда с этим именем (1 — если не найден)."""
+        н = self.текст.find(' name="%s"' % имя)
+        return self.строка(н) if н >= 0 else 1
+
+    def элементы(self):
+        """Корневой <ChildItems> формы или None."""
+        return None if self.корень is None else self.корень.find(ЛФ + "ChildItems")
+
+    def родители(self):
+        """{узел: родитель} по всему дереву разметки."""
+        if not hasattr(self, "_родители"):
+            self._родители = {} if self.корень is None else \
+                {ребёнок: узел for узел in self.корень.iter() for ребёнок in узел}
+        return self._родители
+
+
+def корень_репо(исх):
+    """Корень репозитория для аудитов состава tools/ и docs/.
+
+    У фикстур самотеста — своя мини-копия (папка «_репо» рядом с исходниками), у src_ext —
+    сам репозиторий; у прочих каталогов (выгрузка LM и т.п.) — None: там нечего сверять."""
+    своя = os.path.join(исх.корень, "_репо")
+    if os.path.isdir(своя):
+        return своя
+    if os.path.normcase(исх.корень) == os.path.normcase(os.path.abspath(КАТАЛОГ_ПО_УМОЛЧАНИЮ)):
+        return КОРЕНЬ_РЕПО
+    return None
+
+
 # ─────────────────────────── запуск ───────────────────────────
 
 def аргументы(описание, лишние=None):
@@ -503,7 +623,7 @@ def аргументы(описание, лишние=None):
 def настроить_вывод():
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-    except Exception:
+    except Exception:   # честно: поток без reconfigure (перенаправлен в объект) — печатаем как есть
         pass
 
 
