@@ -66,11 +66,16 @@
 			<CommonPicture>УЗ_Больше</CommonPicture>
 			<CommonPicture>УЗ_Меньше</CommonPicture>
 			<Role>УЗ_ОсновнаяРоль</Role>
+			<FilterCriterion>УЗ_СвязанныеДокументы</FilterCriterion>
+			<CommonModule>УЗ_ДатыЗапрета</CommonModule>
 			<CommonModule>УЗ_Общий</CommonModule>
+			<CommonModule>УЗ_ОбновлениеДанных</CommonModule>
 			<CommonModule>УЗ_ОбщийКлиентСервер</CommonModule>
 			<CommonModule>УЗ_Почта</CommonModule>
 			<CommonModule>УЗ_Сервер</CommonModule>
 			<CommonModule>УЗ_Среда</CommonModule>
+			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
+			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
 			<CommonForm>УЗ_СписокОтчетов</CommonForm>
@@ -119,6 +124,8 @@
 			<DataProcessor>УЗ_Календарь</DataProcessor>
 			<DataProcessor>УЗ_ОбработкаФото</DataProcessor>
 			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
+			<InformationRegister>УЗ_ВерсииДанных</InformationRegister>
+			<InformationRegister>УЗ_ДатыЗапрета</InformationRegister>
 			<InformationRegister>УЗ_Настройки</InformationRegister>
 			<InformationRegister>УЗ_НастройкиПочты</InformationRegister>
 			<InformationRegister>УЗ_Оповещения</InformationRegister>

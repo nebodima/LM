@@ -6,11 +6,6 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Период" id="1">
-			<DataPath>Запись.Period</DataPath>
-			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
-		</InputField>
 		<InputField name="Организация" id="4">
 			<DataPath>Запись.Организация</DataPath>
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
@@ -96,33 +91,6 @@
 			<ContextMenu name="ТребоватьОписаниеКНеоплаченнымУрокамСКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ТребоватьОписаниеКНеоплаченнымУрокамСРасширеннаяПодсказка" id="18"/>
 		</InputField>
-		<UsualGroup name="Группа2" id="33">
-			<UserVisible>
-				<xr:Common>false</xr:Common>
-			</UserVisible>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Запрет редактирования</v8:content>
-				</v8:item>
-			</Title>
-			<Group>Vertical</Group>
-			<Representation>None</Representation>
-			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="34"/>
-			<ChildItems>
-				<InputField name="ДатаЗапретаРедактирования" id="19">
-					<DataPath>Запись.ДатаЗапретаРедактирования</DataPath>
-					<ContextMenu name="ДатаЗапретаРедактированияКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ДатаЗапретаРедактированияРасширеннаяПодсказка" id="21"/>
-				</InputField>
-				<CheckBoxField name="ДатаЗапретаРедактированияНеделя" id="22">
-					<DataPath>Запись.ДатаЗапретаРедактированияНеделя</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ДатаЗапретаРедактированияНеделяКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ДатаЗапретаРедактированияНеделяРасширеннаяПодсказка" id="24"/>
-				</CheckBoxField>
-			</ChildItems>
-		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Запись" id="1">
