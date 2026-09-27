@@ -65,6 +65,12 @@
 			<Subsystem>УЗ_УчетЗанятий</Subsystem>
 			<CommonPicture>УЗ_Больше</CommonPicture>
 			<CommonPicture>УЗ_Меньше</CommonPicture>
+			<CommonPicture>УЗ_ИконкаРаздел</CommonPicture>
+			<CommonPicture>УЗ_ИконкаДокументы</CommonPicture>
+			<CommonPicture>УЗ_ИконкаКасса</CommonPicture>
+			<CommonPicture>УЗ_ИконкаСправочники</CommonPicture>
+			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
+			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<FilterCriterion>УЗ_СвязанныеДокументы</FilterCriterion>
 			<CommonModule>УЗ_ДатыЗапрета</CommonModule>
