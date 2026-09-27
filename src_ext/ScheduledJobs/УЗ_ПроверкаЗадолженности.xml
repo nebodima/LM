@@ -13,7 +13,7 @@
 			<MethodName>CommonModule.УЗ_Сервер.ПроверкаЗадолженности</MethodName>
 			<Description>Проверка задолженности</Description>
 			<Key/>
-			<Use>false</Use>
+			<Use>true</Use>
 			<Predefined>true</Predefined>
 			<RestartCountOnFailure>3</RestartCountOnFailure>
 			<RestartIntervalOnFailure>10</RestartIntervalOnFailure>

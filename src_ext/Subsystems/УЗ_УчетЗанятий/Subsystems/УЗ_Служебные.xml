@@ -22,6 +22,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_РасчетыПоЗарплате</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_СписанияСуммЗаУроки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Фото</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ВыборWebЦвета</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_ВидыОпераций</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Оповещения</xr:Item>
 			</Content>

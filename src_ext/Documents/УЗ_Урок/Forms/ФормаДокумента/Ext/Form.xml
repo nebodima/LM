@@ -1,0 +1,2153 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="174">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<BackColor>web:Turquoise</BackColor>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="175"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="176">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="177"/>
+			</Button>
+			<Button name="ФормаПровести" id="172">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="173"/>
+			</Button>
+			<Button name="ФормаДвиженияДокумента" id="740">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.Command.ДвиженияДокумента</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаДвиженияДокументаРасширеннаяПодсказка" id="741"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Ссылка" id="1">
+			<DataPath>Объект.Ref</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаШапка" id="234">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="235"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапка2" id="324">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапка2РасширеннаяПодсказка" id="325"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="733">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="734"/>
+							<ChildItems>
+								<InputField name="Дата" id="7">
+									<DataPath>Объект.Date</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelField name="Дата1" id="721">
+									<DataPath>Объект.Date</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>2</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ddd</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="Дата1КонтекстноеМеню" id="722"/>
+									<ExtendedTooltip name="Дата1РасширеннаяПодсказка" id="723"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ГруппаОбучения" id="342">
+							<DataPath>Объект.ГруппаОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
+							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="344"/>
+							<Events>
+								<Event name="OnChange">ГруппаОбученияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Педагог" id="16">
+							<DataPath>Объект.Педагог</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<BackColor>style:FieldAlternativeBackColor</BackColor>
+							<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">ПедагогПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПредметОбучения" id="350">
+							<DataPath>Объект.ПредметОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
+							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
+							<Events>
+								<Event name="OnChange">ПлатныйПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Помещение" id="329">
+							<DataPath>Объект.Помещение</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ПомещениеКонтекстноеМеню" id="330"/>
+							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="331"/>
+							<Events>
+								<Event name="OnChange">ПомещениеПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВторая" id="729">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вторая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вторая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВтораяРасширеннаяПодсказка" id="730"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="731">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="732"/>
+							<ChildItems>
+								<InputField name="КоличествоЧасов" id="153">
+									<DataPath>Объект.КоличествоЧасов</DataPath>
+									<SkipOnInput>true</SkipOnInput>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длительность</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonPicture>
+										<xr:Ref>StdPicture.AppearanceCircleOneFourthFilled</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ChoiceButtonPicture>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>1 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>1 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>2 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>2 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>3 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>3 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>4 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">4</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>4 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">4.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">5.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">6</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">6.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">7</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">7.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>8 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">8</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>8 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">8.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>9 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">9</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>9 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">9.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>10 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">10</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>10 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">10.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>11 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">11</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>11 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">11.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>12 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">12</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>12 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">12.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>13 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">13</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>13 ч. 30 мин.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">13.5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>14 ч.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">14</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="155"/>
+									<Events>
+										<Event name="OnChange">КоличествоЧасовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Окончание" id="714">
+									<DataPath>Объект.Окончание</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>до</v8:content>
+										</v8:item>
+									</Title>
+									<Width>3</Width>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ОкончаниеКонтекстноеМеню" id="715"/>
+									<ExtendedTooltip name="ОкончаниеРасширеннаяПодсказка" id="716"/>
+								</InputField>
+								<InputField name="Номер" id="4">
+									<DataPath>Объект.Number</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="724">
+							<DataPath>Объект.Организация</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<WarningOnEdit>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</WarningOnEdit>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.Dendrogram</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="725"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="726"/>
+						</InputField>
+						<InputField name="СтавкаПедагога" id="742">
+							<DataPath>Объект.СтавкаПедагога</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<BackColor>style:FieldAlternativeBackColor</BackColor>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>СтавкаПедагога</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
+							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
+							<Events>
+								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Статус" id="735">
+							<DataPath>Объект.Статус</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус урока</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус урока</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
+						</InputField>
+						<UsualGroup name="Группа4" id="899">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="900"/>
+							<ChildItems>
+								<InputField name="Тариф" id="896">
+									<DataPath>Объект.Тариф</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тариф</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ТарифКонтекстноеМеню" id="897"/>
+									<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="898"/>
+									<Events>
+										<Event name="OnChange">ТарифПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация1" id="901">
+									<Visible>false</Visible>
+									<TextColor>#0000FF</TextColor>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="902"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="903"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<PictureField name="КартинкаПредметаОбучения" id="910">
+					<DataPath>КартинкаПредметаОбучения</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<PictureSize>AutoSize</PictureSize>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="КартинкаПредметаОбученияКонтекстноеМеню" id="911"/>
+					<ExtendedTooltip name="КартинкаПредметаОбученияРасширеннаяПодсказка" id="912"/>
+				</PictureField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаУченики" id="536">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ученики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ученики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаУченикиРасширеннаяПодсказка" id="537"/>
+			<ChildItems>
+				<Page name="ГруппаУченикиСтраница" id="538">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ученики</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ученики страница</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.User</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаУченикиСтраницаРасширеннаяПодсказка" id="539"/>
+					<ChildItems>
+						<Table name="Ученики" id="192">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Ученики</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="УченикиКонтекстноеМеню" id="193"/>
+							<AutoCommandBar name="УченикиКоманднаяПанель" id="194">
+								<ChildItems>
+									<Button name="УченикиПодбор" id="340">
+										<Type>CommandBarHyperlink</Type>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<ExtendedTooltip name="УченикиПодборРасширеннаяПодсказка" id="341"/>
+									</Button>
+									<Button name="УченикиДобавить" id="214">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.Ученики.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить ученика</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="УченикиДобавитьРасширеннаяПодсказка" id="215"/>
+									</Button>
+									<Button name="УченикиСкопировать" id="216">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.Ученики.StandardCommand.Copy</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="УченикиСкопироватьРасширеннаяПодсказка" id="217"/>
+									</Button>
+									<Button name="УченикиУдалить" id="218">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.Ученики.StandardCommand.Delete</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="УченикиУдалитьРасширеннаяПодсказка" id="219"/>
+									</Button>
+									<Button name="УченикиПереместитьВниз" id="279">
+										<Type>CommandBarHyperlink</Type>
+										<CommandName>Form.Item.Ученики.StandardCommand.MoveDown</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="УченикиПереместитьВнизРасширеннаяПодсказка" id="280"/>
+									</Button>
+									<Button name="УченикиПереместитьВверх" id="277">
+										<Type>CommandBarHyperlink</Type>
+										<CommandName>Form.Item.Ученики.StandardCommand.MoveUp</CommandName>
+										<ShapeRepresentation>WhenActive</ShapeRepresentation>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="УченикиПереместитьВверхРасширеннаяПодсказка" id="278"/>
+									</Button>
+									<Popup name="УченикиГруппаЗаполнить" id="904">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ученики группа заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="УченикиГруппаЗаполнитьРасширеннаяПодсказка" id="905"/>
+										<ChildItems>
+											<Button name="УченикиСделатьПосещенными" id="908">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СделатьПосещенными</CommandName>
+												<ExtendedTooltip name="УченикиСделатьПосещеннымиРасширеннаяПодсказка" id="909"/>
+											</Button>
+											<Button name="УченикиСделатьОплаченными" id="906">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СделатьОплаченными</CommandName>
+												<ExtendedTooltip name="УченикиСделатьОплаченнымиРасширеннаяПодсказка" id="907"/>
+											</Button>
+											<Button name="УченикиПересчитатьЦеныПоТарифу" id="894">
+												<Type>CommandBarHyperlink</Type>
+												<CommandName>Form.Command.ПересчитатьЦеныПоТарифу</CommandName>
+												<ExtendedTooltip name="УченикиПересчитатьЦеныПоТарифуРасширеннаяПодсказка" id="895"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="УченикиРасширеннаяПодсказка" id="195"/>
+							<SearchStringAddition name="УченикиСтрокаПоиска" id="196">
+								<AdditionSource>
+									<Item>Ученики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УченикиСтрокаПоискаКонтекстноеМеню" id="197"/>
+								<ExtendedTooltip name="УченикиСтрокаПоискаРасширеннаяПодсказка" id="198"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УченикиСостояниеПросмотра" id="199">
+								<AdditionSource>
+									<Item>Ученики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УченикиСостояниеПросмотраКонтекстноеМеню" id="200"/>
+								<ExtendedTooltip name="УченикиСостояниеПросмотраРасширеннаяПодсказка" id="201"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УченикиУправлениеПоиском" id="202">
+								<AdditionSource>
+									<Item>Ученики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УченикиУправлениеПоискомКонтекстноеМеню" id="203"/>
+								<ExtendedTooltip name="УченикиУправлениеПоискомРасширеннаяПодсказка" id="204"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">УченикиВыбор</Event>
+								<Event name="BeforeAddRow">УченикиПередНачаломДобавления</Event>
+								<Event name="ChoiceProcessing">УченикиОбработкаВыбора</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="УченикиНомерСтроки" id="205">
+									<DataPath>Объект.Ученики.LineNumber</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
+									<Width>1</Width>
+									<TextColor>#999999</TextColor>
+									<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
+								</LabelField>
+								<ColumnGroup name="УченикиГруппаСписатьОплату" id="475">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ученики группа списать оплату</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ученики группа списать оплату</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="УченикиГруппаСписатьОплатуРасширеннаяПодсказка" id="476"/>
+									<ChildItems>
+										<CheckBoxField name="УченикиСписатьОплату" id="353">
+											<DataPath>Объект.Ученики.СписатьОплату</DataPath>
+											<TitleBackColor>#AFEEEE</TitleBackColor>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoCellHeight>true</AutoCellHeight>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.Post</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ShowInFooter>false</ShowInFooter>
+											<CheckBoxType>Auto</CheckBoxType>
+											<BackColor>style:ActivityColor</BackColor>
+											<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="354"/>
+											<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="355"/>
+											<Events>
+												<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="УченикиЗаметка" id="321">
+											<DataPath>Объект.Ученики.Заметка</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>заметка</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
+											<ContextMenu name="УченикиЗаметкаКонтекстноеМеню" id="322"/>
+											<ExtendedTooltip name="УченикиЗаметкаРасширеннаяПодсказка" id="323"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="УченикиГруппаЯвка" id="498">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Явка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ученики группа явка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ExtendedTooltip name="УченикиГруппаЯвкаРасширеннаяПодсказка" id="499"/>
+									<ChildItems>
+										<CheckBoxField name="УченикиЯвка" id="318">
+											<DataPath>Объект.Ученики.Явка</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Явка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ShowInFooter>false</ShowInFooter>
+											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="320"/>
+										</CheckBoxField>
+										<InputField name="УченикиПричина" id="358">
+											<DataPath>Объект.Ученики.Причина</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>причина</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
+											<ContextMenu name="УченикиПричинаКонтекстноеМеню" id="359"/>
+											<ExtendedTooltip name="УченикиПричинаРасширеннаяПодсказка" id="360"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="УченикиГруппа9" id="486">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Долг</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>#000000</TitleTextColor>
+									<Group>Horizontal</Group>
+									<TitleBackColor>#C0C0C0</TitleBackColor>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
+									<ChildItems>
+										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
+											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Долг по предмету</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CellHyperlink>true</CellHyperlink>
+											<Width>1</Width>
+											<MarkNegatives>false</MarkNegatives>
+											<Hiperlink>true</Hiperlink>
+											<TextColor>style:NegativeTextColor</TextColor>
+											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
+											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
+										</LabelField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="УченикиУченик" id="211">
+									<DataPath>Объект.Ученики.Ученик</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.User</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
+									<ContextMenu name="УченикиУченикКонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="213"/>
+									<Events>
+										<Event name="OnChange">УченикиУченикПриИзменении</Event>
+										<Event name="Creating">УченикиУченикСоздание</Event>
+									</Events>
+								</InputField>
+								<InputField name="УченикиАбонемент" id="888">
+									<DataPath>Объект.Ученики.Абонемент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>1</Width>
+									<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="889"/>
+									<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="890"/>
+								</InputField>
+								<InputField name="УченикиТариф" id="347">
+									<DataPath>Объект.Ученики.Тариф</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>1</Width>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="УченикиТарифКонтекстноеМеню" id="348"/>
+									<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="349"/>
+									<Events>
+										<Event name="OnChange">УченикиТарифПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="УченикиЦенаТарифа" id="891">
+									<DataPath>Объект.Ученики.ЦенаТарифа</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Ученики.TotalЦенаТарифа</FooterDataPath>
+									<Width>1</Width>
+									<ContextMenu name="УченикиЦенаТарифаКонтекстноеМеню" id="892"/>
+									<ExtendedTooltip name="УченикиЦенаТарифаРасширеннаяПодсказка" id="893"/>
+								</InputField>
+								<ColumnGroup name="УченикиГруппа6" id="450">
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="УченикиГруппа6РасширеннаяПодсказка" id="451"/>
+									<ChildItems>
+										<InputField name="УченикиКоэффициент" id="430">
+											<DataPath>Объект.Ученики.Скидка</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скидка</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="УченикиКоэффициентКонтекстноеМеню" id="431"/>
+											<ExtendedTooltip name="УченикиКоэффициентРасширеннаяПодсказка" id="432"/>
+											<Events>
+												<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
+												<Event name="Clearing">УченикиКоэффициентОчистка</Event>
+											</Events>
+										</InputField>
+										<InputField name="УченикиСкидка" id="433">
+											<DataPath>Объект.Ученики.СуммаСкидки</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ShowInFooter>false</ShowInFooter>
+											<FooterDataPath>Объект.Ученики.TotalСуммаСкидки</FooterDataPath>
+											<Width>1</Width>
+											<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="434"/>
+											<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="435"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="УченикиГруппа5" id="448">
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="УченикиГруппа5РасширеннаяПодсказка" id="449"/>
+									<ChildItems>
+										<InputField name="УченикиЧасы" id="302">
+											<DataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/0:1385ad62-16a3-462f-af40-aea22b299880</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.SetTime</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="УченикиЧасыКонтекстноеМеню" id="303"/>
+											<ExtendedTooltip name="УченикиЧасыРасширеннаяПодсказка" id="304"/>
+											<Events>
+												<Event name="OnChange">УченикиЧасыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="УченикиСумма" id="293">
+											<DataPath>Объект.Ученики.Сумма</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Итого</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ShowInFooter>false</ShowInFooter>
+											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
+											<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
+											<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="УченикиКомментарий" id="477">
+									<DataPath>Объект.Ученики.Комментарий</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<Width>9</Width>
+									<ContextMenu name="УченикиКомментарийКонтекстноеМеню" id="478"/>
+									<ExtendedTooltip name="УченикиКомментарийРасширеннаяПодсказка" id="479"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаБонусы" id="540">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бонусы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа бонусы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Properties</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаБонусыРасширеннаяПодсказка" id="541"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="655">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="656"/>
+							<ChildItems>
+								<InputField name="Штрихкод" id="652">
+									<DataPath>Штрихкод</DataPath>
+									<TitleTextColor>#000000</TitleTextColor>
+									<ClearButton>true</ClearButton>
+									<TextColor>#000000</TextColor>
+									<ContextMenu name="ШтрихкодКонтекстноеМеню" id="653"/>
+									<ExtendedTooltip name="ШтрихкодРасширеннаяПодсказка" id="654"/>
+									<Events>
+										<Event name="OnChange">ШтрихкодПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="НайтиПоШК" id="657">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.НайтиПоШККоманда</CommandName>
+									<ExtendedTooltip name="НайтиПоШКРасширеннаяПодсказка" id="658"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Ученики1" id="542">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<Footer>true</Footer>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Ученики</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Ученики1КонтекстноеМеню" id="543"/>
+							<AutoCommandBar name="Ученики1КоманднаяПанель" id="544"/>
+							<ExtendedTooltip name="Ученики1РасширеннаяПодсказка" id="545"/>
+							<SearchStringAddition name="Ученики1СтрокаПоиска" id="546">
+								<AdditionSource>
+									<Item>Ученики1</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Ученики1СтрокаПоискаКонтекстноеМеню" id="547"/>
+								<ExtendedTooltip name="Ученики1СтрокаПоискаРасширеннаяПодсказка" id="548"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Ученики1СостояниеПросмотра" id="549">
+								<AdditionSource>
+									<Item>Ученики1</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="Ученики1СостояниеПросмотраКонтекстноеМеню" id="550"/>
+								<ExtendedTooltip name="Ученики1СостояниеПросмотраРасширеннаяПодсказка" id="551"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Ученики1УправлениеПоиском" id="552">
+								<AdditionSource>
+									<Item>Ученики1</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="Ученики1УправлениеПоискомКонтекстноеМеню" id="553"/>
+								<ExtendedTooltip name="Ученики1УправлениеПоискомРасширеннаяПодсказка" id="554"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">УченикиВыбор</Event>
+								<Event name="OnChange">Ученики1ПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="УченикиНомерСтроки1" id="555">
+									<DataPath>Объект.Ученики.LineNumber</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
+									<Width>1</Width>
+									<ContextMenu name="УченикиНомерСтроки1КонтекстноеМеню" id="556"/>
+									<ExtendedTooltip name="УченикиНомерСтроки1РасширеннаяПодсказка" id="557"/>
+								</LabelField>
+								<LabelField name="Ученики1ОстатокБонусов" id="696">
+									<DataPath>Объект.Ученики.ОстатокБонусов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<MarkNegatives>true</MarkNegatives>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="Ученики1ОстатокБонусовКонтекстноеМеню" id="697"/>
+									<ExtendedTooltip name="Ученики1ОстатокБонусовРасширеннаяПодсказка" id="698"/>
+								</LabelField>
+								<ColumnGroup name="УченикиГруппа8" id="603">
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="УченикиГруппа8РасширеннаяПодсказка" id="604"/>
+									<ChildItems>
+										<InputField name="УченикиУченик1" id="605">
+											<DataPath>Объект.Ученики.Ученик</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.User</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<ShowInFooter>false</ShowInFooter>
+											<Width>1</Width>
+											<ContextMenu name="УченикиУченик1КонтекстноеМеню" id="606"/>
+											<ExtendedTooltip name="УченикиУченик1РасширеннаяПодсказка" id="607"/>
+											<Events>
+												<Event name="OnChange">УченикиУченикПриИзменении</Event>
+												<Event name="Creating">УченикиУченикСоздание</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="Ученики1ДисконтнаяКарта" id="649">
+									<DataPath>Объект.Ученики.ДисконтнаяКарта</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>StdPicture.Attribute</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</HeaderPicture>
+									<Width>1</Width>
+									<ContextMenu name="Ученики1ДисконтнаяКартаКонтекстноеМеню" id="650"/>
+									<ExtendedTooltip name="Ученики1ДисконтнаяКартаРасширеннаяПодсказка" id="651"/>
+									<Events>
+										<Event name="StartChoice">Ученики1ДисконтнаяКартаНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<LabelField name="Ученики1ДисконтнаяКартаДатаОкончанияДействия" id="921">
+									<DataPath>Объект.Ученики.ДисконтнаяКарта.ДатаОкончанияДействия</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="Ученики1ДисконтнаяКартаДатаОкончанияДействияКонтекстноеМеню" id="922"/>
+									<ExtendedTooltip name="Ученики1ДисконтнаяКартаДатаОкончанияДействияРасширеннаяПодсказка" id="923"/>
+								</LabelField>
+								<ColumnGroup name="УченикиГруппа13" id="624">
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="УченикиГруппа13РасширеннаяПодсказка" id="625"/>
+									<ChildItems>
+										<InputField name="УченикиСумма1" id="629">
+											<DataPath>Объект.Ученики.Сумма</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Итого</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
+											<TextColor>#999999</TextColor>
+											<ContextMenu name="УченикиСумма1КонтекстноеМеню" id="630"/>
+											<ExtendedTooltip name="УченикиСумма1РасширеннаяПодсказка" id="631"/>
+										</InputField>
+										<InputField name="Ученики1СуммаБонусов" id="693">
+											<DataPath>Объект.Ученики.СуммаБонусов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Бонусов начислено</v8:content>
+												</v8:item>
+											</Title>
+											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<EditMode>EnterOnInput</EditMode>
+											<HeaderPicture>
+												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</HeaderPicture>
+											<FooterDataPath>Объект.Ученики.TotalСуммаБонусов</FooterDataPath>
+											<ContextMenu name="Ученики1СуммаБонусовКонтекстноеМеню" id="694"/>
+											<ExtendedTooltip name="Ученики1СуммаБонусовРасширеннаяПодсказка" id="695"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНачисленияПедагогу" id="830">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисления педагогу</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа начисления педагогу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Post</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаНачисленияПедагогуРасширеннаяПодсказка" id="831"/>
+					<ChildItems>
+						<UsualGroup name="Группа5" id="816">
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>None</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="817"/>
+							<ChildItems>
+								<LabelField name="СтавкаПедагогаОплатаЗаЗанятие" id="818">
+									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЗанятие</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За занятие</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
+									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="СтавкаПедагогаОплатаЗаЗанятиеКонтекстноеМеню" id="819"/>
+									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЗанятиеРасширеннаяПодсказка" id="820"/>
+								</LabelField>
+								<LabelField name="СтавкаПедагогаОплатаСЧеловека" id="821">
+									<DataPath>Объект.СтавкаПедагога.ОплатаСЧеловека</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С ученика</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
+									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="СтавкаПедагогаОплатаСЧеловекаКонтекстноеМеню" id="822"/>
+									<ExtendedTooltip name="СтавкаПедагогаОплатаСЧеловекаРасширеннаяПодсказка" id="823"/>
+								</LabelField>
+								<LabelField name="СтавкаПедагогаОплатаЗаЧас" id="824">
+									<DataPath>Объект.СтавкаПедагога.ОплатаЗаЧас</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За 1 час</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
+									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="СтавкаПедагогаОплатаЗаЧасКонтекстноеМеню" id="825"/>
+									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЧасРасширеннаяПодсказка" id="826"/>
+								</LabelField>
+								<LabelField name="СтавкаПедагогаПроцентСОплатыУченика" id="827">
+									<DataPath>Объект.СтавкаПедагога.ПроцентСОплатыУченика</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<Width>5</Width>
+									<TextColor>#0000FF</TextColor>
+									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="СтавкаПедагогаПроцентСОплатыУченикаКонтекстноеМеню" id="828"/>
+									<ExtendedTooltip name="СтавкаПедагогаПроцентСОплатыУченикаРасширеннаяПодсказка" id="829"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="НачисленияПедагогу" id="832">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НачисленияПедагогу</DataPath>
+							<CommandSet>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НачисленияПедагогуКонтекстноеМеню" id="833"/>
+							<AutoCommandBar name="НачисленияПедагогуКоманднаяПанель" id="834">
+								<ChildItems>
+									<Button name="НачисленияПедагогуДобавить" id="860">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.НачисленияПедагогу.StandardCommand.Add</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Добавить начисление</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НачисленияПедагогуДобавитьРасширеннаяПодсказка" id="861"/>
+									</Button>
+									<Button name="ПересчитатьНачисления" id="805">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Command.ПересчитатьНачисления</CommandName>
+										<ExtendedTooltip name="ПересчитатьНачисленияРасширеннаяПодсказка" id="806"/>
+									</Button>
+									<Button name="ИзменятьВсе" id="812">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ИзменятьВсе</CommandName>
+										<ExtendedTooltip name="ИзменятьВсеРасширеннаяПодсказка" id="813"/>
+									</Button>
+									<Button name="НеИзменятьВсе" id="814">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ИзменятьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Запретить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НеИзменятьВсеРасширеннаяПодсказка" id="815"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НачисленияПедагогуРасширеннаяПодсказка" id="835"/>
+							<SearchStringAddition name="НачисленияПедагогуСтрокаПоиска" id="836">
+								<AdditionSource>
+									<Item>НачисленияПедагогу</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияПедагогуСтрокаПоискаКонтекстноеМеню" id="837"/>
+								<ExtendedTooltip name="НачисленияПедагогуСтрокаПоискаРасширеннаяПодсказка" id="838"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НачисленияПедагогуСостояниеПросмотра" id="839">
+								<AdditionSource>
+									<Item>НачисленияПедагогу</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияПедагогуСостояниеПросмотраКонтекстноеМеню" id="840"/>
+								<ExtendedTooltip name="НачисленияПедагогуСостояниеПросмотраРасширеннаяПодсказка" id="841"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НачисленияПедагогуУправлениеПоиском" id="842">
+								<AdditionSource>
+									<Item>НачисленияПедагогу</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НачисленияПедагогуУправлениеПоискомКонтекстноеМеню" id="843"/>
+								<ExtendedTooltip name="НачисленияПедагогуУправлениеПоискомРасширеннаяПодсказка" id="844"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">НачисленияПедагогуПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="НачисленияПедагогуНомерСтроки" id="845">
+									<DataPath>Объект.НачисленияПедагогу.LineNumber</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.НачисленияПедагогу.RowsCount</FooterDataPath>
+									<Width>1</Width>
+									<ContextMenu name="НачисленияПедагогуНомерСтрокиКонтекстноеМеню" id="846"/>
+									<ExtendedTooltip name="НачисленияПедагогуНомерСтрокиРасширеннаяПодсказка" id="847"/>
+								</LabelField>
+								<InputField name="НачисленияПедагогуКомментарий" id="848">
+									<DataPath>Объект.НачисленияПедагогу.Комментарий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Название дополнительного начисления</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<ContextMenu name="НачисленияПедагогуКомментарийКонтекстноеМеню" id="849"/>
+									<ExtendedTooltip name="НачисленияПедагогуКомментарийРасширеннаяПодсказка" id="850"/>
+								</InputField>
+								<InputField name="НачисленияПедагогуСуммаНачисления" id="851">
+									<DataPath>Объект.НачисленияПедагогу.СуммаНачисления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.НачисленияПедагогу.TotalСуммаНачисления</FooterDataPath>
+									<Width>1</Width>
+									<ContextMenu name="НачисленияПедагогуСуммаНачисленияКонтекстноеМеню" id="852"/>
+									<ExtendedTooltip name="НачисленияПедагогуСуммаНачисленияРасширеннаяПодсказка" id="853"/>
+								</InputField>
+								<CheckBoxField name="НачисленияПедагогуНеИзменять" id="854">
+									<DataPath>Объект.НачисленияПедагогу.НеИзменять</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НачисленияПедагогуНеИзменятьКонтекстноеМеню" id="855"/>
+									<ExtendedTooltip name="НачисленияПедагогуНеИзменятьРасширеннаяПодсказка" id="856"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеРасходы" id="862">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. расходы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные расходы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаДополнительныеРасходыРасширеннаяПодсказка" id="863"/>
+					<ChildItems>
+						<Table name="Расходы" id="864">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Расходы</DataPath>
+							<CommandSet>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РасходыКонтекстноеМеню" id="865"/>
+							<AutoCommandBar name="РасходыКоманднаяПанель" id="866">
+								<ChildItems>
+									<Button name="РасходыДобавить" id="886">
+										<Type>CommandBarHyperlink</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Item.Расходы.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="РасходыДобавитьРасширеннаяПодсказка" id="887"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РасходыРасширеннаяПодсказка" id="867"/>
+							<SearchStringAddition name="РасходыСтрокаПоиска" id="868">
+								<AdditionSource>
+									<Item>Расходы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходыСтрокаПоискаКонтекстноеМеню" id="869"/>
+								<ExtendedTooltip name="РасходыСтрокаПоискаРасширеннаяПодсказка" id="870"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РасходыСостояниеПросмотра" id="871">
+								<AdditionSource>
+									<Item>Расходы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходыСостояниеПросмотраКонтекстноеМеню" id="872"/>
+								<ExtendedTooltip name="РасходыСостояниеПросмотраРасширеннаяПодсказка" id="873"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РасходыУправлениеПоиском" id="874">
+								<AdditionSource>
+									<Item>Расходы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РасходыУправлениеПоискомКонтекстноеМеню" id="875"/>
+								<ExtendedTooltip name="РасходыУправлениеПоискомРасширеннаяПодсказка" id="876"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">РасходыПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РасходыНомерСтроки" id="877">
+									<DataPath>Объект.Расходы.LineNumber</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расходы.RowsCount</FooterDataPath>
+									<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="878"/>
+									<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="879"/>
+								</LabelField>
+								<InputField name="РасходыНазваниеРасхода" id="880">
+									<DataPath>Объект.Расходы.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РасходыНазваниеРасходаКонтекстноеМеню" id="881"/>
+									<ExtendedTooltip name="РасходыНазваниеРасходаРасширеннаяПодсказка" id="882"/>
+								</InputField>
+								<InputField name="РасходыСумма" id="883">
+									<DataPath>Объект.Расходы.Сумма</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма расхода</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Расходы.TotalСумма</FooterDataPath>
+									<ContextMenu name="РасходыСуммаКонтекстноеМеню" id="884"/>
+									<ExtendedTooltip name="РасходыСуммаРасширеннаяПодсказка" id="885"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительно" id="913">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="914"/>
+					<ChildItems>
+						<InputField name="ТемаУрока" id="918">
+							<DataPath>Объект.ТемаУрока</DataPath>
+							<Height>2</Height>
+							<ContextMenu name="ТемаУрокаКонтекстноеМеню" id="919"/>
+							<ExtendedTooltip name="ТемаУрокаРасширеннаяПодсказка" id="920"/>
+						</InputField>
+						<InputField name="ДомашнееЗадание" id="915">
+							<DataPath>Объект.ДомашнееЗадание</DataPath>
+							<Height>2</Height>
+							<ContextMenu name="ДомашнееЗаданиеКонтекстноеМеню" id="916"/>
+							<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="917"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаИтоги" id="308">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итоги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа итоги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="309"/>
+			<ChildItems>
+				<InputField name="Комментарий" id="28">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<LabelField name="АвторДокумента" id="25">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#808080</TextColor>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<InputField name="СуммаЗаУрок" id="296">
+					<DataPath>Объект.Ученики.TotalСумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма итого</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<ContextMenu name="СуммаЗаУрокКонтекстноеМеню" id="297"/>
+					<ExtendedTooltip name="СуммаЗаУрокРасширеннаяПодсказка" id="298"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УЗ_Урок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.Ученики">
+					<Column name="ЗадолженностьПоПредмету" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Долг</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>2</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ОстатокБонусов" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Остаток бонусов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>15</v8:Digits>
+								<v8:FractionDigits>2</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.НачисленияПедагогу"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="Штрихкод" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрихкод</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ДисконтныеКарты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КартинкаПредметаОбучения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Картинка предмета обучения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НачисленияПедагогуСуммаНачисления</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НачисленияПедагогуКомментарий</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.НачисленияПедагогу.НеИзменять</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>УченикиЗадолженностьПоПредмету</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЗадолженностьПоПредмету</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ЧДЦ=2; ЧФ=+Ч</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>УченикиЗадолженностьПоПредмету</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЗадолженностьПоПредмету</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#D07D00</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Формат</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="Подбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор учеников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseFromList</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Подбор</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НайтиПоШККоманда" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти по ШК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти по ШККоманда</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НайтиПоШККоманда</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДвиженияДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движения документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Движения документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DebitCredit</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДвиженияДокумента</Action>
+		</Command>
+		<Command name="ПересчитатьНачисления" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать начисления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать начисления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Reread</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПересчитатьНачисления</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменятьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрешить изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменятьВсе</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПересчитатьЦеныПоТарифу" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены по тарифам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены по тарифу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПересчитатьЦеныПоТарифу</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СделатьОплаченными" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить всех оплаченными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать оплаченными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СделатьОплаченными</Action>
+		</Command>
+		<Command name="СделатьПосещенными" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все посещения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать оплаченными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СделатьПосещенными</Action>
+		</Command>
+	</Commands>
+</Form>

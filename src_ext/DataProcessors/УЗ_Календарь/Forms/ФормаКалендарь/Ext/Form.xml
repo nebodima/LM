@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoFillCheck>false</AutoFillCheck>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="50">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="15">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&gt;Настройки</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<Representation>None</Representation>
+					<ShowLeftMargin>false</ShowLeftMargin>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<CalendarField name="Календарь" id="4">
+							<DataPath>Календарь</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбирать даты с нажатой клавишей Shift или Ctrl</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Width>1</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<SelectionMode>Interval</SelectionMode>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="КалендарьКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="КалендарьРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">КалендарьПриИзменении</Event>
+								<Event name="OnPeriodOutput">КалендарьПриВыводеПериода</Event>
+								<Event name="OnActivateDate">КалендарьПриАктивизацииДаты</Event>
+							</Events>
+						</CalendarField>
+						<UsualGroup name="ГруппаФильтр" id="120">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фильтр</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фильтр</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаФильтрРасширеннаяПодсказка" id="121"/>
+							<ChildItems>
+								<InputField name="ФильтрГруппаОбучения" id="87">
+									<DataPath>ФильтрГруппаОбучения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxWidth>14</MaxWidth>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа обучения</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ФильтрГруппаОбученияКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="ФильтрГруппаОбученияРасширеннаяПодсказка" id="89"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ФильтрПедагог" id="81">
+									<DataPath>ФильтрПедагог</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Педагог</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ФильтрПедагогКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="ФильтрПедагогРасширеннаяПодсказка" id="83"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ФильтрПомещение" id="84">
+									<DataPath>ФильтрПомещение</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Помещение</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ФильтрПомещениеКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="ФильтрПомещениеРасширеннаяПодсказка" id="86"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ФильтрУченик" id="130">
+									<DataPath>ФильтрУченик</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ученик</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ФильтрУченикКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ФильтрУченикРасширеннаяПодсказка" id="132"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СтатусУрока" id="142">
+									<DataPath>СтатусУрока</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус урока</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="СтатусУрокаКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="СтатусУрокаРасширеннаяПодсказка" id="144"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="НеГруппироватьПомещения" id="101">
+									<DataPath>НеГруппироватьПомещения</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеГруппироватьПомещенияКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="НеГруппироватьПомещенияРасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ОтображатьВсеПомещения" id="104">
+									<DataPath>ОтображатьВсеПомещения</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтображатьВсеПомещенияКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ОтображатьВсеПомещенияРасширеннаяПодсказка" id="106"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="СкрытьНастройки" id="115">
+							<DataPath>СкрытьНастройки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Отобразить; БИ='Скрыть настройки'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="СкрытьНастройкиКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="СкрытьНастройкиРасширеннаяПодсказка" id="117"/>
+							<Events>
+								<Event name="OnChange">СкрытьНастройкиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="Группа3" id="122">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкаОписания" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Детали уроков</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройка описания</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаНастройкаОписанияРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<CheckBoxField name="Ученики" id="107">
+											<DataPath>Ученики</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ученики</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УченикиКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="УченикиРасширеннаяПодсказка" id="109"/>
+											<Events>
+												<Event name="OnChange">Цвет1ПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ГруппаОбучения" id="61">
+											<DataPath>ГруппаОбучения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>группы обучения</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="62"/>
+											<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="63"/>
+											<Events>
+												<Event name="OnChange">Цвет1ПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="Педагог" id="64">
+											<DataPath>Педагог</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>педагог</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПедагогКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="66"/>
+											<Events>
+												<Event name="OnChange">Цвет1ПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<CheckBoxField name="ПредметОбучения" id="67">
+											<DataPath>ПредметОбучения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>предмет</v8:content>
+												</v8:item>
+											</Title>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="69"/>
+											<Events>
+												<Event name="OnChange">Цвет1ПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="Цвет1" id="45">
+									<DataPath>Цвет</DataPath>
+									<TitleTextColor>#339966</TitleTextColor>
+									<TitleHeight>2</TitleHeight>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Помещения</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Помещение</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Предмета</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ПредмОбуч</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Педагога</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Педагог</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="Цвет1КонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="Цвет1РасширеннаяПодсказка" id="47"/>
+									<Events>
+										<Event name="OnChange">Цвет1ПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="ГруппаОтображение" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отображение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа отображение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаОтображениеРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<InputField name="ПоложениеШкалыВремени" id="72">
+											<DataPath>ПоложениеШкалыВремениТекст</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Width>7</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ListChoiceMode>true</ListChoiceMode>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Верх</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Верх</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Лево</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Лево</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Низ</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Низ</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Право</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Право</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ПоложениеШкалыВремениКонтекстноеМеню" id="73"/>
+											<ExtendedTooltip name="ПоложениеШкалыВремениРасширеннаяПодсказка" id="74"/>
+											<Events>
+												<Event name="OnChange">Цвет1ПриИзменении</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="ОтображатьНапоминания" id="56">
+											<DataPath>ОтображатьНапоминания</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отображать напоминания</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если используются напоминания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОтображатьНапоминанияКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="ОтображатьНапоминанияРасширеннаяПодсказка" id="58"/>
+											<Events>
+												<Event name="OnChange">Цвет1ПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПанельРазделителей" id="145">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель разделителей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель разделителей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПанельРазделителейРасширеннаяПодсказка" id="146"/>
+					<ChildItems>
+						<PictureDecoration name="РазделительКартинка1" id="147">
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разделитель картинка1</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Ref>CommonPicture.УЗ_Меньше</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="РазделительКартинка1КонтекстноеМеню" id="148"/>
+							<ExtendedTooltip name="РазделительКартинка1РасширеннаяПодсказка" id="149"/>
+							<Events>
+								<Event name="Click">РазделительКартинка1Нажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<PictureDecoration name="РазделительКартинка2" id="150">
+							<Visible>false</Visible>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разделитель картинка2</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Ref>CommonPicture.УЗ_Больше</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="РазделительКартинка2КонтекстноеМеню" id="151"/>
+							<ExtendedTooltip name="РазделительКартинка2РасширеннаяПодсказка" id="152"/>
+							<Events>
+								<Event name="Click">РазделительКартинка1Нажатие</Event>
+							</Events>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВертик" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертик</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертик</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВертикРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаГоризонт" id="41">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа горизонт</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа горизонт</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="42"/>
+							<ChildItems>
+								<Button name="Обновить" id="133">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="134"/>
+								</Button>
+								<UsualGroup name="Группа4" id="124">
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>None</HorizontalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="125"/>
+									<ChildItems>
+										<Button name="ПредыдущийПериод1" id="126">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПредыдущийПериод</CommandName>
+											<ExtendedTooltip name="ПредыдущийПериод1РасширеннаяПодсказка" id="127"/>
+										</Button>
+										<Button name="Сегодня1" id="75">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.Сегодня</CommandName>
+											<ExtendedTooltip name="Сегодня1РасширеннаяПодсказка" id="76"/>
+										</Button>
+										<Button name="БудущийПериод1" id="128">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.БудущийПериод</CommandName>
+											<ExtendedTooltip name="БудущийПериод1РасширеннаяПодсказка" id="129"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<RadioButtonField name="Переключатель" id="26">
+									<DataPath>Переключатель</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>День</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">День</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Неделя</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Неделя</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Месяц</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Месяц</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПереключательКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ПереключательРасширеннаяПодсказка" id="28"/>
+									<Events>
+										<Event name="OnChange">ПереключательПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="Группа1" id="99">
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Group>AlwaysHorizontal</Group>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="100"/>
+									<ChildItems>
+										<InputField name="ВремяКалендаряС" id="96">
+											<DataPath>ВремяКалендаряС</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВремяКалендаряСКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ВремяКалендаряСРасширеннаяПодсказка" id="98"/>
+											<Events>
+												<Event name="OnChange">ПереключательПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВремяКалендаряПо" id="93">
+											<DataPath>ВремяКалендаряПо</DataPath>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ВремяКалендаряПоКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ВремяКалендаряПоРасширеннаяПодсказка" id="95"/>
+											<Events>
+												<Event name="OnChange">ПереключательПриИзменении</Event>
+											</Events>
+										</InputField>
+										<Button name="ПредварительныйПросмотр" id="135">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Item.Планировщик.StandardCommand.Preview</CommandName>
+											<ExtendedTooltip name="ПредварительныйПросмотрРасширеннаяПодсказка" id="136"/>
+										</Button>
+										<Button name="Печать" id="137">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Item.Планировщик.StandardCommand.Print</CommandName>
+											<ExtendedTooltip name="ПечатьРасширеннаяПодсказка" id="138"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<PlannerField name="Планировщик" id="1">
+							<DataPath>Планировщик</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Height>15</Height>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<ContextMenu name="ПланировщикКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ПланировщикРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="BeforeCreate">ПланировщикПередСозданием</Event>
+								<Event name="OnCurrentRepresentationPeriodChange">ПланировщикПриСменеТекущегоПериодаОтображения</Event>
+								<Event name="OnEditEnd">ПланировщикПриОкончанииРедактирования</Event>
+								<Event name="Drag">ПланировщикПеретаскивание</Event>
+								<Event name="BeforeStartQuickEdit">ПланировщикПередНачаломБыстрогоРедактирования</Event>
+								<Event name="Selection">ПланировщикВыбор</Event>
+							</Events>
+						</PlannerField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УЗ_Календарь</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Планировщик" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планировщик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:pl="http://v8.1c.ru/8.3/data/planner">pl:Planner</v8:Type>
+			</Type>
+			<Settings xmlns:pl="http://v8.1c.ru/8.3/data/planner" xsi:type="pl:Planner">
+				<pl:item>
+					<pl:value xsi:nil="true"/>
+					<pl:text>Встреча</pl:text>
+					<pl:tooltip/>
+					<pl:begin>2016-09-04T01:00:00</pl:begin>
+					<pl:end>2016-09-04T04:00:00</pl:end>
+					<pl:borderColor>auto</pl:borderColor>
+					<pl:backColor>auto</pl:backColor>
+					<pl:textColor>auto</pl:textColor>
+					<pl:font kind="AutoFont"/>
+					<pl:dimensionValues/>
+					<pl:replacementDate>0001-01-01T00:00:00</pl:replacementDate>
+					<pl:deleted>false</pl:deleted>
+					<pl:id>ce5ad6b8-c4c0-4be4-a23c-aaf94b75c650</pl:id>
+					<pl:textFormatted>false</pl:textFormatted>
+					<pl:border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+					</pl:border>
+					<pl:editMode>EnableEdit</pl:editMode>
+				</pl:item>
+				<pl:borderColor>#0000FF</pl:borderColor>
+				<pl:backColor>auto</pl:backColor>
+				<pl:textColor>#000000</pl:textColor>
+				<pl:lineColor>#0000FF</pl:lineColor>
+				<pl:font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
+				<pl:beginOfRepresentationPeriod>0001-01-01T00:00:00</pl:beginOfRepresentationPeriod>
+				<pl:endOfRepresentationPeriod>0001-01-01T00:00:00</pl:endOfRepresentationPeriod>
+				<pl:alignElementsOfTimeScale>true</pl:alignElementsOfTimeScale>
+				<pl:displayTimeScaleWrapHeaders>true</pl:displayTimeScaleWrapHeaders>
+				<pl:displayWrapHeaders>true</pl:displayWrapHeaders>
+				<pl:timeScaleWrapHeadersFormat>
+					<v8:item>
+						<v8:lang>#</v8:lang>
+						<v8:content>ДФ='ddd dd MMM yyy'</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ДФ='ddd dd MMM yyy'</v8:content>
+					</v8:item>
+				</pl:timeScaleWrapHeadersFormat>
+				<pl:periodicVariantUnit>Hour</pl:periodicVariantUnit>
+				<pl:periodicVariantRepetition>48</pl:periodicVariantRepetition>
+				<pl:timeScaleWrapBeginIndent>8</pl:timeScaleWrapBeginIndent>
+				<pl:timeScaleWrapEndIndent>4</pl:timeScaleWrapEndIndent>
+				<pl:timeScale>
+					<placement xmlns="http://v8.1c.ru/8.2/data/chart">Left</placement>
+					<level xmlns="http://v8.1c.ru/8.2/data/chart">
+						<measure>Minute</measure>
+						<interval>30</interval>
+						<show>true</show>
+						<line width="1" gap="false">
+							<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+						</line>
+						<scaleColor>auto</scaleColor>
+						<dayFormatRule>MonthDay</dayFormatRule>
+						<format>
+							<v8:item>
+								<v8:lang>#</v8:lang>
+								<v8:content>DF="HH:mm"</v8:content>
+							</v8:item>
+						</format>
+						<labels>
+							<ticks>0</ticks>
+						</labels>
+						<backColor>auto</backColor>
+						<textColor>auto</textColor>
+						<showPereodicalLabels>true</showPereodicalLabels>
+					</level>
+					<transparent xmlns="http://v8.1c.ru/8.2/data/chart">false</transparent>
+					<backColor xmlns="http://v8.1c.ru/8.2/data/chart">auto</backColor>
+					<textColor xmlns="http://v8.1c.ru/8.2/data/chart">auto</textColor>
+					<currentLevel xmlns="http://v8.1c.ru/8.2/data/chart">0</currentLevel>
+				</pl:timeScale>
+				<pl:period>
+					<pl:begin>2020-07-19T00:00:00</pl:begin>
+					<pl:end>2020-07-19T23:59:59</pl:end>
+				</pl:period>
+				<pl:displayCurrentDate>true</pl:displayCurrentDate>
+				<pl:itemsTimeRepresentation>DontDisplay</pl:itemsTimeRepresentation>
+				<pl:itemsBehaviorWhenSpaceInsufficient>ShowAllItems</pl:itemsBehaviorWhenSpaceInsufficient>
+				<pl:autoMinColumnWidth>true</pl:autoMinColumnWidth>
+				<pl:autoMinRowHeight>true</pl:autoMinRowHeight>
+				<pl:minColumnWidth>0</pl:minColumnWidth>
+				<pl:minRowHeight>0</pl:minRowHeight>
+				<pl:fixDimensionsHeader>auto</pl:fixDimensionsHeader>
+				<pl:fixTimeScaleHeader>auto</pl:fixTimeScaleHeader>
+				<pl:border width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</pl:border>
+				<pl:newItemsTextType>String</pl:newItemsTextType>
+			</Settings>
+		</Attribute>
+		<Attribute name="Календарь" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<Save>
+				<Field>3/0</Field>
+				<Field>3/1</Field>
+				<Field>3/2</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КалендарьПоследняяДата" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь последняя дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТЗЗанятыеДаты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗЗанятые даты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Переключатель" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Переключатель</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Цвет" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет раскраски брать из</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>Цвет</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтображатьНапоминания" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напоминания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтображатьНапоминания</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Педагог" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Педагог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Педагог</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПредметОбучения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет обучения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПредметОбучения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ГруппаОбучения" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обучения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ГруппаОбучения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПоложениеШкалыВремениТекст" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Положение шкалы времени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПоложениеШкалыВремениТекст</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрПедагог" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Педагог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрПедагог</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрПомещение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помещение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_Помещения</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрПомещение</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрГруппаОбучения" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обучения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ГруппыОбучения</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрГруппаОбучения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СкрытьНастройки" id="16">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>СкрытьНастройки</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВремяКалендаряС" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>время с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ВремяКалендаряС</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВремяКалендаряПо" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>-</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>ВремяКалендаряПо</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="НеГруппироватьПомещения" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не отображать помещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>НеГруппироватьПомещения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтображатьВсеПомещения" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить все помещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтображатьВсеПомещения</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Ученики" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ученики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Ученики</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ФильтрУченик" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ученик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+			</Type>
+			<Save>
+				<Field>ФильтрУченик</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтатусУрока" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус урока</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_Статусы</v8:Type>
+			</Type>
+			<Save>
+				<Field>СтатусУрока</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПредыдущийПериод" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПредыдущийПериод</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="БудущийПериод" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вперед</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Будущий период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>БудущийПериод</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сегодня" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодня</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сегодня</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить (F5)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

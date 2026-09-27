@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<DataProcessor uuid="86763591-bd3e-52c1-b0ae-0a0b3ff55a3f">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.УЗ_ВыборWebЦвета" category="Object">
+				<xr:TypeId>19359273-9041-5695-8385-4689cb3fd635</xr:TypeId>
+				<xr:ValueId>1fec1adf-fcf1-5436-8ae4-4c9d16a96f3b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.УЗ_ВыборWebЦвета" category="Manager">
+				<xr:TypeId>3afa8f37-7497-5552-a2c4-3882ac4dd24b</xr:TypeId>
+				<xr:ValueId>de3751d7-3362-5619-904b-c453a82e5bc9</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УЗ_ВыборWebЦвета</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор web цвета</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.УЗ_ВыборWebЦвета.Form.ПалитраWebЦветовУправляемая</DefaultForm>
+			<AuxiliaryForm>DataProcessor.УЗ_ВыборWebЦвета.Form.ФормаДемоУправляемая</AuxiliaryForm>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаДемоУправляемая</Form>
+			<Form>ПалитраWebЦветовУправляемая</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

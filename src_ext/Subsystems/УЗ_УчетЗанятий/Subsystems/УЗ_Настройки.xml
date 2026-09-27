@@ -16,6 +16,7 @@
 			<Explanation/>
 			<Picture/>
 			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ОбработкаФото</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Настройки</xr:Item>
 			</Content>
 		</Properties>

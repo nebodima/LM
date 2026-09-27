@@ -191,8 +191,8 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm/>
-			<DefaultListForm/>
+			<DefaultObjectForm>Document.УЗ_Урок.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.УЗ_Урок.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -1050,6 +1050,9 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Form>ФормаДокумента</Form>
+			<Form>ФормаСписка</Form>
+			<Form>ПомощникСозданияУроков</Form>
 			<TabularSection uuid="5648d4cf-c9c6-5160-9a58-f1b0d8b89ac0">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.УЗ_Урок.Ученики" category="TabularSection">

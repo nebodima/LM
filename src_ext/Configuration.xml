@@ -63,6 +63,8 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>УЗ_УчетЗанятий</Subsystem>
+			<CommonPicture>УЗ_Больше</CommonPicture>
+			<CommonPicture>УЗ_Меньше</CommonPicture>
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<CommonModule>УЗ_Общий</CommonModule>
 			<CommonModule>УЗ_ОбщийКлиентСервер</CommonModule>
@@ -70,6 +72,7 @@
 			<CommonModule>УЗ_Сервер</CommonModule>
 			<CommonModule>УЗ_Среда</CommonModule>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
+			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
 			<Catalog>Организации</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>УЗ_Абонемент</Catalog>
@@ -100,6 +103,20 @@
 			<DocumentJournal>УЗ_КассовыйЖурнал</DocumentJournal>
 			<DocumentJournal>УЗ_ОбщийЖурнал</DocumentJournal>
 			<Enum>УЗ_ВидыОпераций</Enum>
+			<Report>УЗ_АналитикаПоУченикам</Report>
+			<Report>УЗ_ВедомостьПоКассе</Report>
+			<Report>УЗ_ВедомостьПоКассеДляМенеджеров</Report>
+			<Report>УЗ_Взаиморасчеты</Report>
+			<Report>УЗ_ДвиженияДокумента</Report>
+			<Report>УЗ_ОтчетПоДисконтнымКартам</Report>
+			<Report>УЗ_Расходы</Report>
+			<Report>УЗ_РасчетыПоЗарплате</Report>
+			<Report>УЗ_Явки_2</Report>
+			<DataProcessor>УЗ_ВыборWebЦвета</DataProcessor>
+			<DataProcessor>УЗ_ИзменениеУроков</DataProcessor>
+			<DataProcessor>УЗ_Календарь</DataProcessor>
+			<DataProcessor>УЗ_ОбработкаФото</DataProcessor>
+			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
 			<InformationRegister>УЗ_Настройки</InformationRegister>
 			<InformationRegister>УЗ_НастройкиПочты</InformationRegister>
 			<InformationRegister>УЗ_Оповещения</InformationRegister>

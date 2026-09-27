@@ -15,7 +15,17 @@
 			<UseOneCommand>false</UseOneCommand>
 			<Explanation/>
 			<Picture/>
-			<Content/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_АналитикаПоУченикам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_ВедомостьПоКассе</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_ВедомостьПоКассеДляМенеджеров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_Взаиморасчеты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_ДвиженияДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_ОтчетПоДисконтнымКартам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_Расходы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_РасчетыПоЗарплате</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_Явки_2</xr:Item>
+			</Content>
 		</Properties>
 		<ChildObjects/>
 	</Subsystem>

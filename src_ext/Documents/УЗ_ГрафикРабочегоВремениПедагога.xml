@@ -194,7 +194,7 @@
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm/>
+			<DefaultObjectForm>Document.УЗ_ГрафикРабочегоВремениПедагога.Form.ФормаДокумента</DefaultObjectForm>
 			<DefaultListForm/>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -1338,6 +1338,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Attribute>
+			<Form>ФормаДокумента</Form>
 			<TabularSection uuid="1e32d934-68a8-53e9-876a-d25f1a8d4ceb">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.УЗ_ГрафикРабочегоВремениПедагога.ТЧ" category="TabularSection">
