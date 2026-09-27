@@ -44,7 +44,6 @@
 					</Title>
 					<Group>Vertical</Group>
 					<Representation>StrongSeparation</Representation>
-					<BackColor>#FFFF99</BackColor>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="20"/>
 					<ChildItems>
 						<CheckBoxField name="Активно" id="37">
@@ -58,7 +57,6 @@
 							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<Height>3</Height>
-							<BackColor>#E4E4E4</BackColor>
 							<ContextMenu name="ИзменятьСтатусКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="ИзменятьСтатусРасширеннаяПодсказка" id="15"/>
 						</InputField>
@@ -73,7 +71,7 @@
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Примеры формул для изменениея статуса:</v8:content>
+											<v8:content>Примеры формул для изменения статуса:</v8:content>
 										</v8:item>
 									</Title>
 									<ContextMenu name="ДекорацияПримерКонтекстноеМеню" id="17"/>
@@ -81,7 +79,6 @@
 								</LabelDecoration>
 								<LabelDecoration name="ДекорацияПример1" id="23">
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<TextColor>#0000FF</TextColor>
 									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<Title formatted="false">
 										<v8:item>
@@ -94,7 +91,6 @@
 								</LabelDecoration>
 								<LabelDecoration name="ДекорацияПример2" id="31">
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<TextColor>#0000FF</TextColor>
 									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<Title formatted="false">
 										<v8:item>
@@ -107,7 +103,6 @@
 								</LabelDecoration>
 								<LabelDecoration name="ДекорацияПример3" id="34">
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<TextColor>#0000FF</TextColor>
 									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<Title formatted="false">
 										<v8:item>
@@ -136,11 +131,11 @@
 							<ExtendedTooltip name="ЗащитаОтИзмененийРасширеннаяПодсказка" id="9"/>
 						</CheckBoxField>
 						<LabelDecoration name="Декорация1" id="28">
-							<TextColor>#808080</TextColor>
+							<TextColor>style:ToolTipTextColor</TextColor>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>(запрещает смену статуса у ФизЛица)</v8:content>
+									<v8:content>(запрещает смену статуса у физ. лица)</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="Декорация1КонтекстноеМеню" id="29"/>

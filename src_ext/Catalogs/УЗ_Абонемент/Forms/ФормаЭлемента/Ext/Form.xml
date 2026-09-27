@@ -161,6 +161,44 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
+										<UsualGroup name="Группа4" id="137">
+											<Group>AlwaysHorizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="138"/>
+											<ChildItems>
+												<InputField name="ФизЛицо" id="55">
+													<DataPath>Объект.ФизЛицо</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Width>20</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<ContextMenu name="ФизЛицоКонтекстноеМеню" id="56"/>
+													<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="57"/>
+													<Events>
+														<Event name="OnChange">ФизЛицоПриИзменении</Event>
+													</Events>
+												</InputField>
+												<Button name="ИзменитьФизЛицо" id="139">
+													<Type>Hyperlink</Type>
+													<CommandName>Form.Command.ИзменитьФизЛицо</CommandName>
+													<ExtendedTooltip name="ИзменитьФизЛицоРасширеннаяПодсказка" id="140"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<InputField name="ПредметОбучения" id="10">
+											<DataPath>Объект.ПредметОбучения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предмет</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
+										</InputField>
 										<UsualGroup name="Группа12" id="321">
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
@@ -203,6 +241,18 @@
 																	<ChildItems>
 																		<InputField name="КоличествоЗанятий" id="330">
 																			<DataPath>Объект.КоличествоЗанятий</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Уроков</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Количество уроков по абонементу</v8:content>
+																				</v8:item>
+																			</ToolTip>
 																			<ClearButton>true</ClearButton>
 																			<SpinButton>true</SpinButton>
 																			<ContextMenu name="КоличествоЗанятийКонтекстноеМеню" id="331"/>
@@ -213,6 +263,18 @@
 																		</InputField>
 																		<InputField name="КоличествоЧасов" id="363">
 																			<DataPath>Объект.КоличествоЧасов</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Часов</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Количество часов по абонементу</v8:content>
+																				</v8:item>
+																			</ToolTip>
 																			<ClearButton>true</ClearButton>
 																			<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="364"/>
 																			<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="365"/>
@@ -251,41 +313,6 @@
 													<ContextMenu name="ФотоКонтекстноеМеню" id="247"/>
 													<ExtendedTooltip name="ФотоРасширеннаяПодсказка" id="248"/>
 												</PictureField>
-												<UsualGroup name="Группа4" id="137">
-													<Group>AlwaysHorizontal</Group>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="138"/>
-													<ChildItems>
-														<InputField name="ФизЛицо" id="55">
-															<DataPath>Объект.ФизЛицо</DataPath>
-															<ReadOnly>true</ReadOnly>
-															<ContextMenu name="ФизЛицоКонтекстноеМеню" id="56"/>
-															<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="57"/>
-															<Events>
-																<Event name="OnChange">ФизЛицоПриИзменении</Event>
-															</Events>
-														</InputField>
-														<Button name="ИзменитьФизЛицо" id="139">
-															<Type>Hyperlink</Type>
-															<CommandName>Form.Command.ИзменитьФизЛицо</CommandName>
-															<ExtendedTooltip name="ИзменитьФизЛицоРасширеннаяПодсказка" id="140"/>
-														</Button>
-													</ChildItems>
-												</UsualGroup>
-												<InputField name="ПредметОбучения" id="10">
-													<DataPath>Объект.ПредметОбучения</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<HorizontalStretch>false</HorizontalStretch>
-													<InputHint>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Предмет обучения</v8:content>
-														</v8:item>
-													</InputHint>
-													<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
-													<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
-												</InputField>
 												<InputField name="Комментарий" id="25">
 													<DataPath>Объект.Комментарий</DataPath>
 													<TitleLocation>None</TitleLocation>

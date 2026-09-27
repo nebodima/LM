@@ -47,6 +47,8 @@
 						<InputField name="Код" id="4">
 							<DataPath>Объект.Code</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<Width>5</Width>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="КодКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="6"/>
 						</InputField>

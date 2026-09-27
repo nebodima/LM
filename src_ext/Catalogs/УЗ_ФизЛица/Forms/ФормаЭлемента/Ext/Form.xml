@@ -208,19 +208,57 @@
 														<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<CheckBoxField name="Пол" id="189">
+												<InputField name="Пол" id="189">
 													<DataPath>Объект.Пол</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<CheckBoxType>Tumbler</CheckBoxType>
-													<EditFormat>
+													<Width>6</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<Format>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>БЛ=Жен.; БИ=Муж.</v8:content>
 														</v8:item>
-													</EditFormat>
+													</Format>
+													<ChooseType>false</ChooseType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Муж.</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:boolean">true</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Жен.</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:boolean">false</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пол</v8:content>
+														</v8:item>
+													</InputHint>
 													<ContextMenu name="ПолКонтекстноеМеню" id="190"/>
 													<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="191"/>
-												</CheckBoxField>
+												</InputField>
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа2" id="480">
@@ -370,7 +408,6 @@
 											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="484"/>
 										</LabelDecoration>
 										<UsualGroup name="Группа4" id="475">
-											<Width>36</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
@@ -396,50 +433,42 @@
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ОповещатьРасширеннаяПодсказка" id="142"/>
 													<ChildItems>
-														<CheckBoxField name="ОповеститьПоТелефону" id="135">
-															<DataPath>Объект.ОповеститьПоТелефону</DataPath>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Оповещать по тел.</v8:content>
-																</v8:item>
-															</Title>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОповеститьПоТелефонуКонтекстноеМеню" id="136"/>
-															<ExtendedTooltip name="ОповеститьПоТелефонуРасширеннаяПодсказка" id="137"/>
-														</CheckBoxField>
 														<LabelDecoration name="Декорация4" id="496">
 															<Title formatted="false">
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>l</v8:content>
+																	<v8:content>Оповещать:</v8:content>
 																</v8:item>
 															</Title>
 															<ContextMenu name="Декорация4КонтекстноеМеню" id="497"/>
 															<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="498"/>
 														</LabelDecoration>
+														<CheckBoxField name="ОповеститьПоТелефону" id="135">
+															<DataPath>Объект.ОповеститьПоТелефону</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>по телефону</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ОповеститьПоТелефонуКонтекстноеМеню" id="136"/>
+															<ExtendedTooltip name="ОповеститьПоТелефонуРасширеннаяПодсказка" id="137"/>
+														</CheckBoxField>
 														<CheckBoxField name="ОповеститьПоSMS" id="132">
 															<DataPath>Объект.ОповеститьПоSMS</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>sms</v8:content>
+																	<v8:content>SMS</v8:content>
 																</v8:item>
 															</Title>
+															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ОповеститьПоSMSКонтекстноеМеню" id="133"/>
 															<ExtendedTooltip name="ОповеститьПоSMSРасширеннаяПодсказка" id="134"/>
 														</CheckBoxField>
-														<LabelDecoration name="Декорация5" id="499">
-															<Title formatted="false">
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>l</v8:content>
-																</v8:item>
-															</Title>
-															<ContextMenu name="Декорация5КонтекстноеМеню" id="500"/>
-															<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="501"/>
-														</LabelDecoration>
 														<CheckBoxField name="ОповеститьПоEmail" id="129">
 															<DataPath>Объект.ОповеститьПоEmail</DataPath>
 															<Title>
@@ -448,6 +477,7 @@
 																	<v8:content>e-mail</v8:content>
 																</v8:item>
 															</Title>
+															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ОповеститьПоEmailКонтекстноеМеню" id="130"/>
 															<ExtendedTooltip name="ОповеститьПоEmailРасширеннаяПодсказка" id="131"/>
@@ -475,6 +505,7 @@
 															<DataPath>Объект.Телефон</DataPath>
 															<TitleLocation>None</TitleLocation>
 															<EditMode>EnterOnInput</EditMode>
+															<Width>28</Width>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -520,6 +551,7 @@
 															<DataPath>Объект.EMail</DataPath>
 															<TitleLocation>None</TitleLocation>
 															<EditMode>EnterOnInput</EditMode>
+															<Width>28</Width>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -580,6 +612,7 @@
 																</v8:item>
 															</Title>
 															<TitleLocation>None</TitleLocation>
+															<Width>28</Width>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -596,6 +629,14 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация8" id="547">
 											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>style:AccentColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заметка</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
 											<BackColor>web:Gainsboro</BackColor>
 											<ContextMenu name="Декорация8КонтекстноеМеню" id="548"/>
 											<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="549"/>
@@ -603,8 +644,8 @@
 										<InputField name="Заметки" id="318">
 											<DataPath>Объект.Заметки</DataPath>
 											<TitleLocation>None</TitleLocation>
+											<Width>30</Width>
 											<Height>2</Height>
-											<HorizontalStretch>false</HorizontalStretch>
 											<VerticalStretch>false</VerticalStretch>
 											<InputHint>
 												<v8:item>
@@ -630,7 +671,7 @@
 											<v8:content>Группа фото</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Width>30</Width>
+									<Width>19</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<Group>Vertical</Group>
 									<VerticalSpacing>Half</VerticalSpacing>
@@ -764,7 +805,6 @@
 												<LabelField name="ОстатокДенегПоТарифу1" id="538">
 													<DataPath>ОстатокДенегПоТарифу</DataPath>
 													<HorizontalAlign>Right</HorizontalAlign>
-													<Width>10</Width>
 													<HorizontalStretch>true</HorizontalStretch>
 													<MarkNegatives>true</MarkNegatives>
 													<Hiperlink>true</Hiperlink>
@@ -788,7 +828,6 @@
 												</LabelField>
 												<LabelField name="ВсегоУроковПоТарифу" id="564">
 													<DataPath>ВсегоУроковПоТарифу</DataPath>
-													<Width>10</Width>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<TextColor>style:FieldSelectionBackColor</TextColor>
@@ -800,7 +839,6 @@
 												</LabelField>
 												<LabelField name="ВсегоЯвокПоТарифу" id="567">
 													<DataPath>ВсегоЯвокПоТарифу</DataPath>
-													<Width>10</Width>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<TextColor>style:FieldSelectionBackColor</TextColor>
@@ -872,8 +910,6 @@
 													<Representation>List</Representation>
 													<CommandBarLocation>None</CommandBarLocation>
 													<ReadOnly>true</ReadOnly>
-													<Width>30</Width>
-													<MaxWidth>18</MaxWidth>
 													<Height>2</Height>
 													<Header>false</Header>
 													<HorizontalLines>false</HorizontalLines>
@@ -941,6 +977,7 @@
 															<DataPath>Долги.Предмет</DataPath>
 															<EditMode>EnterOnInput</EditMode>
 															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<Width>9</Width>
 															<ContextMenu name="ДолгиПредметКонтекстноеМеню" id="518"/>
 															<ExtendedTooltip name="ДолгиПредметРасширеннаяПодсказка" id="519"/>
 														</InputField>
@@ -949,6 +986,7 @@
 															<EditMode>EnterOnInput</EditMode>
 															<CellHyperlink>true</CellHyperlink>
 															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<Width>8</Width>
 															<Format>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>

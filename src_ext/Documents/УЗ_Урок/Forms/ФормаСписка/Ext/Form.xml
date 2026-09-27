@@ -356,7 +356,7 @@
 									<v8:content>№</v8:content>
 								</v8:item>
 							</Title>
-							<Width>1</Width>
+							<Width>6</Width>
 							<TextColor>#999999</TextColor>
 							<ContextMenu name="НомерКонтекстноеМеню" id="435"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="436"/>
@@ -377,10 +377,11 @@
 								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
+							<Width>12</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ДФ='dd.MM.yyyy (HH:mm)'</v8:content>
+									<v8:content>ДФ='dd.MM.yy HH:mm'</v8:content>
 								</v8:item>
 							</Format>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
@@ -415,11 +416,17 @@
 									<v8:content>До</v8:content>
 								</v8:item>
 							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Окончание урока</v8:content>
+								</v8:item>
+							</ToolTip>
 							<HeaderPicture>
 								<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>4</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -434,7 +441,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Кол. ч.</v8:content>
+									<v8:content>Часов</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -447,7 +454,7 @@
 								<xr:Ref>StdPicture.SetTime</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>4</Width>
 							<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="41"/>
 							<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="42"/>
 						</LabelField>
@@ -475,7 +482,7 @@
 						</LabelField>
 						<LabelField name="Статус" id="417">
 							<DataPath>Список.Статус</DataPath>
-							<Width>1</Width>
+							<Width>6</Width>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="418"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="419"/>
 						</LabelField>
@@ -491,7 +498,7 @@
 								<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>9</Width>
 							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="226"/>
 							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="227"/>
 						</LabelField>
@@ -507,13 +514,13 @@
 								<xr:Ref>StdPicture.ChartOfAccounts</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>10</Width>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="36"/>
 						</LabelField>
 						<LabelField name="Тариф" id="440">
 							<DataPath>Список.Тариф</DataPath>
-							<Width>1</Width>
+							<Width>8</Width>
 							<ContextMenu name="ТарифКонтекстноеМеню" id="441"/>
 							<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="442"/>
 						</LabelField>
@@ -524,14 +531,14 @@
 								<xr:Ref>StdPicture.User</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>12</Width>
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="39"/>
 						</LabelField>
 						<LabelField name="НачисленияПедагогу" id="429">
 							<DataPath>Список.НачисленияПедагогу</DataPath>
-							<Width>1</Width>
+							<Width>8</Width>
 							<ContextMenu name="НачисленияПедагогуКонтекстноеМеню" id="430"/>
 							<ExtendedTooltip name="НачисленияПедагогуРасширеннаяПодсказка" id="431"/>
 						</LabelField>
@@ -541,7 +548,7 @@
 								<xr:Ref>StdPicture.ExternalDataSourceCube</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>8</Width>
 							<ContextMenu name="ПомещениеКонтекстноеМеню" id="212"/>
 							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="213"/>
 						</LabelField>
@@ -551,7 +558,7 @@
 								<xr:Ref>StdPicture.DebitCredit</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</HeaderPicture>
-							<Width>1</Width>
+							<Width>8</Width>
 							<ContextMenu name="СуммаКонтекстноеМеню" id="215"/>
 							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="216"/>
 						</LabelField>

@@ -28,6 +28,12 @@
 	<ChildItems>
 		<InputField name="Родитель" id="99">
 			<DataPath>Объект.Parent</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
 			<ContextMenu name="РодительКонтекстноеМеню" id="100"/>
 			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="101"/>
 		</InputField>
