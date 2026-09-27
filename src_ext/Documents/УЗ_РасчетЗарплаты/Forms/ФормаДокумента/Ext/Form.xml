@@ -128,7 +128,13 @@
 									<ReadOnly>true</ReadOnly>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-									<Width>6</Width>
+									<Width>12</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
 									<TextColor>#339966</TextColor>
 									<ContextMenu name="ОстатокВКассеКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="ОстатокВКассеРасширеннаяПодсказка" id="90"/>
@@ -321,6 +327,18 @@
 						</CheckBoxField>
 						<LabelField name="РКОСумма" id="206">
 							<DataPath>Объект.РКО.СуммаДокумента</DataPath>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выплачено по РКО</v8:content>
+									</v8:item>
+								</Title>
+								<Format>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=2; ЧН=0,00</v8:content>
+									</v8:item>
+								</Format>
 							<ContextMenu name="РКОСуммаКонтекстноеМеню" id="207"/>
 							<ExtendedTooltip name="РКОСуммаРасширеннаяПодсказка" id="208"/>
 						</LabelField>

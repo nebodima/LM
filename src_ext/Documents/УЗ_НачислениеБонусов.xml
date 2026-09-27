@@ -523,7 +523,6 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
-			<Template>Печать</Template>
 			<Command uuid="56b034f2-0cdd-59a6-a12c-f40917f596eb">
 				<Properties>
 					<Name>Печать</Name>

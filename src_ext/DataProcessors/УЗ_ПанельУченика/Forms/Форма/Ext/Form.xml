@@ -107,6 +107,8 @@
 								</UsualGroup>
 								<Table name="АктивныеГруппыОбучения" id="83">
 									<Representation>List</Representation>
+									<HeaderHeight>2</HeaderHeight>
+									<HorizontalScrollBar>DontUse</HorizontalScrollBar>
 									<HorizontalLines>false</HorizontalLines>
 									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -185,6 +187,7 @@
 										<InputField name="АктивныеГруппыОбученияГруппаОбучения" id="99">
 											<DataPath>АктивныеГруппыОбучения.ГруппаОбучения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>11</Width>
 											<AutoMarkIncomplete>true</AutoMarkIncomplete>
 											<ContextMenu name="АктивныеГруппыОбученияГруппаОбученияКонтекстноеМеню" id="100"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияГруппаОбученияРасширеннаяПодсказка" id="101"/>
@@ -192,6 +195,7 @@
 										<LabelField name="АктивныеГруппыОбученияЗадолженность" id="180">
 											<DataPath>АктивныеГруппыОбучения.Задолженность</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
 											<CellHyperlink>true</CellHyperlink>
 											<Hiperlink>true</Hiperlink>
 											<ContextMenu name="АктивныеГруппыОбученияЗадолженностьКонтекстноеМеню" id="181"/>
@@ -207,6 +211,7 @@
 										<InputField name="АктивныеГруппыОбученияДействие" id="105">
 											<DataPath>АктивныеГруппыОбучения.Действие</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>9</Width>
 											<DropListButton>true</DropListButton>
 											<ClearButton>true</ClearButton>
 											<ListChoiceMode>true</ListChoiceMode>
@@ -294,6 +299,7 @@
 										<LabelField name="АктивныеГруппыОбученияПериод" id="112">
 											<DataPath>АктивныеГруппыОбучения.Период</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
 											<CellHyperlink>true</CellHyperlink>
 											<Hiperlink>true</Hiperlink>
 											<TextColor>#339966</TextColor>
@@ -303,12 +309,20 @@
 										<LabelField name="АктивныеГруппыОбученияКолУроков" id="183">
 											<DataPath>АктивныеГруппыОбучения.КолУроков</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>4</Width>
 											<ContextMenu name="АктивныеГруппыОбученияКолУроковКонтекстноеМеню" id="184"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияКолУроковРасширеннаяПодсказка" id="185"/>
 										</LabelField>
 										<InputField name="АктивныеГруппыОбученияУрокРавен" id="177">
 											<DataPath>АктивныеГруппыОбучения.УрокРавен</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Длительность одного занятия группы; при счёте уроков для скидки 1 час — один урок</v8:content>
+												</v8:item>
+											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
 											<ListChoiceMode>true</ListChoiceMode>
 											<ChoiceList>
 												<xr:Item>
@@ -395,7 +409,14 @@
 										</InputField>
 										<CheckBoxField name="АктивныеГруппыОбученияУрок9Скидка" id="165">
 											<DataPath>АктивныеГруппыОбучения.Урок9Скидка</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Каждый 9-й урок по группе — со скидкой из колонки «Скидка»</v8:content>
+												</v8:item>
+											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="АктивныеГруппыОбученияУрок9СкидкаКонтекстноеМеню" id="166"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияУрок9СкидкаРасширеннаяПодсказка" id="167"/>
@@ -403,6 +424,7 @@
 										<InputField name="АктивныеГруппыОбученияСкидка" id="168">
 											<DataPath>АктивныеГруппыОбучения.Скидка</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<Width>6</Width>
 											<ContextMenu name="АктивныеГруппыОбученияСкидкаКонтекстноеМеню" id="169"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияСкидкаРасширеннаяПодсказка" id="170"/>
 										</InputField>
@@ -416,7 +438,7 @@
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Активные группы обучения группа перемещение</v8:content>
+													<v8:content>Перенести деньги ученика с одного предмета на другой</v8:content>
 												</v8:item>
 											</ToolTip>
 											<Group>Horizontal</Group>
@@ -427,18 +449,21 @@
 												<InputField name="АктивныеГруппыОбученияПредметОбученияОтправитель" id="186">
 													<DataPath>АктивныеГруппыОбучения.ПредметОбученияОтправитель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>6</Width>
 													<ContextMenu name="АктивныеГруппыОбученияПредметОбученияОтправительКонтекстноеМеню" id="187"/>
 													<ExtendedTooltip name="АктивныеГруппыОбученияПредметОбученияОтправительРасширеннаяПодсказка" id="188"/>
 												</InputField>
 												<InputField name="АктивныеГруппыОбученияПредметОбученияПолучатель" id="189">
 													<DataPath>АктивныеГруппыОбучения.ПредметОбученияПолучатель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>6</Width>
 													<ContextMenu name="АктивныеГруппыОбученияПредметОбученияПолучательКонтекстноеМеню" id="190"/>
 													<ExtendedTooltip name="АктивныеГруппыОбученияПредметОбученияПолучательРасширеннаяПодсказка" id="191"/>
 												</InputField>
 												<InputField name="АктивныеГруппыОбученияСумма" id="194">
 													<DataPath>АктивныеГруппыОбучения.Сумма</DataPath>
 													<EditMode>EnterOnInput</EditMode>
+													<Width>6</Width>
 													<ContextMenu name="АктивныеГруппыОбученияСуммаКонтекстноеМеню" id="195"/>
 													<ExtendedTooltip name="АктивныеГруппыОбученияСуммаРасширеннаяПодсказка" id="196"/>
 												</InputField>
@@ -815,7 +840,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>9 Урок = скидка</v8:content>
+							<v8:content>9-й со скидкой</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -826,7 +851,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Урок равен</v8:content>
+							<v8:content>Длина урока</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -858,7 +883,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Кол уроков</v8:content>
+							<v8:content>Уроков</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -874,7 +899,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Предм. обуч. отправитель</v8:content>
+							<v8:content>Из предмета</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -885,7 +910,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Предм. обуч. получатель</v8:content>
+							<v8:content>В предмет</v8:content>
 						</v8:item>
 					</Title>
 					<Type>

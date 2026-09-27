@@ -38,19 +38,19 @@
 		<columnsItem>
 			<index>4</index>
 			<column>
-				<formatIndex>4</formatIndex>
+				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>5</index>
 			<column>
-				<formatIndex>4</formatIndex>
+				<formatIndex>3</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
 			<index>6</index>
 			<column>
-				<formatIndex>3</formatIndex>
+				<formatIndex>4</formatIndex>
 			</column>
 		</columnsItem>
 		<columnsItem>
@@ -1028,16 +1028,16 @@
 	<font faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
-		<width>160</width>
-	</format>
-	<format>
-		<width>120</width>
+		<width>128</width>
 	</format>
 	<format>
 		<width>104</width>
 	</format>
 	<format>
-		<width>112</width>
+		<width>88</width>
+	</format>
+	<format>
+		<width>80</width>
 	</format>
 	<format>
 		<font>0</font>

@@ -78,10 +78,22 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЧасыОборот</dataPath>
 			<field>ЧасыОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЧасыРасход</dataPath>
 			<field>ЧасыРасход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов списано</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Педагог</dataPath>
@@ -93,10 +105,22 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЧасыПриход</dataPath>
 			<field>ЧасыПриход</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов пришло</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЧасыНачальныйОстаток</dataPath>
 			<field>ЧасыНачальныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов на начало</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:balance>true</dcscom:balance>
 				<dcscom:balanceGroupName>Часы</dcscom:balanceGroupName>
@@ -106,6 +130,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ЧасыКонечныйОстаток</dataPath>
 			<field>ЧасыКонечныйОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов на конец</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:balance>true</dcscom:balance>
 				<dcscom:balanceGroupName>Часы</dcscom:balanceGroupName>
@@ -115,6 +145,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>СуммаОборот</dataPath>
 			<field>СуммаОборот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма за период</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Тариф</dataPath>
@@ -172,6 +208,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ПредметОбучения</dataPath>
 			<field>ПредметОбучения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предмет</v8:content>
+				</v8:item>
+			</title>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -179,6 +221,12 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ГруппаОбучения</dataPath>
 			<field>ГруппаОбучения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обучения</v8:content>
+				</v8:item>
+			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
@@ -205,7 +253,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол уроков нач остаток</v8:content>
+					<v8:content>Уроков на начало</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -235,7 +283,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол уроков приход</v8:content>
+					<v8:content>Уроков пришло</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -245,7 +293,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол уроков расход</v8:content>
+					<v8:content>Уроков списано</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -275,7 +323,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол явок расход</v8:content>
+					<v8:content>Явок списано</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -300,7 +348,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол явок нач ост</v8:content>
+					<v8:content>Явок на начало</v8:content>
 				</v8:item>
 			</title>
 			<role>
@@ -315,7 +363,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол явок приход</v8:content>
+					<v8:content>Явок пришло</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -493,7 +541,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Взаиморасчеты</v8:content>
+				<v8:content>По ученикам</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -524,7 +572,7 @@
 						<dcsset:lwsTitle>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Гр. обучения</v8:content>
+								<v8:content>Группа обучения</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 					</dcsset:item>
@@ -683,14 +731,17 @@
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Заголовок</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType"/>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Взаиморасчеты по ученикам</v8:content>
+						</v8:item>
+					</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
@@ -742,7 +793,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Взаиморасчеты (по гр. обучения)</v8:content>
+				<v8:content>По группам обучения</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -773,7 +824,7 @@
 						<dcsset:lwsTitle>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Гр. обучения</v8:content>
+								<v8:content>Группа обучения</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 					</dcsset:item>
@@ -932,14 +983,17 @@
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Заголовок</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType"/>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Взаиморасчеты по группам обучения</v8:content>
+						</v8:item>
+					</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
@@ -991,7 +1045,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Взаиморасчеты по преподавателям</v8:content>
+				<v8:content>По педагогам</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -1022,7 +1076,7 @@
 						<dcsset:lwsTitle>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Г. обучения</v8:content>
+								<v8:content>Группа обучения</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 					</dcsset:item>
@@ -1170,14 +1224,17 @@
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Заголовок</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType"/>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Взаиморасчеты по педагогам</v8:content>
+						</v8:item>
+					</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
@@ -1229,7 +1286,7 @@
 		<dcsset:presentation xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Взаиморасчеты (только новые ученики)</v8:content>
+				<v8:content>Только новые ученики</v8:content>
 			</v8:item>
 		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
@@ -1261,7 +1318,7 @@
 						<dcsset:lwsTitle>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Гр. лбучения</v8:content>
+								<v8:content>Группа обучения</v8:content>
 							</v8:item>
 						</dcsset:lwsTitle>
 					</dcsset:item>
@@ -1419,14 +1476,17 @@
 					</dcscor:item>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
 					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Заголовок</dcscor:parameter>
-					<dcscor:value xsi:type="v8:LocalStringType"/>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Взаиморасчеты: только новые ученики</v8:content>
+						</v8:item>
+					</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
