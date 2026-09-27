@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Catalog uuid="0c9e0a00-0000-4000-8000-000000000031">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogRef.УЗ_Кассы" category="Ref">
+				<xr:TypeId>0c9e0a00-0000-4000-8000-000000000032</xr:TypeId>
+				<xr:ValueId>0c9e0a00-0000-4000-8000-000000000033</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УЗ_Кассы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кассы</v8:content>
+				</v8:item>
+			</Synonym>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="0c9e0a00-0000-4000-8000-000000000034">
+				<Properties>
+					<Name>Ответственный</Name>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="0c9e0a00-0000-4000-8000-000000000035">
+				<Properties>
+					<Name>Организация</Name>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Properties>
+			</Attribute>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

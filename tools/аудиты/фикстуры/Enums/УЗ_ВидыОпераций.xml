@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Enum uuid="0c9e0a00-0000-4000-8000-000000000041">
+		<Properties>
+			<Name>УЗ_ВидыОпераций</Name>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="0c9e0a00-0000-4000-8000-000000000042">
+				<Properties>
+					<Name>Приход</Name>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="0c9e0a00-0000-4000-8000-000000000043">
+				<Properties>
+					<Name>Расход</Name>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

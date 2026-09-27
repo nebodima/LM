@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.11">
+	<Item id="9738f3a2-ab35-5462-bccb-c86cd80d3c2e">
+		<Name>Скидки</Name>
+		<Code xsi:type="xs:decimal">2</Code>
+		<Description>Скидки</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+	<Item id="9fdc601c-4bf8-5969-9e3b-e639de854692">
+		<Name>Тарифы</Name>
+		<Code xsi:type="xs:decimal">1</Code>
+		<Description>Тарифы</Description>
+		<IsFolder>true</IsFolder>
+	</Item>
+</PredefinedData>
