@@ -50,6 +50,12 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаНапомнить" id="193">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="194"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

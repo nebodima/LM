@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandsPlacement>
+		<Command name="Document.УЗ_Урок.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.УЗ_Календарь.StandardCommand.Open">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.УЗ_ИзменениеУроков.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="DataProcessor.УЗ_ПанельУченика.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.УЗ_Оповещения.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Document.УЗ_Урок.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УЗ_Календарь.StandardCommand.Open">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Catalog.УЗ_Абонемент.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.УЗ_ФизЛица.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УЗ_ИзменениеУроков.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DataProcessor.УЗ_ПанельУченика.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_ГрафикРабочегоВремениПедагога.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_НачисленияПедагогам.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_РасчетЗарплаты.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_НачислениеБонусов.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_СписаниеОстатков.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="DocumentJournal.УЗ_ОбщийЖурнал.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.УЗ_Оповещения.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+	</CommandsOrder>
+</CommandInterface>

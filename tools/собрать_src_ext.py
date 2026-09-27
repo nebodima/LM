@@ -2170,7 +2170,8 @@ def модель_снимка(сн):
             pass
     for отн in сн.файлы:
         части = отн.split(os.sep)
-        if части[0] == "Subsystems" and отн.endswith(".xml"):
+        # Subsystems/…/Ext/CommandInterface.xml — командный интерфейс подсистемы, а не подсистема
+        if части[0] == "Subsystems" and отн.endswith(".xml") and "Ext" not in части:
             имена = [ч for ч in части[1:] if ч != "Subsystems"]
             имена[-1] = имена[-1][:-4]
             м.подсистемы.add(".Subsystem.".join(имена))

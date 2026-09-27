@@ -182,7 +182,7 @@
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.УЗ_НачислениеБонусов.Form.ФормаДокумента</DefaultObjectForm>
-			<DefaultListForm/>
+			<DefaultListForm>Document.УЗ_НачислениеБонусов.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -390,6 +390,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаДокумента</Form>
+			<Form>ФормаСписка</Form>
 			<TabularSection uuid="79c43ecd-abc5-5fad-8438-b43a9083104c">
 				<InternalInfo>
 					<xr:GeneratedType name="DocumentTabularSection.УЗ_НачислениеБонусов.ДисконтныеКарты" category="TabularSection">
@@ -534,13 +535,13 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>FormCommandBarImportant</Group>
+					<Group>CommandGroup.УЗ_ПодменюПечать</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
 					</CommandParameterType>
 					<ParameterUseMode>Multiple</ParameterUseMode>
 					<ModifiesData>false</ModifiesData>
-					<Representation>PictureAndText</Representation>
+					<Representation>Auto</Representation>
 					<ToolTip/>
 					<Picture>
 						<xr:Ref>StdPicture.Print</xr:Ref>

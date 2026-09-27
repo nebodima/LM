@@ -90,6 +90,7 @@
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
+			<CommandGroup>УЗ_ПодменюПечать</CommandGroup>
 			<CommonForm>УЗ_СписокОтчетов</CommonForm>
 			<CommonForm>УЗ_ФормаОтчета</CommonForm>
 			<CommonForm>УЗ_НастройкиПочты</CommonForm>

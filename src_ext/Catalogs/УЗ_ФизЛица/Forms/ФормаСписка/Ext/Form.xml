@@ -22,6 +22,12 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="161"/>
 			</Button>
+			<Button name="ФормаНапомнить" id="900">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
+				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
+				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="901"/>
+			</Button>
 			<Popup name="ФормаГруппа1" id="174">
 				<Title>
 					<v8:item>

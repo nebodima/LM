@@ -117,19 +117,68 @@
 						</LabelField>
 						<LabelField name="Дата" id="19">
 							<DataPath>Список.Date</DataPath>
+							<Width>11</Width>
 							<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
 						</LabelField>
 						<LabelField name="Номер" id="22">
 							<DataPath>Список.Number</DataPath>
+							<Width>8</Width>
 							<ContextMenu name="НомерКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="24"/>
 						</LabelField>
 						<LabelField name="Тип" id="25">
 							<DataPath>Список.Type</DataPath>
 							<DefaultItem>true</DefaultItem>
+							<Width>14</Width>
 							<ContextMenu name="ТипКонтекстноеМеню" id="26"/>
 							<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+						<LabelField name="Клиент" id="38">
+							<DataPath>Список.Клиент</DataPath>
+							<ContextMenu name="КлиентКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="40"/>
+						</LabelField>
+						<LabelField name="Сумма" id="31">
+							<DataPath>Список.Сумма</DataPath>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="33"/>
+						</LabelField>
+						<LabelField name="ВидОперации" id="44">
+							<DataPath>Список.ВидОперации</DataPath>
+							<Width>12</Width>
+							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="46"/>
+						</LabelField>
+						<LabelField name="Касса" id="53">
+							<DataPath>Список.Касса</DataPath>
+							<Width>12</Width>
+							<ContextMenu name="КассаКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="55"/>
+						</LabelField>
+						<LabelField name="КассаПолучатель" id="58">
+							<DataPath>Список.КассаПолучатель</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="КассаПолучательКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="КассаПолучательРасширеннаяПодсказка" id="60"/>
+						</LabelField>
+						<LabelField name="СтатьяЗатрат" id="61">
+							<DataPath>Список.СтатьяЗатрат</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="63"/>
+						</LabelField>
+						<LabelField name="СсылкаНазначениеПлатежа" id="41">
+							<DataPath>Список.Ref.НазначениеПлатежа</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<ContextMenu name="СсылкаНазначениеПлатежаКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="СсылкаНазначениеПлатежаРасширеннаяПодсказка" id="43"/>
 						</LabelField>
 						<LabelField name="Организация" id="68">
 							<DataPath>Список.Организация</DataPath>
@@ -139,49 +188,17 @@
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="69"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="70"/>
 						</LabelField>
-						<LabelField name="Касса" id="53">
-							<DataPath>Список.Касса</DataPath>
-							<ContextMenu name="КассаКонтекстноеМеню" id="54"/>
-							<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="55"/>
-						</LabelField>
-						<LabelField name="КассаПолучатель" id="58">
-							<DataPath>Список.КассаПолучатель</DataPath>
-							<ContextMenu name="КассаПолучательКонтекстноеМеню" id="59"/>
-							<ExtendedTooltip name="КассаПолучательРасширеннаяПодсказка" id="60"/>
-						</LabelField>
-						<LabelField name="Клиент" id="38">
-							<DataPath>Список.Клиент</DataPath>
-							<ContextMenu name="КлиентКонтекстноеМеню" id="39"/>
-							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="40"/>
-						</LabelField>
-						<LabelField name="СтатьяЗатрат" id="61">
-							<DataPath>Список.СтатьяЗатрат</DataPath>
-							<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="62"/>
-							<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="63"/>
-						</LabelField>
-						<LabelField name="Сумма" id="31">
-							<DataPath>Список.Сумма</DataPath>
-							<ContextMenu name="СуммаКонтекстноеМеню" id="32"/>
-							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="33"/>
-						</LabelField>
-						<LabelField name="СсылкаНазначениеПлатежа" id="41">
-							<DataPath>Список.Ref.НазначениеПлатежа</DataPath>
-							<Height>2</Height>
-							<ContextMenu name="СсылкаНазначениеПлатежаКонтекстноеМеню" id="42"/>
-							<ExtendedTooltip name="СсылкаНазначениеПлатежаРасширеннаяПодсказка" id="43"/>
-						</LabelField>
-						<LabelField name="ВидОперации" id="44">
-							<DataPath>Список.ВидОперации</DataPath>
-							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="45"/>
-							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="46"/>
-						</LabelField>
 						<LabelField name="Автор" id="50">
 							<DataPath>Список.Автор</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<ContextMenu name="АвторКонтекстноеМеню" id="51"/>
 							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="52"/>
 						</LabelField>
 						<LabelField name="Комментарий" id="47">
 							<DataPath>Список.Комментарий</DataPath>
+							<Width>14</Width>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="48"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="49"/>
 						</LabelField>

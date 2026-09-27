@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandsPlacement>
+		<Command name="DocumentJournal.УЗ_КассовыйЖурнал.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.УЗ_Кассы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Catalog.УЗ_СтатьиДвиженияДенег.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="DocumentJournal.УЗ_КассовыйЖурнал.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_ПриходДенег.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_РасходДенег.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_ПеремещениеДенег.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Document.УЗ_ДополнительныеРасходы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Catalog.УЗ_Кассы.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="Catalog.УЗ_СтатьиДвиженияДенег.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+	</CommandsOrder>
+</CommandInterface>

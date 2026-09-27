@@ -3,11 +3,6 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаПомощникСозданияУроков" id="135">
-				<Type>CommandBarHyperlink</Type>
-				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
-				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
-			</Button>
 			<Button name="ФормаСоздать" id="52">
 				<Type>CommandBarHyperlink</Type>
 				<Representation>PictureAndText</Representation>
@@ -21,11 +16,22 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="53"/>
 			</Button>
+			<Button name="ФормаПомощникСозданияУроков" id="135">
+				<Type>CommandBarHyperlink</Type>
+				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
+				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
+			</Button>
 			<Button name="ФормаСкопировать" id="54">
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.StandardCommand.Copy</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="55"/>
+			</Button>
+			<Button name="ФормаНапомнить" id="900">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="901"/>
 			</Button>
 			<Button name="ФормаУстановитьИнтервал" id="145">
 				<Type>CommandBarHyperlink</Type>

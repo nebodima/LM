@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandsPlacement>
+		<Command name="Report.УЗ_Взаиморасчеты.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_ВедомостьПоКассе.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_ВедомостьПоКассеДляМенеджеров.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_Явки_2.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_АналитикаПоУченикам.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_РасчетыПоЗарплате.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_Расходы.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="Report.УЗ_ОтчетПоДисконтнымКартам.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+	</CommandsPlacement>
+	<CommandsOrder>
+		<Command name="Report.УЗ_Взаиморасчеты.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_ВедомостьПоКассе.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_ВедомостьПоКассеДляМенеджеров.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_Явки_2.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_АналитикаПоУченикам.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_РасчетыПоЗарплате.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_Расходы.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_ОтчетПоДисконтнымКартам.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+	</CommandsOrder>
+</CommandInterface>

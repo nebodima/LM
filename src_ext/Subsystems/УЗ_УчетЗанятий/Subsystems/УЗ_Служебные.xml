@@ -27,6 +27,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ВыборWebЦвета</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_ВидыОпераций</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ВерсииДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.УЗ_ДвиженияДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УЗ_ПанельОтчетов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

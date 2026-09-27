@@ -302,7 +302,7 @@
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.УЗ_ГруппыОбучения.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm/>
+			<DefaultListForm>Catalog.УЗ_ГруппыОбучения.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm>Catalog.УЗ_ГруппыОбучения.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -1713,6 +1713,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
+			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
 		</ChildObjects>
 	</Catalog>

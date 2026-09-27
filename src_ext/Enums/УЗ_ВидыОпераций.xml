@@ -98,7 +98,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Внутренняя касса (Движения только по кассе)</v8:content>
+							<v8:content>Внутренняя касса</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -110,7 +110,7 @@
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Касса ученики (Движения по взаиморасчетам и кассе)</v8:content>
+							<v8:content>Касса ученики</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>

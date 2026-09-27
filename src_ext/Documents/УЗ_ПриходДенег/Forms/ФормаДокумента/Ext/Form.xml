@@ -57,12 +57,6 @@
 							<xr:Ref>StdPicture.Print</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>ПКО</v8:content>
-							</v8:item>
-						</Title>
 						<ShapeRepresentation>WhenActive</ShapeRepresentation>
 						<ExtendedTooltip name="ФормаДокументПКОПечатьПКОРасширеннаяПодсказка" id="162"/>
 					</Button>
@@ -78,6 +72,12 @@
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
 				<ExtendedTooltip name="ОткрытьВзаиморасчетыРасширеннаяПодсказка" id="183"/>
+			</Button>
+			<Button name="ФормаНапомнить" id="274">
+				<Type>CommandBarButton</Type>
+				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="275"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -187,14 +187,14 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительгые реквизиты</v8:content>
+							<v8:content>Дополнительные реквизиты</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Vertical</Group>
 					<CollapsedRepresentationTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительгые реквизиты (развернуть)</v8:content>
+							<v8:content>Дополнительные реквизиты (развернуть)</v8:content>
 						</v8:item>
 					</CollapsedRepresentationTitle>
 					<Representation>None</Representation>
@@ -203,9 +203,14 @@
 					<ChildItems>
 						<InputField name="ВидОперации" id="72">
 							<DataPath>Объект.ВидОперации</DataPath>
-							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
-							<BackColor>style:ToolTipBackColor</BackColor>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Касса ученики — деньги ученика: движение по кассе и взаиморасчётам с учеником (оплата уроков). Внутренняя касса — только движение по кассе.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="73"/>
 							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="74"/>
 						</InputField>
@@ -232,15 +237,8 @@
 						</InputField>
 						<InputField name="Организация" id="165">
 							<DataPath>Объект.Организация</DataPath>
-							<TitleLocation>None</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
-							<InputHint>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Организация</v8:content>
-								</v8:item>
-							</InputHint>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="166"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="167"/>
 						</InputField>
@@ -252,15 +250,8 @@
 									<v8:content>Подразделение</v8:content>
 								</v8:item>
 							</Title>
-							<TitleLocation>None</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
-							<InputHint>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Подразделение</v8:content>
-								</v8:item>
-							</InputHint>
 							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>
 							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="170"/>
 							<Events>
@@ -275,16 +266,9 @@
 									<v8:content>Статья затрат</v8:content>
 								</v8:item>
 							</Title>
-							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
-							<InputHint>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Статья затрат</v8:content>
-								</v8:item>
-							</InputHint>
 							<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="204"/>
 							<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="205"/>
 							<Events>
@@ -293,15 +277,8 @@
 						</InputField>
 						<InputField name="Абонемент" id="267">
 							<DataPath>Объект.Абонемент</DataPath>
-							<TitleLocation>Right</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
-							<InputHint>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Абонемент</v8:content>
-								</v8:item>
-							</InputHint>
 							<ContextMenu name="АбонементКонтекстноеМеню" id="268"/>
 							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="269"/>
 						</InputField>
@@ -350,7 +327,7 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Выбираются последние неоплаченные уроки на текущую дату по выбранному Направлению (предмету обучения)</v8:content>
+									<v8:content>Подставит последние неоплаченные уроки ученика на текущую дату по выбранному предмету</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ДекорацияТекстНазначениеПлатежаКонтекстноеМеню" id="185"/>
@@ -396,7 +373,7 @@
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ДисконтнаяКарта</v8:content>
+							<v8:content>Дисконтная карта</v8:content>
 						</v8:item>
 					</InputHint>
 					<ContextMenu name="ДисконтнаяКартаКонтекстноеМеню" id="214"/>
