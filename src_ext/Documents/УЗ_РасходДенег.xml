@@ -175,6 +175,7 @@
 			<Characteristics/>
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ФизЛица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты</xr:Item>
 			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.УЗ_РасходДенег.StandardAttribute.Number</xr:Field>
