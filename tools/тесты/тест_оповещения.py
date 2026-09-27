@@ -18,7 +18,7 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from сеанс import Тест  # noqa: E402
+from сеанс import запустить  # noqa: E402
 
 ПРЕДЕЛ_МС = 50
 
@@ -171,6 +171,4 @@ def сценарий(т):
 
 
 if __name__ == "__main__":
-    т = Тест("оповещения")
-    т.выполнить(сценарий)
-    sys.exit(т.итог())
+    запустить("оповещения", сценарий)
