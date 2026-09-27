@@ -102,6 +102,12 @@
 							<ChildItems>
 								<LabelField name="ДеревоСсылка" id="18">
 									<DataPath>Дерево.Ref</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группы тарифов</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="ДеревоСсылкаКонтекстноеМеню" id="19"/>
 									<ExtendedTooltip name="ДеревоСсылкаРасширеннаяПодсказка" id="20"/>
 								</LabelField>

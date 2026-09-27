@@ -78,23 +78,37 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="40"/>
 					<ChildItems>
-						<LabelDecoration name="ДекорацияЦвет" id="41">
-							<Title formatted="false">
+						<InputField name="ЦветОтображения" id="44">
+							<DataPath>ЦветОтображения</DataPath>
+							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Цвет отображения</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ДекорацияЦветКонтекстноеМеню" id="42"/>
-							<ExtendedTooltip name="ДекорацияЦветРасширеннаяПодсказка" id="43"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цвет предмета в календаре и в форме урока</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ЦветОтображенияКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ЦветОтображенияРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="StartChoice">ЦветОтображенияНачалоВыбора</Event>
+								<Event name="Clearing">ЦветОтображенияОчистка</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ОбразецЦвета" id="47">
+							<Width>3</Width>
+							<Height>1</Height>
+							<ContextMenu name="ОбразецЦветаКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ОбразецЦветаРасширеннаяПодсказка" id="49"/>
 						</LabelDecoration>
-						<Button name="ПриНажатииКнопкиВыборЦвета" id="37">
-							<Type>UsualButton</Type>
-							<Width>30</Width>
-							<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="38"/>
-						</Button>
 						<InputField name="Цвет" id="30">
 							<DataPath>Объект.Цвет</DataPath>
 							<UserVisible>
@@ -175,6 +189,21 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Фото</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветОтображения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет отображения</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

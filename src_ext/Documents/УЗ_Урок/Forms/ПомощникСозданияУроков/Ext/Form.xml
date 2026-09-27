@@ -224,20 +224,21 @@
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа9" id="244">
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="245"/>
 											<ChildItems>
 												<InputField name="ПредметОбучения" id="134">
 													<DataPath>ПредметОбучения</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<InputHint>
+													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Если не указана "Группа обучения"</v8:content>
+															<v8:content>Заполняется из группы обучения. Если группа не выбрана — укажите вручную</v8:content>
 														</v8:item>
-													</InputHint>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
 													<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="135"/>
 													<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="136"/>
 												</InputField>
@@ -254,20 +255,21 @@
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа10" id="246">
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="247"/>
 											<ChildItems>
 												<InputField name="Педагог" id="125">
 													<DataPath>Педагог</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<InputHint>
+													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Если не указана "Группа обучения"</v8:content>
+															<v8:content>Заполняется из группы обучения. Если группа не выбрана — укажите вручную</v8:content>
 														</v8:item>
-													</InputHint>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
 													<ContextMenu name="ПедагогКонтекстноеМеню" id="126"/>
 													<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="127"/>
 												</InputField>
@@ -294,20 +296,21 @@
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа2" id="248">
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="249"/>
 											<ChildItems>
 												<InputField name="Помещение" id="131">
 													<DataPath>Помещение</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<InputHint>
+													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Если не указана "Группа обучения"</v8:content>
+															<v8:content>Заполняется из группы обучения. Если группа не выбрана — укажите вручную</v8:content>
 														</v8:item>
-													</InputHint>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
 													<ContextMenu name="ПомещениеКонтекстноеМеню" id="132"/>
 													<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="133"/>
 												</InputField>
@@ -442,20 +445,21 @@
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа4" id="381">
+											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="382"/>
 											<ChildItems>
 												<InputField name="Тариф" id="378">
 													<DataPath>Тариф</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ClearButton>true</ClearButton>
-													<InputHint>
+													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Если не указана "Группа обучения"</v8:content>
+															<v8:content>Заполняется из группы обучения. Если группа не выбрана — укажите вручную</v8:content>
 														</v8:item>
-													</InputHint>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
 													<ContextMenu name="ТарифКонтекстноеМеню" id="379"/>
 													<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="380"/>
 													<Events>
@@ -899,7 +903,7 @@
 								</v8:item>
 							</ToolTip>
 							<Picture>
-								<xr:Ref>StdPicture.DialogInformation</xr:Ref>
+								<xr:Ref>StdPicture.Information</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="Страница5РасширеннаяПодсказка" id="286"/>

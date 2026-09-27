@@ -81,7 +81,7 @@
 							</Events>
 						</InputField>
 						<LabelDecoration name="Декорация1" id="36">
-							<TextColor>#FF00FF</TextColor>
+							<TextColor>style:ToolTipTextColor</TextColor>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
