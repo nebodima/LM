@@ -16,7 +16,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from сеанс import Тест  # noqa: E402
+from сеанс import запустить  # noqa: E402
 
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ДОКУМЕНТЫ = os.path.join(КОРЕНЬ, "src_ext", "Documents")
@@ -156,6 +156,4 @@ def сценарий(т):
 
 
 if __name__ == "__main__":
-    т = Тест("печать")
-    т.выполнить(сценарий)
-    sys.exit(т.итог())
+    запустить("печать", сценарий)
