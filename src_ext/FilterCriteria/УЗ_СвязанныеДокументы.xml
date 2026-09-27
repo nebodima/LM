@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<FilterCriterion uuid="a4ae1c44-e44b-4afe-b578-5c1ef7a9c436">
+		<InternalInfo>
+			<xr:GeneratedType name="FilterCriterionManager.УЗ_СвязанныеДокументы" category="Manager">
+				<xr:TypeId>28f03fc3-5d8f-425e-a67a-ca5233fc6534</xr:TypeId>
+				<xr:ValueId>97d8d6de-b287-4e4b-a52e-37c44bcf89d8</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="FilterCriterionList.УЗ_СвязанныеДокументы" category="List">
+				<xr:TypeId>c69da187-668e-4d78-a2a2-8939b3ea3684</xr:TypeId>
+				<xr:ValueId>ed8dc85f-99d8-46b2-a31c-6ed8a618f899</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УЗ_СвязанныеДокументы</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связанные документы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Type>
+				<v8:Type>cfg:DocumentRef.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_ДополнительныеРасходы</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_НачисленияПедагогам</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_ПеремещениеДенег</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_ПриходДенег</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_РасходДенег</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_РасчетЗарплаты</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_СписаниеОстатков</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
+				<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+			</Type>
+			<UseStandardCommands>true</UseStandardCommands>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога.Attribute.Педагог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ДополнительныеРасходы.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.Педагог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.Клиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Абонемент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Родитель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.ФизЛицо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.Педагог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.РКО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.Перемещение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.TabularSection.ДД.Attribute.Документ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ТЗСписания.Attribute.Ученик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ТЗСписания.Attribute.Педагог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ДисконтныеКарты.Attribute.Ученик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ТЗСписаниеКасса.Attribute.Ученик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.Attribute.Педагог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.TabularSection.Ученики.Attribute.Ученик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.TabularSection.Ученики.Attribute.Абонемент</xr:Item>
+			</Content>
+			<DefaultForm/>
+			<AuxiliaryForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects/>
+	</FilterCriterion>
+</MetaDataObject>

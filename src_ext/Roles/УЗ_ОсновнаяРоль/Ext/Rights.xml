@@ -83,6 +83,13 @@
 		</right>
 	</object>
 	<object>
+		<name>FilterCriterion.УЗ_СвязанныеДокументы</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.УЗ_Абонемент</name>
 		<right>
 			<name>Read</name>
@@ -1826,6 +1833,17 @@
 		<name>DataProcessor.УЗ_ПанельУченика</name>
 		<right>
 			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УЗ_ДатыЗапрета</name>
+		<right>
+			<name>Read</name>
 			<value>true</value>
 		</right>
 		<right>
