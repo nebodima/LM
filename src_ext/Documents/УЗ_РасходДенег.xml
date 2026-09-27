@@ -184,7 +184,7 @@
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Document.УЗ_РасходДенег.Form.ФормаДокумента</DefaultObjectForm>
-			<DefaultListForm/>
+			<DefaultListForm>Document.УЗ_РасходДенег.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -706,6 +706,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаДокумента</Form>
+			<Form>ФормаСписка</Form>
 			<Template>ПечатьРКО</Template>
 			<Command uuid="c166b177-7096-492b-ae0d-11db8768e36a">
 				<Properties>
@@ -717,7 +718,7 @@
 						</v8:item>
 					</Synonym>
 					<Comment/>
-					<Group>FormCommandBarImportant</Group>
+					<Group>CommandGroup.УЗ_ПодменюПечать</Group>
 					<CommandParameterType>
 						<v8:Type>cfg:DocumentRef.УЗ_РасходДенег</v8:Type>
 					</CommandParameterType>

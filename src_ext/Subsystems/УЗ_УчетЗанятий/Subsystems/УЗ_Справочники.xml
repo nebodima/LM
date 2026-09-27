@@ -19,19 +19,17 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Абонемент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ГруппыОбучения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ПредметыОбучения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Тарифы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ЦеныТарифов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_СтавкиПедагогов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Помещения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Скидки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ДисконтныеКарты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Статусы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ИсточникиИнформации</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Подразделения</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Помещения</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ПредметыОбучения</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Скидки</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_СтавкиПедагогов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Статусы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Тарифы</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ФизЛица</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ЦеныТарифов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

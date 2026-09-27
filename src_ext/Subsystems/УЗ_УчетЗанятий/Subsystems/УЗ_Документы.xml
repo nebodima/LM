@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы</v8:content>
+					<v8:content>Занятия</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -19,18 +19,19 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УЗ_ПанельОтчетов</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ИзменениеУроков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_Календарь</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Оповещения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Абонемент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ФизЛица</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ИзменениеУроков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ПанельУченика</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.УЗ_ОбщийЖурнал</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Оповещения</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

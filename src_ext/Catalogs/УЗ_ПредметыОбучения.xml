@@ -298,7 +298,7 @@
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 			<DefaultObjectForm>Catalog.УЗ_ПредметыОбучения.Form.ФормаЭлемента</DefaultObjectForm>
 			<DefaultFolderForm/>
-			<DefaultListForm/>
+			<DefaultListForm>Catalog.УЗ_ПредметыОбучения.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm>Catalog.УЗ_ПредметыОбучения.Form.ФормаВыбора</DefaultChoiceForm>
 			<DefaultFolderChoiceForm/>
 			<AuxiliaryObjectForm/>
@@ -462,6 +462,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаЭлемента</Form>
+			<Form>ФормаСписка</Form>
 			<Form>ФормаВыбора</Form>
 		</ChildObjects>
 	</Catalog>

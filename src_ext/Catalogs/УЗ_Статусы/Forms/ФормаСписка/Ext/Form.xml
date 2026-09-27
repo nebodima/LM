@@ -8,6 +8,11 @@
 				<CommandName>Form.StandardCommand.Create</CommandName>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="35"/>
 			</Button>
+			<Button name="ФормаСоздатьГруппу" id="900">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.CreateFolder</CommandName>
+				<ExtendedTooltip name="ФормаСоздатьГруппуРасширеннаяПодсказка" id="901"/>
+			</Button>
 			<Button name="ФормаСкопировать" id="36">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Copy</CommandName>
@@ -119,11 +124,13 @@
 							<v8:content>Формула</v8:content>
 						</v8:item>
 					</Title>
+					<Width>25</Width>
 					<ContextMenu name="ИзменятьСтатусКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ИзменятьСтатусРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 				<LabelField name="Комментарий" id="25">
 					<DataPath>Список.Комментарий</DataPath>
+					<Width>20</Width>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="27"/>
 				</LabelField>
