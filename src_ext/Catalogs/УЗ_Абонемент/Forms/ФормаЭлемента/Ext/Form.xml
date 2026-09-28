@@ -211,6 +211,14 @@
 												<Event name="OnChange">ТарифПриИзменении</Event>
 											</Events>
 										</InputField>
+										<InputField name="Организация" id="377">
+											<DataPath>Объект.Организация</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="378"/>
+											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="379"/>
+										</InputField>
 										<UsualGroup name="Группа12" id="321">
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
@@ -536,9 +544,15 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>по</v8:content>
+																			<v8:content>возобновление</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>День, когда занятия снова идут (в паузу не входит); пусто — приостановлен бессрочно</v8:content>
+																		</v8:item>
+																	</ToolTip>
 																	<EditMode>EnterOnInput</EditMode>
 																	<ContextMenu name="ПриостановкиДатаВозобновленияКонтекстноеМеню" id="193"/>
 																	<ExtendedTooltip name="ПриостановкиДатаВозобновленияРасширеннаяПодсказка" id="194"/>
