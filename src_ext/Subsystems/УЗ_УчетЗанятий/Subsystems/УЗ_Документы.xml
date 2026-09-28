@@ -21,6 +21,7 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_Календарь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_МоиУроки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Абонемент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ФизЛица</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ИзменениеУроков</xr:Item>
