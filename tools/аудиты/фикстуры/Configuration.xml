@@ -20,6 +20,8 @@
 			<Document>УЗ_ПриходДенег</Document>
 			<Enum>УЗ_ВидыОпераций</Enum>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
+			<Report>УЗ_ОтчетПоКассе</Report>
+			<DataProcessor>УЗ_Сервис</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
