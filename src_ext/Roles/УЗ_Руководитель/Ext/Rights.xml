@@ -1918,6 +1918,17 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.УЗ_МоиУроки</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>DataProcessor.УЗ_Календарь</name>
 		<right>
 			<name>Use</name>

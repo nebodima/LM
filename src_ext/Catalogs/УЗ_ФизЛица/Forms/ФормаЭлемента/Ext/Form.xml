@@ -556,6 +556,13 @@
 													<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="368"/>
 													<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="369"/>
 												</InputField>
+												<InputField name="Пользователь" id="916">
+													<DataPath>Объект.Пользователь</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="ПользовательКонтекстноеМеню" id="917"/>
+													<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="918"/>
+												</InputField>
 												<InputField name="Скидка" id="526">
 													<DataPath>Объект.Скидка</DataPath>
 													<HorizontalStretch>false</HorizontalStretch>

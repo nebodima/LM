@@ -81,9 +81,11 @@
 			<CommonPicture>УЗ_ИЗаморозка</CommonPicture>
 			<CommonPicture>УЗ_ИПочта</CommonPicture>
 			<CommonPicture>УЗ_ИОтчет48</CommonPicture>
+			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<SessionParameter>УЗ_ПесочницаПочты</SessionParameter>
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<Role>УЗ_Руководитель</Role>
+			<Role>УЗ_Педагог</Role>
 			<FilterCriterion>УЗ_СвязанныеДокументы</FilterCriterion>
 			<CommonModule>УЗ_ДатыЗапрета</CommonModule>
 			<CommonModule>УЗ_ЗарплатаУрока</CommonModule>
@@ -155,6 +157,7 @@
 			<DataProcessor>УЗ_ВыборWebЦвета</DataProcessor>
 			<DataProcessor>УЗ_ИзменениеУроков</DataProcessor>
 			<DataProcessor>УЗ_Календарь</DataProcessor>
+			<DataProcessor>УЗ_МоиУроки</DataProcessor>
 			<DataProcessor>УЗ_ОбработкаФото</DataProcessor>
 			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
 			<DataProcessor>УЗ_РассылкаДолжникам</DataProcessor>

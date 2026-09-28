@@ -891,6 +891,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.УЗ_ФизЛица.Attribute.Пользователь</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.УЗ_ФизЛица.Attribute.СтавкаПедагога</name>
 		<right>
 			<name>Edit</name>
@@ -1764,6 +1771,17 @@
 	</object>
 	<object>
 		<name>DataProcessor.УЗ_ИзменениеУроков</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.УЗ_МоиУроки</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>

@@ -49,7 +49,6 @@ _ГРАНИЦА = r"(?<![\wЁё.])"
 # вопросы «Да/Нет», которые были до правила (28.09.2026); убирают владельцы форм — число только уменьшается
 ДОЛГ = {
     "Documents/УЗ_Урок/Forms/ФормаДокумента/Ext/Form/Module.bsl": 2,
-    "DataProcessors/УЗ_Календарь/Forms/ФормаКалендарь/Ext/Form/Module.bsl": 2,
     "DataProcessors/УЗ_ИзменениеУроков/Forms/Форма/Ext/Form/Module.bsl": 1,
     "Documents/УЗ_РасчетЗарплаты/Forms/ФормаДокумента/Ext/Form/Module.bsl": 1,
     "Catalogs/УЗ_Тарифы/Forms/ФормаЭлемента/Ext/Form/Module.bsl": 1,
