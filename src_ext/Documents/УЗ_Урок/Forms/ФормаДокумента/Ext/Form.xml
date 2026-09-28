@@ -970,6 +970,9 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="319"/>
 											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="320"/>
+											<Events>
+												<Event name="OnChange">УченикиЯвкаПриИзменении</Event>
+											</Events>
 										</CheckBoxField>
 										<InputField name="УченикиПричина" id="358">
 											<DataPath>Объект.Ученики.Причина</DataPath>

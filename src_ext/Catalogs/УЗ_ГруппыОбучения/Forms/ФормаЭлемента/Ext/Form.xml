@@ -15,6 +15,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа2" id="51">
@@ -63,6 +64,18 @@
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ТарифКонтекстноеМеню" id="123"/>
 					<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="124"/>
+				</InputField>
+				<InputField name="СтавкаПедагога" id="127">
+					<DataPath>Объект.СтавкаПедагога</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>как в карточке педагога</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="128"/>
+					<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="129"/>
 				</InputField>
 				<UsualGroup name="Группа1" id="13">
 					<Group>Vertical</Group>
