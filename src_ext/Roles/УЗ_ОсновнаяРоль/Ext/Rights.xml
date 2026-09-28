@@ -1615,7 +1615,7 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ ЛОЖЬ</condition>
+				<condition>ГДЕ ДокументОснования &lt;&gt; ЗНАЧЕНИЕ(Документ.УЗ_Урок.ПустаяСсылка)</condition>
 			</restrictionByCondition>
 		</right>
 	</object>
@@ -1813,10 +1813,6 @@
 		<name>InformationRegister.УЗ_ГраницаПросмотраКассы</name>
 		<right>
 			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
