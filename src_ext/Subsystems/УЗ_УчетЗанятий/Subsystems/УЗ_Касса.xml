@@ -24,6 +24,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ДополнительныеРасходы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Кассы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_СтатьиДвиженияДенег</xr:Item>
 			</Content>

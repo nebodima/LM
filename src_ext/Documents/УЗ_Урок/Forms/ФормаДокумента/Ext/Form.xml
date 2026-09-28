@@ -163,7 +163,7 @@
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
 							<Events>
-								<Event name="OnChange">ПлатныйПриИзменении</Event>
+								<Event name="OnChange">ПредметОбученияПриИзменении</Event>
 							</Events>
 						</InputField>
 						<InputField name="Помещение" id="329">
@@ -665,6 +665,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="725"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="726"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="СтавкаПедагога" id="742">
 							<DataPath>Объект.СтавкаПедагога</DataPath>
@@ -1052,7 +1055,29 @@
 									<Width>10</Width>
 									<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="889"/>
 									<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="890"/>
+									<Events>
+										<Event name="OnChange">УченикиАбонементПриИзменении</Event>
+									</Events>
 								</InputField>
+								<LabelField name="УченикиОстатокАбонемента" id="924">
+									<DataPath>Объект.Ученики.ОстатокАбонемента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остаток
+абонемента</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сколько занятий (часов) абонемента строки осталось по проведённым урокам — так же, как в карточке абонемента</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>8</Width>
+									<ContextMenu name="УченикиОстатокАбонементаКонтекстноеМеню" id="925"/>
+									<ExtendedTooltip name="УченикиОстатокАбонементаРасширеннаяПодсказка" id="926"/>
+								</LabelField>
 								<InputField name="УченикиТариф" id="347">
 									<DataPath>Объект.Ученики.Тариф</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -1896,6 +1921,21 @@
 								<v8:FractionDigits>2</v8:FractionDigits>
 								<v8:AllowedSign>Any</v8:AllowedSign>
 							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ОстатокАбонемента" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Остаток абонемента</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>60</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
 						</Type>
 					</Column>
 				</AdditionalColumns>

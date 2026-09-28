@@ -176,6 +176,7 @@
 			<BasedOn>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ФизЛица</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Абонемент</xr:Item>
 			</BasedOn>
 			<InputByString>
 				<xr:Field>Document.УЗ_РасходДенег.StandardAttribute.Number</xr:Field>
@@ -199,6 +200,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_СписанияСуммЗаУроки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_Касса</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_РасчетыПоЗарплате</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_Расходы</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>
 			<UnpostInPrivilegedMode>true</UnpostInPrivilegedMode>
