@@ -261,7 +261,7 @@
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>При задолженности свыше 500</v8:content>
+											<v8:content>Ученики с долгом (по всем предметам), по убыванию долга</v8:content>
 										</v8:item>
 									</ToolTip>
 									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
@@ -536,12 +536,6 @@
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="39"/>
-						</LabelField>
-						<LabelField name="НачисленияПедагогу" id="429">
-							<DataPath>Список.НачисленияПедагогу</DataPath>
-							<Width>8</Width>
-							<ContextMenu name="НачисленияПедагогуКонтекстноеМеню" id="430"/>
-							<ExtendedTooltip name="НачисленияПедагогуРасширеннаяПодсказка" id="431"/>
 						</LabelField>
 						<LabelField name="Помещение" id="211">
 							<DataPath>Список.Помещение</DataPath>
