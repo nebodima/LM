@@ -1952,15 +1952,16 @@ def файл_конфигурации(объекты):
             '\t\t\t<KeepMappingToExtendedConfigurationObjectsByIDs>true</KeepMappingToExtendedConfigurationObjectsByIDs>\n'
             '\t\t\t<NamePrefix>%s</NamePrefix>\n'
             '\t\t\t<ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>\n'
-            '\t\t\t<ScriptVariant>Russian</ScriptVariant>\n\t\t\t<DefaultRoles>\n'
-            '\t\t\t\t<xr:Item xsi:type="xr:MDObjectRef">Role.%s</xr:Item>\n\t\t\t</DefaultRoles>\n'
+            # основных ролей нет: при включённом у расширения «Использовать основные роли для всех пользователей»
+            # основная роль досталась бы КАЖДОМУ пользователю (так было на копиях БП/УТ; права_роли, 28.09.2026)
+            '\t\t\t<ScriptVariant>Russian</ScriptVariant>\n\t\t\t<DefaultRoles/>\n'
             '\t\t\t<Vendor>%s</Vendor>\n\t\t\t<Version>%s</Version>\n\t\t\t<DefaultReportForm/>\n'
             '\t\t\t<DefaultReportVariantForm/>\n\t\t\t<DefaultReportSettingsForm/>\n\t\t\t<BriefInformation/>\n'
             '\t\t\t<DetailedInformation/>\n\t\t\t<Copyright/>\n\t\t\t<VendorInformationAddress/>\n'
             '\t\t\t<ConfigurationInformationAddress/>\n\t\t</Properties>\n\t\t<ChildObjects>\n%s\t\t</ChildObjects>\n'
             '\t</Configuration>\n</MetaDataObject>'
             % (ууид("CFG|Configuration." + ИМЯ_РАСШИРЕНИЯ), вн, ИМЯ_РАСШИРЕНИЯ,
-               синоним_xml(СИНОНИМ_РАСШИРЕНИЯ, "\t\t\t"), ПРЕФИКС, РОЛЬ, ПОСТАВЩИК, ВЕРСИЯ_РАСШИРЕНИЯ, дети))
+               синоним_xml(СИНОНИМ_РАСШИРЕНИЯ, "\t\t\t"), ПРЕФИКС, ПОСТАВЩИК, ВЕРСИЯ_РАСШИРЕНИЯ, дети))
 
 
 # ----------------------------------------------------------------------------------- src_manual

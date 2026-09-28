@@ -548,6 +548,10 @@ def стиль_пробы(корень):
      заменить(ПРАВА, "<name>AccumulationRegister.УЗ_Касса</name>\n\t\t<right>\n",
               "<name>AccumulationRegister.УЗ_Касса</name>\n\t\t<right>\n\t\t\t<name>Edit</name>\n\t\t\t<value>true</value>"
               "\n\t\t</right>\n\t\t<right>\n")),
+    # 28.09.2026: основная роль расширения при «Использовать основные роли для всех пользователей» — у каждого
+    ("права_роли", "ошибки", "у расширения основная роль (DefaultRoles) — её права получит каждый пользователь",
+     заменить("Configuration.xml", "<NamePrefix>УЗ_</NamePrefix>", "<NamePrefix>УЗ_</NamePrefix><DefaultRoles>"
+              "<xr:Item xsi:type=\"xr:MDObjectRef\">Role.УЗ_ОсновнаяРоль</xr:Item></DefaultRoles>")),
     # роль педагога «только своё» (28.09.2026): документ фикстуры стоит за урок
     ("права_роли", "ошибки", "педагогу чтение урока без ограничения по текущему пользователю (видит чужие уроки)",
      заменить(ПРАВА_П, "\t\t\t<name>Read</name>\n\t\t\t<value>true</value>\n\t\t\t<restrictionByCondition>\n"
