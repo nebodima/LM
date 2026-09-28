@@ -242,7 +242,7 @@
 									<dcsset:item xsi:type="dcsset:FilterItemComparison">
 										<dcsset:left xsi:type="dcscor:Field">Тип</dcsset:left>
 										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.РКО</dcsset:right>
+										<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.УЗ_РасходДенег</dcsset:right>
 									</dcsset:item>
 									<dcsset:item xsi:type="dcsset:FilterItemComparison">
 										<dcsset:left xsi:type="dcscor:Field">Проведен</dcsset:left>
@@ -275,7 +275,7 @@
 									<dcsset:item xsi:type="dcsset:FilterItemComparison">
 										<dcsset:left xsi:type="dcscor:Field">Тип</dcsset:left>
 										<dcsset:comparisonType>Equal</dcsset:comparisonType>
-										<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.ПКО</dcsset:right>
+										<dcsset:right xsi:type="dcscor:DesignTimeValue">Документ.УЗ_ПриходДенег</dcsset:right>
 									</dcsset:item>
 									<dcsset:item xsi:type="dcsset:FilterItemComparison">
 										<dcsset:left xsi:type="dcscor:Field">Проведен</dcsset:left>

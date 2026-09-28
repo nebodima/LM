@@ -126,12 +126,6 @@
 					<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="37"/>
 				</LabelField>
-				<InputField name="НачисленияПедагог" id="38">
-					<DataPath>1/0:096ad9ca-d6a3-420f-afe3-98c112bffa6a/0:35870841-3ef9-4018-a9d5-0be24be915b5</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="НачисленияПедагогКонтекстноеМеню" id="39"/>
-					<ExtendedTooltip name="НачисленияПедагогРасширеннаяПодсказка" id="40"/>
-				</InputField>
 				<InputField name="РасходыСумма" id="62">
 					<DataPath>Объект.НачисленияПедагогам.Сумма</DataPath>
 					<EditMode>EnterOnInput</EditMode>

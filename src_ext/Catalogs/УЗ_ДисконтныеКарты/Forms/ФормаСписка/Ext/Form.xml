@@ -107,14 +107,9 @@
 							<ExtendedTooltip name="КодКартыШтрихкодРасширеннаяПодсказка" id="39"/>
 						</LabelField>
 						<LabelField name="Код" id="22">
-							<DataPath>~Список.Code</DataPath>
+							<DataPath>Список.Код</DataPath>
 							<ContextMenu name="КодКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="24"/>
-						</LabelField>
-						<LabelField name="Владелец" id="25">
-							<DataPath>~Список.Owner</DataPath>
-							<ContextMenu name="ВладелецКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="27"/>
 						</LabelField>
 						<LabelField name="Владелец1" id="51">
 							<DataPath>Список.Владелец</DataPath>

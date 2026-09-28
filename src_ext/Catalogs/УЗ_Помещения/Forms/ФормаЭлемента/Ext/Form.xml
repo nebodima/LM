@@ -66,19 +66,37 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="20"/>
 					<ChildItems>
-						<Button name="ПриНажатииКнопкиВыборЦвета" id="17">
-							<Type>UsualButton</Type>
-							<Width>30</Width>
-							<HorizontalStretch>true</HorizontalStretch>
-							<CommandName>Form.Command.ПриНажатииКнопкиВыборЦвета</CommandName>
+						<InputField name="ЦветОтображения" id="17">
+							<DataPath>ЦветОтображения</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Цвет отображения</v8:content>
 								</v8:item>
 							</Title>
-							<ExtendedTooltip name="ПриНажатииКнопкиВыборЦветаРасширеннаяПодсказка" id="18"/>
-						</Button>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цвет помещения в календаре и в форме урока</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ЦветОтображенияКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ЦветОтображенияРасширеннаяПодсказка" id="32"/>
+							<Events>
+								<Event name="StartChoice">ЦветОтображенияНачалоВыбора</Event>
+								<Event name="Clearing">ЦветОтображенияОчистка</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ОбразецЦвета" id="33">
+							<Width>3</Width>
+							<Height>1</Height>
+							<ContextMenu name="ОбразецЦветаКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ОбразецЦветаРасширеннаяПодсказка" id="35"/>
+						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
 				<InputField name="Комментарий" id="29">
@@ -105,23 +123,20 @@
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
 		</Attribute>
-	</Attributes>
-	<Commands>
-		<Command name="ПриНажатииКнопкиВыборЦвета" id="1">
+		<Attribute name="ЦветОтображения" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>При нажатии кнопки выбор цвета</v8:content>
+					<v8:content>Цвет отображения</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>При нажатии кнопки выбор цвета</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПриНажатииКнопкиВыборЦвета</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-	</Commands>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
 </Form>
