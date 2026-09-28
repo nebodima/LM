@@ -1,0 +1,789 @@
+{
+  "icon_names": 30,
+  "png_count": 60,
+  "svg_count": 60,
+  "all_unique": true,
+  "warnings": [],
+  "files": [
+    {
+      "file": "УЗ_ИУрок_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        10,
+        60,
+        61
+      ],
+      "clear_edge_px": 3,
+      "sha256": "d4fc43a8fae288df59e5d107f00a88c38dd084caf4a0cbe33a3ac17eaa100e11"
+    },
+    {
+      "file": "УЗ_ИУрок_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        32,
+        233,
+        233
+      ],
+      "clear_edge_px": 23,
+      "sha256": "103df64091b46e9e7945de8502955c93932b5ff312f9ec6de3ec954f17230a57"
+    },
+    {
+      "file": "УЗ_ИКалендарь_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        3,
+        59,
+        59
+      ],
+      "clear_edge_px": 3,
+      "sha256": "dfdd41d51cbc64779318d21463633502ab414966882216e5d8c12237d1a510b5"
+    },
+    {
+      "file": "УЗ_ИКалендарь_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        32,
+        20,
+        225,
+        233
+      ],
+      "clear_edge_px": 20,
+      "sha256": "2bd39f3f0e478c1331c80538791c85a245793016b917427b1024bd5575314f47"
+    },
+    {
+      "file": "УЗ_ИПомощник_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        5,
+        60,
+        59
+      ],
+      "clear_edge_px": 4,
+      "sha256": "a237eebf2ccf54a882900a4016511f38fc3a00a78d8996f14f8d4bd4bd08a0bf"
+    },
+    {
+      "file": "УЗ_ИПомощник_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        32,
+        20,
+        232,
+        237
+      ],
+      "clear_edge_px": 19,
+      "sha256": "27dab134f856bc93caeaf230cc59341ceeb371adc0405b78e3414037875f06ac"
+    },
+    {
+      "file": "УЗ_ИАбонемент_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        12,
+        59,
+        53
+      ],
+      "clear_edge_px": 5,
+      "sha256": "12e8b6880259b4c5e95ddd4520bcedba97d4e1b930f842cdb2ebfc1864b7df8e"
+    },
+    {
+      "file": "УЗ_ИАбонемент_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        48,
+        233,
+        209
+      ],
+      "clear_edge_px": 23,
+      "sha256": "7ccee4989176095b40099dde38b5d254e7dd0357ab1174b1d635ae2e938a75ba"
+    },
+    {
+      "file": "УЗ_ИЗаморозка_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        8,
+        5,
+        56,
+        60
+      ],
+      "clear_edge_px": 4,
+      "sha256": "16ec15aecbd926a11958bf1b7bfa84eef31fe088d6d9d091e27029e6f7c6802b"
+    },
+    {
+      "file": "УЗ_ИЗаморозка_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        29,
+        23,
+        241,
+        241
+      ],
+      "clear_edge_px": 15,
+      "sha256": "2cb46f20ecc8d6a7ddfea0018859b596e8bdb55958a4a39ca2a6983453b4ad53"
+    },
+    {
+      "file": "УЗ_ИУченик_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        10,
+        7,
+        55,
+        58
+      ],
+      "clear_edge_px": 6,
+      "sha256": "73b123b3aceb490d16d38cc84466aeb85cd4dd56147224a196c86e8e0d41414d"
+    },
+    {
+      "file": "УЗ_ИУченик_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        44,
+        33,
+        213,
+        229
+      ],
+      "clear_edge_px": 27,
+      "sha256": "de15f2c9a3f78d888a1e82a3c072976cb99d870e82fb8990e0aaeb7ee44fb096"
+    },
+    {
+      "file": "УЗ_ИПедагог_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        5,
+        6,
+        59,
+        59
+      ],
+      "clear_edge_px": 5,
+      "sha256": "100e33fc51718ae5bd3c4da50477e92143ccebeda50bc4a089129b6a8ec05059"
+    },
+    {
+      "file": "УЗ_ИПедагог_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        32,
+        233,
+        233
+      ],
+      "clear_edge_px": 23,
+      "sha256": "10753e5a8a9e4d4fe596fbf06430a814b12a053dac00f3ff361aff8d12ec485d"
+    },
+    {
+      "file": "УЗ_ИГруппа_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        5,
+        8,
+        59,
+        59
+      ],
+      "clear_edge_px": 5,
+      "sha256": "34d419fae1b116d54fff7a8169c78bb1cc99d25a2e6af2965190432b25eb245d"
+    },
+    {
+      "file": "УЗ_ИГруппа_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        32,
+        233,
+        233
+      ],
+      "clear_edge_px": 23,
+      "sha256": "166e9c71eb4abcdfe254082096df17cac3fe47dbe0d0465f8d19a949ea82e47c"
+    },
+    {
+      "file": "УЗ_ИПанельУченика_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        5,
+        8,
+        59,
+        56
+      ],
+      "clear_edge_px": 5,
+      "sha256": "e7e7e6cea2e82f2a2bbf9a9b597b57a67dcf16117b4a8f5128732bfe828a42b1"
+    },
+    {
+      "file": "УЗ_ИПанельУченика_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        40,
+        233,
+        217
+      ],
+      "clear_edge_px": 23,
+      "sha256": "d6f1567745f86ac61f069a3dfa0a485efbf9a5f14f12a12204e7648636caa91c"
+    },
+    {
+      "file": "УЗ_ИОплата_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        7,
+        61,
+        63
+      ],
+      "clear_edge_px": 1,
+      "sha256": "32c1d5854ad0c551d2aeea17a1411df582fec8dc25f400e3a55fdb613fde8cc7"
+    },
+    {
+      "file": "УЗ_ИОплата_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        28,
+        32,
+        247,
+        247
+      ],
+      "clear_edge_px": 9,
+      "sha256": "754f3068a8160d1200fab03cb41ecd79fb154dd2b4ff3e4c9c4cef1e73741082"
+    },
+    {
+      "file": "УЗ_ИВозврат_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        7,
+        63,
+        63
+      ],
+      "clear_edge_px": 1,
+      "sha256": "6f3931433a48423141b38ed15cb6f91ffc6f93ab48f6ef0ca4baaf6e3e719ed8"
+    },
+    {
+      "file": "УЗ_ИВозврат_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        28,
+        32,
+        247,
+        247
+      ],
+      "clear_edge_px": 9,
+      "sha256": "27f945650571108f76a8b779167f93ece9274f15090524693fa0832f2d0f3e33"
+    },
+    {
+      "file": "УЗ_ИПеремещение_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        4,
+        61,
+        61
+      ],
+      "clear_edge_px": 3,
+      "sha256": "f91c0e9f48cb6fe7045b247a31b20b9e8dae1be3f9b29a7bc8bb25a1b3414f69"
+    },
+    {
+      "file": "УЗ_ИПеремещение_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        28,
+        28,
+        229,
+        229
+      ],
+      "clear_edge_px": 27,
+      "sha256": "40076be31ca672c202ab56d7fb7a8d6c72c73193517b477deabb566ed8d5241e"
+    },
+    {
+      "file": "УЗ_ИНачислениеУченику_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        5,
+        8,
+        63,
+        62
+      ],
+      "clear_edge_px": 1,
+      "sha256": "3bb32bceb3fc0315f475f83bc7cc2a31c583a42859ab0dea05d9fc8ae2a2c549"
+    },
+    {
+      "file": "УЗ_ИНачислениеУченику_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        25,
+        32,
+        247,
+        246
+      ],
+      "clear_edge_px": 9,
+      "sha256": "e4beee02873e58569058548432a444b06645fa2c2d3ff698cd3b184e5fb32b9e"
+    },
+    {
+      "file": "УЗ_ИРасчетЗарплаты_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        8,
+        6,
+        61,
+        61
+      ],
+      "clear_edge_px": 3,
+      "sha256": "d865b2bbb7b296414262481f4d4ae79d62560c3d07c89992440978ae7cf5e77e"
+    },
+    {
+      "file": "УЗ_ИРасчетЗарплаты_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        40,
+        20,
+        241,
+        241
+      ],
+      "clear_edge_px": 15,
+      "sha256": "e3fdf1548775f7dfc42bf32dc271cfcb026ea929fa97133ec28f803923a0e5e5"
+    },
+    {
+      "file": "УЗ_ИВыплата_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        10,
+        61,
+        62
+      ],
+      "clear_edge_px": 2,
+      "sha256": "1a5dc8a519c139b8bd67aa8bc850eee143a9df4d9a662b8165a76c755b3c693c"
+    },
+    {
+      "file": "УЗ_ИВыплата_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        48,
+        245,
+        253
+      ],
+      "clear_edge_px": 3,
+      "sha256": "afdcbe73f2dc34dd0ed711d107396ba084053ec5b6572de22ece1aabe74847fc"
+    },
+    {
+      "file": "УЗ_ИБонусы_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        12,
+        59,
+        55
+      ],
+      "clear_edge_px": 5,
+      "sha256": "2603f39c7550342244c7eb96b0e5284c38d0a76e73bb2203796e34dd751f1fea"
+    },
+    {
+      "file": "УЗ_ИБонусы_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        48,
+        233,
+        209
+      ],
+      "clear_edge_px": 23,
+      "sha256": "ac7338ff10ac4ddf6fe4d20e006b73eb6e2fd7db43c178fcdac6eea7fc61d616"
+    },
+    {
+      "file": "УЗ_ИЯвка_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        5,
+        8,
+        62,
+        58
+      ],
+      "clear_edge_px": 2,
+      "sha256": "699c02bce379c4d5a628f35a23f1e62391c0f0a2249fb2a2ba22bfe46178c10f"
+    },
+    {
+      "file": "УЗ_ИЯвка_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        34,
+        250,
+        229
+      ],
+      "clear_edge_px": 6,
+      "sha256": "6f5b99f9bf0eb664c36b7a1a6dffd4598c5a8fbe6ef45fd3c0bdd331ceacca64"
+    },
+    {
+      "file": "УЗ_ИКОплате_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        6,
+        62,
+        62
+      ],
+      "clear_edge_px": 2,
+      "sha256": "97ce41301fa6b20f25d5692ff06107bbe8876211ffbee10df9f7e430cacbbcb2"
+    },
+    {
+      "file": "УЗ_ИКОплате_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        28,
+        28,
+        247,
+        247
+      ],
+      "clear_edge_px": 9,
+      "sha256": "a489c2166f69e84fe57622659bc05913ac57e17472f91e47fafdc9fd5970a5a0"
+    },
+    {
+      "file": "УЗ_ИНапомнить_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        8,
+        6,
+        57,
+        60
+      ],
+      "clear_edge_px": 4,
+      "sha256": "52e3642a13dc90536514741644c66410b83f522c0d20f4549454f38ef4e65195"
+    },
+    {
+      "file": "УЗ_ИНапомнить_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        39,
+        24,
+        217,
+        231
+      ],
+      "clear_edge_px": 24,
+      "sha256": "7796e6a827ddd0c3012a5bff206cc9064a798021b8cf07dabc7fe7557e554f58"
+    },
+    {
+      "file": "УЗ_ИДолг_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        6,
+        62,
+        56
+      ],
+      "clear_edge_px": 2,
+      "sha256": "c78cd5db963faabe1c15bf0f5da47466457540713070e63155f20d998e1c66aa"
+    },
+    {
+      "file": "УЗ_ИДолг_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        28,
+        28,
+        249,
+        225
+      ],
+      "clear_edge_px": 7,
+      "sha256": "16d4125d5e20c818ad0bf61b2eb8be4e2fc5d66aa0258ac50b5c7ff3d31b8c42"
+    },
+    {
+      "file": "УЗ_ИПереплата_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        6,
+        62,
+        62
+      ],
+      "clear_edge_px": 2,
+      "sha256": "cdbb844e046a26ce3e0eb44b393c396b8e5321cc7b6b24b0118f66081f18c45e"
+    },
+    {
+      "file": "УЗ_ИПереплата_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        28,
+        28,
+        248,
+        248
+      ],
+      "clear_edge_px": 8,
+      "sha256": "701f54eaeef66f7e6b851f16090bab22e29370cb5261c79808b382cc091e0215"
+    },
+    {
+      "file": "УЗ_ИВыбыл_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        8,
+        60,
+        59
+      ],
+      "clear_edge_px": 4,
+      "sha256": "675e9589cca9cd32b1263e15553b4ee4efed841ead59439895ff2ccea4a0f053"
+    },
+    {
+      "file": "УЗ_ИВыбыл_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        36,
+        237,
+        229
+      ],
+      "clear_edge_px": 19,
+      "sha256": "7dc01e3fb0a673be55be8c54b9161a4fd0bef5becb38f298346b2f88ce40f0ba"
+    },
+    {
+      "file": "УЗ_ИПеревод_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        8,
+        62,
+        59
+      ],
+      "clear_edge_px": 2,
+      "sha256": "913e5cccd2b8726380faf0ace2886546f0b99a7d90ed5742ceeef7eb8a50b960"
+    },
+    {
+      "file": "УЗ_ИПеревод_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        36,
+        240,
+        229
+      ],
+      "clear_edge_px": 16,
+      "sha256": "dc09af3c07e93e25f4b27fc1b2c218a6588dd92f6ea01ada9b02535ffae47f07"
+    },
+    {
+      "file": "УЗ_ИПродлить_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        3,
+        59,
+        59
+      ],
+      "clear_edge_px": 3,
+      "sha256": "5e92abbf1eee784bbc9db824007ac8a7f34772ca65daf7121c5963b292e284e7"
+    },
+    {
+      "file": "УЗ_ИПродлить_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        32,
+        20,
+        246,
+        238
+      ],
+      "clear_edge_px": 10,
+      "sha256": "ee29ed3c2c78490742246e3d98698d2a3fa4a1555173ecff7e0df711a06f611b"
+    },
+    {
+      "file": "УЗ_ИПечатьПКО_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        3,
+        61,
+        61
+      ],
+      "clear_edge_px": 3,
+      "sha256": "b52a3efe38192b773eec85fc1438bfd89a5b929fefe5b3d9f8b45628e4cc5abe"
+    },
+    {
+      "file": "УЗ_ИПечатьПКО_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        24,
+        233,
+        232
+      ],
+      "clear_edge_px": 23,
+      "sha256": "361bf01169ead32fd34ed13d3ffaab8ca7273f11e5b6059cfe30b70c809991d3"
+    },
+    {
+      "file": "УЗ_ИОтчет_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        6,
+        62,
+        60
+      ],
+      "clear_edge_px": 2,
+      "sha256": "c793a65b16870a434e3da56b20a3aac451b00861de091d70d6f28b76b638abdc"
+    },
+    {
+      "file": "УЗ_ИОтчет_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        24,
+        233,
+        233
+      ],
+      "clear_edge_px": 23,
+      "sha256": "15aeac4b01a47da0bbea989510801630009b799cebdae1fabf00c5b9f52c2c90"
+    },
+    {
+      "file": "УЗ_ИНастройки_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        4,
+        60,
+        61
+      ],
+      "clear_edge_px": 3,
+      "sha256": "063d46233992fd006c8217ffb766f5938ebd3a0beac6a28143c328a3750f2dbc"
+    },
+    {
+      "file": "УЗ_ИНастройки_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        24,
+        233,
+        233
+      ],
+      "clear_edge_px": 23,
+      "sha256": "a9201bf38618f84d440d4e57727b195c0246c659b215b59d22b7a907fc8c6af7"
+    },
+    {
+      "file": "УЗ_ИПочта_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        4,
+        12,
+        61,
+        53
+      ],
+      "clear_edge_px": 3,
+      "sha256": "fccbc116a5f0851cf0f1889d2f9e7fc15dccd7d888e91ea3802d407f32ea6b9b"
+    },
+    {
+      "file": "УЗ_ИПочта_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        52,
+        233,
+        213
+      ],
+      "clear_edge_px": 23,
+      "sha256": "6a2074376d6c311aa9361c46cbd3c447a6332c0bf5131ca37b2c549d50345dca"
+    },
+    {
+      "file": "УЗ_ИДатаЗапрета_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        6,
+        3,
+        61,
+        61
+      ],
+      "clear_edge_px": 3,
+      "sha256": "34095eaa5e7fe0afdc97456d7aa581ff451476e384308c6945914f783e2fa8c3"
+    },
+    {
+      "file": "УЗ_ИДатаЗапрета_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        32,
+        20,
+        237,
+        241
+      ],
+      "clear_edge_px": 15,
+      "sha256": "594139b9d12d0023da15175eff7d5d10c2ea41af4cb4674d61e6f3ec627eb47d"
+    },
+    {
+      "file": "УЗ_ИФото_16.png",
+      "size": 64,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        5,
+        10,
+        59,
+        57
+      ],
+      "clear_edge_px": 5,
+      "sha256": "2ff94c6986383af28cf8b86d687b3f7e4c5eb13259cbd0177be5b932c2879cfc"
+    },
+    {
+      "file": "УЗ_ИФото_48.png",
+      "size": 256,
+      "mode": "RGBA",
+      "alpha_bbox_gt24": [
+        24,
+        40,
+        233,
+        225
+      ],
+      "clear_edge_px": 23,
+      "sha256": "44e57e043f96fbaa2081f3bfbb0a6fd017e84e135bc5709cae26f07197ad4b8b"
+    }
+  ]
+}
