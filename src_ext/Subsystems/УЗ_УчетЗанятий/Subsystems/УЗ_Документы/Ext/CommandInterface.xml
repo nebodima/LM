@@ -41,6 +41,9 @@
 		<Command name="DataProcessor.УЗ_ПанельУченика.StandardCommand.Open">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="Document.УЗ_ПереводУченика.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="Document.УЗ_ГрафикРабочегоВремениПедагога.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>

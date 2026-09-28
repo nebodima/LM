@@ -154,6 +154,7 @@
 			<Document>УЗ_НачислениеУченику</Document>
 			<Document>УЗ_НачислениеБонусов</Document>
 			<Document>УЗ_НачисленияПедагогам</Document>
+			<Document>УЗ_ПереводУченика</Document>
 			<Document>УЗ_ПеремещениеДенег</Document>
 			<Document>УЗ_ПриходДенег</Document>
 			<Document>УЗ_РасходДенег</Document>
@@ -186,6 +187,7 @@
 			<InformationRegister>УЗ_Настройки</InformationRegister>
 			<InformationRegister>УЗ_НастройкиПочты</InformationRegister>
 			<InformationRegister>УЗ_Оповещения</InformationRegister>
+			<InformationRegister>УЗ_СоставГрупп</InformationRegister>
 			<InformationRegister>УЗ_ЦеныТарифов</InformationRegister>
 			<InformationRegister>УЗ_УрокиВРасчетахЗарплаты</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>

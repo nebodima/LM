@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПровестиИЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
+				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаПровести" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="7">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="9">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ГруппаИз" id="11">
+							<DataPath>Объект.ГруппаИз</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>пусто — зачисление</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ГруппаИзКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ГруппаИзРасширеннаяПодсказка" id="13"/>
+							<Events>
+								<Event name="OnChange">ГруппаИзПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ГруппаВ" id="14">
+							<DataPath>Объект.ГруппаВ</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>пусто — выбытие</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ГруппаВКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ГруппаВРасширеннаяПодсказка" id="16"/>
+							<Events>
+								<Event name="OnChange">ГруппаВПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Причина" id="17">
+							<DataPath>Объект.Причина</DataPath>
+							<ContextMenu name="ПричинаКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ПричинаРасширеннаяПодсказка" id="19"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="20">
+					<Group>Vertical</Group>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="22">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<InputField name="Номер" id="24">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>11</MaxWidth>
+									<ContextMenu name="НомерКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="26"/>
+								</InputField>
+								<InputField name="Дата" id="27">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действует с</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>С этого дня ученики в новой группе: уроки-планы с этого дня перестраиваются, проведённые уроки не меняются</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="29"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="30">
+							<DataPath>Объект.Организация</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="32"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Ученики" id="33">
+			<Representation>List</Representation>
+			<HeightInTableRows>7</HeightInTableRows>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>Объект.Ученики</DataPath>
+			<CommandSet>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УченикиКонтекстноеМеню" id="34"/>
+			<AutoCommandBar name="УченикиКоманднаяПанель" id="35">
+				<ChildItems>
+					<Button name="УченикиЗаполнитьИзГруппы" id="36">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ЗаполнитьИзГруппы</CommandName>
+						<ExtendedTooltip name="УченикиЗаполнитьИзГруппыРасширеннаяПодсказка" id="37"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УченикиРасширеннаяПодсказка" id="38"/>
+			<SearchStringAddition name="УченикиСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>Ученики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УченикиСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="УченикиСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УченикиСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>Ученики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УченикиСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="УченикиСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УченикиУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>Ученики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УченикиУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="УченикиУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">УченикиПриИзменении</Event>
+				<Event name="AfterDeleteRow">УченикиПослеУдаления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="УченикиНомерСтроки" id="48">
+					<DataPath>Объект.Ученики.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>3</Width>
+					<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<InputField name="УченикиУченик" id="51">
+					<DataPath>Объект.Ученики.Ученик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>30</Width>
+					<ContextMenu name="УченикиУченикКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="53"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ЧтоПроизойдет" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Что произойдёт</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ЧтоПроизойдетРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<UsualGroup name="СостояниеИОбновить" id="56">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СостояниеИОбновитьРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<LabelField name="СостояниеПлана" id="58">
+							<DataPath>СостояниеПлана</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>2</Height>
+							<ContextMenu name="СостояниеПланаКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="СостояниеПланаРасширеннаяПодсказка" id="60"/>
+						</LabelField>
+						<Button name="ОбновитьПредпросмотр" id="61">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОбновитьПредпросмотр</CommandName>
+							<ExtendedTooltip name="ОбновитьПредпросмотрРасширеннаяПодсказка" id="62"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ТаблицыПлана" id="63">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ТаблицыПланаРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<Table name="Убрать" id="65">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<HeightInTableRows>7</HeightInTableRows>
+							<DataPath>Убрать</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уйдут из уроков-планов</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="УбратьКонтекстноеМеню" id="66"/>
+							<AutoCommandBar name="УбратьКоманднаяПанель" id="67">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="УбратьРасширеннаяПодсказка" id="68"/>
+							<SearchStringAddition name="УбратьСтрокаПоиска" id="69">
+								<AdditionSource>
+									<Item>Убрать</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УбратьСтрокаПоискаКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="УбратьСтрокаПоискаРасширеннаяПодсказка" id="71"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УбратьСостояниеПросмотра" id="72">
+								<AdditionSource>
+									<Item>Убрать</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УбратьСостояниеПросмотраКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="УбратьСостояниеПросмотраРасширеннаяПодсказка" id="74"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УбратьУправлениеПоиском" id="75">
+								<AdditionSource>
+									<Item>Убрать</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УбратьУправлениеПоискомКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="УбратьУправлениеПоискомРасширеннаяПодсказка" id="77"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УбратьУрок" id="78">
+									<DataPath>Убрать.Урок</DataPath>
+									<Width>20</Width>
+									<ContextMenu name="УбратьУрокКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="УбратьУрокРасширеннаяПодсказка" id="80"/>
+								</LabelField>
+								<LabelField name="УбратьУченик" id="81">
+									<DataPath>Убрать.Ученик</DataPath>
+									<Width>20</Width>
+									<ContextMenu name="УбратьУченикКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="УбратьУченикРасширеннаяПодсказка" id="83"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<Table name="Добавить" id="84">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<HeightInTableRows>7</HeightInTableRows>
+							<DataPath>Добавить</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Добавятся в уроки-планы</v8:content>
+								</v8:item>
+							</Title>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДобавитьКонтекстноеМеню" id="85"/>
+							<AutoCommandBar name="ДобавитьКоманднаяПанель" id="86">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДобавитьРасширеннаяПодсказка" id="87"/>
+							<SearchStringAddition name="ДобавитьСтрокаПоиска" id="88">
+								<AdditionSource>
+									<Item>Добавить</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДобавитьСтрокаПоискаКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="ДобавитьСтрокаПоискаРасширеннаяПодсказка" id="90"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДобавитьСостояниеПросмотра" id="91">
+								<AdditionSource>
+									<Item>Добавить</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДобавитьСостояниеПросмотраКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="ДобавитьСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДобавитьУправлениеПоиском" id="94">
+								<AdditionSource>
+									<Item>Добавить</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДобавитьУправлениеПоискомКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="ДобавитьУправлениеПоискомРасширеннаяПодсказка" id="96"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДобавитьУрок" id="97">
+									<DataPath>Добавить.Урок</DataPath>
+									<Width>20</Width>
+									<ContextMenu name="ДобавитьУрокКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ДобавитьУрокРасширеннаяПодсказка" id="99"/>
+								</LabelField>
+								<LabelField name="ДобавитьУченик" id="100">
+									<DataPath>Добавить.Ученик</DataPath>
+									<Width>20</Width>
+									<ContextMenu name="ДобавитьУченикКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ДобавитьУченикРасширеннаяПодсказка" id="102"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Подвал" id="103">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="104"/>
+			<ChildItems>
+				<LabelField name="АвторДокумента" id="108">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="110"/>
+				</LabelField>
+				<InputField name="Комментарий" id="105">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="107"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ПереводУченика</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="СостояниеПлана" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Что произойдёт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Убрать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уйдут из уроков-планов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Урок" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Урок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ученик" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ученик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Добавить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавятся в уроки-планы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Урок" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Урок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Ученик" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ученик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьИзГруппы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список — ученики, которые на дату документа состоят в группе «Из группы»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьИзГруппы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОбновитьПредпросмотр" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать, что произойдёт при проведении</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьПредпросмотр</Action>
+		</Command>
+	</Commands>
+</Form>

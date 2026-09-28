@@ -94,6 +94,7 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 	</Events>
 	<ChildItems>
 		<Pages name="ГруппаСтраницы" id="321">
@@ -1106,80 +1107,77 @@
 							<ContextMenu name="ТолькоВыбранныеГруппыОбученияКонтекстноеМеню" id="355"/>
 							<ExtendedTooltip name="ТолькоВыбранныеГруппыОбученияРасширеннаяПодсказка" id="356"/>
 						</CheckBoxField>
-						<Table name="ГруппыОбучения" id="329">
+						<Table name="ГруппыУченика" id="920">
+							<Representation>List</Representation>
+							<ReadOnly>true</ReadOnly>
 							<HeightInTableRows>7</HeightInTableRows>
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<VerticalStretch>false</VerticalStretch>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>Объект.ГруппыОбучения</DataPath>
-							<CommandSet>
-								<ExcludedCommand>MoveDown</ExcludedCommand>
-								<ExcludedCommand>MoveUp</ExcludedCommand>
-							</CommandSet>
+							<DataPath>ГруппыУченика</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ГруппыОбученияКонтекстноеМеню" id="330"/>
-							<AutoCommandBar name="ГруппыОбученияКоманднаяПанель" id="331">
+							<ContextMenu name="ГруппыУченикаКонтекстноеМеню" id="921"/>
+							<AutoCommandBar name="ГруппыУченикаКоманднаяПанель" id="922">
+								<Autofill>false</Autofill>
 								<ChildItems>
-									<Button name="ГруппыОбученияДобавить" id="502">
-										<Type>CommandBarHyperlink</Type>
+									<Button name="ГруппыУченикаПеревестиВГруппу" id="923">
+										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
-										<CommandName>Form.Item.ГруппыОбучения.StandardCommand.Add</CommandName>
-										<ExtendedTooltip name="ГруппыОбученияДобавитьРасширеннаяПодсказка" id="503"/>
+										<CommandName>Form.Command.ПеревестиВГруппу</CommandName>
+										<ExtendedTooltip name="ГруппыУченикаПеревестиВГруппуРасширеннаяПодсказка" id="924"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
-							<ExtendedTooltip name="ГруппыОбученияРасширеннаяПодсказка" id="332"/>
-							<SearchStringAddition name="ГруппыОбученияСтрокаПоиска" id="333">
+							<ExtendedTooltip name="ГруппыУченикаРасширеннаяПодсказка" id="925"/>
+							<SearchStringAddition name="ГруппыУченикаСтрокаПоиска" id="926">
 								<AdditionSource>
-									<Item>ГруппыОбучения</Item>
+									<Item>ГруппыУченика</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ГруппыОбученияСтрокаПоискаКонтекстноеМеню" id="334"/>
-								<ExtendedTooltip name="ГруппыОбученияСтрокаПоискаРасширеннаяПодсказка" id="335"/>
+								<ContextMenu name="ГруппыУченикаСтрокаПоискаКонтекстноеМеню" id="927"/>
+								<ExtendedTooltip name="ГруппыУченикаСтрокаПоискаРасширеннаяПодсказка" id="928"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ГруппыОбученияСостояниеПросмотра" id="336">
+							<ViewStatusAddition name="ГруппыУченикаСостояниеПросмотра" id="929">
 								<AdditionSource>
-									<Item>ГруппыОбучения</Item>
+									<Item>ГруппыУченика</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ГруппыОбученияСостояниеПросмотраКонтекстноеМеню" id="337"/>
-								<ExtendedTooltip name="ГруппыОбученияСостояниеПросмотраРасширеннаяПодсказка" id="338"/>
+								<ContextMenu name="ГруппыУченикаСостояниеПросмотраКонтекстноеМеню" id="930"/>
+								<ExtendedTooltip name="ГруппыУченикаСостояниеПросмотраРасширеннаяПодсказка" id="931"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ГруппыОбученияУправлениеПоиском" id="339">
+							<SearchControlAddition name="ГруппыУченикаУправлениеПоиском" id="932">
 								<AdditionSource>
-									<Item>ГруппыОбучения</Item>
+									<Item>ГруппыУченика</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ГруппыОбученияУправлениеПоискомКонтекстноеМеню" id="340"/>
-								<ExtendedTooltip name="ГруппыОбученияУправлениеПоискомРасширеннаяПодсказка" id="341"/>
+								<ContextMenu name="ГруппыУченикаУправлениеПоискомКонтекстноеМеню" id="933"/>
+								<ExtendedTooltip name="ГруппыУченикаУправлениеПоискомРасширеннаяПодсказка" id="934"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ГруппыУченикаВыбор</Event>
+							</Events>
 							<ChildItems>
-								<LabelField name="ГруппыОбученияНомерСтроки" id="342">
-									<DataPath>Объект.ГруппыОбучения.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ГруппыОбученияНомерСтрокиКонтекстноеМеню" id="343"/>
-									<ExtendedTooltip name="ГруппыОбученияНомерСтрокиРасширеннаяПодсказка" id="344"/>
+								<LabelField name="ГруппыУченикаГруппаОбучения" id="935">
+									<DataPath>ГруппыУченика.ГруппаОбучения</DataPath>
+									<Width>20</Width>
+									<ContextMenu name="ГруппыУченикаГруппаОбученияКонтекстноеМеню" id="936"/>
+									<ExtendedTooltip name="ГруппыУченикаГруппаОбученияРасширеннаяПодсказка" id="937"/>
 								</LabelField>
-								<InputField name="ГруппыОбученияГруппаОбучения" id="345">
-									<DataPath>Объект.ГруппыОбучения.ГруппаОбучения</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ГруппыОбученияГруппаОбученияКонтекстноеМеню" id="346"/>
-									<ExtendedTooltip name="ГруппыОбученияГруппаОбученияРасширеннаяПодсказка" id="347"/>
-								</InputField>
-								<InputField name="ГруппыОбученияДатаНачала" id="348">
-									<DataPath>Объект.ГруппыОбучения.ДатаНачала</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ГруппыОбученияДатаНачалаКонтекстноеМеню" id="349"/>
-									<ExtendedTooltip name="ГруппыОбученияДатаНачалаРасширеннаяПодсказка" id="350"/>
-								</InputField>
-								<InputField name="ГруппыОбученияДатаОкончания" id="351">
-									<DataPath>Объект.ГруппыОбучения.ДатаОкончания</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ГруппыОбученияДатаОкончанияКонтекстноеМеню" id="352"/>
-									<ExtendedTooltip name="ГруппыОбученияДатаОкончанияРасширеннаяПодсказка" id="353"/>
-								</InputField>
+								<LabelField name="ГруппыУченикаДатаНачала" id="938">
+									<DataPath>ГруппыУченика.ДатаНачала</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="ГруппыУченикаДатаНачалаКонтекстноеМеню" id="939"/>
+									<ExtendedTooltip name="ГруппыУченикаДатаНачалаРасширеннаяПодсказка" id="940"/>
+								</LabelField>
+								<LabelField name="ГруппыУченикаДатаОкончания" id="941">
+									<DataPath>ГруппыУченика.ДатаОкончания</DataPath>
+									<Width>10</Width>
+									<ContextMenu name="ГруппыУченикаДатаОкончанияКонтекстноеМеню" id="942"/>
+									<ExtendedTooltip name="ГруппыУченикаДатаОкончанияРасширеннаяПодсказка" id="943"/>
+								</LabelField>
+								<LabelField name="ГруппыУченикаДокумент" id="944">
+									<DataPath>ГруппыУченика.Документ</DataPath>
+									<Width>20</Width>
+									<ContextMenu name="ГруппыУченикаДокументКонтекстноеМеню" id="945"/>
+									<ExtendedTooltip name="ГруппыУченикаДокументРасширеннаяПодсказка" id="946"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -1387,6 +1385,69 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ГруппыУченика" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы ученика</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаОбучения" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа обучения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УЗ_ГруппыОбучения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаНачала" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаОкончания" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.УЗ_ПереводУченика</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1537,6 +1598,27 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПриНажатииКнопкиВыборЦвета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеревестиВГруппу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести в группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зачислить в группу, перевести в другую или отметить выбытие — документ «Перевод ученика»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИПеремещение</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеревестиВГруппу</Action>
+			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
