@@ -251,15 +251,6 @@
 					<ContextMenu name="ДД1НачисленияКонтекстноеМеню" id="143"/>
 					<ExtendedTooltip name="ДД1НачисленияРасширеннаяПодсказка" id="144"/>
 				</InputField>
-				<CheckBoxField name="ДДНеИзменять" id="194">
-					<DataPath>Объект.ДД.НеИзменять</DataPath>
-					<Visible>false</Visible>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ДДНеИзменятьКонтекстноеМеню" id="195"/>
-					<ExtendedTooltip name="ДДНеИзменятьРасширеннаяПодсказка" id="196"/>
-				</CheckBoxField>
 				<InputField name="ДДКОплате" id="197">
 					<DataPath>Объект.ДД.КОплате</DataPath>
 					<ReadOnly>true</ReadOnly>

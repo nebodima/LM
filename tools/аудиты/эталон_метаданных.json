@@ -25,7 +25,6 @@
   },
   "AccumulationRegisters.УЗ_РасчетыПоЗарплате": {
    "Dimension:Комментарий": "xs:string(255)",
-   "Dimension:НеИзменять": "xs:boolean",
    "Dimension:Организация": "cfg:CatalogRef.Организации",
    "Dimension:Педагог": "cfg:CatalogRef.УЗ_ФизЛица",
    "Resource:ЗП": "xs:decimal(15.2)",
@@ -356,8 +355,7 @@
    "TabularSection:ДД.Документ": "cfg:DocumentRef.УЗ_НачисленияПедагогам,cfg:DocumentRef.УЗ_Урок",
    "TabularSection:ДД.КОплате": "xs:decimal(15.2)",
    "TabularSection:ДД.Комментарий": "xs:string(255)",
-   "TabularSection:ДД.Начисление": "xs:decimal(15.2)",
-   "TabularSection:ДД.НеИзменять": "xs:boolean"
+   "TabularSection:ДД.Начисление": "xs:decimal(15.2)"
   },
   "Documents.УЗ_СписаниеОстатков": {
    "Attribute:АвторДокумента": "cfg:CatalogRef.Пользователи",
