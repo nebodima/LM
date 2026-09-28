@@ -873,21 +873,6 @@
 											<ContextMenu name="НайденныеДокументы2ДатаКонтекстноеМеню" id="304"/>
 											<ExtendedTooltip name="НайденныеДокументы2ДатаРасширеннаяПодсказка" id="305"/>
 										</LabelField>
-										<LabelField name="НайденныеДокументы2КоличествоЧасов" id="336">
-											<DataPath>НайденныеДокументы2.КоличествоЧасов</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<Width>6</Width>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Часов</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="НайденныеДокументы2КоличествоЧасовКонтекстноеМеню" id="337"/>
-											<ExtendedTooltip name="НайденныеДокументы2КоличествоЧасовРасширеннаяПодсказка" id="338"/>
-										</LabelField>
 										<LabelField name="НайденныеДокументы2Окончание" id="321">
 											<DataPath>НайденныеДокументы2.Окончание</DataPath>
 											<Width>5</Width>

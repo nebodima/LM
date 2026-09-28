@@ -388,7 +388,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Document</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИОплата</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОформитьПКО</Action>
@@ -409,7 +409,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Document</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИПеремещение</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОформитьПеремещениеДенег</Action>

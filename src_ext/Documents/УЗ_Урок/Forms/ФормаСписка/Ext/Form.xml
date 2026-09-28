@@ -18,6 +18,7 @@
 			</Button>
 			<Button name="ФормаПомощникСозданияУроков" id="135">
 				<Type>CommandBarHyperlink</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
 				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
 			</Button>
@@ -65,7 +66,6 @@
 					<xr:Ref>StdPicture.ChooseValue</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<BackColor>style:ImportantColor</BackColor>
 				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="162"/>
 				<ChildItems>
 					<Button name="ФормаОбработкаGoogleКалендарьОткрыть" id="209">
@@ -412,6 +412,9 @@
 						</LabelField>
 						<LabelField name="Окончание" id="404">
 							<DataPath>Список.Окончание</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -625,8 +628,6 @@
 							<AutoMaxHeight>false</AutoMaxHeight>
 							<MaxRowsCount>5</MaxRowsCount>
 							<VerticalScrollBar>DontUse</VerticalScrollBar>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Расшифровка</DataPath>
 							<BorderColor>style:FormBackColor</BorderColor>
@@ -891,8 +892,6 @@
 									<CommandBarLocation>None</CommandBarLocation>
 									<HeightInTableRows>4</HeightInTableRows>
 									<RowSelectionMode>Row</RowSelectionMode>
-									<HorizontalLines>false</HorizontalLines>
-									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -1627,7 +1626,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИПомощник</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПомощникСозданияУроков</Action>

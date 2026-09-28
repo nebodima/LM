@@ -397,6 +397,7 @@
 													<ChildItems>
 														<Button name="Приостановить" id="53">
 															<Type>UsualButton</Type>
+															<Representation>PictureAndText</Representation>
 															<CommandName>Form.Command.Приостановить</CommandName>
 															<ExtendedTooltip name="ПриостановитьРасширеннаяПодсказка" id="54"/>
 														</Button>
@@ -1270,7 +1271,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИЗаморозка</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Приостановить</Action>

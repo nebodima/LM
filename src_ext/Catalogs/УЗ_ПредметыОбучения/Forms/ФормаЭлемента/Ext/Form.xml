@@ -158,7 +158,7 @@
 							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ВыбратьФото</CommandName>
 							<Picture>
-								<xr:Ref>StdPicture.OpenFile</xr:Ref>
+								<xr:Ref>CommonPicture.УЗ_ИФото</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="ВыбратьФотоРасширеннаяПодсказка" id="17"/>

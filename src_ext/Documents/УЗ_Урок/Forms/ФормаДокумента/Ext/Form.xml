@@ -875,8 +875,6 @@
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
 							<Footer>true</Footer>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -1719,7 +1717,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИКОплате</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СделатьОплаченными</Action>
@@ -1738,7 +1736,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИЯвка</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СделатьПосещенными</Action>

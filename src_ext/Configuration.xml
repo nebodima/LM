@@ -69,6 +69,18 @@
 			<CommonPicture>УЗ_ИконкаСправочники</CommonPicture>
 			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
 			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
+			<CommonPicture>УЗ_ИНапомнить</CommonPicture>
+			<CommonPicture>УЗ_ИЯвка</CommonPicture>
+			<CommonPicture>УЗ_ИКОплате</CommonPicture>
+			<CommonPicture>УЗ_ИПомощник</CommonPicture>
+			<CommonPicture>УЗ_ИПечатьПКО</CommonPicture>
+			<CommonPicture>УЗ_ИОплата</CommonPicture>
+			<CommonPicture>УЗ_ИПеремещение</CommonPicture>
+			<CommonPicture>УЗ_ИВыплата</CommonPicture>
+			<CommonPicture>УЗ_ИФото</CommonPicture>
+			<CommonPicture>УЗ_ИЗаморозка</CommonPicture>
+			<CommonPicture>УЗ_ИПочта</CommonPicture>
+			<CommonPicture>УЗ_ИОтчет48</CommonPicture>
 			<SessionParameter>УЗ_ПесочницаПочты</SessionParameter>
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<Role>УЗ_Руководитель</Role>
