@@ -225,6 +225,13 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.УЗ_СоставГрупп</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.УЗ_УрокиВРасчетахЗарплаты</name>
 		<right>
 			<name>Read</name>

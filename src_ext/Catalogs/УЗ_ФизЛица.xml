@@ -1362,24 +1362,24 @@
 			</Attribute>
 			<TabularSection uuid="8d0962c0-a2ea-5224-ae76-2d809e0cd209">
 				<InternalInfo>
-					<xr:GeneratedType name="CatalogTabularSection.УЗ_ФизЛица.ГруппыОбучения" category="TabularSection">
+					<xr:GeneratedType name="CatalogTabularSection.УЗ_ФизЛица.ГруппыОбученияПрежние" category="TabularSection">
 						<xr:TypeId>1a81708d-87ec-5edd-9b6e-1d76fdf38c92</xr:TypeId>
 						<xr:ValueId>d7c7c846-e360-5f91-a34a-e223076888dd</xr:ValueId>
 					</xr:GeneratedType>
-					<xr:GeneratedType name="CatalogTabularSectionRow.УЗ_ФизЛица.ГруппыОбучения" category="TabularSectionRow">
+					<xr:GeneratedType name="CatalogTabularSectionRow.УЗ_ФизЛица.ГруппыОбученияПрежние" category="TabularSectionRow">
 						<xr:TypeId>f26dd51b-d71c-5a10-b05e-a214de460faa</xr:TypeId>
 						<xr:ValueId>9a511384-dc2e-5150-80bd-31bedf9bf98b</xr:ValueId>
 					</xr:GeneratedType>
 				</InternalInfo>
 				<Properties>
-					<Name>ГруппыОбучения</Name>
+					<Name>ГруппыОбученияПрежние</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группы обучения</v8:content>
+							<v8:content>Группы обучения (прежние)</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment/>
+					<Comment>Только для шага обновления данных 6: группы из карточки прежней версии переносятся в регистр УЗ_СоставГрупп (В29). Программа их больше не читает и не пишет</Comment>
 					<ToolTip/>
 					<FillChecking>DontCheck</FillChecking>
 					<Use>ForItem</Use>

@@ -17,6 +17,12 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="89"/>
 			</Button>
+			<Button name="ФормаПеревестиВГруппу" id="132">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПеревестиВГруппу</CommandName>
+				<ExtendedTooltip name="ФормаПеревестиВГруппуРасширеннаяПодсказка" id="133"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -416,6 +422,27 @@
 			</Picture>
 			<Action>УстановитьОбщееВремя</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПеревестиВГруппу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести в группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести учеников этой группы в другую или отметить их выбытие — документ «Перевод ученика»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИПеремещение</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПеревестиВГруппу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
