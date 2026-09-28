@@ -148,6 +148,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="193"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="194"/>
+							<Events>
+								<Event name="OnChange">ПредметОбученияПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Тариф" id="189">
 							<DataPath>Объект.Тариф</DataPath>
@@ -160,8 +163,18 @@
 							<DataPath>Объект.Абонемент</DataPath>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ClearButton>true</ClearButton>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.ФизЛицо</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Объект.ФизЛицо</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
 							<ContextMenu name="АбонементКонтекстноеМеню" id="268"/>
 							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="269"/>
+							<Events>
+								<Event name="OnChange">АбонементПриИзменении</Event>
+							</Events>
 						</InputField>
 						<UsualGroup name="Группа5" id="178">
 							<Group>Horizontal</Group>
@@ -266,6 +279,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="166"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="167"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Подразделение" id="168">
 							<DataPath>Объект.Подразделение</DataPath>
