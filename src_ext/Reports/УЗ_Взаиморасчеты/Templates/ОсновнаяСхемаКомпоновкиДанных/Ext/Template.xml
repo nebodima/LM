@@ -178,6 +178,7 @@
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
+			<presentationExpression>ПредставлениеДокумента</presentationExpression>
 			<appearance>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
@@ -189,6 +190,16 @@
 					<dcscor:value xsi:type="xs:decimal">30</dcscor:value>
 				</dcscor:item>
 			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредставлениеДокумента</dataPath>
+			<field>ПредставлениеДокумента</field>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Период</dataPath>
@@ -368,7 +379,7 @@
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	СписанияСуммЗаУроки.Организация КАК Организация,
 	СписанияСуммЗаУроки.Клиент КАК Клиент,
 	СписанияСуммЗаУроки.СуммаНачальныйОстаток КАК СуммаНачальныйОстаток,
@@ -382,6 +393,12 @@
 	СписанияСуммЗаУроки.СуммаОборот КАК СуммаОборот,
 	-СписанияСуммЗаУроки.ЧасыОборот / 60 / 60 КАК ЧасыОборот,
 	СписанияСуммЗаУроки.Регистратор КАК Регистратор,
+	ВЫБОР
+		КОГДА СписанияСуммЗаУроки.Регистратор ЕСТЬ НЕ NULL
+				И СписанияСуммЗаУроки.Регистратор.Дата ЕСТЬ NULL
+			ТОГДА "Документ скрыт (касса раньше вашей даты просмотра)"
+		ИНАЧЕ ПРЕДСТАВЛЕНИЕ(СписанияСуммЗаУроки.Регистратор)
+	КОНЕЦ КАК ПредставлениеДокумента,
 	СписанияСуммЗаУроки.Скидка КАК Скидка,
 	СписанияСуммЗаУроки.Тариф КАК Тариф,
 	ВЫБОР
