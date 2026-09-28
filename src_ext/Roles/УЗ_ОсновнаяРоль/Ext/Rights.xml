@@ -620,6 +620,50 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.УЗ_СтавкиПедагогов.Attribute.ОплатаЗаЗанятие</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_СтавкиПедагогов.Attribute.ОплатаСЧеловека</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_СтавкиПедагогов.Attribute.ОплатаЗаЧас</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_СтавкиПедагогов.Attribute.ПроцентСОплатыУченика</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.УЗ_Статусы</name>
 		<right>
 			<name>Read</name>
@@ -836,6 +880,13 @@
 		</right>
 		<right>
 			<name>InteractiveDeletePredefinedData</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_ФизЛица.Attribute.СтавкаПедагога</name>
+		<right>
+			<name>Edit</name>
 			<value>false</value>
 		</right>
 	</object>
@@ -1421,10 +1472,42 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УЗ_Урок.Attribute.СтавкаПедагога</name>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_Урок.Attribute.НачисленоПедагогу</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_Урок.TabularSection.НачисленияПедагогу</name>
+		<right>
+			<name>View</name>
+			<value>false</value>
+		</right>
+		<right>
+			<name>Edit</name>
+			<value>false</value>
+		</right>
+	</object>
+	<object>
 		<name>DocumentJournal.УЗ_КассовыйЖурнал</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -1638,10 +1721,6 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Edit</name>
-			<value>true</value>
-		</right>
-		<right>
 			<name>TotalsControl</name>
 			<value>true</value>
 		</right>
@@ -1658,10 +1737,6 @@
 		</right>
 		<right>
 			<name>View</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Edit</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -1698,11 +1773,29 @@
 			<value>true</value>
 		</right>
 		<right>
-			<name>Edit</name>
+			<name>TotalsControl</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>SessionParameter.УЗ_ПесочницаПочты</name>
+		<right>
+			<name>Get</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>TotalsControl</name>
+			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>SessionParameter.УЗ_НачалоПросмотраКассы</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Set</name>
 			<value>true</value>
 		</right>
 	</object>
