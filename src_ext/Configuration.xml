@@ -111,6 +111,7 @@
 			<CommonForm>УЗ_ФормаОтчета</CommonForm>
 			<CommonForm>УЗ_НастройкиПочты</CommonForm>
 			<CommonForm>УЗ_ПечатнаяФорма</CommonForm>
+			<CommonForm>УЗ_ПервыйЗапуск</CommonForm>
 			<Catalog>Организации</Catalog>
 			<Catalog>Пользователи</Catalog>
 			<Catalog>УЗ_Абонемент</Catalog>

@@ -19,6 +19,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УЗ_ПервыйЗапуск</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_Настройки</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ДатыЗапрета</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УЗ_НастройкиПочты</xr:Item>
