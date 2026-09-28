@@ -967,6 +967,9 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="319"/>
 											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="320"/>
+											<Events>
+												<Event name="OnChange">УченикиЯвкаПриИзменении</Event>
+											</Events>
 										</CheckBoxField>
 										<InputField name="УченикиПричина" id="358">
 											<DataPath>Объект.Ученики.Причина</DataPath>
@@ -1052,6 +1055,9 @@
 									<Width>10</Width>
 									<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="889"/>
 									<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="890"/>
+									<Events>
+										<Event name="OnChange">УченикиАбонементПриИзменении</Event>
+									</Events>
 								</InputField>
 								<InputField name="УченикиТариф" id="347">
 									<DataPath>Объект.Ученики.Тариф</DataPath>

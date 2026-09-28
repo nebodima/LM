@@ -247,6 +247,7 @@
 				</CheckBoxField>
 				<InputField name="ДДКОплате" id="197">
 					<DataPath>Объект.ДД.КОплате</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<EditMode>EnterOnInput</EditMode>
 					<FooterDataPath>Объект.ДД.TotalКОплате</FooterDataPath>
