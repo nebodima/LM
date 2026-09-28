@@ -46,14 +46,7 @@ V8 = "{http://v8.1c.ru/8.1/data/core}"
 MD = "{http://v8.1c.ru/8.3/MDClasses}"
 
 # зона агента главных экранов, снять после слияния
-ЗОНА_АГЕНТА = {
-    "Documents/УЗ_Урок/Forms/ФормаДокумента",
-    "Documents/УЗ_Урок/Forms/ФормаСписка",
-    "Documents/УЗ_Урок/Forms/ПомощникСозданияУроков",
-    "DataProcessors/УЗ_Календарь/Forms/ФормаКалендарь",
-    "DataProcessors/УЗ_ПанельУченика/Forms/Форма",
-    "DataProcessors/УЗ_ПанельУченика/Forms/ФормаВыбораПериода",
-}
+ЗОНА_АГЕНТА = set()   # снято 28.09 после слияния главных экранов
 
 ПОЛЯ = ("InputField", "LabelField", "CheckBoxField", "PictureField", "RadioButtonField", "TextDocumentField",
         "SpreadSheetDocumentField", "HTMLDocumentField", "CalendarField", "ProgressBarField", "TrackBarField",
