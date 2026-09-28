@@ -33,6 +33,7 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import сеанс  # noqa: E402
 from сеанс import текст_ошибки, запустить, дата  # noqa: E402
 import стенд_форм  # noqa: E402
 
@@ -349,7 +350,7 @@ def завести_данные(т):
     c = т.c
     убрать_данные(т)
     т.убрать(lambda: убрать_данные(т), "данные теста отчётов")
-    сегодня = datetime.date.today()
+    сегодня = сеанс.сегодня()
 
     def элемент(вид, наименование, **реквизиты):
         о = getattr(c.Справочники, вид).СоздатьЭлемент()

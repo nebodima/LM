@@ -19,6 +19,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import сеанс  # noqa: E402
 from сеанс import запустить, дата, ошибка_записи  # noqa: E402
 
 МЕТКА = "УЗ тест урока"
@@ -26,7 +27,7 @@ from сеанс import запустить, дата, ошибка_записи  
 
 def сценарий(т):
     c = т.c
-    сегодня = datetime.date.today() - datetime.timedelta(days=1)   # урок нельзя провести раньше начала (В10)
+    сегодня = сеанс.сегодня() - datetime.timedelta(days=1)   # урок нельзя провести раньше начала (В10)
     год, месяц, день = сегодня.year, сегодня.month, сегодня.day
 
     def элемент(вид, наименование, **реквизиты):

@@ -22,6 +22,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import сеанс  # noqa: E402
 from сеанс import дата, запустить  # noqa: E402
 from фабрика import Фабрика  # noqa: E402
 
@@ -36,7 +37,7 @@ from фабрика import Фабрика  # noqa: E402
 def сценарий(т):
     c = т.c
     ф = Фабрика(т, МЕТКА)
-    сегодня = datetime.date.today()
+    сегодня = сеанс.сегодня()
 
     def равны(первая, вторая):
         """Ссылки через COM — разные объекты-обёртки: сравнивать по уникальному идентификатору."""

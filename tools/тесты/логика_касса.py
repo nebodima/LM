@@ -30,6 +30,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import сеанс  # noqa: E402
 from сеанс import дата, запустить, текст_ошибки  # noqa: E402
 from _деньги import Данные, сообщения  # noqa: E402
 from фабрика import Фабрика  # noqa: E402
@@ -129,7 +130,7 @@ def сценарий(т):
 
     # ── К6/К7: расчёт зарплаты «Переместить деньги» ──
     к6 = касса("К6")
-    сегодня = datetime.date.today()
+    сегодня = сеанс.сегодня()
     через_неделю = сегодня + datetime.timedelta(days=7)
     пко(к6, орг_а, 5000, дата(сегодня.year, сегодня.month, сегодня.day, 0, 5))
     пко(к6, орг_б, 3000, дата(сегодня.year, сегодня.month, сегодня.day, 0, 6))
