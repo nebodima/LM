@@ -388,36 +388,49 @@ def остановить_свои(все=False, база=None):
     return снято
 
 
-def команды(база, список, таймаут=60):
-    """Команды одной SSH-сессией после common connect-ib. [(команда, ок, сек, ответ)]; стоп на первой ошибке."""
-    import paramiko
-    порт = живой(база)
-    if not порт:
-        raise RuntimeError("агент базы %s не запущен" % база)
-    активность(база)                     # сторож считает простой от последней команды
-    пользователь = _состояние(база)["пользователь"]
-    for попытка in range(5):
-        к = paramiko.SSHClient()
-        к.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        try:
-            к.connect("127.0.0.1", порт, username=пользователь, password="", look_for_keys=False,
-                      allow_agent=False, timeout=20)
-            break
-        except paramiko.ssh_exception.AuthenticationException:
-            к.close()
-            if попытка == 4:
-                raise
-            time.sleep(0.5)
-    канал = к.get_transport().open_session()
-    канал.invoke_shell()
+class Сессия:
+    """SSH-сессия с агентом базы после common connect-ib. Долгоживущая — у tools\\итерация.py: вход по SSH (~1,6 с)
+    и connect-ib (~0,8 с) платятся один раз, а не на каждую загрузку (замер 28.09.2026, UZ_BP_C)."""
 
-    def прочитать(срок):
+    def __init__(self, база, таймаут_входа=20):
+        import paramiko
+        self.база = база
+        порт = живой(база)
+        if not порт:
+            raise RuntimeError("агент базы %s не запущен" % база)
+        активность(база)                     # сторож считает простой от последней команды
+        пользователь = _состояние(база)["пользователь"]
+        for попытка in range(5):
+            к = paramiko.SSHClient()
+            к.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            try:
+                к.connect("127.0.0.1", порт, username=пользователь, password="", look_for_keys=False,
+                          allow_agent=False, timeout=таймаут_входа)
+                break
+            except paramiko.ssh_exception.AuthenticationException:
+                к.close()
+                if попытка == 4:
+                    raise
+                time.sleep(0.5)
+        self.клиент = к
+        self.канал = к.get_transport().open_session()
+        self.канал.invoke_shell()
+        try:
+            self._прочитать(time.time() + таймаут_входа, таймаут_входа)
+            команда, ок, сек, ответ = self.выполнить("common connect-ib", таймаут_входа)
+            if not ок:
+                raise RuntimeError("агент: common connect-ib — %s" % ответ)
+        except Exception:
+            self.закрыть()
+            raise
+
+    def _прочитать(self, срок, таймаут):
         буфер = b""
-        канал.settimeout(max(1.0, срок - time.time()))
+        self.канал.settimeout(max(1.0, срок - time.time()))
         while True:
             if time.time() > срок:
                 raise TimeoutError("агент не ответил за %d с" % таймаут)
-            кусок = канал.recv(65536)
+            кусок = self.канал.recv(65536)
             if not кусок:
                 break
             буфер += кусок
@@ -425,22 +438,38 @@ def команды(база, список, таймаут=60):
                 break
         return буфер.decode("utf-8", "replace")
 
-    итог = []
+    def выполнить(self, команда, таймаут=60):
+        """→ (команда, ок, сек, ответ). Ошибка — по формату ответа агента («Ошибка Xxx - …») или закрытый канал."""
+        н = time.time()
+        активность(self.база)
+        self.канал.send((команда + "\n").encode("utf-8"))
+        ответ = self._прочитать(н + таймаут, таймаут)
+        дошёл = ответ.endswith(ПРИГЛАШЕНИЕ)          # нет приглашения — агент закрыл канал посреди команды
+        ответ = ответ[:-len(ПРИГЛАШЕНИЕ)].strip() if дошёл else ответ.strip() + "\n(агент закрыл канал)"
+        # «Ошибка UnknownError» — без « - текст»: так агент отвечает на load-files после update-db-cfg
+        ок = дошёл and not ОШИБКА.search(ответ) and not re.match(r"^Ошибка \w+\s*$", ответ, re.M)
+        активность(self.база)
+        return команда, ок, time.time() - н, ответ
+
+    def закрыть(self):
+        try:
+            self.клиент.close()
+        finally:
+            активность(self.база)
+
+
+def команды(база, список, таймаут=60):
+    """Команды одной SSH-сессией после common connect-ib. [(команда, ок, сек, ответ)]; стоп на первой ошибке."""
+    н = time.time()
+    с = Сессия(база)
+    итог = [("common connect-ib", True, time.time() - н, "")]
     try:
-        прочитать(time.time() + 20)
-        for команда in ["common connect-ib"] + list(список):
-            н = time.time()
-            канал.send((команда + "\n").encode("utf-8"))
-            ответ = прочитать(н + таймаут)
-            дошёл = ответ.endswith(ПРИГЛАШЕНИЕ)          # нет приглашения — агент закрыл канал посреди команды
-            ответ = ответ[:-len(ПРИГЛАШЕНИЕ)].strip() if дошёл else ответ.strip() + "\n(агент закрыл канал)"
-            ок = дошёл and not ОШИБКА.search(ответ)
-            итог.append((команда, ок, time.time() - н, ответ))
-            if not ок:
+        for команда in список:
+            итог.append(с.выполнить(команда, таймаут))
+            if not итог[-1][1]:
                 break
     finally:
-        к.close()
-        активность(база)
+        с.закрыть()
     return итог
 
 
