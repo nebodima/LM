@@ -1108,7 +1108,13 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+				<condition>Т ГДЕ ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.УЗ_ГраницаПросмотраКассы КАК Граница
+		ГДЕ
+			Т.Дата &gt;= Граница.НачалоПросмотра)</condition>
 			</restrictionByCondition>
 		</right>
 		<right>
@@ -1186,7 +1192,13 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+				<condition>Т ГДЕ ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.УЗ_ГраницаПросмотраКассы КАК Граница
+		ГДЕ
+			Т.Дата &gt;= Граница.НачалоПросмотра)</condition>
 			</restrictionByCondition>
 		</right>
 		<right>
@@ -1264,7 +1276,13 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+				<condition>Т ГДЕ ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.УЗ_ГраницаПросмотраКассы КАК Граница
+		ГДЕ
+			Т.Дата &gt;= Граница.НачалоПросмотра)</condition>
 			</restrictionByCondition>
 		</right>
 		<right>
@@ -1627,7 +1645,13 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+				<condition>Т ГДЕ ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.УЗ_ГраницаПросмотраКассы КАК Граница
+		ГДЕ
+			Т.Дата &gt;= Граница.НачалоПросмотра)</condition>
 			</restrictionByCondition>
 		</right>
 		<right>
@@ -1641,13 +1665,19 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ НЕ (Ссылка ССЫЛКА Документ.УЗ_РасчетЗарплаты
-		ИЛИ Ссылка ССЫЛКА Документ.УЗ_ДополнительныеРасходы
-		ИЛИ Ссылка ССЫЛКА Документ.УЗ_НачисленияПедагогам)
-	И (Дата &gt;= &amp;УЗ_НачалоПросмотраКассы
-		ИЛИ НЕ (Ссылка ССЫЛКА Документ.УЗ_ПриходДенег
-			ИЛИ Ссылка ССЫЛКА Документ.УЗ_РасходДенег
-			ИЛИ Ссылка ССЫЛКА Документ.УЗ_ПеремещениеДенег))</condition>
+				<condition>Т ГДЕ НЕ (Т.Ссылка ССЫЛКА Документ.УЗ_РасчетЗарплаты
+		ИЛИ Т.Ссылка ССЫЛКА Документ.УЗ_ДополнительныеРасходы
+		ИЛИ Т.Ссылка ССЫЛКА Документ.УЗ_НачисленияПедагогам)
+	И (НЕ (Т.Ссылка ССЫЛКА Документ.УЗ_ПриходДенег
+			ИЛИ Т.Ссылка ССЫЛКА Документ.УЗ_РасходДенег
+			ИЛИ Т.Ссылка ССЫЛКА Документ.УЗ_ПеремещениеДенег)
+		ИЛИ ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.УЗ_ГраницаПросмотраКассы КАК Граница
+		ГДЕ
+			Т.Дата &gt;= Граница.НачалоПросмотра))</condition>
 			</restrictionByCondition>
 		</right>
 		<right>
@@ -1776,6 +1806,17 @@
 		<name>InformationRegister.УЗ_ВерсииДанных</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УЗ_ГраницаПросмотраКассы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -1916,17 +1957,6 @@
 	</object>
 	<object>
 		<name>SessionParameter.УЗ_ПесочницаПочты</name>
-		<right>
-			<name>Get</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Set</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>SessionParameter.УЗ_НачалоПросмотраКассы</name>
 		<right>
 			<name>Get</name>
 			<value>true</value>

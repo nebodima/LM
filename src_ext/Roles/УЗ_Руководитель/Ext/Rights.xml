@@ -1966,6 +1966,17 @@
 		</right>
 	</object>
 	<object>
+		<name>InformationRegister.УЗ_ГраницаПросмотраКассы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>InformationRegister.УЗ_ДатыЗапрета</name>
 		<right>
 			<name>Read</name>
@@ -2176,13 +2187,6 @@
 		</right>
 		<right>
 			<name>Set</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>SessionParameter.УЗ_НачалоПросмотраКассы</name>
-		<right>
-			<name>Get</name>
 			<value>true</value>
 		</right>
 	</object>
