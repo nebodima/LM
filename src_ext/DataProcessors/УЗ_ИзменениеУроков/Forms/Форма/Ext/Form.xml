@@ -234,8 +234,6 @@
 						</CheckBoxField>
 						<LabelField name="ДеревоУроковОписание" id="100">
 							<DataPath>ДеревоУроков.Описание</DataPath>
-							<Visible>false</Visible>
-							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="ДеревоУроковОписаниеКонтекстноеМеню" id="101"/>
 							<ExtendedTooltip name="ДеревоУроковОписаниеРасширеннаяПодсказка" id="102"/>
@@ -255,53 +253,6 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
-		<Pages name="ГруппаСтраницы" id="92">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа страницы</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа страницы</v8:content>
-				</v8:item>
-			</ToolTip>
-			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="93"/>
-			<ChildItems>
-				<Page name="ГруппаСтраница1" id="94">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Главная</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа страница1</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаСтраница1РасширеннаяПодсказка" id="95"/>
-				</Page>
-				<Page name="ГруппаСтраница2" id="96">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Информация</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа страница2</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаСтраница2РасширеннаяПодсказка" id="97"/>
-				</Page>
-			</ChildItems>
-		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Ученики" id="2">
