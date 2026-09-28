@@ -165,6 +165,8 @@ def _сверить_расширение(c, база):
 def _тесты(фильтр):
     имена = [os.path.splitext(os.path.basename(п))[0][len("тест_"):]
              for п in sorted(glob.glob(os.path.join(ТЕСТЫ, "тест_*.py")))]
+    # тесты логик (docs/логики: оплаты, касса, доп. расходы, начисление ученику…) — логика_*.py, имя целиком
+    имена += [os.path.splitext(os.path.basename(п))[0] for п in sorted(glob.glob(os.path.join(ТЕСТЫ, "логика_*.py")))]
     if фильтр:
         имена = [и for и in имена if и == фильтр.replace("тест_", "", 1)]
     return [и for и in имена if и not in ПОСЛЕДНИЕ] + [и for и in имена if и in ПОСЛЕДНИЕ]
@@ -362,7 +364,9 @@ def прогнать_базу(имя, база, пользователь, фил
             with contextlib.redirect_stdout(тройник):
                 т = None
                 try:
-                    модуль = importlib.import_module("тест_" + тест)
+                    # тест_X.py — имя X; логика_Y.py (тесты логик) — имя целиком: модуль — тот файл, что есть на диске
+                    свой = os.path.isfile(os.path.join(ТЕСТЫ, тест + ".py")) and not тест.startswith("тест_")
+                    модуль = importlib.import_module(тест if свой else "тест_" + тест)
                     т = сеанс.Тест(тест, c=c, база=база)
                     т.выполнить(модуль.сценарий)
                     код = т.итог()

@@ -63,7 +63,8 @@ def проверить(исх):
             р.ошибка(отн(запускатель), 0, "в АУДИТЫ есть «%s», а файла %s.py с проверить() нет" % (имя, имя))
 
     тесты = []
-    for путь in sorted(glob.glob(os.path.join(репо, "tools", "тесты", "тест_*.py"))):
+    for путь in sorted(glob.glob(os.path.join(репо, "tools", "тесты", "тест_*.py"))
+                       + glob.glob(os.path.join(репо, "tools", "тесты", "логика_*.py"))):
         текст = _читать(путь)
         тесты.append(os.path.basename(путь)[:-3])
         if not re.search(r"(?m)^def сценарий\(", текст) or "запустить(" not in текст:

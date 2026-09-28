@@ -38,6 +38,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику</xr:Item>
 			</RegisteredDocuments>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<StandardAttributes>
@@ -230,6 +231,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику.Attribute.Организация</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -251,6 +253,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.Клиент</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.Педагог</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога.Attribute.Педагог</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику.Attribute.ФизЛицо</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -275,6 +278,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.СуммаДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов.Attribute.СуммаБонусов</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.СуммаДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику.Attribute.Сумма</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -300,6 +304,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога.Attribute.АвторДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов.Attribute.АвторДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.АвторДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику.Attribute.АвторДокумента</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -325,6 +330,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеБонусов.Attribute.Комментарий</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога.Attribute.Комментарий</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику.Attribute.Комментарий</xr:Item>
 					</References>
 				</Properties>
 			</Column>

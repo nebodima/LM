@@ -90,6 +90,7 @@
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
+			<EventSubscription>УЗ_РасходыУрокаОдинИсточник</EventSubscription>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
@@ -117,6 +118,7 @@
 			<Catalog>УЗ_Фото</Catalog>
 			<Document>УЗ_ГрафикРабочегоВремениПедагога</Document>
 			<Document>УЗ_ДополнительныеРасходы</Document>
+			<Document>УЗ_НачислениеУченику</Document>
 			<Document>УЗ_НачислениеБонусов</Document>
 			<Document>УЗ_НачисленияПедагогам</Document>
 			<Document>УЗ_ПеремещениеДенег</Document>
