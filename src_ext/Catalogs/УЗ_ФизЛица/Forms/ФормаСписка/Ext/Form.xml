@@ -48,7 +48,7 @@
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Document.УЗ_СписаниеОстатков.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Родитель</DataPath>
+						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 						<Picture>
 							<xr:Ref>StdPicture.Document</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -287,26 +287,5 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
-		<ConditionalAppearance>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>Задолженность</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Задолженность</dcsset:left>
-						<dcsset:comparisonType>Filled</dcsset:comparisonType>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ВыделятьОтрицательные</dcscor:parameter>
-						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-		</ConditionalAppearance>
 	</Attributes>
 </Form>

@@ -25,6 +25,7 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа2" id="33">
@@ -67,11 +68,6 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<InputField name="Организация" id="27">
-					<DataPath>1/0:8c4ebc9d-d5c9-40af-bb02-2eb879cfbd7c</DataPath>
-					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="28"/>
-					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="29"/>
-				</InputField>
 				<UsualGroup name="Группа4" id="39">
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
@@ -214,6 +210,17 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ФотоВыбрано" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фото выбрано</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыбратьФото" id="1">
@@ -230,22 +237,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыбратьФото</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ПриНажатииКнопкиВыборЦвета" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Цвет</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>При нажатии кнопки выбор цвета</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПриНажатииКнопкиВыборЦвета</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

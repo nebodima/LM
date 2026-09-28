@@ -104,30 +104,6 @@
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
 				</LabelField>
-				<CheckBoxField name="ЗащитаОтИзменений" id="22">
-					<DataPath>Список.ЗащитаОтИзменений</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ЗащитаОтИзмененийКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="ЗащитаОтИзмененийРасширеннаяПодсказка" id="24"/>
-				</CheckBoxField>
-				<CheckBoxField name="Активно" id="31">
-					<DataPath>Список.Активно</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="АктивноКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="АктивноРасширеннаяПодсказка" id="33"/>
-				</CheckBoxField>
-				<LabelField name="ИзменятьСтатус" id="28">
-					<DataPath>Список.ИзменятьСтатус</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Формула</v8:content>
-						</v8:item>
-					</Title>
-					<Width>25</Width>
-					<ContextMenu name="ИзменятьСтатусКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ИзменятьСтатусРасширеннаяПодсказка" id="30"/>
-				</LabelField>
 				<LabelField name="Комментарий" id="25">
 					<DataPath>Список.Комментарий</DataPath>
 					<Width>20</Width>
