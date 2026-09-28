@@ -28,6 +28,7 @@
 			</Button>
 			<Button name="ФормаДвиженияДокумента" id="78">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ДвиженияДокумента</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаДвиженияДокументаРасширеннаяПодсказка" id="79"/>
@@ -131,18 +132,18 @@
 					<ContextMenu name="НачисленияПедагогКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="НачисленияПедагогРасширеннаяПодсказка" id="40"/>
 				</InputField>
-				<InputField name="РасходыКомментарий" id="82">
-					<DataPath>Объект.НачисленияПедагогам.Комментарий</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="РасходыКомментарийКонтекстноеМеню" id="83"/>
-					<ExtendedTooltip name="РасходыКомментарийРасширеннаяПодсказка" id="84"/>
-				</InputField>
 				<InputField name="РасходыСумма" id="62">
 					<DataPath>Объект.НачисленияПедагогам.Сумма</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<FooterDataPath>Объект.НачисленияПедагогам.TotalСумма</FooterDataPath>
 					<ContextMenu name="РасходыСуммаКонтекстноеМеню" id="63"/>
 					<ExtendedTooltip name="РасходыСуммаРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="РасходыКомментарий" id="82">
+					<DataPath>Объект.НачисленияПедагогам.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РасходыКомментарийКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="РасходыКомментарийРасширеннаяПодсказка" id="84"/>
 				</InputField>
 			</ChildItems>
 		</Table>

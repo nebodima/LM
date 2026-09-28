@@ -37,15 +37,15 @@
 				</CheckBoxField>
 				<Button name="Сформировать" id="13">
 					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
 					<CommandName>Form.Command.Сформировать</CommandName>
-					<BackColor>#FFCC00</BackColor>
 					<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="14"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<LabelDecoration name="Декорация1" id="28">
 			<AutoMaxWidth>false</AutoMaxWidth>
-			<TextColor>#808080</TextColor>
+			<TextColor>style:ToolTipTextColor</TextColor>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -57,7 +57,7 @@
 		</LabelDecoration>
 		<LabelDecoration name="Декорация2" id="34">
 			<AutoMaxWidth>false</AutoMaxWidth>
-			<TextColor>#808080</TextColor>
+			<TextColor>style:ToolTipTextColor</TextColor>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -69,7 +69,7 @@
 		</LabelDecoration>
 		<LabelDecoration name="Декорация3" id="37">
 			<AutoMaxWidth>false</AutoMaxWidth>
-			<TextColor>#808080</TextColor>
+			<TextColor>style:ToolTipTextColor</TextColor>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>

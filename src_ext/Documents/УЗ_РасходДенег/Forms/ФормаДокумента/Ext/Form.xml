@@ -16,7 +16,7 @@
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Write</CommandName>
-				<TextColor>#000000</TextColor>
+				<TextColor>style:FieldTextColor</TextColor>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="63"/>
 			</Button>
@@ -24,7 +24,7 @@
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
 				<CommandName>Form.StandardCommand.Post</CommandName>
-				<TextColor>#000000</TextColor>
+				<TextColor>style:FieldTextColor</TextColor>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="65"/>
 			</Button>
@@ -44,6 +44,7 @@
 				<ChildItems>
 					<Button name="ФормаПечатьРКО" id="191">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Document.УЗ_РасходДенег.Command.ПечатьРКО</CommandName>
 						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаПечатьРКОРасширеннаяПодсказка" id="192"/>
@@ -52,6 +53,7 @@
 			</Popup>
 			<Button name="ФормаНапомнить" id="193">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="194"/>
@@ -120,7 +122,7 @@
 				<InputField name="ВидОперации" id="66">
 					<DataPath>Объект.ВидОперации</DataPath>
 					<TitleLocation>Right</TitleLocation>
-					<BackColor>#FFFF99</BackColor>
+					<BackColor>style:ToolTipBackColor</BackColor>
 					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="67"/>
 					<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="68"/>
 				</InputField>

@@ -33,7 +33,7 @@
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>Список</DataPath>
 					<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
-					<TitleTextColor>#000000</TitleTextColor>
+					<TitleTextColor>style:FormTextColor</TitleTextColor>
 					<AutoRefresh>false</AutoRefresh>
 					<AutoRefreshPeriod>60</AutoRefreshPeriod>
 					<Period>

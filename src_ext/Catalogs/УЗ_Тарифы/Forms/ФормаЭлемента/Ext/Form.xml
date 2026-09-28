@@ -108,7 +108,7 @@
 						</LabelDecoration>
 						<LabelDecoration name="Декорация1" id="82">
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<TextColor>#0000FF</TextColor>
+							<TextColor>style:SpecialTextColor</TextColor>
 							<ContextMenu name="Декорация1КонтекстноеМеню" id="83"/>
 							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="84"/>
 						</LabelDecoration>

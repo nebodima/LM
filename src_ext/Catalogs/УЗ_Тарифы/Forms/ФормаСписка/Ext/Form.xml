@@ -122,6 +122,7 @@
 					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="64"/>
 					<ChildItems>
 						<Table name="Список" id="23">
+							<CommandBarLocation>None</CommandBarLocation>
 							<DefaultItem>true</DefaultItem>
 							<RowSelectionMode>Row</RowSelectionMode>
 							<HorizontalLines>false</HorizontalLines>

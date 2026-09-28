@@ -7,6 +7,7 @@
 		<ChildItems>
 			<Button name="ФормаОткрытьОтчет" id="30">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ОткрытьОтчет</CommandName>
 				<ExtendedTooltip name="ФормаОткрытьОтчетРасширеннаяПодсказка" id="31"/>
@@ -142,6 +143,7 @@
 					<v8:content>Открыть выбранный отчет (или двойной щелчок по строке).</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture><xr:Ref>StdPicture.Report</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
 			<Action>ОткрытьОтчет</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>

@@ -209,7 +209,8 @@
 												<InputField name="Пол" id="189">
 													<DataPath>Объект.Пол</DataPath>
 													<TitleLocation>None</TitleLocation>
-													<Width>6</Width>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>10</MaxWidth>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
 													<ListChoiceMode>true</ListChoiceMode>
@@ -372,7 +373,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>web:Gainsboro</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация6КонтекстноеМеню" id="483"/>
 											<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="484"/>
 										</LabelDecoration>
@@ -646,7 +647,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>web:Gainsboro</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация8КонтекстноеМеню" id="548"/>
 											<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="549"/>
 										</LabelDecoration>
@@ -792,7 +793,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>#DCDCDC</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация1КонтекстноеМеню" id="524"/>
 											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="525"/>
 										</LabelDecoration>
@@ -869,7 +870,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>web:Gainsboro</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация7КонтекстноеМеню" id="545"/>
 											<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="546"/>
 										</LabelDecoration>
@@ -928,7 +929,7 @@
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
 													<DataPath>Долги</DataPath>
-													<BorderColor>#FFFFFF</BorderColor>
+													<BorderColor>style:FormBackColor</BorderColor>
 													<CommandSet>
 														<ExcludedCommand>Add</ExcludedCommand>
 														<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -985,7 +986,7 @@
 														<InputField name="ДолгиПредмет" id="517">
 															<DataPath>Долги.Предмет</DataPath>
 															<EditMode>EnterOnInput</EditMode>
-															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<FooterBackColor>style:FormBackColor</FooterBackColor>
 															<Width>9</Width>
 															<ContextMenu name="ДолгиПредметКонтекстноеМеню" id="518"/>
 															<ExtendedTooltip name="ДолгиПредметРасширеннаяПодсказка" id="519"/>
@@ -994,7 +995,7 @@
 															<DataPath>Долги.Долг</DataPath>
 															<EditMode>EnterOnInput</EditMode>
 															<CellHyperlink>true</CellHyperlink>
-															<FooterBackColor>#FFFFFF</FooterBackColor>
+															<FooterBackColor>style:FormBackColor</FooterBackColor>
 															<Width>8</Width>
 															<Format>
 																<v8:item>
@@ -1173,6 +1174,7 @@
 							<ExtendedTooltip name="ТолькоВыбранныеГруппыОбученияРасширеннаяПодсказка" id="356"/>
 						</CheckBoxField>
 						<Table name="ГруппыОбучения" id="329">
+							<HeightInTableRows>7</HeightInTableRows>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>

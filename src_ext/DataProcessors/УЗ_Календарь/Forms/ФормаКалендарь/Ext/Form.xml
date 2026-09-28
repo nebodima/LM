@@ -306,7 +306,7 @@
 								</UsualGroup>
 								<RadioButtonField name="Цвет1" id="45">
 									<DataPath>Цвет</DataPath>
-									<TitleTextColor>#339966</TitleTextColor>
+									<TitleTextColor>style:AccentColor</TitleTextColor>
 									<TitleHeight>2</TitleHeight>
 									<RadioButtonType>Tumbler</RadioButtonType>
 									<ColumnsCount>1</ColumnsCount>
@@ -504,7 +504,7 @@
 							</Title>
 							<Hyperlink>true</Hyperlink>
 							<Picture>
-								<xr:Ref>CommonPicture.УЗ_Меньше</xr:Ref>
+								<xr:Ref>StdPicture.MoveLeft</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ContextMenu name="РазделительКартинка1КонтекстноеМеню" id="148"/>
@@ -525,7 +525,7 @@
 							</Title>
 							<Hyperlink>true</Hyperlink>
 							<Picture>
-								<xr:Ref>CommonPicture.УЗ_Больше</xr:Ref>
+								<xr:Ref>StdPicture.MoveRight</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ContextMenu name="РазделительКартинка2КонтекстноеМеню" id="151"/>

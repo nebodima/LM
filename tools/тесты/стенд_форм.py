@@ -191,8 +191,8 @@ class _ЗамокСборки:
                     if time.time() - os.path.getmtime(self.путь) > 300:   # от упавшего процесса
                         os.remove(self.путь)
                         continue
-                except OSError:
-                    pass
+                except FileNotFoundError:
+                    continue            # замок сняли между попытками (сосед закончил) — взять заново
                 if time.time() > срок:
                     raise RuntimeError("стенд: замок сборки занят дольше 180 с (%s)" % self.путь)
                 time.sleep(0.2)
@@ -201,8 +201,8 @@ class _ЗамокСборки:
         os.close(self.ф)
         try:
             os.remove(self.путь)
-        except OSError:
-            pass
+        except FileNotFoundError:
+            return              # сосед снял замок как устаревший (сборка шла дольше 300 с)
 
 
 def _собрать(имя, хэш, модуль, epf):

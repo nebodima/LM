@@ -29,6 +29,7 @@
 		<InputField name="Описание" id="19">
 			<DataPath>Запись.Описание</DataPath>
 			<TitleLocation>None</TitleLocation>
+			<Height>3</Height>
 			<MultiLine>true</MultiLine>
 			<InputHint>
 				<v8:item>

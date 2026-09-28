@@ -39,7 +39,7 @@
 						<xr:Common>false</xr:Common>
 					</UserVisible>
 					<EditMode>EnterOnInput</EditMode>
-					<TextColor>#000000</TextColor>
+					<TextColor>style:FieldTextColor</TextColor>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
 				</InputField>
@@ -120,7 +120,7 @@
 									<v8:content>Цвет для отображения</v8:content>
 								</v8:item>
 							</Title>
-							<TextColor>#000000</TextColor>
+							<TextColor>style:FieldTextColor</TextColor>
 							<ContextMenu name="ЦветКонтекстноеМеню" id="31"/>
 							<ExtendedTooltip name="ЦветРасширеннаяПодсказка" id="32"/>
 						</InputField>
