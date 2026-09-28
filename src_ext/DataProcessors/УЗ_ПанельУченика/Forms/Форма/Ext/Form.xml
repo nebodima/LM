@@ -58,21 +58,16 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="121"/>
 									<ChildItems>
-										<LabelDecoration name="Декорация1" id="117">
-											<Title formatted="false">
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Активные группы обучения ученика за выбранный период</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="Декорация1КонтекстноеМеню" id="118"/>
-											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="119"/>
-										</LabelDecoration>
 										<InputField name="Период" id="74">
 											<DataPath>Период</DataPath>
-											<TitleLocation>None</TitleLocation>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Активные группы обучения за период</v8:content>
+												</v8:item>
+											</Title>
 											<ClearButton>true</ClearButton>
-											<TextColor>#339966</TextColor>
+											<TextColor>style:AccentColor</TextColor>
 											<ContextMenu name="ПериодКонтекстноеМеню" id="75"/>
 											<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="76"/>
 											<Events>
@@ -320,7 +315,7 @@
 											<Width>8</Width>
 											<CellHyperlink>true</CellHyperlink>
 											<Hiperlink>true</Hiperlink>
-											<TextColor>#339966</TextColor>
+											<TextColor>style:AccentColor</TextColor>
 											<ContextMenu name="АктивныеГруппыОбученияПериодКонтекстноеМеню" id="113"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияПериодРасширеннаяПодсказка" id="114"/>
 										</LabelField>

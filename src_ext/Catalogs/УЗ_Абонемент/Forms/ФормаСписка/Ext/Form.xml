@@ -151,7 +151,7 @@
 				<LabelField name="Оплачено" id="64">
 					<DataPath>Список.Оплачено</DataPath>
 					<Width>1</Width>
-					<TextColor>win:Highlight</TextColor>
+					<TextColor>style:SpecialTextColor</TextColor>
 					<ContextMenu name="ОплаченоКонтекстноеМеню" id="65"/>
 					<ExtendedTooltip name="ОплаченоРасширеннаяПодсказка" id="66"/>
 				</LabelField>

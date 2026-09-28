@@ -22,13 +22,12 @@
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
 			<DefaultForm>DataProcessor.УЗ_ВыборWebЦвета.Form.ПалитраWebЦветовУправляемая</DefaultForm>
-			<AuxiliaryForm>DataProcessor.УЗ_ВыборWebЦвета.Form.ФормаДемоУправляемая</AuxiliaryForm>
+			<AuxiliaryForm/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<ExtendedPresentation/>
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
-			<Form>ФормаДемоУправляемая</Form>
 			<Form>ПалитраWebЦветовУправляемая</Form>
 		</ChildObjects>
 	</DataProcessor>

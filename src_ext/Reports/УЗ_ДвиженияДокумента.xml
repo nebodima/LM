@@ -70,7 +70,6 @@
 			</Attribute>
 			<Form>ДвиженияДокумента</Form>
 			<Template>Макет</Template>
-			<Template>МакетЖурналПроводок</Template>
 		</ChildObjects>
 	</Report>
 </MetaDataObject>

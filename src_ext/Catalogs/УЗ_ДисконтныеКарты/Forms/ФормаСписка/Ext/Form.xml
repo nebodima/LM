@@ -24,6 +24,7 @@
 			</Button>
 			<Button name="ФормаОтчетПоДисконтнымКартам" id="54">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ОтчетПоДисконтнымКартам</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаОтчетПоДисконтнымКартамРасширеннаяПодсказка" id="55"/>

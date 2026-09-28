@@ -306,7 +306,7 @@
 							<ChildItems>
 								<CheckBoxField name="СБ" id="102">
 									<DataPath>Объект.СБ</DataPath>
-									<TitleTextColor>#FF0000</TitleTextColor>
+									<TitleTextColor>style:NegativeTextColor</TitleTextColor>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="СБКонтекстноеМеню" id="103"/>
 									<ExtendedTooltip name="СБРасширеннаяПодсказка" id="104"/>
@@ -342,7 +342,7 @@
 							<ChildItems>
 								<CheckBoxField name="ВС" id="111">
 									<DataPath>Объект.ВС</DataPath>
-									<TitleTextColor>#FF0000</TitleTextColor>
+									<TitleTextColor>style:NegativeTextColor</TitleTextColor>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ВСКонтекстноеМеню" id="112"/>
 									<ExtendedTooltip name="ВСРасширеннаяПодсказка" id="113"/>

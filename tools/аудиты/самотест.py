@@ -208,6 +208,8 @@ def создать_копию(из_отн, в_отн, старое, новое):
               Т9 + '<DataPath>Объект.Ответственный</DataPath>\n' + Т9 + '<TextColor>#FF0000</TextColor>\n')),
     ("компоновка_форм", "ошибки", "таблица формы объекта короче 7 строк",
      заменить(КФ, "<HeightInTableRows>7</HeightInTableRows>", "<HeightInTableRows>3</HeightInTableRows>")),
+    ("компоновка_форм", "ошибки", "таблица: растяжка снята, высоты нет",
+     заменить(КФ, "<HeightInTableRows>7</HeightInTableRows>", "<VerticalStretch>false</VerticalStretch>")),
     ("обработчики", "ошибки", "обработчик поля ОрганизацияПриИзменении не подключён (дыра ПЛ)",
      заменить(КФ, Т9 + '<Events>\n' + Т9 + '\t<Event name="OnChange">ОрганизацияПриИзменении</Event>\n' + Т9 +
               '</Events>\n', "")),
@@ -330,6 +332,30 @@ def создать_копию(из_отн, в_отн, старое, новое):
      заменить(КФ, Т8 + '<InputField name="Ответственный" id="10">',
               Т8 + '<InputField name="ОрганизацияПросмотр" id="92">\n' + Т9 + '<DataPath>Объект.Организация</DataPath>\n' +
               Т9 + '<ReadOnly>true</ReadOnly>\n' + Т8 + '</InputField>\n' + Т8 + '<InputField name="Ответственный" id="10">')),
+    ("сетка: строки с полями с заголовком слева разной длины — платформа выравнивает колонку подписей",
+     заменить(КФ, Т8 + '<InputField name="Организация" id="7">',
+              Т8 + '<UsualGroup name="СтрокаКороткая" id="94">\n' + Т9 + '<Group>Horizontal</Group>\n' + Т9 +
+              '<ChildItems>\n' + Т9 + '\t<LabelField name="ПолеКороткое" id="95">\n' + Т9 + '\t\t<Title><v8:item>'
+              '<v8:lang>ru</v8:lang><v8:content>Код</v8:content></v8:item></Title>\n' + Т9 + '\t</LabelField>\n' + Т9 +
+              '</ChildItems>\n' + Т8 + '</UsualGroup>\n' +
+              Т8 + '<UsualGroup name="СтрокаДлинная" id="96">\n' + Т9 + '<Group>Horizontal</Group>\n' + Т9 +
+              '<ChildItems>\n' + Т9 + '\t<LabelField name="ПолеДлинное" id="97">\n' + Т9 + '\t\t<Title><v8:item>'
+              '<v8:lang>ru</v8:lang><v8:content>Очень длинная подпись поля строки</v8:content></v8:item></Title>\n' +
+              Т9 + '\t</LabelField>\n' + Т9 + '</ChildItems>\n' + Т8 + '</UsualGroup>\n' +
+              Т8 + '<LabelField name="ПолеОтКрая" id="98">\n' + Т9 + '<TitleLocation>None</TitleLocation>\n' + Т8 +
+              '</LabelField>\n' + Т8 + '<InputField name="Организация" id="7">')),
+    ("сетка: надпись и поле внутри группы-всплывашки (PopUp) — в строке только кнопка группы",
+     заменить(КФ, Т8 + '<InputField name="Организация" id="7">',
+              Т8 + '<UsualGroup name="СтрокаВсплывашка" id="94">\n' + Т9 + '<Group>Horizontal</Group>\n' + Т9 +
+              '<ChildItems>\n' + Т9 + '\t<UsualGroup name="Всплывашка" id="95">\n' + Т9 + '\t\t<Behavior>PopUp</Behavior>\n' +
+              Т9 + '\t\t<ChildItems>\n' + Т9 + '\t\t\t<LabelDecoration name="ПодписьВсплывашки" id="96">\n' + Т9 +
+              '\t\t\t\t<Width>10</Width>\n' + Т9 + '\t\t\t</LabelDecoration>\n' + Т9 +
+              '\t\t\t<LabelField name="ПолеВсплывашки" id="97">\n' + Т9 + '\t\t\t\t<TitleLocation>None</TitleLocation>\n' +
+              Т9 + '\t\t\t</LabelField>\n' + Т9 + '\t\t</ChildItems>\n' + Т9 + '\t</UsualGroup>\n' + Т9 + '</ChildItems>\n' +
+              Т8 + '</UsualGroup>\n' + Т8 + '<LabelField name="ПолеОтКрая" id="98">\n' + Т9 +
+              '<TitleLocation>None</TitleLocation>\n' + Т8 + '</LabelField>\n' + Т8 + '<InputField name="Организация" id="7">')),
+    ("таблица без высоты и без явной растяжки (растяжка по умолчанию)",
+     заменить(КФ, "\t" * 7 + "<HeightInTableRows>7</HeightInTableRows>\n", "")),
     ("проглоченная ошибка с пометкой «# честно:»",
      заменить(Р_ТЕСТ, "        т.c.Удалить()\n    except Exception:  # уборка: объект мог удалить сосед\n",
               "        т.c.Сохранить()\n    except Exception:  # честно: нет метода — и не надо\n")),

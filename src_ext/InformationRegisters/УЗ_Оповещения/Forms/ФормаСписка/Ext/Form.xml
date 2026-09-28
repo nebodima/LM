@@ -4,6 +4,7 @@
 		<ChildItems>
 			<Button name="ФормаЗавершить" id="20">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.Завершить</CommandName>
 				<ExtendedTooltip name="ФормаЗавершитьРасширеннаяПодсказка" id="21"/>
 			</Button>
@@ -122,6 +123,7 @@
 		<Command name="Завершить" id="1">
 			<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Завершить</v8:content></v8:item></Title>
 			<ToolTip><v8:item><v8:lang>ru</v8:lang><v8:content>Отметить выделенные оповещения выполненными — они больше не будут всплывать</v8:content></v8:item></ToolTip>
+			<Picture><xr:Ref>StdPicture.ExecuteTask</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
 			<Action>Завершить</Action>
 		</Command>
 	</Commands>

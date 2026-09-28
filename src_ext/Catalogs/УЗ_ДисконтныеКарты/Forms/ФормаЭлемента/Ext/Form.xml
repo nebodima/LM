@@ -44,7 +44,7 @@
 								<xr:Common>false</xr:Common>
 							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
-							<TextColor>#000000</TextColor>
+							<TextColor>style:FieldTextColor</TextColor>
 							<ContextMenu name="РодительКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="15"/>
 						</InputField>
@@ -98,7 +98,7 @@
 									<EditMode>EnterOnInput</EditMode>
 									<Width>15</Width>
 									<HorizontalStretch>false</HorizontalStretch>
-									<TextColor>#000000</TextColor>
+									<TextColor>style:FieldTextColor</TextColor>
 									<ContextMenu name="КодКартыШтрихкодКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="КодКартыШтрихкодРасширеннаяПодсказка" id="27"/>
 									<Events>
@@ -165,7 +165,7 @@
 								</LabelDecoration>
 								<LabelDecoration name="ДекорацияДействует" id="50">
 									<Height>1</Height>
-									<TextColor>#339966</TextColor>
+									<TextColor>style:AccentColor</TextColor>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -182,7 +182,7 @@
 							<DataPath>Объект.НеДействует</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<CheckBoxType>Auto</CheckBoxType>
-							<BackColor>#E4E4E4</BackColor>
+							<BackColor>style:TableHeaderBackColor</BackColor>
 							<ContextMenu name="ДействуетКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="ДействуетРасширеннаяПодсказка" id="55"/>
 						</CheckBoxField>
@@ -192,7 +192,7 @@
 							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 							<MarkNegatives>true</MarkNegatives>
 							<Hiperlink>true</Hiperlink>
-							<TextColor>#339966</TextColor>
+							<TextColor>style:AccentColor</TextColor>
 							<ContextMenu name="ОстатокБонусовКонтекстноеМеню" id="40"/>
 							<ExtendedTooltip name="ОстатокБонусовРасширеннаяПодсказка" id="41"/>
 							<Events>

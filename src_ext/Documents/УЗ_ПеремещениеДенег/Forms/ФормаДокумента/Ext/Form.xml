@@ -193,28 +193,6 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
-										<InputField name="Клиент" id="10">
-											<DataPath>Объект.Клиент</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="КлиентКонтекстноеМеню" id="11"/>
-											<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="12"/>
-										</InputField>
-										<InputField name="СтатьяЗатрат" id="194">
-											<DataPath>Объект.СтатьяЗатрат</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Статья затрат</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="195"/>
-											<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="196"/>
-										</InputField>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаВзаиморасчеты" id="123">
@@ -255,20 +233,6 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
-										<InputField name="Клиент1" id="131">
-											<DataPath>Объект.Клиент</DataPath>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="Клиент1КонтекстноеМеню" id="132"/>
-											<ExtendedTooltip name="Клиент1РасширеннаяПодсказка" id="133"/>
-										</InputField>
-										<InputField name="СтатьяЗатрат1" id="197">
-											<DataPath>Объект.СтатьяЗатрат</DataPath>
-											<HorizontalStretch>false</HorizontalStretch>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="СтатьяЗатрат1КонтекстноеМеню" id="198"/>
-											<ExtendedTooltip name="СтатьяЗатрат1РасширеннаяПодсказка" id="199"/>
-										</InputField>
 										<UsualGroup name="Группа2" id="188">
 											<Group>Horizontal</Group>
 											<Representation>None</Representation>
@@ -291,11 +255,33 @@
 										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
+								<InputField name="Клиент" id="10">
+									<DataPath>Объект.Клиент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="КлиентКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="СтатьяЗатрат" id="194">
+									<DataPath>Объект.СтатьяЗатрат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статья затрат</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="СтатьяЗатратРасширеннаяПодсказка" id="196"/>
+								</InputField>
 								<InputField name="Сумма" id="13">
 									<DataPath>Объект.Сумма</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ClearButton>true</ClearButton>
-									<BackColor>#CCFFCC</BackColor>
+									<BackColor>style:FieldAlternativeBackColor</BackColor>
 									<ContextMenu name="СуммаКонтекстноеМеню" id="14"/>
 									<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="15"/>
 								</InputField>

@@ -37,8 +37,8 @@
 						</InputField>
 						<Button name="Сформировать" id="13">
 							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
 							<CommandName>Form.Command.Сформировать</CommandName>
-							<BackColor>#FFCC00</BackColor>
 							<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="14"/>
 						</Button>
 					</ChildItems>

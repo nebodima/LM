@@ -75,6 +75,7 @@
 			</Button>
 			<Button name="ФормаНапомнить" id="274">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
 				<DataPath>Объект.Ref</DataPath>
 				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="275"/>
@@ -321,7 +322,7 @@
 							<ExtendedTooltip name="СформироватьТекстНазначенияПлатежаРасширеннаяПодсказка" id="175"/>
 						</Button>
 						<LabelDecoration name="ДекорацияТекстНазначениеПлатежа" id="184">
-							<TextColor>#999999</TextColor>
+							<TextColor>style:ToolTipTextColor</TextColor>
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -353,7 +354,7 @@
 				</v8:item>
 			</CollapsedRepresentationTitle>
 			<Representation>None</Representation>
-			<BackColor>#EBFFEB</BackColor>
+			<BackColor>style:FieldAlternativeBackColor</BackColor>
 			<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="210"/>
 			<ChildItems>
 				<InputField name="ДисконтнаяКарта" id="213">
@@ -404,7 +405,7 @@
 					</Title>
 					<HorizontalAlign>Left</HorizontalAlign>
 					<Hiperlink>true</Hiperlink>
-					<TextColor>#0000FF</TextColor>
+					<TextColor>style:SpecialTextColor</TextColor>
 					<ContextMenu name="ДоступноБонусовКонтекстноеМеню" id="234"/>
 					<ExtendedTooltip name="ДоступноБонусовРасширеннаяПодсказка" id="235"/>
 					<Events>

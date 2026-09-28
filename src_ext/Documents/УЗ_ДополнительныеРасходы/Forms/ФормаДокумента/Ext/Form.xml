@@ -28,6 +28,7 @@
 			</Button>
 			<Button name="ФормаДвиженияДокумента" id="78">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ДвиженияДокумента</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаДвиженияДокументаРасширеннаяПодсказка" id="79"/>

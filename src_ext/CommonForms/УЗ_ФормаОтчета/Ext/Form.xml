@@ -15,16 +15,19 @@
 		<ChildItems>
 			<Button name="ФормаПоказатьНастройки" id="10">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ПоказатьНастройки</CommandName>
 				<ExtendedTooltip name="ФормаПоказатьНастройкиРасширеннаяПодсказка" id="11"/>
 			</Button>
 			<Button name="ФормаОформитьПКО" id="12">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ОформитьПКО</CommandName>
 				<ExtendedTooltip name="ФормаОформитьПКОРасширеннаяПодсказка" id="13"/>
 			</Button>
 			<Button name="ФормаОформитьПеремещениеДенег" id="14">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ОформитьПеремещениеДенег</CommandName>
 				<ExtendedTooltip name="ФормаОформитьПеремещениеДенегРасширеннаяПодсказка" id="15"/>
 			</Button>
@@ -366,6 +369,7 @@
 					<v8:content>Показать или скрыть настройки отчета: отборы, параметры, поля, сортировку и структуру.</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture><xr:Ref>StdPicture.ReportSettings</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
 			<Action>ПоказатьНастройки</Action>
 			<Representation>Text</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>

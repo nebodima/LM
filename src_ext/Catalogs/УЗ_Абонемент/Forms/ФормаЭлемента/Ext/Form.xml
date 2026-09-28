@@ -114,7 +114,7 @@
 										</v8:item>
 									</Title>
 									<HorizontalAlign>Center</HorizontalAlign>
-									<BackColor>#CCFFCC</BackColor>
+									<BackColor>style:FieldAlternativeBackColor</BackColor>
 									<Border width="1">
 										<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
 									</Border>
@@ -163,6 +163,7 @@
 											</ChildItems>
 										</UsualGroup>
 										<UsualGroup name="Группа4" id="137">
+											<HorizontalStretch>true</HorizontalStretch>
 											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
@@ -171,7 +172,7 @@
 												<InputField name="ФизЛицо" id="55">
 													<DataPath>Объект.ФизЛицо</DataPath>
 													<ReadOnly>true</ReadOnly>
-													<Width>20</Width>
+													<TitleLocation>Top</TitleLocation>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
 													<ContextMenu name="ФизЛицоКонтекстноеМеню" id="56"/>
@@ -328,6 +329,7 @@
 													<DataPath>Объект.Комментарий</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
+													<Height>2</Height>
 													<MultiLine>true</MultiLine>
 													<InputHint>
 														<v8:item>
@@ -369,7 +371,7 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация1" id="240">
 											<HorizontalStretch>true</HorizontalStretch>
-											<TextColor>#008080</TextColor>
+											<TextColor>style:AccentColor</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -377,7 +379,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>#DDDDDD</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация1КонтекстноеМеню" id="241"/>
 											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="242"/>
 										</LabelDecoration>
@@ -406,7 +408,7 @@
 													<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="236"/>
 													<ChildItems>
 														<LabelDecoration name="Декорация5" id="348">
-															<TextColor>#339966</TextColor>
+															<TextColor>style:AccentColor</TextColor>
 															<Font ref="style:NormalTextFont" height="16" kind="StyleItem"/>
 															<Title formatted="false">
 																<v8:item>
@@ -432,6 +434,7 @@
 														</InputField>
 														<Table name="Приостановки" id="167">
 															<TitleLocation>Auto</TitleLocation>
+															<HeightInTableRows>7</HeightInTableRows>
 															<AutoInsertNewRow>true</AutoInsertNewRow>
 															<VerticalStretch>false</VerticalStretch>
 															<EnableStartDrag>true</EnableStartDrag>
@@ -544,7 +547,7 @@
 																	<DataPath>Объект.Приостановки.ДатаИзменения</DataPath>
 																	<ReadOnly>true</ReadOnly>
 																	<EditMode>EnterOnInput</EditMode>
-																	<TextColor>#999999</TextColor>
+																	<TextColor>style:ToolTipTextColor</TextColor>
 																	<ContextMenu name="ПриостановкиДатаИзмененияКонтекстноеМеню" id="196"/>
 																	<ExtendedTooltip name="ПриостановкиДатаИзмененияРасширеннаяПодсказка" id="197"/>
 																</InputField>
@@ -562,7 +565,7 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация2" id="243">
 											<HorizontalStretch>true</HorizontalStretch>
-											<TextColor>#008080</TextColor>
+											<TextColor>style:AccentColor</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -570,7 +573,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>#DDDDDD</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация2КонтекстноеМеню" id="244"/>
 											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="245"/>
 										</LabelDecoration>
@@ -595,7 +598,7 @@
 										</UsualGroup>
 										<LabelDecoration name="Декорация3" id="288">
 											<HorizontalStretch>true</HorizontalStretch>
-											<TextColor>#0000FF</TextColor>
+											<TextColor>style:SpecialTextColor</TextColor>
 											<HorizontalAlign>Center</HorizontalAlign>
 											<ContextMenu name="Декорация3КонтекстноеМеню" id="289"/>
 											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="290"/>
@@ -638,7 +641,7 @@
 										</LabelField>
 										<LabelDecoration name="Декорация4" id="316">
 											<HorizontalStretch>true</HorizontalStretch>
-											<TextColor>#008080</TextColor>
+											<TextColor>style:AccentColor</TextColor>
 											<Title formatted="false">
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -646,7 +649,7 @@
 												</v8:item>
 											</Title>
 											<HorizontalAlign>Center</HorizontalAlign>
-											<BackColor>#DDDDDD</BackColor>
+											<BackColor>style:TableHeaderBackColor</BackColor>
 											<ContextMenu name="Декорация4КонтекстноеМеню" id="317"/>
 											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="318"/>
 										</LabelDecoration>

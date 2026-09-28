@@ -135,7 +135,7 @@
 											<v8:content>ЧДЦ=2; ЧН=0,00</v8:content>
 										</v8:item>
 									</Format>
-									<TextColor>#339966</TextColor>
+									<TextColor>style:AccentColor</TextColor>
 									<ContextMenu name="ОстатокВКассеКонтекстноеМеню" id="89"/>
 									<ExtendedTooltip name="ОстатокВКассеРасширеннаяПодсказка" id="90"/>
 								</LabelField>
@@ -222,13 +222,6 @@
 					<ContextMenu name="ДД1ДокументКонтекстноеМеню" id="134"/>
 					<ExtendedTooltip name="ДД1ДокументРасширеннаяПодсказка" id="135"/>
 				</InputField>
-				<InputField name="ДДКомментарий" id="191">
-					<DataPath>Объект.ДД.Комментарий</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДДКомментарийКонтекстноеМеню" id="192"/>
-					<ExtendedTooltip name="ДДКомментарийРасширеннаяПодсказка" id="193"/>
-				</InputField>
 				<InputField name="ДД1Начисления" id="142">
 					<DataPath>Объект.ДД.Начисление</DataPath>
 					<ReadOnly>true</ReadOnly>
@@ -260,6 +253,13 @@
 					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ContextMenu name="ДДКОплатеКонтекстноеМеню" id="198"/>
 					<ExtendedTooltip name="ДДКОплатеРасширеннаяПодсказка" id="199"/>
+				</InputField>
+				<InputField name="ДДКомментарий" id="191">
+					<DataPath>Объект.ДД.Комментарий</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДДКомментарийКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="ДДКомментарийРасширеннаяПодсказка" id="193"/>
 				</InputField>
 			</ChildItems>
 		</Table>

@@ -13,7 +13,7 @@
 			<Group>FormCommandBarImportant</Group>
 			<Representation>Auto</Representation>
 			<ToolTip><v8:item><v8:lang>ru</v8:lang><v8:content>Создать напоминание по этому объекту: когда и о чём напомнить</v8:content></v8:item></ToolTip>
-			<Picture/>
+			<Picture><xr:Ref>StdPicture.Notifications</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
 			<Shortcut/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<CommandParameterType><v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type><v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type><v8:Type>cfg:DocumentRef.УЗ_ПриходДенег</v8:Type><v8:Type>cfg:DocumentRef.УЗ_РасходДенег</v8:Type></CommandParameterType>

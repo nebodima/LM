@@ -24,6 +24,7 @@
 			</Button>
 			<Button name="ФормаНапомнить" id="900">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
 				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="901"/>

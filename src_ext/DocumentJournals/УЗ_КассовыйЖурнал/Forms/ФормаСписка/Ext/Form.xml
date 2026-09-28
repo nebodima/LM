@@ -111,7 +111,7 @@
 							<UserVisible>
 								<xr:Common>false</xr:Common>
 							</UserVisible>
-							<TitleTextColor>#000000</TitleTextColor>
+							<TitleTextColor>style:FormTextColor</TitleTextColor>
 							<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
 						</LabelField>

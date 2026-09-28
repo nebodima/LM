@@ -64,6 +64,7 @@
 						<ChildItems>
 							<Button name="НайтиУроки" id="1">
 								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
 								<DefaultButton>true</DefaultButton>
 								<CommandName>Form.Command.НайтиУроки</CommandName>
 								<ExtendedTooltip name="НайтиУрокиРасширеннаяПодсказка" id="2"/>
@@ -79,11 +80,12 @@
 									<xr:Ref>StdPicture.CheckAll</xr:Ref>
 									<xr:LoadTransparent>true</xr:LoadTransparent>
 								</Picture>
-								<BackColor>web:PaleTurquoise</BackColor>
+								<BackColor>style:ActivityColor</BackColor>
 								<ExtendedTooltip name="ДеревоУроковГруппа1РасширеннаяПодсказка" id="112"/>
 								<ChildItems>
 									<Button name="ДеревоУроковУстановитьСписатьОплату" id="103">
 										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.УстановитьСписатьОплату</CommandName>
 										<Title>
 											<v8:item>
@@ -95,6 +97,7 @@
 									</Button>
 									<Button name="ДеревоУроковСнятьСписатьОплату" id="105">
 										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.СнятьСписатьОплату</CommandName>
 										<ExtendedTooltip name="ДеревоУроковСнятьСписатьОплатуРасширеннаяПодсказка" id="106"/>
 									</Button>
@@ -115,11 +118,13 @@
 								<ChildItems>
 									<Button name="ДеревоУроковУстановитьЯвки" id="107">
 										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.УстановитьЯвки</CommandName>
 										<ExtendedTooltip name="ДеревоУроковУстановитьЯвкиРасширеннаяПодсказка" id="108"/>
 									</Button>
 									<Button name="ДеревоУроковСнятьЯвки" id="109">
 										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.СнятьЯвки</CommandName>
 										<ExtendedTooltip name="ДеревоУроковСнятьЯвкиРасширеннаяПодсказка" id="110"/>
 									</Button>
@@ -174,7 +179,7 @@
 						</LabelField>
 						<CheckBoxField name="ДеревоУроковСписатьОплату" id="68">
 							<DataPath>ДеревоУроков.СписатьОплату</DataPath>
-							<TitleBackColor>web:PaleTurquoise</TitleBackColor>
+							<TitleBackColor>style:ActivityColor</TitleBackColor>
 							<EditMode>EnterOnInput</EditMode>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ДеревоУроковСписатьОплатуКонтекстноеМеню" id="69"/>

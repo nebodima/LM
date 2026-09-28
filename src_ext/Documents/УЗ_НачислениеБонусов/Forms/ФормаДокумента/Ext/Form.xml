@@ -42,6 +42,7 @@
 				<ChildItems>
 					<Button name="ФормаДокументСписаниеОстатковПечать" id="208">
 						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
 						<CommandName>Document.УЗ_НачислениеБонусов.Command.Печать</CommandName>
 						<DataPath>Объект.Ref</DataPath>
 						<ExtendedTooltip name="ФормаДокументСписаниеОстатковПечатьРасширеннаяПодсказка" id="209"/>

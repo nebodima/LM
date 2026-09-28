@@ -60,7 +60,7 @@
 					</Events>
 				</InputField>
 				<LabelDecoration name="Декорация1" id="24">
-					<TextColor>#0000FF</TextColor>
+					<TextColor>style:SpecialTextColor</TextColor>
 					<ContextMenu name="Декорация1КонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="26"/>
 				</LabelDecoration>
