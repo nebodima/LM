@@ -1595,28 +1595,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УЗ_Урок.Attribute.НачисленоПедагогу</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УЗ_Урок.TabularSection.НачисленияПедагогу</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-		<right>
-			<name>Edit</name>
-			<value>false</value>
-		</right>
-	</object>
-	<object>
 		<name>Document.УЗ_ДополнительныеРасходы</name>
 		<right>
 			<name>Read</name>
@@ -1967,6 +1945,13 @@
 	</object>
 	<object>
 		<name>AccumulationRegister.УЗ_РасчетыПоЗарплате</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ЛОЖЬ</condition>
+			</restrictionByCondition>
+		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>

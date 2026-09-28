@@ -68,6 +68,24 @@
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="86"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="87"/>
 						</InputField>
+						<InputField name="ДокументОснования" id="100">
+							<DataPath>Объект.ДокументОснования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Урок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Урок, за который начисление (доплата сверх ставки урока)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="102"/>
+						</InputField>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ПраваяКолонка" id="92">
