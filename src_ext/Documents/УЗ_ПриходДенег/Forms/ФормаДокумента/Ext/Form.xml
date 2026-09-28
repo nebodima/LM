@@ -85,6 +85,7 @@
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -254,9 +255,6 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="169"/>
 							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="170"/>
-							<Events>
-								<Event name="OnChange">ПодразделениеПриИзменении</Event>
-							</Events>
 						</InputField>
 						<InputField name="СтатьяЗатрат" id="203">
 							<DataPath>Объект.СтатьяЗатрат</DataPath>
