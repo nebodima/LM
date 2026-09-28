@@ -163,8 +163,11 @@ def _сверить_расширение(c, база):
 
 
 def _тесты(фильтр):
+    """Имена тестов: tools/тесты/тест_X.py — «X»; тесты логик tools/тесты/логика_X.py (сценарии docs/логики) —
+    «логика_X» (имя модуля целиком)."""
     имена = [os.path.splitext(os.path.basename(п))[0][len("тест_"):]
              for п in sorted(glob.glob(os.path.join(ТЕСТЫ, "тест_*.py")))]
+    имена += [os.path.splitext(os.path.basename(п))[0] for п in sorted(glob.glob(os.path.join(ТЕСТЫ, "логика_*.py")))]
     if фильтр:
         имена = [и for и in имена if и == фильтр.replace("тест_", "", 1)]
     return [и for и in имена if и not in ПОСЛЕДНИЕ] + [и for и in имена if и in ПОСЛЕДНИЕ]
@@ -362,7 +365,7 @@ def прогнать_базу(имя, база, пользователь, фил
             with contextlib.redirect_stdout(тройник):
                 т = None
                 try:
-                    модуль = importlib.import_module("тест_" + тест)
+                    модуль = importlib.import_module(тест if тест.startswith("логика_") else "тест_" + тест)
                     т = сеанс.Тест(тест, c=c, база=база)
                     т.выполнить(модуль.сценарий)
                     код = т.итог()

@@ -206,6 +206,13 @@
 														<Event name="OnChange">ЭтоПедагогПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
+												<CheckBoxField name="Выбыл" id="910">
+													<DataPath>Объект.Выбыл</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВыбылКонтекстноеМеню" id="911"/>
+													<ExtendedTooltip name="ВыбылРасширеннаяПодсказка" id="912"/>
+												</CheckBoxField>
 												<InputField name="Пол" id="189">
 													<DataPath>Объект.Пол</DataPath>
 													<TitleLocation>None</TitleLocation>
@@ -413,32 +420,6 @@
 															<ContextMenu name="Декорация4КонтекстноеМеню" id="497"/>
 															<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="498"/>
 														</LabelDecoration>
-														<CheckBoxField name="ОповеститьПоТелефону" id="135">
-															<DataPath>Объект.ОповеститьПоТелефону</DataPath>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>по телефону</v8:content>
-																</v8:item>
-															</Title>
-															<TitleLocation>Right</TitleLocation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОповеститьПоТелефонуКонтекстноеМеню" id="136"/>
-															<ExtendedTooltip name="ОповеститьПоТелефонуРасширеннаяПодсказка" id="137"/>
-														</CheckBoxField>
-														<CheckBoxField name="ОповеститьПоSMS" id="132">
-															<DataPath>Объект.ОповеститьПоSMS</DataPath>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>SMS</v8:content>
-																</v8:item>
-															</Title>
-															<TitleLocation>Right</TitleLocation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОповеститьПоSMSКонтекстноеМеню" id="133"/>
-															<ExtendedTooltip name="ОповеститьПоSMSРасширеннаяПодсказка" id="134"/>
-														</CheckBoxField>
 														<CheckBoxField name="ОповеститьПоEmail" id="129">
 															<DataPath>Объект.ОповеститьПоEmail</DataPath>
 															<Title>
@@ -902,7 +883,7 @@
 															<Title formatted="false">
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Остаток денег всего:</v8:content>
+																	<v8:content>Остаток денег:</v8:content>
 																</v8:item>
 															</Title>
 															<ContextMenu name="Декорация9КонтекстноеМеню" id="557"/>
@@ -983,6 +964,14 @@
 														<Event name="Selection">ДолгиВыбор</Event>
 													</Events>
 													<ChildItems>
+														<InputField name="ДолгиОрганизация" id="913">
+															<DataPath>Долги.Организация</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<FooterBackColor>style:FormBackColor</FooterBackColor>
+															<Width>9</Width>
+															<ContextMenu name="ДолгиОрганизацияКонтекстноеМеню" id="914"/>
+															<ExtendedTooltip name="ДолгиОрганизацияРасширеннаяПодсказка" id="915"/>
+														</InputField>
 														<InputField name="ДолгиПредмет" id="517">
 															<DataPath>Долги.Предмет</DataPath>
 															<EditMode>EnterOnInput</EditMode>
@@ -1351,11 +1340,22 @@
 						<v8:Type>cfg:CatalogRef.УЗ_ПредметыОбучения</v8:Type>
 					</Type>
 				</Column>
+				<Column name="Организация" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
 				<Column name="Долг" id="2">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Долг</v8:content>
+							<v8:content>Остаток денег</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1388,7 +1388,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Остаток уроков/часов</v8:content>
+					<v8:content>Осталось уроков</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

@@ -459,7 +459,7 @@
 					</SearchControlAddition>
 					<ChildItems>
 						<LabelField name="СписокУроковДата" id="17">
-							<DataPath>СписокУроков.Date</DataPath>
+							<DataPath>СписокУроков.Дата</DataPath>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -484,6 +484,18 @@
 						</LabelField>
 						<LabelField name="СписокУроковСумма" id="38">
 							<DataPath>СписокУроков.Сумма</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма ученика</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма строки этого ученика в уроке (не всего урока группы)</v8:content>
+								</v8:item>
+							</ToolTip>
 							<ContextMenu name="СписокУроковСуммаКонтекстноеМеню" id="39"/>
 							<ExtendedTooltip name="СписокУроковСуммаРасширеннаяПодсказка" id="40"/>
 						</LabelField>
@@ -619,8 +631,31 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Урок.Ссылка КАК Ссылка,
+	Урок.ПометкаУдаления КАК ПометкаУдаления,
+	Урок.Номер КАК Номер,
+	Урок.Дата КАК Дата,
+	Урок.Проведен КАК Проведен,
+	Урок.ПредметОбучения КАК ПредметОбучения,
+	Урок.ГруппаОбучения КАК ГруппаОбучения,
+	Урок.КоличествоЧасов КАК КоличествоЧасов,
+	Урок.Комментарий КАК Комментарий,
+	СтрокиУченика.Сумма КАК Сумма
+ИЗ
+	Документ.УЗ_Урок КАК Урок
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			Ученики.Ссылка КАК Ссылка,
+			СУММА(Ученики.Сумма) КАК Сумма
+		ИЗ
+			Документ.УЗ_Урок.Ученики КАК Ученики
+		ГДЕ
+			Ученики.Ученик = &amp;Ученик
+		СГРУППИРОВАТЬ ПО
+			Ученики.Ссылка) КАК СтрокиУченика
+		ПО Урок.Ссылка = СтрокиУченика.Ссылка</QueryText>
 				<MainTable>Document.УЗ_Урок</MainTable>
 				<ListSettings>
 					<dcsset:filter>

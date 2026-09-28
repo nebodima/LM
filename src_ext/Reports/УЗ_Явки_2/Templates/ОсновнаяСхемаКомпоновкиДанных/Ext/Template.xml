@@ -126,6 +126,16 @@
 			<dataPath>Абонемент</dataPath>
 			<field>Абонемент</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеявкаБезОплаты</dataPath>
+			<field>НеявкаБезОплаты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не был, без оплаты</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных2</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	УЗ_СписанияСуммЗаУрокиОбороты.Клиент КАК Ученик,
@@ -141,15 +151,41 @@
 	УЗ_СписанияСуммЗаУрокиОбороты.Регистратор КАК Регистратор,
 	УЗ_СписанияСуммЗаУрокиОбороты.Педагог КАК Педагог,
 	УЗ_СписанияСуммЗаУрокиОбороты.Тариф КАК Тариф,
-	УЗ_СписанияСуммЗаУрокиОбороты.ГруппаОбучения КАК ГруппаОбучения
+	УЗ_СписанияСуммЗаУрокиОбороты.ГруппаОбучения КАК ГруппаОбучения,
+	УЗ_СписанияСуммЗаУрокиОбороты.Организация КАК Организация,
+	0 КАК НеявкаБезОплаты
 ИЗ
 	РегистрНакопления.УЗ_СписанияСуммЗаУроки.Обороты(, , Регистратор, ) КАК УЗ_СписанияСуммЗаУрокиОбороты
 ГДЕ
-	УЗ_СписанияСуммЗаУрокиОбороты.Регистратор ССЫЛКА Документ.УЗ_Урок</query>
+	УЗ_СписанияСуммЗаУрокиОбороты.Регистратор ССЫЛКА Документ.УЗ_Урок
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СтрокиУрока.Ученик,
+	НАЧАЛОПЕРИОДА(СтрокиУрока.Ссылка.Дата, ДЕНЬ),
+	СтрокиУрока.Ссылка.ПредметОбучения,
+	0,
+	СтрокиУрока.Ссылка,
+	СтрокиУрока.Ссылка.Педагог,
+	СтрокиУрока.Тариф,
+	СтрокиУрока.Ссылка.ГруппаОбучения,
+	СтрокиУрока.Ссылка.Организация,
+	1
+ИЗ
+	Документ.УЗ_Урок.Ученики КАК СтрокиУрока
+ГДЕ
+	СтрокиУрока.Ссылка.Проведен
+	И НЕ СтрокиУрока.Явка
+	И НЕ СтрокиУрока.СписатьОплату</query>
 	</dataSet>
 	<totalField>
 		<dataPath>Явка</dataPath>
 		<expression>Сумма(Явка)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеявкаБезОплаты</dataPath>
+		<expression>Сумма(НеявкаБезОплаты)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -344,6 +380,11 @@
 								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">НеявкаБезОплаты</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
 								<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
 								<dcsset:comparisonType>Filled</dcsset:comparisonType>
 							</dcsset:item>
@@ -364,6 +405,67 @@
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>-</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ВыводитьКартинку</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionPictureOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ГоризонтальноеПоложениеКартинки</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Явка</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Явка</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">НеявкаБезОплаты</dcsset:left>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Период</dcsset:left>
+								<dcsset:comparisonType>Filled</dcsset:comparisonType>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>н</v8:content>
 								</v8:item>
 							</dcscor:value>
 						</dcscor:item>

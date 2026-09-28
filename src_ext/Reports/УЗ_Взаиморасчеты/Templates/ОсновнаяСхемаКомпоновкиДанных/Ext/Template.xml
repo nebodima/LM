@@ -61,7 +61,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Приход</v8:content>
+					<v8:content>Зачислено (оплаты, бонусы, перемещения)</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -71,7 +71,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Расход</v8:content>
+					<v8:content>Списано (уроки, возвраты, списания)</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -81,7 +81,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Часов</v8:content>
+					<v8:content>Часов у учеников</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -314,7 +314,7 @@
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кол-во уроков</v8:content>
+					<v8:content>Уроков у учеников</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -378,6 +378,47 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УрокПроведен</dataPath>
+			<field>УрокПроведен</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уроков проведено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыПедагога</dataPath>
+			<field>ЧасыПедагога</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часов проведено</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоУрок</dataPath>
+			<field>ЭтоУрок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Урок</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
 	СписанияСуммЗаУроки.Организация КАК Организация,
@@ -419,10 +460,52 @@
 	СписанияСуммЗаУроки.КоличествоЯвокПриход КАК КолЯвокПриход,
 	СписанияСуммЗаУроки.КоличествоЯвокРасход КАК КолЯвокРасход,
 	СписанияСуммЗаУроки.КоличествоЯвокОборот КАК КолЯвокОборот,
-	СписанияСуммЗаУроки.КоличествоЯвокКонечныйОстаток КАК КолЯвокКонОст
+	СписанияСуммЗаУроки.КоличествоЯвокКонечныйОстаток КАК КолЯвокКонОст,
+	ВЫБОР
+		КОГДА УрокиСЯвкой.Урок ЕСТЬ NULL
+			ТОГДА NULL
+		ИНАЧЕ СписанияСуммЗаУроки.Регистратор
+	КОНЕЦ КАК УрокПроведен,
+	ВЫБОР
+		КОГДА УрокиСЯвкой.Урок ЕСТЬ NULL
+			ТОГДА 0
+		ИНАЧЕ -СписанияСуммЗаУроки.ЧасыОборот / 3600 / УрокиСЯвкой.Строк
+	КОНЕЦ КАК ЧасыПедагога,
+	ВЫБОР
+		КОГДА СписанияСуммЗаУроки.Регистратор ССЫЛКА Документ.УЗ_Урок
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЭтоУрок
 ИЗ
-	РегистрНакопления.УЗ_СписанияСуммЗаУроки.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , ) КАК СписанияСуммЗаУроки</query>
+	РегистрНакопления.УЗ_СписанияСуммЗаУроки.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Авто, , ) КАК СписанияСуммЗаУроки
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СтрокиУрока.Ссылка КАК Урок,
+			КОЛИЧЕСТВО(*) КАК Строк
+		ИЗ
+			Документ.УЗ_Урок.Ученики КАК СтрокиУрока
+		ГДЕ
+			СтрокиУрока.Ссылка.Проведен
+			И (СтрокиУрока.Явка
+					ИЛИ СтрокиУрока.СписатьОплату)
+			И СтрокиУрока.Ссылка В
+				(ВЫБРАТЬ
+					СЯвкой.Ссылка
+				ИЗ
+					Документ.УЗ_Урок.Ученики КАК СЯвкой
+				ГДЕ
+					СЯвкой.Явка)
+		СГРУППИРОВАТЬ ПО
+			СтрокиУрока.Ссылка) КАК УрокиСЯвкой
+		ПО СписанияСуммЗаУроки.Регистратор = УрокиСЯвкой.Урок</query>
 	</dataSet>
+	<totalField>
+		<dataPath>УрокПроведен</dataPath>
+		<expression>Количество(Различные УрокПроведен)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЧасыПедагога</dataPath>
+		<expression>Сумма(ЧасыПедагога)</expression>
+	</totalField>
 	<totalField>
 		<dataPath>СуммаКонечныйОстаток</dataPath>
 		<expression>Сумма(СуммаКонечныйОстаток)</expression>
@@ -564,7 +647,6 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Организация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -623,6 +705,12 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>2a13b35f-5a36-462a-8104-125722f1a109</dcsset:userSettingID>
+				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Клиент</dcsset:left>
@@ -764,6 +852,13 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
 						<dcsset:field>ПредметОбучения</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
@@ -816,7 +911,6 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Организация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -862,6 +956,12 @@
 					<dcsset:field>ЧасыОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УрокПроведен</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧасыПедагога</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КолУроковОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -875,6 +975,12 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>322ac27a-dd78-41a4-9c1b-79700cad0a15</dcsset:userSettingID>
+				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Клиент</dcsset:left>
@@ -1016,6 +1122,13 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
 						<dcsset:field>ГруппаОбучения</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
@@ -1068,7 +1181,6 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Организация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1113,6 +1225,12 @@
 					<dcsset:field>ЧасыОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УрокПроведен</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧасыПедагога</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КолУроковОборот</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1126,6 +1244,12 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>757d671c-b5fe-4f23-9b8d-104048ed7b82</dcsset:userSettingID>
+				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Педагог</dcsset:left>
@@ -1163,9 +1287,9 @@
 					<dcsset:userSettingID>e8dbf69f-ac99-4f90-8c89-7bf67492d0d9</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
-					<dcsset:left xsi:type="dcscor:Field">СуммаОборот</dcsset:left>
-					<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
-					<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					<dcsset:left xsi:type="dcscor:Field">ЭтоУрок</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
 					<dcsset:userSettingID>13772aba-af00-492b-9e71-8745bac0fe5a</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
@@ -1257,6 +1381,13 @@
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
 						<dcsset:field>Педагог</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
@@ -1309,7 +1440,6 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
 					<dcsset:field>Организация</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -1369,6 +1499,12 @@
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>a332a44f-c102-47ce-93c1-6727586b8112</dcsset:userSettingID>
+				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Клиент</dcsset:left>
@@ -1508,6 +1644,13 @@
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
 				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
 					<dcsset:item xsi:type="dcsset:GroupItemField">
 						<dcsset:field>ПредметОбучения</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
