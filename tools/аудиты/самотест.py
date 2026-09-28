@@ -133,6 +133,43 @@ def удалить(*отн):
     return д
 
 
+def вместе(*действия):
+    """Несколько правок одной мутацией (одна ошибка, записанная в двух местах формы)."""
+    def д(корень):
+        for а in действия:
+            а(корень)
+    return д
+
+
+# своя форма отчёта для стандарт_форм п.15: «Сформировать» в группе формы, а не в её командной панели
+СФ_ОТЧЁТ = "Reports/УЗ_ОтчетПоКассе/Forms/ФормаОтчета/Ext/Form.xml"
+ФОРМА_ОТЧЁТА = ('<?xml version="1.0" encoding="UTF-8"?>\n<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" '
+                'xmlns:v8="http://v8.1c.ru/8.1/data/core" version="2.20">\n'
+                '\t<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">\n\t\t<Autofill>false</Autofill>\n'
+                '\t</AutoCommandBar>\n\t<ChildItems>\n\t\t<Button name="Сформировать" id="1">\n'
+                '\t\t\t<Type>UsualButton</Type>\n\t\t\t<DefaultButton>true</DefaultButton>\n'
+                '\t\t\t<CommandName>Form.Command.Сформировать</CommandName>\n'
+                '\t\t\t<ExtendedTooltip name="СформироватьРасширеннаяПодсказка" id="2"/>\n\t\t</Button>\n'
+                '\t</ChildItems>\n\t<Commands>\n\t\t<Command name="Сформировать" id="1">\n'
+                '\t\t\t<Action>Сформировать</Action>\n\t\t</Command>\n\t</Commands>\n</Form>\n')
+
+
+# список с произвольным запросом: поля — по псевдонимам запроса, «Список.Ref» платформа не загрузит
+ФОРМА_СПИСКА = ('<?xml version="1.0" encoding="UTF-8"?>\n<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" '
+                'xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" '
+                'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">\n'
+                '\t<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>\n\t<ChildItems>\n'
+                '\t\t<Table name="Список" id="1">\n\t\t\t<DataPath>Список</DataPath>\n\t\t\t<ChildItems>\n'
+                '\t\t\t\t<LabelField name="Ссылка" id="2">\n\t\t\t\t\t<DataPath>Список.Ref</DataPath>\n'
+                '\t\t\t\t</LabelField>\n\t\t\t</ChildItems>\n\t\t</Table>\n\t</ChildItems>\n'
+                '\t<Attributes>\n\t\t<Attribute name="Список" id="1">\n\t\t\t<Type>\n'
+                '\t\t\t\t<v8:Type>cfg:DynamicList</v8:Type>\n\t\t\t</Type>\n\t\t\t<MainAttribute>true</MainAttribute>\n'
+                '\t\t\t<Settings xsi:type="DynamicList">\n\t\t\t\t<ManualQuery>true</ManualQuery>\n'
+                '\t\t\t\t<QueryText>ВЫБРАТЬ Кассы.Ссылка КАК Ссылка ИЗ Справочник.УЗ_Кассы КАК Кассы</QueryText>\n'
+                '\t\t\t\t<MainTable>Catalog.УЗ_Кассы</MainTable>\n\t\t\t</Settings>\n\t\t</Attribute>\n'
+                '\t</Attributes>\n</Form>\n')
+
+
 # справка F1 в фикстурах (28.09.2026): страница формы документа, формы справочника, формы обработки,
 # объектов и раздела
 СП_ФД = "Documents/УЗ_ПриходДенег/Forms/ФормаДокумента/Ext/Help/ru.html"
@@ -428,6 +465,70 @@ def лишний_параметр_сеанса():
      заменить(ПРАВА, "<name>AccumulationRegister.УЗ_Касса</name>\n\t\t<right>\n",
               "<name>AccumulationRegister.УЗ_Касса</name>\n\t\t<right>\n\t\t\t<name>Edit</name>\n\t\t\t<value>true</value>"
               "\n\t\t</right>\n\t\t<right>\n")),
+    # стандарт форм архитектора (28.09.2026): каждое правило — одна подложенная ошибка
+    ("стандарт_форм", "ошибки", "п.1 колонка таблицы шириной 1",
+     заменить(КФ, "<DataPath>Журнал.Сумма</DataPath>", "<DataPath>Журнал.Сумма</DataPath>\n" + Т9 + "<Width>1</Width>")),
+    ("стандарт_форм", "ошибки", "п.2 длительность числом часов в колонке",
+     вместе(заменить(КФ, '<Column name="Сумма" id="1">', '<Column name="Часов" id="1">'),
+            заменить(КФ, "<DataPath>Журнал.Сумма</DataPath>", "<DataPath>Журнал.Часов</DataPath>"))),
+    ("стандарт_форм", "ошибки", "п.2 продолжительность временем без формата ДФ=Ч:мм",
+     вместе(заменить(КФ, '<Column name="Сумма" id="1">', '<Column name="Продолжительность" id="1">'),
+            заменить(КФ, "<v8:Type>xs:decimal</v8:Type>", "<v8:Type>xs:dateTime</v8:Type>"),
+            заменить(КФ, "<DataPath>Журнал.Сумма</DataPath>", "<DataPath>Журнал.Продолжительность</DataPath>"))),
+    ("стандарт_форм", "ошибки", "п.3 EditFormat без Format",
+     заменить(КФ, "<DataPath>Объект.Организация</DataPath>", "<DataPath>Объект.Организация</DataPath>\n" + Т9 +
+              "<EditFormat><v8:item><v8:lang>ru</v8:lang><v8:content>ДФ=dd.MM.yyyy</v8:content></v8:item></EditFormat>")),
+    ("стандарт_форм", "ошибки", "п.4 заливка поля style:ToolTipBackColor",
+     заменить(КФ, "<DataPath>Объект.Ответственный</DataPath>", "<DataPath>Объект.Ответственный</DataPath>\n" + Т9 +
+              "<BackColor>style:ToolTipBackColor</BackColor>")),
+    ("стандарт_форм", "ошибки", "п.4 цвет текста style:AccentColor",
+     заменить(ФX, "style:FormTextColor", "style:AccentColor")),
+    ("стандарт_форм", "ошибки", "п.4 фон у кнопки",
+     заменить(КФ, "<CommandName>Form.Command.Пересчитать</CommandName>",
+              "<CommandName>Form.Command.Пересчитать</CommandName>\n\t\t\t\t<BackColor>style:FormBackColor</BackColor>")),
+    ("стандарт_форм", "ошибки", "п.5 надпись жирным шрифтом вместо группы с заголовком",
+     заменить(КФ, '<LabelDecoration name="ТекстСправки" id="28">',
+              '<LabelDecoration name="ТекстСправки" id="28">\n\t\t\t\t\t\t\t<Font ref="style:NormalTextFont" bold="true" '
+              'kind="StyleItem"/>')),
+    ("стандарт_форм", "ошибки", "п.6 картинка в заголовке колонки",
+     заменить(КФ, "<DataPath>Журнал.Сумма</DataPath>", "<DataPath>Журнал.Сумма</DataPath>\n" + Т9 +
+              "<HeaderPicture><xr:Ref>StdPicture.User</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent>"
+              "</HeaderPicture>")),
+    ("стандарт_форм", "ошибки", "п.7 «Дата» перед «Номером»",
+     вместе(заменить(ФX, "<DataPath>Объект.Number</DataPath>", "<DataPath>@@</DataPath>"),
+            заменить(ФX, "<DataPath>Объект.Date</DataPath>", "<DataPath>Объект.Number</DataPath>"),
+            заменить(ФX, "<DataPath>@@</DataPath>", "<DataPath>Объект.Date</DataPath>"))),
+    ("стандарт_форм", "ошибки", "п.9 поле шапки шириной 5",
+     заменить(КФ, "<DataPath>Объект.Организация</DataPath>", "<DataPath>Объект.Организация</DataPath>\n" + Т9 +
+              "<Width>5</Width>")),
+    ("стандарт_форм", "ошибки", "п.10 девять видимых колонок",
+     заменить(КФ, Т8 + '<CheckBoxField name="ЖурналОтмечено" id="20">',
+              "".join(Т8 + '<LabelField name="ЖурналКопия%d" id="%d">\n' % (н, 400 + н) + Т9 +
+                      "<DataPath>Журнал.Сумма</DataPath>\n" + Т8 + "</LabelField>\n" for н in range(7)) +
+              Т8 + '<CheckBoxField name="ЖурналОтмечено" id="20">')),
+    ("стандарт_форм", "ошибки", "п.11 флажок шапки подписью слева",
+     заменить(КФ, Т8 + '<InputField name="Ответственный" id="10">',
+              Т8 + '<CheckBoxField name="Флажок" id="410">\n' + Т9 + "<DataPath>Объект.DeletionMark</DataPath>\n" + Т8 +
+              "</CheckBoxField>\n" + Т8 + '<InputField name="Ответственный" id="10">')),
+    ("стандарт_форм", "ошибки", "п.12 сетка таблицы выключена",
+     заменить(КФ, "<DataPath>Журнал</DataPath>", "<DataPath>Журнал</DataPath>\n\t\t\t\t\t\t\t"
+              "<HorizontalLines>false</HorizontalLines>")),
+    ("стандарт_форм", "ошибки", "п.14 HeaderHeight=2",
+     заменить(КФ, "<DataPath>Журнал</DataPath>", "<DataPath>Журнал</DataPath>\n\t\t\t\t\t\t\t<HeaderHeight>2</HeaderHeight>")),
+    ("стандарт_форм", "ошибки", "п.14 ручной перенос в заголовке колонки",
+     заменить(КФ, "<v8:content>Отмечено</v8:content>", "<v8:content>Отме\nчено</v8:content>")),
+    ("стандарт_форм", "ошибки", "п.15 «Сформировать» своей формы отчёта — в группе, не в командной панели",
+     создать_файл(СФ_ОТЧЁТ, ФОРМА_ОТЧЁТА)),
+    ("стандарт_форм", "ошибки", "п.16 у карточки нет кнопки по умолчанию",
+     заменить(КФ, "\t\t\t\t<DefaultButton>true</DefaultButton>\n", "")),
+    ("стандарт_форм", "ошибки", "п.16 кнопка по умолчанию — своя команда, а не «Записать и закрыть»",
+     заменить(КФ, "Form.StandardCommand.WriteAndClose", "Form.Command.Пересчитать")),
+    ("стандарт_форм", "ошибки", "п.17 путь к данным по внутренним номерам (реквизит удалён)",
+     заменить(ФX, "<DataPath>Объект.Касса</DataPath>", "<DataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad</DataPath>")),
+    ("стандарт_форм", "ошибки", "п.17 поле Ref в списке с произвольным запросом (в запросе — Ссылка)",
+     создать_файл("Catalogs/УЗ_Кассы/Forms/ФормаСписка/Ext/Form.xml", ФОРМА_СПИСКА)),
+    ("стандарт_форм", "ошибки", "п.17 путь к несуществующему реквизиту объекта",
+     заменить(ФX, "<DataPath>Объект.Касса</DataPath>", "<DataPath>Объект.КассаУдалённая</DataPath>")),
 ]
 
 # Похожие на ошибки, но законные — ни одного замечания ни в одном аудите
@@ -500,6 +601,15 @@ def лишний_параметр_сеанса():
     ("справка: кавычки вокруг оборота речи и цитаты сообщения, а не надписи",
      заменить(СП_ФД, "запишет оплату.", "запишет оплату «как обычно»; сообщение «Касса не выбрана.» — "
               "выберите кассу.")),
+    ("стандарт форм: флажок шапки подписью справа, продолжительность временем с ДФ=Ч:мм",
+     вместе(заменить(КФ, Т8 + '<InputField name="Ответственный" id="10">',
+                     Т8 + '<CheckBoxField name="Флажок" id="410">\n' + Т9 + "<DataPath>Объект.DeletionMark</DataPath>\n" +
+                     Т9 + "<TitleLocation>Right</TitleLocation>\n" + Т8 + "</CheckBoxField>\n" + Т8 +
+                     '<InputField name="Ответственный" id="10">'),
+            заменить(КФ, '<Column name="Сумма" id="1">', '<Column name="Продолжительность" id="1">'),
+            заменить(КФ, "<v8:Type>xs:decimal</v8:Type>", "<v8:Type>xs:dateTime</v8:Type>"),
+            заменить(КФ, "<DataPath>Журнал.Сумма</DataPath>", "<DataPath>Журнал.Продолжительность</DataPath>\n" + Т9 +
+                     "<Format><v8:item><v8:lang>ru</v8:lang><v8:content>ДФ=Ч:мм</v8:content></v8:item></Format>"))),
 ]
 
 

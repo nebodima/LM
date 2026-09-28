@@ -119,27 +119,30 @@
 				</LabelField>
 				<LabelField name="Код" id="19">
 					<DataPath>Список.Код</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<DefaultItem>true</DefaultItem>
-					<Width>1</Width>
+					<Width>9</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="КодКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<LabelField name="Наименование" id="79">
 					<DataPath>Список.Наименование</DataPath>
-					<Width>1</Width>
+					<Width>25</Width>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="80"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="81"/>
 				</LabelField>
 				<LabelField name="ФизЛицо" id="22">
 					<DataPath>Список.ФизЛицо</DataPath>
-					<Width>1</Width>
+					<Width>25</Width>
 					<ContextMenu name="ФизЛицоКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="ФизЛицоРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="ДатаНачала" id="28">
 					<DataPath>Список.ДатаНачала</DataPath>
-					<Width>1</Width>
+					<Width>10</Width>
 					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="30"/>
 				</LabelField>
@@ -150,20 +153,19 @@
 				</LabelField>
 				<LabelField name="Оплачено" id="64">
 					<DataPath>Список.Оплачено</DataPath>
-					<Width>1</Width>
-					<TextColor>style:SpecialTextColor</TextColor>
+					<Width>12</Width>
 					<ContextMenu name="ОплаченоКонтекстноеМеню" id="65"/>
 					<ExtendedTooltip name="ОплаченоРасширеннаяПодсказка" id="66"/>
 				</LabelField>
 				<LabelField name="Израсходовано" id="67">
 					<DataPath>Список.Израсходовано</DataPath>
-					<Width>1</Width>
+					<Width>12</Width>
 					<ContextMenu name="ИзрасходованоКонтекстноеМеню" id="68"/>
 					<ExtendedTooltip name="ИзрасходованоРасширеннаяПодсказка" id="69"/>
 				</LabelField>
 				<LabelField name="Остаток" id="70">
 					<DataPath>Список.Остаток</DataPath>
-					<Width>1</Width>
+					<Width>12</Width>
 					<ContextMenu name="ОстатокКонтекстноеМеню" id="71"/>
 					<ExtendedTooltip name="ОстатокРасширеннаяПодсказка" id="72"/>
 				</LabelField>
@@ -175,7 +177,10 @@
 				</CheckBoxField>
 				<LabelField name="ДатаАктивации" id="49">
 					<DataPath>Список.ДатаАктивации</DataPath>
-					<Width>1</Width>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Width>10</Width>
 					<ContextMenu name="ДатаАктивацииКонтекстноеМеню" id="50"/>
 					<ExtendedTooltip name="ДатаАктивацииРасширеннаяПодсказка" id="51"/>
 				</LabelField>

@@ -93,11 +93,13 @@
 				<LabelField name="Дата" id="19">
 					<DataPath>Список.Date</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<Width>11</Width>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<LabelField name="Номер" id="22">
 					<DataPath>Список.Number</DataPath>
+					<Width>8</Width>
 					<ContextMenu name="НомерКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="24"/>
 				</LabelField>
@@ -131,11 +133,17 @@
 				</LabelField>
 				<LabelField name="АвторДокумента" id="34">
 					<DataPath>Список.АвторДокумента</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 				<LabelField name="Комментарий" id="37">
 					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="39"/>
 				</LabelField>

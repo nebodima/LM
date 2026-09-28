@@ -43,8 +43,6 @@
 			<DefaultItem>true</DefaultItem>
 			<ChoiceMode>true</ChoiceMode>
 			<RowSelectionMode>Row</RowSelectionMode>
-			<HorizontalLines>false</HorizontalLines>
-			<VerticalLines>false</VerticalLines>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<HorizontalStretch>false</HorizontalStretch>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -106,32 +104,32 @@
 				</LabelField>
 				<LabelField name="Код" id="22">
 					<DataPath>Список.Code</DataPath>
-					<Width>1</Width>
+					<Width>9</Width>
 					<ContextMenu name="КодКонтекстноеМеню" id="23"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="Наименование" id="19">
 					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<Width>1</Width>
+					<Width>25</Width>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<LabelField name="КоэффициентСумма" id="25">
 					<DataPath>Список.КоэффициентСумма</DataPath>
-					<Width>1</Width>
+					<Width>10</Width>
 					<ContextMenu name="КоэффициентСуммаКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="КоэффициентСуммаРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="КоэффициентПроцент" id="28">
 					<DataPath>Список.КоэффициентПроцент</DataPath>
-					<Width>1</Width>
+					<Width>10</Width>
 					<ContextMenu name="КоэффициентПроцентКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="КоэффициентПроцентРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 				<LabelField name="Комментарий" id="31">
 					<DataPath>Список.Комментарий</DataPath>
-					<Width>1</Width>
+					<Width>20</Width>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="33"/>
 				</LabelField>

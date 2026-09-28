@@ -40,8 +40,6 @@
 				<Table name="Список" id="3">
 					<CommandBarLocation>None</CommandBarLocation>
 					<DefaultItem>true</DefaultItem>
-					<HorizontalLines>false</HorizontalLines>
-					<VerticalLines>false</VerticalLines>
 					<InitialTreeView>ExpandTopLevel</InitialTreeView>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>

@@ -137,6 +137,12 @@
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=Ч:мм</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="125"/>
 					<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="126"/>
 				</LabelField>

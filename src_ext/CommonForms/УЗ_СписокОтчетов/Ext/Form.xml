@@ -25,8 +25,6 @@
 			<ChangeRowSet>false</ChangeRowSet>
 			<ChangeRowOrder>false</ChangeRowOrder>
 			<Header>false</Header>
-			<HorizontalLines>false</HorizontalLines>
-			<VerticalLines>false</VerticalLines>
 			<DataPath>СписокОтчетов</DataPath>
 			<RowFilter xsi:nil="true"/>
 			<ContextMenu name="СписокОтчетовКонтекстноеМеню" id="2"/>
