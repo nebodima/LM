@@ -1983,7 +1983,7 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>TotalsControl</name>
@@ -2006,7 +2006,7 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>TotalsControl</name>
@@ -2029,7 +2029,7 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>TotalsControl</name>
@@ -2052,7 +2052,7 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>TotalsControl</name>
@@ -2075,7 +2075,7 @@
 		</right>
 		<right>
 			<name>Edit</name>
-			<value>true</value>
+			<value>false</value>
 		</right>
 		<right>
 			<name>TotalsControl</name>
