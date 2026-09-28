@@ -46,9 +46,7 @@
 			<NamePrefix>УЗ_</NamePrefix>
 			<ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>
 			<ScriptVariant>Russian</ScriptVariant>
-			<DefaultRoles>
-				<xr:Item xsi:type="xr:MDObjectRef">Role.УЗ_ОсновнаяРоль</xr:Item>
-			</DefaultRoles>
+			<DefaultRoles/>
 			<Vendor>Учёт занятий</Vendor>
 			<Version>1.0.0.1</Version>
 			<DefaultReportForm/>
