@@ -263,10 +263,10 @@
 				<InputField name="ДДКОплате" id="197">
 					<DataPath>Объект.ДД.КОплате</DataPath>
 					<ReadOnly>true</ReadOnly>
-					<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<TitleFont ref="style:УЗ_ШрифтЗаголовка" kind="StyleItem"/>
 					<EditMode>EnterOnInput</EditMode>
 					<FooterDataPath>Объект.ДД.TotalКОплате</FooterDataPath>
-					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:УЗ_ШрифтЗаголовка" kind="StyleItem"/>
 					<ContextMenu name="ДДКОплатеКонтекстноеМеню" id="198"/>
 					<ExtendedTooltip name="ДДКОплатеРасширеннаяПодсказка" id="199"/>
 				</InputField>
@@ -397,7 +397,7 @@
 					<ChildItems>
 						<InputField name="СуммаДокумента" id="13">
 							<DataPath>Объект.СуммаДокумента</DataPath>
-							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<TitleFont ref="style:УЗ_ШрифтЗаголовка" kind="StyleItem"/>
 							<EditMode>EnterOnInput</EditMode>
 							<Width>12</Width>
 							<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="14"/>

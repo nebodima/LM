@@ -197,7 +197,7 @@
 												<InputField name="ГруппаОбучения" id="51">
 													<DataPath>ГруппаОбучения</DataPath>
 													<DefaultItem>true</DefaultItem>
-													<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+													<TitleFont ref="style:УЗ_ШрифтЗаголовка" kind="StyleItem"/>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="52"/>
@@ -748,7 +748,7 @@
 										</CheckBoxField>
 										<InputField name="ИзГруппыОбучения" id="97">
 											<DataPath>ИзГруппыОбучения</DataPath>
-											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<TitleFont ref="style:УЗ_ШрифтЗаголовка" kind="StyleItem"/>
 											<TitleLocation>None</TitleLocation>
 											<HorizontalStretch>false</HorizontalStretch>
 											<ClearButton>true</ClearButton>

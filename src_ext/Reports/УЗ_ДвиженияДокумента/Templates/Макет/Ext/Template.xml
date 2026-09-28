@@ -387,7 +387,6 @@
 				<i>1</i>
 				<c>
 					<f>33</f>
-					<parameter>ЗаголовокКолонки</parameter>
 				</c>
 			</c>
 		</row>
@@ -619,17 +618,6 @@
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
-		<name>ЗаголовокЯчейки</name>
-		<area>
-			<type>Rectangle</type>
-			<beginRow>11</beginRow>
-			<endRow>11</endRow>
-			<beginColumn>1</beginColumn>
-			<endColumn>1</endColumn>
-			<columnsID>c8532903-a5f2-41a8-b06f-cbc748bbd46e</columnsID>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
 		<name>Отступ</name>
 		<area>
 			<type>Rectangle</type>
@@ -695,17 +683,6 @@
 			<columnsID>496c5496-6808-4cba-b47f-4f3545db5fdd</columnsID>
 		</area>
 	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
-		<name>Ячейка</name>
-		<area>
-			<type>Rectangle</type>
-			<beginRow>12</beginRow>
-			<endRow>12</endRow>
-			<beginColumn>1</beginColumn>
-			<endColumn>1</endColumn>
-			<columnsID>c8532903-a5f2-41a8-b06f-cbc748bbd46e</columnsID>
-		</area>
-	</namedItem>
 	<line width="1" gap="false">
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
 	</line>
@@ -769,7 +746,7 @@
 		<height>114</height>
 		<width>258</width>
 		<verticalAlignment>Top</verticalAlignment>
-		<textColor>#FF0000</textColor>
+		<textColor>style:УЗ_ЦветМинусаДенег</textColor>
 		<fillType>Template</fillType>
 	</format>
 	<format>
@@ -777,7 +754,7 @@
 		<height>138</height>
 		<width>258</width>
 		<verticalAlignment>Top</verticalAlignment>
-		<textColor>#FF0000</textColor>
+		<textColor>style:УЗ_ЦветМинусаДенег</textColor>
 		<fillType>Template</fillType>
 	</format>
 	<format>
