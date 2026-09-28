@@ -69,10 +69,13 @@
 			<CommonPicture>УЗ_ИконкаСправочники</CommonPicture>
 			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
 			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
+			<SessionParameter>УЗ_ПесочницаПочты</SessionParameter>
+			<SessionParameter>УЗ_НачалоПросмотраКассы</SessionParameter>
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<Role>УЗ_Руководитель</Role>
 			<FilterCriterion>УЗ_СвязанныеДокументы</FilterCriterion>
 			<CommonModule>УЗ_ДатыЗапрета</CommonModule>
+			<CommonModule>УЗ_ЗарплатаУрока</CommonModule>
 			<CommonModule>УЗ_Общий</CommonModule>
 			<CommonModule>УЗ_ОбновлениеДанных</CommonModule>
 			<CommonModule>УЗ_ОбщийКлиентСервер</CommonModule>
@@ -86,6 +89,7 @@
 			<CommonModule>УЗ_Среда</CommonModule>
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
+			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>

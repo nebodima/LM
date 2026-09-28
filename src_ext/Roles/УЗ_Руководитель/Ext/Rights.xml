@@ -2082,4 +2082,22 @@
 			<value>true</value>
 		</right>
 	</object>
+	<object>
+		<name>SessionParameter.УЗ_ПесочницаПочты</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>SessionParameter.УЗ_НачалоПросмотраКассы</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+	</object>
 </Rights>
