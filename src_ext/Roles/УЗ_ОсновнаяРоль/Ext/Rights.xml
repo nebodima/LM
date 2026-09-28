@@ -1785,6 +1785,17 @@
 		</right>
 	</object>
 	<object>
+		<name>DataProcessor.УЗ_РассылкаДолжникам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>DataProcessor.УЗ_ПанельУченика</name>
 		<right>
 			<name>Use</name>
@@ -1831,6 +1842,17 @@
 		<name>InformationRegister.УЗ_Настройки</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УЗ_ЖурналРассылки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

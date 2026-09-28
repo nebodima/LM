@@ -144,9 +144,11 @@
 			<DataProcessor>УЗ_Календарь</DataProcessor>
 			<DataProcessor>УЗ_ОбработкаФото</DataProcessor>
 			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
+			<DataProcessor>УЗ_РассылкаДолжникам</DataProcessor>
 			<InformationRegister>УЗ_ВерсииДанных</InformationRegister>
 			<InformationRegister>УЗ_ГраницаПросмотраКассы</InformationRegister>
 			<InformationRegister>УЗ_ДатыЗапрета</InformationRegister>
+			<InformationRegister>УЗ_ЖурналРассылки</InformationRegister>
 			<InformationRegister>УЗ_Настройки</InformationRegister>
 			<InformationRegister>УЗ_НастройкиПочты</InformationRegister>
 			<InformationRegister>УЗ_Оповещения</InformationRegister>
