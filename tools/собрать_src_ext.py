@@ -63,7 +63,8 @@ except Exception:
 ИМЯ_РАСШИРЕНИЯ = "УЗ_ext"
 СИНОНИМ_РАСШИРЕНИЯ = "Учёт занятий"
 ПРЕФИКС = "УЗ_"
-ВЕРСИЯ_РАСШИРЕНИЯ = "0.1.0"
+ВЕРСИЯ_РАСШИРЕНИЯ = "1.0.0.1"   # формат 1С: четыре числа (редакция.подредакция.версия.сборка)
+ПОСТАВЩИК = "Учёт занятий"
 РОЛЬ = "УЗ_ОсновнаяРоль"
 МОДУЛЬ_СЕРВЕР = "УЗ_Сервер"
 
@@ -1953,13 +1954,13 @@ def файл_конфигурации(объекты):
             '\t\t\t<ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>\n'
             '\t\t\t<ScriptVariant>Russian</ScriptVariant>\n\t\t\t<DefaultRoles>\n'
             '\t\t\t\t<xr:Item xsi:type="xr:MDObjectRef">Role.%s</xr:Item>\n\t\t\t</DefaultRoles>\n'
-            '\t\t\t<Vendor/>\n\t\t\t<Version>%s</Version>\n\t\t\t<DefaultReportForm/>\n'
+            '\t\t\t<Vendor>%s</Vendor>\n\t\t\t<Version>%s</Version>\n\t\t\t<DefaultReportForm/>\n'
             '\t\t\t<DefaultReportVariantForm/>\n\t\t\t<DefaultReportSettingsForm/>\n\t\t\t<BriefInformation/>\n'
             '\t\t\t<DetailedInformation/>\n\t\t\t<Copyright/>\n\t\t\t<VendorInformationAddress/>\n'
             '\t\t\t<ConfigurationInformationAddress/>\n\t\t</Properties>\n\t\t<ChildObjects>\n%s\t\t</ChildObjects>\n'
             '\t</Configuration>\n</MetaDataObject>'
             % (ууид("CFG|Configuration." + ИМЯ_РАСШИРЕНИЯ), вн, ИМЯ_РАСШИРЕНИЯ,
-               синоним_xml(СИНОНИМ_РАСШИРЕНИЯ, "\t\t\t"), ПРЕФИКС, РОЛЬ, ВЕРСИЯ_РАСШИРЕНИЯ, дети))
+               синоним_xml(СИНОНИМ_РАСШИРЕНИЯ, "\t\t\t"), ПРЕФИКС, РОЛЬ, ПОСТАВЩИК, ВЕРСИЯ_РАСШИРЕНИЯ, дети))
 
 
 # ----------------------------------------------------------------------------------- src_manual
@@ -2408,6 +2409,13 @@ def проверить(каталог, тихо=False, снимок=None):
                           ("KeepMappingToExtendedConfigurationObjectsByIDs", "true")):
             if св.findtext(MD + тег) != надо:
                 ош("Configuration.xml: %s != %s" % (тег, надо))
+        # версия — формат 1С «Р.П.В.С» (четыре числа): её показывает «Расширения конфигурации», по ней покупатель
+        # отличает поставку; поставщик заполнен (R02/R03 повторного аудита 28.09.2026)
+        версия = св.findtext(MD + "Version") or ""
+        if not re.fullmatch(r"\d+\.\d+\.\d+\.\d+", версия):
+            ош("Configuration.xml: Version «%s» — нужен формат 1С из четырёх чисел, например 1.0.0.1" % версия)
+        if not (св.findtext(MD + "Vendor") or "").strip():
+            ош("Configuration.xml: Vendor пуст — поставщик «%s»" % ПОСТАВЩИК)
     for (кл, имя), инфо in модель.объекты.items():
         if not инфо["adopted"] and not имя.startswith(ПРЕФИКС):
             ош("имя без префикса %s: %s.%s" % (ПРЕФИКС, кл, имя))
@@ -2453,6 +2461,9 @@ def самотест(снимок=None):
         ("подстрока LM_", os.path.join("Catalogs", "УЗ_Тарифы.xml"), "<Comment/>", "<Comment>LM_</Comment>", "LM_"),
         ("регистрация без файла", "Configuration.xml", "<Catalog>УЗ_Тарифы</Catalog>",
          "<Catalog>УЗ_Тарифы</Catalog>\n\t\t\t<Catalog>УЗ_Призрак</Catalog>", "файла нет"),
+        ("версия не в формате 1С", "Configuration.xml", "<Version>%s</Version>" % ВЕРСИЯ_РАСШИРЕНИЯ,
+         "<Version>0.1.0</Version>", "Version «0.1.0»"),
+        ("пустой поставщик", "Configuration.xml", "<Vendor>%s</Vendor>" % ПОСТАВЩИК, "<Vendor/>", "Vendor пуст"),
         ("имя без префикса", os.path.join("Catalogs", "УЗ_Помещения.xml"),
          "<Name>УЗ_Помещения</Name>", "<Name>Помещения</Name>", "без префикса"),
         # этап 3

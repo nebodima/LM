@@ -621,6 +621,24 @@
 											<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="393"/>
 											<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="394"/>
 										</InputField>
+										<LabelField name="УченикиОстатокАбонемента" id="395">
+											<DataPath>Ученики.ОстатокАбонемента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток абонемента</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток абонемента на первую выбранную дату — так же, как в карточке абонемента. В каждый урок абонемент подбирается на дату этого урока</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>1</Width>
+											<ContextMenu name="УченикиОстатокАбонементаКонтекстноеМеню" id="396"/>
+											<ExtendedTooltip name="УченикиОстатокАбонементаРасширеннаяПодсказка" id="397"/>
+										</LabelField>
 										<InputField name="УченикиТариф" id="386">
 											<DataPath>Ученики.Тариф</DataPath>
 											<EditMode>EnterOnInput</EditMode>
@@ -1049,6 +1067,21 @@
 					</Title>
 					<Type>
 						<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОстатокАбонемента" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток абонемента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>60</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
 					</Type>
 				</Column>
 			</Columns>
