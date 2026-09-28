@@ -85,7 +85,7 @@
 				</LabelField>
 				<LabelField name="Наименование" id="64">
 					<DataPath>Список.Description</DataPath>
-					<Width>1</Width>
+					<Width>25</Width>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="65"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="66"/>
 				</LabelField>

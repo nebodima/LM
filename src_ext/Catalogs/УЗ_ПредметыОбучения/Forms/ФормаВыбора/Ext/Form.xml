@@ -47,8 +47,6 @@
 					<CommandBarLocation>None</CommandBarLocation>
 					<DefaultItem>true</DefaultItem>
 					<ChoiceMode>true</ChoiceMode>
-					<HorizontalLines>false</HorizontalLines>
-					<VerticalLines>false</VerticalLines>
 					<InitialTreeView>ExpandTopLevel</InitialTreeView>
 					<EnableStartDrag>true</EnableStartDrag>
 					<FileDragMode>AsFile</FileDragMode>

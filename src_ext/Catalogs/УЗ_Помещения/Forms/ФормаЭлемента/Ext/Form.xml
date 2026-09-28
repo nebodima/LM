@@ -4,6 +4,12 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="36">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="37"/>
+			</Button>
 			<Button name="ФормаЗаписать" id="24">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
@@ -47,7 +53,7 @@
 						<InputField name="Код" id="4">
 							<DataPath>Объект.Code</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<Width>5</Width>
+							<Width>11</Width>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="КодКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="6"/>
@@ -56,6 +62,7 @@
 				</UsualGroup>
 				<CheckBoxField name="НеКонтролироватьПересечения" id="26">
 					<DataPath>Объект.НеКонтролироватьПересечения</DataPath>
+					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="НеКонтролироватьПересеченияКонтекстноеМеню" id="27"/>
 					<ExtendedTooltip name="НеКонтролироватьПересеченияРасширеннаяПодсказка" id="28"/>

@@ -25,9 +25,13 @@
 			<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="6"/>
 		</InputField>
 		<InputField name="КоличествоЧасов" id="10">
-			<DataPath>Запись.КоличествоЧасов</DataPath>
-			<Width>4</Width>
-			<SpinButton>true</SpinButton>
+			<DataPath>ЧасыТекстом</DataPath>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ч:мм</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="12"/>
 			<Events>
@@ -52,7 +56,6 @@
 			<ChildItems>
 				<InputField name="Сумма" id="7">
 					<DataPath>Запись.Сумма</DataPath>
-					<Width>6</Width>
 					<ContextMenu name="СуммаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="9"/>
 					<Events>
@@ -60,7 +63,6 @@
 					</Events>
 				</InputField>
 				<LabelDecoration name="Декорация1" id="24">
-					<TextColor>style:SpecialTextColor</TextColor>
 					<ContextMenu name="Декорация1КонтекстноеМеню" id="25"/>
 					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="26"/>
 				</LabelDecoration>
@@ -74,6 +76,21 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЧасыТекстом" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>

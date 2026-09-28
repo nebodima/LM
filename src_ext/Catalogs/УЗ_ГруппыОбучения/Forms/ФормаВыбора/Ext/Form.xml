@@ -43,8 +43,6 @@
 			<DefaultItem>true</DefaultItem>
 			<ChoiceMode>true</ChoiceMode>
 			<RowSelectionMode>Row</RowSelectionMode>
-			<HorizontalLines>false</HorizontalLines>
-			<VerticalLines>false</VerticalLines>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -131,6 +129,12 @@
 				</LabelField>
 				<LabelField name="Продолжительность" id="37">
 					<DataPath>Список.Продолжительность</DataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=Ч:мм</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="39"/>
 				</LabelField>

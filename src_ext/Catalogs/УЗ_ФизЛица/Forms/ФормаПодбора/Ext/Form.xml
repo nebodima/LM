@@ -127,8 +127,6 @@
 					<DefaultItem>true</DefaultItem>
 					<ChoiceMode>true</ChoiceMode>
 					<MultipleChoice>true</MultipleChoice>
-					<HorizontalLines>false</HorizontalLines>
-					<VerticalLines>false</VerticalLines>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
 					<FileDragMode>AsFile</FileDragMode>

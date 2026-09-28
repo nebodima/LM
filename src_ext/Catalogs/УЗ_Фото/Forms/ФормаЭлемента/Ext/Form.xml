@@ -56,6 +56,8 @@
 						<InputField name="Код" id="1">
 							<DataPath>Объект.Code</DataPath>
 							<EditMode>EnterOnInput</EditMode>
+							<Width>11</Width>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 						</InputField>
@@ -63,6 +65,14 @@
 				</UsualGroup>
 				<InputField name="Комментарий" id="18">
 					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="20"/>
 				</InputField>

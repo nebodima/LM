@@ -63,6 +63,8 @@
 								<xr:Common>false</xr:Common>
 							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
+							<Width>11</Width>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="КодКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="6"/>
 						</InputField>
@@ -165,7 +167,15 @@
 				</UsualGroup>
 				<InputField name="Комментарий" id="13">
 					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
 				</InputField>
