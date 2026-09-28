@@ -41,32 +41,7 @@
 		</right>
 	</object>
 	<object>
-		<name>Subsystem.УЗ_УчетЗанятий.Subsystem.УЗ_Отчеты</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>CommonForm.УЗ_ФормаОтчета</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>DataProcessor.УЗ_МоиУроки</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Report.УЗ_РасчетыПоЗарплате</name>
 		<right>
 			<name>Use</name>
 			<value>true</value>

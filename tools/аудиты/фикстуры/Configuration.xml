@@ -12,6 +12,7 @@
 			<Subsystem>УЗ_Раздел</Subsystem>
 			<CommonPicture>УЗ_Значок</CommonPicture>
 			<Role>УЗ_ОсновнаяРоль</Role>
+			<Role>УЗ_Педагог</Role>
 			<CommonModule>УЗ_Среда</CommonModule>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<Catalog>Организации</Catalog>

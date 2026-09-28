@@ -34,6 +34,7 @@ import все_аудиты  # noqa: E402
 КX = "Catalogs/УЗ_Кассы.xml"
 МЕН = "Documents/УЗ_ПриходДенег/Ext/ManagerModule.bsl"
 ПРАВА = "Roles/УЗ_ОсновнаяРоль/Ext/Rights.xml"
+ПРАВА_П = "Roles/УЗ_Педагог/Ext/Rights.xml"
 ЗНАЧОК = "CommonPictures/УЗ_Значок/Ext/Picture/Picture.png"
 ОТЧ_X = "Reports/УЗ_ОтчетПоКассе.xml"
 СКД = "Reports/УЗ_ОтчетПоКассе/Templates/ОсновнаяСхемаКомпоновкиДанных/Ext/Template.xml"
@@ -511,6 +512,17 @@ def лишний_параметр_сеанса():
      заменить(ПРАВА, "<name>AccumulationRegister.УЗ_Касса</name>\n\t\t<right>\n",
               "<name>AccumulationRegister.УЗ_Касса</name>\n\t\t<right>\n\t\t\t<name>Edit</name>\n\t\t\t<value>true</value>"
               "\n\t\t</right>\n\t\t<right>\n")),
+    # роль педагога «только своё» (28.09.2026): документ фикстуры стоит за урок
+    ("права_роли", "ошибки", "педагогу чтение урока без ограничения по текущему пользователю (видит чужие уроки)",
+     заменить(ПРАВА_П, "\t\t\t<name>Read</name>\n\t\t\t<value>true</value>\n\t\t\t<restrictionByCondition>\n"
+              "\t\t\t\t<condition>Т ГДЕ Т.Педагог.Пользователь = &amp;ТекущийПользователь</condition>\n"
+              "\t\t\t</restrictionByCondition>\n\t\t</right>\n\t\t<right>\n\t\t\t<name>Update</name>",
+              "\t\t\t<name>Read</name>\n\t\t\t<value>true</value>\n\t\t</right>\n\t\t<right>\n"
+              "\t\t\t<name>Update</name>")),
+    ("права_роли", "ошибки", "педагогу отчёт (СКД без «Просмотр» уроков пуст — зарплата страницей «Мои уроки»)",
+     заменить(ПРАВА_П, "<name>Use</name>\n\t\t\t<value>false</value>", "<name>Use</name>\n\t\t\t<value>true</value>")),
+    ("права_роли", "ошибки", "педагогу «Просмотр» документа (список всех уроков в интерфейсе)",
+     заменить(ПРАВА_П, "<name>View</name>\n\t\t\t<value>false</value>", "<name>View</name>\n\t\t\t<value>true</value>")),
     # стандарт форм архитектора (28.09.2026): каждое правило — одна подложенная ошибка
     ("стандарт_форм", "ошибки", "п.1 колонка таблицы шириной 1",
      заменить(КФ, "<DataPath>Журнал.Сумма</DataPath>", "<DataPath>Журнал.Сумма</DataPath>\n" + Т9 + "<Width>1</Width>")),
