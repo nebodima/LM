@@ -345,7 +345,6 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа6" id="115">
-					<Visible>false</Visible>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
