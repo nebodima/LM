@@ -1100,6 +1100,9 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
@@ -1175,6 +1178,9 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
@@ -1250,6 +1256,9 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
@@ -1394,13 +1403,6 @@
 		<right>
 			<name>InteractiveDeleteMarked</name>
 			<value>false</value>
-		</right>
-	</object>
-	<object>
-		<name>Document.УЗ_ДополнительныеРасходы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1583,6 +1585,36 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УЗ_ДополнительныеРасходы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ЛОЖЬ</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_РасчетЗарплаты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ЛОЖЬ</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_НачисленияПедагогам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ЛОЖЬ</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
 		<name>DocumentJournal.УЗ_КассовыйЖурнал</name>
 		<right>
 			<name>Read</name>
@@ -1601,6 +1633,15 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ НЕ (Ссылка ССЫЛКА Документ.УЗ_РасчетЗарплаты
+		ИЛИ Ссылка ССЫЛКА Документ.УЗ_ДополнительныеРасходы
+		ИЛИ Ссылка ССЫЛКА Документ.УЗ_НачисленияПедагогам)
+	И (Дата &gt;= &amp;УЗ_НачалоПросмотраКассы
+		ИЛИ НЕ (Ссылка ССЫЛКА Документ.УЗ_ПриходДенег
+			ИЛИ Ссылка ССЫЛКА Документ.УЗ_РасходДенег
+			ИЛИ Ссылка ССЫЛКА Документ.УЗ_ПеремещениеДенег))</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>

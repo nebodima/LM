@@ -83,6 +83,9 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Insert</name>
