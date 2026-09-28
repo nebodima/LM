@@ -54,7 +54,7 @@
 						<CommandName>Document.УЗ_ПриходДенег.Command.ПечатьПКО</CommandName>
 						<DataPath>Объект.Ref</DataPath>
 						<Picture>
-							<xr:Ref>StdPicture.Print</xr:Ref>
+							<xr:Ref>CommonPicture.УЗ_ИПечатьПКО</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ShapeRepresentation>WhenActive</ShapeRepresentation>

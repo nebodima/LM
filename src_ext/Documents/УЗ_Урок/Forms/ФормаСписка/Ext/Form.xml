@@ -18,6 +18,7 @@
 			</Button>
 			<Button name="ФормаПомощникСозданияУроков" id="135">
 				<Type>CommandBarHyperlink</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ПомощникСозданияУроков</CommandName>
 				<ExtendedTooltip name="ФормаПомощникСозданияУроковРасширеннаяПодсказка" id="136"/>
 			</Button>
@@ -1625,7 +1626,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+				<xr:Ref>CommonPicture.УЗ_ИПомощник</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПомощникСозданияУроков</Action>
