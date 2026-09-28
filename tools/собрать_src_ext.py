@@ -2468,7 +2468,8 @@ def самотест(снимок=None):
          "<Name>УЗ_Помещения</Name>", "<Name>Помещения</Name>", "без префикса"),
         # этап 3
         ("«LM.» в модуле", модуль, None, "\nПроцедура Проба()\n\tLM.ПроверкаЗадолженности();\nКонецПроцедуры\n", "«LM.»"),
-        ("общая картинка БСП в форме", первый("<xr:Ref>StdPicture.User<", "/Forms/"), "<xr:Ref>StdPicture.User<",
+        # якорь — самая частая картинка форм (StdPicture.User из форм урока убран визуальным аудитом 28.09.2026)
+        ("общая картинка БСП в форме", первый("<xr:Ref>StdPicture.CheckAll<", "/Forms/"), "<xr:Ref>StdPicture.CheckAll<",
          "<xr:Ref>CommonPicture.Позвонить<", "CommonPicture.Позвонить"),
         ("элемент стиля БСП в форме", первый("style:NormalTextFont", "/Forms/"), "style:NormalTextFont",
          "style:ДосьеГиперссылкаЦвет", "элемент стиля"),

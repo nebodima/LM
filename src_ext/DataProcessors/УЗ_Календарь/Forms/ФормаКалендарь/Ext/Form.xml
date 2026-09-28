@@ -306,7 +306,6 @@
 								</UsualGroup>
 								<RadioButtonField name="Цвет1" id="45">
 									<DataPath>Цвет</DataPath>
-									<TitleTextColor>style:AccentColor</TitleTextColor>
 									<TitleHeight>2</TitleHeight>
 									<RadioButtonType>Tumbler</RadioButtonType>
 									<ColumnsCount>1</ColumnsCount>
@@ -754,10 +753,10 @@
 					</pl:border>
 					<pl:editMode>EnableEdit</pl:editMode>
 				</pl:item>
-				<pl:borderColor>#0000FF</pl:borderColor>
+				<pl:borderColor>auto</pl:borderColor>
 				<pl:backColor>auto</pl:backColor>
 				<pl:textColor>#000000</pl:textColor>
-				<pl:lineColor>#0000FF</pl:lineColor>
+				<pl:lineColor>auto</pl:lineColor>
 				<pl:font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
 				<pl:beginOfRepresentationPeriod>0001-01-01T00:00:00</pl:beginOfRepresentationPeriod>
 				<pl:endOfRepresentationPeriod>0001-01-01T00:00:00</pl:endOfRepresentationPeriod>

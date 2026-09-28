@@ -31,7 +31,7 @@
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>CommonCommand.УЗ_Напомнить</CommandName>
-				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="901"/>
 			</Button>
 			<Button name="ФормаУстановитьИнтервал" id="145">
@@ -296,7 +296,6 @@
 				<Table name="Список" id="3">
 					<Representation>List</Representation>
 					<CommandBarLocation>None</CommandBarLocation>
-					<VerticalLines>false</VerticalLines>
 					<UseAlternationRowColor>true</UseAlternationRowColor>
 					<InitialListView>End</InitialListView>
 					<InitialTreeView>ExpandTopLevel</InitialTreeView>
@@ -347,49 +346,51 @@
 					<Events>
 						<Event name="Selection">СписокВыбор</Event>
 						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+						<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
 					</Events>
 					<ChildItems>
+						<LabelField name="Ссылка" id="16">
+							<DataPath>Список.Ссылка</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Width>20</Width>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+						<LabelField name="Дата" id="19">
+							<DataPath>Список.Дата</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Width>11</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ='ddd dd.MM HH:mm'</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
+						</LabelField>
 						<LabelField name="Номер" id="434">
-							<DataPath>Список.Number</DataPath>
+							<DataPath>Список.НомерКратко</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>№</v8:content>
 								</v8:item>
 							</Title>
-							<Width>6</Width>
-							<TextColor>style:ToolTipTextColor</TextColor>
+							<Width>5</Width>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер урока</v8:content>
+								</v8:item>
+							</ToolTip>
 							<ContextMenu name="НомерКонтекстноеМеню" id="435"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="436"/>
 						</LabelField>
-						<LabelField name="Ссылка" id="16">
-							<DataPath>Список.Ref</DataPath>
-							<UserVisible>
-								<xr:Common>false</xr:Common>
-							</UserVisible>
-							<Width>1</Width>
-							<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
-						</LabelField>
-						<LabelField name="Дата" id="19">
-							<DataPath>Список.Date</DataPath>
-							<DefaultItem>true</DefaultItem>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>12</Width>
-							<Format>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>ДФ='dd.MM.yy HH:mm'</v8:content>
-								</v8:item>
-							</Format>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="20"/>
-							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
-						</LabelField>
 						<LabelField name="Начало" id="412">
-							<DataPath>Список.Date</DataPath>
+							<DataPath>Список.Дата</DataPath>
 							<UserVisible>
 								<xr:Common>false</xr:Common>
 							</UserVisible>
@@ -399,7 +400,7 @@
 									<v8:content>начало</v8:content>
 								</v8:item>
 							</Title>
-							<Width>1</Width>
+							<Width>5</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -423,11 +424,7 @@
 									<v8:content>Окончание урока</v8:content>
 								</v8:item>
 							</ToolTip>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>4</Width>
+							<Width>5</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -437,30 +434,32 @@
 							<ContextMenu name="ОкончаниеКонтекстноеМеню" id="405"/>
 							<ExtendedTooltip name="ОкончаниеРасширеннаяПодсказка" id="406"/>
 						</LabelField>
-						<LabelField name="КоличествоЧасов" id="40">
-							<DataPath>Список.КоличествоЧасов</DataPath>
+						<LabelField name="Длительность" id="40">
+							<DataPath>Список.Длительность</DataPath>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Часов</v8:content>
+									<v8:content>Длительность</v8:content>
 								</v8:item>
 							</Title>
+							<Width>6</Width>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Количество часов</v8:content>
+									<v8:content>Длительность урока, ч:мм</v8:content>
 								</v8:item>
 							</ToolTip>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.SetTime</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>4</Width>
-							<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="41"/>
-							<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="42"/>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=Ч:мм</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДлительностьКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ДлительностьРасширеннаяПодсказка" id="42"/>
 						</LabelField>
 						<LabelField name="День" id="409">
-							<DataPath>Список.Date</DataPath>
+							<DataPath>Список.Дата</DataPath>
 							<UserVisible>
 								<xr:Common>false</xr:Common>
 							</UserVisible>
@@ -471,7 +470,7 @@
 								</v8:item>
 							</Title>
 							<TitleLocation>None</TitleLocation>
-							<Width>1</Width>
+							<Width>3</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -483,77 +482,106 @@
 						</LabelField>
 						<LabelField name="Статус" id="417">
 							<DataPath>Список.Статус</DataPath>
-							<Width>6</Width>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Width>10</Width>
 							<ContextMenu name="СтатусКонтекстноеМеню" id="418"/>
 							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="419"/>
 						</LabelField>
-						<LabelField name="ГруппаОбучения" id="225">
+						<LabelField name="Занятие" id="225">
+							<DataPath>Список.Занятие</DataPath>
+							<Width>22</Width>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа, предмет</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обучения и предмет урока</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="ЗанятиеКонтекстноеМеню" id="226"/>
+							<ExtendedTooltip name="ЗанятиеРасширеннаяПодсказка" id="227"/>
+						</LabelField>
+						<LabelField name="ГруппаОбучения" id="905">
 							<DataPath>Список.ГруппаОбучения</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Группа</v8:content>
 								</v8:item>
 							</Title>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>9</Width>
-							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="226"/>
-							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="227"/>
+							<Width>25</Width>
+							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="906"/>
+							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="907"/>
 						</LabelField>
 						<LabelField name="ПредметОбучения" id="34">
 							<DataPath>Список.ПредметОбучения</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Width>20</Width>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Предмет</v8:content>
 								</v8:item>
 							</Title>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.ChartOfAccounts</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>10</Width>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="36"/>
 						</LabelField>
 						<LabelField name="Тариф" id="440">
 							<DataPath>Список.Тариф</DataPath>
-							<Width>8</Width>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Width>20</Width>
 							<ContextMenu name="ТарифКонтекстноеМеню" id="441"/>
 							<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="442"/>
 						</LabelField>
 						<LabelField name="Педагог" id="37">
 							<DataPath>Список.Педагог</DataPath>
 							<CellHyperlink>true</CellHyperlink>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.User</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>12</Width>
+							<Width>16</Width>
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="38"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="39"/>
 						</LabelField>
 						<LabelField name="Помещение" id="211">
 							<DataPath>Список.Помещение</DataPath>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.ExternalDataSourceCube</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>8</Width>
+							<Width>10</Width>
 							<ContextMenu name="ПомещениеКонтекстноеМеню" id="212"/>
 							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="213"/>
 						</LabelField>
+						<LabelField name="Явки" id="902">
+							<DataPath>Список.Явки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Явки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пришло / записано учеников</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<Width>6</Width>
+							<ContextMenu name="ЯвкиКонтекстноеМеню" id="903"/>
+							<ExtendedTooltip name="ЯвкиРасширеннаяПодсказка" id="904"/>
+						</LabelField>
 						<LabelField name="Сумма" id="214">
 							<DataPath>Список.Сумма</DataPath>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
-							<Width>8</Width>
+							<Width>10</Width>
 							<ContextMenu name="СуммаКонтекстноеМеню" id="215"/>
 							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="216"/>
 						</LabelField>
@@ -568,7 +596,7 @@
 									<v8:content>Автор</v8:content>
 								</v8:item>
 							</Title>
-							<Width>1</Width>
+							<Width>20</Width>
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="44"/>
 							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="45"/>
 						</LabelField>
@@ -577,7 +605,7 @@
 							<UserVisible>
 								<xr:Common>false</xr:Common>
 							</UserVisible>
-							<Width>1</Width>
+							<Width>20</Width>
 							<ContextMenu name="КомментарийКонтекстноеМеню" id="47"/>
 							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="48"/>
 						</LabelField>
@@ -601,7 +629,6 @@
 							<VerticalLines>false</VerticalLines>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Расшифровка</DataPath>
-							
 							<BorderColor>style:FormBackColor</BorderColor>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
@@ -660,9 +687,8 @@
 							<ChildItems>
 								<LabelField name="РасшифровкаНомерСтроки" id="344">
 									<DataPath>Расшифровка.НомерСтроки</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
 									<TitleLocation>None</TitleLocation>
-									<Width>1</Width>
+									<Width>3</Width>
 									<MaxWidth>2</MaxWidth>
 									<BorderColor>style:FormBackColor</BorderColor>
 									<TextColor>style:ToolTipTextColor</TextColor>
@@ -671,64 +697,56 @@
 								</LabelField>
 								<PictureField name="РасшифровкаСписатьОплату" id="353">
 									<DataPath>Расшифровка.СписатьОплату</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<Width>6</Width>
 									<ValuesPicture>
 										<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</ValuesPicture>
 									<FileDragMode>AsFile</FileDragMode>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>К оплате</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
 									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
 								</PictureField>
 								<PictureField name="РасшифровкаЯвка" id="374">
 									<DataPath>Расшифровка.Явка</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<Width>5</Width>
 									<ValuesPicture>
 										<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</ValuesPicture>
 									<FileDragMode>AsFile</FileDragMode>
-									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
-									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
-								</PictureField>
-								<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
-									<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Остаток по предмету</v8:content>
+											<v8:content>Явка</v8:content>
 										</v8:item>
 									</Title>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<CellHyperlink>true</CellHyperlink>
-									<Width>1</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<Hiperlink>true</Hiperlink>
-									<TextColor>style:NegativeTextColor</TextColor>
-									<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
-									<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
-								</LabelField>
+									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
+									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
+								</PictureField>
 								<LabelField name="РасшифровкаУченик" id="368">
 									<DataPath>Расшифровка.Ученик</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<TitleLocation>None</TitleLocation>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ученик</v8:content>
+										</v8:item>
+									</Title>
 									<CellHyperlink>true</CellHyperlink>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.User</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>1</Width>
+									<Width>25</Width>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="369"/>
 									<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="370"/>
 								</LabelField>
 								<LabelField name="РасшифровкаАбонемент" id="437">
 									<DataPath>Расшифровка.Абонемент</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
 									<CellHyperlink>true</CellHyperlink>
-									<Width>1</Width>
+									<Width>20</Width>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="РасшифровкаАбонементКонтекстноеМеню" id="438"/>
 									<ExtendedTooltip name="РасшифровкаАбонементРасширеннаяПодсказка" id="439"/>
@@ -744,8 +762,7 @@
 											<v8:content>Заметка</v8:content>
 										</v8:item>
 									</Title>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<Width>20</Width>
 									<ContextMenu name="РасшифровкаЗаметкаКонтекстноеМеню" id="336"/>
 									<ExtendedTooltip name="РасшифровкаЗаметкаРасширеннаяПодсказка" id="337"/>
 								</LabelField>
@@ -754,22 +771,31 @@
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<Width>15</Width>
 									<ContextMenu name="РасшифровкаПричинаКонтекстноеМеню" id="348"/>
 									<ExtendedTooltip name="РасшифровкаПричинаРасширеннаяПодсказка" id="349"/>
 								</LabelField>
 								<LabelField name="РасшифровкаТариф1" id="450">
 									<DataPath>Расшифровка.Тариф</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Width>20</Width>
 									<ContextMenu name="РасшифровкаТариф1КонтекстноеМеню" id="451"/>
 									<ExtendedTooltip name="РасшифровкаТариф1РасширеннаяПодсказка" id="452"/>
 								</LabelField>
 								<LabelField name="РасшифровкаТариф" id="365">
 									<DataPath>Расшифровка.ЦенаТарифа</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Width>10</Width>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цена</v8:content>
+										</v8:item>
+									</Title>
 									<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
 									<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
 								</LabelField>
@@ -784,41 +810,57 @@
 											<v8:content>Скидка</v8:content>
 										</v8:item>
 									</Title>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<Width>12</Width>
 									<ContextMenu name="РасшифровкаСкидкаКонтекстноеМеню" id="342"/>
 									<ExtendedTooltip name="РасшифровкаСкидкаРасширеннаяПодсказка" id="343"/>
 								</LabelField>
 								<LabelField name="РасшифровкаСуммаСкидки" id="350">
 									<DataPath>Расшифровка.СуммаСкидки</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Width>10</Width>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Скидка</v8:content>
+											<v8:content>Сумма скидки</v8:content>
 										</v8:item>
 									</Title>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСуммаСкидкиКонтекстноеМеню" id="351"/>
 									<ExtendedTooltip name="РасшифровкаСуммаСкидкиРасширеннаяПодсказка" id="352"/>
 								</LabelField>
 								<LabelField name="РасшифровкаСумма" id="359">
 									<DataPath>Расшифровка.Сумма</DataPath>
+									<Width>10</Width>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Сумма итого</v8:content>
+											<v8:content>Итого</v8:content>
 										</v8:item>
 									</Title>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
 									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
 									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
 								</LabelField>
+								<LabelField name="РасшифровкаСуммаОстатокПоПредмету" id="393">
+									<DataPath>Расшифровка.СуммаОстатокПоПредмету</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остаток по предмету</v8:content>
+										</v8:item>
+									</Title>
+									<CellHyperlink>true</CellHyperlink>
+									<Width>12</Width>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="РасшифровкаСуммаОстатокПоПредметуКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="РасшифровкаСуммаОстатокПоПредметуРасширеннаяПодсказка" id="395"/>
+								</LabelField>
 								<LabelField name="РасшифровкаКомментарий" id="455">
 									<DataPath>Расшифровка.Комментарий</DataPath>
-									<TitleBackColor>style:FormBackColor</TitleBackColor>
-									<Width>1</Width>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Width>20</Width>
 									<ContextMenu name="РасшифровкаКомментарийКонтекстноеМеню" id="456"/>
 									<ExtendedTooltip name="РасшифровкаКомментарийРасширеннаяПодсказка" id="457"/>
 								</LabelField>
@@ -890,21 +932,21 @@
 											<ReadOnly>true</ReadOnly>
 											<TitleLocation>None</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>25</Width>
 											<ContextMenu name="ДниРожденияФизЛицоКонтекстноеМеню" id="265"/>
 											<ExtendedTooltip name="ДниРожденияФизЛицоРасширеннаяПодсказка" id="266"/>
 										</InputField>
 										<LabelField name="ДниРожденияДата" id="261">
 											<DataPath>ДниРождения.Дата</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>10</Width>
 											<ContextMenu name="ДниРожденияДатаКонтекстноеМеню" id="262"/>
 											<ExtendedTooltip name="ДниРожденияДатаРасширеннаяПодсказка" id="263"/>
 										</LabelField>
 										<LabelField name="ДниРожденияВозраст" id="267">
 											<DataPath>ДниРождения.Возраст</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>5</Width>
 											<ContextMenu name="ДниРожденияВозрастКонтекстноеМеню" id="268"/>
 											<ExtendedTooltip name="ДниРожденияВозрастРасширеннаяПодсказка" id="269"/>
 										</LabelField>
@@ -920,7 +962,7 @@
 										<LabelField name="ДниРожденияОсталосьДней" id="270">
 											<DataPath>ДниРождения.ОсталосьДней</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>6</Width>
 											<Format>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -973,9 +1015,56 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Номер</Field>
+				<Field>Список.НомерКратко</Field>
+				<Field>Список.Занятие</Field>
+				<Field>Список.Явки</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Урок.Ссылка КАК Ссылка,
+	Урок.ПометкаУдаления КАК ПометкаУдаления,
+	Урок.Проведен КАК Проведен,
+	Урок.Номер КАК Номер,
+	Урок.Дата КАК Дата,
+	Урок.Окончание КАК Окончание,
+	Урок.КоличествоЧасов КАК КоличествоЧасов,
+	ДОБАВИТЬКДАТЕ(ДАТАВРЕМЯ(1, 1, 1), МИНУТА, ВЫРАЗИТЬ(Урок.КоличествоЧасов * 60 КАК ЧИСЛО(10, 0))) КАК Длительность,
+	Урок.Статус КАК Статус,
+	Урок.ГруппаОбучения КАК ГруппаОбучения,
+	Урок.ПредметОбучения КАК ПредметОбучения,
+	Урок.Тариф КАК Тариф,
+	Урок.Педагог КАК Педагог,
+	Урок.Помещение КАК Помещение,
+	Урок.Организация КАК Организация,
+	Урок.Сумма КАК Сумма,
+	Урок.АвторДокумента КАК АвторДокумента,
+	Урок.Комментарий КАК Комментарий,
+	ВЫРАЗИТЬ("" КАК СТРОКА(20)) КАК НомерКратко,
+	ВЫРАЗИТЬ("" КАК СТРОКА(250)) КАК Занятие,
+	ВЫРАЗИТЬ("" КАК СТРОКА(20)) КАК Явки
+ИЗ
+	Документ.УЗ_Урок КАК Урок
+ГДЕ
+	(НЕ &amp;ОтбиратьПоУченику
+			ИЛИ Урок.Ссылка В
+				(ВЫБРАТЬ
+					УченикиУрока.Ссылка
+				ИЗ
+					Документ.УЗ_Урок.Ученики КАК УченикиУрока
+				ГДЕ
+					УченикиУрока.Ученик = &amp;Ученик))
+	И (НЕ &amp;ОтбиратьПоАбонементу
+			ИЛИ Урок.Ссылка В
+				(ВЫБРАТЬ
+					АбонементыУрока.Ссылка
+				ИЗ
+					Документ.УЗ_Урок.Ученики КАК АбонементыУрока
+				ГДЕ
+					АбонементыУрока.Абонемент = &amp;Абонемент))</QueryText>
 				<MainTable>Document.УЗ_Урок</MainTable>
 				<ListSettings>
 					<dcsset:filter>

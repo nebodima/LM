@@ -137,7 +137,6 @@
 							<v8:content>Страницы</v8:content>
 						</v8:item>
 					</Title>
-					<TitleTextColor>style:AccentColor</TitleTextColor>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -162,15 +161,11 @@
 									<v8:content>Страница1</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.CreateListItem</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ExtendedTooltip name="Страница1РасширеннаяПодсказка" id="232"/>
 							<ChildItems>
 								<LabelDecoration name="Декорация1" id="237">
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<TextColor>style:AccentColor</TextColor>
+									<TextColor>style:ToolTipTextColor</TextColor>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -283,13 +278,18 @@
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<SpinButton>true</SpinButton>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ДФ=ЧЧ:мм</v8:content>
+														</v8:item>
+													</Format>
 													<EditFormat>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>ДФ=HH:mm</v8:content>
 														</v8:item>
 													</EditFormat>
-													<BackColor>style:FieldAlternativeBackColor</BackColor>
 													<ContextMenu name="ВремяНачалаКонтекстноеМеню" id="123"/>
 													<ExtendedTooltip name="ВремяНачалаРасширеннаяПодсказка" id="124"/>
 												</InputField>
@@ -319,13 +319,19 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Продолжительность</v8:content>
+															<v8:content>Длительность</v8:content>
 														</v8:item>
 													</Title>
 													<TitleLocation>Right</TitleLocation>
 													<HorizontalStretch>false</HorizontalStretch>
 													<DropListButton>true</DropListButton>
 													<ChoiceButton>true</ChoiceButton>
+													<Format>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ДФ=Ч:мм</v8:content>
+														</v8:item>
+													</Format>
 													<EditFormat>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -438,7 +444,6 @@
 															</xr:Value>
 														</xr:Item>
 													</ChoiceList>
-													<BackColor>style:FieldAlternativeBackColor</BackColor>
 													<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="129"/>
 													<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="130"/>
 												</InputField>
@@ -467,7 +472,7 @@
 													</Events>
 												</InputField>
 												<LabelDecoration name="Декорация3" id="383">
-													<TextColor>style:SpecialTextColor</TextColor>
+													<TextColor>style:ToolTipTextColor</TextColor>
 													<ContextMenu name="Декорация3КонтекстноеМеню" id="384"/>
 													<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="385"/>
 												</LabelDecoration>
@@ -485,8 +490,6 @@
 								<Table name="Ученики" id="3">
 									<Representation>List</Representation>
 									<Footer>true</Footer>
-									<HorizontalLines>false</HorizontalLines>
-									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -576,34 +579,10 @@
 										<ExtendedTooltip name="УченикиУправлениеПоискомРасширеннаяПодсказка" id="15"/>
 									</SearchControlAddition>
 									<ChildItems>
-										<CheckBoxField name="УченикиСписатьОплату" id="116">
-											<DataPath>Ученики.СписатьОплату</DataPath>
-											<TitleBackColor>style:ActivityColor</TitleBackColor>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.Post</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<CheckBoxType>Auto</CheckBoxType>
-											<BackColor>style:ActivityColor</BackColor>
-											<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="117"/>
-											<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="118"/>
-										</CheckBoxField>
-										<CheckBoxField name="УченикиЯвка" id="363">
-											<DataPath>Ученики.Явка</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="364"/>
-											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="365"/>
-										</CheckBoxField>
 										<InputField name="УченикиУченик" id="54">
 											<DataPath>Ученики.Ученик</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>25</Width>
 											<ClearButton>true</ClearButton>
 											<QuickChoice>false</QuickChoice>
 											<ContextMenu name="УченикиУченикКонтекстноеМеню" id="55"/>
@@ -613,10 +592,50 @@
 												<Event name="Creating">УченикиУченикСоздание</Event>
 											</Events>
 										</InputField>
+										<CheckBoxField name="УченикиЯвка" id="363">
+											<DataPath>Ученики.Явка</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Явка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ученик пришёл на урок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="364"/>
+											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="365"/>
+										</CheckBoxField>
+										<CheckBoxField name="УченикиСписатьОплату" id="116">
+											<DataPath>Ученики.СписатьОплату</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>К оплате</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Списать оплату за урок с ученика</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="118"/>
+										</CheckBoxField>
 										<InputField name="УченикиАбонемент" id="392">
 											<DataPath>Ученики.Абонемент</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>20</Width>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="393"/>
 											<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="394"/>
@@ -626,7 +645,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Остаток абонемента</v8:content>
+													<v8:content>Осталось</v8:content>
 												</v8:item>
 											</Title>
 											<ToolTip>
@@ -635,14 +654,14 @@
 													<v8:content>Остаток абонемента на первую выбранную дату — так же, как в карточке абонемента. В каждый урок абонемент подбирается на дату этого урока</v8:content>
 												</v8:item>
 											</ToolTip>
-											<Width>1</Width>
+											<Width>10</Width>
 											<ContextMenu name="УченикиОстатокАбонементаКонтекстноеМеню" id="396"/>
 											<ExtendedTooltip name="УченикиОстатокАбонементаРасширеннаяПодсказка" id="397"/>
 										</LabelField>
 										<InputField name="УченикиТариф" id="386">
 											<DataPath>Ученики.Тариф</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>20</Width>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="УченикиТарифКонтекстноеМеню" id="387"/>
 											<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="388"/>
@@ -650,7 +669,7 @@
 										<InputField name="УченикиСкидка" id="113">
 											<DataPath>Ученики.Скидка</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>1</Width>
+											<Width>12</Width>
 											<ClearButton>true</ClearButton>
 											<QuickChoice>false</QuickChoice>
 											<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="114"/>
@@ -674,10 +693,6 @@
 									<v8:content>Страница2</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.ExecuteTask</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ExtendedTooltip name="Страница2РасширеннаяПодсказка" id="234"/>
 							<ChildItems>
 								<CheckBoxField name="ПродлениеГруппы" id="82">
@@ -713,10 +728,6 @@
 									<v8:content>Страница3</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.DataCompositionDataParameters</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ExtendedTooltip name="Страница3РасширеннаяПодсказка" id="236"/>
 							<ChildItems>
 								<UsualGroup name="Группа5" id="219">
@@ -741,7 +752,6 @@
 											<TitleLocation>None</TitleLocation>
 											<HorizontalStretch>false</HorizontalStretch>
 											<ClearButton>true</ClearButton>
-											<BackColor>style:ToolTipBackColor</BackColor>
 											<ContextMenu name="ИзГруппыОбученияКонтекстноеМеню" id="98"/>
 											<ExtendedTooltip name="ИзГруппыОбученияРасширеннаяПодсказка" id="99"/>
 											<Events>
@@ -765,15 +775,11 @@
 									<v8:content>Страница4</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.SyncContents</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ExtendedTooltip name="Страница4РасширеннаяПодсказка" id="243"/>
 							<ChildItems>
 								<LabelDecoration name="Декорация2" id="366">
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<TextColor>style:AccentColor</TextColor>
+									<TextColor>style:ToolTipTextColor</TextColor>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -851,55 +857,82 @@
 											<UserVisible>
 												<xr:Common>false</xr:Common>
 											</UserVisible>
-											<Width>1</Width>
+											<Width>20</Width>
 											<ContextMenu name="НайденныеДокументы2СсылкаКонтекстноеМеню" id="361"/>
 											<ExtendedTooltip name="НайденныеДокументы2СсылкаРасширеннаяПодсказка" id="362"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2Дата" id="303">
 											<DataPath>НайденныеДокументы2.Date</DataPath>
-											<Width>1</Width>
+											<Width>12</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='ddd dd.MM HH:mm'</v8:content>
+												</v8:item>
+											</Format>
 											<ContextMenu name="НайденныеДокументы2ДатаКонтекстноеМеню" id="304"/>
 											<ExtendedTooltip name="НайденныеДокументы2ДатаРасширеннаяПодсказка" id="305"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2КоличествоЧасов" id="336">
 											<DataPath>НайденныеДокументы2.КоличествоЧасов</DataPath>
-											<Width>1</Width>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
+											<Width>6</Width>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Часов</v8:content>
+												</v8:item>
+											</Title>
 											<ContextMenu name="НайденныеДокументы2КоличествоЧасовКонтекстноеМеню" id="337"/>
 											<ExtendedTooltip name="НайденныеДокументы2КоличествоЧасовРасширеннаяПодсказка" id="338"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2Окончание" id="321">
 											<DataPath>НайденныеДокументы2.Окончание</DataPath>
-											<Width>1</Width>
+											<Width>5</Width>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>До</v8:content>
+												</v8:item>
+											</Title>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=ЧЧ:мм</v8:content>
+												</v8:item>
+											</Format>
 											<ContextMenu name="НайденныеДокументы2ОкончаниеКонтекстноеМеню" id="322"/>
 											<ExtendedTooltip name="НайденныеДокументы2ОкончаниеРасширеннаяПодсказка" id="323"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2ГруппаОбучения" id="315">
 											<DataPath>НайденныеДокументы2.ГруппаОбучения</DataPath>
-											<Width>1</Width>
+											<Width>20</Width>
 											<ContextMenu name="НайденныеДокументы2ГруппаОбученияКонтекстноеМеню" id="316"/>
 											<ExtendedTooltip name="НайденныеДокументы2ГруппаОбученияРасширеннаяПодсказка" id="317"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2ПредметОбучения" id="312">
 											<DataPath>НайденныеДокументы2.ПредметОбучения</DataPath>
-											<Width>1</Width>
+											<Width>20</Width>
 											<ContextMenu name="НайденныеДокументы2ПредметОбученияКонтекстноеМеню" id="313"/>
 											<ExtendedTooltip name="НайденныеДокументы2ПредметОбученияРасширеннаяПодсказка" id="314"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2Педагог" id="324">
 											<DataPath>НайденныеДокументы2.Педагог</DataPath>
-											<Width>1</Width>
+											<Width>20</Width>
 											<ContextMenu name="НайденныеДокументы2ПедагогКонтекстноеМеню" id="325"/>
 											<ExtendedTooltip name="НайденныеДокументы2ПедагогРасширеннаяПодсказка" id="326"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2Помещение" id="327">
 											<DataPath>НайденныеДокументы2.Помещение</DataPath>
-											<Width>1</Width>
+											<Width>12</Width>
 											<ContextMenu name="НайденныеДокументы2ПомещениеКонтекстноеМеню" id="328"/>
 											<ExtendedTooltip name="НайденныеДокументы2ПомещениеРасширеннаяПодсказка" id="329"/>
 										</LabelField>
 										<LabelField name="НайденныеДокументы2Сумма" id="342">
 											<DataPath>НайденныеДокументы2.Сумма</DataPath>
-											<Width>1</Width>
+											<Width>10</Width>
 											<ContextMenu name="НайденныеДокументы2СуммаКонтекстноеМеню" id="343"/>
 											<ExtendedTooltip name="НайденныеДокументы2СуммаРасширеннаяПодсказка" id="344"/>
 										</LabelField>
@@ -920,10 +953,6 @@
 									<v8:content>Страница5</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.Information</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
 							<ExtendedTooltip name="Страница5РасширеннаяПодсказка" id="286"/>
 							<ChildItems>
 								<Table name="ИнформационнаяТЗ" id="263">

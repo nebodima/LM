@@ -10,7 +10,6 @@
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.StandardCommand.PostAndClose</CommandName>
-				<BackColor>web:Turquoise</BackColor>
 				<ExtendedTooltip name="ФормаПровестиИЗакрытьРасширеннаяПодсказка" id="175"/>
 			</Button>
 			<Button name="ФормаЗаписать" id="176">
@@ -43,6 +42,7 @@
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="Ссылка" id="1">
@@ -77,29 +77,41 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа шапка2</v8:content>
+							<v8:content>Левая колонка шапки</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа шапка2</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапка2РасширеннаяПодсказка" id="325"/>
 					<ChildItems>
-						<UsualGroup name="Группа2" id="733">
+						<UsualGroup name="СтрокаВремя" id="733">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время урока</v8:content>
+								</v8:item>
+							</Title>
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="734"/>
+							<ExtendedTooltip name="СтрокаВремяРасширеннаяПодсказка" id="734"/>
 							<ChildItems>
 								<InputField name="Дата" id="7">
 									<DataPath>Объект.Date</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
+										</v8:item>
+									</EditFormat>
 									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
 									<Events>
@@ -110,7 +122,7 @@
 									<DataPath>Объект.Date</DataPath>
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>2</Width>
+									<Width>3</Width>
 									<Format>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -120,513 +132,120 @@
 									<ContextMenu name="Дата1КонтекстноеМеню" id="722"/>
 									<ExtendedTooltip name="Дата1РасширеннаяПодсказка" id="723"/>
 								</LabelField>
-							</ChildItems>
-						</UsualGroup>
-						<InputField name="ГруппаОбучения" id="342">
-							<DataPath>Объект.ГруппаОбучения</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа</v8:content>
-								</v8:item>
-							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
-							<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="344"/>
-							<Events>
-								<Event name="OnChange">ГруппаОбученияПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Педагог" id="16">
-							<DataPath>Объект.Педагог</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<BackColor>style:FieldAlternativeBackColor</BackColor>
-							<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
-							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
-							<Events>
-								<Event name="OnChange">ПедагогПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="ПредметОбучения" id="350">
-							<DataPath>Объект.ПредметОбучения</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Предмет</v8:content>
-								</v8:item>
-							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
-							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
-							<Events>
-								<Event name="OnChange">ПредметОбученияПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Помещение" id="329">
-							<DataPath>Объект.Помещение</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ПомещениеКонтекстноеМеню" id="330"/>
-							<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="331"/>
-							<Events>
-								<Event name="OnChange">ПомещениеПриИзменении</Event>
-							</Events>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаВторая" id="729">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа вторая</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа вторая</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Vertical</Group>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаВтораяРасширеннаяПодсказка" id="730"/>
-					<ChildItems>
-						<UsualGroup name="Группа1" id="731">
-							<Group>AlwaysHorizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="732"/>
-							<ChildItems>
-								<InputField name="КоличествоЧасов" id="153">
-									<DataPath>Объект.КоличествоЧасов</DataPath>
-									<SkipOnInput>true</SkipOnInput>
+								<InputField name="Длительность" id="153">
+									<DataPath>Длительность</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Длительность</v8:content>
 										</v8:item>
 									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Длительность урока в часах и минутах: 1:30 — полтора часа, 0:40 — сорок минут</v8:content>
+										</v8:item>
+									</ToolTip>
 									<HorizontalStretch>false</HorizontalStretch>
 									<DropListButton>true</DropListButton>
-									<ChoiceButton>true</ChoiceButton>
-									<ChoiceButtonPicture>
-										<xr:Ref>StdPicture.AppearanceCircleOneFourthFilled</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ChoiceButtonPicture>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=Ч:мм</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=Ч:мм</v8:content>
+										</v8:item>
+									</EditFormat>
 									<ChoiceList>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">0.5</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T00:30:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>40 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">0.6667</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T00:40:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>45 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">0.75</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T00:45:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>50 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">0.8333</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T01:00:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>1 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">1</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T01:15:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>1 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">1.5</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T01:30:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>2 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">2</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T01:45:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>2 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">2.5</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T02:00:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>3 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">3</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T02:30:00</Value>
 											</xr:Value>
 										</xr:Item>
 										<xr:Item>
 											<xr:Presentation/>
 											<xr:CheckState>0</xr:CheckState>
 											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>3 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">3.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>4 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">4</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>4 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">4.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>5 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>5 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">5.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>6 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">6</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>6 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">6.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>7 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">7</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>7 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">7.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>8 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">8</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>8 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">8.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>9 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">9</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>9 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">9.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>10 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">10</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>10 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">10.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>11 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">11</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>11 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">11.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>12 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">12</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>12 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">12.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>13 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">13</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>13 ч. 30 мин.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">13.5</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>14 ч.</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:decimal">14</Value>
+												<Presentation/>
+												<Value xsi:type="xs:dateTime">0001-01-01T03:00:00</Value>
 											</xr:Value>
 										</xr:Item>
 									</ChoiceList>
-									<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="154"/>
-									<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="155"/>
+									<ContextMenu name="ДлительностьКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ДлительностьРасширеннаяПодсказка" id="155"/>
 									<Events>
-										<Event name="OnChange">КоличествоЧасовПриИзменении</Event>
+										<Event name="OnChange">ДлительностьПриИзменении</Event>
 									</Events>
 								</InputField>
 								<InputField name="Окончание" id="714">
@@ -638,7 +257,13 @@
 											<v8:content>до</v8:content>
 										</v8:item>
 									</Title>
-									<Width>3</Width>
+									<Width>5</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<EditFormat>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -659,51 +284,86 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
-						<InputField name="Организация" id="724">
-							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="725"/>
-							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="726"/>
-							<Events>
-								<Event name="OnChange">ОрганизацияПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="СтавкаПедагога" id="742">
-							<DataPath>Объект.СтавкаПедагога</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Как начисляется оплата педагогу за этот урок. Заполняется из карточки педагога</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<BackColor>style:FieldAlternativeBackColor</BackColor>
-							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
-							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
-							<Events>
-								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
-							</Events>
-						</InputField>
-						<InputField name="Статус" id="735">
-							<DataPath>Объект.Статус</DataPath>
+						<UsualGroup name="СтрокаЗанятие" id="927">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Статус урока</v8:content>
+									<v8:content>Занятие</v8:content>
 								</v8:item>
 							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
-							<ClearButton>true</ClearButton>
-							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
-							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
-						</InputField>
-						<UsualGroup name="Группа4" id="899">
+							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="900"/>
+							<ExtendedTooltip name="СтрокаЗанятиеРасширеннаяПодсказка" id="928"/>
 							<ChildItems>
+								<InputField name="ГруппаОбучения" id="342">
+									<DataPath>Объект.ГруппаОбучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
+									<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="344"/>
+									<Events>
+										<Event name="OnChange">ГруппаОбученияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Педагог" id="16">
+									<DataPath>Объект.Педагог</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
+									<Events>
+										<Event name="OnChange">ПедагогПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПредметОбучения" id="350">
+									<DataPath>Объект.ПредметОбучения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предмет</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>20</MaxWidth>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
+									<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
+									<Events>
+										<Event name="OnChange">ПредметОбученияПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СтрокаТариф" id="899">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Помещение и тариф</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтрокаТарифРасширеннаяПодсказка" id="900"/>
+							<ChildItems>
+								<InputField name="Помещение" id="329">
+									<DataPath>Объект.Помещение</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>24</MaxWidth>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ПомещениеКонтекстноеМеню" id="330"/>
+									<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="331"/>
+								</InputField>
 								<InputField name="Тариф" id="896">
 									<DataPath>Объект.Тариф</DataPath>
 									<ToolTip>
@@ -712,9 +372,9 @@
 											<v8:content>Тариф урока по умолчанию: подставляется ученикам, у которых в карточке тариф не указан</v8:content>
 										</v8:item>
 									</ToolTip>
-									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>36</MaxWidth>
 									<ClearButton>true</ClearButton>
-									<BackColor>style:ToolTipBackColor</BackColor>
 									<ContextMenu name="ТарифКонтекстноеМеню" id="897"/>
 									<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="898"/>
 									<Events>
@@ -723,7 +383,7 @@
 								</InputField>
 								<LabelDecoration name="Декорация1" id="901">
 									<Visible>false</Visible>
-									<TextColor>style:SpecialTextColor</TextColor>
+									<TextColor>style:ToolTipTextColor</TextColor>
 									<ContextMenu name="Декорация1КонтекстноеМеню" id="902"/>
 									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="903"/>
 								</LabelDecoration>
@@ -771,18 +431,11 @@
 							<v8:content>Группа ученики страница</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.User</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
 					<ExtendedTooltip name="ГруппаУченикиСтраницаРасширеннаяПодсказка" id="539"/>
 					<ChildItems>
 						<Table name="Ученики" id="192">
 							<Representation>List</Representation>
-							<HeaderHeight>2</HeaderHeight>
 							<Footer>true</Footer>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -913,7 +566,7 @@
 									<ShowInHeader>false</ShowInHeader>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
-									<Width>1</Width>
+									<Width>3</Width>
 									<TextColor>style:ToolTipTextColor</TextColor>
 									<ContextMenu name="УченикиНомерСтрокиКонтекстноеМеню" id="206"/>
 									<ExtendedTooltip name="УченикиНомерСтрокиРасширеннаяПодсказка" id="207"/>
@@ -922,12 +575,8 @@
 									<DataPath>Объект.Ученики.Ученик</DataPath>
 									<DefaultItem>true</DefaultItem>
 									<EditMode>EnterOnInput</EditMode>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.User</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
 									<ShowInFooter>false</ShowInFooter>
-									<Width>18</Width>
+									<Width>25</Width>
 									<ContextMenu name="УченикиУченикКонтекстноеМеню" id="212"/>
 									<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="213"/>
 									<Events>
@@ -935,7 +584,8 @@
 										<Event name="Creating">УченикиУченикСоздание</Event>
 									</Events>
 								</InputField>
-								<ColumnGroup name="УченикиГруппаЯвка" id="498">
+								<CheckBoxField name="УченикиЯвка" id="318">
+									<DataPath>Объект.Ученики.Явка</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -948,53 +598,43 @@
 											<v8:content>Ученик пришёл на урок</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Horizontal</Group>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInFooter>false</ShowInFooter>
+									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+									<Width>5</Width>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="319"/>
+									<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="320"/>
+									<Events>
+										<Event name="OnChange">УченикиЯвкаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="УченикиПричина" id="358">
+									<DataPath>Объект.Ученики.Причина</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Причина неявки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<ExtendedTooltip name="УченикиГруппаЯвкаРасширеннаяПодсказка" id="499"/>
-									<ChildItems>
-										<CheckBoxField name="УченикиЯвка" id="318">
-											<DataPath>Объект.Ученики.Явка</DataPath>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Явка</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<FooterHorizontalAlign>Left</FooterHorizontalAlign>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="319"/>
-											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="320"/>
-											<Events>
-												<Event name="OnChange">УченикиЯвкаПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<InputField name="УченикиПричина" id="358">
-											<DataPath>Объект.Ученики.Причина</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>причина</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-											<ShowInFooter>false</ShowInFooter>
-											<Width>1</Width>
-											<ContextMenu name="УченикиПричинаКонтекстноеМеню" id="359"/>
-											<ExtendedTooltip name="УченикиПричинаРасширеннаяПодсказка" id="360"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппаСписатьОплату" id="475">
+									<ShowInFooter>false</ShowInFooter>
+									<Width>15</Width>
+									<ContextMenu name="УченикиПричинаКонтекстноеМеню" id="359"/>
+									<ExtendedTooltip name="УченикиПричинаРасширеннаяПодсказка" id="360"/>
+								</InputField>
+								<CheckBoxField name="УченикиСписатьОплату" id="353">
+									<DataPath>Объект.Ученики.СписатьОплату</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -1007,55 +647,39 @@
 											<v8:content>Списать оплату за урок с ученика</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Horizontal</Group>
-									<ExtendedTooltip name="УченикиГруппаСписатьОплатуРасширеннаяПодсказка" id="476"/>
-									<ChildItems>
-										<CheckBoxField name="УченикиСписатьОплату" id="353">
-											<DataPath>Объект.Ученики.СписатьОплату</DataPath>
-											<TitleBackColor>style:ActivityColor</TitleBackColor>
-											<EditMode>EnterOnInput</EditMode>
-											<AutoCellHeight>true</AutoCellHeight>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.Post</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<CheckBoxType>Auto</CheckBoxType>
-											<BackColor>style:ActivityColor</BackColor>
-											<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="354"/>
-											<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="355"/>
-											<Events>
-												<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
-											</Events>
-										</CheckBoxField>
-										<InputField name="УченикиЗаметка" id="321">
-											<DataPath>Объект.Ученики.Заметка</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>заметка</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-											<ShowInFooter>false</ShowInFooter>
-											<Width>1</Width>
-											<ContextMenu name="УченикиЗаметкаКонтекстноеМеню" id="322"/>
-											<ExtendedTooltip name="УченикиЗаметкаРасширеннаяПодсказка" id="323"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>8</Width>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="354"/>
+									<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="355"/>
+									<Events>
+										<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="УченикиЗаметка" id="321">
+									<DataPath>Объект.Ученики.Заметка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заметка</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>20</Width>
+									<ContextMenu name="УченикиЗаметкаКонтекстноеМеню" id="322"/>
+									<ExtendedTooltip name="УченикиЗаметкаРасширеннаяПодсказка" id="323"/>
+								</InputField>
 								<InputField name="УченикиАбонемент" id="888">
 									<DataPath>Объект.Ученики.Абонемент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.ReportSettings</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>10</Width>
+									<Width>20</Width>
 									<ContextMenu name="УченикиАбонементКонтекстноеМеню" id="889"/>
 									<ExtendedTooltip name="УченикиАбонементРасширеннаяПодсказка" id="890"/>
 									<Events>
@@ -1067,8 +691,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Остаток
-абонемента</v8:content>
+											<v8:content>Осталось</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
@@ -1077,15 +700,18 @@
 											<v8:content>Сколько занятий (часов) абонемента строки осталось по проведённым урокам — так же, как в карточке абонемента</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Width>8</Width>
+									<Width>10</Width>
 									<ContextMenu name="УченикиОстатокАбонементаКонтекстноеМеню" id="925"/>
 									<ExtendedTooltip name="УченикиОстатокАбонементаРасширеннаяПодсказка" id="926"/>
 								</LabelField>
 								<InputField name="УченикиТариф" id="347">
 									<DataPath>Объект.Ученики.Тариф</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<EditMode>EnterOnInput</EditMode>
 									<ShowInFooter>false</ShowInFooter>
-									<Width>10</Width>
+									<Width>20</Width>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="УченикиТарифКонтекстноеМеню" id="348"/>
 									<ExtendedTooltip name="УченикиТарифРасширеннаяПодсказка" id="349"/>
@@ -1095,167 +721,110 @@
 								</InputField>
 								<InputField name="УченикиЦенаТарифа" id="891">
 									<DataPath>Объект.Ученики.ЦенаТарифа</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<ReadOnly>true</ReadOnly>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Цена
-тарифа</v8:content>
+											<v8:content>Цена</v8:content>
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>Объект.Ученики.TotalЦенаТарифа</FooterDataPath>
-									<Width>6</Width>
+									<Width>10</Width>
 									<ContextMenu name="УченикиЦенаТарифаКонтекстноеМеню" id="892"/>
 									<ExtendedTooltip name="УченикиЦенаТарифаРасширеннаяПодсказка" id="893"/>
 								</InputField>
-								<ColumnGroup name="УченикиГруппа6" id="450">
-									<Group>Horizontal</Group>
-									<ExtendedTooltip name="УченикиГруппа6РасширеннаяПодсказка" id="451"/>
-									<ChildItems>
-										<InputField name="УченикиКоэффициент" id="430">
-											<DataPath>Объект.Ученики.Скидка</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Скидка</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.CustomExpression</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<Width>7</Width>
-											<ClearButton>true</ClearButton>
-											<ContextMenu name="УченикиКоэффициентКонтекстноеМеню" id="431"/>
-											<ExtendedTooltip name="УченикиКоэффициентРасширеннаяПодсказка" id="432"/>
-											<Events>
-												<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
-												<Event name="Clearing">УченикиКоэффициентОчистка</Event>
-											</Events>
-										</InputField>
-										<InputField name="УченикиСкидка" id="433">
-											<DataPath>Объект.Ученики.СуммаСкидки</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Сумма
-скидки</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<ShowInFooter>false</ShowInFooter>
-											<FooterDataPath>Объект.Ученики.TotalСуммаСкидки</FooterDataPath>
-											<Width>6</Width>
-											<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="434"/>
-											<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="435"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппа5" id="448">
-									<Group>Horizontal</Group>
-									<ExtendedTooltip name="УченикиГруппа5РасширеннаяПодсказка" id="449"/>
-									<ChildItems>
-										<InputField name="УченикиЧасы" id="302">
-											<DataPath>1/0:5b0261c7-01ca-466e-bf76-062714496fad/0:1385ad62-16a3-462f-af40-aea22b299880</DataPath>
-											<UserVisible>
-												<xr:Common>false</xr:Common>
-											</UserVisible>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.SetTime</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<Width>1</Width>
-											<SpinButton>true</SpinButton>
-											<ContextMenu name="УченикиЧасыКонтекстноеМеню" id="303"/>
-											<ExtendedTooltip name="УченикиЧасыРасширеннаяПодсказка" id="304"/>
-											<Events>
-												<Event name="OnChange">УченикиЧасыПриИзменении</Event>
-											</Events>
-										</InputField>
-										<InputField name="УченикиСумма" id="293">
-											<DataPath>Объект.Ученики.Сумма</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Итого</v8:content>
-												</v8:item>
-											</Title>
-											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
-											<ShowInFooter>false</ShowInFooter>
-											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
-											<Width>6</Width>
-											<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
-											<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
-										</InputField>
-									</ChildItems>
-								</ColumnGroup>
-								<ColumnGroup name="УченикиГруппа9" id="486">
+								<InputField name="УченикиКоэффициент" id="430">
+									<DataPath>Объект.Ученики.Скидка</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Остаток
-по предмету</v8:content>
+											<v8:content>Скидка</v8:content>
 										</v8:item>
 									</Title>
-									<TitleTextColor>style:FormTextColor</TitleTextColor>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInFooter>false</ShowInFooter>
+									<Width>12</Width>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="УченикиКоэффициентКонтекстноеМеню" id="431"/>
+									<ExtendedTooltip name="УченикиКоэффициентРасширеннаяПодсказка" id="432"/>
+									<Events>
+										<Event name="OnChange">УченикиСписатьОплатуПриИзменении</Event>
+										<Event name="Clearing">УченикиКоэффициентОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="УченикиСкидка" id="433">
+									<DataPath>Объект.Ученики.СуммаСкидки</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сумма скидки</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInFooter>false</ShowInFooter>
+									<FooterDataPath>Объект.Ученики.TotalСуммаСкидки</FooterDataPath>
+									<Width>10</Width>
+									<ContextMenu name="УченикиСкидкаКонтекстноеМеню" id="434"/>
+									<ExtendedTooltip name="УченикиСкидкаРасширеннаяПодсказка" id="435"/>
+								</InputField>
+								<InputField name="УченикиСумма" id="293">
+									<DataPath>Объект.Ученики.Сумма</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Итого</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInFooter>false</ShowInFooter>
+									<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
+									<Width>10</Width>
+									<ContextMenu name="УченикиСуммаКонтекстноеМеню" id="294"/>
+									<ExtendedTooltip name="УченикиСуммаРасширеннаяПодсказка" id="295"/>
+								</InputField>
+								<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
+									<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остаток по предмету</v8:content>
+										</v8:item>
+									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Остаток денег ученика по предмету: плюс — переплата, минус — долг</v8:content>
+											<v8:content>Деньги ученика по предмету урока на сегодня: плюс — переплата (аванс), минус — долг. Щелчок открывает взаиморасчеты</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Horizontal</Group>
-									<TitleBackColor>style:TableHeaderBackColor</TitleBackColor>
-									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<ExtendedTooltip name="УченикиГруппа9РасширеннаяПодсказка" id="487"/>
-									<ChildItems>
-										<LabelField name="УченикиЗадолженностьПоПредмету" id="480">
-											<DataPath>Объект.Ученики.ЗадолженностьПоПредмету</DataPath>
-											<ReadOnly>true</ReadOnly>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Остаток
-по предмету</v8:content>
-												</v8:item>
-											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Деньги ученика по предмету урока на сегодня: плюс — переплата (аванс), минус — долг. Щелчок открывает взаиморасчеты</v8:content>
-												</v8:item>
-											</ToolTip>
-											<EditMode>EnterOnInput</EditMode>
-											<CellHyperlink>true</CellHyperlink>
-											<Width>8</Width>
-											<MarkNegatives>false</MarkNegatives>
-											<Hiperlink>true</Hiperlink>
-											<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
-											<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
-										</LabelField>
-									</ChildItems>
-								</ColumnGroup>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<Width>12</Width>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="УченикиЗадолженностьПоПредметуКонтекстноеМеню" id="481"/>
+									<ExtendedTooltip name="УченикиЗадолженностьПоПредметуРасширеннаяПодсказка" id="482"/>
+								</LabelField>
 								<InputField name="УченикиКомментарий" id="477">
 									<DataPath>Объект.Ученики.Комментарий</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<EditMode>EnterOnInput</EditMode>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
-									<Width>6</Width>
+									<Width>20</Width>
 									<ContextMenu name="УченикиКомментарийКонтекстноеМеню" id="478"/>
 									<ExtendedTooltip name="УченикиКомментарийРасширеннаяПодсказка" id="479"/>
 								</InputField>
@@ -1276,10 +845,6 @@
 							<v8:content>Группа бонусы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.Properties</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
 					<ExtendedTooltip name="ГруппаБонусыРасширеннаяПодсказка" id="541"/>
 					<ChildItems>
 						<UsualGroup name="Группа3" id="655">
@@ -1369,7 +934,7 @@
 									<ShowInHeader>false</ShowInHeader>
 									<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
 									<FooterDataPath>Объект.Ученики.RowsCount</FooterDataPath>
-									<Width>1</Width>
+									<Width>3</Width>
 									<ContextMenu name="УченикиНомерСтроки1КонтекстноеМеню" id="556"/>
 									<ExtendedTooltip name="УченикиНомерСтроки1РасширеннаяПодсказка" id="557"/>
 								</LabelField>
@@ -1377,11 +942,7 @@
 									<DataPath>Объект.Ученики.ОстатокБонусов</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<CellHyperlink>true</CellHyperlink>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<MarkNegatives>true</MarkNegatives>
+									<Width>10</Width>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="Ученики1ОстатокБонусовКонтекстноеМеню" id="697"/>
 									<ExtendedTooltip name="Ученики1ОстатокБонусовРасширеннаяПодсказка" id="698"/>
@@ -1396,12 +957,8 @@
 											<TitleLocation>None</TitleLocation>
 											<HorizontalAlign>Left</HorizontalAlign>
 											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.User</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
 											<ShowInFooter>false</ShowInFooter>
-											<Width>1</Width>
+											<Width>25</Width>
 											<ContextMenu name="УченикиУченик1КонтекстноеМеню" id="606"/>
 											<ExtendedTooltip name="УченикиУченик1РасширеннаяПодсказка" id="607"/>
 											<Events>
@@ -1414,11 +971,7 @@
 								<InputField name="Ученики1ДисконтнаяКарта" id="649">
 									<DataPath>Объект.Ученики.ДисконтнаяКарта</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<HeaderPicture>
-										<xr:Ref>StdPicture.Attribute</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</HeaderPicture>
-									<Width>1</Width>
+									<Width>20</Width>
 									<ContextMenu name="Ученики1ДисконтнаяКартаКонтекстноеМеню" id="650"/>
 									<ExtendedTooltip name="Ученики1ДисконтнаяКартаРасширеннаяПодсказка" id="651"/>
 									<Events>
@@ -1449,11 +1002,8 @@
 												</v8:item>
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
 											<FooterDataPath>Объект.Ученики.TotalСумма</FooterDataPath>
+											<Width>10</Width>
 											<TextColor>style:ToolTipTextColor</TextColor>
 											<ContextMenu name="УченикиСумма1КонтекстноеМеню" id="630"/>
 											<ExtendedTooltip name="УченикиСумма1РасширеннаяПодсказка" id="631"/>
@@ -1468,11 +1018,8 @@
 											</Title>
 											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<EditMode>EnterOnInput</EditMode>
-											<HeaderPicture>
-												<xr:Ref>StdPicture.DebitCredit</xr:Ref>
-												<xr:LoadTransparent>true</xr:LoadTransparent>
-											</HeaderPicture>
 											<FooterDataPath>Объект.Ученики.TotalСуммаБонусов</FooterDataPath>
+											<Width>10</Width>
 											<ContextMenu name="Ученики1СуммаБонусовКонтекстноеМеню" id="694"/>
 											<ExtendedTooltip name="Ученики1СуммаБонусовРасширеннаяПодсказка" id="695"/>
 										</InputField>
@@ -1495,10 +1042,6 @@
 							<v8:content>Группа начисления педагогу</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.Post</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
 					<ExtendedTooltip name="ГруппаНачисленияПедагогуРасширеннаяПодсказка" id="831"/>
 					<ChildItems>
 						<UsualGroup name="Группа5" id="816">
@@ -1518,9 +1061,7 @@
 									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-									<Width>5</Width>
-									<TextColor>style:SpecialTextColor</TextColor>
-									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Width>10</Width>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЗанятиеКонтекстноеМеню" id="819"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЗанятиеРасширеннаяПодсказка" id="820"/>
 								</LabelField>
@@ -1534,9 +1075,7 @@
 									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-									<Width>5</Width>
-									<TextColor>style:SpecialTextColor</TextColor>
-									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Width>10</Width>
 									<ContextMenu name="СтавкаПедагогаОплатаСЧеловекаКонтекстноеМеню" id="822"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаСЧеловекаРасширеннаяПодсказка" id="823"/>
 								</LabelField>
@@ -1550,9 +1089,7 @@
 									</Title>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-									<Width>5</Width>
-									<TextColor>style:SpecialTextColor</TextColor>
-									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Width>10</Width>
 									<ContextMenu name="СтавкаПедагогаОплатаЗаЧасКонтекстноеМеню" id="825"/>
 									<ExtendedTooltip name="СтавкаПедагогаОплатаЗаЧасРасширеннаяПодсказка" id="826"/>
 								</LabelField>
@@ -1560,9 +1097,7 @@
 									<DataPath>Объект.СтавкаПедагога.ПроцентСОплатыУченика</DataPath>
 									<HorizontalAlign>Left</HorizontalAlign>
 									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-									<Width>5</Width>
-									<TextColor>style:SpecialTextColor</TextColor>
-									<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Width>10</Width>
 									<ContextMenu name="СтавкаПедагогаПроцентСОплатыУченикаКонтекстноеМеню" id="828"/>
 									<ExtendedTooltip name="СтавкаПедагогаПроцентСОплатыУченикаРасширеннаяПодсказка" id="829"/>
 								</LabelField>
@@ -1649,7 +1184,7 @@
 									<TitleLocation>None</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>Объект.НачисленияПедагогу.RowsCount</FooterDataPath>
-									<Width>1</Width>
+									<Width>3</Width>
 									<ContextMenu name="НачисленияПедагогуНомерСтрокиКонтекстноеМеню" id="846"/>
 									<ExtendedTooltip name="НачисленияПедагогуНомерСтрокиРасширеннаяПодсказка" id="847"/>
 								</LabelField>
@@ -1657,7 +1192,7 @@
 									<DataPath>Объект.НачисленияПедагогу.СуммаНачисления</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<FooterDataPath>Объект.НачисленияПедагогу.TotalСуммаНачисления</FooterDataPath>
-									<Width>1</Width>
+									<Width>10</Width>
 									<ContextMenu name="НачисленияПедагогуСуммаНачисленияКонтекстноеМеню" id="852"/>
 									<ExtendedTooltip name="НачисленияПедагогуСуммаНачисленияРасширеннаяПодсказка" id="853"/>
 								</InputField>
@@ -1677,7 +1212,7 @@
 										</v8:item>
 									</Title>
 									<EditMode>EnterOnInput</EditMode>
-									<Width>1</Width>
+									<Width>30</Width>
 									<ContextMenu name="НачисленияПедагогуКомментарийКонтекстноеМеню" id="849"/>
 									<ExtendedTooltip name="НачисленияПедагогуКомментарийРасширеннаяПодсказка" id="850"/>
 								</InputField>
@@ -1698,10 +1233,6 @@
 							<v8:content>Группа дополнительные расходы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
 					<ExtendedTooltip name="ГруппаДополнительныеРасходыРасширеннаяПодсказка" id="863"/>
 					<ChildItems>
 						<Table name="Расходы" id="864">
@@ -1799,9 +1330,47 @@
 							<v8:content>Группа дополнительно</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Picture><xr:Ref>StdPicture.Information</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
 					<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="914"/>
 					<ChildItems>
+						<InputField name="Организация" id="724">
+							<DataPath>Объект.Организация</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="725"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="726"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкаПедагога" id="742">
+							<DataPath>Объект.СтавкаПедагога</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Как начисляется оплата педагогу за этот урок. Заполняется из карточки педагога</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="743"/>
+							<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="744"/>
+							<Events>
+								<Event name="OnChange">СтавкаПедагогаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Статус" id="735">
+							<DataPath>Объект.Статус</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Статус урока</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="736"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="737"/>
+						</InputField>
 						<InputField name="ТемаУрока" id="918">
 							<DataPath>Объект.ТемаУрока</DataPath>
 							<Height>2</Height>
@@ -1814,6 +1383,20 @@
 							<ContextMenu name="ДомашнееЗаданиеКонтекстноеМеню" id="916"/>
 							<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="917"/>
 						</InputField>
+						<LabelField name="АвторДокумента" id="25">
+							<DataPath>Объект.АвторДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автор</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<TextColor>style:ToolTipTextColor</TextColor>
+							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
+						</LabelField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -1822,46 +1405,25 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа итоги</v8:content>
+					<v8:content>Подвал</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа итоги</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Group>Horizontal</Group>
-			<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="309"/>
 			<ChildItems>
-				<LabelField name="АвторДокумента" id="25">
-					<DataPath>Объект.АвторДокумента</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Автор</v8:content>
-						</v8:item>
-					</Title>
-					<EditMode>EnterOnInput</EditMode>
-					<HorizontalStretch>false</HorizontalStretch>
-					<TextColor>style:ToolTipTextColor</TextColor>
-					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>
-				</LabelField>
 				<InputField name="СуммаЗаУрок" id="296">
 					<DataPath>Объект.Ученики.TotalСумма</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Сумма итого</v8:content>
+							<v8:content>Итого</v8:content>
 						</v8:item>
 					</Title>
-					<TitleLocation>Left</TitleLocation>
-					<HorizontalAlign>Left</HorizontalAlign>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="СуммаЗаУрокКонтекстноеМеню" id="297"/>
 					<ExtendedTooltip name="СуммаЗаУрокРасширеннаяПодсказка" id="298"/>
 				</InputField>
@@ -1870,6 +1432,7 @@
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1971,6 +1534,20 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Длительность" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Time</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -2001,60 +1578,6 @@
 						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
 						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>УченикиЗадолженностьПоПредмету</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЗадолженностьПоПредмету</dcsset:left>
-						<dcsset:comparisonType>Greater</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>Формат</dcscor:parameter>
-						<dcscor:value xsi:type="v8:LocalStringType">
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>ЧДЦ=2; ЧФ=+Ч</v8:content>
-							</v8:item>
-						</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>УченикиЗадолженностьПоПредмету</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Объект.Ученики.ЗадолженностьПоПредмету</dcsset:left>
-						<dcsset:comparisonType>Less</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>Формат</dcscor:parameter>
-						<dcscor:value xsi:type="v8:LocalStringType"/>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

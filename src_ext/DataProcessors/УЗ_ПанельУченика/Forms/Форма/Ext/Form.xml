@@ -60,6 +60,32 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<UsualGroup name="ГруппаСводка" id="205">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сводка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСводкаРасширеннаяПодсказка" id="206"/>
+							<ChildItems>
+								<LabelDecoration name="Сводка" id="207">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выберите ученика — здесь появятся его деньги по предметам, абонементы и ближайший урок</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="СводкаКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="СводкаРасширеннаяПодсказка" id="209"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="Группа3" id="81">
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
@@ -81,7 +107,6 @@
 												</v8:item>
 											</Title>
 											<ClearButton>true</ClearButton>
-											<TextColor>style:AccentColor</TextColor>
 											<ContextMenu name="ПериодКонтекстноеМеню" id="75"/>
 											<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="76"/>
 											<Events>
@@ -197,23 +222,28 @@
 										<InputField name="АктивныеГруппыОбученияГруппаОбучения" id="99">
 											<DataPath>АктивныеГруппыОбучения.ГруппаОбучения</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>11</Width>
-											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<Width>20</Width>
 											<ContextMenu name="АктивныеГруппыОбученияГруппаОбученияКонтекстноеМеню" id="100"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияГруппаОбученияРасширеннаяПодсказка" id="101"/>
 										</InputField>
 										<LabelField name="АктивныеГруппыОбученияЗадолженность" id="180">
 											<DataPath>АктивныеГруппыОбучения.Задолженность</DataPath>
-											<EditMode>EnterOnInput</EditMode>
-											<Width>8</Width>
-											<CellHyperlink>true</CellHyperlink>
-											<Hiperlink>true</Hiperlink>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>«+» — оплачено вперёд, «−» — долг ученика</v8:content>
+													<v8:content>Деньги ученика по предмету группы: плюс — переплата (аванс), минус — долг. Щелчок открывает взаиморасчеты</v8:content>
 												</v8:item>
 											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>12</Width>
+											<CellHyperlink>true</CellHyperlink>
+											<Hiperlink>true</Hiperlink>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток по предмету</v8:content>
+												</v8:item>
+											</Title>
 											<ContextMenu name="АктивныеГруппыОбученияЗадолженностьКонтекстноеМеню" id="181"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияЗадолженностьРасширеннаяПодсказка" id="182"/>
 										</LabelField>
@@ -225,6 +255,7 @@
 													<v8:content>По действующим абонементам предмета: осталось из купленных. Без абонемента — сколько уроков покрывает остаток денег по цене тарифа группы («≈»)</v8:content>
 												</v8:item>
 											</ToolTip>
+											<Width>12</Width>
 											<ContextMenu name="АктивныеГруппыОбученияОсталосьУроковКонтекстноеМеню" id="200"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияОсталосьУроковРасширеннаяПодсказка" id="201"/>
 										</LabelField>
@@ -238,11 +269,10 @@
 										<InputField name="АктивныеГруппыОбученияДействие" id="105">
 											<DataPath>АктивныеГруппыОбучения.Действие</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>9</Width>
+											<Width>12</Width>
 											<DropListButton>true</DropListButton>
 											<ClearButton>true</ClearButton>
 											<ListChoiceMode>true</ListChoiceMode>
-											<AutoMarkIncomplete>true</AutoMarkIncomplete>
 											<ChoiceList>
 												<xr:Item>
 													<xr:Presentation/>
@@ -326,24 +356,23 @@
 										<LabelField name="АктивныеГруппыОбученияПериод" id="112">
 											<DataPath>АктивныеГруппыОбучения.Период</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>8</Width>
+											<Width>12</Width>
 											<CellHyperlink>true</CellHyperlink>
 											<Hiperlink>true</Hiperlink>
-											<TextColor>style:AccentColor</TextColor>
 											<ContextMenu name="АктивныеГруппыОбученияПериодКонтекстноеМеню" id="113"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияПериодРасширеннаяПодсказка" id="114"/>
 										</LabelField>
 										<LabelField name="АктивныеГруппыОбученияКолУроков" id="183">
 											<DataPath>АктивныеГруппыОбучения.КолУроков</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>4</Width>
+											<Width>6</Width>
 											<ContextMenu name="АктивныеГруппыОбученияКолУроковКонтекстноеМеню" id="184"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияКолУроковРасширеннаяПодсказка" id="185"/>
 										</LabelField>
 										<InputField name="АктивныеГруппыОбученияСкидка" id="168">
 											<DataPath>АктивныеГруппыОбучения.Скидка</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>6</Width>
+											<Width>12</Width>
 											<ContextMenu name="АктивныеГруппыОбученияСкидкаКонтекстноеМеню" id="169"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияСкидкаРасширеннаяПодсказка" id="170"/>
 										</InputField>
@@ -368,21 +397,21 @@
 												<InputField name="АктивныеГруппыОбученияПредметОбученияОтправитель" id="186">
 													<DataPath>АктивныеГруппыОбучения.ПредметОбученияОтправитель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
-													<Width>6</Width>
+													<Width>15</Width>
 													<ContextMenu name="АктивныеГруппыОбученияПредметОбученияОтправительКонтекстноеМеню" id="187"/>
 													<ExtendedTooltip name="АктивныеГруппыОбученияПредметОбученияОтправительРасширеннаяПодсказка" id="188"/>
 												</InputField>
 												<InputField name="АктивныеГруппыОбученияПредметОбученияПолучатель" id="189">
 													<DataPath>АктивныеГруппыОбучения.ПредметОбученияПолучатель</DataPath>
 													<EditMode>EnterOnInput</EditMode>
-													<Width>6</Width>
+													<Width>15</Width>
 													<ContextMenu name="АктивныеГруппыОбученияПредметОбученияПолучательКонтекстноеМеню" id="190"/>
 													<ExtendedTooltip name="АктивныеГруппыОбученияПредметОбученияПолучательРасширеннаяПодсказка" id="191"/>
 												</InputField>
 												<InputField name="АктивныеГруппыОбученияСумма" id="194">
 													<DataPath>АктивныеГруппыОбучения.Сумма</DataPath>
 													<EditMode>EnterOnInput</EditMode>
-													<Width>6</Width>
+													<Width>10</Width>
 													<ContextMenu name="АктивныеГруппыОбученияСуммаКонтекстноеМеню" id="195"/>
 													<ExtendedTooltip name="АктивныеГруппыОбученияСуммаРасширеннаяПодсказка" id="196"/>
 												</InputField>
@@ -460,10 +489,11 @@
 					<ChildItems>
 						<LabelField name="СписокУроковДата" id="17">
 							<DataPath>СписокУроков.Дата</DataPath>
+							<Width>16</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>ДФ='d.MM.yyyy H:mm'</v8:content>
+									<v8:content>ДФ='dd.MM.yyyy HH:mm'</v8:content>
 								</v8:item>
 							</Format>
 							<ContextMenu name="СписокУроковДатаКонтекстноеМеню" id="18"/>
@@ -478,7 +508,26 @@
 							<ExtendedTooltip name="СписокУроковПредметОбученияРасширеннаяПодсказка" id="28"/>
 						</LabelField>
 						<LabelField name="СписокУроковКоличествоЧасов" id="35">
-							<DataPath>СписокУроков.КоличествоЧасов</DataPath>
+							<DataPath>СписокУроков.Длительность</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Длительность</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Длительность урока, ч:мм</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>8</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=Ч:мм</v8:content>
+								</v8:item>
+							</Format>
 							<ContextMenu name="СписокУроковКоличествоЧасовКонтекстноеМеню" id="36"/>
 							<ExtendedTooltip name="СписокУроковКоличествоЧасовРасширеннаяПодсказка" id="37"/>
 						</LabelField>
@@ -642,6 +691,7 @@
 	Урок.ПредметОбучения КАК ПредметОбучения,
 	Урок.ГруппаОбучения КАК ГруппаОбучения,
 	Урок.КоличествоЧасов КАК КоличествоЧасов,
+	ДОБАВИТЬКДАТЕ(ДАТАВРЕМЯ(1, 1, 1), МИНУТА, ВЫРАЗИТЬ(Урок.КоличествоЧасов * 60 КАК ЧИСЛО(10, 0))) КАК Длительность,
 	Урок.Комментарий КАК Комментарий,
 	СтрокиУченика.Сумма КАК Сумма
 ИЗ
@@ -707,7 +757,6 @@
 			<Type>
 				<v8:Type>v8:StandardPeriod</v8:Type>
 			</Type>
-			<FillCheck>ShowError</FillCheck>
 			<Save>
 				<Field>Период</Field>
 			</Save>
@@ -820,21 +869,21 @@
 						</v8:NumberQualifiers>
 					</Type>
 				</Column>
-					<Column name="ОсталосьУроков" id="15">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Осталось уроков</v8:content>
-							</v8:item>
-						</Title>
-						<Type>
-							<v8:Type>xs:string</v8:Type>
-							<v8:StringQualifiers>
-								<v8:Length>0</v8:Length>
-								<v8:AllowedLength>Variable</v8:AllowedLength>
-							</v8:StringQualifiers>
-						</Type>
-					</Column>
+				<Column name="ОсталосьУроков" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Осталось уроков</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 				<Column name="КолУроков" id="11">
 					<Title>
 						<v8:item>
