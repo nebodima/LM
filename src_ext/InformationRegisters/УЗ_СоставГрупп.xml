@@ -48,7 +48,7 @@
 			<AuxiliaryListForm/>
 			<InformationRegisterPeriodicity>Day</InformationRegisterPeriodicity>
 			<WriteMode>RecorderSubordinate</WriteMode>
-			<MainFilterOnPeriod>true</MainFilterOnPeriod>
+			<MainFilterOnPeriod>false</MainFilterOnPeriod>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>DontUse</FullTextSearch>
