@@ -39,6 +39,11 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
+				<InputField name="Организация" id="20">
+					<DataPath>Объект.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="22"/>
+				</InputField>
 				<InputField name="Комментарий" id="13">
 					<DataPath>Объект.Комментарий</DataPath>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>

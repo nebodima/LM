@@ -31,6 +31,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков</xr:Item>
 			</RegisteredDocuments>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<StandardAttributes>
@@ -216,6 +217,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.Организация</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.Организация</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.Attribute.Организация</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -288,6 +290,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.СуммаДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.Сумма</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.СуммаДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.Attribute.СуммаПоКассе</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -306,6 +309,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.АвторДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.АвторДокумента</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.АвторДокумента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.Attribute.АвторДокумента</xr:Item>
 					</References>
 				</Properties>
 			</Column>
@@ -343,6 +347,22 @@
 					</References>
 				</Properties>
 			</Column>
+			<Column uuid="d98b6e61-0c86-4612-95d0-2ec8defc353d">
+				<Properties>
+					<Name>МеждуПредметами</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Между предметами (кассу не двигает)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.СделатьДвиженияПоВзаиморасчетам</xr:Item>
+					</References>
+				</Properties>
+			</Column>
 			<Column uuid="6e81a0eb-8f7b-55a3-a85c-76fd6ea1abcf">
 				<Properties>
 					<Name>Комментарий</Name>
@@ -358,6 +378,7 @@
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Комментарий</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.Комментарий</xr:Item>
 						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.Комментарий</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.Attribute.Комментарий</xr:Item>
 					</References>
 				</Properties>
 			</Column>

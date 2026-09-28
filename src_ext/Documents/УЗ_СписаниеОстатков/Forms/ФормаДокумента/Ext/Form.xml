@@ -188,6 +188,12 @@
 											<ContextMenu name="ТЗСписанияТарифКонтекстноеМеню" id="68"/>
 											<ExtendedTooltip name="ТЗСписанияТарифРасширеннаяПодсказка" id="69"/>
 										</InputField>
+										<InputField name="ТЗСписанияАбонемент" id="240">
+											<DataPath>Объект.ТЗСписания.Абонемент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТЗСписанияАбонементКонтекстноеМеню" id="241"/>
+											<ExtendedTooltip name="ТЗСписанияАбонементРасширеннаяПодсказка" id="242"/>
+										</InputField>
 										<InputField name="ТЗСписанияГруппаОбучения" id="121">
 											<DataPath>Объект.ТЗСписания.ГруппаОбучения</DataPath>
 											<EditMode>EnterOnInput</EditMode>

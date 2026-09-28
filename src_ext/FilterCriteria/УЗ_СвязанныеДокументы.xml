@@ -23,6 +23,7 @@
 			<Type>
 				<v8:Type>cfg:DocumentRef.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_ДополнительныеРасходы</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_НачислениеУченику</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_НачисленияПедагогам</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_ПеремещениеДенег</v8:Type>
@@ -38,6 +39,7 @@
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога.Attribute.Педагог</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ДополнительныеРасходы.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачислениеУченику.Attribute.ФизЛицо</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.ДокументОснования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_НачисленияПедагогам.Attribute.Педагог</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПеремещениеДенег.Attribute.Клиент</xr:Item>
@@ -56,7 +58,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ТЗСписания.Attribute.Педагог</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ДисконтныеКарты.Attribute.Ученик</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_СписаниеОстатков.TabularSection.ТЗСписаниеКасса.Attribute.Ученик</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.Attribute.ДокументОснования</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.Attribute.Педагог</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.TabularSection.Ученики.Attribute.Ученик</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_Урок.TabularSection.Ученики.Attribute.Абонемент</xr:Item>

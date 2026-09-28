@@ -7,15 +7,6 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаНачальныйОстаток</dataPath>
-			<field>СуммаНачальныйОстаток</field>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
-				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Регистратор</dataPath>
 			<field>Регистратор</field>
 			<title xsi:type="v8:LocalStringType">
@@ -28,16 +19,6 @@
 				<dcscom:periodNumber>1</dcscom:periodNumber>
 				<dcscom:periodType>Main</dcscom:periodType>
 			</role>
-			<orderExpression>
-				<dcscom:expression>Период</dcscom:expression>
-				<dcscom:orderType>Asc</dcscom:orderType>
-				<dcscom:autoOrder>false</dcscom:autoOrder>
-			</orderExpression>
-			<orderExpression>
-				<dcscom:expression>Регистратор</dcscom:expression>
-				<dcscom:orderType>Asc</dcscom:orderType>
-				<dcscom:autoOrder>false</dcscom:autoOrder>
-			</orderExpression>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Организация</dataPath>
@@ -47,18 +28,21 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаПриход</dataPath>
-			<field>СуммаПриход</field>
+			<dataPath>СтатьяЗатрат</dataPath>
+			<field>СтатьяЗатрат</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма прихода</v8:content>
+					<v8:content>Статья затрат</v8:content>
 				</v8:item>
 			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаРасход</dataPath>
-			<field>СуммаРасход</field>
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -66,64 +50,18 @@
 				</v8:item>
 			</title>
 		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаКонечныйОстаток</dataPath>
-			<field>СуммаКонечныйОстаток</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Итого</v8:content>
-				</v8:item>
-			</title>
-			<role>
-				<dcscom:balance>true</dcscom:balance>
-				<dcscom:balanceGroupName>Сумма</dcscom:balanceGroupName>
-				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Период</dataPath>
-			<field>Период</field>
-			<role>
-				<dcscom:periodNumber>2</dcscom:periodNumber>
-				<dcscom:periodType>Main</dcscom:periodType>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СтатьяЗатрат</dataPath>
-			<field>СтатьяЗатрат</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	УЗ_РасходыОстаткиИОбороты.Регистратор КАК Регистратор,
-	УЗ_РасходыОстаткиИОбороты.Организация КАК Организация,
-	УЗ_РасходыОстаткиИОбороты.СтатьяЗатрат КАК СтатьяЗатрат,
-	УЗ_РасходыОстаткиИОбороты.СуммаНачальныйОстаток КАК СуммаНачальныйОстаток,
-	УЗ_РасходыОстаткиИОбороты.СуммаПриход КАК СуммаПриход,
-	УЗ_РасходыОстаткиИОбороты.СуммаРасход КАК СуммаРасход,
-	УЗ_РасходыОстаткиИОбороты.СуммаКонечныйОстаток КАК СуммаКонечныйОстаток,
-	УЗ_РасходыОстаткиИОбороты.Период КАК Период
+	Обороты.Регистратор КАК Регистратор,
+	Обороты.Организация КАК Организация,
+	Обороты.СтатьяЗатрат КАК СтатьяЗатрат,
+	Обороты.СуммаРасход - Обороты.СуммаПриход КАК Сумма
 ИЗ
-	РегистрНакопления.УЗ_Расходы.ОстаткиИОбороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, Движения, ) КАК УЗ_РасходыОстаткиИОбороты</query>
+	РегистрНакопления.УЗ_Расходы.Обороты(&amp;НачалоПериода, &amp;КонецПериода, Регистратор, ) КАК Обороты</query>
 	</dataSet>
 	<totalField>
-		<dataPath>СуммаНачальныйОстаток</dataPath>
-		<expression>Сумма(СуммаНачальныйОстаток)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СуммаПриход</dataPath>
-		<expression>Сумма(СуммаПриход)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СуммаРасход</dataPath>
-		<expression>Сумма(СуммаРасход)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>СуммаКонечныйОстаток</dataPath>
-		<expression>Сумма(СуммаКонечныйОстаток)</expression>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -196,13 +134,7 @@
 					<dcsset:field>СтатьяЗатрат</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаПриход</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаРасход</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаКонечныйОстаток</dcsset:field>
+					<dcsset:field>Сумма</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
