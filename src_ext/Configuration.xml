@@ -70,6 +70,7 @@
 			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
 			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
 			<Role>УЗ_ОсновнаяРоль</Role>
+			<Role>УЗ_Руководитель</Role>
 			<FilterCriterion>УЗ_СвязанныеДокументы</FilterCriterion>
 			<CommonModule>УЗ_ДатыЗапрета</CommonModule>
 			<CommonModule>УЗ_Общий</CommonModule>
