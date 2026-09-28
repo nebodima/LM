@@ -80,7 +80,6 @@
 									<xr:Ref>StdPicture.CheckAll</xr:Ref>
 									<xr:LoadTransparent>true</xr:LoadTransparent>
 								</Picture>
-								<BackColor>style:ActivityColor</BackColor>
 								<ExtendedTooltip name="ДеревоУроковГруппа1РасширеннаяПодсказка" id="112"/>
 								<ChildItems>
 									<Button name="ДеревоУроковУстановитьСписатьОплату" id="103">
@@ -179,7 +178,6 @@
 						</LabelField>
 						<CheckBoxField name="ДеревоУроковСписатьОплату" id="68">
 							<DataPath>ДеревоУроков.СписатьОплату</DataPath>
-							<TitleBackColor>style:ActivityColor</TitleBackColor>
 							<EditMode>EnterOnInput</EditMode>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ДеревоУроковСписатьОплатуКонтекстноеМеню" id="69"/>
@@ -224,10 +222,6 @@
 							<DataPath>ДеревоУроков.УдалитьУченика</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<HeaderPicture>
-								<xr:Ref>StdPicture.Delete</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</HeaderPicture>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ДеревоУроковУдалитьУченикаКонтекстноеМеню" id="87"/>
 							<ExtendedTooltip name="ДеревоУроковУдалитьУченикаРасширеннаяПодсказка" id="88"/>

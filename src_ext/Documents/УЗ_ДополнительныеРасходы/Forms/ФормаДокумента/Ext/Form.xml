@@ -50,38 +50,72 @@
 			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<UsualGroup name="Группа1" id="65">
+		<UsualGroup name="Шапка" id="82">
+			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="66"/>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="83"/>
 			<ChildItems>
-				<InputField name="Дата" id="7">
-					<DataPath>Объект.Date</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
-				</InputField>
-				<InputField name="Номер" id="4">
-					<DataPath>Объект.Number</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
-				</InputField>
+				<UsualGroup name="ЛеваяКолонка" id="84">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<InputField name="ДокументОснования" id="10">
+							<DataPath>Объект.ДокументОснования</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="86">
+					<Group>Vertical</Group>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="88">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="89"/>
+							<ChildItems>
+								<InputField name="Номер" id="4">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>11</MaxWidth>
+									<ContextMenu name="НомерКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="6"/>
+								</InputField>
+								<InputField name="Дата" id="7">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="75">
+							<DataPath>Объект.Организация</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="ДокументОснования" id="10">
-			<DataPath>Объект.ДокументОснования</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<HorizontalStretch>false</HorizontalStretch>
-			<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="12"/>
-		</InputField>
-		<InputField name="Организация" id="75">
-			<DataPath>Объект.Организация</DataPath>
-			<HorizontalStretch>false</HorizontalStretch>
-			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
-			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
-		</InputField>
 		<Table name="Расходы" id="22">
 			<Representation>List</Representation>
 			<Footer>true</Footer>
@@ -124,14 +158,14 @@
 					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<FooterDataPath>Объект.Расходы.RowsCount</FooterDataPath>
-					<Width>1</Width>
+					<Width>3</Width>
 					<ContextMenu name="РасходыНомерСтрокиКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="РасходыНомерСтрокиРасширеннаяПодсказка" id="37"/>
 				</LabelField>
 				<InputField name="РасходыСтатьяЗатрат" id="38">
 					<DataPath>Объект.Расходы.СтатьяЗатрат</DataPath>
 					<EditMode>EnterOnInput</EditMode>
-					<Width>1</Width>
+					<Width>20</Width>
 					<ContextMenu name="РасходыСтатьяЗатратКонтекстноеМеню" id="39"/>
 					<ExtendedTooltip name="РасходыСтатьяЗатратРасширеннаяПодсказка" id="40"/>
 				</InputField>
@@ -144,27 +178,45 @@
 				</InputField>
 			</ChildItems>
 		</Table>
-		<UsualGroup name="Группа2" id="80">
-			<Group>AlwaysHorizontal</Group>
+		<UsualGroup name="Подвал" id="90">
+			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="81"/>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="91"/>
 			<ChildItems>
-				<LabelField name="АвторДокумента" id="16">
-					<DataPath>Объект.АвторДокумента</DataPath>
+				<InputField name="Комментарий" id="19">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<UsualGroup name="Итоги" id="92">
+					<Group>Vertical</Group>
 					<HorizontalStretch>false</HorizontalStretch>
-					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
-				</LabelField>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ИтогиРасширеннаяПодсказка" id="93"/>
+					<ChildItems>
+						<LabelField name="АвторДокумента" id="16">
+							<DataPath>Объект.АвторДокумента</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="Комментарий" id="19">
-			<DataPath>Объект.Комментарий</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КомментарийКонтекстноеМеню" id="20"/>
-			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
-		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

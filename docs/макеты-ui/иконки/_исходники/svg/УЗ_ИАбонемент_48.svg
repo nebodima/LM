@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 32 32">
+<path d="M 6 6 H 26 Q 29 6 29 9 V 12 Q 25 12 25 16 Q 25 20 29 20 V 23 Q 29 26 26 26 H 6 Q 3 26 3 23 V 20 Q 7 20 7 16 Q 7 12 3 12 V 9 Q 3 6 6 6 Z" fill="#1E9E8F" stroke="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="9" y="10" width="3" height="12" rx="0.8" fill="#F5B642" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="15" y="10" width="3" height="12" rx="0.8" fill="#E9F5F3" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="21" y="10" width="1.5" height="3" rx="0.5" fill="#E9F5F3" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="21" y="15" width="1.5" height="2" rx="0.5" fill="#E9F5F3" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="21" y="19" width="1.5" height="3" rx="0.5" fill="#E9F5F3" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

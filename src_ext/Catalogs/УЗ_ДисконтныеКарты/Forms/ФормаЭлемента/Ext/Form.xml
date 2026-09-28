@@ -2,7 +2,16 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="102">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="103"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -155,20 +164,19 @@
 								<LabelDecoration name="ДекорацияНЕДЕЙСТВИТЕЛЬНА" id="47">
 									<Visible>false</Visible>
 									<Height>1</Height>
+									<TextColor>style:NegativeTextColor</TextColor>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>НЕ ДЕЙСТВИТЕЛЬНА!!!</v8:content>
+											<v8:content>Карта недействительна</v8:content>
 										</v8:item>
 									</Title>
 									<VerticalAlign>Center</VerticalAlign>
-									<BackColor>style:NegativeTextColor</BackColor>
 									<ContextMenu name="ДекорацияНЕДЕЙСТВИТЕЛЬНАКонтекстноеМеню" id="48"/>
 									<ExtendedTooltip name="ДекорацияНЕДЕЙСТВИТЕЛЬНАРасширеннаяПодсказка" id="49"/>
 								</LabelDecoration>
 								<LabelDecoration name="ДекорацияДействует" id="50">
 									<Height>1</Height>
-									<TextColor>style:AccentColor</TextColor>
 									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -185,7 +193,7 @@
 							<DataPath>Объект.НеДействует</DataPath>
 							<EditMode>EnterOnInput</EditMode>
 							<CheckBoxType>Auto</CheckBoxType>
-							<BackColor>style:TableHeaderBackColor</BackColor>
+							<TitleLocation>Right</TitleLocation>
 							<ContextMenu name="ДействуетКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="ДействуетРасширеннаяПодсказка" id="55"/>
 							<Events>
@@ -198,7 +206,6 @@
 							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
 							<MarkNegatives>true</MarkNegatives>
 							<Hiperlink>true</Hiperlink>
-							<TextColor>style:AccentColor</TextColor>
 							<ContextMenu name="ОстатокБонусовКонтекстноеМеню" id="40"/>
 							<ExtendedTooltip name="ОстатокБонусовРасширеннаяПодсказка" id="41"/>
 							<Events>
@@ -238,8 +245,6 @@
 					<ChildItems>
 						<Table name="Документы" id="56">
 							<CommandBarLocation>None</CommandBarLocation>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Документы</DataPath>

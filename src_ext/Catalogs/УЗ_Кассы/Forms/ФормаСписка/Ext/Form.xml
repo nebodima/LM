@@ -47,8 +47,6 @@
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
 			<RowSelectionMode>Row</RowSelectionMode>
-			<HorizontalLines>false</HorizontalLines>
-			<VerticalLines>false</VerticalLines>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>

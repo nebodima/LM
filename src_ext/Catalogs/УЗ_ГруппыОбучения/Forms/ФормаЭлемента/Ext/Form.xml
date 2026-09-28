@@ -4,6 +4,12 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="130">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="131"/>
+			</Button>
 			<Button name="ФормаЗаписать" id="88">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
@@ -87,7 +93,6 @@
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<BackColor>style:ToolTipBackColor</BackColor>
 							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="91"/>
 							<ChildItems>
 								<UsualGroup name="Группа12" id="120">
@@ -129,6 +134,12 @@
 											<HorizontalStretch>false</HorizontalStretch>
 											<ClearButton>true</ClearButton>
 											<SpinButton>true</SpinButton>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=Ч:мм</v8:content>
+												</v8:item>
+											</Format>
 											<EditFormat>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -159,6 +170,7 @@
 							<ChildItems>
 								<CheckBoxField name="ПН" id="15">
 									<DataPath>Объект.ПН</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПНКонтекстноеМеню" id="16"/>
 									<ExtendedTooltip name="ПНРасширеннаяПодсказка" id="17"/>
@@ -187,6 +199,7 @@
 							<ChildItems>
 								<CheckBoxField name="ВТ" id="18">
 									<DataPath>Объект.ВТ</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ВТКонтекстноеМеню" id="19"/>
 									<ExtendedTooltip name="ВТРасширеннаяПодсказка" id="20"/>
@@ -215,6 +228,7 @@
 							<ChildItems>
 								<CheckBoxField name="СР" id="21">
 									<DataPath>Объект.СР</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="СРКонтекстноеМеню" id="22"/>
 									<ExtendedTooltip name="СРРасширеннаяПодсказка" id="23"/>
@@ -243,6 +257,7 @@
 							<ChildItems>
 								<CheckBoxField name="ЧТ" id="24">
 									<DataPath>Объект.ЧТ</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЧТКонтекстноеМеню" id="25"/>
 									<ExtendedTooltip name="ЧТРасширеннаяПодсказка" id="26"/>
@@ -271,6 +286,7 @@
 							<ChildItems>
 								<CheckBoxField name="ПТ" id="27">
 									<DataPath>Объект.ПТ</DataPath>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ПТКонтекстноеМеню" id="28"/>
 									<ExtendedTooltip name="ПТРасширеннаяПодсказка" id="29"/>
@@ -300,6 +316,7 @@
 								<CheckBoxField name="СБ" id="30">
 									<DataPath>Объект.СБ</DataPath>
 									<TitleTextColor>style:NegativeTextColor</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="СБКонтекстноеМеню" id="31"/>
 									<ExtendedTooltip name="СБРасширеннаяПодсказка" id="32"/>
@@ -329,6 +346,7 @@
 								<CheckBoxField name="ВС" id="33">
 									<DataPath>Объект.ВС</DataPath>
 									<TitleTextColor>style:NegativeTextColor</TitleTextColor>
+									<TitleLocation>Right</TitleLocation>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ВСКонтекстноеМеню" id="34"/>
 									<ExtendedTooltip name="ВСРасширеннаяПодсказка" id="35"/>
@@ -356,8 +374,15 @@
 		</UsualGroup>
 		<InputField name="Комментарий" id="10">
 			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
 		</InputField>

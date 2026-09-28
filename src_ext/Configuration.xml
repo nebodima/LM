@@ -70,7 +70,6 @@
 			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
 			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
 			<SessionParameter>УЗ_ПесочницаПочты</SessionParameter>
-			<SessionParameter>УЗ_НачалоПросмотраКассы</SessionParameter>
 			<Role>УЗ_ОсновнаяРоль</Role>
 			<Role>УЗ_Руководитель</Role>
 			<FilterCriterion>УЗ_СвязанныеДокументы</FilterCriterion>
@@ -92,6 +91,7 @@
 			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_РасходыУрокаОдинИсточник</EventSubscription>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
+			<ScheduledJob>УЗ_ОбновлениеГраницыПросмотраКассы</ScheduledJob>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
 			<CommandGroup>УЗ_ПодменюПечать</CommandGroup>
@@ -145,6 +145,7 @@
 			<DataProcessor>УЗ_ОбработкаФото</DataProcessor>
 			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
 			<InformationRegister>УЗ_ВерсииДанных</InformationRegister>
+			<InformationRegister>УЗ_ГраницаПросмотраКассы</InformationRegister>
 			<InformationRegister>УЗ_ДатыЗапрета</InformationRegister>
 			<InformationRegister>УЗ_Настройки</InformationRegister>
 			<InformationRegister>УЗ_НастройкиПочты</InformationRegister>

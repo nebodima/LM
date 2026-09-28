@@ -24,6 +24,9 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ДеревоИСписок" id="1">
 			<Title>
@@ -48,8 +51,6 @@
 						<Table name="Дерево" id="5">
 							<Representation>Tree</Representation>
 							<RowSelectionMode>Row</RowSelectionMode>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -125,8 +126,6 @@
 							<CommandBarLocation>None</CommandBarLocation>
 							<DefaultItem>true</DefaultItem>
 							<RowSelectionMode>Row</RowSelectionMode>
-							<HorizontalLines>false</HorizontalLines>
-							<VerticalLines>false</VerticalLines>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
@@ -175,14 +174,17 @@
 								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="34"/>
 								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="35"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="OnGetDataAtServer">СписокПриПолученииДанныхНаСервере</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="Ссылка" id="36">
-									<DataPath>Список.Ref</DataPath>
+									<DataPath>Список.Ссылка</DataPath>
 									<ContextMenu name="СсылкаКонтекстноеМеню" id="37"/>
 									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="38"/>
 								</LabelField>
 								<LabelField name="Наименование" id="39">
-									<DataPath>Список.Description</DataPath>
+									<DataPath>Список.Наименование</DataPath>
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
@@ -196,7 +198,14 @@
 									<ExtendedTooltip name="КоличествоУроковРасширеннаяПодсказка" id="69"/>
 								</LabelField>
 								<LabelField name="КоличествоЧасов" id="48">
-									<DataPath>Список.КоличествоЧасов</DataPath>
+									<DataPath>Список.ЧасыТекстом</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Часов</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
 									<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="49"/>
 									<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="50"/>
 								</LabelField>
@@ -274,8 +283,25 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Тарифы.Ссылка КАК Ссылка,
+	Тарифы.ПометкаУдаления КАК ПометкаУдаления,
+	Тарифы.Родитель КАК Родитель,
+	Тарифы.ЭтоГруппа КАК ЭтоГруппа,
+	Тарифы.Код КАК Код,
+	Тарифы.Наименование КАК Наименование,
+	Тарифы.КоличествоЧасов КАК КоличествоЧасов,
+	Тарифы.КоличествоУроков КАК КоличествоУроков,
+	Тарифы.Сумма КАК Сумма,
+	Тарифы.ИспользоватьИсториюЦен КАК ИспользоватьИсториюЦен,
+	Тарифы.Комментарий КАК Комментарий,
+	Тарифы.Предопределенный КАК Предопределенный,
+	Тарифы.ИмяПредопределенныхДанных КАК ИмяПредопределенныхДанных,
+	ВЫРАЗИТЬ("" КАК СТРОКА(10)) КАК ЧасыТекстом
+ИЗ
+	Справочник.УЗ_Тарифы КАК Тарифы</QueryText>
 				<MainTable>Catalog.УЗ_Тарифы</MainTable>
 				<ListSettings>
 					<dcsset:filter>

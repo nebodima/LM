@@ -70,7 +70,8 @@
 								</v8:item>
 							</Title>
 							<EditMode>EnterOnInput</EditMode>
-							<Width>26</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>40</MaxWidth>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 						</InputField>
@@ -80,6 +81,8 @@
 								<xr:Common>false</xr:Common>
 							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
+							<Width>11</Width>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 						</InputField>
@@ -87,6 +90,7 @@
 				</UsualGroup>
 				<CheckBoxField name="ИспользоватьИсториюЦен" id="102">
 					<DataPath>Объект.ИспользоватьИсториюЦен</DataPath>
+					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ИспользоватьИсториюЦенКонтекстноеМеню" id="103"/>
 					<ExtendedTooltip name="ИспользоватьИсториюЦенРасширеннаяПодсказка" id="104"/>
@@ -99,7 +103,6 @@
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<BackColor>style:ToolTipBackColor</BackColor>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="106"/>
 					<ChildItems>
 						<LabelDecoration name="Декорация2" id="85">
@@ -108,7 +111,6 @@
 						</LabelDecoration>
 						<LabelDecoration name="Декорация1" id="82">
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<TextColor>style:SpecialTextColor</TextColor>
 							<ContextMenu name="Декорация1КонтекстноеМеню" id="83"/>
 							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="84"/>
 						</LabelDecoration>
@@ -133,10 +135,14 @@
 					<ExtendedTooltip name="ВертикальнаяРасширеннаяПодсказка" id="35"/>
 					<ChildItems>
 						<InputField name="КоличествоЧасов" id="90">
-							<DataPath>Объект.КоличествоЧасов</DataPath>
-							<Width>6</Width>
+							<DataPath>ЧасыТекстом</DataPath>
 							<ClearButton>true</ClearButton>
-							<SpinButton>true</SpinButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ч:мм</v8:content>
+								</v8:item>
+							</InputHint>
 							<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="91"/>
 							<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="92"/>
 							<Events>
@@ -145,7 +151,6 @@
 						</InputField>
 						<InputField name="КоличествоУроков" id="93">
 							<DataPath>Объект.КоличествоУроков</DataPath>
-							<Width>6</Width>
 							<ClearButton>true</ClearButton>
 							<SpinButton>true</SpinButton>
 							<ContextMenu name="КоличествоУроковКонтекстноеМеню" id="94"/>
@@ -161,7 +166,6 @@
 							<ChildItems>
 								<InputField name="Сумма" id="96">
 									<DataPath>Объект.Сумма</DataPath>
-									<Width>8</Width>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="СуммаКонтекстноеМеню" id="97"/>
 									<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="98"/>
@@ -176,8 +180,6 @@
 				<Table name="ЦеныТарифов" id="42">
 					<Height>6</Height>
 					<RowSelectionMode>Row</RowSelectionMode>
-					<HorizontalLines>false</HorizontalLines>
-					<VerticalLines>false</VerticalLines>
 					<EnableStartDrag>true</EnableStartDrag>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>ЦеныТарифов</DataPath>
@@ -246,6 +248,9 @@
 						<ContextMenu name="ЦеныТарифовУправлениеПоискомКонтекстноеМеню" id="53"/>
 						<ExtendedTooltip name="ЦеныТарифовУправлениеПоискомРасширеннаяПодсказка" id="54"/>
 					</SearchControlAddition>
+					<Events>
+						<Event name="OnGetDataAtServer">ЦеныТарифовПриПолученииДанныхНаСервере</Event>
+					</Events>
 					<ChildItems>
 						<LabelField name="ЦеныТарифовПериод" id="73">
 							<DataPath>ЦеныТарифов.Период</DataPath>
@@ -255,7 +260,7 @@
 									<v8:content>Дата</v8:content>
 								</v8:item>
 							</Title>
-							<Width>1</Width>
+							<Width>10</Width>
 							<ContextMenu name="ЦеныТарифовПериодКонтекстноеМеню" id="74"/>
 							<ExtendedTooltip name="ЦеныТарифовПериодРасширеннаяПодсказка" id="75"/>
 						</LabelField>
@@ -264,19 +269,26 @@
 							<UserVisible>
 								<xr:Common>false</xr:Common>
 							</UserVisible>
-							<Width>1</Width>
+							<Width>20</Width>
 							<ContextMenu name="ЦеныТарифовТарифКонтекстноеМеню" id="62"/>
 							<ExtendedTooltip name="ЦеныТарифовТарифРасширеннаяПодсказка" id="63"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовКоличествоЧасов" id="70">
-							<DataPath>ЦеныТарифов.КоличествоЧасов</DataPath>
-							<Width>1</Width>
+							<DataPath>ЦеныТарифов.ЧасыТекстом</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Часов</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>10</Width>
 							<ContextMenu name="ЦеныТарифовКоличествоЧасовКонтекстноеМеню" id="71"/>
 							<ExtendedTooltip name="ЦеныТарифовКоличествоЧасовРасширеннаяПодсказка" id="72"/>
 						</LabelField>
 						<LabelField name="ЦеныТарифовКоличествоУроков" id="79">
 							<DataPath>ЦеныТарифов.КоличествоУроков</DataPath>
-							<Width>1</Width>
+							<Width>10</Width>
 							<ContextMenu name="ЦеныТарифовКоличествоУроковКонтекстноеМеню" id="80"/>
 							<ExtendedTooltip name="ЦеныТарифовКоличествоУроковРасширеннаяПодсказка" id="81"/>
 						</LabelField>
@@ -326,6 +338,7 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ
+	ВЫРАЗИТЬ("" КАК СТРОКА(10)) КАК ЧасыТекстом,
 	ЦеныТарифов.Период КАК Период,
 	ЦеныТарифов.Тариф КАК Тариф,
 	ЦеныТарифов.Сумма КАК Сумма,
@@ -353,6 +366,21 @@
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
 				</ListSettings>
 			</Settings>
+		</Attribute>
+		<Attribute name="ЧасыТекстом" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во часов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

@@ -51,6 +51,7 @@
 			<ChildItems>
 				<CheckBoxField name="ИспользоватьОповещения" id="25">
 					<DataPath>Запись.ИспользоватьОповещения</DataPath>
+					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ИспользоватьОповещенияКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ИспользоватьОповещенияРасширеннаяПодсказка" id="27"/>
@@ -92,6 +93,7 @@
 		</UsualGroup>
 		<CheckBoxField name="ИспользоватьОкругление" id="10">
 			<DataPath>Запись.ИспользоватьОкругление</DataPath>
+			<TitleLocation>Right</TitleLocation>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ИспользоватьОкруглениеКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="ИспользоватьОкруглениеРасширеннаяПодсказка" id="12"/>
@@ -101,6 +103,7 @@
 			<UserVisible>
 				<xr:Common>false</xr:Common>
 			</UserVisible>
+			<TitleLocation>Right</TitleLocation>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ТребоватьОписаниеКНеоплаченнымУрокамКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ТребоватьОписаниеКНеоплаченнымУрокамРасширеннаяПодсказка" id="15"/>

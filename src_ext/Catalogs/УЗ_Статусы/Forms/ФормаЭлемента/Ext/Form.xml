@@ -4,6 +4,12 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="44">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="45"/>
+			</Button>
 			<Button name="ФормаЗаписать" id="42">
 				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
@@ -37,7 +43,15 @@
 				</InputField>
 				<InputField name="Комментарий" id="10">
 					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
 				</InputField>

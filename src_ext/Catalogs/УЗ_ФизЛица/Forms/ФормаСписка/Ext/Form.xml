@@ -109,8 +109,6 @@
 			<Representation>Tree</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
-			<HorizontalLines>false</HorizontalLines>
-			<VerticalLines>false</VerticalLines>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
 			<EnableDrag>true</EnableDrag>
@@ -166,7 +164,7 @@
 					<UserVisible>
 						<xr:Common>false</xr:Common>
 					</UserVisible>
-					<Width>1</Width>
+					<Width>15</Width>
 					<ContextMenu name="СсылкаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
@@ -182,7 +180,7 @@
 				<LabelField name="Наименование" id="19">
 					<DataPath>Список.Наименование</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<Width>1</Width>
+					<Width>25</Width>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
 				</LabelField>
@@ -201,19 +199,19 @@
 				</CheckBoxField>
 				<LabelField name="ДатаРождения" id="28">
 					<DataPath>Список.ДатаРождения</DataPath>
-					<Width>1</Width>
+					<Width>10</Width>
 					<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 				<LabelField name="Возраст" id="37">
 					<DataPath>Список.Возраст</DataPath>
-					<Width>1</Width>
+					<Width>10</Width>
 					<ContextMenu name="ВозрастКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="ВозрастРасширеннаяПодсказка" id="39"/>
 				</LabelField>
 				<LabelField name="Статус" id="169">
 					<DataPath>Список.Статус</DataPath>
-					<Width>1</Width>
+					<Width>20</Width>
 					<ContextMenu name="СтатусКонтекстноеМеню" id="170"/>
 					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="171"/>
 				</LabelField>
@@ -232,7 +230,7 @@
 				</LabelField>
 				<LabelField name="Телефон" id="31">
 					<DataPath>Список.Телефон</DataPath>
-					<Width>1</Width>
+					<Width>15</Width>
 					<ContextMenu name="ТелефонКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="33"/>
 				</LabelField>

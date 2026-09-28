@@ -147,11 +147,17 @@
 				</LabelField>
 				<LabelField name="АвторДокумента" id="115">
 					<DataPath>Список.АвторДокумента</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="116"/>
 					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="117"/>
 				</LabelField>
 				<LabelField name="Комментарий" id="118">
 					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="119"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="120"/>
 				</LabelField>
