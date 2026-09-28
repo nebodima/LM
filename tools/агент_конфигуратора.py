@@ -95,21 +95,71 @@ def старт(база, пользователь, ждать=True):
         if not ждать or _ждать_порт(с["порт"], с["pid"], 20):
             return с["порт"]
     остановить(база)
-    свободные = [п for п in ПОРТЫ if _слушает(п) is None]
-    if not свободные:
-        raise RuntimeError("агент: нет свободного порта в %d–%d" % (ПОРТЫ[0], ПОРТЫ[-1]))
-    порт = свободные[0]
+    with _замок_портов():
+        # параллельный деплой трёх баз: без общего замка два агента выбрали бы один «свободный» порт.
+        # Порт, выданный агенту, который ещё поднимается (не слушает), тоже занят — берём из агент.json всех баз
+        занятые = _порты_других_агентов(база)
+        свободные = [п for п in ПОРТЫ if п not in занятые and _слушает(п) is None]
+        if not свободные:
+            raise RuntimeError("агент: нет свободного порта в %d–%d" % (ПОРТЫ[0], ПОРТЫ[-1]))
+        порт = свободные[0]
+        п = _запустить(база, пользователь, порт)
+    if not ждать or _ждать_порт(порт, п.pid, 20):
+        return порт
+    raise RuntimeError("агент: за 20 с не начал слушать порт %d" % порт)
+
+
+def _запустить(база, пользователь, порт):
     аргументы = [EXE, "DESIGNER", "/F", база, "/N", пользователь, "/DisableStartupDialogs",
                  "/DisableStartupMessages", "/AgentMode", "/AgentPort", str(порт), "/AgentListenAddress",
                  "127.0.0.1", "/AgentBaseDir", папка(база), "/AgentSSHHostKeyAuto"]
     флаги = subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
     п = subprocess.Popen(аргументы, creationflags=флаги, close_fds=True, stdin=subprocess.DEVNULL,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    json.dump({"база": os.path.normcase(os.path.abspath(база)), "пользователь": пользователь, "порт": порт,
-               "pid": п.pid}, open(os.path.join(папка(база), "агент.json"), "w", encoding="utf-8"))
-    if not ждать or _ждать_порт(порт, п.pid, 20):
-        return порт
-    raise RuntimeError("агент: за 20 с не начал слушать порт %d" % порт)
+    with open(os.path.join(папка(база), "агент.json"), "w", encoding="utf-8") as ф:
+        json.dump({"база": os.path.normcase(os.path.abspath(база)), "пользователь": пользователь, "порт": порт,
+                   "pid": п.pid}, ф)
+    return п
+
+
+class _замок_портов:
+    """Замок выбора порта на всю машину: %TEMP%\\uz_agent\\порты.lock, байт 0 (ждём до 30 с)."""
+    def __enter__(self):
+        import msvcrt
+        os.makedirs(os.path.join(tempfile.gettempdir(), "uz_agent"), exist_ok=True)
+        self.ф = open(os.path.join(tempfile.gettempdir(), "uz_agent", "порты.lock"), "a+")
+        self.ф.seek(0)
+        срок = time.time() + 30
+        while True:
+            try:
+                msvcrt.locking(self.ф.fileno(), msvcrt.LK_NBLCK, 1)
+                return self
+            except OSError:
+                if time.time() > срок:
+                    raise RuntimeError("агент: замок выбора порта занят дольше 30 с")
+                time.sleep(0.1)
+
+    def __exit__(self, *исключение):
+        self.ф.close()
+
+
+def _порты_других_агентов(база):
+    """Порты живых агентов других баз по их агент.json (агент мог ещё не начать слушать)."""
+    import psutil
+    своя = os.path.normcase(os.path.abspath(папка(база)))
+    итог = set()
+    корень = os.path.join(tempfile.gettempdir(), "uz_agent")
+    for имя in os.listdir(корень):
+        путь = os.path.join(корень, имя, "агент.json")
+        if os.path.normcase(os.path.join(корень, имя)) == своя or not os.path.exists(путь):
+            continue
+        try:
+            с = json.load(open(путь, encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if с.get("pid") and psutil.pid_exists(с["pid"]):
+            итог.add(с.get("порт"))
+    return итог
 
 
 def остановить(база):
