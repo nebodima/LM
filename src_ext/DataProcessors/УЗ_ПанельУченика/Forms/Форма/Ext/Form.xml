@@ -142,10 +142,7 @@
 								</UsualGroup>
 								<Table name="АктивныеГруппыОбучения" id="83">
 									<Representation>List</Representation>
-									<HeaderHeight>2</HeaderHeight>
 									<HorizontalScrollBar>DontUse</HorizontalScrollBar>
-									<HorizontalLines>false</HorizontalLines>
-									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -371,12 +368,16 @@
 										</LabelField>
 										<InputField name="АктивныеГруппыОбученияСкидка" id="168">
 											<DataPath>АктивныеГруппыОбучения.Скидка</DataPath>
+											<UserVisible>
+												<xr:Common>false</xr:Common>
+											</UserVisible>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>12</Width>
 											<ContextMenu name="АктивныеГруппыОбученияСкидкаКонтекстноеМеню" id="169"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияСкидкаРасширеннаяПодсказка" id="170"/>
 										</InputField>
 										<ColumnGroup name="АктивныеГруппыОбученияГруппаПеремещение" id="192">
+											<Visible>false</Visible>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -427,8 +428,6 @@
 					<Representation>Tree</Representation>
 					<TitleLocation>Auto</TitleLocation>
 					<CommandBarLocation>None</CommandBarLocation>
-					<HorizontalLines>false</HorizontalLines>
-					<VerticalLines>false</VerticalLines>
 					<EnableStartDrag>true</EnableStartDrag>
 					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СписокУроков</DataPath>
