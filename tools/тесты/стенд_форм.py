@@ -169,6 +169,43 @@ def собрать(отчет, форма):
     epf = os.path.join(ПАПКА, "%s_%s.epf" % (имя, хэш))
     if os.path.exists(epf):
         return epf, 0.0
+    # прогон идёт тремя процессами (УНФ/БП/УТ) над одной папкой стенда — собирает один,
+    # остальные ждут и берут готовый .epf из кэша (иначе «файл занят другим процессом»)
+    os.makedirs(ПАПКА, exist_ok=True)
+    with _ЗамокСборки():
+        if os.path.exists(epf):
+            return epf, 0.0
+        return _собрать(имя, хэш, модуль, epf)
+
+
+class _ЗамокСборки:
+    def __enter__(self):
+        self.путь = os.path.join(ПАПКА, "сборка.lock")
+        срок = time.time() + 180
+        while True:
+            try:
+                self.ф = os.open(self.путь, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+                return self
+            except FileExistsError:
+                try:
+                    if time.time() - os.path.getmtime(self.путь) > 300:   # от упавшего процесса
+                        os.remove(self.путь)
+                        continue
+                except OSError:
+                    pass
+                if time.time() > срок:
+                    raise RuntimeError("стенд: замок сборки занят дольше 180 с (%s)" % self.путь)
+                time.sleep(0.2)
+
+    def __exit__(self, *_):
+        os.close(self.ф)
+        try:
+            os.remove(self.путь)
+        except OSError:
+            pass
+
+
+def _собрать(имя, хэш, модуль, epf):
     н = time.time()
     база = os.path.join(ПАПКА, "база")
     if not os.path.exists(os.path.join(база, "1Cv8.1CD")):
@@ -176,6 +213,7 @@ def собрать(отчет, форма):
         код, текст = _конфигуратор(["CREATEINFOBASE", "File=%s" % база], os.path.join(ПАПКА, "создание.log"), 60)
         if код != 0 or not os.path.exists(os.path.join(база, "1Cv8.1CD")):
             raise RuntimeError("стенд: пустая база не создана (код %s): %s" % (код, текст.strip()[:300]))
+    хэш = os.path.basename(epf)[len(имя) + 1:-4]
     исходник = os.path.join(ПАПКА, "src_%s_%s" % (имя, хэш))
     os.makedirs(os.path.join(исходник, имя, "Ext"), exist_ok=True)
     with open(os.path.join(исходник, имя + ".xml"), "w", encoding="utf-8-sig") as ф:
