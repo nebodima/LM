@@ -84,7 +84,13 @@
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ Дата &gt;= &amp;УЗ_НачалоПросмотраКассы</condition>
+				<condition>Т ГДЕ ИСТИНА В
+		(ВЫБРАТЬ ПЕРВЫЕ 1
+			ИСТИНА
+		ИЗ
+			РегистрСведений.УЗ_ГраницаПросмотраКассы КАК Граница
+		ГДЕ
+			Т.Дата &gt;= Граница.НачалоПросмотра)</condition>
 			</restrictionByCondition>
 		</right>
 		<right>
