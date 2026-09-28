@@ -781,7 +781,7 @@
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#008E00</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">#227A23</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -813,7 +813,7 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>ТипДиаграммы.ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
@@ -1021,7 +1021,7 @@
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#008E00</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">#227A23</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -1053,7 +1053,7 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>ТипДиаграммы.ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
@@ -1492,7 +1492,7 @@
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#008E00</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">#227A23</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -1524,7 +1524,7 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>ТипДиаграммы.ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
@@ -1748,7 +1748,7 @@
 						</dcscor:item>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветТекста</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#008E00</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">#227A23</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>
@@ -1780,7 +1780,7 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>ТипДиаграммы.ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6E6</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>

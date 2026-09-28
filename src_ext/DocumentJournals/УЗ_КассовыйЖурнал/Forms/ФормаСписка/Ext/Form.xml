@@ -256,11 +256,11 @@
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:use>false</dcscor:use>
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#808080</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">style:УЗ_ФонНеактивного</dcscor:value>
 								</dcscor:item>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#FF6600</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">style:УЗ_ЦветМинусаДенег</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -289,11 +289,11 @@
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:use>false</dcscor:use>
 									<dcscor:parameter>ЦветФона</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">style:УЗ_ФонНеактивного</dcscor:value>
 								</dcscor:item>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">#339966</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">style:УЗ_ЦветПлюсаДенег</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>

@@ -1203,7 +1203,7 @@
 				<d4p1:isTransposed>false</d4p1:isTransposed>
 				<d4p1:autoTransposition>true</d4p1:autoTransposition>
 				<d4p1:legendScrollEnable>true</d4p1:legendScrollEnable>
-				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
+				<d4p1:surfaceColor>style:УЗ_ЦветМинусаДенег</d4p1:surfaceColor>
 				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
 				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
 				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
@@ -1213,7 +1213,7 @@
 				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
 				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
 				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
-				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
+				<d4p1:gaugeBushColor>style:УЗ_ЦветЛинийСетки</d4p1:gaugeBushColor>
 				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
 				<d4p1:userMaxValue>0</d4p1:userMaxValue>
 				<d4p1:autoMinValue>true</d4p1:autoMinValue>
@@ -1255,7 +1255,7 @@
 				<d4p1:multiStageLinkLine width="1" gap="false">
 					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
 				</d4p1:multiStageLinkLine>
-				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:multiStageLinkColor>style:УЗ_ЦветТекстаНаЗаливке</d4p1:multiStageLinkColor>
 				<d4p1:valuesAxis/>
 				<d4p1:pointsAxis/>
 				<d4p1:pointsScale>
@@ -1527,7 +1527,7 @@
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">style:УЗ_ЦветПояснения</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -1596,7 +1596,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#DC8400</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">style:УЗ_ЦветМинусаДенег</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Формат</dcscor:parameter>

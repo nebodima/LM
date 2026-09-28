@@ -81,7 +81,9 @@ MD = "{http://v8.1c.ru/8.3/MDClasses}"
 КОЛОНКИ = ("InputField", "LabelField", "CheckBoxField", "PictureField")
 ЦВЕТ_ТЕКСТА = ("TextColor", "TitleTextColor", "FooterTextColor", "HeaderTextColor")
 ЦВЕТ_ФОНА = ("BackColor", "TitleBackColor", "FooterBackColor", "HeaderBackColor", "BorderColor")
-ТЕКСТ_ПАЛИТРА = {"style:NegativeTextColor", "style:ToolTipTextColor", "style:FormTextColor", "style:FieldTextColor"}
+# с 28.09.2026 палитра смыслов — и элементами стиля расширения УЗ_* (StyleItems, аудит цвета)
+ТЕКСТ_ПАЛИТРА = {"style:NegativeTextColor", "style:ToolTipTextColor", "style:FormTextColor", "style:FieldTextColor",
+                 "style:УЗ_ЦветМинусаДенег", "style:УЗ_ЦветПлюсаДенег", "style:УЗ_ЦветПояснения"}
 ФОН_ПАЛИТРА = {"style:FormBackColor", "style:FieldBackColor", "style:TableHeaderBackColor"}
 МАКС_КОЛОНОК = 8
 ДЛИТЕЛЬНОСТЬ = re.compile(r"(Часов|Часы|Продолжительн|Длительн|ДлинаУрока)")

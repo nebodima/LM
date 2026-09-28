@@ -432,7 +432,7 @@
 		<font>1</font>
 		<border>0</border>
 		<width>72</width>
-		<backColor>#D9D9D9</backColor>
+		<backColor>style:УЗ_ФонШапки</backColor>
 	</format>
 	<format>
 		<font>1</font>
@@ -476,14 +476,14 @@
 	<format>
 		<font>1</font>
 		<border>0</border>
-		<backColor>#D9D9D9</backColor>
+		<backColor>style:УЗ_ФонШапки</backColor>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
 		<font>1</font>
 		<border>0</border>
 		<width>121</width>
-		<backColor>#D9D9D9</backColor>
+		<backColor>style:УЗ_ФонШапки</backColor>
 		<fillType>Parameter</fillType>
 		<markNegatives>true</markNegatives>
 		<format>
@@ -497,7 +497,7 @@
 		<font>1</font>
 		<border>0</border>
 		<width>106</width>
-		<backColor>#D9D9D9</backColor>
+		<backColor>style:УЗ_ФонШапки</backColor>
 		<fillType>Parameter</fillType>
 		<markNegatives>true</markNegatives>
 		<format>
@@ -511,7 +511,7 @@
 		<font>1</font>
 		<border>0</border>
 		<width>102</width>
-		<backColor>#D9D9D9</backColor>
+		<backColor>style:УЗ_ФонШапки</backColor>
 		<fillType>Parameter</fillType>
 		<markNegatives>true</markNegatives>
 		<format>
@@ -525,7 +525,7 @@
 		<font>1</font>
 		<border>0</border>
 		<width>112</width>
-		<backColor>#D9D9D9</backColor>
+		<backColor>style:УЗ_ФонШапки</backColor>
 		<fillType>Parameter</fillType>
 		<markNegatives>true</markNegatives>
 		<format>

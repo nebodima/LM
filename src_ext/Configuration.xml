@@ -79,6 +79,24 @@
 			<CommonPicture>УЗ_ИЗаморозка</CommonPicture>
 			<CommonPicture>УЗ_ИПочта</CommonPicture>
 			<CommonPicture>УЗ_ИОтчет48</CommonPicture>
+			<StyleItem>УЗ_ЦветПлюсаДенег</StyleItem>
+			<StyleItem>УЗ_ЦветМинусаДенег</StyleItem>
+			<StyleItem>УЗ_ЦветПояснения</StyleItem>
+			<StyleItem>УЗ_ЦветТекстаНаЗаливке</StyleItem>
+			<StyleItem>УЗ_ЦветЛинийСетки</StyleItem>
+			<StyleItem>УЗ_ЦветТекстаНаТемном</StyleItem>
+			<StyleItem>УЗ_ФонПлюса</StyleItem>
+			<StyleItem>УЗ_ФонИзменения</StyleItem>
+			<StyleItem>УЗ_ФонУдаления</StyleItem>
+			<StyleItem>УЗ_ФонНеактивного</StyleItem>
+			<StyleItem>УЗ_ФонШапки</StyleItem>
+			<StyleItem>УЗ_ФонУрокаБезЦвета</StyleItem>
+			<StyleItem>УЗ_ФонРабочихЧасов</StyleItem>
+			<StyleItem>УЗ_ФонНапоминания</StyleItem>
+			<StyleItem>УЗ_ШрифтЗаголовка</StyleItem>
+			<StyleItem>УЗ_ШрифтПечати</StyleItem>
+			<StyleItem>УЗ_ШрифтПечатиЖирный</StyleItem>
+			<StyleItem>УЗ_ШрифтЗаголовкаПечати</StyleItem>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<SessionParameter>УЗ_ПесочницаПочты</SessionParameter>
 			<Role>УЗ_ОсновнаяРоль</Role>
@@ -90,6 +108,8 @@
 			<CommonModule>УЗ_Общий</CommonModule>
 			<CommonModule>УЗ_ОбновлениеДанных</CommonModule>
 			<CommonModule>УЗ_ОбщийКлиентСервер</CommonModule>
+			<CommonModule>УЗ_ОбщийКлиент</CommonModule>
+			<CommonModule>УЗ_ПалитраПовтИсп</CommonModule>
 			<CommonModule>УЗ_ОповещенияГлобальный</CommonModule>
 			<CommonModule>УЗ_ОповещенияКлиент</CommonModule>
 			<CommonModule>УЗ_ОповещенияКлиентПовтИсп</CommonModule>

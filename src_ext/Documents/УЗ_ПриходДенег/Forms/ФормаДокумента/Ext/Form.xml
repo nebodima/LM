@@ -364,9 +364,6 @@
 							</Title>
 							<ContextMenu name="ДекорацияТекстНазначениеПлатежаКонтекстноеМеню" id="185"/>
 							<ExtendedTooltip name="ДекорацияТекстНазначениеПлатежаРасширеннаяПодсказка" id="186"/>
-							<Events>
-								<Event name="Click">ДекорацияТекстНазначениеПлатежаНажатие</Event>
-							</Events>
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>

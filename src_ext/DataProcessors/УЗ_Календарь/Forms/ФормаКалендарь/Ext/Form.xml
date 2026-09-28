@@ -784,7 +784,7 @@
 				</pl:item>
 				<pl:borderColor>auto</pl:borderColor>
 				<pl:backColor>auto</pl:backColor>
-				<pl:textColor>#000000</pl:textColor>
+				<pl:textColor>style:УЗ_ЦветТекстаНаЗаливке</pl:textColor>
 				<pl:lineColor>auto</pl:lineColor>
 				<pl:font ref="style:NormalTextFont" height="8" kind="StyleItem"/>
 				<pl:beginOfRepresentationPeriod>0001-01-01T00:00:00</pl:beginOfRepresentationPeriod>

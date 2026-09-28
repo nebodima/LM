@@ -1014,7 +1014,7 @@
 													<v8:content>Бонусов начислено</v8:content>
 												</v8:item>
 											</Title>
-											<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<TitleFont ref="style:УЗ_ШрифтЗаголовка" kind="StyleItem"/>
 											<EditMode>EnterOnInput</EditMode>
 											<FooterDataPath>Объект.Ученики.TotalСуммаБонусов</FooterDataPath>
 											<Width>10</Width>
@@ -1566,7 +1566,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#999999</dcscor:value>
+						<dcscor:value xsi:type="v8ui:Color">style:УЗ_ЦветПояснения</dcscor:value>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Доступность</dcscor:parameter>
