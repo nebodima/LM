@@ -511,22 +511,29 @@
 													<ContextMenu name="СкидкаКонтекстноеМеню" id="527"/>
 													<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="528"/>
 												</InputField>
-												<InputField name="Родитель" id="186">
-													<DataPath>Объект.Родитель1</DataPath>
+												<InputField name="ОсновнойПлательщик" id="947">
+													<DataPath>ОсновнойПлательщик</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Основной плательщик</v8:content>
+														</v8:item>
+													</Title>
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Родитель или ответственное лицо ученика</v8:content>
+															<v8:content>Кто платит за занятия (мама, папа, бабушка): подставляется в приход денег. Другие плательщики — на странице «Плательщики»</v8:content>
 														</v8:item>
 													</ToolTip>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ClearButton>true</ClearButton>
 													<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-													<ContextMenu name="РодительКонтекстноеМеню" id="187"/>
-													<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="188"/>
+													<ContextMenu name="ОсновнойПлательщикКонтекстноеМеню" id="948"/>
+													<ExtendedTooltip name="ОсновнойПлательщикРасширеннаяПодсказка" id="949"/>
 													<Events>
-														<Event name="Creating">РодительСоздание</Event>
+														<Event name="OnChange">ОсновнойПлательщикПриИзменении</Event>
+														<Event name="Creating">ОсновнойПлательщикСоздание</Event>
 													</Events>
 												</InputField>
 											</ChildItems>
@@ -879,6 +886,102 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПлательщики" id="973">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плательщики</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кто платит за ученика</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПлательщикиРасширеннаяПодсказка" id="974"/>
+					<ChildItems>
+						<LabelDecoration name="ПлательщикиПояснение" id="972">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ToolTipTextColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Мама, папа, бабушка — кто вносит деньги за ученика. Основной подставляется в приход денег; в каждой оплате плательщик сохраняется, по нему — отчёт «Оплаты по плательщикам» для справки на вычет.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПлательщикиПояснениеКонтекстноеМеню" id="975"/>
+							<ExtendedTooltip name="ПлательщикиПояснениеРасширеннаяПодсказка" id="976"/>
+						</LabelDecoration>
+						<Table name="Плательщики" id="959">
+							<Representation>List</Representation>
+							<HeightInTableRows>7</HeightInTableRows>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<DataPath>Объект.Плательщики</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПлательщикиКонтекстноеМеню" id="960"/>
+							<AutoCommandBar name="ПлательщикиКоманднаяПанель" id="961"/>
+							<ExtendedTooltip name="ПлательщикиРасширеннаяПодсказка" id="962"/>
+							<SearchStringAddition name="ПлательщикиСтрокаПоиска" id="963">
+								<AdditionSource>
+									<Item>Плательщики</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПлательщикиСтрокаПоискаКонтекстноеМеню" id="964"/>
+								<ExtendedTooltip name="ПлательщикиСтрокаПоискаРасширеннаяПодсказка" id="965"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПлательщикиСостояниеПросмотра" id="966">
+								<AdditionSource>
+									<Item>Плательщики</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПлательщикиСостояниеПросмотраКонтекстноеМеню" id="967"/>
+								<ExtendedTooltip name="ПлательщикиСостояниеПросмотраРасширеннаяПодсказка" id="968"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПлательщикиУправлениеПоиском" id="969">
+								<AdditionSource>
+									<Item>Плательщики</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПлательщикиУправлениеПоискомКонтекстноеМеню" id="970"/>
+								<ExtendedTooltip name="ПлательщикиУправлениеПоискомРасширеннаяПодсказка" id="971"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="AfterDeleteRow">ПлательщикиПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ПлательщикиПлательщик" id="950">
+									<DataPath>Объект.Плательщики.Плательщик</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>25</Width>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<ContextMenu name="ПлательщикиПлательщикКонтекстноеМеню" id="951"/>
+									<ExtendedTooltip name="ПлательщикиПлательщикРасширеннаяПодсказка" id="952"/>
+									<Events>
+										<Event name="OnChange">ПлательщикиПлательщикПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПлательщикиКемПриходится" id="953">
+									<DataPath>Объект.Плательщики.КемПриходится</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>15</Width>
+									<ContextMenu name="ПлательщикиКемПриходитсяКонтекстноеМеню" id="954"/>
+									<ExtendedTooltip name="ПлательщикиКемПриходитсяРасширеннаяПодсказка" id="955"/>
+								</InputField>
+								<CheckBoxField name="ПлательщикиОсновной" id="956">
+									<DataPath>Объект.Плательщики.Основной</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПлательщикиОсновнойКонтекстноеМеню" id="957"/>
+									<ExtendedTooltip name="ПлательщикиОсновнойРасширеннаяПодсказка" id="958"/>
+									<Events>
+										<Event name="OnChange">ПлательщикиОсновнойПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСтраница2" id="325">
@@ -1483,6 +1586,17 @@
 				</dcsset:appearance>
 			</dcsset:item>
 		</ConditionalAppearance>
+		<Attribute name="ОсновнойПлательщик" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной плательщик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыбратьФото" id="1">

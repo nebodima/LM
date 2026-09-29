@@ -47,9 +47,12 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.ФизЛицо</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Абонемент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.ДокументОснования</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Родитель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.Attribute.Плательщик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.TabularSection.РасшифровкаПлатежа.Attribute.Ученик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПриходДенег.TabularSection.РасшифровкаПлатежа.Attribute.Абонемент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.ФизЛицо</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.ДокументОснования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасходДенег.Attribute.Получатель</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.Педагог</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.РКО</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_РасчетЗарплаты.Attribute.Перемещение</xr:Item>

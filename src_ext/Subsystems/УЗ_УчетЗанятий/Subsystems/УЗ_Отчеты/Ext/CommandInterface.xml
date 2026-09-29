@@ -5,6 +5,10 @@
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Auto</Placement>
 		</Command>
+		<Command name="Report.УЗ_ОплатыПоПлательщикам.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
 		<Command name="Report.УЗ_ВедомостьПоКассе.StandardCommand.Open">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 			<Placement>Auto</Placement>
@@ -36,6 +40,9 @@
 	</CommandsPlacement>
 	<CommandsOrder>
 		<Command name="Report.УЗ_Взаиморасчеты.StandardCommand.Open">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
+		<Command name="Report.УЗ_ОплатыПоПлательщикам.StandardCommand.Open">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
 		<Command name="Report.УЗ_ВедомостьПоКассе.StandardCommand.Open">

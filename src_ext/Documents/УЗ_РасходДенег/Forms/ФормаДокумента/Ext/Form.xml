@@ -94,6 +94,17 @@
 							<OpenButton>true</OpenButton>
 							<ContextMenu name="КлиентКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">КлиентПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Получатель" id="207">
+							<DataPath>Объект.Получатель</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ContextMenu name="ПолучательКонтекстноеМеню" id="208"/>
+							<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="209"/>
 						</InputField>
 						<InputField name="ПредметОбучения" id="159">
 							<DataPath>Объект.ПредметОбучения</DataPath>
@@ -101,6 +112,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="160"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="161"/>
+							<Events>
+								<Event name="OnChange">ПредметОбученияПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Сумма" id="13">
 							<DataPath>Объект.СуммаДокумента</DataPath>

@@ -1927,6 +1927,17 @@
 		</right>
 	</object>
 	<object>
+		<name>Report.УЗ_ОплатыПоПлательщикам</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Report.УЗ_ОтчетПоДисконтнымКартам</name>
 		<right>
 			<name>Use</name>

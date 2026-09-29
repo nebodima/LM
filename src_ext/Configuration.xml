@@ -48,7 +48,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Учёт занятий</Vendor>
-			<Version>2.0.0.2</Version>
+			<Version>2.1.0.1</Version>
 			<DefaultReportForm/>
 			<DefaultReportVariantForm/>
 			<DefaultReportSettingsForm/>
@@ -169,6 +169,7 @@
 			<Report>УЗ_ВедомостьПоКассеДляМенеджеров</Report>
 			<Report>УЗ_Взаиморасчеты</Report>
 			<Report>УЗ_ДвиженияДокумента</Report>
+			<Report>УЗ_ОплатыПоПлательщикам</Report>
 			<Report>УЗ_ОтчетПоДисконтнымКартам</Report>
 			<Report>УЗ_Расходы</Report>
 			<Report>УЗ_РасчетыПоЗарплате</Report>
