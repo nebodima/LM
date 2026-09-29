@@ -1,4 +1,4 @@
-"""Агент конфигуратора 1С (/AgentMode) для файловой базы: запуск, команды по SSH, остановка.
+"""Агент конфигуратора 1С (/AgentMode) для файловой или серверной базы (tools\\адрес_базы.py): запуск, команды по SSH, остановка.
 
 Зачем: пакетный запуск конфигуратора стоит ~6 с только на старт; агент держит конфигуратор запущенным,
 команды идут по SSH за доли секунды (эталон — C:\\1c_run\\designer_agent\\README.md, проект DO_3).
@@ -18,7 +18,7 @@
 агент без команд дольше --простой минут (по умолчанию 10; переменная UZ_АГЕНТ_ПРОСТОЙ_МИН) — остановлен, сторож
 выходит. Сторож выходит и сам, если его агента уже нет или агент базы заменён новым (у нового свой сторож).
 Страховка на случай убитого сторожа: каждый старт агента останавливает простаивающих агентов других баз.
-Трогаются ТОЛЬКО свои агенты: процесс 1cv8 в /AgentMode, база C:\\1c_bases\\UZ_*, папка агента в %TEMP%\\uz_agent.
+Трогаются ТОЛЬКО свои агенты: процесс 1cv8 в /AgentMode, база C:\\1c_bases\\UZ_* или серверная uz_*, папка агента в %TEMP%\\uz_agent.
 Агент DO_3 (docmngr3, порт 1543), пакетные конфигураторы и всё прочее — только в списке, «чужой», не останавливаются.
 
     python tools\\агент_конфигуратора.py старт  --база=C:\\1c_bases\\UZ_UNF_D [--пользователь=Администратор] [--простой=10]
@@ -36,6 +36,8 @@ import subprocess
 import sys
 import tempfile
 import time
+
+import адрес_базы
 
 EXE = r"C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe"
 ПОРТЫ = range(1546, 1561)
@@ -55,7 +57,7 @@ def аргумент(имя, по_умолчанию=None):
 
 
 def папка(база):
-    п = os.path.join(tempfile.gettempdir(), "uz_agent", os.path.basename(os.path.normpath(база)))
+    п = os.path.join(tempfile.gettempdir(), "uz_agent", адрес_базы.имя(база))
     п.encode("ascii")          # кириллица в пути агента — «Directory access violation» при load-files
     os.makedirs(п, exist_ok=True)
     return п
@@ -80,7 +82,7 @@ def _слушает(порт):
 def живой(база):
     """Порт своего агента этой базы, если он запущен и порт слушает именно его pid; иначе None."""
     с = _состояние(база)
-    if с.get("база") != os.path.normcase(os.path.abspath(база)):
+    if с.get("база") != адрес_базы.ключ(база):
         return None
     return с.get("порт") if с.get("pid") and _слушает(с.get("порт", 0)) == с["pid"] else None
 
@@ -133,7 +135,7 @@ def _старт(база, пользователь, ждать):
     # дождаться его, а не убивать и стартовать заново
     import psutil
     с = _состояние(база)
-    if (с.get("база") == os.path.normcase(os.path.abspath(база)) and с.get("pid") and psutil.pid_exists(с["pid"])
+    if (с.get("база") == адрес_базы.ключ(база) and с.get("pid") and psutil.pid_exists(с["pid"])
             and psutil.Process(с["pid"]).name().lower().startswith("1cv8") and _слушает(с.get("порт", 0)) is None):
         if not ждать or _ждать_порт(с["порт"], с["pid"], 20):
             return с["порт"]
@@ -153,14 +155,14 @@ def _старт(база, пользователь, ждать):
 
 
 def _запустить(база, пользователь, порт):
-    аргументы = [EXE, "DESIGNER", "/F", база, "/N", пользователь, "/DisableStartupDialogs",
+    аргументы = [EXE, "DESIGNER"] + адрес_базы.ключи_конфигуратора(база) + ["/N", пользователь, "/DisableStartupDialogs",
                  "/DisableStartupMessages", "/AgentMode", "/AgentPort", str(порт), "/AgentListenAddress",
                  "127.0.0.1", "/AgentBaseDir", папка(база), "/AgentSSHHostKeyAuto"]
     флаги = subprocess.DETACHED_PROCESS | subprocess.CREATE_NEW_PROCESS_GROUP
     п = subprocess.Popen(аргументы, creationflags=флаги, close_fds=True, stdin=subprocess.DEVNULL,
                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     import psutil
-    _записать_состояние(база, {"база": os.path.normcase(os.path.abspath(база)), "пользователь": пользователь,
+    _записать_состояние(база, {"база": адрес_базы.ключ(база), "пользователь": пользователь,
                                "порт": порт, "pid": п.pid, "создан": psutil.Process(п.pid).create_time()})
     return п
 
@@ -312,10 +314,12 @@ def процессы_1с():
         if not (п.info["name"] or "").lower().startswith("1cv8"):
             continue
         команда = п.info["cmdline"] or []
-        база = _аргумент_процесса(команда, "/F") or _аргумент_процесса(команда, "/S")
+        база = _аргумент_процесса(команда, "/F") or адрес_базы.из_ключей("/S", _аргумент_процесса(команда, "/S"))
         папка_агента = _аргумент_процесса(команда, "/AgentBaseDir")
         агент = any(а.lower() == "/agentmode" for а in команда)
-        свой = (агент and os.path.normcase(база).startswith(БАЗЫ_СВОИ)
+        # свой: файловая C:\1c_bases\UZ_* или серверная, чьё имя в кластере начинается с uz_ (uz_bp_srv)
+        свой = (агент and (os.path.normcase(база).startswith(БАЗЫ_СВОИ)
+                          or (адрес_базы.серверная(база) or ("", ""))[1].lower().startswith("uz_"))
                 and os.path.normcase(os.path.abspath(папка_агента)).startswith(os.path.normcase(КОРЕНЬ) + os.sep))
         с = {}
         if свой:
@@ -336,7 +340,7 @@ def _уборка_простаивающих(кроме):
     """Страховка к сторожу: свои агенты других баз, простоявшие дольше своего предела, — остановить.
     Агенты старого образца (без отметки активности) не трогаются: их простой неизвестен."""
     for п in процессы_1с():
-        if not п["свой"] or os.path.normcase(os.path.abspath(п["база"])) == os.path.normcase(os.path.abspath(кроме)):
+        if not п["свой"] or адрес_базы.ключ(п["база"]) == адрес_базы.ключ(кроме):
             continue
         предел = 60 * float(п["предел"] if п["предел"] is not None else ПРОСТОЙ_МИН)
         # предел 0 — агент деплоя с -ПростойАгента 0: его останавливает сам деплой, возможно, он сейчас в работе
@@ -376,12 +380,12 @@ def печать_списка():
 
 def остановить_свои(все=False, база=None):
     """Остановить свои агенты: все или одной базы. Чужие процессы не трогаются никогда. → сколько остановлено."""
-    нужна = os.path.normcase(os.path.abspath(база)) if база else None
+    нужна = адрес_базы.ключ(база) if база else None
     снято = 0
     for п in процессы_1с():
         if not п["свой"]:
             continue
-        if все or os.path.normcase(os.path.abspath(п["база"])) == нужна:
+        if все or адрес_базы.ключ(п["база"]) == нужна:
             _снять(п)
             снято += 1
             print("остановлен агент pid %d базы %s" % (п["pid"], п["база"]))

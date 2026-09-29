@@ -3,6 +3,7 @@
 #   .\tools\деплой.ps1 -Базы УНФ,БП,УТ                  — три базы стенда ПАРАЛЛЕЛЬНО (свой процесс и агент на базу)
 #   .\tools\деплой.ps1 -Базы УНФ,БП,УТ -Копии _E        — то же на копиях C:\1c_bases\UZ_UNF_E, UZ_BP_E, UZ_UT_E
 #   .\tools\деплой.ps1 -СвояБаза C:\1c_bases\UZ_UNF_D   — своя копия (копия БП: -Пользователь 1, УТ: -Пользователь Admin)
+#   .\tools\деплой.ps1 -СвояБаза 'Srvr=localhost;Ref=uz_bp_srv' -Пользователь 1   — серверная копия БП (кластер, MS SQL)
 #   -НесмотряНаАудит  красные офлайн-аудиты / самотест аудитов не останавливают загрузку (печатается ПРЕДУПРЕЖДЕНИЕ)
 #   -Полная           полная загрузка вместо частичной;  -БезАгента — только пакетный конфигуратор
 #   -ПростойАгента 10 агент базы после деплоя остаётся тёплым для следующего деплоя (без ~6 с старта), но его сторож
@@ -52,7 +53,12 @@ $Инструменты = $PSScriptRoot
 $Exe = 'C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe'
 $Src = if ($Исходники) { (Resolve-Path $Исходники).Path } else { "$Корень\src_ext" }
 $Состояние = Join-Path ([IO.Path]::GetTempPath()) 'уз_прогон'
-$Логи = if ($СвояБаза) { Join-Path $СвояБаза 'логи' } else { "C:\1c_bases\логи$Копии" }
+# серверная база — строкой «Srvr=localhost;Ref=uz_bp_srv» (tools\адрес_базы.py): конфигуратор /S сервер\база,
+# имя (папка агента, журналы) — имя базы в кластере заглавными (UZ_BP_SRV)
+$ШаблонСерверной = '^\s*Srvr\s*=\s*"?([^";]+)"?\s*;\s*Ref\s*=\s*"?([^";]+)"?\s*;?\s*$'
+function Ключи-Базы([string]$Путь) { if ($Путь -match $ШаблонСерверной) { @('/S', "$($Matches[1].Trim())\$($Matches[2].Trim())") } else { @('/F', $Путь) } }
+function Имя-Базы([string]$Путь) { if ($Путь -match $ШаблонСерверной) { $Matches[2].Trim().ToUpper() } else { Split-Path $Путь -Leaf } }
+$Логи = if ($СвояБаза -match $ШаблонСерверной) { "C:\1c_bases\логи_$(Имя-Базы $СвояБаза)" } elseif ($СвояБаза) { Join-Path $СвояБаза 'логи' } else { "C:\1c_bases\логи$Копии" }
 New-Item -ItemType Directory -Force $Логи, $Состояние | Out-Null
 $env:PYTHONIOENCODING = 'utf-8'
 $Стенд = @{
@@ -107,7 +113,7 @@ function Хвост([string]$Текст, [int]$Строк = 15) {
 
 # Пакетный конфигуратор с таймаутом. → @{ Код; Текст }
 function Конфигуратор([hashtable]$База, [string]$Лог, [string[]]$Команда, [int]$Таймаут) {
-	$Арг = @('DESIGNER', '/F', $База.Путь, '/N', $База.Пользователь, '/DisableStartupDialogs', '/DisableStartupMessages') +
+	$Арг = @('DESIGNER') + (Ключи-Базы $База.Путь) + @('/N', $База.Пользователь, '/DisableStartupDialogs', '/DisableStartupMessages') +
 		$Команда + @('/Out', $Лог)
 	Remove-Item $Лог -ErrorAction SilentlyContinue
 	$П = Start-Process -FilePath $Exe -ArgumentList (Кавычки $Арг) -PassThru -WindowStyle Hidden
@@ -280,7 +286,7 @@ foreach ($Имя in $Базы) {
 	$Начало = $Часы.Elapsed.TotalSeconds
 	$ИмяБазы = (python "$Инструменты\отпечаток_src.py" "--имя-базы=$($База.Путь)").Trim()
 	# сервер итераций этой базы (tools\итерация.py) держит агента и COM-сеанс — деплою база нужна целиком
-	if (Test-Path (Join-Path ([IO.Path]::GetTempPath()) "uz_agent\$(Split-Path $База.Путь -Leaf)\итерация.json")) {
+	if (Test-Path (Join-Path ([IO.Path]::GetTempPath()) "uz_agent\$(Имя-Базы $База.Путь)\итерация.json")) {
 		$н = $Часы.Elapsed.TotalSeconds
 		python "$Инструменты\итерация.py" --стоп "--база=$($База.Путь)" | Out-Null
 		Отметить "$Имя сервер итераций" ($Часы.Elapsed.TotalSeconds - $н) 3 $true 'остановлен (с его агентом)'
@@ -323,7 +329,7 @@ foreach ($Имя in $Базы) {
 		$Вид = if ($НужнаПолная) { 'полная' } else { "частичная, файлов $($Изменено.Count)" }
 		$БюджетЗагрузки = if ($НужнаПолная) { $Бюджет.ЗагрузкаПолная } else { $Бюджет.ЗагрузкаЧастичная }
 		# список — в ASCII-папке агента: путь с кириллицей агент отвергает («Directory access violation», 28.09.2026)
-		$ПапкаАгента = Join-Path ([IO.Path]::GetTempPath()) "uz_agent\$(Split-Path $База.Путь -Leaf)"
+		$ПапкаАгента = Join-Path ([IO.Path]::GetTempPath()) "uz_agent\$(Имя-Базы $База.Путь)"
 		New-Item -ItemType Directory -Force $ПапкаАгента | Out-Null
 		$Список = Join-Path $ПапкаАгента 'list.txt'
 		$ЗеркалоSrc = Join-Path $ПапкаАгента 'src'

@@ -31,6 +31,9 @@ import re
 import sys
 import tempfile
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import адрес_базы  # noqa: E402
+
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(КОРЕНЬ, "src_ext")
 ЖУРНАЛЫ = os.path.join(tempfile.gettempdir(), "уз_прогон")
@@ -56,7 +59,7 @@ def отпечаток(каталог=SRC):
 
 def имя_базы(база):
     """То же имя, что у замка прогона/деплоя (прогон.py _замок, деплой.ps1)."""
-    return re.sub(r"[^\w]+", "_", os.path.normcase(os.path.abspath(база))).strip("_")
+    return re.sub(r"[^\w]+", "_", адрес_базы.ключ(база)).strip("_")
 
 
 def файл_отметки(база):
@@ -109,9 +112,9 @@ def версия_src(каталог=SRC):
 
 
 def хеш_из_базы(база, пользователь):
-    """ХешСумма расширения УЗ_ext в файловой базе — COM-подключение (без песочницы: код продукта не зовём)."""
+    """ХешСумма расширения УЗ_ext в базе (файловой или серверной) — COM-подключение (без песочницы: код продукта не зовём)."""
     import win32com.client
-    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="%s";' % (база, пользователь))
+    c = win32com.client.Dispatch("V83.COMConnector").Connect(адрес_базы.строка_com(база, пользователь))
     for р in c.РасширенияКонфигурации.Получить():
         if р.Имя == "УЗ_ext":
             return c.Base64Строка(р.ХешСумма)       # как в прогон.py (сверка отметки)

@@ -27,6 +27,9 @@ import sys
 import time
 import traceback
 
+sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # tools — тест запущен сам по себе
+import адрес_базы  # noqa: E402
+
 БЮДЖЕТ_СЕК = 10
 УТС = datetime.timezone.utc
 БАЗА_ПО_УМОЛЧАНИЮ = r"C:\1c_bases\UZ_UNF"
@@ -57,7 +60,7 @@ def подключить(база, пользователь, закрепить=
     регистрации. Не включилась — соединение не отдаём: ни один тест не запустится без предохранителя."""
     import win32com.client
     н = time.time()
-    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="%s";' % (база, пользователь))
+    c = win32com.client.Dispatch("V83.COMConnector").Connect(адрес_базы.строка_com(база, пользователь))
     включить_песочницу(c)
     if закрепить:   # демо-данные (tools\демо) — в реальном времени владельца, не во времени тестов
         закрепить_время(c)
@@ -148,13 +151,15 @@ def включить_песочницу(c):
 
 def позиция_журнала(база):
     """Размеры файлов журнала сейчас — потом читать только новое."""
-    return {п: os.path.getsize(п) for п in glob.glob(os.path.join(база, "1Cv8Log", "*.lgp"))}
+    папка = адрес_базы.папка_журнала(база) or ""
+    return {п: os.path.getsize(п) for п in glob.glob(os.path.join(папка, "*.lgp"))}
 
 
 def события_журнала(база, позиция, событие):
     """Комментарии записей события (имя события 1С, например «Учёт занятий.Почта.Отправка») после позиции.
-    None — журнала нет (серверная база): доказать по журналу ничего нельзя."""
-    папка = os.path.join(база, "1Cv8Log")
+    Серверная база — журнал в srvinfo кластера (tools\\адрес_базы.py). None — журнала нет: доказать по журналу
+    ничего нельзя."""
+    папка = адрес_базы.папка_журнала(база) or os.path.join(база, "1Cv8Log")
     try:
         словарь = open(os.path.join(папка, "1Cv8.lgf"), encoding="utf-8-sig", errors="replace").read()
     except OSError:

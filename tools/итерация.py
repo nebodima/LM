@@ -2,6 +2,8 @@
 
     python tools\\итерация.py                          — база UZ_ИТЕРАЦИЯ_БАЗА или C:\\1c_bases\\UZ_BP (пользователь 1)
     python tools\\итерация.py --база=C:\\1c_bases\\UZ_BP_C [--пользователь=1]
+    python tools\\итерация.py "--база=Srvr=localhost;Ref=uz_bp_srv"   — серверная копия БП (tools\\адрес_базы.py;
+                                                        замер 29.09.2026: вдвое медленнее файловой, docs/проверки.md)
     python tools\\итерация.py --тест=касса,оплаты      — эти тесты вместо выбранных по изменениям
     python tools\\итерация.py --все-тесты              — все затронутые тесты, без отбора по бюджету итерации
     python tools\\итерация.py --без-тестов             — только в базу (загрузка, применение, компиляция изменённого)
@@ -72,8 +74,10 @@ SRC = os.path.join(КОРЕНЬ, "src_ext")
 sys.path.insert(0, ТЕСТЫ)
 sys.path.insert(0, ПАПКА)
 import агент_конфигуратора as агент  # noqa: E402
+import адрес_базы  # noqa: E402
 
 EXE = агент.EXE
+БАЗА_ПО_УМОЛЧАНИЮ = r"C:\1c_bases\UZ_BP"
 # простой сервера итераций (и его агента) — 30 мин, не 10, как у агентов деплоя: холодный старт стоит +20–25 с
 # (замер 29.09.2026, UZ_BP_E: открытие базы в COM одновременно со стартом агента — 7–11 с, ожидание агента 4 с,
 # первые обращения сеанса), а владелец правит сериями с перерывами; цена — два процесса 1С на время простоя
@@ -100,7 +104,7 @@ def аргумент(имя, по_умолчанию=None):
 
 
 def пользователь_базы(база):
-    имя = os.path.basename(os.path.normpath(база)).upper()
+    имя = адрес_базы.имя(база).upper()
     return "1" if имя.startswith("UZ_BP") else "Admin" if имя.startswith("UZ_UT") else "Администратор"
 
 
@@ -236,7 +240,7 @@ def клиент():
     for поток in (sys.stdout, sys.stderr):
         поток.reconfigure(encoding="utf-8")
     н = time.time()
-    база = os.path.abspath(аргумент("база", os.environ.get("UZ_ИТЕРАЦИЯ_БАЗА", r"C:\1c_bases\UZ_BP")))
+    база = адрес_базы.нормализовать(аргумент("база", os.environ.get("UZ_ИТЕРАЦИЯ_БАЗА", БАЗА_ПО_УМОЛЧАНИЮ)))
     пользователь = аргумент("пользователь", пользователь_базы(база))
     с = _сервер_жив(база)
     if "--стоп" in sys.argv:
@@ -286,7 +290,7 @@ class Сервер:
         self.папка = агент.папка(база)
         self.зеркало = os.path.join(self.папка, "src")
         self.коннектор = win32com.client.Dispatch("V83.COMConnector")
-        self.строка = 'File="%s";Usr="%s";' % (база, пользователь)
+        self.строка = адрес_базы.строка_com(база, пользователь)
         self.держатель = None           # COM-сеанс: база открыта в процессе — новые сеансы дешевле
 
         self.сессия = None              # SSH-сессия с агентом
@@ -797,7 +801,7 @@ class Сервер:
         if сессия is not None:
             сессия.выполнить("common disconnect-ib", 20)
         try:
-            п = subprocess.run([EXE, "DESIGNER", "/F", self.база, "/N", self.пользователь, "/DisableStartupDialogs",
+            п = subprocess.run([EXE, "DESIGNER"] + адрес_базы.ключи_конфигуратора(self.база) + ["/N", self.пользователь, "/DisableStartupDialogs",
                                 "/DisableStartupMessages", "/CheckModules", "-ThinClient", "-Server", "-Extension",
                                 "УЗ_ext", "/Out", журнал], timeout=60)
             код = п.returncode
@@ -882,7 +886,7 @@ class Сервер:
             все = json.load(open(os.path.join(ЖУРНАЛЫ, "время_тестов.json"), encoding="utf-8"))
         except (OSError, ValueError):
             return {}
-        return все.get("СВОЯ_" + os.path.basename(os.path.normpath(self.база)).upper(), {}) or все.get("БП", {})
+        return все.get("СВОЯ_" + адрес_базы.имя(self.база).upper(), {}) or все.get("БП", {})
 
     def _тесты(self, c, з, изменено_src, тесты_изменены, шаг, вывод, часы, итог):
         """Затронутые тесты — самые быстрые первыми, пока укладываются в остаток бюджета итерации (по времени
