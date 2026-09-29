@@ -400,7 +400,11 @@ class Сессия:
             raise RuntimeError("агент базы %s не запущен" % база)
         активность(база)                     # сторож считает простой от последней команды
         пользователь = _состояние(база)["пользователь"]
-        for попытка in range(5):
+        # только что стартовавший агент порт уже слушает, а вход отклоняет («Authentication failed: transport shut
+        # down or saw EOF») — пока открывает базу. 29.09.2026 под нагрузкой соседних сессий это длилось дольше пяти
+        # попыток по 0,5 с: итерация падала «агент не поднялся». Повторяем до 15 с
+        срок = time.time() + 15
+        while True:
             к = paramiko.SSHClient()
             к.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             try:
@@ -409,7 +413,7 @@ class Сессия:
                 break
             except paramiko.ssh_exception.AuthenticationException:
                 к.close()
-                if попытка == 4:
+                if time.time() > срок:
                     raise
                 time.sleep(0.5)
         self.клиент = к
