@@ -29,56 +29,6 @@
 				<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
 				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="901"/>
 			</Button>
-			<Popup name="ФормаГруппа1" id="174">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Ввести на основании</v8:content>
-					</v8:item>
-				</Title>
-				<Picture>
-					<xr:Ref>StdPicture.Next</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<Representation>PictureAndText</Representation>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="175"/>
-				<ChildItems>
-					<Button name="ФормаДокументСписаниеОстатковСоздатьНаОсновании" id="165">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.УЗ_СписаниеОстатков.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ФормаДокументСписаниеОстатковСоздатьНаОснованииРасширеннаяПодсказка" id="166"/>
-					</Button>
-					<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="172">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.УЗ_ПриходДенег.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="173"/>
-					</Button>
-					<Button name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОсновании" id="182">
-						<Type>CommandBarButton</Type>
-						<CommandName>Document.УЗ_РасходДенег.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Items.Список.CurrentData.Ссылка</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="183"/>
-					</Button>
-				</ChildItems>
-			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

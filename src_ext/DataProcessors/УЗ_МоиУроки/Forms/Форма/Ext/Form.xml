@@ -163,19 +163,6 @@
 													<ContextMenu name="УрокиЗанятиеКонтекстноеМеню" id="19"/>
 													<ExtendedTooltip name="УрокиЗанятиеРасширеннаяПодсказка" id="20"/>
 												</LabelField>
-												<LabelField name="УрокиПомещение" id="21">
-													<DataPath>Уроки.Помещение</DataPath>	
-													<Width>10</Width>
-													<ContextMenu name="УрокиПомещениеКонтекстноеМеню" id="22"/>
-													<ExtendedTooltip name="УрокиПомещениеРасширеннаяПодсказка" id="23"/>
-												</LabelField>
-												<LabelField name="УрокиУчеников" id="24">
-													<DataPath>Уроки.Учеников</DataPath>	
-													<Width>5</Width>
-													<HorizontalStretch>false</HorizontalStretch>
-													<ContextMenu name="УрокиУчениковКонтекстноеМеню" id="25"/>
-													<ExtendedTooltip name="УрокиУчениковРасширеннаяПодсказка" id="26"/>
-												</LabelField>
 												<LabelField name="УрокиСостояние" id="27">
 													<DataPath>Уроки.Состояние</DataPath>	
 													<Width>10</Width>
@@ -203,6 +190,7 @@
 											<DataPath>СостояниеУрока</DataPath>	
 											<TitleLocation>None</TitleLocation>
 											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>2</Height>
 											<ContextMenu name="СостояниеУрокаКонтекстноеМеню" id="65"/>
 											<ExtendedTooltip name="СостояниеУрокаРасширеннаяПодсказка" id="66"/>
 										</LabelField>

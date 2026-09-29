@@ -87,11 +87,8 @@
 			<DataPath>ТабДок</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<TitleLocation>None</TitleLocation>
-			<ShowGrid>true</ShowGrid>
-			<ShowHeaders>true</ShowHeaders>
 			<VerticalScrollBar>true</VerticalScrollBar>
 			<HorizontalScrollBar>true</HorizontalScrollBar>
-			<Edit>true</Edit>
 			<ContextMenu name="ТабДокКонтекстноеМеню" id="16"/>
 			<ExtendedTooltip name="ТабДокРасширеннаяПодсказка" id="17"/>
 			<Events>

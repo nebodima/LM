@@ -120,6 +120,18 @@
 										</v8:item>
 									</ToolTip>
 									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
 									<ContextMenu name="ДатаКонтекстноеМеню" id="28"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="29"/>
 									<Events>
@@ -185,7 +197,6 @@
 				<ExtendedTooltip name="УченикиУправлениеПоискомРасширеннаяПодсказка" id="47"/>
 			</SearchControlAddition>
 			<Events>
-				<Event name="OnChange">УченикиПриИзменении</Event>
 				<Event name="AfterDeleteRow">УченикиПослеУдаления</Event>
 			</Events>
 			<ChildItems>
@@ -202,6 +213,9 @@
 					<Width>30</Width>
 					<ContextMenu name="УченикиУченикКонтекстноеМеню" id="52"/>
 					<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="53"/>
+					<Events>
+						<Event name="OnChange">УченикиУченикПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</Table>

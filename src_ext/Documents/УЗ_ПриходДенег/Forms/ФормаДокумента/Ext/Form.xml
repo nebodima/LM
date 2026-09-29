@@ -589,7 +589,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Рассчитать задолженность</v8:content>
+					<v8:content>Сумма долга ученика; если предмет не выбран — подставляется и предмет долга</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

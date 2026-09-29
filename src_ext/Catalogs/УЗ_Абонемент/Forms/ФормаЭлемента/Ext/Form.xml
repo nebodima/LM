@@ -17,34 +17,6 @@
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="136"/>
 			</Button>
-			<Popup name="ФормаГруппа1" id="293">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Создать на основании</v8:content>
-					</v8:item>
-				</Title>
-				<ExtendedTooltip name="ФормаГруппа1РасширеннаяПодсказка" id="294"/>
-				<ChildItems>
-					<Button name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОсновании" id="295">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.УЗ_ПриходДенег.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Объект.Ref</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>ПКО (оплата)</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ФормаДокументПриходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="296"/>
-					</Button>
-				</ChildItems>
-			</Popup>
 			<Button name="ФормаОбновить" id="370">
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.Обновить</CommandName>

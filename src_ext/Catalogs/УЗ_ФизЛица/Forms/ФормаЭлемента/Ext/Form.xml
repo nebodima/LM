@@ -18,68 +18,6 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="146"/>
 			</Button>
-			<Popup name="ФормаГруппаДополнительно" id="208">
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Создать на основании</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Форма группа дополнительно</v8:content>
-					</v8:item>
-				</ToolTip>
-				<Picture>
-					<xr:Ref>StdPicture.InputOnBasis</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<Representation>PictureAndText</Representation>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаГруппаДополнительноРасширеннаяПодсказка" id="209"/>
-				<ChildItems>
-					<Button name="ФормаДокументСписаниеОстатковСоздатьНаОсновании" id="184">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.УЗ_СписаниеОстатков.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Объект.Ref</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Списание остатков</v8:content>
-							</v8:item>
-						</Title>
-						<ShapeRepresentation>WhenActive</ShapeRepresentation>
-						<ExtendedTooltip name="ФормаДокументСписаниеОстатковСоздатьНаОснованииРасширеннаяПодсказка" id="185"/>
-					</Button>
-					<Button name="ФормаДокументПКОСоздатьНаОсновании" id="258">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Document.УЗ_ПриходДенег.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Объект.Ref</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаДокументПКОСоздатьНаОснованииРасширеннаяПодсказка" id="259"/>
-					</Button>
-					<Button name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОсновании" id="534">
-						<Type>CommandBarButton</Type>
-						<CommandName>Document.УЗ_РасходДенег.StandardCommand.CreateBasedOn</CommandName>
-						<DataPath>Объект.Ref</DataPath>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаДокументРасходныйКассовыйОрдерСоздатьНаОснованииРасширеннаяПодсказка" id="535"/>
-					</Button>
-				</ChildItems>
-			</Popup>
 			<Button name="ФормаОткрытьВзаиморасчеты" id="281">
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
