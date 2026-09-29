@@ -489,7 +489,8 @@
    "EnumValue:Задолженность": "",
    "EnumValue:Занятие": "",
    "EnumValue:ОкончаниеАбонемента": "",
-   "EnumValue:ОтветБота": ""
+   "EnumValue:ОтветБота": "",
+   "EnumValue:СообщениеБоту": ""
   },
   "Enums.УЗ_КаналыСообщений": {
    "EnumValue:SMS": "",
@@ -507,7 +508,8 @@
   "Enums.УЗ_СтатусыСообщений": {
    "EnumValue:Отправлено": "",
    "EnumValue:Ошибка": "",
-   "EnumValue:Песочница": ""
+   "EnumValue:Песочница": "",
+   "EnumValue:Получено": ""
   },
   "InformationRegisters.УЗ_ВерсииДанных": {
    "Resource:Версия": "xs:decimal(10.0)",
@@ -568,6 +570,7 @@
    "Resource:Логин": "xs:string(100)",
    "Resource:Отправитель": "xs:string(50)",
    "Resource:Провайдер": "cfg:EnumRef.УЗ_ПровайдерыСообщений",
+   "Resource:ПропускЗаЧасов": "xs:decimal(3.0)",
    "Resource:СмещениеОбновлений": "xs:decimal(15.0)"
   },
   "InformationRegisters.УЗ_НастройкиПочты": {
@@ -598,6 +601,7 @@
    "Resource:Адрес": "xs:string(64)",
    "Resource:ДатаКода": "xs:dateTime(DateTime)",
    "Resource:ДатаПривязки": "xs:dateTime(DateTime)",
+   "Resource:ЖдемСообщениеДо": "xs:dateTime(DateTime)",
    "Resource:ИмяВМессенджере": "xs:string(100)",
    "Resource:КодПривязки": "xs:string(32)"
   },

@@ -11,6 +11,7 @@
     POST /__сброс              — забыть запросы, снять сбои, очистить очередь обновлений Telegram
     POST /__сбой   {"префикс": "/sms", "код": 503}   — все запросы с путём от префикса отвечают этим кодом
     POST /__обновления [ {...update...}, ... ]        — очередь getUpdates Telegram (отдаётся с учётом offset)
+    answerCallbackQuery — {"ok": true} (ответ на нажатие inline-кнопки)
 Особые адресаты: чат Telegram «400» — 400 «chat not found»; телефон 79000000099 — SMS.ru отказ по номеру.
 """
 import json
@@ -80,6 +81,8 @@ class Обработчик(BaseHTTPRequestHandler):
             if str((тело or {}).get("chat_id")) == "400":
                 return self.ответ(400, {"ok": False, "error_code": 400, "description": "Bad Request: chat not found"})
             return self.ответ(200, {"ok": True, "result": {"message_id": len(СОСТОЯНИЕ["запросы"])}})
+        if путь.endswith("/answerCallbackQuery") and "/bot" in путь:
+            return self.ответ(200, {"ok": True, "result": True})
         if путь.endswith("/sms/send"):
             номер = (тело or {}).get("to", "")
             если_отказ = номер == "79000000099"

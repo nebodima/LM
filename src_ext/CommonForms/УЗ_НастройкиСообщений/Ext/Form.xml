@@ -152,6 +152,27 @@
 									<ContextMenu name="ТелеграмИмяБотаКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="ТелеграмИмяБотаРасширеннаяПодсказка" id="31"/>
 								</InputField>
+								<InputField name="ТелеграмПропускЗаЧасов" id="149">
+									<DataPath>ТелеграмПропускЗаЧасов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предупредить о пропуске за, ч</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>За сколько часов до начала занятия семья может предупредить о пропуске через бота (кнопка «Не придём»); позже — только звонком. 0 — за 2 ч</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ТелеграмПропускЗаЧасовКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ТелеграмПропускЗаЧасовРасширеннаяПодсказка" id="151"/>
+								</InputField>
 								<InputField name="ТелеграмАдресСервиса" id="32">
 									<DataPath>ТелеграмАдресСервиса</DataPath>
 									<Title>
@@ -1340,6 +1361,22 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТелеграмПропускЗаЧасов" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупредить о пропуске за, ч</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<Attribute name="ЗанятиеЗаЧасов" id="41">
