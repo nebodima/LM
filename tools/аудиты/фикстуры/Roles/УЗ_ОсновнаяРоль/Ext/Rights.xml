@@ -79,6 +79,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УЗ_ПриходДенег.Command.ПечатьПКО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.УЗ_ПриходДенег</name>
 		<right>
 			<name>Read</name>

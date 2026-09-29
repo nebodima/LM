@@ -180,6 +180,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Catalog.УЗ_Абонемент.Command.КомандаАбонементы</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Catalog.УЗ_ГруппыОбучения</name>
 		<right>
 			<name>Read</name>
@@ -1175,6 +1182,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УЗ_НачислениеБонусов.Command.Печать</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.УЗ_НачисленияПедагогам</name>
 		<right>
 			<name>Read</name>
@@ -1400,6 +1414,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УЗ_ПриходДенег.Command.ПечатьПКО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.УЗ_РасходДенег</name>
 		<right>
 			<name>Read</name>
@@ -1472,6 +1493,13 @@
 		<right>
 			<name>InteractiveDeleteMarked</name>
 			<value>false</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_РасходДенег.Command.ПечатьРКО</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -1767,6 +1795,13 @@
 		</right>
 	</object>
 	<object>
+		<name>Document.УЗ_СправкаОбОплатеОбучения.Command.ПечатьСправки</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
 		<name>Document.УЗ_ДоговорОбучения</name>
 		<right>
 			<name>Read</name>
@@ -1830,6 +1865,13 @@
 		</right>
 		<right>
 			<name>InputByString</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_ДоговорОбучения.Command.ПечатьДоговора</name>
+		<right>
+			<name>View</name>
 			<value>true</value>
 		</right>
 	</object>

@@ -69,6 +69,11 @@
 					</Attribute>
 				</ChildObjects>
 			</TabularSection>
+			<Command uuid="0c9e0a00-0000-4000-8000-000000000090">
+				<Properties>
+					<Name>ПечатьПКО</Name>
+				</Properties>
+			</Command>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
