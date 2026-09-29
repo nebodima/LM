@@ -45,13 +45,13 @@ def страница(тело):
  <div class='card g' style='flex:1'><b class='t'>Вычет есть</b><div class='txt'>
   <div class='flex' style='margin:8px 0'><span class='ic'>👩</span><div><b>Родитель</b> — за ребёнка до 24 лет, очно</div></div>
   <div class='flex' style='margin:8px 0'><span class='ic'>🛡️</span><div><b>Опекун, попечитель</b> — в том числе бабушка, если оформлена</div></div>
-  <div class='flex' style='margin:8px 0'><span class='ic'>🧑</span><div><b>Брат или сестра</b> — за младших до 24 лет</div></div>
+  <div class='flex' style='margin:8px 0'><span class='ic'>🧑</span><div><b>Брат или сестра</b> — за брата или сестру до 24 лет, очно</div></div>
   <div class='flex' style='margin:8px 0'><span class='ic'>💍</span><div><b>Супруг</b> — за обучение мужа или жены</div></div>
  </div></div>
  <div class='card r' style='flex:1'><b class='t'>Вычета нет</b><div class='txt'>
-  <div class='flex' style='margin:8px 0'><span class='ic'>👵</span><div><b>Бабушка и дедушка</b> без опекунства — их нет в перечне</div></div>
+  <div class='flex' style='margin:8px 0'><span class='ic'>👵</span><div><b>Бабушка, дедушка, тётя</b> без опекунства — их нет в перечне</div></div>
   <div class='flex' style='margin:8px 0'><span class='ic'>🤷</span><div><b>Мама, если платила бабушка</b> — у мамы нет расходов</div></div>
-  <div class='flex' style='margin:8px 0'><span class='ic'>📄</span><div><b>Кружок без лицензии</b> и самозанятый без ИП — справку не на что выдать</div></div>
+  <div class='flex' style='margin:8px 0'><span class='ic'>📄</span><div><b>Кружок без лицензии</b> и самозанятый без ИП — справки не будет</div></div>
  </div></div>
 </div>
 <div class='card b' style='margin-top:18px'><div class='flex'><span class='ic'>💡</span><div class='txt'><b>Совет семьям:</b> бабушка передаёт деньги маме, платит мама. Внук ходит на робототехнику, вычет не пропадает, бабушка всё равно любимая.</div></div></div>
@@ -69,7 +69,7 @@ def страница(тело):
  <div class='card b' style='flex:1'><div class='flex'><span class='num'>3</span><div><b class='t'>За каждый год</b><div class='txt'>По году оплаты, не по учебному. Декабрьская предоплата за январь — в декабрьском году.</div></div></div></div>
  <div class='card o' style='flex:1'><div class='flex'><span class='num'>4</span><div><b class='t'>Исправлять нельзя</b><div class='txt'>Ошиблись или вернули деньги — корректирующая справка. Замазка не поможет.</div></div></div></div>
 </div>
-<div class='foot'>Приказ ФНС России от 18.10.2023 № ЕД-7-11/755@, порядок заполнения, пп. 2–5, 9</div>
+<div class='foot'>Приказ ФНС России от 18.10.2023 № ЕД-7-11/755@, порядок заполнения, пп. 2, 3, 5, 9, 19, 20, 26</div>
 """)
 
 # 3. Один платёж на двоих
@@ -96,7 +96,7 @@ def страница(тело):
  <div class='card b' style='flex:1'><div class='flex'><span class='num'>2</span><div><b class='t'>Провели занятия</b><div class='txt'>Зачёт аванса:<br><b>ПОЛНЫЙ РАСЧЕТ</b></div></div></div></div>
 </div>
 <div class='row' style='margin-top:18px'>
- <div class='card g' style='flex:1'><div class='flex'><span class='ic'>🙂</span><div><b class='t'>ФИО родителя не нужно</b><div class='txt'>Покупатель в чеке обязателен только между организациями и ИП.</div></div></div></div>
+ <div class='card g' style='flex:1'><div class='flex'><span class='ic'>🙂</span><div><b class='t'>ФИО родителя не нужно</b><div class='txt'>Для родителя-физлица покупателя в чеке не указывают.</div></div></div></div>
  <div class='card o' style='flex:1'><div class='flex'><span class='ic'>📱</span><div><b class='t'>QR и СБП — тоже чек</b><div class='txt'>Перевод по QR-коду — расчёт электронным средством платежа. Чек на бумаге или на телефон.</div></div></div></div>
 </div>
 <div class='foot'>Приказ ФНС России от 14.09.2020 № ЕД-7-20/662@, признак способа расчёта (тег 1214)</div>
@@ -116,8 +116,8 @@ def страница(тело):
  <div class='card g' style='flex:1'><b class='t'>Можно удержать</b><div class='txt'>Проведённые занятия и фактически понесённые расходы.</div></div>
  <div class='card r' style='flex:1'><b class='t'>Нельзя удержать</b><div class='txt'><span class='strike'>«Штраф за отказ»</span>, <span class='strike'>«абонемент сгорает»</span>, <span class='strike'>«так написано в правилах клуба»</span>.</div></div>
 </div>
-<div class='card o' style='margin-top:18px'><div class='flex'><span class='ic'>🤒</span><div class='txt'><b>Пропуск по болезни</b> закон не решает: перенос, заморозка или возврат — это ваш договор. Запишите заранее, чтобы не договариваться с каждой мамой отдельно.</div></div></div>
-<div class='foot'>Закон «О защите прав потребителей», ст. 32 · ГК РФ, ст. 782 — для кружков без лицензии</div>
+<div class='card o' style='margin-top:18px'><div class='flex'><span class='ic'>🤒</span><div class='txt'><b>Пропуск по болезни</b> закон не решает: перенос, заморозка или возврат — это ваш договор. Запишите заранее, чтобы не договариваться с каждой семьёй отдельно.</div></div></div>
+<div class='foot'>Закон «О защите прав потребителей», ст. 32 · ГК РФ, ст. 782</div>
 """)
 
 for имя, html in КАРТИНКИ.items():
