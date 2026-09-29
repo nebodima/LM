@@ -263,6 +263,13 @@
 	<object>
 		<name>AccumulationRegister.УЗ_Расходы</name>
 		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ЛОЖЬ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
 			<name>Update</name>
 			<value>true</value>
 		</right>

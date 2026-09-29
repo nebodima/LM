@@ -46,6 +46,13 @@
 	<object>
 		<name>AccumulationRegister.УЗ_Касса</name>
 		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>Т ГДЕ Т.Регистратор.Педагог.Пользователь = &amp;ТекущийПользователь</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
 			<name>Update</name>
 			<value>true</value>
 		</right>
