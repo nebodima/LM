@@ -1860,7 +1860,7 @@ def файл_модуля_сервер():
     xml = (ДЕКЛ + ШАПКА_MD + '\n\t<CommonModule uuid="%s">\n\t\t<Properties>\n\t\t\t<Name>%s</Name>\n%s\n'
            '\t\t\t<Comment/>\n\t\t\t<Global>false</Global>\n\t\t\t<ClientManagedApplication>false</ClientManagedApplication>\n'
            '\t\t\t<Server>true</Server>\n\t\t\t<ExternalConnection>false</ExternalConnection>\n'
-           '\t\t\t<ClientOrdinaryApplication>false</ClientOrdinaryApplication>\n\t\t\t<Client>false</Client>\n'
+           '\t\t\t<ClientOrdinaryApplication>false</ClientOrdinaryApplication>\n'
            '\t\t\t<ServerCall>false</ServerCall>\n\t\t\t<Privileged>false</Privileged>\n'
            '\t\t\t<ReturnValuesReuse>DontUse</ReturnValuesReuse>\n\t\t</Properties>\n\t</CommonModule>\n</MetaDataObject>'
            % (ууид("UZ|CommonModule:" + МОДУЛЬ_СЕРВЕР), МОДУЛЬ_СЕРВЕР, синоним_xml("Учёт занятий: сервер", "\t\t\t")))
