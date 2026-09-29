@@ -37,6 +37,14 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УЗ_ПечатнаяФорма</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УЗ_Напомнить</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.УЗ_СвязанныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_КаналыСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_ВидыСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_СтатусыСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_ПровайдерыСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_НастройкиКаналов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_КлючиКаналов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ШаблоныСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ПривязкиКаналов</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

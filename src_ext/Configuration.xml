@@ -118,18 +118,23 @@
 			<CommonModule>УЗ_Почта</CommonModule>
 			<CommonModule>УЗ_Сервер</CommonModule>
 			<CommonModule>УЗ_Среда</CommonModule>
+			<CommonModule>УЗ_Сообщения</CommonModule>
+			<CommonModule>УЗ_ПровайдерыСообщений</CommonModule>
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_РасходыУрокаОдинИсточник</EventSubscription>
 			<ScheduledJob>УЗ_ПроверкаЗадолженности</ScheduledJob>
 			<ScheduledJob>УЗ_ОбновлениеГраницыПросмотраКассы</ScheduledJob>
+			<ScheduledJob>УЗ_ОтправкаНапоминаний</ScheduledJob>
+			<ScheduledJob>УЗ_ПриемСообщенийТелеграм</ScheduledJob>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
 			<CommandGroup>УЗ_ПодменюПечать</CommandGroup>
 			<CommonForm>УЗ_СписокОтчетов</CommonForm>
 			<CommonForm>УЗ_ФормаОтчета</CommonForm>
 			<CommonForm>УЗ_НастройкиПочты</CommonForm>
+			<CommonForm>УЗ_НастройкиСообщений</CommonForm>
 			<CommonForm>УЗ_ПечатнаяФорма</CommonForm>
 			<CommonForm>УЗ_ПервыйЗапуск</CommonForm>
 			<Catalog>Организации</Catalog>
@@ -166,6 +171,10 @@
 			<DocumentJournal>УЗ_КассовыйЖурнал</DocumentJournal>
 			<DocumentJournal>УЗ_ОбщийЖурнал</DocumentJournal>
 			<Enum>УЗ_ВидыОпераций</Enum>
+			<Enum>УЗ_КаналыСообщений</Enum>
+			<Enum>УЗ_ВидыСообщений</Enum>
+			<Enum>УЗ_СтатусыСообщений</Enum>
+			<Enum>УЗ_ПровайдерыСообщений</Enum>
 			<Report>УЗ_АналитикаПоУченикам</Report>
 			<Report>УЗ_ВедомостьПоКассе</Report>
 			<Report>УЗ_ВедомостьПоКассеДляМенеджеров</Report>
@@ -183,6 +192,7 @@
 			<DataProcessor>УЗ_ОбработкаФото</DataProcessor>
 			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
 			<DataProcessor>УЗ_РассылкаДолжникам</DataProcessor>
+			<DataProcessor>УЗ_ОтправкаСообщения</DataProcessor>
 			<InformationRegister>УЗ_ВерсииДанных</InformationRegister>
 			<InformationRegister>УЗ_ГраницаПросмотраКассы</InformationRegister>
 			<InformationRegister>УЗ_ДатыЗапрета</InformationRegister>
@@ -195,6 +205,10 @@
 			<InformationRegister>УЗ_УрокиВРасчетахЗарплаты</InformationRegister>
 			<InformationRegister>УЗ_РеквизитыОрганизаций</InformationRegister>
 			<InformationRegister>УЗ_ДокументыФизЛиц</InformationRegister>
+			<InformationRegister>УЗ_НастройкиКаналов</InformationRegister>
+			<InformationRegister>УЗ_КлючиКаналов</InformationRegister>
+			<InformationRegister>УЗ_ШаблоныСообщений</InformationRegister>
+			<InformationRegister>УЗ_ПривязкиКаналов</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
 			<AccumulationRegister>УЗ_Расходы</AccumulationRegister>

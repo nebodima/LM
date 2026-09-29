@@ -583,7 +583,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>E-mail</v8:content>
+							<v8:content>Кому</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -669,7 +669,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отправить письмо о задолженности отмеченным должникам (сумма пересчитывается на момент отправки)</v8:content>
+					<v8:content>Отправить сообщение о задолженности отмеченным должникам — письмом или каналом, выбранным в карточке (сумма пересчитывается на момент отправки)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -684,13 +684,13 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Журнал писем</v8:content>
+					<v8:content>Журнал сообщений</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Кому, когда и на какую сумму отправлены письма о задолженности (и почему не отправлены)</v8:content>
+					<v8:content>Кому, когда, каким каналом и на какую сумму отправлены сообщения о задолженности (и почему не отправлены)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>

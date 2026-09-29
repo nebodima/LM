@@ -321,34 +321,105 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>- Оповещения</v8:content>
+															<v8:content>Сообщения</v8:content>
 														</v8:item>
 													</Title>
-													<Group>Horizontal</Group>
-													<CollapsedRepresentationTitle>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>+ Оповещения</v8:content>
-														</v8:item>
-													</CollapsedRepresentationTitle>
-													<Collapsed>true</Collapsed>
+													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ОповещатьРасширеннаяПодсказка" id="142"/>
 													<ChildItems>
-														<CheckBoxField name="ОповеститьПоEmail" id="129">
-															<DataPath>Объект.ОповеститьПоEmail</DataPath>
+														<UsualGroup name="ГруппаСогласие" id="1000">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаСогласиеРасширеннаяПодсказка" id="1001"/>
+															<ChildItems>
+																<CheckBoxField name="ОповеститьПоEmail" id="129">
+																	<DataPath>Объект.ОповеститьПоEmail</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Согласие на сообщения</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ОповеститьПоEmailКонтекстноеМеню" id="130"/>
+																	<ExtendedTooltip name="ОповеститьПоEmailРасширеннаяПодсказка" id="131"/>
+																</CheckBoxField>
+																<InputField name="ПредпочитаемыйКанал" id="1002">
+																	<DataPath>Объект.ПредпочитаемыйКанал</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Канал</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<MaxWidth>20</MaxWidth>
+																	<ClearButton>true</ClearButton>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>эл. почта</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="ПредпочитаемыйКаналКонтекстноеМеню" id="1003"/>
+																	<ExtendedTooltip name="ПредпочитаемыйКаналРасширеннаяПодсказка" id="1004"/>
+																</InputField>
+																<Button name="НаписатьСообщение" id="1005">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.НаписатьСообщение</CommandName>
+																	<ExtendedTooltip name="НаписатьСообщениеРасширеннаяПодсказка" id="1006"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаТелеграм" id="1007">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаТелеграмРасширеннаяПодсказка" id="1008"/>
+															<ChildItems>
+																<LabelField name="СостояниеТелеграм" id="1009">
+																	<DataPath>СостояниеТелеграм</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Telegram</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="СостояниеТелеграмКонтекстноеМеню" id="1010"/>
+																	<ExtendedTooltip name="СостояниеТелеграмРасширеннаяПодсказка" id="1011"/>
+																</LabelField>
+																<Button name="СсылкаДляТелеграм" id="1012">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.СсылкаДляТелеграм</CommandName>
+																	<ExtendedTooltip name="СсылкаДляТелеграмРасширеннаяПодсказка" id="1013"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="СсылкаТелеграм" id="1014">
+															<DataPath>СсылкаТелеграм</DataPath>
+															<Visible>false</Visible>
+															<ReadOnly>true</ReadOnly>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Оповещать по эл. почте</v8:content>
+																	<v8:content>Ссылка на бота</v8:content>
 																</v8:item>
 															</Title>
-															<TitleLocation>Right</TitleLocation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОповеститьПоEmailКонтекстноеМеню" id="130"/>
-															<ExtendedTooltip name="ОповеститьПоEmailРасширеннаяПодсказка" id="131"/>
-														</CheckBoxField>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отправьте эту ссылку человеку (в мессенджер или SMS): он откроет её в Telegram и нажмёт «Запустить» — чат привяжется, сообщения будут приходить туда</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="СсылкаТелеграмКонтекстноеМеню" id="1015"/>
+															<ExtendedTooltip name="СсылкаТелеграмРасширеннаяПодсказка" id="1016"/>
+														</InputField>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="Группа1" id="285">
@@ -1745,6 +1816,36 @@
 				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="СостояниеТелеграм" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Telegram</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаТелеграм" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка для Telegram</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыбратьФото" id="1">
@@ -1819,6 +1920,38 @@
 			</Picture>
 			<Action>ПеревестиВГруппу</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СсылкаДляТелеграм" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка для Telegram</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить ссылку на бота студии: человек открывает её и нажимает кнопку запуска бота — сообщения приходят ему в Telegram</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СсылкаДляТелеграм</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НаписатьСообщение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение ученику и его плательщикам с согласием — каждому его каналом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаписатьСообщение</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>

@@ -29,6 +29,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Кассы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_СтатьиДвиженияДенег</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_РассылкаДолжникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ОтправкаСообщения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ЖурналРассылки</xr:Item>
 			</Content>
 		</Properties>
