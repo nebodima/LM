@@ -1,8 +1,5 @@
 {
- "миграции": {
-  "Catalogs.УЗ_ФизЛица|Attribute:Родитель1": "2.1: переименован в Родитель1Прежний (тот же uuid — данные на месте); шаг 2 УЗ_ОбновлениеДанных.ШагПлательщики переносит его в табличную часть «Плательщики» (основной плательщик)",
-  "Documents.УЗ_ПриходДенег|Attribute:Родитель": "2.1: переименован в Плательщик (тот же uuid — данные на месте, смысл тот же: кто внёс деньги)"
- },
+ "миграции": {},
  "описание": "Состав метаданных выпущенной версии УЗ_ext. Меняется только ключом --принять при выпуске. «миграции»: ключ «Раздел.Объект» или «Раздел.Объект|Вид:Поле» → где перенос данных.",
  "состав": {
   "AccumulationRegisters.УЗ_ДвижениеДисконтныхКарт": {
@@ -12,6 +9,7 @@
    "Resource:СуммаБонусов": "xs:decimal(15.2)"
   },
   "AccumulationRegisters.УЗ_Касса": {
+   "Attribute:Плательщик": "cfg:CatalogRef.УЗ_ФизЛица",
    "Dimension:Абонемент": "cfg:CatalogRef.УЗ_Абонемент",
    "Dimension:ВидОперации": "cfg:EnumRef.УЗ_ВидыОпераций",
    "Dimension:Касса": "cfg:CatalogRef.УЗ_Кассы",
@@ -161,7 +159,9 @@
    "Attribute:Http": "xs:string(50)",
    "Attribute:Возраст": "xs:decimal(2.0)",
    "Attribute:Выбыл": "xs:boolean",
+   "Attribute:ДатаОтписки": "xs:dateTime(DateTime)",
    "Attribute:ДатаРождения": "xs:dateTime(Date)",
+   "Attribute:ДатаСогласия": "xs:dateTime(DateTime)",
    "Attribute:Заметки": "xs:string(500)",
    "Attribute:ИсточникИнформации": "cfg:CatalogRef.УЗ_ИсточникиИнформации,cfg:CatalogRef.УЗ_ФизЛица",
    "Attribute:Комментарий": "xs:string(255)",
@@ -170,7 +170,8 @@
    "Attribute:ОповеститьПоТелефону": "xs:boolean",
    "Attribute:Пол": "xs:boolean,xs:string(1)",
    "Attribute:Пользователь": "cfg:CatalogRef.Пользователи",
-   "Attribute:Родитель1": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Attribute:ПредпочитаемыйКанал": "cfg:EnumRef.УЗ_КаналыСообщений",
+   "Attribute:Родитель1Прежний": "cfg:CatalogRef.УЗ_ФизЛица",
    "Attribute:Скидка": "cfg:CatalogRef.УЗ_Скидки",
    "Attribute:СтавкаПедагога": "cfg:CatalogRef.УЗ_СтавкиПедагогов",
    "Attribute:Статус": "cfg:CatalogRef.УЗ_Статусы,xs:string(25)",
@@ -179,13 +180,18 @@
    "Attribute:ТолькоВыбранныеГруппыОбучения": "xs:boolean",
    "Attribute:Фото": "cfg:CatalogRef.УЗ_Фото",
    "Attribute:Цвет": "xs:string(30)",
-   "Attribute:ЭтоПедагог": "xs:boolean"
+   "Attribute:ЭтоПедагог": "xs:boolean",
+   "TabularSection:Плательщики": "",
+   "TabularSection:Плательщики.КемПриходится": "xs:string(50)",
+   "TabularSection:Плательщики.Основной": "xs:boolean",
+   "TabularSection:Плательщики.Плательщик": "cfg:CatalogRef.УЗ_ФизЛица"
   },
   "Catalogs.УЗ_Фото": {
    "Attribute:Комментарий": "xs:string(255)",
    "Attribute:Файл": "v8:ValueStorage"
   },
   "CommonForms.УЗ_НастройкиПочты": {},
+  "CommonForms.УЗ_НастройкиСообщений": {},
   "CommonForms.УЗ_ПервыйЗапуск": {},
   "CommonForms.УЗ_ПечатнаяФорма": {},
   "CommonForms.УЗ_СписокОтчетов": {},
@@ -203,13 +209,16 @@
   "CommonModules.УЗ_Печать": {},
   "CommonModules.УЗ_ПечатьКлиент": {},
   "CommonModules.УЗ_Почта": {},
+  "CommonModules.УЗ_ПровайдерыСообщений": {},
   "CommonModules.УЗ_Сервер": {},
+  "CommonModules.УЗ_Сообщения": {},
   "CommonModules.УЗ_Среда": {},
   "DataProcessors.УЗ_ВыборWebЦвета": {},
   "DataProcessors.УЗ_ИзменениеУроков": {},
   "DataProcessors.УЗ_Календарь": {},
   "DataProcessors.УЗ_МоиУроки": {},
   "DataProcessors.УЗ_ОбработкаФото": {},
+  "DataProcessors.УЗ_ОтправкаСообщения": {},
   "DataProcessors.УЗ_ПанельУченика": {},
   "DataProcessors.УЗ_РассылкаДолжникам": {},
   "Documents.УЗ_ГрафикРабочегоВремениПедагога": {
@@ -245,6 +254,21 @@
    "TabularSection:ТЧ.ВремяОкончания": "xs:dateTime(Time)",
    "TabularSection:ТЧ.Дата": "xs:dateTime(Date)",
    "TabularSection:ТЧ.Комментарий": "xs:string(155)"
+  },
+  "Documents.УЗ_ДоговорОбучения": {
+   "Attribute:Абонемент": "cfg:CatalogRef.УЗ_Абонемент",
+   "Attribute:АвторДокумента": "cfg:CatalogRef.Пользователи",
+   "Attribute:ДатаНачала": "xs:dateTime(Date)",
+   "Attribute:ДатаОкончания": "xs:dateTime(Date)",
+   "Attribute:Заказчик": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Attribute:Комментарий": "xs:string(255)",
+   "Attribute:Обучающийся": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Attribute:ОписаниеСтоимости": "xs:string(250)",
+   "Attribute:Организация": "cfg:CatalogRef.Организации",
+   "Attribute:ПорядокОплаты": "xs:string(500)",
+   "Attribute:ПредметОбучения": "cfg:CatalogRef.УЗ_ПредметыОбучения",
+   "Attribute:Программа": "xs:string(250)",
+   "Attribute:Стоимость": "xs:decimal(15.2)"
   },
   "Documents.УЗ_ДополнительныеРасходы": {
    "Attribute:АвторДокумента": "cfg:CatalogRef.Пользователи",
@@ -320,14 +344,20 @@
    "Attribute:Комментарий": "xs:string(255)",
    "Attribute:НазначениеПлатежа": "xs:string(500)",
    "Attribute:Организация": "cfg:CatalogRef.Организации",
+   "Attribute:Плательщик": "cfg:CatalogRef.УЗ_ФизЛица",
    "Attribute:Подразделение": "cfg:CatalogRef.УЗ_Подразделения",
    "Attribute:ПредметОбучения": "cfg:CatalogRef.УЗ_ПредметыОбучения",
-   "Attribute:Родитель": "cfg:CatalogRef.УЗ_ФизЛица",
    "Attribute:СтатьяЗатрат": "cfg:CatalogRef.УЗ_СтатьиДвиженияДенег",
    "Attribute:СуммаБонусов": "xs:decimal(15.2)",
    "Attribute:СуммаДокумента": "xs:decimal(10.2)",
    "Attribute:Тариф": "cfg:CatalogRef.УЗ_Тарифы",
-   "Attribute:ФизЛицо": "cfg:CatalogRef.УЗ_ФизЛица"
+   "Attribute:ФизЛицо": "cfg:CatalogRef.УЗ_ФизЛица",
+   "TabularSection:РасшифровкаПлатежа": "",
+   "TabularSection:РасшифровкаПлатежа.Абонемент": "cfg:CatalogRef.УЗ_Абонемент",
+   "TabularSection:РасшифровкаПлатежа.ПредметОбучения": "cfg:CatalogRef.УЗ_ПредметыОбучения",
+   "TabularSection:РасшифровкаПлатежа.Сумма": "xs:decimal(10.2)",
+   "TabularSection:РасшифровкаПлатежа.Тариф": "cfg:CatalogRef.УЗ_Тарифы",
+   "TabularSection:РасшифровкаПлатежа.Ученик": "cfg:CatalogRef.УЗ_ФизЛица"
   },
   "Documents.УЗ_РасходДенег": {
    "Attribute:АвторДокумента": "cfg:CatalogRef.Пользователи",
@@ -338,6 +368,7 @@
    "Attribute:НазначениеПлатежа": "xs:string(100)",
    "Attribute:Организация": "cfg:CatalogRef.Организации",
    "Attribute:Подразделение": "cfg:CatalogRef.УЗ_Подразделения",
+   "Attribute:Получатель": "cfg:CatalogRef.УЗ_ФизЛица",
    "Attribute:ПредметОбучения": "cfg:CatalogRef.УЗ_ПредметыОбучения",
    "Attribute:СтатьяЗатрат": "cfg:CatalogRef.УЗ_СтатьиДвиженияДенег",
    "Attribute:СуммаДокумента": "xs:decimal(10.2)",
@@ -392,6 +423,23 @@
    "TabularSection:ТЗСписания.Тариф": "cfg:CatalogRef.УЗ_Тарифы",
    "TabularSection:ТЗСписания.Ученик": "cfg:CatalogRef.УЗ_ФизЛица"
   },
+  "Documents.УЗ_СправкаОбОплатеОбучения": {
+   "Attribute:АвторДокумента": "cfg:CatalogRef.Пользователи",
+   "Attribute:Выдана": "xs:boolean",
+   "Attribute:Год": "xs:decimal(4.0)",
+   "Attribute:ИсходнаяСправка": "cfg:DocumentRef.УЗ_СправкаОбОплатеОбучения",
+   "Attribute:КемПриходится": "xs:string(50)",
+   "Attribute:Комментарий": "xs:string(255)",
+   "Attribute:Налогоплательщик": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Attribute:НомерКорректировки": "xs:decimal(3.0)",
+   "Attribute:НомерСправки": "xs:decimal(12.0)",
+   "Attribute:Обучающийся": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Attribute:ОплатыСупруга": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Attribute:Организация": "cfg:CatalogRef.Организации",
+   "Attribute:Ответственный": "xs:string(150)",
+   "Attribute:ОчнаяФорма": "xs:boolean",
+   "Attribute:Сумма": "xs:decimal(15.2)"
+  },
   "Documents.УЗ_Урок": {
    "Attribute:АвторДокумента": "cfg:CatalogRef.Пользователи",
    "Attribute:ГруппаОбучения": "cfg:CatalogRef.УЗ_ГруппыОбучения",
@@ -436,6 +484,30 @@
    "EnumValue:КассаУченики": "",
    "EnumValue:ПрочийРасход": ""
   },
+  "Enums.УЗ_ВидыСообщений": {
+   "EnumValue:Вручную": "",
+   "EnumValue:Задолженность": "",
+   "EnumValue:Занятие": "",
+   "EnumValue:ОкончаниеАбонемента": ""
+  },
+  "Enums.УЗ_КаналыСообщений": {
+   "EnumValue:SMS": "",
+   "EnumValue:WhatsApp": "",
+   "EnumValue:Почта": "",
+   "EnumValue:Телеграм": ""
+  },
+  "Enums.УЗ_ПровайдерыСообщений": {
+   "EnumValue:GreenAPI": "",
+   "EnumValue:SMSC": "",
+   "EnumValue:SMSRU": "",
+   "EnumValue:TelegramBotAPI": "",
+   "EnumValue:Wazzup": ""
+  },
+  "Enums.УЗ_СтатусыСообщений": {
+   "EnumValue:Отправлено": "",
+   "EnumValue:Ошибка": "",
+   "EnumValue:Песочница": ""
+  },
   "InformationRegisters.УЗ_ВерсииДанных": {
    "Resource:Версия": "xs:decimal(10.0)",
    "Resource:ОбновлениеНачато": "xs:dateTime(DateTime)",
@@ -450,15 +522,32 @@
    "Resource:ДатаЗапрета": "xs:dateTime(Date)",
    "Resource:ЗапретСтаршеДней": "xs:decimal(3.0)"
   },
+  "InformationRegisters.УЗ_ДокументыФизЛиц": {
+   "Dimension:ФизЛицо": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Resource:ДатаВыдачиДокумента": "xs:dateTime(Date)",
+   "Resource:ИНН": "xs:string(12)",
+   "Resource:КодВидаДокумента": "xs:string(2)",
+   "Resource:СерияНомерДокумента": "xs:string(25)"
+  },
   "InformationRegisters.УЗ_ЖурналРассылки": {
    "Attribute:Адреса": "xs:string(255)",
+   "Attribute:Вид": "cfg:EnumRef.УЗ_ВидыСообщений",
    "Attribute:Вручную": "xs:boolean",
+   "Attribute:Источник": "cfg:CatalogRef.УЗ_Абонемент,cfg:DocumentRef.УЗ_Урок",
    "Attribute:Пользователь": "cfg:CatalogRef.Пользователи",
+   "Attribute:Статус": "cfg:EnumRef.УЗ_СтатусыСообщений",
+   "Attribute:Текст": "xs:string(1000)",
    "Attribute:ТекстОшибки": "xs:string(1000)",
+   "Dimension:Канал": "cfg:EnumRef.УЗ_КаналыСообщений",
    "Dimension:Организация": "cfg:CatalogRef.Организации",
+   "Dimension:Получатель": "cfg:CatalogRef.УЗ_ФизЛица",
    "Dimension:Ученик": "cfg:CatalogRef.УЗ_ФизЛица",
    "Resource:Отправлено": "xs:boolean",
    "Resource:Сумма": "xs:decimal(15.2)"
+  },
+  "InformationRegisters.УЗ_КлючиКаналов": {
+   "Dimension:Канал": "cfg:EnumRef.УЗ_КаналыСообщений",
+   "Resource:Ключ": "xs:string(500)"
   },
   "InformationRegisters.УЗ_Настройки": {
    "Resource:ИспользоватьОкругление": "xs:boolean",
@@ -469,6 +558,16 @@
    "Resource:ПериодОповещения": "xs:decimal(10.0)",
    "Resource:ТребоватьОписаниеКНеоплаченнымУрокам": "xs:boolean",
    "Resource:ТребоватьОписаниеКНеоплаченнымУрокамС": "xs:dateTime(Date)"
+  },
+  "InformationRegisters.УЗ_НастройкиКаналов": {
+   "Dimension:Канал": "cfg:EnumRef.УЗ_КаналыСообщений",
+   "Resource:АдресСервиса": "xs:string(200)",
+   "Resource:Включен": "xs:boolean",
+   "Resource:ИмяБота": "xs:string(64)",
+   "Resource:Логин": "xs:string(100)",
+   "Resource:Отправитель": "xs:string(50)",
+   "Resource:Провайдер": "cfg:EnumRef.УЗ_ПровайдерыСообщений",
+   "Resource:СмещениеОбновлений": "xs:decimal(15.0)"
   },
   "InformationRegisters.УЗ_НастройкиПочты": {
    "Dimension:Идентификатор": "xs:string(8)",
@@ -492,6 +591,29 @@
    "Dimension:Пользователь": "cfg:CatalogRef.Пользователи",
    "Resource:СрокНапоминания": "xs:dateTime(DateTime)"
   },
+  "InformationRegisters.УЗ_ПривязкиКаналов": {
+   "Dimension:Канал": "cfg:EnumRef.УЗ_КаналыСообщений",
+   "Dimension:ФизЛицо": "cfg:CatalogRef.УЗ_ФизЛица",
+   "Resource:Адрес": "xs:string(64)",
+   "Resource:ДатаКода": "xs:dateTime(DateTime)",
+   "Resource:ДатаПривязки": "xs:dateTime(DateTime)",
+   "Resource:ИмяВМессенджере": "xs:string(100)",
+   "Resource:КодПривязки": "xs:string(32)"
+  },
+  "InformationRegisters.УЗ_РеквизитыОрганизаций": {
+   "Dimension:Организация": "cfg:CatalogRef.Организации",
+   "Resource:Адрес": "xs:string(300)",
+   "Resource:ДатаЛицензии": "xs:dateTime(Date)",
+   "Resource:ДолжностьПодписанта": "xs:string(150)",
+   "Resource:ИПБезЛицензии": "xs:boolean",
+   "Resource:ЛицензиюВыдал": "xs:string(250)",
+   "Resource:НомерЛицензии": "xs:string(50)",
+   "Resource:ОснованиеПолномочий": "xs:string(150)",
+   "Resource:Ответственный": "xs:string(150)",
+   "Resource:ПлатежныеРеквизиты": "xs:string(500)",
+   "Resource:Подписант": "xs:string(150)",
+   "Resource:Телефон": "xs:string(50)"
+  },
   "InformationRegisters.УЗ_СоставГрупп": {
    "Dimension:ГруппаОбучения": "cfg:CatalogRef.УЗ_ГруппыОбучения",
    "Dimension:Ученик": "cfg:CatalogRef.УЗ_ФизЛица",
@@ -508,6 +630,16 @@
    "Resource:КоличествоЧасов": "xs:decimal(13.4)",
    "Resource:Сумма": "xs:decimal(15.2)"
   },
+  "InformationRegisters.УЗ_ШаблоныСообщений": {
+   "Dimension:Вид": "cfg:EnumRef.УЗ_ВидыСообщений",
+   "Resource:Включено": "xs:boolean",
+   "Resource:ЗаДней": "xs:decimal(3.0)",
+   "Resource:ЗаЧасов": "xs:decimal(3.0)",
+   "Resource:КраткийТекст": "xs:string(500)",
+   "Resource:ОсталосьЗанятий": "xs:decimal(3.0)",
+   "Resource:Текст": "xs:string(1000)",
+   "Resource:Тема": "xs:string(150)"
+  },
   "Reports.УЗ_АналитикаПоУченикам": {},
   "Reports.УЗ_ВедомостьПоКассе": {},
   "Reports.УЗ_ВедомостьПоКассеДляМенеджеров": {},
@@ -515,6 +647,7 @@
   "Reports.УЗ_ДвиженияДокумента": {
    "Attribute:Документ": "?"
   },
+  "Reports.УЗ_ОплатыПоПлательщикам": {},
   "Reports.УЗ_ОтчетПоДисконтнымКартам": {},
   "Reports.УЗ_Расходы": {},
   "Reports.УЗ_РасчетыПоЗарплате": {},
