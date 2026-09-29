@@ -14,6 +14,8 @@
 				<v8:Type>cfg:DocumentObject.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ДополнительныеРасходы</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачислениеУченику</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_СправкаОбОплатеОбучения</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ДоговорОбучения</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ПереводУченика</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачислениеБонусов</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачисленияПедагогам</v8:Type>

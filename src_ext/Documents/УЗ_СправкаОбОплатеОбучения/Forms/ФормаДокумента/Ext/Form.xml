@@ -21,6 +21,19 @@
 				<CommandName>Form.Command.КорректирующаяСправка</CommandName>
 				<ExtendedTooltip name="ФормаКорректирующаяСправкаРасширеннаяПодсказка" id="106"/>
 			</Button>
+			<Button name="ФормаПечатьСправки" id="173">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Document.УЗ_СправкаОбОплатеОбучения.Command.ПечатьСправки</CommandName>
+				<DataPath>Объект.Ref</DataPath>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать справки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПечатьСправкиРасширеннаяПодсказка" id="174"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

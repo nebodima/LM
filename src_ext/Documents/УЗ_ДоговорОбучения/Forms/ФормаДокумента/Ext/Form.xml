@@ -15,9 +15,33 @@
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="104"/>
 			</Button>
+			<Popup name="ПодменюПечать" id="167">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="168"/>
+				<ChildItems>
+					<Button name="ПодменюПечатьПечатьДоговора" id="169">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Document.УЗ_ДоговорОбучения.Command.ПечатьДоговора</CommandName>
+						<DataPath>Объект.Ref</DataPath>
+						<ExtendedTooltip name="ПодменюПечатьПечатьДоговораРасширеннаяПодсказка" id="170"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -116,6 +140,7 @@
 						<InputField name="ПорядокОплаты" id="140">
 							<DataPath>Объект.ПорядокОплаты</DataPath>
 							<Height>3</Height>
+							<VerticalStretch>false</VerticalStretch>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="ПорядокОплатыКонтекстноеМеню" id="141"/>
 							<ExtendedTooltip name="ПорядокОплатыРасширеннаяПодсказка" id="142"/>
@@ -168,7 +193,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<LabelDecoration name="ПроверьтеСЮристом" id="156">
-			<Height>2</Height>
+			<Height>3</Height>
 			<HorizontalStretch>true</HorizontalStretch>
 			<TextColor>style:УЗ_ЦветПояснения</TextColor>
 			<Title formatted="false">

@@ -267,7 +267,7 @@
 		<width>540</width>
 	</format>
 	<format>
-		<height>20</height>
+		<height>52</height>
 	</format>
 	<format>
 		<font>0</font>
@@ -282,17 +282,17 @@
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
-		<height>18</height>
+		<height>47</height>
 	</format>
 	<format>
 		<horizontalAlignment>Right</horizontalAlignment>
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
-		<height>6</height>
+		<height>16</height>
 	</format>
 	<format>
-		<height>22</height>
+		<height>57</height>
 	</format>
 	<format>
 		<font>1</font>
@@ -319,7 +319,7 @@
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
-		<height>30</height>
+		<height>78</height>
 	</format>
 	<format>
 		<verticalAlignment>Top</verticalAlignment>

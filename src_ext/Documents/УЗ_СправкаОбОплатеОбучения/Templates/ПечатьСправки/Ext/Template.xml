@@ -3154,10 +3154,10 @@
 	<rowsItem>
 		<index>41</index>
 		<row>
-			<formatIndex>12</formatIndex>
+			<formatIndex>22</formatIndex>
 			<c>
 				<c>
-					<f>22</f>
+					<f>23</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -3169,7 +3169,7 @@
 			<c>
 				<i>22</i>
 				<c>
-					<f>22</f>
+					<f>23</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -3775,10 +3775,10 @@
 	<rowsItem>
 		<index>54</index>
 		<row>
-			<formatIndex>23</formatIndex>
+			<formatIndex>24</formatIndex>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -3792,10 +3792,10 @@
 	<rowsItem>
 		<index>55</index>
 		<row>
-			<formatIndex>23</formatIndex>
+			<formatIndex>24</formatIndex>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -4026,7 +4026,7 @@
 	<rowsItem>
 		<index>59</index>
 		<row>
-			<formatIndex>25</formatIndex>
+			<formatIndex>26</formatIndex>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
@@ -5210,17 +5210,17 @@
 	<rowsItem>
 		<index>73</index>
 		<row>
-			<formatIndex>26</formatIndex>
+			<formatIndex>27</formatIndex>
 			<empty>true</empty>
 		</row>
 	</rowsItem>
 	<rowsItem>
 		<index>74</index>
 		<row>
-			<formatIndex>23</formatIndex>
+			<formatIndex>24</formatIndex>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -5234,10 +5234,10 @@
 	<rowsItem>
 		<index>75</index>
 		<row>
-			<formatIndex>23</formatIndex>
+			<formatIndex>24</formatIndex>
 			<c>
 				<c>
-					<f>24</f>
+					<f>25</f>
 					<tl>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -5317,7 +5317,7 @@
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>1</defaultFormatIndex>
+	<defaultFormatIndex>28</defaultFormatIndex>
 	<height>79</height>
 	<vgRows>79</vgRows>
 	<merge>
@@ -5632,14 +5632,14 @@
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
 	</line>
 	<font faceName="Courier New" height="14" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
-	<font faceName="Arial" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="7" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<font faceName="Arial" height="6" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
-		<width>14</width>
+		<width>17</width>
 	</format>
 	<format>
-		<height>20</height>
+		<height>52</height>
 	</format>
 	<format>
 		<horizontalAlignment>Right</horizontalAlignment>
@@ -5654,7 +5654,7 @@
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
-		<height>4</height>
+		<height>10</height>
 	</format>
 	<format>
 		<font>0</font>
@@ -5663,17 +5663,17 @@
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
-		<height>8</height>
+		<height>21</height>
 	</format>
 	<format>
-		<height>14</height>
+		<height>36</height>
 	</format>
 	<format>
 		<font>1</font>
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
-		<height>18</height>
+		<height>47</height>
 	</format>
 	<format>
 		<font>2</font>
@@ -5682,17 +5682,17 @@
 		<textPlacement>Wrap</textPlacement>
 	</format>
 	<format>
-		<height>30</height>
+		<height>88</height>
 	</format>
 	<format>
 		<verticalAlignment>Center</verticalAlignment>
 		<textPlacement>Cut</textPlacement>
 	</format>
 	<format>
-		<height>16</height>
+		<height>42</height>
 	</format>
 	<format>
-		<height>3</height>
+		<height>8</height>
 	</format>
 	<format>
 		<font>3</font>
@@ -5701,7 +5701,7 @@
 		<textPlacement>Wrap</textPlacement>
 	</format>
 	<format>
-		<height>6</height>
+		<height>16</height>
 	</format>
 	<format>
 		<font>3</font>
@@ -5714,10 +5714,13 @@
 		<verticalAlignment>Bottom</verticalAlignment>
 	</format>
 	<format>
-		<height>10</height>
+		<height>26</height>
 	</format>
 	<format>
 		<bottomBorder>1</bottomBorder>
+	</format>
+	<format>
+		<height>78</height>
 	</format>
 	<format>
 		<font>1</font>
@@ -5726,16 +5729,19 @@
 		<textPlacement>Wrap</textPlacement>
 	</format>
 	<format>
-		<height>12</height>
+		<height>31</height>
 	</format>
 	<format>
 		<font>3</font>
 		<verticalAlignment>Center</verticalAlignment>
 	</format>
 	<format>
-		<height>24</height>
+		<height>62</height>
 	</format>
 	<format>
-		<height>40</height>
+		<height>104</height>
+	</format>
+	<format>
+		<width>10</width>
 	</format>
 </document>
