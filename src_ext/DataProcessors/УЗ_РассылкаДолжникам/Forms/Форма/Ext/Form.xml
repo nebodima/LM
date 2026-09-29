@@ -255,6 +255,7 @@
 					<ChildItems>
 						<InputField name="Тема" id="84">
 							<DataPath>Тема</DataPath>
+							<TitleLocation>Top</TitleLocation>
 							<ContextMenu name="ТемаКонтекстноеМеню" id="85"/>
 							<ExtendedTooltip name="ТемаРасширеннаяПодсказка" id="86"/>
 							<Events>
@@ -264,6 +265,8 @@
 						<InputField name="ТекстПисьма" id="87">
 							<DataPath>ТекстПисьма</DataPath>
 							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>60</MaxWidth>
 							<Height>8</Height>
 							<MultiLine>true</MultiLine>
 							<ContextMenu name="ТекстПисьмаКонтекстноеМеню" id="88"/>

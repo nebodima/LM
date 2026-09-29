@@ -17,6 +17,16 @@
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="136"/>
 			</Button>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="386">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="387"/>
+			</ButtonGroup>
 			<Button name="ФормаОбновить" id="370">
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.Обновить</CommandName>
@@ -94,17 +104,20 @@
 							<Group>AlwaysHorizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="158"/>
 							<ChildItems>
 								<UsualGroup name="Группа6" id="233">
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="234"/>
 									<ChildItems>
 										<UsualGroup name="Группа10" id="302">
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
+											<ThroughAlign>Use</ThroughAlign>
 											<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="303"/>
 											<ChildItems>
 												<InputField name="Наименование" id="299">
@@ -122,6 +135,7 @@
 												</InputField>
 												<InputField name="Код" id="4">
 													<DataPath>Объект.Code</DataPath>
+													<TitleLocation>Left</TitleLocation>
 													<EditMode>EnterOnInput</EditMode>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="КодКонтекстноеМеню" id="5"/>
@@ -134,12 +148,13 @@
 											<Group>AlwaysHorizontal</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
+											<ThroughAlign>Use</ThroughAlign>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="138"/>
 											<ChildItems>
 												<InputField name="ФизЛицо" id="55">
 													<DataPath>Объект.ФизЛицо</DataPath>
 													<ReadOnly>true</ReadOnly>
-													<TitleLocation>Top</TitleLocation>
+													<TitleLocation>Left</TitleLocation>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<HorizontalStretch>true</HorizontalStretch>
 													<ContextMenu name="ФизЛицоКонтекстноеМеню" id="56"/>
@@ -163,15 +178,19 @@
 													<v8:content>Предмет</v8:content>
 												</v8:item>
 											</Title>
+											<TitleLocation>Left</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>false</HorizontalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>24</MaxWidth>
 											<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="11"/>
 											<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="12"/>
 										</InputField>
 										<InputField name="Тариф" id="374">
 											<DataPath>Объект.Тариф</DataPath>
+											<TitleLocation>Left</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>false</HorizontalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>24</MaxWidth>
 											<ContextMenu name="ТарифКонтекстноеМеню" id="375"/>
 											<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="376"/>
 											<Events>
@@ -180,8 +199,10 @@
 										</InputField>
 										<InputField name="Организация" id="377">
 											<DataPath>Объект.Организация</DataPath>
+											<TitleLocation>Left</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
-											<HorizontalStretch>false</HorizontalStretch>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>24</MaxWidth>
 											<ClearButton>true</ClearButton>
 											<ContextMenu name="ОрганизацияКонтекстноеМеню" id="378"/>
 											<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="379"/>
@@ -190,12 +211,14 @@
 											<Group>Vertical</Group>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
+											<ThroughAlign>Use</ThroughAlign>
 											<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="322"/>
 											<ChildItems>
 												<UsualGroup name="Группа1" id="47">
 													<Group>AlwaysHorizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="48"/>
 													<ChildItems>
 														<UsualGroup name="Группа8" id="366">
@@ -203,6 +226,7 @@
 															<VerticalSpacing>Half</VerticalSpacing>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="367"/>
 															<ChildItems>
 																<InputField name="Период" id="141">
@@ -213,6 +237,7 @@
 																			<v8:content>Период действия</v8:content>
 																		</v8:item>
 																	</Title>
+																	<TitleLocation>Left</TitleLocation>
 																	<HorizontalStretch>false</HorizontalStretch>
 																	<ContextMenu name="ПериодКонтекстноеМеню" id="142"/>
 																	<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="143"/>
@@ -224,6 +249,7 @@
 																	<Group>Vertical</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
+																	<ThroughAlign>Use</ThroughAlign>
 																	<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="369"/>
 																	<ChildItems>
 																		<InputField name="КоличествоЗанятий" id="330">
@@ -234,6 +260,7 @@
 																					<v8:content>Уроков</v8:content>
 																				</v8:item>
 																			</Title>
+																			<TitleLocation>Left</TitleLocation>
 																			<ToolTip>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
@@ -256,6 +283,7 @@
 																					<v8:content>Часов</v8:content>
 																				</v8:item>
 																			</Title>
+																			<TitleLocation>Left</TitleLocation>
 																			<ToolTip>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>

@@ -57,8 +57,10 @@
 					<ChildItems>
 						<InputField name="Педагог" id="10">
 							<DataPath>Объект.Педагог</DataPath>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ContextMenu name="ПедагогКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="12"/>
 						</InputField>
@@ -85,6 +87,7 @@
 											<v8:content>от</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
@@ -93,7 +96,9 @@
 						</UsualGroup>
 						<InputField name="Организация" id="161">
 							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="162"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="163"/>
 						</InputField>
@@ -121,11 +126,23 @@
 							<ChildItems>
 								<InputField name="ВремяНачалаОбщее" id="62">
 									<DataPath>Объект.ВремяНачалаОбщее</DataPath>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ВремяНачалаОбщееКонтекстноеМеню" id="63"/>
 									<ExtendedTooltip name="ВремяНачалаОбщееРасширеннаяПодсказка" id="64"/>
 								</InputField>
 								<InputField name="ВремяОкончанияОбщее" id="65">
 									<DataPath>Объект.ВремяОкончанияОбщее</DataPath>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ВремяОкончанияОбщееКонтекстноеМеню" id="66"/>
 									<ExtendedTooltip name="ВремяОкончанияОбщееРасширеннаяПодсказка" id="67"/>
 								</InputField>
@@ -155,6 +172,12 @@
 								<InputField name="ПНВремя" id="75">
 									<DataPath>Объект.ПНВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ПНВремяКонтекстноеМеню" id="76"/>
 									<ExtendedTooltip name="ПНВремяРасширеннаяПодсказка" id="77"/>
 									<Events>
@@ -164,6 +187,12 @@
 								<InputField name="ПНВремя2" id="132">
 									<DataPath>Объект.ПНВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ПНВремя2КонтекстноеМеню" id="133"/>
 									<ExtendedTooltip name="ПНВремя2РасширеннаяПодсказка" id="134"/>
 									<Events>
@@ -191,6 +220,12 @@
 								<InputField name="ВТВремя" id="81">
 									<DataPath>Объект.ВТВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ВТВремяКонтекстноеМеню" id="82"/>
 									<ExtendedTooltip name="ВТВремяРасширеннаяПодсказка" id="83"/>
 									<Events>
@@ -200,6 +235,12 @@
 								<InputField name="ВТВремя2" id="135">
 									<DataPath>Объект.ВТВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ВТВремя2КонтекстноеМеню" id="136"/>
 									<ExtendedTooltip name="ВТВремя2РасширеннаяПодсказка" id="137"/>
 									<Events>
@@ -227,6 +268,12 @@
 								<InputField name="СРВремя" id="87">
 									<DataPath>Объект.СРВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="СРВремяКонтекстноеМеню" id="88"/>
 									<ExtendedTooltip name="СРВремяРасширеннаяПодсказка" id="89"/>
 									<Events>
@@ -236,6 +283,12 @@
 								<InputField name="СРВремя2" id="138">
 									<DataPath>Объект.СРВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="СРВремя2КонтекстноеМеню" id="139"/>
 									<ExtendedTooltip name="СРВремя2РасширеннаяПодсказка" id="140"/>
 									<Events>
@@ -263,6 +316,12 @@
 								<InputField name="ЧТВремя" id="93">
 									<DataPath>Объект.ЧТВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ЧТВремяКонтекстноеМеню" id="94"/>
 									<ExtendedTooltip name="ЧТВремяРасширеннаяПодсказка" id="95"/>
 									<Events>
@@ -272,6 +331,12 @@
 								<InputField name="ЧТВремя2" id="141">
 									<DataPath>Объект.ЧТВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ЧТВремя2КонтекстноеМеню" id="142"/>
 									<ExtendedTooltip name="ЧТВремя2РасширеннаяПодсказка" id="143"/>
 									<Events>
@@ -299,6 +364,12 @@
 								<InputField name="ПТВремя" id="99">
 									<DataPath>Объект.ПТВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ПТВремяКонтекстноеМеню" id="100"/>
 									<ExtendedTooltip name="ПТВремяРасширеннаяПодсказка" id="101"/>
 									<Events>
@@ -308,6 +379,12 @@
 								<InputField name="ПТВремя2" id="144">
 									<DataPath>Объект.ПТВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ПТВремя2КонтекстноеМеню" id="145"/>
 									<ExtendedTooltip name="ПТВремя2РасширеннаяПодсказка" id="146"/>
 									<Events>
@@ -336,6 +413,12 @@
 								<InputField name="СБВремя" id="105">
 									<DataPath>Объект.СБВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="СБВремяКонтекстноеМеню" id="106"/>
 									<ExtendedTooltip name="СБВремяРасширеннаяПодсказка" id="107"/>
 									<Events>
@@ -345,6 +428,12 @@
 								<InputField name="СБВремя2" id="147">
 									<DataPath>Объект.СБВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="СБВремя2КонтекстноеМеню" id="148"/>
 									<ExtendedTooltip name="СБВремя2РасширеннаяПодсказка" id="149"/>
 									<Events>
@@ -373,6 +462,12 @@
 								<InputField name="ВСВремя" id="108">
 									<DataPath>Объект.ВСВремя</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ВСВремяКонтекстноеМеню" id="109"/>
 									<ExtendedTooltip name="ВСВремяРасширеннаяПодсказка" id="110"/>
 									<Events>
@@ -382,6 +477,12 @@
 								<InputField name="ВСВремя2" id="150">
 									<DataPath>Объект.ВСВремя2</DataPath>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ВСВремя2КонтекстноеМеню" id="151"/>
 									<ExtendedTooltip name="ВСВремя2РасширеннаяПодсказка" id="152"/>
 									<Events>
@@ -519,6 +620,12 @@
 									<DataPath>Объект.ТЧ.ВремяНачала</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ТЧВремяНачалаКонтекстноеМеню" id="39"/>
 									<ExtendedTooltip name="ТЧВремяНачалаРасширеннаяПодсказка" id="40"/>
 								</InputField>
@@ -526,6 +633,12 @@
 									<DataPath>Объект.ТЧ.ВремяОкончания</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<SpinButton>true</SpinButton>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</Format>
 									<ContextMenu name="ТЧВремяОкончанияКонтекстноеМеню" id="42"/>
 									<ExtendedTooltip name="ТЧВремяОкончанияРасширеннаяПодсказка" id="43"/>
 								</InputField>
@@ -572,6 +685,13 @@
 					<ChildItems>
 						<LabelField name="АвторДокумента" id="13">
 							<DataPath>Объект.АвторДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автор</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="15"/>

@@ -104,31 +104,43 @@
 				<LabelField name="Наименование" id="19">
 					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<Width>25</Width>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="21"/>
 				</LabelField>
 				<LabelField name="Время" id="25">
 					<DataPath>Список.Время</DataPath>
+					<Width>8</Width>
 					<ContextMenu name="ВремяКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ВремяРасширеннаяПодсказка" id="27"/>
 				</LabelField>
 				<LabelField name="Педагог" id="28">
 					<DataPath>Список.Педагог</DataPath>
+					<Width>20</Width>
 					<ContextMenu name="ПедагогКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="30"/>
 				</LabelField>
 				<LabelField name="ПредметОбучения" id="31">
 					<DataPath>Список.ПредметОбучения</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 				<LabelField name="Помещение" id="34">
 					<DataPath>Список.Помещение</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="ПомещениеКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="36"/>
 				</LabelField>
 				<LabelField name="Продолжительность" id="37">
 					<DataPath>Список.Продолжительность</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<Format>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -140,6 +152,9 @@
 				</LabelField>
 				<LabelField name="Комментарий" id="40">
 					<DataPath>Список.Комментарий</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
 					<ContextMenu name="КомментарийКонтекстноеМеню" id="41"/>
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="42"/>
 				</LabelField>

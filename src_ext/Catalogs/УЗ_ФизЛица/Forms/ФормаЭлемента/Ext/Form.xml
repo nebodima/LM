@@ -84,6 +84,7 @@
 							<Group>Horizontal</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаДанныеРасширеннаяПодсказка" id="50"/>
 							<ChildItems>
 								<UsualGroup name="ФИО" id="51">
@@ -102,6 +103,7 @@
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="52"/>
 									<ChildItems>
 										<UsualGroup name="Группа3" id="421">
@@ -206,6 +208,7 @@
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
+											<ThroughAlign>Use</ThroughAlign>
 											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="481"/>
 											<ChildItems>
 												<UsualGroup name="ГруппаВозраст" id="57">
@@ -224,6 +227,7 @@
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="ГруппаВозрастРасширеннаяПодсказка" id="58"/>
 													<ChildItems>
 														<InputField name="ДатаРождения" id="19">
@@ -261,7 +265,8 @@
 															<v8:content>Например: "Действующий ученик" или "Закончил обучение"</v8:content>
 														</v8:item>
 													</ToolTip>
-													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="СтатусКонтекстноеМеню" id="211"/>
@@ -275,7 +280,8 @@
 															<v8:content>Человек, который привел этого ученика</v8:content>
 														</v8:item>
 													</ToolTip>
-													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<OpenButton>true</OpenButton>
 													<ContextMenu name="ИсточникИнформацииКонтекстноеМеню" id="174"/>
@@ -295,7 +301,8 @@
 															<v8:content>Корневая группа</v8:content>
 														</v8:item>
 													</ToolTip>
-													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КорневаяПапкаКонтекстноеМеню" id="214"/>
 													<ExtendedTooltip name="КорневаяПапкаРасширеннаяПодсказка" id="215"/>
@@ -312,9 +319,9 @@
 													<v8:content>Контактная информация</v8:content>
 												</v8:item>
 											</Title>
-											<HorizontalStretch>false</HorizontalStretch>
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
+											<ThroughAlign>Use</ThroughAlign>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="476"/>
 											<ChildItems>
 												<UsualGroup name="Оповещать" id="141">
@@ -327,12 +334,14 @@
 													<Group>Vertical</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="ОповещатьРасширеннаяПодсказка" id="142"/>
 													<ChildItems>
 														<UsualGroup name="ГруппаСогласие" id="1000">
-															<Group>Horizontal</Group>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаСогласиеРасширеннаяПодсказка" id="1001"/>
 															<ChildItems>
 																<CheckBoxField name="ОповеститьПоEmail" id="129">
@@ -356,8 +365,9 @@
 																			<v8:content>Канал</v8:content>
 																		</v8:item>
 																	</Title>
+																	<TitleLocation>Left</TitleLocation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<MaxWidth>20</MaxWidth>
+																	<MaxWidth>24</MaxWidth>
 																	<ClearButton>true</ClearButton>
 																	<InputHint>
 																		<v8:item>
@@ -379,6 +389,7 @@
 															<Group>Horizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаТелеграмРасширеннаяПодсказка" id="1008"/>
 															<ChildItems>
 																<LabelField name="СостояниеТелеграм" id="1009">
@@ -426,6 +437,7 @@
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="286"/>
 													<ChildItems>
 														<InputField name="Телефон" id="25">
@@ -436,9 +448,10 @@
 																	<v8:content>Телефон</v8:content>
 																</v8:item>
 															</Title>
+															<TitleLocation>Left</TitleLocation>
 															<EditMode>EnterOnInput</EditMode>
 															<AutoMaxWidth>false</AutoMaxWidth>
-															<MaxWidth>36</MaxWidth>
+															<MaxWidth>24</MaxWidth>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -467,6 +480,7 @@
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="ГруппаEmailРасширеннаяПодсказка" id="204"/>
 													<ChildItems>
 														<InputField name="EMail" id="28">
@@ -477,9 +491,10 @@
 																	<v8:content>Эл. почта</v8:content>
 																</v8:item>
 															</Title>
+															<TitleLocation>Left</TitleLocation>
 															<EditMode>EnterOnInput</EditMode>
 															<AutoMaxWidth>false</AutoMaxWidth>
-															<MaxWidth>36</MaxWidth>
+															<MaxWidth>24</MaxWidth>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -508,6 +523,7 @@
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="ГруппаHttpРасширеннаяПодсказка" id="199"/>
 													<ChildItems>
 														<InputField name="http" id="59">
@@ -518,8 +534,9 @@
 																	<v8:content>Сайт</v8:content>
 																</v8:item>
 															</Title>
+															<TitleLocation>Left</TitleLocation>
 															<AutoMaxWidth>false</AutoMaxWidth>
-															<MaxWidth>36</MaxWidth>
+															<MaxWidth>24</MaxWidth>
 															<ClearButton>true</ClearButton>
 															<InputHint>
 																<v8:item>
@@ -559,25 +576,29 @@
 											<VerticalSpacing>Half</VerticalSpacing>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
+											<ThroughAlign>Use</ThroughAlign>
 											<ExtendedTooltip name="ГруппаРольРасширеннаяПодсказка" id="571"/>
 											<ChildItems>
 												<InputField name="СтавкаПедагога" id="367">
 													<DataPath>Объект.СтавкаПедагога</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="СтавкаПедагогаКонтекстноеМеню" id="368"/>
 													<ExtendedTooltip name="СтавкаПедагогаРасширеннаяПодсказка" id="369"/>
 												</InputField>
 												<InputField name="Пользователь" id="916">
 													<DataPath>Объект.Пользователь</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="ПользовательКонтекстноеМеню" id="917"/>
 													<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="918"/>
 												</InputField>
 												<InputField name="Скидка" id="526">
 													<DataPath>Объект.Скидка</DataPath>
-													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="СкидкаКонтекстноеМеню" id="527"/>
 													<ExtendedTooltip name="СкидкаРасширеннаяПодсказка" id="528"/>
@@ -597,7 +618,7 @@
 														</v8:item>
 													</ToolTip>
 													<AutoMaxWidth>false</AutoMaxWidth>
-													<HorizontalStretch>false</HorizontalStretch>
+													<MaxWidth>24</MaxWidth>
 													<ClearButton>true</ClearButton>
 													<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 													<ContextMenu name="ОсновнойПлательщикКонтекстноеМеню" id="948"/>
@@ -768,6 +789,12 @@
 												</InputField>
 												<LabelField name="ОстатокДенегПоТарифу1" id="538">
 													<DataPath>ОстатокДенегПоТарифу</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Остаток</v8:content>
+														</v8:item>
+													</Title>
 													<HorizontalAlign>Right</HorizontalAlign>
 													<HorizontalStretch>true</HorizontalStretch>
 													<MarkNegatives>true</MarkNegatives>
@@ -780,6 +807,12 @@
 												</LabelField>
 												<LabelField name="ОстатокЕдиницПоТарифу" id="541">
 													<DataPath>ОстатокЕдиницПоТарифу</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Осталось</v8:content>
+														</v8:item>
+													</Title>
 													<HorizontalAlign>Right</HorizontalAlign>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
@@ -791,6 +824,12 @@
 												</LabelField>
 												<LabelField name="ВсегоУроковПоТарифу" id="564">
 													<DataPath>ВсегоУроковПоТарифу</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Уроков</v8:content>
+														</v8:item>
+													</Title>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<ContextMenu name="ВсегоУроковПоТарифуКонтекстноеМеню" id="565"/>
@@ -801,6 +840,12 @@
 												</LabelField>
 												<LabelField name="ВсегоЯвокПоТарифу" id="567">
 													<DataPath>ВсегоЯвокПоТарифу</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Явок</v8:content>
+														</v8:item>
+													</Title>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Hiperlink>true</Hiperlink>
 													<ContextMenu name="ВсегоЯвокПоТарифуКонтекстноеМеню" id="568"/>

@@ -91,6 +91,7 @@
 									<ChildItems>
 										<InputField name="Номер" id="4">
 											<DataPath>Объект.Number</DataPath>
+											<TitleLocation>Top</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>11</MaxWidth>
@@ -105,6 +106,7 @@
 													<v8:content>от</v8:content>
 												</v8:item>
 											</Title>
+											<TitleLocation>Top</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 											<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
@@ -113,7 +115,9 @@
 								</UsualGroup>
 								<InputField name="Организация" id="213">
 									<DataPath>Объект.Организация</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>24</MaxWidth>
 									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="214"/>
 									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="215"/>
 								</InputField>
@@ -224,6 +228,13 @@
 							<ChildItems>
 								<LabelField name="АвторДокумента" id="25">
 									<DataPath>Объект.АвторДокумента</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автор</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>

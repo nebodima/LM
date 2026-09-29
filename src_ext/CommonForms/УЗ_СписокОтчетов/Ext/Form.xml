@@ -61,12 +61,15 @@
 				<InputField name="СписокОтчетовПредставление" id="14">
 					<DataPath>СписокОтчетов.Представление</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<Width>30</Width>
 					<ContextMenu name="СписокОтчетовПредставлениеКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="СписокОтчетовПредставлениеРасширеннаяПодсказка" id="16"/>
 				</InputField>
 				<InputField name="СписокОтчетовПояснение" id="17">
 					<DataPath>СписокОтчетов.Пояснение</DataPath>
 					<EditMode>EnterOnInput</EditMode>
+					<AutoCellHeight>true</AutoCellHeight>
+					<Width>60</Width>
 					<ContextMenu name="СписокОтчетовПояснениеКонтекстноеМеню" id="18"/>
 					<ExtendedTooltip name="СписокОтчетовПояснениеРасширеннаяПодсказка" id="19"/>
 				</InputField>

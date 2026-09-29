@@ -27,6 +27,16 @@
 				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="173"/>
 			</Button>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="929">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="930"/>
+			</ButtonGroup>
 			<Button name="ФормаДвиженияДокумента" id="740">
 				<Type>CommandBarHyperlink</Type>
 				<CommandName>Form.Command.ДвиженияДокумента</CommandName>
@@ -305,7 +315,7 @@
 										</v8:item>
 									</Title>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>20</MaxWidth>
+									<MaxWidth>24</MaxWidth>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ГруппаОбученияКонтекстноеМеню" id="343"/>
 									<ExtendedTooltip name="ГруппаОбученияРасширеннаяПодсказка" id="344"/>
@@ -317,7 +327,7 @@
 									<DataPath>Объект.Педагог</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>20</MaxWidth>
+									<MaxWidth>24</MaxWidth>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ПедагогКонтекстноеМеню" id="17"/>
 									<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="18"/>
@@ -334,7 +344,7 @@
 										</v8:item>
 									</Title>
 									<AutoMaxWidth>false</AutoMaxWidth>
-									<MaxWidth>20</MaxWidth>
+									<MaxWidth>24</MaxWidth>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="351"/>
 									<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="352"/>
@@ -358,6 +368,7 @@
 							<ChildItems>
 								<InputField name="Помещение" id="329">
 									<DataPath>Объект.Помещение</DataPath>
+									<TitleLocation>Top</TitleLocation>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>24</MaxWidth>
 									<ClearButton>true</ClearButton>
@@ -366,6 +377,7 @@
 								</InputField>
 								<InputField name="Тариф" id="896">
 									<DataPath>Объект.Тариф</DataPath>
+									<TitleLocation>Top</TitleLocation>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>

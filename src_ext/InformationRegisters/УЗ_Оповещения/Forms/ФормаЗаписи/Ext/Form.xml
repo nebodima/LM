@@ -8,6 +8,12 @@
 				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="23"/>
 			</Button>
+			<Button name="ФормаЗаписать" id="24">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="25"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -16,6 +22,8 @@
 	<ChildItems>
 		<InputField name="Источник" id="1">
 			<DataPath>Запись.Источник</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>36</MaxWidth>
 			<ContextMenu name="ИсточникКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ИсточникРасширеннаяПодсказка" id="3"/>
 		</InputField>
@@ -39,7 +47,10 @@
 		<InputField name="Описание" id="19">
 			<DataPath>Запись.Описание</DataPath>
 			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>60</MaxWidth>
 			<Height>3</Height>
+			<VerticalStretch>false</VerticalStretch>
 			<MultiLine>true</MultiLine>
 			<InputHint>
 				<v8:item>
@@ -52,6 +63,8 @@
 		</InputField>
 		<InputField name="Пользователь" id="7">
 			<DataPath>Запись.Пользователь</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>36</MaxWidth>
 			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="9"/>
 		</InputField>

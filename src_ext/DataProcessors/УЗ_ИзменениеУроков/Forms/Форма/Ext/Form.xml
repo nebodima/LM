@@ -15,7 +15,8 @@
 			<ChildItems>
 				<InputField name="Период" id="89">
 					<DataPath>Период</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>36</MaxWidth>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="90"/>
 					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="91"/>
 					<Events>
@@ -24,7 +25,8 @@
 				</InputField>
 				<InputField name="ПредметОбучения" id="115">
 					<DataPath>ПредметОбучения</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>36</MaxWidth>
 					<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="116"/>
 					<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="117"/>
 					<Events>
@@ -33,6 +35,8 @@
 				</InputField>
 				<InputField name="Ученики1" id="83">
 					<DataPath>Ученики</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>36</MaxWidth>
 					<ContextMenu name="Ученики1КонтекстноеМеню" id="84"/>
 					<ExtendedTooltip name="Ученики1РасширеннаяПодсказка" id="85"/>
 					<Events>

@@ -100,11 +100,21 @@
 					<ChildItems>
 						<LabelField name="Ссылка" id="42">
 							<DataPath>Список.Ссылка</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тариф</v8:content>
+								</v8:item>
+							</Title>
+							<Width>30</Width>
 							<ContextMenu name="СсылкаКонтекстноеМеню" id="43"/>
 							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="44"/>
 						</LabelField>
 						<LabelField name="Наименование" id="45">
 							<DataPath>Список.Наименование</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<DefaultItem>true</DefaultItem>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="46"/>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="47"/>

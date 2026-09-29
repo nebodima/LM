@@ -47,6 +47,7 @@
 			</Title>
 			<Group>Vertical</Group>
 			<Representation>StrongSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="32"/>
 			<ChildItems>
 				<CheckBoxField name="ИспользоватьОповещения" id="25">
@@ -69,6 +70,7 @@
 					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="39"/>
 					<ChildItems>
 						<InputField name="ОповещатьОЗадолженности" id="35">

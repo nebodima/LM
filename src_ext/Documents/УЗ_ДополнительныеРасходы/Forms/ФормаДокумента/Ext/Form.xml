@@ -64,8 +64,10 @@
 					<ChildItems>
 						<InputField name="ДокументОснования" id="10">
 							<DataPath>Объект.ДокументОснования</DataPath>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>36</MaxWidth>
 							<ContextMenu name="ДокументОснованияКонтекстноеМеню" id="11"/>
 							<ExtendedTooltip name="ДокументОснованияРасширеннаяПодсказка" id="12"/>
 						</InputField>
@@ -86,6 +88,7 @@
 							<ChildItems>
 								<InputField name="Номер" id="4">
 									<DataPath>Объект.Number</DataPath>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>11</MaxWidth>
@@ -100,6 +103,7 @@
 											<v8:content>от</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
@@ -108,7 +112,9 @@
 						</UsualGroup>
 						<InputField name="Организация" id="75">
 							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="76"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="77"/>
 						</InputField>
@@ -208,6 +214,13 @@
 					<ChildItems>
 						<LabelField name="АвторДокумента" id="16">
 							<DataPath>Объект.АвторДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автор</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>

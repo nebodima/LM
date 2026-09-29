@@ -17,6 +17,16 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="89"/>
 			</Button>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="134">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="135"/>
+			</ButtonGroup>
 			<Button name="ФормаПеревестиВГруппу" id="132">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -52,7 +62,8 @@
 				</InputField>
 				<InputField name="Педагог" id="42">
 					<DataPath>Объект.Педагог</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
 					<ContextMenu name="ПедагогКонтекстноеМеню" id="43"/>
 					<ExtendedTooltip name="ПедагогРасширеннаяПодсказка" id="44"/>
 					<Events>
@@ -61,25 +72,29 @@
 				</InputField>
 				<InputField name="ПредметОбучения" id="45">
 					<DataPath>Объект.ПредметОбучения</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
 					<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="46"/>
 					<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="47"/>
 				</InputField>
 				<InputField name="Помещение" id="48">
 					<DataPath>Объект.Помещение</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
 					<ContextMenu name="ПомещениеКонтекстноеМеню" id="49"/>
 					<ExtendedTooltip name="ПомещениеРасширеннаяПодсказка" id="50"/>
 				</InputField>
 				<InputField name="Тариф" id="122">
 					<DataPath>Объект.Тариф</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
 					<ContextMenu name="ТарифКонтекстноеМеню" id="123"/>
 					<ExtendedTooltip name="ТарифРасширеннаяПодсказка" id="124"/>
 				</InputField>
 				<InputField name="СтавкаПедагога" id="127">
 					<DataPath>Объект.СтавкаПедагога</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>25</MaxWidth>
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -93,18 +108,21 @@
 					<Group>Vertical</Group>
 					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="14"/>
 					<ChildItems>
 						<UsualGroup name="Группа10" id="90">
 							<Group>Vertical</Group>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="91"/>
 							<ChildItems>
 								<UsualGroup name="Группа12" id="120">
 									<Group>AlwaysHorizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="121"/>
 									<ChildItems>
 										<InputField name="ВремяНачала" id="36">
@@ -133,6 +151,7 @@
 									<Group>AlwaysHorizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
 									<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="126"/>
 									<ChildItems>
 										<InputField name="Продолжительность" id="39">

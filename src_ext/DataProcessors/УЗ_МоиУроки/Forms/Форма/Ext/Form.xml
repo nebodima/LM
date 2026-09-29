@@ -56,6 +56,7 @@
 					<DataPath>Подсказка</DataPath>	
 					<TitleLocation>None</TitleLocation>
 					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
 					<TextColor>style:NegativeTextColor</TextColor>
 					<ContextMenu name="ПодсказкаКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ПодсказкаРасширеннаяПодсказка" id="12"/>

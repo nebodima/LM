@@ -9,6 +9,12 @@
 				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="28"/>
 			</Button>
+			<Button name="ФормаЗаписать" id="29">
+				<Type>CommandBarHyperlink</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="30"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>

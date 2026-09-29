@@ -9,18 +9,18 @@
 				<CommandName>Form.StandardCommand.Create</CommandName>
 				<ExtendedTooltip name="ФормаСоздатьРасширеннаяПодсказка" id="57"/>
 			</Button>
-			<Button name="ФормаСкопировать" id="60">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.StandardCommand.Copy</CommandName>
-				<ShapeRepresentation>WhenActive</ShapeRepresentation>
-				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="61"/>
-			</Button>
 			<Button name="ФормаСоздатьГруппу" id="58">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.CreateFolder</CommandName>
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСоздатьГруппуРасширеннаяПодсказка" id="59"/>
+			</Button>
+			<Button name="ФормаСкопировать" id="60">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Copy</CommandName>
+				<ShapeRepresentation>WhenActive</ShapeRepresentation>
+				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="61"/>
 			</Button>
 			<Button name="ФормаОтчетПоДисконтнымКартам" id="54">
 				<Type>CommandBarButton</Type>

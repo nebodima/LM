@@ -88,8 +88,10 @@
 					<ChildItems>
 						<InputField name="Клиент" id="10">
 							<DataPath>Объект.ФизЛицо</DataPath>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<OpenButton>true</OpenButton>
 							<ContextMenu name="КлиентКонтекстноеМеню" id="11"/>
@@ -100,7 +102,9 @@
 						</InputField>
 						<InputField name="Получатель" id="207">
 							<DataPath>Объект.Получатель</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 							<ContextMenu name="ПолучательКонтекстноеМеню" id="208"/>
@@ -108,7 +112,9 @@
 						</InputField>
 						<InputField name="ПредметОбучения" id="159">
 							<DataPath>Объект.ПредметОбучения</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="160"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="161"/>
@@ -118,13 +124,16 @@
 						</InputField>
 						<InputField name="Сумма" id="13">
 							<DataPath>Объект.СуммаДокумента</DataPath>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="СуммаКонтекстноеМеню" id="14"/>
 							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="15"/>
 						</InputField>
 						<InputField name="Касса" id="73">
 							<DataPath>Объект.Касса</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="КассаКонтекстноеМеню" id="74"/>
 							<ExtendedTooltip name="КассаРасширеннаяПодсказка" id="75"/>
@@ -137,8 +146,10 @@
 									<v8:content>Статья затрат</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Top</TitleLocation>
 							<EditMode>EnterOnInput</EditMode>
-							<HorizontalStretch>false</HorizontalStretch>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<InputHint>
 								<v8:item>
@@ -166,6 +177,7 @@
 							<ChildItems>
 								<InputField name="Номер" id="4">
 									<DataPath>Объект.Number</DataPath>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>11</MaxWidth>
@@ -180,6 +192,7 @@
 											<v8:content>от</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
@@ -191,12 +204,17 @@
 						</UsualGroup>
 						<InputField name="ВидОперации" id="66">
 							<DataPath>Объект.ВидОперации</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="67"/>
 							<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="68"/>
 						</InputField>
 						<InputField name="Организация" id="116">
 							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="117"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="118"/>
@@ -206,7 +224,9 @@
 						</InputField>
 						<InputField name="Подразделение" id="167">
 							<DataPath>Объект.Подразделение</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<InputHint>
 								<v8:item>
@@ -225,7 +245,9 @@
 									<v8:content>Основание</v8:content>
 								</v8:item>
 							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ClearButton>true</ClearButton>
 							<InputHint>
 								<v8:item>
@@ -286,6 +308,13 @@
 					<ChildItems>
 						<LabelField name="АвторДокумента" id="170">
 							<DataPath>Объект.АвторДокумента</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Автор</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="171"/>
 							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="172"/>

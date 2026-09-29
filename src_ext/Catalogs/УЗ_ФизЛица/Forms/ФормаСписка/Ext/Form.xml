@@ -22,6 +22,16 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="161"/>
 			</Button>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="908">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="909"/>
+			</ButtonGroup>
 			<Button name="ФормаНапомнить" id="900">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>

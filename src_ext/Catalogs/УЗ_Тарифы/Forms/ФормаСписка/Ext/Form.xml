@@ -180,6 +180,13 @@
 							<ChildItems>
 								<LabelField name="Ссылка" id="36">
 									<DataPath>Список.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тариф</v8:content>
+										</v8:item>
+									</Title>
+									<Width>30</Width>
 									<ContextMenu name="СсылкаКонтекстноеМеню" id="37"/>
 									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="38"/>
 								</LabelField>

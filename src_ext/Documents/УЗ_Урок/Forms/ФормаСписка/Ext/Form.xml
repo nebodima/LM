@@ -28,6 +28,16 @@
 				<ShapeRepresentation>WhenActive</ShapeRepresentation>
 				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="55"/>
 			</Button>
+			<ButtonGroup name="ГруппаГлобальныеКоманды" id="908">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Глобальные команды</v8:content>
+					</v8:item>
+				</Title>
+				<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+				<ExtendedTooltip name="ГруппаГлобальныеКомандыРасширеннаяПодсказка" id="909"/>
+			</ButtonGroup>
 			<Button name="ФормаНапомнить" id="900">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -1547,7 +1557,7 @@
 				<dcsset:appearance>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

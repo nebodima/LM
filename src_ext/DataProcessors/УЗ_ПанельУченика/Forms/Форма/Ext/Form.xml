@@ -102,7 +102,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Активные группы обучения за период</v8:content>
+													<v8:content>Группы за период</v8:content>
 												</v8:item>
 											</Title>
 											<ClearButton>true</ClearButton>
@@ -1058,7 +1058,7 @@
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>

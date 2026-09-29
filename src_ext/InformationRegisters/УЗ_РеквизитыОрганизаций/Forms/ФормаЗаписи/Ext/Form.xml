@@ -23,7 +23,9 @@
 	<ChildItems>
 		<InputField name="Организация" id="105">
 			<DataPath>Запись.Организация</DataPath>
-			<HorizontalStretch>false</HorizontalStretch>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>36</MaxWidth>
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="106"/>
 			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="107"/>
 			<Events>
@@ -31,6 +33,7 @@
 			</Events>
 		</InputField>
 		<LabelDecoration name="СведенияХозяина" id="108">
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<HorizontalStretch>true</HorizontalStretch>
 			<ContextMenu name="СведенияХозяинаКонтекстноеМеню" id="109"/>
 			<ExtendedTooltip name="СведенияХозяинаРасширеннаяПодсказка" id="110"/>
@@ -44,16 +47,19 @@
 			</Title>
 			<Group>Vertical</Group>
 			<Representation>NormalSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ГруппаЛицензияРасширеннаяПодсказка" id="112"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаНомерЛицензии" id="113">
-					<Group>AlwaysHorizontal</Group>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
 					<ExtendedTooltip name="ГруппаНомерЛицензииРасширеннаяПодсказка" id="114"/>
 					<ChildItems>
 						<InputField name="НомерЛицензии" id="115">
 							<DataPath>Запись.НомерЛицензии</DataPath>
+							<TitleLocation>Left</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="НомерЛицензииКонтекстноеМеню" id="116"/>
 							<ExtendedTooltip name="НомерЛицензииРасширеннаяПодсказка" id="117"/>
@@ -63,9 +69,10 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>от</v8:content>
+									<v8:content>Дата лицензии</v8:content>
 								</v8:item>
 							</Title>
+							<TitleLocation>Left</TitleLocation>
 							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="ДатаЛицензииКонтекстноеМеню" id="119"/>
 							<ExtendedTooltip name="ДатаЛицензииРасширеннаяПодсказка" id="120"/>
@@ -74,6 +81,7 @@
 				</UsualGroup>
 				<InputField name="ЛицензиюВыдал" id="121">
 					<DataPath>Запись.ЛицензиюВыдал</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<ContextMenu name="ЛицензиюВыдалКонтекстноеМеню" id="122"/>
 					<ExtendedTooltip name="ЛицензиюВыдалРасширеннаяПодсказка" id="123"/>
 				</InputField>
@@ -95,25 +103,30 @@
 			</Title>
 			<Group>Vertical</Group>
 			<Representation>NormalSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ГруппаПодписиРасширеннаяПодсказка" id="128"/>
 			<ChildItems>
 				<InputField name="Ответственный" id="129">
 					<DataPath>Запись.Ответственный</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="130"/>
 					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="131"/>
 				</InputField>
 				<InputField name="Подписант" id="132">
 					<DataPath>Запись.Подписант</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<ContextMenu name="ПодписантКонтекстноеМеню" id="133"/>
 					<ExtendedTooltip name="ПодписантРасширеннаяПодсказка" id="134"/>
 				</InputField>
 				<InputField name="ДолжностьПодписанта" id="135">
 					<DataPath>Запись.ДолжностьПодписанта</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<ContextMenu name="ДолжностьПодписантаКонтекстноеМеню" id="136"/>
 					<ExtendedTooltip name="ДолжностьПодписантаРасширеннаяПодсказка" id="137"/>
 				</InputField>
 				<InputField name="ОснованиеПолномочий" id="138">
 					<DataPath>Запись.ОснованиеПолномочий</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<ContextMenu name="ОснованиеПолномочийКонтекстноеМеню" id="139"/>
 					<ExtendedTooltip name="ОснованиеПолномочийРасширеннаяПодсказка" id="140"/>
 				</InputField>
@@ -128,22 +141,27 @@
 			</Title>
 			<Group>Vertical</Group>
 			<Representation>NormalSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
 			<ExtendedTooltip name="ГруппаКонтактыРасширеннаяПодсказка" id="142"/>
 			<ChildItems>
 				<InputField name="Адрес" id="143">
 					<DataPath>Запись.Адрес</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<ContextMenu name="АдресКонтекстноеМеню" id="144"/>
 					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="145"/>
 				</InputField>
 				<InputField name="Телефон" id="146">
 					<DataPath>Запись.Телефон</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ТелефонКонтекстноеМеню" id="147"/>
 					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="148"/>
 				</InputField>
 				<InputField name="ПлатежныеРеквизиты" id="149">
 					<DataPath>Запись.ПлатежныеРеквизиты</DataPath>
+					<TitleLocation>Left</TitleLocation>
 					<Height>3</Height>
+					<VerticalStretch>false</VerticalStretch>
 					<MultiLine>true</MultiLine>
 					<ContextMenu name="ПлатежныеРеквизитыКонтекстноеМеню" id="150"/>
 					<ExtendedTooltip name="ПлатежныеРеквизитыРасширеннаяПодсказка" id="151"/>

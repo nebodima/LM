@@ -49,7 +49,9 @@
 					<ChildItems>
 						<InputField name="ГруппаИз" id="11">
 							<DataPath>Объект.ГруппаИз</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -64,7 +66,9 @@
 						</InputField>
 						<InputField name="ГруппаВ" id="14">
 							<DataPath>Объект.ГруппаВ</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -79,6 +83,9 @@
 						</InputField>
 						<InputField name="Причина" id="17">
 							<DataPath>Объект.Причина</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>28</MaxWidth>
 							<ContextMenu name="ПричинаКонтекстноеМеню" id="18"/>
 							<ExtendedTooltip name="ПричинаРасширеннаяПодсказка" id="19"/>
 						</InputField>
@@ -99,6 +106,7 @@
 							<ChildItems>
 								<InputField name="Номер" id="24">
 									<DataPath>Объект.Number</DataPath>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MaxWidth>11</MaxWidth>
@@ -113,6 +121,7 @@
 											<v8:content>Действует с</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
@@ -142,7 +151,9 @@
 						</UsualGroup>
 						<InputField name="Организация" id="30">
 							<DataPath>Объект.Организация</DataPath>
-							<HorizontalStretch>false</HorizontalStretch>
+							<TitleLocation>Top</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>24</MaxWidth>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="31"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="32"/>
 						</InputField>
@@ -385,6 +396,13 @@
 			<ChildItems>
 				<LabelField name="АвторДокумента" id="108">
 					<DataPath>Объект.АвторДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
 					<EditMode>EnterOnInput</EditMode>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="109"/>

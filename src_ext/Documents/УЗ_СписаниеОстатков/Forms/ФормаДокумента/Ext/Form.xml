@@ -77,6 +77,7 @@
 									<ChildItems>
 										<InputField name="Номер" id="4">
 											<DataPath>Объект.Number</DataPath>
+											<TitleLocation>Top</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>11</MaxWidth>
@@ -91,6 +92,7 @@
 													<v8:content>от</v8:content>
 												</v8:item>
 											</Title>
+											<TitleLocation>Top</TitleLocation>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 											<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
@@ -99,7 +101,9 @@
 								</UsualGroup>
 								<InputField name="Организация" id="213">
 									<DataPath>Объект.Организация</DataPath>
-									<HorizontalStretch>false</HorizontalStretch>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>24</MaxWidth>
 									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="214"/>
 									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="215"/>
 								</InputField>
@@ -514,6 +518,7 @@
 								<InputField name="КоличествоЧасов" id="222">
 									<DataPath>ЧасыТекстом</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
 									<Width>12</Width>
 									<ContextMenu name="КоличествоЧасовКонтекстноеМеню" id="223"/>
 									<ExtendedTooltip name="КоличествоЧасовРасширеннаяПодсказка" id="224"/>
@@ -527,6 +532,7 @@
 											<v8:content>Сумма взаиморасчетов</v8:content>
 										</v8:item>
 									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<Width>12</Width>
 									<ContextMenu name="СуммаКонтекстноеМеню" id="226"/>
 									<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="227"/>
@@ -534,6 +540,7 @@
 								<InputField name="СуммаБонусов" id="228">
 									<DataPath>Объект.СуммаБонусов</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
 									<Width>12</Width>
 									<ContextMenu name="СуммаБонусовКонтекстноеМеню" id="229"/>
 									<ExtendedTooltip name="СуммаБонусовРасширеннаяПодсказка" id="230"/>
@@ -541,6 +548,7 @@
 								<InputField name="СуммаПоКассе" id="231">
 									<DataPath>Объект.СуммаПоКассе</DataPath>
 									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
 									<Width>12</Width>
 									<ContextMenu name="СуммаПоКассеКонтекстноеМеню" id="232"/>
 									<ExtendedTooltip name="СуммаПоКассеРасширеннаяПодсказка" id="233"/>
@@ -548,6 +556,13 @@
 								<LabelField name="АвторДокумента" id="25">
 									<DataPath>Объект.АвторДокумента</DataPath>
 									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Автор</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="АвторДокументаКонтекстноеМеню" id="26"/>
 									<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="27"/>

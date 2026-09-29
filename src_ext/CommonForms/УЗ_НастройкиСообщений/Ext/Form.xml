@@ -74,6 +74,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаТелеграмРасширеннаяПодсказка" id="19"/>
 							<ChildItems>
 								<CheckBoxField name="ТелеграмВключен" id="20">
@@ -188,6 +189,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаSMSРасширеннаяПодсказка" id="36"/>
 							<ChildItems>
 								<CheckBoxField name="SMSВключен" id="37">
@@ -315,6 +317,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаWhatsAppРасширеннаяПодсказка" id="56"/>
 							<ChildItems>
 								<CheckBoxField name="WhatsAppВключен" id="57">
@@ -493,6 +496,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаЗанятиеРасширеннаяПодсказка" id="85"/>
 							<ChildItems>
 								<CheckBoxField name="ЗанятиеВключено" id="86">
@@ -586,6 +590,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаАбонементРасширеннаяПодсказка" id="105"/>
 							<ChildItems>
 								<CheckBoxField name="АбонементВключено" id="106">
@@ -701,6 +706,7 @@
 							</Title>
 							<Group>Vertical</Group>
 							<Representation>NormalSeparation</Representation>
+							<ThroughAlign>Use</ThroughAlign>
 							<ExtendedTooltip name="ГруппаДолгРасширеннаяПодсказка" id="130"/>
 							<ChildItems>
 								<CheckBoxField name="ДолгВключено" id="131">
