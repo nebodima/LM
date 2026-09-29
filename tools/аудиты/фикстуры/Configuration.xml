@@ -7,6 +7,7 @@
 			<Name>УЗ_ext</Name>
 			<ConfigurationExtensionPurpose>AddOn</ConfigurationExtensionPurpose>
 			<NamePrefix>УЗ_</NamePrefix>
+			<Version>2.0.0.1</Version>
 		</Properties>
 		<ChildObjects>
 			<Subsystem>УЗ_Раздел</Subsystem>
