@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 tools/сценарии/итоги/
 tools/сценарии/*.epf
+releases/демо/*.dt
