@@ -33,6 +33,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_НастройкиПочты</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_СоставГрупп</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_УрокиВРасчетахЗарплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ДокументыФизЛиц</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УЗ_ПечатнаяФорма</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УЗ_Напомнить</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">FilterCriterion.УЗ_СвязанныеДокументы</xr:Item>

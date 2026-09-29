@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="101">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="102"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="103">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="104"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="105">
+			<DataPath>Запись.Организация</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="106"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="107"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="СведенияХозяина" id="108">
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="СведенияХозяинаКонтекстноеМеню" id="109"/>
+			<ExtendedTooltip name="СведенияХозяинаРасширеннаяПодсказка" id="110"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаЛицензия" id="111">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Образовательная деятельность</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЛицензияРасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНомерЛицензии" id="113">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНомерЛицензииРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<InputField name="НомерЛицензии" id="115">
+							<DataPath>Запись.НомерЛицензии</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НомерЛицензииКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="НомерЛицензииРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<InputField name="ДатаЛицензии" id="118">
+							<DataPath>Запись.ДатаЛицензии</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>от</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ДатаЛицензииКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ДатаЛицензииРасширеннаяПодсказка" id="120"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="ЛицензиюВыдал" id="121">
+					<DataPath>Запись.ЛицензиюВыдал</DataPath>
+					<ContextMenu name="ЛицензиюВыдалКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ЛицензиюВыдалРасширеннаяПодсказка" id="123"/>
+				</InputField>
+				<CheckBoxField name="ИПБезЛицензии" id="124">
+					<DataPath>Запись.ИПБезЛицензии</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИПБезЛицензииКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="ИПБезЛицензииРасширеннаяПодсказка" id="126"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодписи" id="127">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кто подписывает</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПодписиРасширеннаяПодсказка" id="128"/>
+			<ChildItems>
+				<InputField name="Ответственный" id="129">
+					<DataPath>Запись.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="131"/>
+				</InputField>
+				<InputField name="Подписант" id="132">
+					<DataPath>Запись.Подписант</DataPath>
+					<ContextMenu name="ПодписантКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="ПодписантРасширеннаяПодсказка" id="134"/>
+				</InputField>
+				<InputField name="ДолжностьПодписанта" id="135">
+					<DataPath>Запись.ДолжностьПодписанта</DataPath>
+					<ContextMenu name="ДолжностьПодписантаКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ДолжностьПодписантаРасширеннаяПодсказка" id="137"/>
+				</InputField>
+				<InputField name="ОснованиеПолномочий" id="138">
+					<DataPath>Запись.ОснованиеПолномочий</DataPath>
+					<ContextMenu name="ОснованиеПолномочийКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="ОснованиеПолномочийРасширеннаяПодсказка" id="140"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонтакты" id="141">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для договора</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаКонтактыРасширеннаяПодсказка" id="142"/>
+			<ChildItems>
+				<InputField name="Адрес" id="143">
+					<DataPath>Запись.Адрес</DataPath>
+					<ContextMenu name="АдресКонтекстноеМеню" id="144"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="145"/>
+				</InputField>
+				<InputField name="Телефон" id="146">
+					<DataPath>Запись.Телефон</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТелефонКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="148"/>
+				</InputField>
+				<InputField name="ПлатежныеРеквизиты" id="149">
+					<DataPath>Запись.ПлатежныеРеквизиты</DataPath>
+					<Height>3</Height>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ПлатежныеРеквизитыКонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="ПлатежныеРеквизитыРасширеннаяПодсказка" id="151"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УЗ_РеквизитыОрганизаций</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

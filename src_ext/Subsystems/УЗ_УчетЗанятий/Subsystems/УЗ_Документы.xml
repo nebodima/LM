@@ -25,6 +25,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_Абонемент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УЗ_ФизЛица</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ПереводУченика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ДоговорОбучения</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ИзменениеУроков</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УЗ_ПанельУченика</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.УЗ_ГрафикРабочегоВремениПедагога</xr:Item>

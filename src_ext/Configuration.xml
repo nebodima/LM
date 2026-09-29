@@ -161,6 +161,8 @@
 			<Document>УЗ_РасчетЗарплаты</Document>
 			<Document>УЗ_СписаниеОстатков</Document>
 			<Document>УЗ_Урок</Document>
+			<Document>УЗ_СправкаОбОплатеОбучения</Document>
+			<Document>УЗ_ДоговорОбучения</Document>
 			<DocumentJournal>УЗ_КассовыйЖурнал</DocumentJournal>
 			<DocumentJournal>УЗ_ОбщийЖурнал</DocumentJournal>
 			<Enum>УЗ_ВидыОпераций</Enum>
@@ -191,6 +193,8 @@
 			<InformationRegister>УЗ_СоставГрупп</InformationRegister>
 			<InformationRegister>УЗ_ЦеныТарифов</InformationRegister>
 			<InformationRegister>УЗ_УрокиВРасчетахЗарплаты</InformationRegister>
+			<InformationRegister>УЗ_РеквизитыОрганизаций</InformationRegister>
+			<InformationRegister>УЗ_ДокументыФизЛиц</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
 			<AccumulationRegister>УЗ_Расходы</AccumulationRegister>

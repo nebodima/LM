@@ -5,7 +5,7 @@
 		<defaultLanguage>ru</defaultLanguage>
 	</languageSettings>
 	<columns>
-		<size>2</size>
+		<size>3</size>
 	</columns>
 	<rowsItem>
 		<index>0</index>
@@ -20,6 +20,12 @@
 				<c>
 					<f>0</f>
 					<parameter>Сумма</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>0</f>
+					<parameter>ИНН_1</parameter>
 				</c>
 			</c>
 		</row>

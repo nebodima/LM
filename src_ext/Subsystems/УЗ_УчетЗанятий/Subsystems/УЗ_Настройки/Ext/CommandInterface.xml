@@ -21,6 +21,9 @@
 		<Command name="InformationRegister.УЗ_Настройки.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="InformationRegister.УЗ_РеквизитыОрганизаций.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="InformationRegister.УЗ_ДатыЗапрета.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="101">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="102"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="103">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="104"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="105">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="106"/>
+			<ChildItems>
+				<UsualGroup name="ЛеваяКолонка" id="107">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="108"/>
+					<ChildItems>
+						<InputField name="Обучающийся" id="109">
+							<DataPath>Объект.Обучающийся</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОбучающийсяКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ОбучающийсяРасширеннаяПодсказка" id="111"/>
+							<Events>
+								<Event name="OnChange">ОбучающийсяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Заказчик" id="112">
+							<DataPath>Объект.Заказчик</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>обучающийся сам</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ЗаказчикКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ЗаказчикРасширеннаяПодсказка" id="114"/>
+						</InputField>
+						<InputField name="ПредметОбучения" id="115">
+							<DataPath>Объект.ПредметОбучения</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<InputField name="Абонемент" id="118">
+							<DataPath>Объект.Абонемент</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="АбонементКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="АбонементРасширеннаяПодсказка" id="120"/>
+							<Events>
+								<Event name="OnChange">АбонементПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Программа" id="121">
+							<DataPath>Объект.Программа</DataPath>
+							<ContextMenu name="ПрограммаКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ПрограммаРасширеннаяПодсказка" id="123"/>
+						</InputField>
+						<UsualGroup name="ГруппаСрок" id="124">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСрокРасширеннаяПодсказка" id="125"/>
+							<ChildItems>
+								<InputField name="ДатаНачала" id="126">
+									<DataPath>Объект.ДатаНачала</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="128"/>
+								</InputField>
+								<InputField name="ДатаОкончания" id="129">
+									<DataPath>Объект.ДатаОкончания</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="131"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСтоимость" id="132">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтоимостьРасширеннаяПодсказка" id="133"/>
+							<ChildItems>
+								<InputField name="Стоимость" id="134">
+									<DataPath>Объект.Стоимость</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="СтоимостьКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="СтоимостьРасширеннаяПодсказка" id="136"/>
+								</InputField>
+								<InputField name="ОписаниеСтоимости" id="137">
+									<DataPath>Объект.ОписаниеСтоимости</DataPath>
+									<ContextMenu name="ОписаниеСтоимостиКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="ОписаниеСтоимостиРасширеннаяПодсказка" id="139"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ПорядокОплаты" id="140">
+							<DataPath>Объект.ПорядокОплаты</DataPath>
+							<Height>3</Height>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ПорядокОплатыКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="ПорядокОплатыРасширеннаяПодсказка" id="142"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ПраваяКолонка" id="143">
+					<Group>Vertical</Group>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="144"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="145">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="146"/>
+							<ChildItems>
+								<InputField name="Номер" id="147">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>11</MaxWidth>
+									<ContextMenu name="НомерКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="149"/>
+								</InputField>
+								<InputField name="Дата" id="150">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="152"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="153">
+							<DataPath>Объект.Организация</DataPath>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="154"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="155"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ПроверьтеСЮристом" id="156">
+			<Height>2</Height>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:УЗ_ЦветПояснения</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст договора — нейтральный шаблон (Печать → «Договор об оказании платных образовательных услуг»). Перед первым использованием проверьте его с юристом: условия о пропусках, переносах и возврате денег у каждой студии свои.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПроверьтеСЮристомКонтекстноеМеню" id="157"/>
+			<ExtendedTooltip name="ПроверьтеСЮристомРасширеннаяПодсказка" id="158"/>
+		</LabelDecoration>
+		<UsualGroup name="Подвал" id="159">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="160"/>
+			<ChildItems>
+				<LabelField name="АвторДокумента" id="164">
+					<DataPath>Объект.АвторДокумента</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="АвторДокументаКонтекстноеМеню" id="165"/>
+					<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="166"/>
+				</LabelField>
+				<InputField name="Комментарий" id="161">
+					<DataPath>Объект.Комментарий</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>50</MaxWidth>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="162"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="163"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ДоговорОбучения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
