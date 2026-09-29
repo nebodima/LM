@@ -183,6 +183,9 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
 									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -197,6 +200,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="117"/>
 							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="118"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
 						</InputField>
 						<InputField name="Подразделение" id="167">
 							<DataPath>Объект.Подразделение</DataPath>
@@ -299,6 +305,11 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="ПолучательПоУмолчанию" id="2">
+			<Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>
