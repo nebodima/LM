@@ -15,7 +15,6 @@
 			<Server>false</Server>
 			<ExternalConnection>false</ExternalConnection>
 			<ClientOrdinaryApplication>false</ClientOrdinaryApplication>
-			<Client>false</Client>
 			<ServerCall>false</ServerCall>
 			<Privileged>false</Privileged>
 			<ReturnValuesReuse>DuringSession</ReturnValuesReuse>

@@ -3,36 +3,6 @@
   "нет значения <AutoSaveDataInSettings>DontUse",
   "нет значения <SaveDataInSettings>DontUse"
  ],
- "CommonModules/УЗ_Общий.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_ОбщийКлиент.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_ОбщийКлиентСервер.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_ОповещенияГлобальный.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_ОповещенияКлиент.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_ОповещенияКлиентПовтИсп.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_Печать.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_ПечатьКлиент.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_Почта.xml": [
-  "нет значения <Client>false"
- ],
- "CommonModules/УЗ_Среда.xml": [
-  "нет значения <Client>false"
- ],
  "DataProcessors/УЗ_МоиУроки/Forms/Форма/Ext/Form.xml": [
   "нет значения <AutoInsertNewRow>false"
  ],
