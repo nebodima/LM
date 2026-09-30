@@ -5,7 +5,7 @@
 Скрипт повторяемый: второй запуск ничего не меняет.
 
   * Help.xml — `<Help xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" … version="…"><Page>ru</Page></Help>`, версия
-    формата — как у Configuration.xml каталога (у src_ext 2.11);
+    формата — как у Configuration.xml каталога (у src_ext 2.20 — выгрузка платформы 8.3.27, с 30.09.2026 все файлы одной версии);
   * у ru.html и Help.xml — метка UTF-8 (BOM), как в выгрузке платформы (иначе следующая выгрузка «изменит»
     файл целиком), переводы строк CRLF не навязываются.
 
@@ -42,7 +42,7 @@ def главный():
     только_проверка = "--проверка" in sys.argv
     каталог = os.path.abspath(аргументы[0]) if аргументы else os.path.join(КОРЕНЬ, "src_ext")
     конф = os.path.join(каталог, "Configuration.xml")
-    версия = "2.11"
+    версия = "2.20"
     if os.path.isfile(конф):
         м = re.search(r'<MetaDataObject[^>]*\bversion="([\d.]+)"', io.open(конф, encoding="utf-8-sig").read())
         версия = м.group(1) if м else версия

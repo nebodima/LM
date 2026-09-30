@@ -11,20 +11,20 @@
 			</Synonym>
 			<Comment/>
 			<Source>
-				<v8:Type>cfg:DocumentObject.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ДополнительныеРасходы</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_РасчетЗарплаты</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачислениеУченику</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_СписаниеОстатков</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_СправкаОбОплатеОбучения</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_ДоговорОбучения</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_ПереводУченика</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачислениеБонусов</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ДоговорОбучения</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_РасходДенег</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ПриходДенег</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ПереводУченика</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_Урок</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачисленияПедагогам</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ПеремещениеДенег</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_ПриходДенег</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_РасходДенег</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_РасчетЗарплаты</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_СписаниеОстатков</v8:Type>
-				<v8:Type>cfg:DocumentObject.УЗ_Урок</v8:Type>
 			</Source>
 			<Event>BeforeWrite</Event>
 			<Handler>CommonModule.УЗ_ДатыЗапрета.ПередЗаписьюДокумента</Handler>

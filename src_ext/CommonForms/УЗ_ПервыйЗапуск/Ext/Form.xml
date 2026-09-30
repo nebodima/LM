@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -18,8 +18,8 @@
 			</Button>
 			<Button name="ФормаДалее" id="3">
 				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
 				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.Далее</CommandName>
 				<ExtendedTooltip name="ФормаДалееРасширеннаяПодсказка" id="4"/>
 			</Button>
@@ -60,6 +60,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаОрганизацияРасширеннаяПодсказка" id="14"/>
 							<ChildItems>
@@ -100,6 +101,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаКассаРасширеннаяПодсказка" id="24"/>
 							<ChildItems>
@@ -142,6 +144,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаПредметыРасширеннаяПодсказка" id="34"/>
 							<ChildItems>
@@ -186,6 +189,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаПедагогиРасширеннаяПодсказка" id="44"/>
 							<ChildItems>
@@ -208,6 +212,7 @@
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ПедагогиКонтекстноеМеню" id="49"/>
 									<AutoCommandBar name="ПедагогиКоманднаяПанель" id="50"/>
 									<ExtendedTooltip name="ПедагогиРасширеннаяПодсказка" id="51"/>
@@ -292,6 +297,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаЦенаРасширеннаяПодсказка" id="73"/>
 							<ChildItems>
@@ -321,6 +327,7 @@
 								</InputField>
 								<UsualGroup name="ГруппаАбонемент" id="80">
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаАбонементРасширеннаяПодсказка" id="81"/>
@@ -368,6 +375,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаГруппаРасширеннаяПодсказка" id="91"/>
 							<ChildItems>
@@ -397,6 +405,7 @@
 										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаДниРасширеннаяПодсказка" id="99"/>
 									<ChildItems>
@@ -495,6 +504,7 @@
 								</UsualGroup>
 								<UsualGroup name="ГруппаВремя" id="121">
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаВремяРасширеннаяПодсказка" id="122"/>
@@ -562,6 +572,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаУченикиРасширеннаяПодсказка" id="132"/>
 							<ChildItems>
@@ -584,6 +595,7 @@
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="УченикиКонтекстноеМеню" id="137"/>
 									<AutoCommandBar name="УченикиКоманднаяПанель" id="138"/>
 									<ExtendedTooltip name="УченикиРасширеннаяПодсказка" id="139"/>
@@ -656,6 +668,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="ГруппаИтогРасширеннаяПодсказка" id="161"/>
 							<ChildItems>
@@ -681,6 +694,7 @@
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ЖурналКонтекстноеМеню" id="166"/>
 									<AutoCommandBar name="ЖурналКоманднаяПанель" id="167"/>
 									<ExtendedTooltip name="ЖурналРасширеннаяПодсказка" id="168"/>

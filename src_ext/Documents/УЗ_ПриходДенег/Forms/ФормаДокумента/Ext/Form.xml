@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -89,13 +89,13 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
-		<Event name="AfterWrite">ПослеЗаписи</Event>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="Ссылка" id="24">
@@ -108,12 +108,14 @@
 		</InputField>
 		<UsualGroup name="Шапка" id="276">
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="277"/>
 			<ChildItems>
 				<UsualGroup name="ЛеваяКолонка" id="278">
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="279"/>
@@ -134,6 +136,7 @@
 						</InputField>
 						<UsualGroup name="ГруппаПлательщик" id="295">
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаПлательщикРасширеннаяПодсказка" id="296"/>
@@ -152,11 +155,11 @@
 									<ClearButton>true</ClearButton>
 									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 									<InputHint>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>платит сам ученик</v8:content>
-									</v8:item>
-								</InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>платит сам ученик</v8:content>
+										</v8:item>
+									</InputHint>
 									<ContextMenu name="ПлательщикКонтекстноеМеню" id="289"/>
 									<ExtendedTooltip name="ПлательщикРасширеннаяПодсказка" id="290"/>
 								</InputField>
@@ -214,6 +217,7 @@
 						</InputField>
 						<UsualGroup name="Группа5" id="178">
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="179"/>
@@ -234,6 +238,7 @@
 								</InputField>
 								<UsualGroup name="Группа3" id="272">
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="273"/>
@@ -265,14 +270,16 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ПраваяКолонка" id="280">
-					<Group>Vertical</Group>
 					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ПраваяКолонкаРасширеннаяПодсказка" id="281"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаНомерДата" id="282">
 							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="283"/>
@@ -402,127 +409,129 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<ExtendedTooltip name="ГруппаРасшифровкаРасширеннаяПодсказка" id="332"/>
 			<ChildItems>
-			<Table name="РасшифровкаПлатежа" id="318">
-				<Representation>List</Representation>
-				<HeightInTableRows>7</HeightInTableRows>
-				<AutoInsertNewRow>true</AutoInsertNewRow>
-				<DataPath>Объект.РасшифровкаПлатежа</DataPath>
-				<RowFilter xsi:nil="true"/>
-				<ContextMenu name="РасшифровкаПлатежаКонтекстноеМеню" id="319"/>
-				<AutoCommandBar name="РасшифровкаПлатежаКоманднаяПанель" id="320">
-					<Autofill>false</Autofill>
+				<Table name="РасшифровкаПлатежа" id="318">
+					<Representation>List</Representation>
+					<HeightInTableRows>7</HeightInTableRows>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<DataPath>Объект.РасшифровкаПлатежа</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="РасшифровкаПлатежаКонтекстноеМеню" id="319"/>
+					<AutoCommandBar name="РасшифровкаПлатежаКоманднаяПанель" id="320">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="РасшифровкаПлатежаДобавить" id="312">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Item.РасшифровкаПлатежа.StandardCommand.Add</CommandName>
+								<ExtendedTooltip name="РасшифровкаПлатежаДобавитьРасширеннаяПодсказка" id="313"/>
+							</Button>
+							<Button name="РасшифровкаПлатежаУдалить" id="314">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.РасшифровкаПлатежа.StandardCommand.Delete</CommandName>
+								<ExtendedTooltip name="РасшифровкаПлатежаУдалитьРасширеннаяПодсказка" id="315"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="РасшифровкаПлатежаРасширеннаяПодсказка" id="321"/>
+					<SearchStringAddition name="РасшифровкаПлатежаСтрокаПоиска" id="322">
+						<AdditionSource>
+							<Item>РасшифровкаПлатежа</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РасшифровкаПлатежаСтрокаПоискаКонтекстноеМеню" id="323"/>
+						<ExtendedTooltip name="РасшифровкаПлатежаСтрокаПоискаРасширеннаяПодсказка" id="324"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="РасшифровкаПлатежаСостояниеПросмотра" id="325">
+						<AdditionSource>
+							<Item>РасшифровкаПлатежа</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="РасшифровкаПлатежаСостояниеПросмотраКонтекстноеМеню" id="326"/>
+						<ExtendedTooltip name="РасшифровкаПлатежаСостояниеПросмотраРасширеннаяПодсказка" id="327"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="РасшифровкаПлатежаУправлениеПоиском" id="328">
+						<AdditionSource>
+							<Item>РасшифровкаПлатежа</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="РасшифровкаПлатежаУправлениеПоискомКонтекстноеМеню" id="329"/>
+						<ExtendedTooltip name="РасшифровкаПлатежаУправлениеПоискомРасширеннаяПодсказка" id="330"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="AfterDeleteRow">РасшифровкаПлатежаПослеУдаления</Event>
+					</Events>
 					<ChildItems>
-						<Button name="РасшифровкаПлатежаДобавить" id="312">
-							<Type>CommandBarButton</Type>
-							<Representation>PictureAndText</Representation>
-							<CommandName>Form.Item.РасшифровкаПлатежа.StandardCommand.Add</CommandName>
-							<ExtendedTooltip name="РасшифровкаПлатежаДобавитьРасширеннаяПодсказка" id="313"/>
-						</Button>
-						<Button name="РасшифровкаПлатежаУдалить" id="314">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Item.РасшифровкаПлатежа.StandardCommand.Delete</CommandName>
-							<ExtendedTooltip name="РасшифровкаПлатежаУдалитьРасширеннаяПодсказка" id="315"/>
-						</Button>
+						<LabelField name="РасшифровкаПлатежаНомерСтроки" id="297">
+							<DataPath>Объект.РасшифровкаПлатежа.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>3</Width>
+							<ContextMenu name="РасшифровкаПлатежаНомерСтрокиКонтекстноеМеню" id="298"/>
+							<ExtendedTooltip name="РасшифровкаПлатежаНомерСтрокиРасширеннаяПодсказка" id="299"/>
+						</LabelField>
+						<InputField name="РасшифровкаПлатежаУченик" id="300">
+							<DataPath>Объект.РасшифровкаПлатежа.Ученик</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>25</Width>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<ContextMenu name="РасшифровкаПлатежаУченикКонтекстноеМеню" id="301"/>
+							<ExtendedTooltip name="РасшифровкаПлатежаУченикРасширеннаяПодсказка" id="302"/>
+							<Events>
+								<Event name="OnChange">РасшифровкаПлатежаУченикПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РасшифровкаПлатежаПредметОбучения" id="303">
+							<DataPath>Объект.РасшифровкаПлатежа.ПредметОбучения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предмет</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>15</Width>
+							<ContextMenu name="РасшифровкаПлатежаПредметОбученияКонтекстноеМеню" id="304"/>
+							<ExtendedTooltip name="РасшифровкаПлатежаПредметОбученияРасширеннаяПодсказка" id="305"/>
+							<Events>
+								<Event name="OnChange">РасшифровкаПлатежаПредметОбученияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РасшифровкаПлатежаАбонемент" id="306">
+							<DataPath>Объект.РасшифровкаПлатежа.Абонемент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>20</Width>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.ФизЛицо</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Items.РасшифровкаПлатежа.CurrentData.Ученик</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="РасшифровкаПлатежаАбонементКонтекстноеМеню" id="307"/>
+							<ExtendedTooltip name="РасшифровкаПлатежаАбонементРасширеннаяПодсказка" id="308"/>
+							<Events>
+								<Event name="OnChange">РасшифровкаПлатежаАбонементПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РасшифровкаПлатежаСумма" id="309">
+							<DataPath>Объект.РасшифровкаПлатежа.Сумма</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>10</Width>
+							<ContextMenu name="РасшифровкаПлатежаСуммаКонтекстноеМеню" id="310"/>
+							<ExtendedTooltip name="РасшифровкаПлатежаСуммаРасширеннаяПодсказка" id="311"/>
+							<Events>
+								<Event name="OnChange">РасшифровкаПлатежаСуммаПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
-				</AutoCommandBar>
-				<ExtendedTooltip name="РасшифровкаПлатежаРасширеннаяПодсказка" id="321"/>
-				<SearchStringAddition name="РасшифровкаПлатежаСтрокаПоиска" id="322">
-					<AdditionSource>
-						<Item>РасшифровкаПлатежа</Item>
-						<Type>SearchStringRepresentation</Type>
-					</AdditionSource>
-					<ContextMenu name="РасшифровкаПлатежаСтрокаПоискаКонтекстноеМеню" id="323"/>
-					<ExtendedTooltip name="РасшифровкаПлатежаСтрокаПоискаРасширеннаяПодсказка" id="324"/>
-				</SearchStringAddition>
-				<ViewStatusAddition name="РасшифровкаПлатежаСостояниеПросмотра" id="325">
-					<AdditionSource>
-						<Item>РасшифровкаПлатежа</Item>
-						<Type>ViewStatusRepresentation</Type>
-					</AdditionSource>
-					<ContextMenu name="РасшифровкаПлатежаСостояниеПросмотраКонтекстноеМеню" id="326"/>
-					<ExtendedTooltip name="РасшифровкаПлатежаСостояниеПросмотраРасширеннаяПодсказка" id="327"/>
-				</ViewStatusAddition>
-				<SearchControlAddition name="РасшифровкаПлатежаУправлениеПоиском" id="328">
-					<AdditionSource>
-						<Item>РасшифровкаПлатежа</Item>
-						<Type>SearchControl</Type>
-					</AdditionSource>
-					<ContextMenu name="РасшифровкаПлатежаУправлениеПоискомКонтекстноеМеню" id="329"/>
-					<ExtendedTooltip name="РасшифровкаПлатежаУправлениеПоискомРасширеннаяПодсказка" id="330"/>
-				</SearchControlAddition>
-				<Events>
-					<Event name="AfterDeleteRow">РасшифровкаПлатежаПослеУдаления</Event>
-				</Events>
-				<ChildItems>
-					<LabelField name="РасшифровкаПлатежаНомерСтроки" id="297">
-						<DataPath>Объект.РасшифровкаПлатежа.LineNumber</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<Width>3</Width>
-						<ContextMenu name="РасшифровкаПлатежаНомерСтрокиКонтекстноеМеню" id="298"/>
-						<ExtendedTooltip name="РасшифровкаПлатежаНомерСтрокиРасширеннаяПодсказка" id="299"/>
-					</LabelField>
-					<InputField name="РасшифровкаПлатежаУченик" id="300">
-						<DataPath>Объект.РасшифровкаПлатежа.Ученик</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<Width>25</Width>
-						<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-						<ContextMenu name="РасшифровкаПлатежаУченикКонтекстноеМеню" id="301"/>
-						<ExtendedTooltip name="РасшифровкаПлатежаУченикРасширеннаяПодсказка" id="302"/>
-						<Events>
-							<Event name="OnChange">РасшифровкаПлатежаУченикПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="РасшифровкаПлатежаПредметОбучения" id="303">
-						<DataPath>Объект.РасшифровкаПлатежа.ПредметОбучения</DataPath>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Предмет</v8:content>
-							</v8:item>
-						</Title>
-						<EditMode>EnterOnInput</EditMode>
-						<Width>15</Width>
-						<ContextMenu name="РасшифровкаПлатежаПредметОбученияКонтекстноеМеню" id="304"/>
-						<ExtendedTooltip name="РасшифровкаПлатежаПредметОбученияРасширеннаяПодсказка" id="305"/>
-						<Events>
-							<Event name="OnChange">РасшифровкаПлатежаПредметОбученияПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="РасшифровкаПлатежаАбонемент" id="306">
-						<DataPath>Объект.РасшифровкаПлатежа.Абонемент</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<Width>20</Width>
-						<ChoiceParameterLinks>
-						<xr:Link>
-							<xr:Name>Отбор.ФизЛицо</xr:Name>
-							<xr:DataPath xsi:type="xs:string">Items.РасшифровкаПлатежа.CurrentData.Ученик</xr:DataPath>
-							<xr:ValueChange>Clear</xr:ValueChange>
-						</xr:Link>
-					</ChoiceParameterLinks>
-						<ContextMenu name="РасшифровкаПлатежаАбонементКонтекстноеМеню" id="307"/>
-						<ExtendedTooltip name="РасшифровкаПлатежаАбонементРасширеннаяПодсказка" id="308"/>
-						<Events>
-							<Event name="OnChange">РасшифровкаПлатежаАбонементПриИзменении</Event>
-						</Events>
-					</InputField>
-					<InputField name="РасшифровкаПлатежаСумма" id="309">
-						<DataPath>Объект.РасшифровкаПлатежа.Сумма</DataPath>
-						<EditMode>EnterOnInput</EditMode>
-						<Width>10</Width>
-						<ContextMenu name="РасшифровкаПлатежаСуммаКонтекстноеМеню" id="310"/>
-						<ExtendedTooltip name="РасшифровкаПлатежаСуммаРасширеннаяПодсказка" id="311"/>
-						<Events>
-							<Event name="OnChange">РасшифровкаПлатежаСуммаПриИзменении</Event>
-						</Events>
-					</InputField>
-				</ChildItems>
-			</Table>
+				</Table>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа4" id="176">
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="177"/>
@@ -547,6 +556,7 @@
 				<UsualGroup name="Группа6" id="187">
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="188"/>
@@ -580,6 +590,7 @@
 				</v8:item>
 			</Title>
 			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
 			<CollapsedRepresentationTitle>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -664,6 +675,7 @@
 		</UsualGroup>
 		<UsualGroup name="Подвал" id="284">
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ПодвалРасширеннаяПодсказка" id="285"/>
@@ -685,8 +697,9 @@
 					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="21"/>
 				</InputField>
 				<UsualGroup name="Итоги" id="286">
-					<Group>Vertical</Group>
 					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ИтогиРасширеннаяПодсказка" id="287"/>

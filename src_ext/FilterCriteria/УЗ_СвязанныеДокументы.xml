@@ -21,19 +21,19 @@
 			</Synonym>
 			<Comment/>
 			<Type>
-				<v8:Type>cfg:DocumentRef.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_ДополнительныеРасходы</v8:Type>
-				<v8:Type>cfg:DocumentRef.УЗ_НачислениеУченику</v8:Type>
-				<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
-				<v8:Type>cfg:DocumentRef.УЗ_НачисленияПедагогам</v8:Type>
-				<v8:Type>cfg:DocumentRef.УЗ_ПеремещениеДенег</v8:Type>
+				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_ПриходДенег</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_СписаниеОстатков</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_НачисленияПедагогам</v8:Type>
+				<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_РасходДенег</v8:Type>
 				<v8:Type>cfg:DocumentRef.УЗ_РасчетЗарплаты</v8:Type>
-				<v8:Type>cfg:DocumentRef.УЗ_СписаниеОстатков</v8:Type>
-				<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
-				<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
-				<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_НачислениеУченику</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_ПеремещениеДенег</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
+				<v8:Type>cfg:DocumentRef.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
 			</Type>
 			<UseStandardCommands>true</UseStandardCommands>
 			<Content>

@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Мои уроки</v8:content>
 		</v8:item>
 	</Title>
-	<AutoTitle>false</AutoTitle>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
 			<Button name="ФормаЗаписать" id="1">
-				<Type>CommandBarButton</Type>	
-				<DefaultButton>true</DefaultButton>
+				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.Записать</CommandName>
 				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="2"/>
 			</Button>
 			<Button name="ФормаОбновить" id="3">
-				<Type>CommandBarButton</Type>	
+				<Type>CommandBarButton</Type>
 				<Representation>Picture</Representation>
 				<CommandName>Form.Command.Обновить</CommandName>
 				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="4"/>
@@ -32,8 +32,8 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПериод" id="13">
@@ -43,17 +43,17 @@
 			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="14"/>
 			<ChildItems>
 				<InputField name="Период" id="7">
-					<DataPath>Период</DataPath>	
+					<DataPath>Период</DataPath>
 					<Width>24</Width>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="8"/>
-					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="9"/>	
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="9"/>
 					<Events>
 						<Event name="OnChange">ПериодПриИзменении</Event>
 					</Events>
 				</InputField>
 				<LabelField name="Подсказка" id="10">
-					<DataPath>Подсказка</DataPath>	
+					<DataPath>Подсказка</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<Height>2</Height>
@@ -63,11 +63,11 @@
 				</LabelField>
 			</ChildItems>
 		</UsualGroup>
-		<Pages name="Страницы" id="111">	
+		<Pages name="Страницы" id="111">
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="112"/>
 			<Events>
 				<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
 			</Events>
-			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="112"/>
 			<ChildItems>
 				<Page name="СтраницаУроки" id="104">
 					<Title>
@@ -75,7 +75,7 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Уроки</v8:content>
 						</v8:item>
-					</Title>	
+					</Title>
 					<Picture>
 						<xr:Ref>CommonPicture.УЗ_ИЯвка</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -94,12 +94,12 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаСписокРасширеннаяПодсказка" id="101"/>
 									<ChildItems>
-										<Table name="Уроки" id="40">	
+										<Table name="Уроки" id="40">
 											<Representation>List</Representation>
 											<ReadOnly>true</ReadOnly>
-											<HeightInTableRows>12</HeightInTableRows>
 											<ChangeRowSet>false</ChangeRowSet>
 											<ChangeRowOrder>false</ChangeRowOrder>
+											<HeightInTableRows>12</HeightInTableRows>
 											<DataPath>Уроки</DataPath>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
@@ -112,6 +112,7 @@
 												<ExcludedCommand>SortListAsc</ExcludedCommand>
 												<ExcludedCommand>SortListDesc</ExcludedCommand>
 											</CommandSet>
+											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="УрокиКонтекстноеМеню" id="41"/>
 											<AutoCommandBar name="УрокиКоманднаяПанель" id="39">
 												<Autofill>false</Autofill>
@@ -140,13 +141,13 @@
 												</AdditionSource>
 												<ContextMenu name="УрокиУправлениеПоискомКонтекстноеМеню" id="37"/>
 												<ExtendedTooltip name="УрокиУправлениеПоискомРасширеннаяПодсказка" id="38"/>
-											</SearchControlAddition>	
+											</SearchControlAddition>
 											<Events>
 												<Event name="OnActivateRow">УрокиПриАктивизацииСтроки</Event>
 											</Events>
 											<ChildItems>
 												<LabelField name="УрокиНачало" id="15">
-													<DataPath>Уроки.Начало</DataPath>	
+													<DataPath>Уроки.Начало</DataPath>
 													<Width>12</Width>
 													<HorizontalStretch>false</HorizontalStretch>
 													<Format>
@@ -159,13 +160,13 @@
 													<ExtendedTooltip name="УрокиНачалоРасширеннаяПодсказка" id="17"/>
 												</LabelField>
 												<LabelField name="УрокиЗанятие" id="18">
-													<DataPath>Уроки.Занятие</DataPath>	
+													<DataPath>Уроки.Занятие</DataPath>
 													<Width>20</Width>
 													<ContextMenu name="УрокиЗанятиеКонтекстноеМеню" id="19"/>
 													<ExtendedTooltip name="УрокиЗанятиеРасширеннаяПодсказка" id="20"/>
 												</LabelField>
 												<LabelField name="УрокиСостояние" id="27">
-													<DataPath>Уроки.Состояние</DataPath>	
+													<DataPath>Уроки.Состояние</DataPath>
 													<Width>10</Width>
 													<HorizontalStretch>false</HorizontalStretch>
 													<ContextMenu name="УрокиСостояниеКонтекстноеМеню" id="28"/>
@@ -188,19 +189,18 @@
 									<ExtendedTooltip name="ГруппаУрокРасширеннаяПодсказка" id="74"/>
 									<ChildItems>
 										<LabelField name="СостояниеУрока" id="64">
-											<DataPath>СостояниеУрока</DataPath>	
+											<DataPath>СостояниеУрока</DataPath>
 											<TitleLocation>None</TitleLocation>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<Height>2</Height>
 											<ContextMenu name="СостояниеУрокаКонтекстноеМеню" id="65"/>
 											<ExtendedTooltip name="СостояниеУрокаРасширеннаяПодсказка" id="66"/>
 										</LabelField>
-										<Table name="Ученики" id="61">	
+										<Table name="Ученики" id="61">
 											<Representation>List</Representation>
-											<HeightInTableRows>8</HeightInTableRows>
 											<ChangeRowSet>false</ChangeRowSet>
 											<ChangeRowOrder>false</ChangeRowOrder>
-											<AutoInsertNewRow>false</AutoInsertNewRow>
+											<HeightInTableRows>8</HeightInTableRows>
 											<DataPath>Ученики</DataPath>
 											<CommandSet>
 												<ExcludedCommand>Add</ExcludedCommand>
@@ -213,12 +213,13 @@
 												<ExcludedCommand>SortListAsc</ExcludedCommand>
 												<ExcludedCommand>SortListDesc</ExcludedCommand>
 											</CommandSet>
+											<RowFilter xsi:nil="true"/>
 											<ContextMenu name="УченикиКонтекстноеМеню" id="62"/>
 											<AutoCommandBar name="УченикиКоманднаяПанель" id="60">
 												<Autofill>false</Autofill>
 												<ChildItems>
 													<Button name="УченикиОтметитьВсех" id="49">
-														<Type>CommandBarButton</Type>	
+														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.ОтметитьВсех</CommandName>
 														<ExtendedTooltip name="УченикиОтметитьВсехРасширеннаяПодсказка" id="50"/>
@@ -252,17 +253,17 @@
 											</SearchControlAddition>
 											<ChildItems>
 												<LabelField name="УченикиУченик" id="43">
-													<DataPath>Ученики.Ученик</DataPath>	
+													<DataPath>Ученики.Ученик</DataPath>
 													<Width>20</Width>
 													<ContextMenu name="УченикиУченикКонтекстноеМеню" id="44"/>
 													<ExtendedTooltip name="УченикиУченикРасширеннаяПодсказка" id="45"/>
 												</LabelField>
 												<CheckBoxField name="УченикиЯвка" id="46">
-													<DataPath>Ученики.Явка</DataPath>	
+													<DataPath>Ученики.Явка</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="47"/>
-													<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="48"/>	
+													<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="48"/>
 													<Events>
 														<Event name="OnChange">УченикиЯвкаПриИзменении</Event>
 													</Events>
@@ -270,22 +271,22 @@
 											</ChildItems>
 										</Table>
 										<InputField name="ТемаУрока" id="67">
-											<DataPath>ТемаУрока</DataPath>	
+											<DataPath>ТемаУрока</DataPath>
 											<TitleLocation>Top</TitleLocation>
 											<ContextMenu name="ТемаУрокаКонтекстноеМеню" id="68"/>
-											<ExtendedTooltip name="ТемаУрокаРасширеннаяПодсказка" id="69"/>	
+											<ExtendedTooltip name="ТемаУрокаРасширеннаяПодсказка" id="69"/>
 											<Events>
 												<Event name="OnChange">ОтметкаПриИзменении</Event>
 											</Events>
 										</InputField>
 										<InputField name="ДомашнееЗадание" id="70">
-											<DataPath>ДомашнееЗадание</DataPath>	
+											<DataPath>ДомашнееЗадание</DataPath>
 											<TitleLocation>Top</TitleLocation>
 											<Height>3</Height>
 											<VerticalStretch>false</VerticalStretch>
 											<MultiLine>true</MultiLine>
 											<ContextMenu name="ДомашнееЗаданиеКонтекстноеМеню" id="71"/>
-											<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="72"/>	
+											<ExtendedTooltip name="ДомашнееЗаданиеРасширеннаяПодсказка" id="72"/>
 											<Events>
 												<Event name="OnChange">ОтметкаПриИзменении</Event>
 											</Events>
@@ -302,7 +303,7 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Моя зарплата</v8:content>
 						</v8:item>
-					</Title>	
+					</Title>
 					<Picture>
 						<xr:Ref>CommonPicture.УЗ_ИВыплата</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -310,18 +311,18 @@
 					<ExtendedTooltip name="СтраницаЗарплатаРасширеннаяПодсказка" id="110"/>
 					<ChildItems>
 						<LabelField name="ИтогЗарплаты" id="106">
-							<DataPath>ИтогЗарплаты</DataPath>	
+							<DataPath>ИтогЗарплаты</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<ContextMenu name="ИтогЗарплатыКонтекстноеМеню" id="107"/>
 							<ExtendedTooltip name="ИтогЗарплатыРасширеннаяПодсказка" id="108"/>
 						</LabelField>
-						<Table name="Зарплата" id="97">	
+						<Table name="Зарплата" id="97">
 							<Representation>List</Representation>
 							<ReadOnly>true</ReadOnly>
-							<HeightInTableRows>12</HeightInTableRows>
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
+							<HeightInTableRows>12</HeightInTableRows>
 							<DataPath>Зарплата</DataPath>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
@@ -334,6 +335,7 @@
 								<ExcludedCommand>SortListAsc</ExcludedCommand>
 								<ExcludedCommand>SortListDesc</ExcludedCommand>
 							</CommandSet>
+							<RowFilter xsi:nil="true"/>
 							<ContextMenu name="ЗарплатаКонтекстноеМеню" id="98"/>
 							<AutoCommandBar name="ЗарплатаКоманднаяПанель" id="96">
 								<Autofill>false</Autofill>
@@ -365,7 +367,7 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ЗарплатаДата" id="75">
-									<DataPath>Зарплата.Дата</DataPath>	
+									<DataPath>Зарплата.Дата</DataPath>
 									<Width>10</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<Format>
@@ -378,13 +380,13 @@
 									<ExtendedTooltip name="ЗарплатаДатаРасширеннаяПодсказка" id="77"/>
 								</LabelField>
 								<LabelField name="ЗарплатаДокумент" id="78">
-									<DataPath>Зарплата.Документ</DataPath>	
+									<DataPath>Зарплата.Документ</DataPath>
 									<Width>30</Width>
 									<ContextMenu name="ЗарплатаДокументКонтекстноеМеню" id="79"/>
 									<ExtendedTooltip name="ЗарплатаДокументРасширеннаяПодсказка" id="80"/>
 								</LabelField>
 								<LabelField name="ЗарплатаНачислено" id="81">
-									<DataPath>Зарплата.Начислено</DataPath>	
+									<DataPath>Зарплата.Начислено</DataPath>
 									<Width>10</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<Format>
@@ -397,7 +399,7 @@
 									<ExtendedTooltip name="ЗарплатаНачисленоРасширеннаяПодсказка" id="83"/>
 								</LabelField>
 								<LabelField name="ЗарплатаВыплачено" id="84">
-									<DataPath>Зарплата.Выплачено</DataPath>	
+									<DataPath>Зарплата.Выплачено</DataPath>
 									<Width>10</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<Format>

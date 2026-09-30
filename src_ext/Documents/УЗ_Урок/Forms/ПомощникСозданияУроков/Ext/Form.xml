@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<CommandBarLocation>None</CommandBarLocation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -10,6 +10,7 @@
 	<ChildItems>
 		<UsualGroup name="Группа1" id="37">
 			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="38"/>
@@ -17,6 +18,7 @@
 				<UsualGroup name="Группа3" id="180">
 					<HorizontalStretch>false</HorizontalStretch>
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="181"/>
@@ -77,6 +79,7 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="377"/>
 							<ChildItems>
@@ -103,6 +106,7 @@
 						</UsualGroup>
 						<UsualGroup name="Группа11" id="252">
 							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="253"/>
@@ -143,6 +147,7 @@
 							<v8:content>Страницы</v8:content>
 						</v8:item>
 					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
 					<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="230"/>
 					<Events>
 						<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
@@ -184,12 +189,14 @@
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="138"/>
 									<ChildItems>
 										<UsualGroup name="Группа6" id="221">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="222"/>
@@ -220,6 +227,7 @@
 										</UsualGroup>
 										<UsualGroup name="Группа9" id="244">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="245"/>
@@ -251,6 +259,7 @@
 										</UsualGroup>
 										<UsualGroup name="Группа10" id="246">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="247"/>
@@ -297,6 +306,7 @@
 										</UsualGroup>
 										<UsualGroup name="Группа2" id="248">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="249"/>
@@ -451,6 +461,7 @@
 										</UsualGroup>
 										<UsualGroup name="Группа4" id="381">
 											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="382"/>
@@ -607,7 +618,6 @@
 												</v8:item>
 											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>5</Width>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="УченикиЯвкаКонтекстноеМеню" id="364"/>
 											<ExtendedTooltip name="УченикиЯвкаРасширеннаяПодсказка" id="365"/>
@@ -627,7 +637,6 @@
 												</v8:item>
 											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>8</Width>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="УченикиСписатьОплатуКонтекстноеМеню" id="117"/>
 											<ExtendedTooltip name="УченикиСписатьОплатуРасширеннаяПодсказка" id="118"/>
@@ -768,6 +777,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="НайденныеДокументы2КонтекстноеМеню" id="291"/>
 									<AutoCommandBar name="НайденныеДокументы2КоманднаяПанель" id="292">
 										<ChildItems>
@@ -827,13 +837,13 @@
 										</LabelField>
 										<LabelField name="НайденныеДокументы2Окончание" id="321">
 											<DataPath>НайденныеДокументы2.Окончание</DataPath>
-											<Width>5</Width>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
 													<v8:content>До</v8:content>
 												</v8:item>
 											</Title>
+											<Width>5</Width>
 											<Format>
 												<v8:item>
 													<v8:lang>ru</v8:lang>

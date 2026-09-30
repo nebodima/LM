@@ -4,36 +4,6 @@
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
 	<object>
-		<name>Configuration.УЗ_ext</name>
-		<right>
-			<name>MainWindowModeNormal</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>MainWindowModeWorkplace</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>MainWindowModeEmbeddedWorkplace</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>MainWindowModeFullscreenWorkplace</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>MainWindowModeKiosk</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Subsystem.УЗ_УчетЗанятий</name>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>Subsystem.УЗ_УчетЗанятий.Subsystem.УЗ_Документы</name>
 		<right>
 			<name>View</name>
@@ -41,97 +11,34 @@
 		</right>
 	</object>
 	<object>
-		<name>DataProcessor.УЗ_МоиУроки</name>
-		<right>
-			<name>Use</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>View</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_Абонемент</name>
+		<name>InformationRegister.УЗ_ДатыЗапрета</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>Catalog.УЗ_ГруппыОбучения</name>
+		<name>InformationRegister.УЗ_Настройки</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>Catalog.УЗ_ДисконтныеКарты</name>
+		<name>InformationRegister.УЗ_ЦеныТарифов</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
 	</object>
 	<object>
-		<name>Catalog.УЗ_Подразделения</name>
+		<name>AccumulationRegister.УЗ_СписанияСуммЗаУроки</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_Помещения</name>
 		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_ПредметыОбучения</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_Скидки</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_СтавкиПедагогов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_Статусы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_СтатьиДвиженияДенег</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_Тарифы</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>Catalog.УЗ_ФизЛица</name>
-		<right>
-			<name>Read</name>
+			<name>Update</name>
 			<value>true</value>
 		</right>
 	</object>
@@ -157,23 +64,49 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УЗ_ГрафикРабочегоВремениПедагога</name>
+		<name>Catalog.УЗ_ДисконтныеКарты</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-			<restrictionByCondition>
-				<condition>Т ГДЕ Т.Педагог.Пользователь = &amp;ТекущийПользователь</condition>
-			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
-		<name>Document.УЗ_РасчетЗарплаты</name>
+		<name>SessionParameter.УЗ_ПесочницаПочты</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Set</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_Помещения</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
-			<restrictionByCondition>
-				<condition>Т ГДЕ Т.Педагог.Пользователь = &amp;ТекущийПользователь</condition>
-			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_ПредметыОбучения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_ГруппыОбучения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_СтатьиДвиженияДенег</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -187,30 +120,6 @@
 		</right>
 	</object>
 	<object>
-		<name>Document.УЗ_РасходДенег</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-			<restrictionByCondition>
-				<condition>Т ГДЕ Т.ФизЛицо.Пользователь = &amp;ТекущийПользователь</condition>
-			</restrictionByCondition>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УЗ_Настройки</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УЗ_ДатыЗапрета</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
 		<name>InformationRegister.УЗ_ВерсииДанных</name>
 		<right>
 			<name>Read</name>
@@ -218,60 +127,13 @@
 		</right>
 	</object>
 	<object>
-		<name>InformationRegister.УЗ_ЦеныТарифов</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УЗ_СоставГрупп</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>InformationRegister.УЗ_УрокиВРасчетахЗарплаты</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.УЗ_СписанияСуммЗаУроки</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.УЗ_ДвижениеДисконтныхКарт</name>
-		<right>
-			<name>Read</name>
-			<value>true</value>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
-		</right>
-	</object>
-	<object>
-		<name>AccumulationRegister.УЗ_Расходы</name>
+		<name>Document.УЗ_РасходДенег</name>
 		<right>
 			<name>Read</name>
 			<value>true</value>
 			<restrictionByCondition>
-				<condition>ГДЕ ЛОЖЬ</condition>
+				<condition>Т ГДЕ Т.ФизЛицо.Пользователь = &amp;ТекущийПользователь</condition>
 			</restrictionByCondition>
-		</right>
-		<right>
-			<name>Update</name>
-			<value>true</value>
 		</right>
 	</object>
 	<object>
@@ -292,14 +154,152 @@
 		</right>
 	</object>
 	<object>
-		<name>SessionParameter.УЗ_ПесочницаПочты</name>
+		<name>Configuration.УЗ_ext</name>
 		<right>
-			<name>Get</name>
+			<name>MainWindowModeNormal</name>
 			<value>true</value>
 		</right>
 		<right>
-			<name>Set</name>
+			<name>MainWindowModeWorkplace</name>
 			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeEmbeddedWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeFullscreenWorkplace</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MainWindowModeKiosk</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.УЗ_Расходы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ЛОЖЬ</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_Абонемент</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>AccumulationRegister.УЗ_ДвижениеДисконтныхКарт</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_Подразделения</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_ФизЛица</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_РасчетЗарплаты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>Т ГДЕ Т.Педагог.Пользователь = &amp;ТекущийПользователь</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_Статусы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_Скидки</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Subsystem.УЗ_УчетЗанятий</name>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_СтавкиПедагогов</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УЗ_УрокиВРасчетахЗарплаты</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.УЗ_СоставГрупп</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.УЗ_МоиУроки</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Catalog.УЗ_Тарифы</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>Document.УЗ_ГрафикРабочегоВремениПедагога</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>Т ГДЕ Т.Педагог.Пользователь = &amp;ТекущийПользователь</condition>
+			</restrictionByCondition>
 		</right>
 	</object>
 </Rights>

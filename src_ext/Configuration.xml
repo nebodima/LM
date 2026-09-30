@@ -30,6 +30,10 @@
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
 				<xr:ObjectId>07f5991f-1783-5e4b-8c03-39107e8bb850</xr:ObjectId>
 			</xr:ContainedObject>
+			<xr:PropertyState>
+				<xr:Property>ManagedApplicationModule</xr:Property>
+				<xr:State>Extended</xr:State>
+			</xr:PropertyState>
 		</InternalInfo>
 		<Properties>
 			<ObjectBelonging>Adopted</ObjectBelonging>
@@ -61,24 +65,6 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>УЗ_УчетЗанятий</Subsystem>
-			<CommonPicture>УЗ_ИконкаРаздел</CommonPicture>
-			<CommonPicture>УЗ_ИконкаДокументы</CommonPicture>
-			<CommonPicture>УЗ_ИконкаКасса</CommonPicture>
-			<CommonPicture>УЗ_ИконкаСправочники</CommonPicture>
-			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
-			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
-			<CommonPicture>УЗ_ИНапомнить</CommonPicture>
-			<CommonPicture>УЗ_ИЯвка</CommonPicture>
-			<CommonPicture>УЗ_ИКОплате</CommonPicture>
-			<CommonPicture>УЗ_ИПомощник</CommonPicture>
-			<CommonPicture>УЗ_ИПечатьПКО</CommonPicture>
-			<CommonPicture>УЗ_ИОплата</CommonPicture>
-			<CommonPicture>УЗ_ИПеремещение</CommonPicture>
-			<CommonPicture>УЗ_ИВыплата</CommonPicture>
-			<CommonPicture>УЗ_ИФото</CommonPicture>
-			<CommonPicture>УЗ_ИЗаморозка</CommonPicture>
-			<CommonPicture>УЗ_ИПочта</CommonPicture>
-			<CommonPicture>УЗ_ИОтчет48</CommonPicture>
 			<StyleItem>УЗ_ЦветПлюсаДенег</StyleItem>
 			<StyleItem>УЗ_ЦветМинусаДенег</StyleItem>
 			<StyleItem>УЗ_ЦветПояснения</StyleItem>
@@ -97,6 +83,24 @@
 			<StyleItem>УЗ_ШрифтПечати</StyleItem>
 			<StyleItem>УЗ_ШрифтПечатиЖирный</StyleItem>
 			<StyleItem>УЗ_ШрифтЗаголовкаПечати</StyleItem>
+			<CommonPicture>УЗ_ИконкаРаздел</CommonPicture>
+			<CommonPicture>УЗ_ИконкаДокументы</CommonPicture>
+			<CommonPicture>УЗ_ИконкаКасса</CommonPicture>
+			<CommonPicture>УЗ_ИконкаСправочники</CommonPicture>
+			<CommonPicture>УЗ_ИконкаОтчеты</CommonPicture>
+			<CommonPicture>УЗ_ИконкаНастройки</CommonPicture>
+			<CommonPicture>УЗ_ИНапомнить</CommonPicture>
+			<CommonPicture>УЗ_ИЯвка</CommonPicture>
+			<CommonPicture>УЗ_ИКОплате</CommonPicture>
+			<CommonPicture>УЗ_ИПомощник</CommonPicture>
+			<CommonPicture>УЗ_ИПечатьПКО</CommonPicture>
+			<CommonPicture>УЗ_ИОплата</CommonPicture>
+			<CommonPicture>УЗ_ИПеремещение</CommonPicture>
+			<CommonPicture>УЗ_ИВыплата</CommonPicture>
+			<CommonPicture>УЗ_ИФото</CommonPicture>
+			<CommonPicture>УЗ_ИЗаморозка</CommonPicture>
+			<CommonPicture>УЗ_ИПочта</CommonPicture>
+			<CommonPicture>УЗ_ИОтчет48</CommonPicture>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<SessionParameter>УЗ_ПесочницаПочты</SessionParameter>
 			<Role>УЗ_ОсновнаяРоль</Role>

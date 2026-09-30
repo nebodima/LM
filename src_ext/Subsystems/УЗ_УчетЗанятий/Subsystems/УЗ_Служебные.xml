@@ -14,7 +14,10 @@
 			<IncludeInCommandInterface>false</IncludeInCommandInterface>
 			<UseOneCommand>false</UseOneCommand>
 			<Explanation/>
-			<Picture><xr:Ref>CommonPicture.УЗ_ИконкаНастройки</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИконкаНастройки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Content>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_ДвижениеДисконтныхКарт</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_Касса</xr:Item>

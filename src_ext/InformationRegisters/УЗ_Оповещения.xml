@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<InformationRegister uuid="8c58c73b-fb3b-5ff0-a740-84f349ec5f78">
 		<InternalInfo>
 			<xr:GeneratedType name="InformationRegisterRecord.УЗ_Оповещения" category="Record">
@@ -222,25 +222,25 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:DocumentRef.УЗ_ДополнительныеРасходы</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_СписаниеОстатков</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_РасходДенег</v8:Type>
-						<v8:Type>cfg:CatalogRef.УЗ_Тарифы</v8:Type>
-						<v8:Type>cfg:CatalogRef.УЗ_ГруппыОбучения</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_НачисленияПедагогам</v8:Type>
-						<v8:Type>cfg:CatalogRef.УЗ_ДисконтныеКарты</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_ПриходДенег</v8:Type>
 						<v8:Type>cfg:CatalogRef.УЗ_ПредметыОбучения</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
-						<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_ДополнительныеРасходы</v8:Type>
 						<v8:Type>cfg:CatalogRef.УЗ_ФизЛица</v8:Type>
-						<v8:Type>cfg:DocumentRef.УЗ_ПеремещениеДенег</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_ПриходДенег</v8:Type>
 						<v8:Type>cfg:CatalogRef.УЗ_Скидки</v8:Type>
 						<v8:Type>cfg:CatalogRef.УЗ_Помещения</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
 						<v8:Type>cfg:CatalogRef.УЗ_СтавкиПедагогов</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_СписаниеОстатков</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_НачисленияПедагогам</v8:Type>
+						<v8:Type>cfg:CatalogRef.УЗ_ГруппыОбучения</v8:Type>
+						<v8:Type>cfg:CatalogRef.УЗ_ДисконтныеКарты</v8:Type>
+						<v8:Type>cfg:CatalogRef.УЗ_Тарифы</v8:Type>
+						<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_РасходДенег</v8:Type>
 						<v8:Type>cfg:DocumentRef.УЗ_РасчетЗарплаты</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_ПеремещениеДенег</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_НачислениеБонусов</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_ГрафикРабочегоВремениПедагога</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -274,6 +274,7 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
+					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
 			<Dimension uuid="e18884bb-2c00-557d-81f3-76efd35f463c">
@@ -324,6 +325,7 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
+					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
 			<Dimension uuid="8edd67b0-1630-5847-8f6d-afb40e438ef9">
@@ -371,6 +373,7 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
+					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
 			<Dimension uuid="2dfa5caf-cc77-57cd-bd1a-618314a28f07">
@@ -413,6 +416,7 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
+					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
 			<Dimension uuid="4980818d-1204-4322-9884-486d48ee25dc">
@@ -460,6 +464,7 @@
 					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
 					<DataHistory>Use</DataHistory>
+					<TypeReductionMode>TransformValues</TypeReductionMode>
 				</Properties>
 			</Dimension>
 			<Form>ФормаЗаписи</Form>

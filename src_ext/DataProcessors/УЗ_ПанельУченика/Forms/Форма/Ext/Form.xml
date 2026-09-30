@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -17,18 +17,21 @@
 	<ChildItems>
 		<UsualGroup name="Группа2" id="79">
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="80"/>
 			<ChildItems>
 				<UsualGroup name="Группа1" id="77">
 					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="78"/>
 					<ChildItems>
 						<UsualGroup name="Группа6" id="157">
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="158"/>
@@ -67,19 +70,20 @@
 								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаСводкаРасширеннаяПодсказка" id="206"/>
 							<ChildItems>
 								<LabelDecoration name="Сводка" id="207">
-									<Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Выберите ученика — здесь появятся его деньги по предметам, абонементы и ближайший урок</v8:content>
 										</v8:item>
 									</Title>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<HorizontalStretch>true</HorizontalStretch>
 									<ContextMenu name="СводкаКонтекстноеМеню" id="208"/>
 									<ExtendedTooltip name="СводкаРасширеннаяПодсказка" id="209"/>
 								</LabelDecoration>
@@ -87,12 +91,14 @@
 						</UsualGroup>
 						<UsualGroup name="Группа3" id="81">
 							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="82"/>
 							<ChildItems>
 								<UsualGroup name="Группа4" id="120">
 									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="121"/>
@@ -114,6 +120,7 @@
 										</InputField>
 										<UsualGroup name="Группа5" id="155">
 											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
 											<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="156"/>
@@ -224,6 +231,12 @@
 										</InputField>
 										<LabelField name="АктивныеГруппыОбученияЗадолженность" id="180">
 											<DataPath>АктивныеГруппыОбучения.Задолженность</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Остаток по предмету</v8:content>
+												</v8:item>
+											</Title>
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -231,15 +244,9 @@
 												</v8:item>
 											</ToolTip>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>12</Width>
 											<CellHyperlink>true</CellHyperlink>
+											<Width>12</Width>
 											<Hiperlink>true</Hiperlink>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Остаток по предмету</v8:content>
-												</v8:item>
-											</Title>
 											<ContextMenu name="АктивныеГруппыОбученияЗадолженностьКонтекстноеМеню" id="181"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияЗадолженностьРасширеннаяПодсказка" id="182"/>
 										</LabelField>
@@ -332,8 +339,8 @@
 										<LabelField name="АктивныеГруппыОбученияПериод" id="112">
 											<DataPath>АктивныеГруппыОбучения.Период</DataPath>
 											<EditMode>EnterOnInput</EditMode>
-											<Width>12</Width>
 											<CellHyperlink>true</CellHyperlink>
+											<Width>12</Width>
 											<Hiperlink>true</Hiperlink>
 											<ContextMenu name="АктивныеГруппыОбученияПериодКонтекстноеМеню" id="113"/>
 											<ExtendedTooltip name="АктивныеГруппыОбученияПериодРасширеннаяПодсказка" id="114"/>
@@ -427,6 +434,7 @@
 					<ShowRoot>true</ShowRoot>
 					<AllowRootChoice>false</AllowRootChoice>
 					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 					<ContextMenu name="СписокУроковКонтекстноеМеню" id="5"/>
 					<AutoCommandBar name="СписокУроковКоманднаяПанель" id="6">
 						<ChildItems>

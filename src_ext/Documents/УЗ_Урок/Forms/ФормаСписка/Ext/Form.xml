@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
@@ -133,6 +133,7 @@
 			</Title>
 			<VerticalStretch>false</VerticalStretch>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
 		</UsualGroup>
@@ -150,6 +151,7 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВертРасширеннаяПодсказка" id="57"/>
@@ -168,6 +170,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="243"/>
@@ -326,6 +329,7 @@
 					<AllowRootChoice>false</AllowRootChoice>
 					<UpdateOnDataChange>Auto</UpdateOnDataChange>
 					<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 					<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 					<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
 					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
@@ -389,13 +393,13 @@
 									<v8:content>№</v8:content>
 								</v8:item>
 							</Title>
-							<Width>5</Width>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Номер урока</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Width>5</Width>
 							<ContextMenu name="НомерКонтекстноеМеню" id="435"/>
 							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="436"/>
 						</LabelField>
@@ -455,13 +459,13 @@
 									<v8:content>Длительность</v8:content>
 								</v8:item>
 							</Title>
-							<Width>6</Width>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Длительность урока, ч:мм</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Width>6</Width>
 							<Format>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -504,7 +508,6 @@
 						</LabelField>
 						<LabelField name="Занятие" id="225">
 							<DataPath>Список.Занятие</DataPath>
-							<Width>22</Width>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -517,6 +520,7 @@
 									<v8:content>Группа обучения и предмет урока</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Width>22</Width>
 							<ContextMenu name="ЗанятиеКонтекстноеМеню" id="226"/>
 							<ExtendedTooltip name="ЗанятиеРасширеннаяПодсказка" id="227"/>
 						</LabelField>
@@ -540,13 +544,13 @@
 							<UserVisible>
 								<xr:Common>false</xr:Common>
 							</UserVisible>
-							<Width>20</Width>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
 									<v8:content>Предмет</v8:content>
 								</v8:item>
 							</Title>
+							<Width>20</Width>
 							<ContextMenu name="ПредметОбученияКонтекстноеМеню" id="35"/>
 							<ExtendedTooltip name="ПредметОбученияРасширеннаяПодсказка" id="36"/>
 						</LabelField>
@@ -626,6 +630,7 @@
 				</Table>
 				<UsualGroup name="Группа1" id="432">
 					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="433"/>
@@ -657,6 +662,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="РасшифровкаКонтекстноеМеню" id="323">
 								<ChildItems>
 									<Button name="РасшифровкаКонтекстноеМенюОткрытьВзаиморасчеты" id="391">
@@ -708,35 +714,35 @@
 								</LabelField>
 								<PictureField name="РасшифровкаСписатьОплату" id="353">
 									<DataPath>Расшифровка.СписатьОплату</DataPath>
-									<Width>6</Width>
-									<ValuesPicture>
-										<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</ValuesPicture>
-									<FileDragMode>AsFile</FileDragMode>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>К оплате</v8:content>
 										</v8:item>
 									</Title>
-									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
-									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
-								</PictureField>
-								<PictureField name="РасшифровкаЯвка" id="374">
-									<DataPath>Расшифровка.Явка</DataPath>
-									<Width>5</Width>
+									<Width>6</Width>
 									<ValuesPicture>
 										<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</ValuesPicture>
 									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РасшифровкаСписатьОплатуКонтекстноеМеню" id="354"/>
+									<ExtendedTooltip name="РасшифровкаСписатьОплатуРасширеннаяПодсказка" id="355"/>
+								</PictureField>
+								<PictureField name="РасшифровкаЯвка" id="374">
+									<DataPath>Расшифровка.Явка</DataPath>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Явка</v8:content>
 										</v8:item>
 									</Title>
+									<Width>5</Width>
+									<ValuesPicture>
+										<xr:Ref>StdPicture.AppearanceCheckBox</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
 									<ContextMenu name="РасшифровкаЯвкаКонтекстноеМеню" id="375"/>
 									<ExtendedTooltip name="РасшифровкаЯвкаРасширеннаяПодсказка" id="376"/>
 								</PictureField>
@@ -800,13 +806,13 @@
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
-									<Width>10</Width>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Цена</v8:content>
 										</v8:item>
 									</Title>
+									<Width>10</Width>
 									<ContextMenu name="РасшифровкаТарифКонтекстноеМеню" id="366"/>
 									<ExtendedTooltip name="РасшифровкаТарифРасширеннаяПодсказка" id="367"/>
 								</LabelField>
@@ -830,25 +836,25 @@
 									<UserVisible>
 										<xr:Common>false</xr:Common>
 									</UserVisible>
-									<Width>10</Width>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Сумма скидки</v8:content>
 										</v8:item>
 									</Title>
+									<Width>10</Width>
 									<ContextMenu name="РасшифровкаСуммаСкидкиКонтекстноеМеню" id="351"/>
 									<ExtendedTooltip name="РасшифровкаСуммаСкидкиРасширеннаяПодсказка" id="352"/>
 								</LabelField>
 								<LabelField name="РасшифровкаСумма" id="359">
 									<DataPath>Расшифровка.Сумма</DataPath>
-									<Width>10</Width>
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Итого</v8:content>
 										</v8:item>
 									</Title>
+									<Width>10</Width>
 									<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="360"/>
 									<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="361"/>
 								</LabelField>
@@ -885,6 +891,7 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
 							<CollapsedRepresentationTitle>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -995,6 +1002,7 @@
 						</v8:item>
 					</ToolTip>
 					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
 					<CollapsedRepresentationTitle>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1025,9 +1033,9 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
+				<Field>Список.Занятие</Field>
 				<Field>Список.Номер</Field>
 				<Field>Список.НомерКратко</Field>
-				<Field>Список.Занятие</Field>
 				<Field>Список.Явки</Field>
 			</UseAlways>
 			<Settings xsi:type="DynamicList">
