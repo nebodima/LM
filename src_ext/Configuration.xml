@@ -52,7 +52,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Учёт занятий</Vendor>
-			<Version>2.2.0.3</Version>
+			<Version>2.2.0.4</Version>
 			<DefaultReportForm/>
 			<DefaultReportVariantForm/>
 			<DefaultReportSettingsForm/>
@@ -201,6 +201,7 @@
 			<DataProcessor>УЗ_ПанельУченика</DataProcessor>
 			<DataProcessor>УЗ_РассылкаДолжникам</DataProcessor>
 			<DataProcessor>УЗ_ОтправкаСообщения</DataProcessor>
+			<DataProcessor>УЗ_ЧекиЗачета</DataProcessor>
 			<InformationRegister>УЗ_ВерсииДанных</InformationRegister>
 			<InformationRegister>УЗ_ГраницаПросмотраКассы</InformationRegister>
 			<InformationRegister>УЗ_ДатыЗапрета</InformationRegister>
@@ -218,6 +219,7 @@
 			<InformationRegister>УЗ_ШаблоныСообщений</InformationRegister>
 			<InformationRegister>УЗ_ПривязкиКаналов</InformationRegister>
 			<InformationRegister>УЗ_ЧекиККТ</InformationRegister>
+			<InformationRegister>УЗ_ЧекиЗачетаПредоплаты</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
 			<AccumulationRegister>УЗ_Расходы</AccumulationRegister>

@@ -199,6 +199,20 @@
 					<ContextMenu name="СистемаНалогообложенияКонтекстноеМеню" id="155"/>
 					<ExtendedTooltip name="СистемаНалогообложенияРасширеннаяПодсказка" id="156"/>
 				</InputField>
+				<CheckBoxField name="ПробиватьЧекиЗачета" id="157">
+					<DataPath>Запись.ПробиватьЧекиЗачета</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проведённый урок, оплаченный заранее (абонемент, аванс), ставит в очередь второй чек «полный расчёт» с оплатой «зачёт предоплаты» — пробивается обработкой «Чеки зачёта предоплаты». Нужен не всем: ИП на патенте и другие, кто вправе не применять кассу, его не включают.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПробиватьЧекиЗачетаКонтекстноеМеню" id="158"/>
+					<ExtendedTooltip name="ПробиватьЧекиЗачетаРасширеннаяПодсказка" id="159"/>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

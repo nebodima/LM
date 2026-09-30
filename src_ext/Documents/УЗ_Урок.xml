@@ -212,6 +212,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_РасчетыПоЗарплате</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_Расходы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.УЗ_ДвижениеДисконтныхКарт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ЧекиЗачетаПредоплаты</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>
 			<UnpostInPrivilegedMode>true</UnpostInPrivilegedMode>
