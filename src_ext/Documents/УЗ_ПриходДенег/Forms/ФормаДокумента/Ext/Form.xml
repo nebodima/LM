@@ -73,6 +73,12 @@
 				<CommandName>Form.Command.ОткрытьВзаиморасчеты</CommandName>
 				<ExtendedTooltip name="ОткрытьВзаиморасчетыРасширеннаяПодсказка" id="183"/>
 			</Button>
+			<Button name="ФормаПробитьЧек" id="336">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПробитьЧек</CommandName>
+				<ExtendedTooltip name="ФормаПробитьЧекРасширеннаяПодсказка" id="337"/>
+			</Button>
 			<Button name="ФормаНапомнить" id="274">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -83,6 +89,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
@@ -698,6 +705,10 @@
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="17"/>
 							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="18"/>
 						</LabelField>
+						<LabelDecoration name="ЧекККТ" id="333">
+							<ContextMenu name="ЧекККТКонтекстноеМеню" id="334"/>
+							<ExtendedTooltip name="ЧекККТРасширеннаяПодсказка" id="335"/>
+						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -901,6 +912,26 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НесколькоУчеников</Action>
+		</Command>
+		<Command name="ПробитьЧек" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробить чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробить кассовый чек (54-ФЗ) на онлайн-кассе программы: приход — оплата ученика, возврат прихода — возврат ученику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИОплата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПробитьЧек</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

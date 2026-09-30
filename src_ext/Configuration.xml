@@ -120,6 +120,10 @@
 			<CommonModule>УЗ_Среда</CommonModule>
 			<CommonModule>УЗ_Сообщения</CommonModule>
 			<CommonModule>УЗ_ПровайдерыСообщений</CommonModule>
+			<CommonModule>УЗ_Чеки</CommonModule>
+			<CommonModule>УЗ_ЧекиКлиент</CommonModule>
+			<CommonModule>УЗ_СредаКлиент</CommonModule>
+			<CommonModule>УЗ_СредаКасса</CommonModule>
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
@@ -209,6 +213,7 @@
 			<InformationRegister>УЗ_КлючиКаналов</InformationRegister>
 			<InformationRegister>УЗ_ШаблоныСообщений</InformationRegister>
 			<InformationRegister>УЗ_ПривязкиКаналов</InformationRegister>
+			<InformationRegister>УЗ_ЧекиККТ</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
 			<AccumulationRegister>УЗ_Расходы</AccumulationRegister>

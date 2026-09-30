@@ -168,6 +168,34 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаЧеки" id="152">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для кассовых чеков</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаЧекиРасширеннаяПодсказка" id="153"/>
+			<ChildItems>
+				<InputField name="СистемаНалогообложения" id="154">
+					<DataPath>Запись.СистемаНалогообложения</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Попадает в кассовый чек (онлайн-касса хозяина): та, что указана при регистрации кассы в налоговой.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="СистемаНалогообложенияКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="СистемаНалогообложенияРасширеннаяПодсказка" id="156"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Запись" id="1">

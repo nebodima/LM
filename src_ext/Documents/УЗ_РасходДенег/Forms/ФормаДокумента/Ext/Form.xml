@@ -51,6 +51,12 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаПробитьЧек" id="213">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПробитьЧек</CommandName>
+				<ExtendedTooltip name="ФормаПробитьЧекРасширеннаяПодсказка" id="214"/>
+			</Button>
 			<Button name="ФормаНапомнить" id="193">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -61,6 +67,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
@@ -319,6 +326,10 @@
 							<ContextMenu name="АвторДокументаКонтекстноеМеню" id="171"/>
 							<ExtendedTooltip name="АвторДокументаРасширеннаяПодсказка" id="172"/>
 						</LabelField>
+						<LabelDecoration name="ЧекККТ" id="210">
+							<ContextMenu name="ЧекККТКонтекстноеМеню" id="211"/>
+							<ExtendedTooltip name="ЧекККТРасширеннаяПодсказка" id="212"/>
+						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -341,4 +352,26 @@
 			</Type>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ПробитьЧек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробить чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пробить кассовый чек (54-ФЗ) на онлайн-кассе программы: приход — оплата ученика, возврат прихода — возврат ученику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИОплата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПробитьЧек</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
 </Form>
