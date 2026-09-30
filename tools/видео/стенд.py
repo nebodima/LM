@@ -256,6 +256,10 @@ def pid_файл():
 
 
 def старт():
+    # перезапуск, а не «поднять, если не запущен»: веб-сеансы прошлых загрузок клиента висят до таймаута и каждый
+    # держит лицензию 1С (находка сессии «Путевых листов», 30.09.2026) — остановка Apache их сбрасывает
+    if os.path.exists(pid_файл()):
+        стоп()
     конфиг()
     subprocess.Popen([APACHE, "-f", КОНФИГ], creationflags=0x00000008 | 0x00000200,
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, stdin=subprocess.DEVNULL)
