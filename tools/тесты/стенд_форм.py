@@ -24,9 +24,13 @@ import subprocess
 import tempfile
 import time
 import uuid
+import sys
 import xml.etree.ElementTree as ET
 
-EXE = r"C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe"
+sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import платформа  # noqa: E402
+
+EXE = платформа.exe()
 ИСХОДНИКИ = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "src_ext")
 ПАПКА = os.path.join(tempfile.gettempdir(), "уз_прогон", "стенд_форм")
 ВЕРСИЯ_ГЕНЕРАТОРА = "1"      # сменить при правке генератора — кэш пересоберётся

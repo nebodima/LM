@@ -23,6 +23,7 @@ import uuid
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "тесты"))
 import сеанс  # noqa: E402
+import платформа  # noqa: E402
 from сеанс import настроить_вывод  # noqa: E402
 
 ДЕМО = r"C:\1c_bases\UZ_DEMO"
@@ -36,7 +37,7 @@ APACHE = r"C:\1c_bases\web_uz\bin\httpd_uz.exe"
               "uzs": (r"C:\1c_bases\web_uz_video_start", ПУСТАЯ, "Администратор"),
               "uzp": (r"C:\1c_bases\web_uz_video_ped", ВИДЕО, "Лебедева Анна")}
 ЛОГИ = r"C:\1c_bases\веб\logs_VIDEO"
-ПЛАТФОРМА = r"C:/Program Files/1cv8/8.3.27.1936/bin/wsap24.dll"
+ПЛАТФОРМА = платформа.модуль_веб()
 ПРОСТРАНСТВО = uuid.UUID("6f1d3c2a-7b8e-4c55-9a10-5a3d0c0de2a6")   # как в tools\демо\наполнить.py
 ПЕДАГОГ_ПОЛЬЗОВАТЕЛЬ = "Лебедева Анна"
 ПЕДАГОГ_КЛЮЧ = "педагог/вокал"

@@ -33,6 +33,7 @@ import tempfile
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import адрес_базы  # noqa: E402
+import платформа  # noqa: E402
 
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(КОРЕНЬ, "src_ext")
@@ -114,7 +115,7 @@ def версия_src(каталог=SRC):
 def хеш_из_базы(база, пользователь):
     """ХешСумма расширения УЗ_ext в базе (файловой или серверной) — COM-подключение (без песочницы: код продукта не зовём)."""
     import win32com.client
-    c = win32com.client.Dispatch("V83.COMConnector").Connect(адрес_базы.строка_com(база, пользователь))
+    c = платформа.коннектор().Connect(адрес_базы.строка_com(база, пользователь))
     for р in c.РасширенияКонфигурации.Получить():
         if р.Имя == "УЗ_ext":
             return c.Base64Строка(р.ХешСумма)       # как в прогон.py (сверка отметки)

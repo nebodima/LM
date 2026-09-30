@@ -38,8 +38,9 @@ import tempfile
 import time
 
 import адрес_базы
+import платформа
 
-EXE = r"C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe"
+EXE = платформа.exe()    # линия выбирается --платформа=8.3|8.5 / UZ_ПЛАТФОРМА (tools\платформа.py)
 ПОРТЫ = range(1546, 1561)
 ПРИГЛАШЕНИЕ = "designer> "
 ОШИБКА = re.compile(r"^Ошибка \w+ - ", re.M)
@@ -155,6 +156,7 @@ def _старт(база, пользователь, ждать):
 
 
 def _запустить(база, пользователь, порт):
+    платформа.проверить_базу(база)       # метка платформы базы: другой линией не открываем
     аргументы = [EXE, "DESIGNER"] + адрес_базы.ключи_конфигуратора(база) + ["/N", пользователь, "/DisableStartupDialogs",
                  "/DisableStartupMessages", "/AgentMode", "/AgentPort", str(порт), "/AgentListenAddress",
                  "127.0.0.1", "/AgentBaseDir", папка(база), "/AgentSSHHostKeyAuto"]

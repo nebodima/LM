@@ -30,6 +30,7 @@ import time
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "тесты"))
 from сеанс import аргумент, дата, настроить_вывод, текст_ошибки  # noqa: E402
+import платформа  # noqa: E402
 
 МЕТКА = "_Нагрузка"
 П = "Н "  # префикс наименований справочников нагрузки
@@ -1030,7 +1031,7 @@ def main():
     н_всего = time.time()
     try:
         н = time.time()
-        c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="Администратор";' % база)
+        c = платформа.коннектор().Connect('File="%s";Usr="Администратор";' % база)
         print("подключение: %.1f с" % (time.time() - н))
         try:
             c.УЗ_Почта.ВключитьПесочницу()

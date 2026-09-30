@@ -27,9 +27,10 @@ import time
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "тесты"))
 from сеанс import аргумент, настроить_вывод, подключить, текст_ошибки  # noqa: E402
+import платформа  # noqa: E402
 
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-EXE = r"C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe"
+EXE = платформа.exe()
 ИМЯ_DT = "УчетЗанятий_2.0_демо.dt"
 ПРЕДЕЛ_GIT = 50 * 1024 * 1024
 ВЫПУСК = r"C:\1c_bases\выпуск"

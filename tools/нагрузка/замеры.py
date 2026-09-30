@@ -25,6 +25,7 @@ import time
 sys.path.insert(0, os.path.join(os.path.dirname(ЗДЕСЬ), "тесты"))
 from сеанс import аргумент, дата, настроить_вывод, текст_ошибки, удалить_объект  # noqa: E402
 import стенд_форм  # noqa: E402
+import платформа  # noqa: E402
 
 МЕТКА = "_Замер"
 ГОД = (datetime.date(2025, 9, 28), datetime.date(2026, 9, 27))
@@ -785,7 +786,7 @@ def main():
         разделы = ["запросы"] + [р for р in только.split(",") if р != "запросы"]
     import win32com.client
     н = time.time()
-    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="Администратор";' % база)
+    c = платформа.коннектор().Connect('File="%s";Usr="Администратор";' % база)
     print("подключение %.1f с" % (time.time() - н))
     c.УЗ_Почта.ВключитьПесочницу()
     з = Замеры(c, база, повторов)

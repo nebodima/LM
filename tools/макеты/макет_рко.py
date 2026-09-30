@@ -14,6 +14,9 @@ import os
 import sys
 import time
 
+sys.path.insert(1, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+import платформа  # noqa: E402
+
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ЦЕЛЬ = os.path.join(КОРЕНЬ, "src_ext", "Documents", "УЗ_РасходДенег", "Templates", "ПечатьРКО", "Ext", "Template.xml")
 
@@ -156,7 +159,7 @@ def главный():
         if а.startswith("--база="):
             база = а.split("=", 1)[1]
     н = time.time()
-    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="Администратор";' % база)
+    c = платформа.коннектор().Connect('File="%s";Usr="Администратор";' % база)
     тд = построить(c)
     запись = c.NewObject("ЗаписьXML")
     запись.УстановитьСтроку("UTF-8")

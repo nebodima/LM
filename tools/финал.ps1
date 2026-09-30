@@ -3,17 +3,26 @@
 #   pwsh -File tools\финал.ps1 -База C:\1c_bases\UZ_BP_E
 #   pwsh -File tools\финал.ps1 -База C:\1c_bases\UZ_BP_E -Сценарии
 #   pwsh -File tools\финал.ps1 -База C:\1c_bases\UZ_BP_E -БезДеплоя      (база уже с текущим кодом)
+#   pwsh -File tools\финал.ps1 -База C:\1c_bases\UZ_BP_Q85 -Платформа 8.5   (вторая платформа — отдельная копия базы)
+# -Платформа 8.3|8.5 (по умолчанию 8.3 или UZ_ПЛАТФОРМА) пробрасывается во все шаги через переменную среды.
 # Код выхода 0 — всё зелёное, 1 — красный шаг (его хвост вывода напечатан).
 param(
 	[Parameter(Mandatory = $true)][string]$База,
 	[string]$Пользователь = '1',
 	[switch]$Сценарии,
-	[switch]$БезДеплоя
+	[switch]$БезДеплоя,
+	[ValidateSet('', '8.3', '8.5')][string]$Платформа = ''
 )
 $ErrorActionPreference = 'Continue'
 $env:PYTHONIOENCODING = 'utf-8'
 $Корень = Split-Path -Parent $PSScriptRoot
 Set-Location $Корень
+if ($Платформа) { $env:UZ_ПЛАТФОРМА = $Платформа }
+$Описание = (& python tools\платформа.py 2>&1 | Out-String).Trim()
+if ($LASTEXITCODE -ne 0) { Write-Output $Описание; Write-Output 'ИТОГ: КРАСНЫЙ — платформа недоступна'; exit 1 }
+$Описание = $Описание | ConvertFrom-Json
+$МеткаПлатформы = 'платформа {0} ({1})' -f $Описание.линия, $Описание.сборка
+Write-Output $МеткаПлатформы
 $Итог = @()
 $Всего = [Diagnostics.Stopwatch]::StartNew()
 
@@ -30,7 +39,7 @@ function Шаг([string]$Имя, [int]$Бюджет, [scriptblock]$Команд�
 	if ($Код -ne 0) {
 		Write-Output '--- хвост вывода ---'
 		Write-Output (($Вывод -split "`n" | Select-Object -Last 25) -join "`n")
-		Write-Output ('ИТОГ: КРАСНЫЙ на шаге «{0}», всего {1:N0} с' -f $Имя, $Всего.Elapsed.TotalSeconds)
+		Write-Output ('ИТОГ: КРАСНЫЙ на шаге «{0}», {2}, всего {1:N0} с' -f $Имя, $Всего.Elapsed.TotalSeconds, $МеткаПлатформы)
 		exit 1
 	}
 }
@@ -43,5 +52,5 @@ if (-not $БезДеплоя) {
 if ($Сценарии) {
 	Шаг 'сценарии ролей' 150 { python tools\сценарии\прогон_сценариев.py "--база=$База" }
 }
-Write-Output ('ИТОГ: зелёный, всего {0:N0} с' -f $Всего.Elapsed.TotalSeconds)
+Write-Output ('ИТОГ: зелёный, {1}, всего {0:N0} с' -f $Всего.Elapsed.TotalSeconds, $МеткаПлатформы)
 exit 0

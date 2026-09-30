@@ -28,8 +28,11 @@ import subprocess
 import sys
 import time
 
+ПАПКА_ИНСТРУМЕНТОВ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "тесты"))
+sys.path.insert(1, os.path.join(ПАПКА_ИНСТРУМЕНТОВ))
+import платформа  # noqa: E402
 import окна  # noqa: E402
 import данные  # noqa: E402
 
@@ -40,10 +43,10 @@ for поток in (sys.stdout, sys.stderr):
         pass
 
 ПАПКА = os.path.dirname(os.path.abspath(__file__))
-ПЛАТФОРМА = r"C:\Program Files\1cv8\8.3.27.1936\bin\1cv8.exe"
+ПЛАТФОРМА = платформа.exe("1cv8.exe")
 # клиент и менеджер — тонкий клиент: 1cv8.exe ENTERPRISE запускает толстый, у пользователя роли на него нет права
 # («Нет прав на запуск требуемого вида клиента»), а тонкий ещё и стартует быстрее
-ТОНКИЙ = r"C:\Program Files\1cv8\8.3.27.1936\bin\1cv8c.exe"
+ТОНКИЙ = платформа.exe("1cv8c.exe")
 ИСХОДНИКИ = os.path.join(ПАПКА, "УЗ_Сценарии.xml")
 EPF = os.path.join(ПАПКА, "УЗ_Сценарии.epf")
 СЦЕНАРИИ = os.path.join(ПАПКА, "сценарии.json")
@@ -165,7 +168,7 @@ def подключить(база=None, пользователь=None):
     import win32com.client
     база = база or БАЗА
     пользователь = АДМИН if пользователь is None else пользователь
-    return win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";' % база +
+    return платформа.коннектор().Connect('File="%s";' % база +
                                                                 ('Usr="%s";' % пользователь if пользователь else ""))
 
 

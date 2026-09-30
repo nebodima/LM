@@ -31,6 +31,7 @@ import websocket
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "тесты"))
 from сеанс import настроить_вывод  # noqa: E402
+import платформа  # noqa: E402
 
 КОРЕНЬ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 СНИМКИ = os.path.join(КОРЕНЬ, "docs", "публикация", "снимки")
@@ -261,7 +262,7 @@ def ссылки():
     import win32com.client
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from наполнить import НАЧАЛО, ПРОСТРАНСТВО, СЕГОДНЯ
-    c = win32com.client.Dispatch("V83.COMConnector").Connect('File="%s";Usr="Администратор";' % БАЗА)
+    c = платформа.коннектор().Connect('File="%s";Usr="Администратор";' % БАЗА)
 
     def ссылка(менеджер, вид, ключ):
         ид = uuid.uuid5(ПРОСТРАНСТВО, "%s/%s" % (вид, ключ))

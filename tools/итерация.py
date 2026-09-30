@@ -75,6 +75,7 @@ sys.path.insert(0, ТЕСТЫ)
 sys.path.insert(0, ПАПКА)
 import агент_конфигуратора as агент  # noqa: E402
 import адрес_базы  # noqa: E402
+import платформа  # noqa: E402
 
 EXE = агент.EXE
 БАЗА_ПО_УМОЛЧАНИЮ = r"C:\1c_bases\UZ_BP"
@@ -289,7 +290,7 @@ class Сервер:
         self.база, self.пользователь = база, пользователь
         self.папка = агент.папка(база)
         self.зеркало = os.path.join(self.папка, "src")
-        self.коннектор = win32com.client.Dispatch("V83.COMConnector")
+        self.коннектор = платформа.коннектор()
         self.строка = адрес_базы.строка_com(база, пользователь)
         self.держатель = None           # COM-сеанс: база открыта в процессе — новые сеансы дешевле
 
