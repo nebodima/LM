@@ -52,7 +52,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Учёт занятий</Vendor>
-			<Version>2.2.0.4</Version>
+			<Version>2.3.0.1</Version>
 			<DefaultReportForm/>
 			<DefaultReportVariantForm/>
 			<DefaultReportSettingsForm/>
@@ -128,6 +128,8 @@
 			<CommonModule>УЗ_ЧекиКлиент</CommonModule>
 			<CommonModule>УЗ_СредаКлиент</CommonModule>
 			<CommonModule>УЗ_СредаКасса</CommonModule>
+			<CommonModule>УЗ_ОплатыQR</CommonModule>
+			<CommonModule>УЗ_ПровайдерыОплатQR</CommonModule>
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
@@ -136,6 +138,7 @@
 			<ScheduledJob>УЗ_ОбновлениеГраницыПросмотраКассы</ScheduledJob>
 			<ScheduledJob>УЗ_ОтправкаНапоминаний</ScheduledJob>
 			<ScheduledJob>УЗ_ПриемСообщенийТелеграм</ScheduledJob>
+			<ScheduledJob>УЗ_ПроверкаОплатQR</ScheduledJob>
 			<CommonCommand>УЗ_Напомнить</CommonCommand>
 			<CommonCommand>УЗ_ПанельОтчетов</CommonCommand>
 			<CommandGroup>УЗ_ПодменюПечать</CommandGroup>
@@ -176,6 +179,7 @@
 			<Document>УЗ_Урок</Document>
 			<Document>УЗ_СправкаОбОплатеОбучения</Document>
 			<Document>УЗ_ДоговорОбучения</Document>
+			<Document>УЗ_СчетНаОплатуQR</Document>
 			<DocumentJournal>УЗ_КассовыйЖурнал</DocumentJournal>
 			<DocumentJournal>УЗ_ОбщийЖурнал</DocumentJournal>
 			<Enum>УЗ_ВидыОпераций</Enum>
@@ -183,6 +187,8 @@
 			<Enum>УЗ_ВидыСообщений</Enum>
 			<Enum>УЗ_СтатусыСообщений</Enum>
 			<Enum>УЗ_ПровайдерыСообщений</Enum>
+			<Enum>УЗ_ПровайдерыОплатыQR</Enum>
+			<Enum>УЗ_СтатусыОплатыQR</Enum>
 			<Report>УЗ_АналитикаПоУченикам</Report>
 			<Report>УЗ_ВедомостьПоКассе</Report>
 			<Report>УЗ_ВедомостьПоКассеДляМенеджеров</Report>
@@ -220,6 +226,8 @@
 			<InformationRegister>УЗ_ПривязкиКаналов</InformationRegister>
 			<InformationRegister>УЗ_ЧекиККТ</InformationRegister>
 			<InformationRegister>УЗ_ЧекиЗачетаПредоплаты</InformationRegister>
+			<InformationRegister>УЗ_НастройкиОплатыQR</InformationRegister>
+			<InformationRegister>УЗ_КлючиОплатыQR</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
 			<AccumulationRegister>УЗ_Расходы</AccumulationRegister>

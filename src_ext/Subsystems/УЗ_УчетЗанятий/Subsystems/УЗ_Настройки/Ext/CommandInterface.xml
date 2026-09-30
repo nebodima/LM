@@ -37,6 +37,9 @@
 		<Command name="CommonForm.УЗ_НастройкиСообщений.StandardCommand.Open">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>
+		<Command name="InformationRegister.УЗ_НастройкиОплатыQR.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
+		</Command>
 		<Command name="DataProcessor.УЗ_ОбработкаФото.StandardCommand.Open">
 			<CommandGroup>NavigationPanelOrdinary</CommandGroup>
 		</Command>

@@ -79,6 +79,12 @@
 				<CommandName>Form.Command.ПробитьЧек</CommandName>
 				<ExtendedTooltip name="ФормаПробитьЧекРасширеннаяПодсказка" id="337"/>
 			</Button>
+			<Button name="ФормаQRДляОплаты" id="338">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.QRДляОплаты</CommandName>
+				<ExtendedTooltip name="ФормаQRДляОплатыРасширеннаяПодсказка" id="339"/>
+			</Button>
 			<Button name="ФормаНапомнить" id="274">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -944,6 +950,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПробитьЧек</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="QRДляОплаты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>QR для оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вместо прихода наличными — счёт на оплату по QR через СБП на эту сумму и расшифровку: QR на экране или ссылка семье; приход денег создастся сам, когда банк подтвердит оплату</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИКОплате</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>QRДляОплаты</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>

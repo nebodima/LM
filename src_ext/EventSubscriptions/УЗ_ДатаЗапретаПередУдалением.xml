@@ -18,6 +18,7 @@
 				<v8:Type>cfg:DocumentObject.УЗ_СправкаОбОплатеОбучения</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_НачислениеБонусов</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ДоговорОбучения</v8:Type>
+				<v8:Type>cfg:DocumentObject.УЗ_СчетНаОплатуQR</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_РасходДенег</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ПриходДенег</v8:Type>
 				<v8:Type>cfg:DocumentObject.УЗ_ПереводУченика</v8:Type>

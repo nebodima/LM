@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Счёт на оплату по QR</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<DefaultButton>true</DefaultButton>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаВыставитьQR" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыставитьQR</CommandName>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ФормаВыставитьQRРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="ФормаПроверитьОплату" id="7">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьОплату</CommandName>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ФормаПроверитьОплатуРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаОтправитьСсылку" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтправитьСсылку</CommandName>
+				<Representation>PictureAndText</Representation>
+				<ExtendedTooltip name="ФормаОтправитьСсылкуРасширеннаяПодсказка" id="10"/>
+			</Button>
+			<Button name="ФормаОтменитьQR" id="11">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтменитьQR</CommandName>
+				<Representation>PictureAndText</Representation>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаОтменитьQRРасширеннаяПодсказка" id="12"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="13">
+			<Group>AlwaysHorizontal</Group>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<InputField name="Номер" id="15">
+					<DataPath>Объект.Number</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<Width>10</Width>
+					<ContextMenu name="НомерКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="17"/>
+				</InputField>
+				<InputField name="Дата" id="18">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<Width>16</Width>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="20"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="21">
+			<DataPath>Объект.Организация</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>36</MaxWidth>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="23"/>
+		</InputField>
+		<InputField name="Плательщик" id="24">
+			<DataPath>Объект.Плательщик</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кто платит (мама, папа, бабушка). Пусто — платит сам ученик. Ссылка на оплату уходит ему.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>36</MaxWidth>
+			<ContextMenu name="ПлательщикКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="ПлательщикРасширеннаяПодсказка" id="26"/>
+		</InputField>
+		<Table name="Расшифровка" id="27">
+			<DataPath>Объект.Расшифровка</DataPath>
+			<Footer>true</Footer>
+			<Height>4</Height>
+			<ContextMenu name="РасшифровкаКонтекстноеМеню" id="28"/>
+			<AutoCommandBar name="РасшифровкаКоманднаяПанель" id="29"/>
+			<ExtendedTooltip name="РасшифровкаРасширеннаяПодсказка" id="30"/>
+			<SearchStringAddition name="РасшифровкаСтрокаПоиска" id="31">
+				<AdditionSource>
+					<Item>Расшифровка</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасшифровкаСтрокаПоискаКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="РасшифровкаСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РасшифровкаСостояниеПросмотра" id="34">
+				<AdditionSource>
+					<Item>Расшифровка</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РасшифровкаСостояниеПросмотраКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="РасшифровкаСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РасшифровкаУправлениеПоиском" id="37">
+				<AdditionSource>
+					<Item>Расшифровка</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РасшифровкаУправлениеПоискомКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="РасшифровкаУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РасшифровкаУченик" id="40">
+					<DataPath>Объект.Расшифровка.Ученик</DataPath>
+					<ContextMenu name="РасшифровкаУченикКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РасшифровкаУченикРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="РасшифровкаПредметОбучения" id="43">
+					<DataPath>Объект.Расшифровка.ПредметОбучения</DataPath>
+					<ContextMenu name="РасшифровкаПредметОбученияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="РасшифровкаПредметОбученияРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="РасшифровкаАбонемент" id="46">
+					<DataPath>Объект.Расшифровка.Абонемент</DataPath>
+					<ContextMenu name="РасшифровкаАбонементКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="РасшифровкаАбонементРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="РасшифровкаСумма" id="49">
+					<DataPath>Объект.Расшифровка.Сумма</DataPath>
+					<ContextMenu name="РасшифровкаСуммаКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="РасшифровкаСуммаРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">РасшифровкаСуммаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаСумма" id="52">
+			<ExtendedTooltip name="ГруппаСуммаРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="СуммаДокумента" id="54">
+					<DataPath>Объект.СуммаДокумента</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>Left</TitleLocation>
+					<Width>12</Width>
+					<ContextMenu name="СуммаДокументаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СуммаДокументаРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<Button name="ЗаполнитьПоДолгам" id="57">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЗаполнитьПоДолгам</CommandName>
+					<ExtendedTooltip name="ЗаполнитьПоДолгамРасширеннаяПодсказка" id="58"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НазначениеПлатежа" id="59">
+			<DataPath>Объект.НазначениеПлатежа</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата занятий по счёту № … от …</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="61"/>
+		</InputField>
+		<UsualGroup name="ГруппаОплата" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата по QR (СБП)</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаОплатаРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<LabelField name="Статус" id="64">
+					<DataPath>Объект.Статус</DataPath>
+					<TitleLocation>Left</TitleLocation>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<UsualGroup name="ГруппаQR" id="67">
+					<ExtendedTooltip name="ГруппаQRРасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<PictureField name="КартинкаQR" id="69">
+							<DataPath>АдресКартинки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>20</Width>
+							<Height>10</Height>
+							<ContextMenu name="КартинкаQRКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="КартинкаQRРасширеннаяПодсказка" id="71"/>
+						</PictureField>
+						<UsualGroup name="ГруппаСсылка" id="72">
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаСсылкаРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<InputField name="СсылкаНаОплату" id="74">
+									<DataPath>Объект.СсылкаНаОплату</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="СсылкаНаОплатуКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="СсылкаНаОплатуРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="СрокДействия" id="77">
+									<DataPath>Объект.СрокДействия</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="СрокДействияКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="СрокДействияРасширеннаяПодсказка" id="79"/>
+								</InputField>
+								<InputField name="ДатаОплаты" id="80">
+									<DataPath>Объект.ДатаОплаты</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="ДатаОплатыКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ДатаОплатыРасширеннаяПодсказка" id="82"/>
+								</InputField>
+								<InputField name="ПриходДенег" id="83">
+									<DataPath>Объект.ПриходДенег</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="ПриходДенегКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ПриходДенегРасширеннаяПодсказка" id="85"/>
+								</InputField>
+								<InputField name="ТекстОшибки" id="86">
+									<DataPath>Объект.ТекстОшибки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
+									<MultiLine>true</MultiLine>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<ContextMenu name="ТекстОшибкиКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ТекстОшибкиРасширеннаяПодсказка" id="88"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="89">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="90"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="91"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="92">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УЗ_СчетНаОплатуQR</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресКартинки" id="93">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес картинки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыставитьQR" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выставить QR</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банк выставит QR на сумму счёта: покажите его на экране — семья оплатит в приложении своего банка через СБП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыставитьQR</Action>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИОплата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+		</Command>
+		<Command name="ПроверитьОплату" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить оплату</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Спросить банк, оплачен ли QR; оплачен — сразу создать приход денег (задание делает это само раз в минуту)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьОплату</Action>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+		</Command>
+		<Command name="ОтправитьСсылку" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить ссылку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить ссылку на оплату плательщику его каналом: Telegram, SMS, WhatsApp или почта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьСсылку</Action>
+			<Picture>
+				<xr:Ref>CommonPicture.УЗ_ИПочта</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+		</Command>
+		<Command name="ОтменитьQR" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить QR</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить выставленный QR, если семья передумала или сумма неверна</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьQR</Action>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+		</Command>
+		<Command name="ЗаполнитьПоДолгам" id="98">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по долгам</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаполнитьПоДолгам</Action>
+		</Command>
+	</Commands>
+</Form>

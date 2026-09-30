@@ -50,6 +50,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ПривязкиКаналов</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ЧекиККТ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_ЧекиЗачетаПредоплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_ПровайдерыОплатыQR</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_СтатусыОплатыQR</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_КлючиОплатыQR</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

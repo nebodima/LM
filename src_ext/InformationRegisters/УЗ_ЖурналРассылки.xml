@@ -452,6 +452,7 @@
 					<Type>
 						<v8:Type>cfg:DocumentRef.УЗ_Урок</v8:Type>
 						<v8:Type>cfg:CatalogRef.УЗ_Абонемент</v8:Type>
+						<v8:Type>cfg:DocumentRef.УЗ_СчетНаОплатуQR</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

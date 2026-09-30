@@ -1,4 +1,5 @@
-"""Заглушка сервисов сообщений для тестов: Telegram Bot API, SMS.ru, SMSC.ru, Green-API, Wazzup — на 127.0.0.1.
+"""Заглушка сервисов для тестов на 127.0.0.1: сообщения (Telegram Bot API, SMS.ru, SMSC.ru, Green-API, Wazzup) и банки
+оплаты по QR через СБП (Точка — Open API СБП, Т-Банк — интернет-эквайринг Init/GetQr/GetState/Cancel).
 
 Продукт в песочнице сеанса ходит по HTTP только на эту машину (УЗ_ПровайдерыСообщений.ВыполнитьHTTP), поэтому
 тесты ставят в настройки каналов адрес заглушки (http://127.0.0.1:<порт>/<префикс>) и видят каждый запрос: путь,
@@ -13,14 +14,38 @@
     POST /__обновления [ {...update...}, ... ]        — очередь getUpdates Telegram (отдаётся с учётом offset)
     answerCallbackQuery — {"ok": true} (ответ на нажатие inline-кнопки)
 Особые адресаты: чат Telegram «400» — 400 «chat not found»; телефон 79000000099 — SMS.ru отказ по номеру.
+
+Банки (этап 2.3, оплата по QR):
+    Точка: POST …/sbp/v1.0/qr-code/merchant/<merchantId>/<счёт>/<БИК> (Bearer обязателен) → Data: qrcId, payload,
+           image.content (PNG); GET …/sbp/v1.0/qr-codes/<qrcId>/payment-status → paymentList[0].status (NotStarted…)
+    Т-Банк: POST …/v2/Init, /v2/GetQr (PAYLOAD — ссылка, IMAGE — SVG), /v2/GetState, /v2/Cancel; подпись Token
+           проверяется, если задан пароль терминала (/__банк {"пароль": …}) — неверная: Success=false, ErrorCode 204
+    POST /__оплата {"ид": "<qrcId или PaymentId>", "статус": "Accepted" | "CONFIRMED" | …} — статус платежа в банке
+    GET  /__платежи — выставленные QR: {ид: {"статус", "сумма", "банк"}}
 """
+import base64
+import hashlib
 import json
 import sys
 import threading
 import urllib.parse
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-СОСТОЯНИЕ = {"запросы": [], "сбои": {}, "обновления": []}
+СОСТОЯНИЕ = {"запросы": [], "сбои": {}, "обновления": [], "платежи": {}, "пароль": ""}
+# картинка QR Точки — настоящий PNG 1×1 (форма показывает его картинкой), SVG Т-Банка — настоящий SVG
+PNG = base64.b64encode(bytes.fromhex(
+    "89504e470d0a1a0a0000000d4948445200000001000000010806000000"
+    "1f15c4890000000d49444154789c6360f8cf00000301010018dd8db00000000049454e44ae426082")).decode("ascii")
+SVG = ('<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">'
+       '<rect width="10" height="10" fill="#000"/></svg>')
+
+
+def токен_тбанк(поля, пароль):
+    """Подпись Т-Банка: корневые скалярные поля без Token + Password, по имени, значения подряд, SHA-256 hex."""
+    значения = {к: в for к, в in поля.items() if к != "Token" and not isinstance(в, (dict, list))}
+    значения["Password"] = пароль
+    строка = "".join(("true" if в is True else "false" if в is False else str(в)) for _, в in sorted(значения.items()))
+    return hashlib.sha256(строка.encode("utf-8")).hexdigest()
 ЗАМОК = threading.Lock()
 
 
@@ -95,14 +120,83 @@ class Обработчик(BaseHTTPRequestHandler):
             return self.ответ(200, {"idMessage": "3EB0C767D097B7C7C030"})
         if путь.endswith("/v3/message"):
             return self.ответ(201, {"messageId": "wz-1", "chatId": (тело or {}).get("chatId", "")})
+        if "/sbp/v1.0/" in путь:
+            return self.точка(метод, путь, тело or {})
+        if "/v2/" in путь:
+            return self.тбанк(путь, тело or {})
         return self.ответ(404, {"ok": False, "description": "нет такого метода в заглушке"})
+
+    def точка(self, метод, путь, тело):
+        if not self.headers.get("Authorization", "").startswith("Bearer "):
+            return self.ответ(401, {"code": "401", "message": "Unauthorized"})
+        if метод == "POST" and "/qr-code/merchant/" in путь:
+            данные = тело.get("Data") or {}
+            with ЗАМОК:
+                ид = "AD%030d" % (len(СОСТОЯНИЕ["платежи"]) + 1)
+                СОСТОЯНИЕ["платежи"][ид] = {"статус": "NotStarted", "сумма": данные.get("amount"), "банк": "Точка"}
+            ссылка = "https://qr.nspk.ru/%s?type=02&bank=100000000284&sum=%s&cur=RUB&crc=AB12" % (
+                ид, данные.get("amount"))
+            return self.ответ(200, {"Data": {"qrcId": ид, "payload": ссылка,
+                                             "image": {"width": 300, "height": 300, "mediaType": "image/png",
+                                                       "content": PNG}}})
+        if метод == "GET" and путь.endswith("/payment-status"):
+            ид = путь.split("/qr-codes/", 1)[1].split("/", 1)[0]
+            with ЗАМОК:
+                платеж = СОСТОЯНИЕ["платежи"].get(ид)
+            if платеж is None:
+                return self.ответ(404, {"code": "404", "message": "QR-код не найден",
+                                        "Errors": [{"errorCode": "NotFound", "message": "QR-код не найден"}]})
+            return self.ответ(200, {"Data": {"paymentList": [{"qrcId": ид, "code": "RQ00000", "message": "ok",
+                                                              "status": платеж["статус"],
+                                                              "trxId": "A%s" % ид[-8:]}]}})
+        return self.ответ(404, {"code": "404", "message": "нет такого метода в заглушке"})
+
+    def тбанк(self, путь, тело):
+        with ЗАМОК:
+            пароль = СОСТОЯНИЕ["пароль"]
+        if пароль and тело.get("Token") != токен_тбанк(тело, пароль):
+            return self.ответ(200, {"Success": False, "ErrorCode": "204", "Message": "Неверный токен",
+                                    "Details": "Проверьте пароль терминала"})
+        ид = str(тело.get("PaymentId", ""))
+        if путь.endswith("/v2/Init"):
+            with ЗАМОК:
+                ид = str(7000000 + len(СОСТОЯНИЕ["платежи"]) + 1)
+                СОСТОЯНИЕ["платежи"][ид] = {"статус": "NEW", "сумма": тело.get("Amount"), "банк": "ТБанк",
+                                            "заказ": тело.get("OrderId"), "срок": тело.get("RedirectDueDate")}
+            return self.ответ(200, {"Success": True, "ErrorCode": "0", "TerminalKey": тело.get("TerminalKey"),
+                                    "Status": "NEW", "PaymentId": ид, "OrderId": тело.get("OrderId"),
+                                    "Amount": тело.get("Amount"), "PaymentURL": "https://pay.tbank.ru/stub"})
+        with ЗАМОК:
+            платеж = СОСТОЯНИЕ["платежи"].get(ид)
+        if платеж is None:
+            return self.ответ(200, {"Success": False, "ErrorCode": "7", "Message": "Платёж не найден", "Details": ид})
+        if путь.endswith("/v2/GetQr"):
+            if тело.get("DataType") == "IMAGE":
+                return self.ответ(200, {"Success": True, "ErrorCode": "0", "PaymentId": int(ид), "Data": SVG})
+            return self.ответ(200, {"Success": True, "ErrorCode": "0", "PaymentId": int(ид),
+                                    "Data": "https://qr.nspk.ru/BD%s?type=02&sum=%s" % (ид, платеж["сумма"])})
+        if путь.endswith("/v2/GetState"):
+            return self.ответ(200, {"Success": True, "ErrorCode": "0", "Status": платеж["статус"], "PaymentId": ид,
+                                    "Amount": платеж["сумма"]})
+        if путь.endswith("/v2/Cancel"):
+            with ЗАМОК:
+                платеж["статус"] = "CANCELED"
+            return self.ответ(200, {"Success": True, "ErrorCode": "0", "Status": "CANCELED", "PaymentId": ид})
+        return self.ответ(404, {"Success": False, "ErrorCode": "404", "Message": "нет такого метода в заглушке"})
 
     def управление(self, путь, тело):
         with ЗАМОК:
             if путь == "/__запросы":
                 return self.ответ(200, СОСТОЯНИЕ["запросы"])
+            if путь == "/__платежи":
+                return self.ответ(200, СОСТОЯНИЕ["платежи"])
             if путь == "/__сброс":
-                СОСТОЯНИЕ.update({"запросы": [], "сбои": {}, "обновления": []})
+                СОСТОЯНИЕ.update({"запросы": [], "сбои": {}, "обновления": [], "платежи": {}, "пароль": ""})
+            elif путь == "/__оплата":
+                if тело.get("ид") in СОСТОЯНИЕ["платежи"]:
+                    СОСТОЯНИЕ["платежи"][тело["ид"]]["статус"] = тело.get("статус", "")
+            elif путь == "/__банк":
+                СОСТОЯНИЕ["пароль"] = тело.get("пароль", "")
             elif путь == "/__сбой":
                 if тело.get("код"):
                     СОСТОЯНИЕ["сбои"][тело["префикс"]] = int(тело["код"])
