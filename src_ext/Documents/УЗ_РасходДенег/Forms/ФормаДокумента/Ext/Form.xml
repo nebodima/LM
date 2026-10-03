@@ -159,7 +159,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Статья затрат</v8:content>
+									<v8:content>Статья движения денег</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Top</TitleLocation>
@@ -170,7 +170,7 @@
 							<InputHint>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Статья затрат</v8:content>
+									<v8:content>Статья движения денег</v8:content>
 								</v8:item>
 							</InputHint>
 							<ContextMenu name="СтатьяЗатратКонтекстноеМеню" id="165"/>

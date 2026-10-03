@@ -371,7 +371,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Статья затрат</v8:content>
+									<v8:content>Статья движения денег</v8:content>
 								</v8:item>
 							</Title>
 							<TitleLocation>Top</TitleLocation>
@@ -580,17 +580,6 @@
 							<CommandName>Form.Command.СформироватьТекстНазначенияПлатежа</CommandName>
 							<ExtendedTooltip name="СформироватьТекстНазначенияПлатежаРасширеннаяПодсказка" id="175"/>
 						</Button>
-						<LabelDecoration name="ДекорацияТекстНазначениеПлатежа" id="184">
-							<TextColor>style:ToolTipTextColor</TextColor>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Подставит последние неоплаченные уроки ученика на текущую дату по выбранному предмету</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="ДекорацияТекстНазначениеПлатежаКонтекстноеМеню" id="185"/>
-							<ExtendedTooltip name="ДекорацияТекстНазначениеПлатежаРасширеннаяПодсказка" id="186"/>
-						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -806,7 +795,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сформировать текст назначения платежа</v8:content>
+					<v8:content>Подставит последние неоплаченные уроки ученика на текущую дату по выбранному предмету</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -821,7 +810,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить сумму по задолженности</v8:content>
+					<v8:content>Заполнить сумму по долгу ученика</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
