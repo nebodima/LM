@@ -64,6 +64,13 @@
 				<DataPath>Объект.Ref</DataPath>
 				<ExtendedTooltip name="ФормаНапомнитьРасширеннаяПодсказка" id="194"/>
 			</Button>
+
+			<Button name="ФормаСнятьРезервЧека" id="215">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<CommandName>Form.Command.СнятьРезервЧека</CommandName>
+				<ExtendedTooltip name="ФормаСнятьРезервЧекаПодсказка" id="216"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -377,6 +384,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ПробитьЧек</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СнятьРезервЧека" id="217">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять резерв чека</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только руководитель, после сверки журнала ККТ: чек по документу не пробит, кассиры с документом не работают. Снимает зависший резерв «Чек пробивается» или «Требует сверки»</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьРезервЧека</Action>
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>

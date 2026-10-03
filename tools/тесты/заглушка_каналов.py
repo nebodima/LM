@@ -147,7 +147,7 @@ class Обработчик(BaseHTTPRequestHandler):
                 return self.ответ(404, {"code": "404", "message": "QR-код не найден",
                                         "Errors": [{"errorCode": "NotFound", "message": "QR-код не найден"}]})
             return self.ответ(200, {"Data": {"paymentList": [{"qrcId": ид, "code": "RQ00000", "message": "ok",
-                                                              "status": платеж["статус"],
+                                                              "status": платеж["статус"], "amount": платеж["сумма"],
                                                               "trxId": "A%s" % ид[-8:]}]}})
         return self.ответ(404, {"code": "404", "message": "нет такого метода в заглушке"})
 
@@ -195,6 +195,8 @@ class Обработчик(BaseHTTPRequestHandler):
             elif путь == "/__оплата":
                 if тело.get("ид") in СОСТОЯНИЕ["платежи"]:
                     СОСТОЯНИЕ["платежи"][тело["ид"]]["статус"] = тело.get("статус", "")
+                    if "сумма" in тело:
+                        СОСТОЯНИЕ["платежи"][тело["ид"]]["сумма"] = тело["сумма"]
             elif путь == "/__банк":
                 СОСТОЯНИЕ["пароль"] = тело.get("пароль", "")
             elif путь == "/__сбой":
@@ -204,6 +206,14 @@ class Обработчик(BaseHTTPRequestHandler):
                     СОСТОЯНИЕ["сбои"].pop(тело["префикс"], None)
             elif путь == "/__обновления":
                 СОСТОЯНИЕ["обновления"] = list(тело or [])
+                for обновление in СОСТОЯНИЕ["обновления"]:
+                    нажатие = обновление.get("callback_query")
+                    сообщение = (нажатие or обновление).get("message", {})
+                    чат = сообщение.get("chat", {})
+                    if "id" in чат:
+                        чат.setdefault("type", "private" if int(чат["id"]) > 0 else "supergroup")
+                        отправитель = (нажатие or сообщение).setdefault("from", {})
+                        отправитель.setdefault("id", чат["id"])
         return self.ответ(200, {"ok": True})
 
 
