@@ -2411,4 +2411,30 @@
 			<value>true</value>
 		</right>
 	</object>
+	<object>
+		<name>InformationRegister.УЗ_СвязиСУчетомХозяина</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>DataProcessor.УЗ_ЗакрытиеСмены</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
 </Rights>

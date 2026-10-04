@@ -53,6 +53,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_ПровайдерыОплатыQR</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.УЗ_СтатусыОплатыQR</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_КлючиОплатыQR</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УЗ_СвязиСУчетомХозяина</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УЗ_СредаМост</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

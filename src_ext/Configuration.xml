@@ -130,6 +130,7 @@
 			<CommonModule>УЗ_СредаКасса</CommonModule>
 			<CommonModule>УЗ_ОплатыQR</CommonModule>
 			<CommonModule>УЗ_ПровайдерыОплатQR</CommonModule>
+			<CommonModule>УЗ_СредаМост</CommonModule>
 			<EventSubscription>УЗ_ДатаЗапретаПередЗаписью</EventSubscription>
 			<EventSubscription>УЗ_ДатаЗапретаПередУдалением</EventSubscription>
 			<EventSubscription>УЗ_ЗарплатаУрокаПередЗаписью</EventSubscription>
@@ -208,6 +209,7 @@
 			<DataProcessor>УЗ_РассылкаДолжникам</DataProcessor>
 			<DataProcessor>УЗ_ОтправкаСообщения</DataProcessor>
 			<DataProcessor>УЗ_ЧекиЗачета</DataProcessor>
+			<DataProcessor>УЗ_ЗакрытиеСмены</DataProcessor>
 			<InformationRegister>УЗ_ВерсииДанных</InformationRegister>
 			<InformationRegister>УЗ_ГраницаПросмотраКассы</InformationRegister>
 			<InformationRegister>УЗ_ДатыЗапрета</InformationRegister>
@@ -228,6 +230,7 @@
 			<InformationRegister>УЗ_ЧекиЗачетаПредоплаты</InformationRegister>
 			<InformationRegister>УЗ_НастройкиОплатыQR</InformationRegister>
 			<InformationRegister>УЗ_КлючиОплатыQR</InformationRegister>
+			<InformationRegister>УЗ_СвязиСУчетомХозяина</InformationRegister>
 			<AccumulationRegister>УЗ_ДвижениеДисконтныхКарт</AccumulationRegister>
 			<AccumulationRegister>УЗ_Касса</AccumulationRegister>
 			<AccumulationRegister>УЗ_Расходы</AccumulationRegister>
